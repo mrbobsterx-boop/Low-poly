@@ -237,6 +237,26 @@ def palette_material():
     return mat
 
 
+def color_uv(name):
+    """UV-центр цвета палитры по имени: color_uv("rust"). Цвета — palette/palette.md."""
+    sys.path.insert(0, os.path.join(ROOT, "palette"))
+    import _palette
+    return _palette.uv(name)
+
+
+def paint(obj, name, faces=None):
+    """Красит грани меша (все или список индексов) цветом палитры по имени."""
+    me = obj.data
+    if me.uv_layers.active is None:
+        me.uv_layers.new(name="UVMap")
+    uv_layer = me.uv_layers.active.data
+    u, v = color_uv(name)
+    polys = me.polygons if faces is None else [me.polygons[i] for i in faces]
+    for poly in polys:
+        for li in poly.loop_indices:
+            uv_layer[li].uv = (u, v)
+
+
 def _test_cube():
     """Проверочный куб 1×1×1 м, origin внизу по центру, плоское затенение, один цвет."""
     bpy.ops.mesh.primitive_cube_add(size=1.0, location=(0, 0, 0.5))

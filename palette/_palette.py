@@ -1,13 +1,15 @@
 """Собирает общую палитру: palette/palette.png (текстура для моделей) и palette/palette_preview.png (для автора).
 Запуск: python3 palette/_palette.py. Цвета меняются только здесь, потом — пересобрать.
-Сетка 8 × 4 квадрата по 32 px. Квадрат (столбец c, строка r) — UV-центр: u = (c + 0,5) / 8, v = 1 − (r + 0,5) / 4.
+Сетка 8 × 5 квадратов по 32 px. В скриптах моделей цвет берётся ПО ИМЕНИ: uv("rust") — так палитру можно
+расширять и переставлять, а модели после пересборки сами найдут свои цвета.
 """
 import os
 from PIL import Image, ImageDraw, ImageFont
 
 CELL = 32
-COLS, ROWS = 8, 4
-# (имя, hex, для чего). Строка 0 — бетон/камень, 1 — металл, 2 — дерево/ткань/хаки, 3 — живое и свет.
+COLS = 8
+# (имя, hex, для чего). Строки: бетон/камень, металл, дерево/ткань/хаки, живое и свет, разное.
+# Имя не менять, если цвет уже используется в моделях (иначе поправить скрипты); пустое место — None.
 COLORS = [
     [("concrete_light", "#9b958b", "бетон светлый, сколы"),
      ("concrete", "#7a756c", "бетон — стены, полы"),
@@ -41,9 +43,33 @@ COLORS = [
      ("glow_lamp", "#ffd88a", "СВЕТИТСЯ: лампа (emission)"),
      ("glow_fire", "#ff8a2a", "СВЕТИТСЯ: огонь, угли (emission)"),
      ("glow_screen", "#8ef0a0", "СВЕТИТСЯ: экран, индикатор (emission)")],
+    [("hazard_yellow", "#d6a227", "жёлтый — полосы опасности, знаки"),
+     ("army_green", "#4b5d36", "армейский зелёный — шкафчики, ящики"),
+     ("glass", "#9db3b5", "стекло (непрозрачный цвет; блики — Godot)"),
+     ("blood", "#6b1d1c", "кровь"),
+     ("hair_blond", "#c6a463", "волосы светлые"),
+     ("hair_grey", "#a8a49c", "волосы седые"),
+     ("plastic_white", "#e4e2db", "белый пластик, фаянс"),
+     None],
 ]
+ROWS = len(COLORS)
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def _cells():
+    for r, row in enumerate(COLORS):
+        for c, cell in enumerate(row):
+            if cell:
+                yield r, c, cell
+
+
+def uv(name):
+    """UV-центр квадрата цвета по имени (для скриптов моделей)."""
+    for r, c, (n, _, _) in _cells():
+        if n == name:
+            return ((c + 0.5) / COLS, 1.0 - (r + 0.5) / ROWS)
+    raise KeyError(f"Нет цвета «{name}» в палитре (palette/palette.md)")
 
 
 def hex2rgb(h):
@@ -51,11 +77,11 @@ def hex2rgb(h):
 
 
 def build_texture():
-    im = Image.new("RGB", (COLS * CELL, ROWS * CELL))
+    # Пустые места — нейтральный серый (запас под новые цвета)
+    im = Image.new("RGB", (COLS * CELL, ROWS * CELL), (128, 128, 128))
     d = ImageDraw.Draw(im)
-    for r, row in enumerate(COLORS):
-        for c, (_, hx, _) in enumerate(row):
-            d.rectangle([c * CELL, r * CELL, (c + 1) * CELL - 1, (r + 1) * CELL - 1], fill=hex2rgb(hx))
+    for r, c, (_, hx, _) in _cells():
+        d.rectangle([c * CELL, r * CELL, (c + 1) * CELL - 1, (r + 1) * CELL - 1], fill=hex2rgb(hx))
     im.save(os.path.join(HERE, "palette.png"))
 
 
@@ -66,14 +92,19 @@ def build_preview():
         bold = ImageFont.truetype("DejaVuSans-Bold.ttf", 14)
     except OSError:
         font = bold = ImageFont.load_default()
-    rows_title = ["Бетон и камень", "Металл", "Дерево, хаки, ткань", "Живое и свет"]
+    rows_title = ["Бетон и камень", "Металл", "Дерево, хаки, ткань", "Живое и свет", "Разное"]
     im = Image.new("RGB", (COLS * W + PAD, ROWS * (H + 24) + PAD), (235, 232, 226))
     d = ImageDraw.Draw(im)
     for r, row in enumerate(COLORS):
         y0 = r * (H + 24) + PAD
         d.text((PAD, y0), f"Строка {r + 1}: {rows_title[r]}", font=bold, fill=(30, 30, 30))
-        for c, (name, hx, use) in enumerate(row):
+        for c, cell in enumerate(row):
             x0, y1 = c * W + PAD, y0 + 20
+            if cell is None:
+                d.rectangle([x0, y1, x0 + W - PAD, y1 + 80], outline=(150, 150, 150))
+                d.text((x0 + 8, y1 + 32), "запас", font=font, fill=(130, 130, 130))
+                continue
+            name, hx, use = cell
             d.rectangle([x0, y1, x0 + W - PAD, y1 + 80], fill=hex2rgb(hx))
             d.text((x0, y1 + 84), f"{r + 1}.{c + 1} {name}", font=bold, fill=(30, 30, 30))
             d.text((x0, y1 + 101), hx, font=font, fill=(70, 70, 70))
@@ -89,18 +120,19 @@ def build_preview():
 
 def build_md():
     lines = ["# Палитра", "",
-             "Общая палитра всех моделей: `palette.png` — 8 × 4 квадрата по 32 px. Собирается скриптом `_palette.py`",
+             "Общая палитра всех моделей: `palette.png` — 8 × 5 квадратов по 32 px. Собирается скриптом `_palette.py`",
              "(цвета меняются только там). Превью для глаз — `palette_preview.png`.", "",
-             "**Статус: черновик, ждёт утверждения автора.**", "",
+             "**Статус: утверждена автором 2026-10-08** (строки 1–4; строка 5 добавлена по его списку).", "",
              "- Цвета — «чистые» (правило 10): без света и тени. Темнее/светлее делает Godot своим светом.",
              "- Износ, грязь, ржавые пятна — отдельной гранью другого цвета палитры, не текстурой.",
              "- Строка 4, квадраты 6–8 — **светящееся** (материал emission): лампа, огонь, экран.",
-             "- В модели UV грани ставится в центр нужного квадрата: u = (столбец − 0,5) / 8, v = 1 − (строка − 0,5) / 4.",
+             "- **В скриптах моделей цвет — только по имени**: `uv(\"rust\")` из `_palette.py` (центр квадрата).",
+             "  Палитру можно расширять и переставлять — модели после пересборки найдут свои цвета сами.",
+             "- Пустое место (серое) — запас под новый цвет. Имя цвета, который уже есть в моделях, не менять.",
              "  Текстура без сглаживания (Closest), поэтому цвета не смешиваются.", "",
              "| № (строка.столбец) | Имя | Цвет | Для чего |", "|---|---|---|---|"]
-    for r, row in enumerate(COLORS):
-        for c, (name, hx, use) in enumerate(row):
-            lines.append(f"| {r + 1}.{c + 1} | `{name}` | `{hx}` | {use} |")
+    for r, c, (name, hx, use) in _cells():
+        lines.append(f"| {r + 1}.{c + 1} | `{name}` | `{hx}` | {use} |")
     open(os.path.join(HERE, "palette.md"), "w").write("\n".join(lines) + "\n")
 
 
