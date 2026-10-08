@@ -93,7 +93,9 @@
    - ✅ `render/_template.blend` (собирает `python3 render/_template.py`): камера 12°, 200 px/м, Standard,
      прозрачный фон, материал-замена для карты нормалей.
    - ✅ Проверочный набор `renders/_test/` (`python3 render/_test_renders.py` — сам сверяет пиксели): кубы,
-     многогранник и плитки палитры. ⏳ Осталось: автор проверяет лампу в игре (`renders/_test/README.md`).
+     многогранник и плитки палитры.
+   - ✅ Свет лампы в Godot по карте нормалей — проверен (`renders/_test/godot_lamp_check.png`); тестовая сцена
+     для Godot — `godot_test/test_normals/` (как открыть — `STEPS.md`).
    - ✅ Blender: в облачной сессии ставится сам при старте (`.claude/hooks/session-start.sh`, модуль Python `bpy`).
      Модели и рендеры запускаются `python3 <скрипт>.py` (или `blender -b -P <скрипт>.py` у автора).
 1. Проба: оболочка комнаты бункера `shelter_living_concrete_normal` (`_mid`, `_left`, `_right`) + `slab_bunker`,

@@ -11,7 +11,12 @@
 
 У каждого — пара: `…_idle.png` (чистый цвет, плоский, без объёма) и `…_idle_n.png` (карта нормалей).
 
-## Проверка в игре (для чата игры, Godot 4)
+## Проверено в Godot ✅
+
+Godot 4.4, сцена `godot_test/test_normals/test_normals.tscn`: лампа слева/справа/сверху/снизу освещает грани со
+своей стороны — `godot_lamp_check.png`. Формат карты нормалей верный.
+
+## Как собрать такую сцену руками (Godot 4)
 
 1. Сцена: `Sprite2D`, в `Texture` — **New CanvasTexture**: `Diffuse` = `test_ico_idle.png`,
    `Normal Map` = `test_ico_idle_n.png`. Масштаб спрайта 0,5 (рендер вдвое крупнее игры).
