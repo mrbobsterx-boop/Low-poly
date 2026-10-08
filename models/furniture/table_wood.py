@@ -54,5 +54,5 @@ def table_idle():
 
 if __name__ == "__main__":
     L.new_scene()
-    L.finish(table_idle(), "furniture", "table_wood", "obedennyy", "idle", size_cm=(120, 75))
+    L.make(table_idle, "furniture", "table_wood", "obedennyy", size_cm=(120, 75), broken="legs")
     L.save_blend("furniture", "table_wood")

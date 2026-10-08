@@ -146,13 +146,15 @@ def dims(obj):
 
 
 def finish(parts, category, oid, variation, state, size_cm=None, limit="furniture", glb=True, margin_px=0,
-           frame_points=None, lit=False, rough=None, period=None):
+           frame_points=None, lit=False, rough=None, period=None, chips_n=0):
     """Склеить, проверить, экспортировать .glb и отрендерить <id>_<вариация>_<состояние>(.png + _n.png).
     size_cm — (ширина, высота) из ОС для проверки (допуск 2 см). Возвращает объект."""
     name = f"{oid}_{variation}_{state}"
     obj = join(parts, name)
     if rough is not False:      # крупные неровные грани + разнобой оттенков (rough — параметры для roughen)
         roughen(obj, period=period, **(rough or {}))
+    if chips_n:                 # сколы цветом палитры (для broken)
+        obj = chips(obj, n=chips_n, seed=len(name))
     (w, d, h), (zmin, zmax) = dims(obj)
     t = tris(obj)
     print(f"[{name}] {w * 100:.0f} × {h * 100:.0f} см (глубина {d * 100:.0f}), треугольников {t}"
@@ -355,3 +357,224 @@ def prism(points, axis, a0, a1, color, name="prism", face_colors=None):
     for i, c in (face_colors or {}).items():
         rt.paint(obj, c, faces=[2 + i])
     return obj
+
+
+# ───────────────────────── Поломка (broken) ─────────────────────────
+# Правило автора: сломанный вид не рисуем отдельно — его делает break_parts() из целого.
+# Только для предметов, которые в ОС ломаются (docs/breakable.json). Промежуточные стадии и анимацию — игра.
+
+def breaks_in_os(oid):
+    import json
+    try:
+        return oid in json.load(open(os.path.join(ROOT, "docs", "breakable.json")))["ids"]
+    except FileNotFoundError:
+        return False
+
+
+def _bb(o):
+    vs = [v.co for v in o.data.vertices]
+    return (min(v.x for v in vs), max(v.x for v in vs), min(v.y for v in vs), max(v.y for v in vs),
+            min(v.z for v in vs), max(v.z for v in vs))
+
+
+def _color_of(o):
+    sys.path.insert(0, os.path.join(ROOT, "palette"))
+    import _palette
+    uvl = o.data.uv_layers.active
+    if not uvl or not len(o.data.loops):
+        return None
+    u, v = uvl.data[0].uv
+    return _palette.name_at(u, v)[0]
+
+
+CHIP = {  # чем «светит» скол/повреждение на этом цвете
+    "wood": "wood_light", "wood_dark": "wood", "wood_light": "wood_dark",
+    "army_green": "steel", "khaki": "steel", "olive_dark": "steel", "khaki_light": "steel",
+    "paint_red": "steel", "paint_blue": "steel", "hazard_yellow": "steel",
+    "steel": "rust", "steel_dark": "rust", "steel_light": "rust_light", "soot": "rust_dark",
+    "rust": "rust_dark", "rust_dark": "rust", "cloth_blue": "dirt", "cloth_beige": "dirt",
+    "offwhite": "dirt", "khaki_light_": "dirt", "concrete": "concrete_light", "concrete_dark": "concrete",
+}
+
+
+def _detect(parts):
+    B = [_bb(o) for o in parts]
+    X0, X1 = min(b[0] for b in B), max(b[1] for b in B)
+    Y0 = min(b[2] for b in B)
+    Z1 = max(b[5] for b in B)
+    legs, doors, lids = [], [], []
+    for o, b in zip(parts, B):
+        dx, dy, dz = b[1] - b[0], b[3] - b[2], b[5] - b[4]
+        if b[4] < 0.05 and dx < 0.13 and dy < 0.13 and dz > 0.12:
+            legs.append(o)
+        elif dy < 0.04 and dz > 0.3 and dx > 0.1 and b[2] < Y0 + 0.06:
+            doors.append(o)
+        elif b[5] > Z1 - max(0.03, 0.35 * Z1) and dx > 0.6 * (X1 - X0) and dz < 0.15 and b[4] > 0.05 * Z1:
+            lids.append(o)
+    return legs, doors, lids, (X0, X1, Y0, Z1)
+
+
+def _move(objs, m):
+    for o in objs:
+        o.data.transform(m)
+
+
+def _cut(o, z, keep_below):
+    """Разрезать кусок плоскостью Z = z; оставить нижнюю (keep_below) или верхнюю часть."""
+    bm = bmesh.new()
+    bm.from_mesh(o.data)
+    geom = list(bm.verts) + list(bm.edges) + list(bm.faces)
+    res = bmesh.ops.bisect_plane(bm, geom=geom, plane_co=(0, 0, z), plane_no=(0, 0, 1),
+                                 clear_outer=keep_below, clear_inner=not keep_below)
+    edges = [e for e in res["geom_cut"] if isinstance(e, bmesh.types.BMEdge)]
+    if edges:
+        bmesh.ops.holes_fill(bm, edges=edges, sides=0)
+    bm.to_mesh(o.data)
+    bm.free()
+
+
+def _debris(parts, colors, box_bb, seed, n=6):
+    import random
+    r = random.Random(seed)
+    X0, X1, Y0, _ = box_bb
+    out = []
+    for i in range(n):
+        s = r.uniform(0.03, 0.10)
+        x = r.uniform(X0 - 0.10, X1 + 0.10)
+        y = Y0 - r.uniform(0.02, 0.18)
+        out.append(box((s, s * r.uniform(0.4, 1.0), s * r.uniform(0.25, 0.6)), (x, y, 0), r.choice(colors),
+                       rot=(0, 0, r.uniform(0, 180)), bevel=0.004))
+    return parts + out
+
+
+def break_parts(parts, kind="auto", seed=1):
+    """Сломать предмет из целых кусков. kind: auto | legs | door | lid | tilt.
+    legs — подломить ножки одной стороны, предмет заваливается, обломок на полу;
+    door — сорвать дверцу (висит на одной петле, распахнута); lid — сбить крышку, выбить доску;
+    tilt — завалить набок. Всегда: обломки на полу (сколы цветом — в finish, state=broken)."""
+    import random
+    r = random.Random(seed)
+    legs, doors, lids, bb = _detect(parts)
+    X0, X1, Y0, Z1 = bb
+    if kind == "auto":
+        kind = "door" if doors else ("legs" if len(legs) >= 2 else ("lid" if lids else "tilt"))
+    colors = [c for c in (_color_of(o) for o in parts) if c and not c.startswith("glow")]
+    main = max(set(colors), key=colors.count) if colors else "steel"
+    deb_cols = [main, CHIP.get(main, main), "soot"]
+
+    if kind == "legs":
+        side = 1 if any(_bb(o)[0] > (X0 + X1) / 2 for o in legs) else -1
+        broken = [o for o in legs if (_bb(o)[0] + _bb(o)[1]) / 2 * side > (X0 + X1) / 2 * side]
+        cut_z = min(_bb(o)[5] for o in broken) * 0.40
+        gap = min(0.14, cut_z * 0.8)
+        stubs, fallen = [], []
+        for o in broken:
+            b = _bb(o)
+            stub = o.copy()
+            stub.data = o.data.copy()
+            bpy.context.scene.collection.objects.link(stub)
+            _cut(stub, cut_z, keep_below=True)
+            _cut(o, cut_z + gap, keep_below=False)
+            stubs.append(stub)
+            w = max(b[1] - b[0], b[3] - b[2])
+            fallen.append(box((gap + 0.04, w, w), ((b[0] + b[1]) / 2 + side * 0.12, Y0 - 0.12, 0),
+                              _color_of(o) or main, rot=(0, 0, r.uniform(-30, 30)), bevel=0.004))
+        rest = [o for o in parts if o not in stubs]
+        pivot_x = X0 if side > 0 else X1
+        ang = math.atan2(gap, (X1 - X0)) * side
+        _move(rest, Matrix.Translation((pivot_x, 0, 0)) @ Matrix.Rotation(ang, 4, "Y")
+              @ Matrix.Translation((-pivot_x, 0, 0)))
+        parts = rest + stubs + fallen
+
+    elif kind == "door":
+        door = max(doors, key=lambda o: (_bb(o)[0] + _bb(o)[1]) / 2)
+        db = _bb(door)
+        hinge_right = (db[0] + db[1]) / 2 > (X0 + X1) / 2
+        hx = db[1] if hinge_right else db[0]
+        group = [o for o in parts if o is door or (
+            db[0] - 0.01 <= (_bb(o)[0] + _bb(o)[1]) / 2 <= db[1] + 0.01 and _bb(o)[3] <= db[3] + 0.002
+            and _bb(o)[4] >= db[4] - 0.01 and _bb(o)[5] <= db[5] + 0.01)]
+        ang = math.radians(80 if hinge_right else -80)
+        sag = math.radians(-7 if hinge_right else 7)
+        m = (Matrix.Translation((hx, db[2], db[5])) @ Matrix.Rotation(sag, 4, "Y")
+             @ Matrix.Rotation(ang, 4, "Z") @ Matrix.Translation((-hx, -db[2], -db[5]))
+             @ Matrix.Translation((0, 0, -0.03)))
+        _move(group, m)
+
+    elif kind == "lid":
+        lid_z0 = min(_bb(o)[4] for o in lids)
+        group = [o for o in parts if _bb(o)[4] >= lid_z0 - 0.005]
+        gb = [_bb(o) for o in group]
+        yb, zb = max(b[3] for b in gb), lid_z0
+        m = (Matrix.Translation((X1 + 0.05, 0, 0)) @ Matrix.Rotation(math.radians(-15), 4, "Z")
+             @ Matrix.Translation((0, 0, 0.0)) @ Matrix.Rotation(math.radians(-8), 4, "Y")
+             @ Matrix.Translation((-X0, 0, -zb)))
+        _move(group, m)                                   # крышка сбита и лежит рядом справа
+        body = [o for o in parts if o not in group]
+        fronts = [o for o in body if _bb(o)[2] < Y0 + 0.03 and (_bb(o)[1] - _bb(o)[0]) > 0.2]
+        if fronts:                                        # выбить одну переднюю доску/панель
+            knocked = r.choice(fronts)
+            kb = _bb(knocked)
+            parts = [o for o in parts if o is not knocked]
+            _move([knocked], Matrix.Translation(((kb[0] + kb[1]) / 2 + 0.0, Y0 - 0.25, -kb[4]))
+                  @ Matrix.Rotation(math.radians(12), 4, "Z")
+                  @ Matrix.Translation((-(kb[0] + kb[1]) / 2, -kb[2], 0)))
+            parts.append(knocked)
+            parts.append(box((kb[1] - kb[0] - 0.02, 0.01, kb[5] - kb[4]), ((kb[0] + kb[1]) / 2, kb[2] + 0.03, kb[4]),
+                             "soot", bevel=0))            # тёмная пустота внутри
+    else:  # tilt
+        ang = math.radians(9)
+        _move(parts, Matrix.Translation((X1, 0, 0)) @ Matrix.Rotation(ang, 4, "Y") @ Matrix.Translation((-X1, 0, 0)))
+
+    # опустить на пол: нижняя точка — Z = 0
+    zmin = min(_bb(o)[4] for o in parts)
+    _move(parts, Matrix.Translation((0, 0, -zmin)))
+    return _debris(parts, deb_cols, (X0, X1, Y0, Z1), seed)
+
+
+def chips(obj, n=10, seed=1):
+    """Сколы/вмятины цветом палитры на передних гранях (луч спереди → точка на поверхности)."""
+    import random
+    from mathutils.bvhtree import BVHTree
+    sys.path.insert(0, os.path.join(ROOT, "palette"))
+    import _palette
+    r = random.Random(seed)
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    bm.faces.ensure_lookup_table()
+    uvl = bm.loops.layers.uv.active
+    tree = BVHTree.FromBMesh(bm)
+    x0, x1, y0, _, z0, z1 = _bb(obj)
+    out = []
+    tries = 0
+    while len(out) < n and tries < n * 12:
+        tries += 1
+        x, z = r.uniform(x0, x1), r.uniform(z0 + 0.02, z1)
+        loc, nor, idx, _ = tree.ray_cast(Vector((x, y0 - 1.0, z)), Vector((0, 1, 0)))
+        if loc is None or nor.y > -0.5:
+            continue
+        f = bm.faces[idx]
+        name = _palette.name_at(*f.loops[0][uvl].uv)[0] if uvl else None
+        if not name or name.startswith("glow"):
+            continue
+        s = r.uniform(0.025, 0.07)
+        out.append(spot((loc.x, loc.y, loc.z), s, CHIP.get(name, "soot"), seed=seed * 31 + tries,
+                        stretch=(r.uniform(0.7, 1.4), r.uniform(0.6, 1.2))))
+    bm.free()
+    if out:
+        obj = join([obj] + out, obj.name)
+    return obj
+
+
+MAKE_BROKEN = False   # решение автора: пока только idle; сломанный вид — break_parts(), включить здесь
+
+
+def make(builder, category, oid, variation, size_cm=None, limit="furniture", broken="auto", seed=1, **kw):
+    """Целый вид + (если в ОС ломается) сломанный — одним параметром broken (auto | legs | door | lid | tilt | None)."""
+    finish(builder(), category, oid, variation, "idle", size_cm=size_cm, limit=limit, **kw)
+    if MAKE_BROKEN and broken and breaks_in_os(oid):
+        parts = break_parts(builder(), broken, seed=seed)
+        rough = dict(kw.pop("rough", None) or {})
+        rough.setdefault("amp_max", 0.02)
+        rough.setdefault("shade_p", 0.55)
+        finish(parts, category, oid, variation, "broken", limit=limit, rough=rough, chips_n=12, **kw)

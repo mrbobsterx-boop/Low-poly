@@ -1,5 +1,5 @@
-"""Лампа потолочная `lamp_ceiling`, вариант `lyuminestsentnaya` (люминесцентная, плоская — как на референсе автора).
-!!! Такого варианта в ОС пока нет — завести в ОС. ОС: 30 × 25 см. Висит: origin в точке крепления (верх), лампа вниз.
+"""Лампа потолочная `lamp_ceiling`, вариант `svetodiodnaya` (светодиодная плоская панель — как на референсе автора).
+ОС: 30 × 25 см. Висит: origin в точке крепления (верх), лампа вниз.
 Запуск: python3 models/machine/lamp_ceiling.py
 """
 import os
@@ -29,5 +29,5 @@ def lamp_idle():
 
 if __name__ == "__main__":
     L.new_scene()
-    L.finish(lamp_idle(), "machine", "lamp_ceiling", "lyuminestsentnaya", "idle", size_cm=(30, 25), limit="small")
+    L.make(lamp_idle, "machine", "lamp_ceiling", "svetodiodnaya", size_cm=(30, 25), limit="small")  # в ОС не ломается
     L.save_blend("machine", "lamp_ceiling")

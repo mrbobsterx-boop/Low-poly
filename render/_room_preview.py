@@ -54,13 +54,13 @@ def main():
     items = [
         ("locker_metal_armeyskiy_idle", "container/locker_metal", "locker_idle", 0.36, 2.47, 0.0),
         ("table_wood_pismennyy_idle", "furniture/table_wood_pismennyy", "desk_idle", 1.45, 2.32, 0.0),
-        ("shelf_wood_derevyannaya_metal_ugolok_idle", "container/shelf_wood", "shelf_idle", 1.45, 2.76, 1.15),
+        ("shelf_wood_derevyannaya_idle", "container/shelf_wood", "shelf_idle", 1.45, 2.76, 1.15),
         ("toolbox_metallicheskiy_idle", "container/toolbox", "toolbox_idle", 1.80, 2.50, 0.75),
         ("chair_wood_derevyannyy_idle", "furniture/chair_wood", "chair_idle", 1.15, 1.95, 0.0),
         ("crate_wood_voennyy_idle", "container/crate_wood", "crate_voennyy", 2.42, 2.50, 0.0),
         ("bed_single_derevyannaya_samodelnaya_idle", "furniture/bed_single", "bed_idle", 3.95, 1.95, 0.0),
-        ("crate_wood_sredniy_idle", "container/crate_wood", "crate_sredniy", 2.55, 1.05, 0.0),
-        ("lamp_ceiling_lyuminestsentnaya_idle", "machine/lamp_ceiling", "lamp_idle", 2.56, 0.55, 2.70),
+        ("crate_wood_malyy_idle", "container/crate_wood", "crate_malyy", 2.55, 1.05, 0.0),
+        ("lamp_ceiling_svetodiodnaya_idle", "machine/lamp_ceiling", "lamp_idle", 2.56, 0.55, 2.70),
     ]
     layout = {"room": "shelter_living", "shell": "shelter_living_concrete_normal", "width_m": room.SEG,
               "comment": "x_m — середина картинки от левого края комнаты; bottom_m — низ картинки над линией пола "
@@ -87,7 +87,7 @@ def main():
         return
     # свет: лампа под потолком (тёплая), слабая подсветка, свечение лампы
     scene = bpy.context.scene
-    lamp = objs["lamp_ceiling_lyuminestsentnaya_idle"]
+    lamp = objs["lamp_ceiling_svetodiodnaya_idle"]
     lx = X0 + 2.56
     for i, (x, e) in enumerate(((lx, 300.0), (X0 + 1.2, 45.0), (X0 + 4.0, 55.0))):
         ld = bpy.data.lights.new(f"room_light{i}", "POINT")

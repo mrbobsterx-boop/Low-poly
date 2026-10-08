@@ -1,5 +1,5 @@
 """Ящик `crate_wood`. ОС: 60 × 50 см. Два варианта как на референсе автора:
-  sredniy — деревянный из досок с рамкой по углам и гвоздями;
+  malyy — деревянный из досок с рамкой по углам и гвоздями;
   voennyy — военный зелёный с рёбрами, защёлками, ручками и трафаретом.
 Запуск: python3 models/container/crate_wood.py
 """
@@ -12,7 +12,7 @@ import _lib as L  # noqa: E402
 W, D, H = 0.60, 0.45, 0.50
 
 
-def crate_sredniy():
+def crate_malyy():
     p = []
     n = 4
     hb = H - 0.02                                       # корпус; сверху крышка 2 см
@@ -61,6 +61,6 @@ def crate_voennyy():
 
 if __name__ == "__main__":
     L.new_scene()
-    L.finish(crate_sredniy(), "container", "crate_wood", "sredniy", "idle", size_cm=(60, 50))
-    L.finish(crate_voennyy(), "container", "crate_wood", "voennyy", "idle", size_cm=(60, 50))
+    L.make(crate_malyy, "container", "crate_wood", "malyy", size_cm=(60, 50), broken="lid")
+    L.make(crate_voennyy, "container", "crate_wood", "voennyy", size_cm=(60, 50), broken="lid")
     L.save_blend("container", "crate_wood")

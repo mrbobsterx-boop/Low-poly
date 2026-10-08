@@ -85,5 +85,5 @@ def locker_idle():
 
 if __name__ == "__main__":
     L.new_scene()
-    L.finish(locker_idle(), "container", "locker_metal", "armeyskiy", "idle", size_cm=(50, 180))
+    L.make(locker_idle, "container", "locker_metal", "armeyskiy", size_cm=(50, 180), broken="door")
     L.save_blend("container", "locker_metal")

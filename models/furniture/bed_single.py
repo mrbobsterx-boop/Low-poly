@@ -72,5 +72,5 @@ def bed_idle():
 
 if __name__ == "__main__":
     L.new_scene()
-    L.finish(bed_idle(), "furniture", "bed_single", "derevyannaya_samodelnaya", "idle", size_cm=(200, 60))
+    L.make(bed_idle, "furniture", "bed_single", "derevyannaya_samodelnaya", size_cm=(200, 60), broken="legs")
     L.save_blend("furniture", "bed_single")

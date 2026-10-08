@@ -48,5 +48,5 @@ def chair_idle():
 
 if __name__ == "__main__":
     L.new_scene()
-    L.finish(chair_idle(), "furniture", "chair_wood", "derevyannyy", "idle", size_cm=(45, 90))
+    L.make(chair_idle, "furniture", "chair_wood", "derevyannyy", size_cm=(45, 90), broken="legs")
     L.save_blend("furniture", "chair_wood")

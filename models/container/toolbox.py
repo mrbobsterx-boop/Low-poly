@@ -30,5 +30,5 @@ def toolbox_idle():
 
 if __name__ == "__main__":
     L.new_scene()
-    L.finish(toolbox_idle(), "container", "toolbox", "metallicheskiy", "idle", size_cm=(40, 25), limit="small")
+    L.make(toolbox_idle, "container", "toolbox", "metallicheskiy", size_cm=(40, 25), limit="small", broken="lid")
     L.save_blend("container", "toolbox")

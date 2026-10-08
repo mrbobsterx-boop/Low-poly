@@ -1,0 +1,6799 @@
+[
+ {
+  "id": "bed_single",
+  "name": "Кровать",
+  "cat": "furniture",
+  "plan_size": [
+   200,
+   60
+  ],
+  "os_size": [
+   200,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Железная койка",
+    "slug": "zheleznaya_koyka",
+    "skip": false
+   },
+   {
+    "name": "Деревянная самодельная",
+    "slug": "derevyannaya_samodelnaya",
+    "skip": false
+   },
+   {
+    "name": "Низкая (матрас на подставке)",
+    "slug": "nizkaya",
+    "skip": false
+   },
+   {
+    "name": "Кровать с тумбой",
+    "slug": "krovat_s_tumboy",
+    "skip": false
+   },
+   {
+    "name": "Испорченная / сломанная (для заброшенных комнат)",
+    "slug": "isporchennaya_slomannaya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle",
+   "occupied"
+  ],
+  "fn": "Место сна: персонаж ложится (lie_down), спит и восстанавливает энергию; сон идёт по единому игровому времени и может ускоряться."
+ },
+ {
+  "id": "bunk_bed",
+  "name": "Двухъярусная койка",
+  "cat": "furniture",
+  "plan_size": [
+   200,
+   180
+  ],
+  "os_size": [
+   200,
+   180
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Металлическая",
+    "slug": "metallicheskaya",
+    "skip": false
+   },
+   {
+    "name": "Деревянная",
+    "slug": "derevyannaya",
+    "skip": false
+   },
+   {
+    "name": "Трёхъярусная (позже)",
+    "slug": "trehyarusnaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "occupied_lower",
+   "occupied_upper"
+  ],
+  "fn": "Два спальных места в одной клетке комнаты; персонаж выбирает свободное место, верхнее требует залезть (climb_object)."
+ },
+ {
+  "id": "wardrobe",
+  "name": "Шкаф",
+  "cat": "container",
+  "plan_size": [
+   100,
+   200
+  ],
+  "os_size": [
+   100,
+   200
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Деревянный двустворчатый",
+    "slug": "derevyannyy_dvustvorchatyy",
+    "skip": false
+   },
+   {
+    "name": "Гардероб с зеркалом",
+    "slug": "garderob_s_zerkalom",
+    "skip": false
+   },
+   {
+    "name": "Металлический шкафчик",
+    "slug": "metallicheskiy_shkafchik",
+    "skip": false
+   },
+   {
+    "name": "Открытый / выпотрошенный",
+    "slug": "otkrytyy_vypotroshennyy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "closed",
+   "opening",
+   "open",
+   "closing"
+  ],
+  "fn": "Контейнер с дверцами: OPEN/CLOSE, STORE, TAKE_FROM, SEARCH. Содержимое задаётся таблицей лута по типу комнаты и состоянию (ограблена / заброшена)."
+ },
+ {
+  "id": "table_wood",
+  "name": "Стол",
+  "cat": "furniture",
+  "plan_size": [
+   120,
+   75
+  ],
+  "os_size": [
+   120,
+   75
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Обеденный",
+    "slug": "obedennyy",
+    "skip": false
+   },
+   {
+    "name": "Письменный",
+    "slug": "pismennyy",
+    "skip": false
+   },
+   {
+    "name": "Складной",
+    "slug": "skladnoy",
+    "skip": false
+   },
+   {
+    "name": "Металлический (выдерживает больше)",
+    "slug": "metallicheskiy",
+    "skip": false
+   },
+   {
+    "name": "Кухонный стол",
+    "slug": "kuhonnyy_stol",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "damaged"
+  ],
+  "fn": "Твёрдая поверхность для размещения объектов; несущая способность ограничена — тяжёлый груз со временем повреждает стол и приводит к падению."
+ },
+ {
+  "id": "chair_wood",
+  "name": "Стул",
+  "cat": "furniture",
+  "plan_size": [
+   45,
+   90
+  ],
+  "os_size": [
+   45,
+   90
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Деревянный",
+    "slug": "derevyannyy",
+    "skip": false
+   },
+   {
+    "name": "Мягкий стул",
+    "slug": "myagkiy_stul",
+    "skip": false
+   },
+   {
+    "name": "Кресло",
+    "slug": "kreslo",
+    "skip": false
+   },
+   {
+    "name": "Табурет",
+    "slug": "taburet",
+    "skip": false
+   },
+   {
+    "name": "Барный стул",
+    "slug": "barnyy_stul",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Персонаж садится и встаёт; можно использовать как ступеньку (climb_object). Лёгкий, легко ломается."
+ },
+ {
+  "id": "shelf_wood",
+  "name": "Полка",
+  "cat": "container",
+  "plan_size": [
+   100,
+   30
+  ],
+  "os_size": [
+   100,
+   30
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Деревянная",
+    "slug": "derevyannaya",
+    "skip": false
+   },
+   {
+    "name": "Металлическая уголковая",
+    "slug": "metallicheskaya_ugolkovaya",
+    "skip": false
+   },
+   {
+    "name": "Угловая",
+    "slug": "uglovaya",
+    "skip": false
+   },
+   {
+    "name": "Двойная",
+    "slug": "dvoynaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Настенное хранилище и поверхность; несущая способность ограничена."
+ },
+ {
+  "id": "lamp_ceiling",
+  "name": "Лампа потолочная",
+  "cat": "machine",
+  "plan_size": [
+   30,
+   25
+  ],
+  "os_size": [
+   30,
+   25
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Лампа накаливания",
+    "slug": "lampa_nakalivaniya",
+    "skip": false
+   },
+   {
+    "name": "Светодиодная",
+    "slug": "svetodiodnaya",
+    "skip": false
+   },
+   {
+    "name": "Аварийная (красная)",
+    "slug": "avariynaya",
+    "skip": false
+   },
+   {
+    "name": "Настольная",
+    "slug": "nastolnaya",
+    "skip": false
+   },
+   {
+    "name": "Подвесная с абажуром",
+    "slug": "podvesnaya_s_abazhurom",
+    "skip": false
+   }
+  ],
+  "states": [
+   "on",
+   "off",
+   "broken"
+  ],
+  "fn": "Излучает свет (круг или конус), потребляет энергию, включается/выключается, лампочка перегорает по параметру времени lightbulb_lifetime."
+ },
+ {
+  "id": "lightbulb",
+  "name": "Лампочка",
+  "cat": "item",
+  "plan_size": [
+   6,
+   12
+  ],
+  "os_size": [
+   6,
+   12
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Накаливания",
+    "slug": "nakalivaniya",
+    "skip": false
+   },
+   {
+    "name": "Светодиодная (дольше)",
+    "slug": "svetodiodnaya",
+    "skip": false
+   },
+   {
+    "name": "Люминесцентная трубка",
+    "slug": "lyuminestsentnaya_trubka",
+    "skip": false
+   },
+   {
+    "name": "Перегоревшая",
+    "slug": "peregorevshaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Вставляется в лампу; имеет срок службы; неисправная бросается в мусор или разбирается на компоненты."
+ },
+ {
+  "id": "clock_wall",
+  "name": "Часы настенные",
+  "cat": "decor",
+  "plan_size": [
+   30,
+   30
+  ],
+  "os_size": [
+   30,
+   30
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Механические",
+    "slug": "mehanicheskie",
+    "skip": false
+   },
+   {
+    "name": "Электронные (нужна энергия)",
+    "slug": "elektronnye",
+    "skip": false
+   },
+   {
+    "name": "Сломанные (остановились)",
+    "slug": "slomannye",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle",
+   "broken"
+  ],
+  "fn": "Показывает игровое время (стрелки/цифры), реагирует на ускорение X1–X10."
+ },
+ {
+  "id": "radio_desk",
+  "name": "Радиоприёмник",
+  "cat": "machine",
+  "plan_size": [
+   35,
+   25
+  ],
+  "os_size": [
+   35,
+   25
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Настольный",
+    "slug": "nastolnyy",
+    "skip": false
+   },
+   {
+    "name": "Ручной (с динамо)",
+    "slug": "ruchnoy",
+    "skip": false
+   },
+   {
+    "name": "Военная рация",
+    "slug": "voennaya_ratsiya",
+    "skip": false
+   },
+   {
+    "name": "Сломанный",
+    "slug": "slomannyy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "off",
+   "on",
+   "broken"
+  ],
+  "fn": "Принимает сообщения при наличии энергии; издаёт звук (радиус слышимости), привлекает внимание при громком включении."
+ },
+ {
+  "id": "stove_heat",
+  "name": "Печь-буржуйка",
+  "cat": "machine",
+  "plan_size": [
+   60,
+   90
+  ],
+  "os_size": [
+   60,
+   90
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Стальная бочка",
+    "slug": "stalnaya_bochka",
+    "skip": false
+   },
+   {
+    "name": "Кирпичная",
+    "slug": "kirpichnaya",
+    "skip": false
+   },
+   {
+    "name": "Походная",
+    "slug": "pohodnaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "off",
+   "burning"
+  ],
+  "fn": "Горит на топливе (дрова, уголь), греет комнату, на ней можно готовить; дымит (заметность)."
+ },
+ {
+  "id": "toilet",
+  "name": "Унитаз",
+  "cat": "furniture",
+  "plan_size": [
+   40,
+   75
+  ],
+  "os_size": [
+   40,
+   75
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Фаянсовый со смывом",
+    "slug": "fayansovyy_so_smyvom",
+    "skip": false
+   },
+   {
+    "name": "Самодельный (ведро с сиденьем)",
+    "slug": "samodelnyy",
+    "skip": false
+   },
+   {
+    "name": "Сухой (компостный)",
+    "slug": "suhoy",
+    "skip": false
+   },
+   {
+    "name": "Сломанный / заброшенный",
+    "slug": "slomannyy_zabroshennyy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle",
+   "in_use",
+   "broken"
+  ],
+  "fn": "Место для естественных потребностей: персонаж подходит и использует; со смывом работает от воды (водопровод или ведро), без воды засоряется."
+ },
+ {
+  "id": "barrel_water",
+  "name": "Бочка для воды",
+  "cat": "container",
+  "plan_size": [
+   60,
+   90
+  ],
+  "os_size": [
+   60,
+   90
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Пластиковая 200 л",
+    "slug": "plastikovaya_200_l",
+    "skip": false
+   },
+   {
+    "name": "Металлическая 200 л",
+    "slug": "metallicheskaya_200_l",
+    "skip": false
+   },
+   {
+    "name": "Деревянная 100 л",
+    "slug": "derevyannaya_100_l",
+    "skip": false
+   },
+   {
+    "name": "Малая канистра-бочонок 30 л",
+    "slug": "malaya_kanistra_bochonok_30_l",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "empty",
+   "full"
+  ],
+  "fn": "Хранилище ресурса «вода» (литры): наполняется дождём, вёдрами и насосом; из неё пьют и берут воду для еды. Имеет состояние воды: чистая / грязная / отравленная."
+ },
+ {
+  "id": "tank_water",
+  "name": "Резервуар воды",
+  "cat": "container",
+  "plan_size": [
+   160,
+   190
+  ],
+  "os_size": [
+   160,
+   190
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Пластиковый 1000 л",
+    "slug": "plastikovyy_1000_l",
+    "skip": false
+   },
+   {
+    "name": "Бетонный 5000 л",
+    "slug": "betonnyy_5000_l",
+    "skip": false
+   },
+   {
+    "name": "Стальной цилиндр",
+    "slug": "stalnoy_tsilindr",
+    "skip": false
+   },
+   {
+    "name": "Подземный (люк)",
+    "slug": "podzemnyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "damaged"
+  ],
+  "fn": "Хранилище воды 1000–5000 л; подключается к насосу и трубам; можно отравить, для этого нужно количество яда пропорционально объёму."
+ },
+ {
+  "id": "water_tower",
+  "name": "Водонапорная башня",
+  "cat": "building",
+  "plan_size": [
+   400,
+   1000
+  ],
+  "os_size": [
+   400,
+   1000
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Кирпичная",
+    "slug": "kirpichnaya",
+    "skip": false
+   },
+   {
+    "name": "Стальная на опорах",
+    "slug": "stalnaya_na_oporah",
+    "skip": false
+   },
+   {
+    "name": "Разрушенная",
+    "slug": "razrushennaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "damaged",
+   "ruined"
+  ],
+  "fn": "Крупный водный ресурс на карте: содержит воду при наличии давления/насоса; может быть загрязнена или пуста."
+ },
+ {
+  "id": "well_hand",
+  "name": "Колодец / скважина",
+  "cat": "resource",
+  "plan_size": [
+   90,
+   130
+  ],
+  "os_size": [
+   90,
+   130
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Ручной колодец с воротом",
+    "slug": "ruchnoy_kolodets_s_vorotom",
+    "skip": false
+   },
+   {
+    "name": "Скважина с ручной помпой",
+    "slug": "skvazhina_s_ruchnoy_pompoy",
+    "skip": false
+   },
+   {
+    "name": "Скважина с электронасосом",
+    "slug": "skvazhina_s_elektronasosom",
+    "skip": false
+   },
+   {
+    "name": "Пересохший",
+    "slug": "peresohshiy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "depleted"
+  ],
+  "fn": "Точка ресурса «вода» с самовосстановлением: набирают ведром или качают насосом; вода может быть загрязнена."
+ },
+ {
+  "id": "rain_collector",
+  "name": "Дождеуловитель",
+  "cat": "machine",
+  "plan_size": [
+   110,
+   60
+  ],
+  "os_size": [
+   110,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Плёнка и желоб",
+    "slug": "plenka_i_zhelob",
+    "skip": false
+   },
+   {
+    "name": "Крышная воронка",
+    "slug": "kryshnaya_voronka",
+    "skip": false
+   },
+   {
+    "name": "Большая площадка (для башни)",
+    "slug": "bolshaya_ploschadka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "collecting"
+  ],
+  "fn": "Собирает дождь пропорционально площади и длительности дождя (параметр rain_duration) и перетекает в бочку."
+ },
+ {
+  "id": "water_pump",
+  "name": "Насос",
+  "cat": "machine",
+  "plan_size": [
+   50,
+   60
+  ],
+  "os_size": [
+   50,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Ручной рычажный",
+    "slug": "ruchnoy_rychazhnyy",
+    "skip": false
+   },
+   {
+    "name": "Электрический",
+    "slug": "elektricheskiy",
+    "skip": false
+   },
+   {
+    "name": "Бензиновый",
+    "slug": "benzinovyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "off",
+   "pumping",
+   "broken"
+  ],
+  "fn": "Потребляет энергию, перекачивает воду между хранилищами; ломается, шумит."
+ },
+ {
+  "id": "water_purifier",
+  "name": "Очиститель воды",
+  "cat": "machine",
+  "plan_size": [
+   60,
+   100
+  ],
+  "os_size": [
+   60,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Керамический фильтр",
+    "slug": "keramicheskiy_filtr",
+    "skip": false
+   },
+   {
+    "name": "Кипячение на печи",
+    "slug": "kipyachenie_na_pechi",
+    "skip": false
+   },
+   {
+    "name": "Угольный фильтр",
+    "slug": "ugolnyy_filtr",
+    "skip": false
+   },
+   {
+    "name": "Химические таблетки (расходник)",
+    "slug": "himicheskie_tabletki",
+    "skip": false
+   }
+  ],
+  "states": [
+   "off",
+   "working",
+   "clogged"
+  ],
+  "fn": "Принимает воду состояния «загрязнённая», выдаёт «чистая»; расходует фильтр и энергию; при отравлении не спасает."
+ },
+ {
+  "id": "water_tablets",
+  "name": "Таблетки для очистки воды",
+  "cat": "item",
+  "plan_size": [
+   6,
+   10
+  ],
+  "os_size": [
+   6,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Хлорные",
+    "slug": "hlornye",
+    "skip": false
+   },
+   {
+    "name": "Йодные",
+    "slug": "yodnye",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуются на очистку фиксированного объёма воды."
+ },
+ {
+  "id": "sink_tap",
+  "name": "Раковина с краном",
+  "cat": "furniture",
+  "plan_size": [
+   80,
+   90
+  ],
+  "os_size": [
+   80,
+   90
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Кухонная",
+    "slug": "kuhonnaya",
+    "skip": false
+   },
+   {
+    "name": "Ванная",
+    "slug": "vannaya",
+    "skip": false
+   },
+   {
+    "name": "Умывальник",
+    "slug": "umyvalnik",
+    "skip": false
+   },
+   {
+    "name": "Уличная колонка",
+    "slug": "ulichnaya_kolonka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "broken"
+  ],
+  "fn": "Даёт воду, пока есть давление или резервуар; можно пить и наполнять бутылки."
+ },
+ {
+  "id": "bottle_water",
+  "name": "Бутылка с водой",
+  "cat": "item",
+  "plan_size": [
+   8,
+   25
+  ],
+  "os_size": [
+   8,
+   25
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Пластиковая 0,5 л",
+    "slug": "plastikovaya_0_5_l",
+    "skip": false
+   },
+   {
+    "name": "Пластиковая 1,5 л",
+    "slug": "plastikovaya_1_5_l",
+    "skip": false
+   },
+   {
+    "name": "Стеклянная",
+    "slug": "steklyannaya",
+    "skip": false
+   },
+   {
+    "name": "Фляга",
+    "slug": "flyaga",
+    "skip": false
+   },
+   {
+    "name": "Пустая",
+    "slug": "pustaya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Содержит объём и состояние воды; пьётся целиком или частями; наполняется из источников; пустая бутылка остаётся предметом."
+ },
+ {
+  "id": "bucket",
+  "name": "Ведро",
+  "cat": "tool",
+  "plan_size": [
+   30,
+   30
+  ],
+  "os_size": [
+   30,
+   30
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Металлическое",
+    "slug": "metallicheskoe",
+    "skip": false
+   },
+   {
+    "name": "Пластиковое",
+    "slug": "plastikovoe",
+    "skip": false
+   },
+   {
+    "name": "Дырявое (сломано)",
+    "slug": "dyryavoe",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Наполняется из источника, переливается в бочку; может использоваться как инструмент HARVEST для воды."
+ },
+ {
+  "id": "bathtub",
+  "name": "Ванна",
+  "cat": "furniture",
+  "plan_size": [
+   170,
+   60
+  ],
+  "os_size": [
+   170,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Чугунная",
+    "slug": "chugunnaya",
+    "skip": false
+   },
+   {
+    "name": "Пластиковая",
+    "slug": "plastikovaya",
+    "skip": false
+   },
+   {
+    "name": "Эмалированная",
+    "slug": "emalirovannaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "damaged"
+  ],
+  "fn": "Тяжёлый объект: ставится на опору и проверяет её нагрузку; может хранить воду."
+ },
+ {
+  "id": "battery_bank",
+  "name": "Аккумулятор",
+  "cat": "container",
+  "plan_size": [
+   60,
+   40
+  ],
+  "os_size": [
+   60,
+   40
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Автомобильный 12 В",
+    "slug": "avtomobilnyy_12_v",
+    "skip": false
+   },
+   {
+    "name": "Бункерная батарея (большая)",
+    "slug": "bunkernaya_batareya",
+    "skip": false
+   },
+   {
+    "name": "Разряженный / вздувшийся",
+    "slug": "razryazhennyy_vzduvshiysya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "charge_0",
+   "charge_25",
+   "charge_50",
+   "charge_75",
+   "charge_100"
+  ],
+  "fn": "Хранилище ресурса «энергия» (кВт·ч): принимает от источников, отдаёт потребителям. Аккумулятор — объект, энергия внутри — ресурс."
+ },
+ {
+  "id": "solar_panel",
+  "name": "Солнечная панель",
+  "cat": "machine",
+  "plan_size": [
+   120,
+   80
+  ],
+  "os_size": [
+   120,
+   80
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Малая 100 Вт",
+    "slug": "malaya_100_vt",
+    "skip": false
+   },
+   {
+    "name": "Большая 300 Вт",
+    "slug": "bolshaya_300_vt",
+    "skip": false
+   },
+   {
+    "name": "Складная портативная",
+    "slug": "skladnaya_portativnaya",
+    "skip": false
+   },
+   {
+    "name": "Разбитая",
+    "slug": "razbitaya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "clean",
+   "dusty",
+   "damaged",
+   "broken"
+  ],
+  "fn": "Производит энергию зависимо от времени суток и погоды; пылится (нужна чистка по panel_cleaning), трескается при ударах."
+ },
+ {
+  "id": "wind_turbine",
+  "name": "Ветрогенератор",
+  "cat": "machine",
+  "plan_size": [
+   100,
+   300
+  ],
+  "os_size": [
+   100,
+   300
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Малый горизонтальный",
+    "slug": "malyy_gorizontalnyy",
+    "skip": false
+   },
+   {
+    "name": "Вертикальный",
+    "slug": "vertikalnyy",
+    "skip": false
+   },
+   {
+    "name": "Самодельный из вентилятора",
+    "slug": "samodelnyy_iz_ventilyatora",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "spinning",
+   "broken"
+  ],
+  "fn": "Производит энергию по силе ветра (погода); шумит; ломается при бурях."
+ },
+ {
+  "id": "bike_generator",
+  "name": "Велогенератор",
+  "cat": "machine",
+  "plan_size": [
+   120,
+   110
+  ],
+  "os_size": [
+   120,
+   110
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Стационарный",
+    "slug": "statsionarnyy",
+    "skip": false
+   },
+   {
+    "name": "Складной",
+    "slug": "skladnoy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "pedaling"
+  ],
+  "fn": "Персонаж крутит педали (drive), производя энергию и тратя собственную энергию и еду."
+ },
+ {
+  "id": "treadmill_generator",
+  "name": "Беговая дорожка-генератор",
+  "cat": "machine",
+  "plan_size": [
+   160,
+   120
+  ],
+  "os_size": [
+   160,
+   120
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Беговая дорожка",
+    "slug": "begovaya_dorozhka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "running"
+  ],
+  "fn": "Персонаж бежит на дорожке (run), производя энергию и тратя собственную энергию и еду."
+ },
+ {
+  "id": "fuel_generator",
+  "name": "Генератор на топливе",
+  "cat": "machine",
+  "plan_size": [
+   70,
+   60
+  ],
+  "os_size": [
+   70,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Портативный",
+    "slug": "portativnyy",
+    "skip": false
+   },
+   {
+    "name": "Стационарный",
+    "slug": "statsionarnyy",
+    "skip": false
+   },
+   {
+    "name": "Промышленный",
+    "slug": "promyshlennyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "off",
+   "running",
+   "broken"
+  ],
+  "fn": "Жжёт топливо, вырабатывает энергию, издаёт громкий звук (радиус слышимости)."
+ },
+ {
+  "id": "power_cable",
+  "name": "Провод / кабель",
+  "cat": "item",
+  "plan_size": [
+   20,
+   20
+  ],
+  "os_size": [
+   20,
+   20
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Тонкий",
+    "slug": "tonkiy",
+    "skip": false
+   },
+   {
+    "name": "Силовой",
+    "slug": "silovoy",
+    "skip": false
+   },
+   {
+    "name": "Удлинитель",
+    "slug": "udlinitel",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется при подключении объектов; можно связать соседние по комнате; повреждение = отключение."
+ },
+ {
+  "id": "fridge",
+  "name": "Холодильник",
+  "cat": "machine",
+  "plan_size": [
+   70,
+   180
+  ],
+  "os_size": [
+   70,
+   180
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Электрический",
+    "slug": "elektricheskiy",
+    "skip": false
+   },
+   {
+    "name": "Ящик со льдом",
+    "slug": "yaschik_so_ldom",
+    "skip": false
+   },
+   {
+    "name": "Морозильная камера",
+    "slug": "morozilnaya_kamera",
+    "skip": false
+   }
+  ],
+  "states": [
+   "closed",
+   "open",
+   "off"
+  ],
+  "fn": "Хранилище со сниженной скоростью порчи, пока есть энергия; без питания превращается в обычный ящик с быстро портящейся едой."
+ },
+ {
+  "id": "grow_lamp",
+  "name": "Лампа для урожая",
+  "cat": "machine",
+  "plan_size": [
+   80,
+   15
+  ],
+  "os_size": [
+   80,
+   15
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Фиолетовая LED",
+    "slug": "fioletovaya_led",
+    "skip": false
+   },
+   {
+    "name": "Люминесцентная",
+    "slug": "lyuminestsentnaya",
+    "skip": false
+   },
+   {
+    "name": "Слабая",
+    "slug": "slabaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "on",
+   "off"
+  ],
+  "fn": "Светит на растения в радиусе, ускоряет рост; потребляет много энергии."
+ },
+ {
+  "id": "fuel_canister",
+  "name": "Канистра с топливом",
+  "cat": "container",
+  "plan_size": [
+   35,
+   45
+  ],
+  "os_size": [
+   35,
+   45
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "5 л",
+    "slug": "5_l",
+    "skip": false
+   },
+   {
+    "name": "10 л",
+    "slug": "10_l",
+    "skip": false
+   },
+   {
+    "name": "20 л (жерри)",
+    "slug": "20_l",
+    "skip": false
+   },
+   {
+    "name": "Пустая",
+    "slug": "pustaya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle",
+   "empty"
+  ],
+  "fn": "Хранит топливо (л); заправляет генераторы и транспорт; можно слить из брошенных машин."
+ },
+ {
+  "id": "shelter_panel",
+  "name": "Панель убежища",
+  "cat": "machine",
+  "plan_size": [
+   60,
+   70
+  ],
+  "os_size": [
+   60,
+   70
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Простой пульт",
+    "slug": "prostoy_pult",
+    "skip": false
+   },
+   {
+    "name": "Экран с графиками (позже)",
+    "slug": "ekran_s_grafikami",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "alarm"
+  ],
+  "fn": "Показывает баланс по системам «вода / энергия»; сигнализирует тревогой при дефиците; требует энергию."
+ },
+ {
+  "id": "battery_cell",
+  "name": "Батарейка",
+  "cat": "item",
+  "plan_size": [
+   3,
+   6
+  ],
+  "os_size": [
+   3,
+   6
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Одноразовая",
+    "slug": "odnorazovaya",
+    "skip": false
+   },
+   {
+    "name": "Перезаряжаемая",
+    "slug": "perezaryazhaemaya",
+    "skip": false
+   },
+   {
+    "name": "Разряженная",
+    "slug": "razryazhennaya",
+    "skip": false
+   },
+   {
+    "name": "Вздувшаяся (испорчена)",
+    "slug": "vzduvshayasya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle",
+   "empty"
+  ],
+  "fn": "Хранит небольшой заряд; вставляется в фонарик и ручные приборы, разряжается при работе; перезаряжаемая заряжается от сети убежища."
+ },
+ {
+  "id": "fuel_firewood",
+  "name": "Дрова",
+  "cat": "item",
+  "plan_size": [
+   40,
+   15
+  ],
+  "os_size": [
+   40,
+   15
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Поленья",
+    "slug": "polenya",
+    "skip": false
+   },
+   {
+    "name": "Вязанка хвороста",
+    "slug": "vyazanka_hvorosta",
+    "skip": false
+   },
+   {
+    "name": "Отсыревшие (горят хуже)",
+    "slug": "otsyrevshie",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Топливо для печи, костра и погребального костра; кладётся в топку и горит заданное время; отсыревшие горят хуже."
+ },
+ {
+  "id": "light_switch",
+  "name": "Выключатель",
+  "cat": "machine",
+  "plan_size": [
+   8,
+   12
+  ],
+  "os_size": [
+   8,
+   12
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Клавишный",
+    "slug": "klavishnyy",
+    "skip": false
+   },
+   {
+    "name": "Рычажный (промышленный)",
+    "slug": "rychazhnyy",
+    "skip": false
+   },
+   {
+    "name": "Тумблер на щитке",
+    "slug": "tumbler_na_schitke",
+    "skip": false
+   },
+   {
+    "name": "Сломанный",
+    "slug": "slomannyy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "off",
+   "on",
+   "broken"
+  ],
+  "fn": "Включает и выключает связанные лампы; персонаж и NPC подходят и щёлкают; отключённая цепь не потребляет энергию."
+ },
+ {
+  "id": "fuse_box",
+  "name": "Электрощит",
+  "cat": "machine",
+  "plan_size": [
+   40,
+   50
+  ],
+  "os_size": [
+   40,
+   50
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Бытовой",
+    "slug": "bytovoy",
+    "skip": false
+   },
+   {
+    "name": "Промышленный",
+    "slug": "promyshlennyy",
+    "skip": false
+   },
+   {
+    "name": "Самодельный",
+    "slug": "samodelnyy",
+    "skip": false
+   },
+   {
+    "name": "Сгоревший",
+    "slug": "sgorevshiy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "on",
+   "tripped",
+   "broken"
+  ],
+  "fn": "Принимает энергию от аккумулятора и раздаёт по контурам; при перегрузке контур отключается; предохранители перегорают и меняются."
+ },
+ {
+  "id": "stove_cook",
+  "name": "Плита",
+  "cat": "machine",
+  "plan_size": [
+   70,
+   90
+  ],
+  "os_size": [
+   70,
+   90
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Газовая",
+    "slug": "gazovaya",
+    "skip": false
+   },
+   {
+    "name": "Электрическая",
+    "slug": "elektricheskaya",
+    "skip": false
+   },
+   {
+    "name": "Дровяная",
+    "slug": "drovyanaya",
+    "skip": false
+   },
+   {
+    "name": "Сломанная",
+    "slug": "slomannaya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "off",
+   "cooking",
+   "broken"
+  ],
+  "fn": "Готовит еду по рецептам (CRAFT/cook): расходует топливо или энергию и время; можно готовить нескольким людям сразу."
+ },
+ {
+  "id": "campfire",
+  "name": "Костёр",
+  "cat": "machine",
+  "plan_size": [
+   80,
+   50
+  ],
+  "os_size": [
+   80,
+   50
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Простой",
+    "slug": "prostoy",
+    "skip": false
+   },
+   {
+    "name": "С камнями",
+    "slug": "s_kamnyami",
+    "skip": false
+   },
+   {
+    "name": "Костёр с котлом",
+    "slug": "koster_s_kotlom",
+    "skip": false
+   },
+   {
+    "name": "Догорающий",
+    "slug": "dogorayuschiy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "unlit",
+   "burning",
+   "embers"
+  ],
+  "fn": "Горит на дровах ограниченное время, даёт свет и тепло, на нём можно готовить и кипятить воду; дым и свет заметны угрозам."
+ },
+ {
+  "id": "cooking_pot",
+  "name": "Кастрюля / котелок",
+  "cat": "tool",
+  "plan_size": [
+   25,
+   20
+  ],
+  "os_size": [
+   25,
+   20
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Алюминиевая",
+    "slug": "alyuminievaya",
+    "skip": false
+   },
+   {
+    "name": "Котелок",
+    "slug": "kotelok",
+    "skip": false
+   },
+   {
+    "name": "Чугунный",
+    "slug": "chugunnyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Требуется в рецептах приготовления; определяет размер порции."
+ },
+ {
+  "id": "kitchen_counter",
+  "name": "Кухонная тумба",
+  "cat": "container",
+  "plan_size": [
+   120,
+   90
+  ],
+  "os_size": [
+   120,
+   90
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "С раковиной",
+    "slug": "s_rakovinoy",
+    "skip": false
+   },
+   {
+    "name": "С ящиками",
+    "slug": "s_yaschikami",
+    "skip": false
+   },
+   {
+    "name": "Угловая",
+    "slug": "uglovaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "closed",
+   "open"
+  ],
+  "fn": "Контейнер с дверцами и поверхностью сверху (можно ставить плиту/предметы)."
+ },
+ {
+  "id": "food_canned",
+  "name": "Консервы",
+  "cat": "item",
+  "plan_size": [
+   8,
+   10
+  ],
+  "os_size": [
+   8,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Тушёнка",
+    "slug": "tushenka",
+    "skip": false
+   },
+   {
+    "name": "Фасоль",
+    "slug": "fasol",
+    "skip": false
+   },
+   {
+    "name": "Рыбные",
+    "slug": "rybnye",
+    "skip": false
+   },
+   {
+    "name": "Сгущёнка",
+    "slug": "sguschenka",
+    "skip": false
+   },
+   {
+    "name": "Вздувшаяся (опасная)",
+    "slug": "vzduvshayasya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Съедается (EAT): восстанавливает голод, порча почти нулевая; можно давать другим."
+ },
+ {
+  "id": "food_bread",
+  "name": "Хлеб / сухари",
+  "cat": "item",
+  "plan_size": [
+   20,
+   10
+  ],
+  "os_size": [
+   20,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Хлеб",
+    "slug": "hleb",
+    "skip": false
+   },
+   {
+    "name": "Сухари (долго)",
+    "slug": "suhari",
+    "skip": false
+   },
+   {
+    "name": "Лепёшка",
+    "slug": "lepeshka",
+    "skip": false
+   },
+   {
+    "name": "Заплесневевший",
+    "slug": "zaplesnevevshiy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "fresh",
+   "stale",
+   "moldy"
+  ],
+  "fn": "Быстро черствеет/плесневеет по food_spoilage; съедается, восстанавливая голод."
+ },
+ {
+  "id": "food_grain",
+  "name": "Зерно",
+  "cat": "item",
+  "plan_size": [
+   15,
+   15
+  ],
+  "os_size": [
+   15,
+   15
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Пшеница",
+    "slug": "pshenitsa",
+    "skip": false
+   },
+   {
+    "name": "Кукуруза",
+    "slug": "kukuruza",
+    "skip": false
+   },
+   {
+    "name": "Рис",
+    "slug": "ris",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Собирается HARVEST с растения; хранится долго; перерабатывается."
+ },
+ {
+  "id": "meat_raw",
+  "name": "Сырое мясо",
+  "cat": "item",
+  "plan_size": [
+   15,
+   8
+  ],
+  "os_size": [
+   15,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Кролик",
+    "slug": "krolik",
+    "skip": false
+   },
+   {
+    "name": "Собака (риск)",
+    "slug": "sobaka",
+    "skip": false
+   },
+   {
+    "name": "Птица",
+    "slug": "ptitsa",
+    "skip": false
+   },
+   {
+    "name": "Тухлое",
+    "slug": "tuhloe",
+    "skip": false
+   }
+  ],
+  "states": [
+   "fresh",
+   "spoiled"
+  ],
+  "fn": "Требует приготовления; иначе риск отравления/инфекции; быстро портится."
+ },
+ {
+  "id": "meat_cooked",
+  "name": "Приготовленное мясо",
+  "cat": "item",
+  "plan_size": [
+   15,
+   8
+  ],
+  "os_size": [
+   15,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Жареное",
+    "slug": "zharenoe",
+    "skip": false
+   },
+   {
+    "name": "Варёное",
+    "slug": "varenoe",
+    "skip": false
+   },
+   {
+    "name": "Копчёное (долго хранится)",
+    "slug": "kopchenoe",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Съедается; портится медленнее сырого."
+ },
+ {
+  "id": "veg_potato",
+  "name": "Овощи (картофель, морковь)",
+  "cat": "item",
+  "plan_size": [
+   8,
+   8
+  ],
+  "os_size": [
+   8,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Картофель",
+    "slug": "kartofel",
+    "skip": false
+   },
+   {
+    "name": "Морковь",
+    "slug": "morkov",
+    "skip": false
+   },
+   {
+    "name": "Помидор",
+    "slug": "pomidor",
+    "skip": false
+   },
+   {
+    "name": "Лук",
+    "slug": "luk",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Собираются с растений; едятся сырыми со сниженной пользой или готовятся."
+ },
+ {
+  "id": "meal_soup",
+  "name": "Готовое блюдо (суп, рагу)",
+  "cat": "item",
+  "plan_size": [
+   15,
+   10
+  ],
+  "os_size": [
+   15,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Овощной суп",
+    "slug": "ovoschnoy_sup",
+    "skip": false
+   },
+   {
+    "name": "Мясное рагу",
+    "slug": "myasnoe_ragu",
+    "skip": false
+   },
+   {
+    "name": "Каша",
+    "slug": "kasha",
+    "skip": false
+   }
+  ],
+  "states": [
+   "hot",
+   "cold"
+  ],
+  "fn": "Готовится на плите из воды, овощей и мяса; съедается; порции делятся между несколькими людьми."
+ },
+ {
+  "id": "ration_dry",
+  "name": "Сухпаёк",
+  "cat": "item",
+  "plan_size": [
+   15,
+   10
+  ],
+  "os_size": [
+   15,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Армейский",
+    "slug": "armeyskiy",
+    "skip": false
+   },
+   {
+    "name": "Спасательный набор",
+    "slug": "spasatelnyy_nabor",
+    "skip": false
+   },
+   {
+    "name": "Космический (редкий)",
+    "slug": "kosmicheskiy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Едится сразу, почти не портится."
+ },
+ {
+  "id": "tool_can_opener",
+  "name": "Консервный нож",
+  "cat": "tool",
+  "plan_size": [
+   15,
+   8
+  ],
+  "os_size": [
+   15,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Ручной",
+    "slug": "ruchnoy",
+    "skip": false
+   },
+   {
+    "name": "Ключ-открывашка",
+    "slug": "klyuch_otkryvashka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Инструмент-условие для открытия консервов."
+ },
+ {
+  "id": "bandage",
+  "name": "Бинт",
+  "cat": "item",
+  "plan_size": [
+   10,
+   6
+  ],
+  "os_size": [
+   10,
+   6
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Стерильный",
+    "slug": "sterilnyy",
+    "skip": false
+   },
+   {
+    "name": "Самодельный из ткани",
+    "slug": "samodelnyy_iz_tkani",
+    "skip": false
+   },
+   {
+    "name": "Эластичный",
+    "slug": "elastichnyy",
+    "skip": false
+   },
+   {
+    "name": "Использованный",
+    "slug": "ispolzovannyy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Подходит для «treat = bleeding / wound»; расходуется; эффективность и время применения — данные."
+ },
+ {
+  "id": "antiseptic",
+  "name": "Антисептик",
+  "cat": "item",
+  "plan_size": [
+   6,
+   14
+  ],
+  "os_size": [
+   6,
+   14
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Спирт",
+    "slug": "spirt",
+    "skip": false
+   },
+   {
+    "name": "Перекись",
+    "slug": "perekis",
+    "skip": false
+   },
+   {
+    "name": "Йод",
+    "slug": "yod",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Обрабатывает раны; снижает риск инфекции; расходуется по дозам."
+ },
+ {
+  "id": "painkiller",
+  "name": "Обезболивающее",
+  "cat": "item",
+  "plan_size": [
+   6,
+   8
+  ],
+  "os_size": [
+   6,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Таблетки",
+    "slug": "tabletki",
+    "skip": false
+   },
+   {
+    "name": "Ампула",
+    "slug": "ampula",
+    "skip": false
+   },
+   {
+    "name": "Сильное (редкое)",
+    "slug": "silnoe",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Снижает болевые штрафы на время; побочки при частом применении."
+ },
+ {
+  "id": "antibiotics",
+  "name": "Антибиотики",
+  "cat": "item",
+  "plan_size": [
+   6,
+   8
+  ],
+  "os_size": [
+   6,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Широкого спектра",
+    "slug": "shirokogo_spektra",
+    "skip": false
+   },
+   {
+    "name": "Узкоспециальные",
+    "slug": "uzkospetsialnye",
+    "skip": false
+   },
+   {
+    "name": "Просроченные (слабее)",
+    "slug": "prosrochennye",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Курс лечения: несколько применений в течение времени; эффективность по типу инфекции."
+ },
+ {
+  "id": "splint",
+  "name": "Шина",
+  "cat": "item",
+  "plan_size": [
+   40,
+   8
+  ],
+  "os_size": [
+   40,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Готовая",
+    "slug": "gotovaya",
+    "skip": false
+   },
+   {
+    "name": "Из досок и ткани",
+    "slug": "iz_dosok_i_tkani",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Фиксирует конечность, снимает штраф к движению при лечении."
+ },
+ {
+  "id": "first_aid_kit",
+  "name": "Аптечка",
+  "cat": "container",
+  "plan_size": [
+   25,
+   18
+  ],
+  "os_size": [
+   25,
+   18
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Домашняя",
+    "slug": "domashnyaya",
+    "skip": false
+   },
+   {
+    "name": "Автомобильная",
+    "slug": "avtomobilnaya",
+    "skip": false
+   },
+   {
+    "name": "Военная (богаче)",
+    "slug": "voennaya",
+    "skip": false
+   },
+   {
+    "name": "Пустая",
+    "slug": "pustaya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "closed",
+   "open",
+   "empty"
+  ],
+  "fn": "Контейнер с бинтом, антисептиком и обезболивающим; персонаж ищет «подходящий предмет по требованиям», аптечка — один из источников."
+ },
+ {
+  "id": "medical_kit",
+  "name": "Медицинский набор",
+  "cat": "item",
+  "plan_size": [
+   35,
+   25
+  ],
+  "os_size": [
+   35,
+   25
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Полевой",
+    "slug": "polevoy",
+    "skip": false
+   },
+   {
+    "name": "Хирургический",
+    "slug": "hirurgicheskiy",
+    "skip": false
+   },
+   {
+    "name": "Экстренный",
+    "slug": "ekstrennyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется для комплексного лечения (раны, инфекции, переломы) нескольких типов."
+ },
+ {
+  "id": "medicine_cabinet",
+  "name": "Аптечный шкафчик",
+  "cat": "container",
+  "plan_size": [
+   50,
+   60
+  ],
+  "os_size": [
+   50,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Ванный",
+    "slug": "vannyy",
+    "skip": false
+   },
+   {
+    "name": "Медпункт (стеклянный)",
+    "slug": "medpunkt",
+    "skip": false
+   },
+   {
+    "name": "Металлический",
+    "slug": "metallicheskiy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "closed",
+   "opening",
+   "open",
+   "closing"
+  ],
+  "fn": "Настенный контейнер; только медпредметы; открывается; персонаж сам находит нужное по эффекту."
+ },
+ {
+  "id": "cot_medical",
+  "name": "Медицинская койка",
+  "cat": "furniture",
+  "plan_size": [
+   190,
+   80
+  ],
+  "os_size": [
+   190,
+   80
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Складная",
+    "slug": "skladnaya",
+    "skip": false
+   },
+   {
+    "name": "Больничная",
+    "slug": "bolnichnaya",
+    "skip": false
+   },
+   {
+    "name": "Полевая",
+    "slug": "polevaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "occupied"
+  ],
+  "fn": "Койка с бонусом к восстановлению; на неё кладут раненого; нужна для лечения."
+ },
+ {
+  "id": "poison_vial",
+  "name": "Яд",
+  "cat": "item",
+  "plan_size": [
+   5,
+   10
+  ],
+  "os_size": [
+   5,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Слабый",
+    "slug": "slabyy",
+    "skip": false
+   },
+   {
+    "name": "Сильный",
+    "slug": "silnyy",
+    "skip": false
+   },
+   {
+    "name": "Медленный",
+    "slug": "medlennyy",
+    "skip": false
+   },
+   {
+    "name": "Антидот (обратное)",
+    "slug": "antidot",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Добавляется в воду; необходимое количество зависит от объёма резервуара; меняет состояние воды на «отравленная»."
+ },
+ {
+  "id": "soap",
+  "name": "Мыло",
+  "cat": "item",
+  "plan_size": [
+   8,
+   4
+  ],
+  "os_size": [
+   8,
+   4
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Кусок мыла",
+    "slug": "kusok_myla",
+    "skip": false
+   },
+   {
+    "name": "Гель",
+    "slug": "gel",
+    "skip": false
+   },
+   {
+    "name": "Дезинфицирующее",
+    "slug": "dezinfitsiruyuschee",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется на мытьё; входит в список предметов гигиены."
+ },
+ {
+  "id": "crate_wood",
+  "name": "Деревянный ящик",
+  "cat": "container",
+  "plan_size": [
+   60,
+   50
+  ],
+  "os_size": [
+   60,
+   50
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Малый",
+    "slug": "malyy",
+    "skip": false
+   },
+   {
+    "name": "Большой",
+    "slug": "bolshoy",
+    "skip": false
+   },
+   {
+    "name": "Военный",
+    "slug": "voennyy",
+    "skip": false
+   },
+   {
+    "name": "Открытый / разграбленный",
+    "slug": "otkrytyy_razgrablennyy",
+    "skip": true
+   },
+   {
+    "name": "Разбитый",
+    "slug": "razbityy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "closed",
+   "opening",
+   "open",
+   "closing",
+   "broken"
+  ],
+  "fn": "Контейнер с таблицей лута (по типу комнаты, состоянию и вероятностям), ломается на доски; лежит открытым или закрытым."
+ },
+ {
+  "id": "rack_metal",
+  "name": "Стеллаж металлический",
+  "cat": "container",
+  "plan_size": [
+   120,
+   200
+  ],
+  "os_size": [
+   120,
+   200
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "С 3 полками",
+    "slug": "s_3_polkami",
+    "skip": false
+   },
+   {
+    "name": "С 5 полками",
+    "slug": "s_5_polkami",
+    "skip": false
+   },
+   {
+    "name": "Промышленный",
+    "slug": "promyshlennyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "damaged"
+  ],
+  "fn": "Контейнер с несколькими полками; ставит ящики и предметы на полки (нагрузка)."
+ },
+ {
+  "id": "locker_metal",
+  "name": "Шкафчик металлический",
+  "cat": "container",
+  "plan_size": [
+   50,
+   180
+  ],
+  "os_size": [
+   50,
+   180
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Спортивный",
+    "slug": "sportivnyy",
+    "skip": false
+   },
+   {
+    "name": "Армейский",
+    "slug": "armeyskiy",
+    "skip": false
+   },
+   {
+    "name": "Офисный",
+    "slug": "ofisnyy",
+    "skip": false
+   },
+   {
+    "name": "Взломанный",
+    "slug": "vzlomannyy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "closed",
+   "opening",
+   "open",
+   "closing",
+   "broken"
+  ],
+  "fn": "Может быть заперт; для открытия нужен ключ, отмычка или лом."
+ },
+ {
+  "id": "safe_metal",
+  "name": "Сейф",
+  "cat": "container",
+  "plan_size": [
+   50,
+   60
+  ],
+  "os_size": [
+   50,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Настенный",
+    "slug": "nastennyy",
+    "skip": false
+   },
+   {
+    "name": "Напольный",
+    "slug": "napolnyy",
+    "skip": false
+   },
+   {
+    "name": "Сейф-ячейка",
+    "slug": "seyf_yacheyka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "closed",
+   "open"
+  ],
+  "fn": "Запертый контейнер, взламывается инструментом и временем; редкий лут."
+ },
+ {
+  "id": "toolbox",
+  "name": "Ящик с инструментами",
+  "cat": "container",
+  "plan_size": [
+   40,
+   25
+  ],
+  "os_size": [
+   40,
+   25
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Пластиковый",
+    "slug": "plastikovyy",
+    "skip": false
+   },
+   {
+    "name": "Металлический",
+    "slug": "metallicheskiy",
+    "skip": false
+   },
+   {
+    "name": "Полный набор",
+    "slug": "polnyy_nabor",
+    "skip": false
+   }
+  ],
+  "states": [
+   "closed",
+   "open"
+  ],
+  "fn": "Контейнер с инструментами; переносится; лут в мастерских и гаражах."
+ },
+ {
+  "id": "backpack",
+  "name": "Рюкзак",
+  "cat": "clothing",
+  "plan_size": [
+   35,
+   45
+  ],
+  "os_size": [
+   35,
+   45
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Школьный (малый)",
+    "slug": "shkolnyy",
+    "skip": false
+   },
+   {
+    "name": "Туристический",
+    "slug": "turisticheskiy",
+    "skip": false
+   },
+   {
+    "name": "Военный (большой)",
+    "slug": "voennyy",
+    "skip": false
+   },
+   {
+    "name": "Сумка через плечо",
+    "slug": "sumka_cherez_plecho",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "worn"
+  ],
+  "fn": "Надевается в слот «спина»; добавляет слоты и грузоподъёмность; выпадает при смерти вместе с содержимым."
+ },
+ {
+  "id": "workbench_basic",
+  "name": "Верстак",
+  "cat": "workbench",
+  "plan_size": [
+   160,
+   95
+  ],
+  "os_size": [
+   230,
+   137
+  ],
+  "size_mismatch": true,
+  "variants": [
+   {
+    "name": "Деревянный базовый",
+    "slug": "derevyannyy_bazovyy",
+    "skip": false
+   },
+   {
+    "name": "Металлический (тяжёлый)",
+    "slug": "metallicheskiy",
+    "skip": false
+   },
+   {
+    "name": "Складной походный",
+    "slug": "skladnoy_pohodnyy",
+    "skip": false
+   },
+   {
+    "name": "Верстак с тисками",
+    "slug": "verstak_s_tiskami",
+    "skip": false
+   },
+   {
+    "name": "Сломанный",
+    "slug": "slomannyy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle",
+   "working",
+   "broken"
+  ],
+  "fn": "Станция крафта: рецепт задаёт входы, инструмент, верстак, время и результат; на верстаке выполняются CRAFT, REPAIR, DISMANTLE. Уровень верстака определяет доступные рецепты."
+ },
+ {
+  "id": "workbench_electronics",
+  "name": "Электронный верстак",
+  "cat": "workbench",
+  "plan_size": [
+   140,
+   95
+  ],
+  "os_size": [
+   230,
+   182
+  ],
+  "size_mismatch": true,
+  "variants": [
+   {
+    "name": "Настольный",
+    "slug": "nastolnyy",
+    "skip": false
+   },
+   {
+    "name": "Мобильная стойка",
+    "slug": "mobilnaya_stoyka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "off",
+   "working"
+  ],
+  "fn": "Станция с паяльником и мультиметром; рецепты электроники; требует энергию."
+ },
+ {
+  "id": "recycler_bench",
+  "name": "Стол разборки",
+  "cat": "workbench",
+  "plan_size": [
+   130,
+   95
+  ],
+  "os_size": [
+   230,
+   127
+  ],
+  "size_mismatch": true,
+  "variants": [
+   {
+    "name": "Ручной",
+    "slug": "ruchnoy",
+    "skip": false
+   },
+   {
+    "name": "С тисками и лом",
+    "slug": "s_tiskami_i_lom",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "working"
+  ],
+  "fn": "Разбирает предметы (DISMANTLE) в металлолом, доски, детали и электронные компоненты; уровень навыка влияет на выход."
+ },
+ {
+  "id": "sewing_table",
+  "name": "Швейный стол",
+  "cat": "workbench",
+  "plan_size": [
+   110,
+   85
+  ],
+  "os_size": [
+   140,
+   133
+  ],
+  "size_mismatch": true,
+  "variants": [
+   {
+    "name": "Ручная машина",
+    "slug": "ruchnaya_mashina",
+    "skip": false
+   },
+   {
+    "name": "Педальная",
+    "slug": "pedalnaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "working"
+  ],
+  "fn": "Крафт одежды, тряпок и бинтов из ткани."
+ },
+ {
+  "id": "planter_box",
+  "name": "Грядка",
+  "cat": "furniture",
+  "plan_size": [
+   120,
+   40
+  ],
+  "os_size": [
+   120,
+   40
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Деревянный ящик",
+    "slug": "derevyannyy_yaschik",
+    "skip": false
+   },
+   {
+    "name": "Кирпичная грядка",
+    "slug": "kirpichnaya_gryadka",
+    "skip": false
+   },
+   {
+    "name": "Гидропонный лоток",
+    "slug": "gidroponnyy_lotok",
+    "skip": false
+   },
+   {
+    "name": "Пустая (без грунта)",
+    "slug": "pustaya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "empty",
+   "planted",
+   "dry"
+  ],
+  "fn": "Хранит грунт и воду; на неё сажают растения из семян; определяет плодородие."
+ },
+ {
+  "id": "hydro_rack",
+  "name": "Гидропонная стойка",
+  "cat": "machine",
+  "plan_size": [
+   100,
+   180
+  ],
+  "os_size": [
+   100,
+   180
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Малая",
+    "slug": "malaya",
+    "skip": false
+   },
+   {
+    "name": "Большая",
+    "slug": "bolshaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "empty",
+   "growing"
+  ],
+  "fn": "Многоярусные лотки с подачей воды и света; требует энергию и питательный раствор."
+ },
+ {
+  "id": "plant_potato",
+  "name": "Картофель (растение)",
+  "cat": "plant",
+  "plan_size": [
+   40,
+   40
+  ],
+  "os_size": [
+   40,
+   40
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Картофель",
+    "slug": "kartofel",
+    "skip": false
+   },
+   {
+    "name": "Морковь",
+    "slug": "morkov",
+    "skip": false
+   },
+   {
+    "name": "Помидор",
+    "slug": "pomidor",
+    "skip": false
+   },
+   {
+    "name": "Кукуруза",
+    "slug": "kukuruza",
+    "skip": false
+   }
+  ],
+  "states": [
+   "seed",
+   "growing",
+   "ripe",
+   "harvest",
+   "withered"
+  ],
+  "fn": "Стадии: росток → рост → созревание; поливается; при созревании — HARVEST даёт овощи и семена; вянет без воды."
+ },
+ {
+  "id": "plant_wheat",
+  "name": "Пшеница (растение)",
+  "cat": "plant",
+  "plan_size": [
+   50,
+   80
+  ],
+  "os_size": [
+   50,
+   80
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Пшеница",
+    "slug": "pshenitsa",
+    "skip": false
+   },
+   {
+    "name": "Рожь",
+    "slug": "rozh",
+    "skip": false
+   },
+   {
+    "name": "Ячмень",
+    "slug": "yachmen",
+    "skip": false
+   }
+  ],
+  "states": [
+   "seed",
+   "growing",
+   "ripe",
+   "harvest",
+   "withered"
+  ],
+  "fn": "Растёт дольше картофеля; даёт зерно."
+ },
+ {
+  "id": "plant_tree",
+  "name": "Дерево",
+  "cat": "plant",
+  "plan_size": [
+   160,
+   450
+  ],
+  "os_size": [
+   160,
+   450
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Сосна",
+    "slug": "sosna",
+    "skip": false
+   },
+   {
+    "name": "Дуб",
+    "slug": "dub",
+    "skip": false
+   },
+   {
+    "name": "Сухое дерево",
+    "slug": "suhoe_derevo",
+    "skip": false
+   },
+   {
+    "name": "Пень",
+    "slug": "pen",
+    "skip": false
+   },
+   {
+    "name": "Молодое",
+    "slug": "molodoe",
+    "skip": false
+   }
+  ],
+  "states": [
+   "sapling",
+   "young",
+   "mature",
+   "felled"
+  ],
+  "fn": "HARVEST топором даёт брёвна; срубленное оставляет пень; со временем вырастает вновь."
+ },
+ {
+  "id": "bush_berry",
+  "name": "Ягодный куст",
+  "cat": "plant",
+  "plan_size": [
+   80,
+   70
+  ],
+  "os_size": [
+   80,
+   70
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Малина",
+    "slug": "malina",
+    "skip": false
+   },
+   {
+    "name": "Черника",
+    "slug": "chernika",
+    "skip": false
+   },
+   {
+    "name": "Ядовитые ягоды",
+    "slug": "yadovitye_yagody",
+    "skip": false
+   },
+   {
+    "name": "Снотворные ягоды",
+    "slug": "snotvornye_yagody",
+    "skip": false
+   }
+  ],
+  "states": [
+   "bare",
+   "fruiting"
+  ],
+  "fn": "Даёт ягоды при созревании, потом отдыхает; часть ягод ядовиты."
+ },
+ {
+  "id": "seed_bag",
+  "name": "Семена",
+  "cat": "item",
+  "plan_size": [
+   10,
+   14
+  ],
+  "os_size": [
+   10,
+   14
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Картофель",
+    "slug": "kartofel",
+    "skip": false
+   },
+   {
+    "name": "Пшеница",
+    "slug": "pshenitsa",
+    "skip": false
+   },
+   {
+    "name": "Морковь",
+    "slug": "morkov",
+    "skip": false
+   },
+   {
+    "name": "Универсальная смесь",
+    "slug": "universalnaya_smes",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Тратятся при посадке; возвращаются при сборе урожая; виды по культурам."
+ },
+ {
+  "id": "fertilizer_bag",
+  "name": "Удобрение",
+  "cat": "item",
+  "plan_size": [
+   25,
+   35
+  ],
+  "os_size": [
+   25,
+   35
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Компост",
+    "slug": "kompost",
+    "skip": false
+   },
+   {
+    "name": "Минеральное",
+    "slug": "mineralnoe",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется на грядке."
+ },
+ {
+  "id": "tool_hammer",
+  "name": "Молоток",
+  "cat": "tool",
+  "plan_size": [
+   30,
+   10
+  ],
+  "os_size": [
+   30,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Столярный",
+    "slug": "stolyarnyy",
+    "skip": false
+   },
+   {
+    "name": "Кувалдочка",
+    "slug": "kuvaldochka",
+    "skip": false
+   },
+   {
+    "name": "Ржавый (слабее)",
+    "slug": "rzhavyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Инструмент-требование действий BUILD, REPAIR, CRAFT; расходуется прочность."
+ },
+ {
+  "id": "tool_wrench",
+  "name": "Гаечный ключ",
+  "cat": "tool",
+  "plan_size": [
+   30,
+   8
+  ],
+  "os_size": [
+   30,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Разводной",
+    "slug": "razvodnoy",
+    "skip": false
+   },
+   {
+    "name": "Рожковый",
+    "slug": "rozhkovyy",
+    "skip": false
+   },
+   {
+    "name": "Набор ключей",
+    "slug": "nabor_klyuchey",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Инструмент-требование REPAIR/DISMANTLE для машин и труб."
+ },
+ {
+  "id": "tool_screwdriver",
+  "name": "Отвёртка",
+  "cat": "tool",
+  "plan_size": [
+   20,
+   4
+  ],
+  "os_size": [
+   20,
+   4
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Крестовая",
+    "slug": "krestovaya",
+    "skip": false
+   },
+   {
+    "name": "Плоская",
+    "slug": "ploskaya",
+    "skip": false
+   },
+   {
+    "name": "Набор",
+    "slug": "nabor",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Инструмент-требование REPAIR электроники."
+ },
+ {
+  "id": "tool_saw",
+  "name": "Пила",
+  "cat": "tool",
+  "plan_size": [
+   50,
+   12
+  ],
+  "os_size": [
+   50,
+   23
+  ],
+  "size_mismatch": true,
+  "variants": [
+   {
+    "name": "Ножовка",
+    "slug": "nozhovka",
+    "skip": false
+   },
+   {
+    "name": "Двуручная",
+    "slug": "dvuruchnaya",
+    "skip": false
+   },
+   {
+    "name": "Бензопила (редкая, шумная)",
+    "slug": "benzopila",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Инструмент-требование крафта досок и мебели."
+ },
+ {
+  "id": "tool_axe",
+  "name": "Топор",
+  "cat": "tool",
+  "plan_size": [
+   35,
+   60
+  ],
+  "os_size": [
+   35,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Колун",
+    "slug": "kolun",
+    "skip": false
+   },
+   {
+    "name": "Пожарный",
+    "slug": "pozharnyy",
+    "skip": false
+   },
+   {
+    "name": "Каменный самодельный",
+    "slug": "kamennyy_samodelnyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "swing"
+  ],
+  "fn": "Инструмент добычи дерева; requirement для HARVEST деревьев и разрушения деревянных блоков."
+ },
+ {
+  "id": "tool_pickaxe",
+  "name": "Кирка",
+  "cat": "tool",
+  "plan_size": [
+   35,
+   60
+  ],
+  "os_size": [
+   35,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Стальная",
+    "slug": "stalnaya",
+    "skip": false
+   },
+   {
+    "name": "Самодельная",
+    "slug": "samodelnaya",
+    "skip": false
+   },
+   {
+    "name": "Отбойный молоток (энергия)",
+    "slug": "otboynyy_molotok",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "swing"
+  ],
+  "fn": "Инструмент для блоков высокой твёрдости; скорость разрушения куска зависит от твёрдости и инструмента; шанс добычи растёт с навыком."
+ },
+ {
+  "id": "tool_shovel",
+  "name": "Лопата",
+  "cat": "tool",
+  "plan_size": [
+   30,
+   110
+  ],
+  "os_size": [
+   30,
+   110
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Штыковая",
+    "slug": "shtykovaya",
+    "skip": false
+   },
+   {
+    "name": "Совковая",
+    "slug": "sovkovaya",
+    "skip": false
+   },
+   {
+    "name": "Сапёрная (складная)",
+    "slug": "sapernaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "dig"
+  ],
+  "fn": "Инструмент для мягких блоков (земля, асфальт-крошка), копает куски 20×20 см; используется для похорон."
+ },
+ {
+  "id": "tool_sledge",
+  "name": "Кувалда",
+  "cat": "tool",
+  "plan_size": [
+   30,
+   90
+  ],
+  "os_size": [
+   30,
+   90
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Малая",
+    "slug": "malaya",
+    "skip": false
+   },
+   {
+    "name": "Большая",
+    "slug": "bolshaya",
+    "skip": false
+   },
+   {
+    "name": "Молот-кирка",
+    "slug": "molot_kirka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "swing"
+  ],
+  "fn": "Тяжёлый инструмент для блоков бетона/кирпича; шумный; расходует энергию персонажа."
+ },
+ {
+  "id": "tool_crowbar",
+  "name": "Лом",
+  "cat": "tool",
+  "plan_size": [
+   70,
+   8
+  ],
+  "os_size": [
+   70,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Стальной",
+    "slug": "stalnoy",
+    "skip": false
+   },
+   {
+    "name": "Гвоздодёр",
+    "slug": "gvozdoder",
+    "skip": false
+   },
+   {
+    "name": "Монтировка",
+    "slug": "montirovka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Инструмент для force_door, вскрытия запертых контейнеров, DISMANTLE построек."
+ },
+ {
+  "id": "tool_lockpick",
+  "name": "Отмычки",
+  "cat": "tool",
+  "plan_size": [
+   10,
+   5
+  ],
+  "os_size": [
+   10,
+   5
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Набор",
+    "slug": "nabor",
+    "skip": false
+   },
+   {
+    "name": "Самодельные",
+    "slug": "samodelnye",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Требуется навык; шанс успеха зависит от замка."
+ },
+ {
+  "id": "tool_flashlight",
+  "name": "Фонарик",
+  "cat": "tool",
+  "plan_size": [
+   10,
+   25
+  ],
+  "os_size": [
+   10,
+   25
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Ручной",
+    "slug": "ruchnoy",
+    "skip": false
+   },
+   {
+    "name": "Налобный",
+    "slug": "nalobnyy",
+    "skip": false
+   },
+   {
+    "name": "С динамо (без батареек)",
+    "slug": "s_dinamo",
+    "skip": false
+   }
+  ],
+  "states": [
+   "off",
+   "on"
+  ],
+  "fn": "Включается/выключается; потребляет заряд; свет CONE."
+ },
+ {
+  "id": "tool_soldering",
+  "name": "Паяльник",
+  "cat": "tool",
+  "plan_size": [
+   25,
+   5
+  ],
+  "os_size": [
+   25,
+   5
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Сетевой",
+    "slug": "setevoy",
+    "skip": false
+   },
+   {
+    "name": "Газовый",
+    "slug": "gazovyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Инструмент-требование для электронного верстака; работает от энергии."
+ },
+ {
+  "id": "tool_knife",
+  "name": "Нож",
+  "cat": "tool",
+  "plan_size": [
+   25,
+   5
+  ],
+  "os_size": [
+   25,
+   5
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Кухонный",
+    "slug": "kuhonnyy",
+    "skip": false
+   },
+   {
+    "name": "Охотничий",
+    "slug": "ohotnichiy",
+    "skip": false
+   },
+   {
+    "name": "Складной",
+    "slug": "skladnoy",
+    "skip": false
+   },
+   {
+    "name": "Ржавый",
+    "slug": "rzhavyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "slash"
+  ],
+  "fn": "Инструмент-требование обработки туш и крафта; слабое оружие ближнего боя."
+ },
+ {
+  "id": "mat_plank",
+  "name": "Доски",
+  "cat": "item",
+  "plan_size": [
+   100,
+   10
+  ],
+  "os_size": [
+   100,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Доска",
+    "slug": "doska",
+    "skip": false
+   },
+   {
+    "name": "Брус",
+    "slug": "brus",
+    "skip": false
+   },
+   {
+    "name": "Фанера",
+    "slug": "fanera",
+    "skip": false
+   },
+   {
+    "name": "Обрезки",
+    "slug": "obrezki",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется в рецептах строительства и ремонта; получается из брёвен, разборки мебели и ящиков."
+ },
+ {
+  "id": "mat_log",
+  "name": "Брёвна",
+  "cat": "item",
+  "plan_size": [
+   120,
+   20
+  ],
+  "os_size": [
+   120,
+   20
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Полено",
+    "slug": "poleno",
+    "skip": false
+   },
+   {
+    "name": "Ствол",
+    "slug": "stvol",
+    "skip": false
+   },
+   {
+    "name": "Хворост",
+    "slug": "hvorost",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Из дерева; распиливаются на доски; сжигаются."
+ },
+ {
+  "id": "mat_scrap",
+  "name": "Металлолом",
+  "cat": "item",
+  "plan_size": [
+   25,
+   15
+  ],
+  "os_size": [
+   25,
+   15
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Лом",
+    "slug": "lom",
+    "skip": false
+   },
+   {
+    "name": "Обрезки",
+    "slug": "obrezki",
+    "skip": false
+   },
+   {
+    "name": "Ржавый",
+    "slug": "rzhavyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Получается разборкой и добычей; расходуется в рецептах металла."
+ },
+ {
+  "id": "mat_sheet_metal",
+  "name": "Металлический лист",
+  "cat": "item",
+  "plan_size": [
+   100,
+   3
+  ],
+  "os_size": [
+   100,
+   3
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Тонкий",
+    "slug": "tonkiy",
+    "skip": false
+   },
+   {
+    "name": "Оцинкованный",
+    "slug": "otsinkovannyy",
+    "skip": false
+   },
+   {
+    "name": "Стальная плита",
+    "slug": "stalnaya_plita",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Из металлолома на верстаке; в рецептах оборудования."
+ },
+ {
+  "id": "mat_pipe_metal",
+  "name": "Труба",
+  "cat": "item",
+  "plan_size": [
+   100,
+   8
+  ],
+  "os_size": [
+   100,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Стальная",
+    "slug": "stalnaya",
+    "skip": false
+   },
+   {
+    "name": "ПВХ",
+    "slug": "pvh",
+    "skip": false
+   },
+   {
+    "name": "Медная",
+    "slug": "mednaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется в рецептах воды и печей; можно использовать как оружие."
+ },
+ {
+  "id": "mat_nails",
+  "name": "Гвозди / крепёж",
+  "cat": "item",
+  "plan_size": [
+   6,
+   4
+  ],
+  "os_size": [
+   6,
+   4
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Гвозди",
+    "slug": "gvozdi",
+    "skip": false
+   },
+   {
+    "name": "Шурупы",
+    "slug": "shurupy",
+    "skip": false
+   },
+   {
+    "name": "Скобы",
+    "slug": "skoby",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуются в каждом рецепте дерева."
+ },
+ {
+  "id": "mat_wire",
+  "name": "Проволока / провод",
+  "cat": "item",
+  "plan_size": [
+   20,
+   20
+  ],
+  "os_size": [
+   20,
+   20
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Медная",
+    "slug": "mednaya",
+    "skip": false
+   },
+   {
+    "name": "Стальная",
+    "slug": "stalnaya",
+    "skip": false
+   },
+   {
+    "name": "Колючая",
+    "slug": "kolyuchaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется в электро- и механических рецептах."
+ },
+ {
+  "id": "mat_cloth",
+  "name": "Ткань",
+  "cat": "item",
+  "plan_size": [
+   30,
+   20
+  ],
+  "os_size": [
+   30,
+   20
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Лоскут",
+    "slug": "loskut",
+    "skip": false
+   },
+   {
+    "name": "Полотно",
+    "slug": "polotno",
+    "skip": false
+   },
+   {
+    "name": "Брезент",
+    "slug": "brezent",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Разрезается ножом; идёт в бинты, одежду и рюкзаки."
+ },
+ {
+  "id": "mat_rope",
+  "name": "Верёвка",
+  "cat": "item",
+  "plan_size": [
+   30,
+   10
+  ],
+  "os_size": [
+   30,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Пенька",
+    "slug": "penka",
+    "skip": false
+   },
+   {
+    "name": "Нейлон",
+    "slug": "neylon",
+    "skip": false
+   },
+   {
+    "name": "Трос",
+    "slug": "tros",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется в рецептах; можно использовать для спуска."
+ },
+ {
+  "id": "mat_cement",
+  "name": "Цемент / стройматериалы",
+  "cat": "item",
+  "plan_size": [
+   30,
+   40
+  ],
+  "os_size": [
+   30,
+   40
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Мешок цемента",
+    "slug": "meshok_tsementa",
+    "skip": false
+   },
+   {
+    "name": "Смесь",
+    "slug": "smes",
+    "skip": false
+   },
+   {
+    "name": "Готовые блоки",
+    "slug": "gotovye_bloki",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется при строительстве бетонных блоков."
+ },
+ {
+  "id": "part_mech",
+  "name": "Механические детали",
+  "cat": "item",
+  "plan_size": [
+   15,
+   15
+  ],
+  "os_size": [
+   15,
+   15
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Шестерни",
+    "slug": "shesterni",
+    "skip": false
+   },
+   {
+    "name": "Подшипники",
+    "slug": "podshipniki",
+    "skip": false
+   },
+   {
+    "name": "Пружины",
+    "slug": "pruzhiny",
+    "skip": false
+   },
+   {
+    "name": "Крепёж",
+    "slug": "krepezh",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Получаются разборкой; расходуются в рецептах оборудования."
+ },
+ {
+  "id": "part_electronic",
+  "name": "Электронные компоненты",
+  "cat": "item",
+  "plan_size": [
+   10,
+   10
+  ],
+  "os_size": [
+   10,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Платы",
+    "slug": "platy",
+    "skip": false
+   },
+   {
+    "name": "Микросхемы",
+    "slug": "mikroshemy",
+    "skip": false
+   },
+   {
+    "name": "Конденсаторы",
+    "slug": "kondensatory",
+    "skip": false
+   },
+   {
+    "name": "Аккумуляторные элементы",
+    "slug": "akkumulyatornye_elementy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Получаются разборкой электроники; расходуются в электронике."
+ },
+ {
+  "id": "part_rare_circuit",
+  "name": "Редкая схема",
+  "cat": "item",
+  "plan_size": [
+   10,
+   10
+  ],
+  "os_size": [
+   10,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Военная плата",
+    "slug": "voennaya_plata",
+    "skip": false
+   },
+   {
+    "name": "Медицинский чип",
+    "slug": "meditsinskiy_chip",
+    "skip": false
+   },
+   {
+    "name": "Радиомодуль",
+    "slug": "radiomodul",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется только в редких рецептах."
+ },
+ {
+  "id": "stone_chunk",
+  "name": "Кусок камня",
+  "cat": "item",
+  "plan_size": [
+   15,
+   12
+  ],
+  "os_size": [
+   15,
+   12
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Булыжник",
+    "slug": "bulyzhnik",
+    "skip": false
+   },
+   {
+    "name": "Щебень",
+    "slug": "scheben",
+    "skip": false
+   },
+   {
+    "name": "Гальки",
+    "slug": "galki",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Выпадает при разрушении кусков каменных блоков; идёт в постройки, костры, примитивные инструменты."
+ },
+ {
+  "id": "soil_clump",
+  "name": "Грунт",
+  "cat": "item",
+  "plan_size": [
+   15,
+   12
+  ],
+  "os_size": [
+   15,
+   12
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Чернозём",
+    "slug": "chernozem",
+    "skip": false
+   },
+   {
+    "name": "Глина",
+    "slug": "glina",
+    "skip": false
+   },
+   {
+    "name": "Песок",
+    "slug": "pesok",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Выпадает из блоков земли; насыпается в грядки."
+ },
+ {
+  "id": "iron_ore",
+  "name": "Железная руда",
+  "cat": "item",
+  "plan_size": [
+   15,
+   12
+  ],
+  "os_size": [
+   15,
+   12
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Руда",
+    "slug": "ruda",
+    "skip": false
+   },
+   {
+    "name": "Обломки руды",
+    "slug": "oblomki_rudy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Выпадает из рудных блоков; перерабатывается в металл (кузница)."
+ },
+ {
+  "id": "coal_chunk",
+  "name": "Уголь",
+  "cat": "item",
+  "plan_size": [
+   15,
+   12
+  ],
+  "os_size": [
+   15,
+   12
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Каменный",
+    "slug": "kamennyy",
+    "skip": false
+   },
+   {
+    "name": "Древесный",
+    "slug": "drevesnyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Сжигается в печах; используется в фильтрах воды."
+ },
+ {
+  "id": "mat_rubble",
+  "name": "Строительный мусор",
+  "cat": "item",
+  "plan_size": [
+   20,
+   15
+  ],
+  "os_size": [
+   20,
+   15
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Битый кирпич",
+    "slug": "bityy_kirpich",
+    "skip": false
+   },
+   {
+    "name": "Бетонная крошка",
+    "slug": "betonnaya_kroshka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Выпадает из бетона и кирпича; перерабатывается."
+ },
+ {
+  "id": "mat_glass",
+  "name": "Стекло",
+  "cat": "item",
+  "plan_size": [
+   30,
+   30
+  ],
+  "os_size": [
+   30,
+   30
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Лист стекла",
+    "slug": "list_stekla",
+    "skip": false
+   },
+   {
+    "name": "Осколки",
+    "slug": "oskolki",
+    "skip": false
+   },
+   {
+    "name": "Бутылочное стекло",
+    "slug": "butylochnoe_steklo",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Материал для лампочек и окон; из разбитых окон и бутылок выпадают осколки; острые осколки могут поранить при подборе."
+ },
+ {
+  "id": "repair_kit",
+  "name": "Ремонтный набор",
+  "cat": "item",
+  "plan_size": [
+   25,
+   15
+  ],
+  "os_size": [
+   25,
+   15
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Малый набор",
+    "slug": "malyy_nabor",
+    "skip": false
+   },
+   {
+    "name": "Набор механика",
+    "slug": "nabor_mehanika",
+    "skip": false
+   },
+   {
+    "name": "Электронный ремонтный набор",
+    "slug": "elektronnyy_remontnyy_nabor",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется при действии REPAIR: восстанавливает прочность объекта; в наборе несколько зарядов."
+ },
+ {
+  "id": "duct_tape",
+  "name": "Изолента / скотч",
+  "cat": "item",
+  "plan_size": [
+   10,
+   10
+  ],
+  "os_size": [
+   10,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Изолента",
+    "slug": "izolenta",
+    "skip": false
+   },
+   {
+    "name": "Скотч",
+    "slug": "skotch",
+    "skip": false
+   },
+   {
+    "name": "Серебристая лента",
+    "slug": "serebristaya_lenta",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Расходуется при быстром ремонте: небольшое восстановление прочности, объект остаётся «залатанным» и ломается быстрее."
+ },
+ {
+  "id": "block_dirt",
+  "name": "Земля",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Сухая земля",
+    "slug": "suhaya_zemlya",
+    "skip": false
+   },
+   {
+    "name": "Земля с травой (верх)",
+    "slug": "zemlya_s_travoy",
+    "skip": false
+   },
+   {
+    "name": "Глина",
+    "slug": "glina",
+    "skip": false
+   },
+   {
+    "name": "Песок",
+    "slug": "pesok",
+    "skip": false
+   },
+   {
+    "name": "Мокрая земля",
+    "slug": "mokraya_zemlya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Мягкий блок: низкая твёрдость, копается лопатой; из него выпадают грунт и камень."
+ },
+ {
+  "id": "block_stone",
+  "name": "Камень",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Гранит",
+    "slug": "granit",
+    "skip": false
+   },
+   {
+    "name": "Известняк",
+    "slug": "izvestnyak",
+    "skip": false
+   },
+   {
+    "name": "Слоистый",
+    "slug": "sloistyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Высокая твёрдость; копается киркой; шумный."
+ },
+ {
+  "id": "block_concrete",
+  "name": "Бетон",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Бетон",
+    "slug": "beton",
+    "skip": false
+   },
+   {
+    "name": "Железобетон (арматура)",
+    "slug": "zhelezobeton",
+    "skip": false
+   },
+   {
+    "name": "Бетонная плита",
+    "slug": "betonnaya_plita",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Очень твёрдый; ломается кувалдой; даёт мусор и цемент."
+ },
+ {
+  "id": "block_brick",
+  "name": "Кирпич",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Красный кирпич",
+    "slug": "krasnyy_kirpich",
+    "skip": false
+   },
+   {
+    "name": "Штукатурка",
+    "slug": "shtukaturka",
+    "skip": false
+   },
+   {
+    "name": "Облицованный",
+    "slug": "oblitsovannyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Средняя твёрдость; ломается киркой/кувалдой."
+ },
+ {
+  "id": "block_wood",
+  "name": "Деревянная стена / пол",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Доски",
+    "slug": "doski",
+    "skip": false
+   },
+   {
+    "name": "Фанера",
+    "slug": "fanera",
+    "skip": false
+   },
+   {
+    "name": "Паркет",
+    "slug": "parket",
+    "skip": false
+   },
+   {
+    "name": "Обшивка",
+    "slug": "obshivka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Низкая твёрдость; ломается топором; горит (позже)."
+ },
+ {
+  "id": "block_metal",
+  "name": "Металлическая плита",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Лист",
+    "slug": "list",
+    "skip": false
+   },
+   {
+    "name": "Решётка",
+    "slug": "reshetka",
+    "skip": false
+   },
+   {
+    "name": "Ребристая",
+    "slug": "rebristaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Очень высокая твёрдость; медленно ломается ломом или резаком; даёт металл."
+ },
+ {
+  "id": "block_asphalt",
+  "name": "Асфальт",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Асфальт",
+    "slug": "asfalt",
+    "skip": false
+   },
+   {
+    "name": "Трещины",
+    "slug": "treschiny",
+    "skip": false
+   },
+   {
+    "name": "Тротуар",
+    "slug": "trotuar",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Средняя твёрдость; ломается киркой; под ним земля."
+ },
+ {
+  "id": "block_rubble",
+  "name": "Завал",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Кирпичный завал",
+    "slug": "kirpichnyy_zaval",
+    "skip": false
+   },
+   {
+    "name": "Бетонный",
+    "slug": "betonnyy",
+    "skip": false
+   },
+   {
+    "name": "Смешанный",
+    "slug": "smeshannyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Низкая твёрдость; расчищается лопатой; даёт мусор."
+ },
+ {
+  "id": "block_ore_iron",
+  "name": "Железная руда (пласт)",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Богатая жила",
+    "slug": "bogataya_zhila",
+    "skip": false
+   },
+   {
+    "name": "Бедная",
+    "slug": "bednaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Высокая твёрдость; вкрапления в камне; даёт руду."
+ },
+ {
+  "id": "block_coal",
+  "name": "Угольный пласт",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Пласт",
+    "slug": "plast",
+    "skip": false
+   },
+   {
+    "name": "Вкрапления",
+    "slug": "vkrapleniya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Средняя твёрдость; даёт уголь."
+ },
+ {
+  "id": "block_bedrock",
+  "name": "Неразрушаемая порода",
+  "cat": "block",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Тёмная порода",
+    "slug": "temnaya_poroda",
+    "skip": false
+   },
+   {
+    "name": "Слоистая (видны пласты)",
+    "slug": "sloistaya",
+    "skip": false
+   },
+   {
+    "name": "Фундамент бункера",
+    "slug": "fundament_bunkera",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Блок, который не ломается ни одним инструментом и не даёт добычи; держит нижнюю границу мира и стены глубоких шахт."
+ },
+ {
+  "id": "door_wood",
+  "name": "Дверь деревянная",
+  "cat": "door",
+  "plan_size": [
+   100,
+   200
+  ],
+  "os_size": [
+   100,
+   200
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Внутренняя",
+    "slug": "vnutrennyaya",
+    "skip": false
+   },
+   {
+    "name": "Входная",
+    "slug": "vhodnaya",
+    "skip": false
+   },
+   {
+    "name": "Дверь со стеклом",
+    "slug": "dver_so_steklom",
+    "skip": false
+   },
+   {
+    "name": "Выбитая",
+    "slug": "vybitaya",
+    "skip": false
+   },
+   {
+    "name": "Запертая",
+    "slug": "zapertaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "closed",
+   "opening",
+   "open",
+   "closing",
+   "breaking",
+   "broken"
+  ],
+  "fn": "Соединяет комнаты через door.toRoom и точку появления; открывается, закрывается, запирается, ломается или выбивается."
+ },
+ {
+  "id": "door_metal",
+  "name": "Дверь металлическая",
+  "cat": "door",
+  "plan_size": [
+   100,
+   200
+  ],
+  "os_size": [
+   100,
+   200
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Стальная",
+    "slug": "stalnaya",
+    "skip": false
+   },
+   {
+    "name": "Бронированная",
+    "slug": "bronirovannaya",
+    "skip": false
+   },
+   {
+    "name": "Противопожарная",
+    "slug": "protivopozharnaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "closed",
+   "opening",
+   "open",
+   "closing",
+   "breaking",
+   "broken"
+  ],
+  "fn": "Высокая прочность, шум при взломе; замок."
+ },
+ {
+  "id": "hatch_bunker",
+  "name": "Люк бункера",
+  "cat": "door",
+  "plan_size": [
+   100,
+   60
+  ],
+  "os_size": [
+   220,
+   144
+  ],
+  "size_mismatch": true,
+  "variants": [
+   {
+    "name": "Люк с колесом",
+    "slug": "lyuk_s_kolesom",
+    "skip": false
+   },
+   {
+    "name": "Ляда",
+    "slug": "lyada",
+    "skip": false
+   },
+   {
+    "name": "Шлюз (двойной)",
+    "slug": "shlyuz",
+    "skip": false
+   }
+  ],
+  "states": [
+   "closed",
+   "opening",
+   "open",
+   "closing"
+  ],
+  "fn": "Переход между сценой убежища и главной трассой; открывается вручную, можно закрыть изнутри и заблокировать."
+ },
+ {
+  "id": "window_basic",
+  "name": "Окно",
+  "cat": "building",
+  "plan_size": [
+   100,
+   100
+  ],
+  "os_size": [
+   100,
+   100
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Целое",
+    "slug": "tseloe",
+    "skip": false
+   },
+   {
+    "name": "Разбитое",
+    "slug": "razbitoe",
+    "skip": true
+   },
+   {
+    "name": "Заколоченное",
+    "slug": "zakolochennoe",
+    "skip": false
+   },
+   {
+    "name": "Решётка",
+    "slug": "reshetka",
+    "skip": false
+   }
+  ],
+  "states": [
+   "intact",
+   "broken",
+   "boarded"
+  ],
+  "fn": "Пропускает свет и взгляд; разбивается; можно заколотить."
+ },
+ {
+  "id": "stairs_wood",
+  "name": "Лестница",
+  "cat": "building",
+  "plan_size": [
+   110,
+   260
+  ],
+  "os_size": [
+   110,
+   260
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Деревянная",
+    "slug": "derevyannaya",
+    "skip": false
+   },
+   {
+    "name": "Металлическая",
+    "slug": "metallicheskaya",
+    "skip": false
+   },
+   {
+    "name": "Наклонная",
+    "slug": "naklonnaya",
+    "skip": false
+   },
+   {
+    "name": "Пожарная (наружная)",
+    "slug": "pozharnaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Точка перехода вверх/вниз; анимации climb_up/climb_down; проходимость."
+ },
+ {
+  "id": "ladder_metal",
+  "name": "Металлическая лестница",
+  "cat": "building",
+  "plan_size": [
+   50,
+   300
+  ],
+  "os_size": [
+   50,
+   300
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Пристенная",
+    "slug": "pristennaya",
+    "skip": false
+   },
+   {
+    "name": "Стремянка",
+    "slug": "stremyanka",
+    "skip": false
+   },
+   {
+    "name": "Верёвочная",
+    "slug": "verevochnaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Персонаж лезет (climb_up/down); не требует места."
+ },
+ {
+  "id": "barricade_planks",
+  "name": "Баррикада",
+  "cat": "building",
+  "plan_size": [
+   110,
+   200
+  ],
+  "os_size": [
+   110,
+   200
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Доски на окне",
+    "slug": "doski_na_okne",
+    "skip": false
+   },
+   {
+    "name": "Мебель у двери",
+    "slug": "mebel_u_dveri",
+    "skip": false
+   },
+   {
+    "name": "Металлический заслон",
+    "slug": "metallicheskiy_zaslon",
+    "skip": false
+   }
+  ],
+  "states": [
+   "intact",
+   "damaged",
+   "broken"
+  ],
+  "fn": "Закрывает дверь/окно; разрушается по HP; восстанавливается досками."
+ },
+ {
+  "id": "fence_wire",
+  "name": "Забор с колючей проволокой",
+  "cat": "building",
+  "plan_size": [
+   200,
+   150
+  ],
+  "os_size": [
+   200,
+   150
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Сетка",
+    "slug": "setka",
+    "skip": false
+   },
+   {
+    "name": "Колючая проволока",
+    "slug": "kolyuchaya_provoloka",
+    "skip": false
+   },
+   {
+    "name": "Деревянный частокол",
+    "slug": "derevyannyy_chastokol",
+    "skip": false
+   }
+  ],
+  "states": [
+   "intact",
+   "damaged"
+  ],
+  "fn": "Замедляет и ранит; ограничивает движение."
+ },
+ {
+  "id": "tent_camp",
+  "name": "Палатка",
+  "cat": "building",
+  "plan_size": [
+   220,
+   140
+  ],
+  "os_size": [
+   220,
+   140
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Одноместная",
+    "slug": "odnomestnaya",
+    "skip": false
+   },
+   {
+    "name": "Большая",
+    "slug": "bolshaya",
+    "skip": false
+   },
+   {
+    "name": "Полевая брезентовая",
+    "slug": "polevaya_brezentovaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "packed",
+   "set_up"
+  ],
+  "fn": "Укрытие со спальными местами и небольшим хранилищем; собирается и разбирается."
+ },
+ {
+  "id": "lock_padlock",
+  "name": "Навесной замок",
+  "cat": "item",
+  "plan_size": [
+   6,
+   10
+  ],
+  "os_size": [
+   6,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Навесной",
+    "slug": "navesnoy",
+    "skip": false
+   },
+   {
+    "name": "Врезной",
+    "slug": "vreznoy",
+    "skip": false
+   },
+   {
+    "name": "Кодовый",
+    "slug": "kodovyy",
+    "skip": false
+   },
+   {
+    "name": "Сломанный",
+    "slug": "slomannyy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "open",
+   "locked"
+  ],
+  "fn": "Ставится на дверь или контейнер: объект становится запертым; открывается ключом (key_generic) с тем же key_id, отмычкой (время и шум) или ломом."
+ },
+ {
+  "id": "key_generic",
+  "name": "Ключ",
+  "cat": "item",
+  "plan_size": [
+   3,
+   8
+  ],
+  "os_size": [
+   3,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Обычный",
+    "slug": "obychnyy",
+    "skip": false
+   },
+   {
+    "name": "Ключ-карта",
+    "slug": "klyuch_karta",
+    "skip": false
+   },
+   {
+    "name": "Брелок с номером",
+    "slug": "brelok_s_nomerom",
+    "skip": false
+   },
+   {
+    "name": "Сломанный",
+    "slug": "slomannyy",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Хранит key_id и открывает объект с тем же key_id; может лежать на останках, в столе, у торговца; можно потерять."
+ },
+ {
+  "id": "weapon_bat",
+  "name": "Бейсбольная бита",
+  "cat": "weapon",
+  "plan_size": [
+   90,
+   10
+  ],
+  "os_size": [
+   90,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Деревянная",
+    "slug": "derevyannaya",
+    "skip": false
+   },
+   {
+    "name": "Алюминиевая",
+    "slug": "alyuminievaya",
+    "skip": false
+   },
+   {
+    "name": "С гвоздями",
+    "slug": "s_gvozdyami",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "swing"
+  ],
+  "fn": "Урон в ближнем бою, отталкивание; износ; анимации attack."
+ },
+ {
+  "id": "weapon_pipe",
+  "name": "Труба-дубинка",
+  "cat": "weapon",
+  "plan_size": [
+   80,
+   8
+  ],
+  "os_size": [
+   80,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Стальная труба",
+    "slug": "stalnaya_truba",
+    "skip": false
+   },
+   {
+    "name": "С обмоткой",
+    "slug": "s_obmotkoy",
+    "skip": false
+   },
+   {
+    "name": "С шипами",
+    "slug": "s_shipami",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "swing"
+  ],
+  "fn": "Мощный ближний удар; медленнее биты."
+ },
+ {
+  "id": "weapon_machete",
+  "name": "Мачете",
+  "cat": "weapon",
+  "plan_size": [
+   70,
+   8
+  ],
+  "os_size": [
+   70,
+   8
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Мачете",
+    "slug": "machete",
+    "skip": false
+   },
+   {
+    "name": "Топор-мачете",
+    "slug": "topor_machete",
+    "skip": false
+   },
+   {
+    "name": "Нож-кукри",
+    "slug": "nozh_kukri",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "slash"
+  ],
+  "fn": "Урон ближнего боя, быстрый; разрубает."
+ },
+ {
+  "id": "weapon_pistol",
+  "name": "Пистолет",
+  "cat": "weapon",
+  "plan_size": [
+   20,
+   14
+  ],
+  "os_size": [
+   20,
+   14
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "9 мм",
+    "slug": "9_mm",
+    "skip": false
+   },
+   {
+    "name": "Револьвер",
+    "slug": "revolver",
+    "skip": false
+   },
+   {
+    "name": "Самодельный",
+    "slug": "samodelnyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "aim",
+   "fire",
+   "reload"
+  ],
+  "fn": "Стрельба (aim, attack, reload), расходует патроны; громкий выстрел привлекает угрозы в радиусе."
+ },
+ {
+  "id": "ammo_9mm",
+  "name": "Патроны 9 мм",
+  "cat": "item",
+  "plan_size": [
+   6,
+   3
+  ],
+  "os_size": [
+   6,
+   3
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Обычные",
+    "slug": "obychnye",
+    "skip": false
+   },
+   {
+    "name": "Бронебойные",
+    "slug": "broneboynye",
+    "skip": false
+   },
+   {
+    "name": "Самодельные",
+    "slug": "samodelnye",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Стек до 100; расходуется при выстрелах; ценная валюта."
+ },
+ {
+  "id": "weapon_shotgun",
+  "name": "Дробовик",
+  "cat": "weapon",
+  "plan_size": [
+   100,
+   15
+  ],
+  "os_size": [
+   100,
+   15
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Помповый",
+    "slug": "pompovyy",
+    "skip": false
+   },
+   {
+    "name": "Двустволка",
+    "slug": "dvustvolka",
+    "skip": false
+   },
+   {
+    "name": "Обрез",
+    "slug": "obrez",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "aim",
+   "fire",
+   "reload"
+  ],
+  "fn": "Урон по площади, малый боезапас, длинная перезарядка."
+ },
+ {
+  "id": "ammo_shells",
+  "name": "Патроны для дробовика",
+  "cat": "item",
+  "plan_size": [
+   8,
+   4
+  ],
+  "os_size": [
+   8,
+   4
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Картечь",
+    "slug": "kartech",
+    "skip": false
+   },
+   {
+    "name": "Пуля",
+    "slug": "pulya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Стек до 50."
+ },
+ {
+  "id": "weapon_bow",
+  "name": "Лук",
+  "cat": "weapon",
+  "plan_size": [
+   70,
+   110
+  ],
+  "os_size": [
+   70,
+   110
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Охотничий",
+    "slug": "ohotnichiy",
+    "skip": false
+   },
+   {
+    "name": "Самодельный",
+    "slug": "samodelnyy",
+    "skip": false
+   },
+   {
+    "name": "Блочный",
+    "slug": "blochnyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "aim",
+   "fire"
+  ],
+  "fn": "Стрелы расходуются; можно вернуть часть."
+ },
+ {
+  "id": "trap_bear",
+  "name": "Капкан / ловушка",
+  "cat": "weapon",
+  "plan_size": [
+   40,
+   10
+  ],
+  "os_size": [
+   40,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Капкан",
+    "slug": "kapkan",
+    "skip": false
+   },
+   {
+    "name": "Петля",
+    "slug": "petlya",
+    "skip": false
+   },
+   {
+    "name": "Яма с кольями",
+    "slug": "yama_s_kolyami",
+    "skip": false
+   }
+  ],
+  "states": [
+   "set",
+   "triggered"
+  ],
+  "fn": "Устанавливается на землю; срабатывает при шаге; калечит."
+ },
+ {
+  "id": "cloth_jacket",
+  "name": "Куртка",
+  "cat": "clothing",
+  "plan_size": [
+   50,
+   70
+  ],
+  "os_size": [
+   50,
+   70
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Кожаная",
+    "slug": "kozhanaya",
+    "skip": false
+   },
+   {
+    "name": "Ветровка",
+    "slug": "vetrovka",
+    "skip": false
+   },
+   {
+    "name": "Худи",
+    "slug": "hudi",
+    "skip": false
+   },
+   {
+    "name": "Рабочая роба",
+    "slug": "rabochaya_roba",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "worn"
+  ],
+  "fn": "Надевается в слот торса; защита от урона и холода; износ."
+ },
+ {
+  "id": "cloth_pants",
+  "name": "Штаны",
+  "cat": "clothing",
+  "plan_size": [
+   40,
+   80
+  ],
+  "os_size": [
+   40,
+   80
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Джинсы",
+    "slug": "dzhinsy",
+    "skip": false
+   },
+   {
+    "name": "Камуфляж",
+    "slug": "kamuflyazh",
+    "skip": false
+   },
+   {
+    "name": "Спортивные",
+    "slug": "sportivnye",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "worn"
+  ],
+  "fn": "Слот legs; защита от травм."
+ },
+ {
+  "id": "cloth_boots",
+  "name": "Ботинки",
+  "cat": "clothing",
+  "plan_size": [
+   30,
+   20
+  ],
+  "os_size": [
+   30,
+   20
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Кроссовки",
+    "slug": "krossovki",
+    "skip": false
+   },
+   {
+    "name": "Берцы",
+    "slug": "bertsy",
+    "skip": false
+   },
+   {
+    "name": "Резиновые сапоги",
+    "slug": "rezinovye_sapogi",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "worn"
+  ],
+  "fn": "Слот feet; защищает от порезов и повышает скорость по грязи; изнашивается."
+ },
+ {
+  "id": "cloth_gloves",
+  "name": "Перчатки",
+  "cat": "clothing",
+  "plan_size": [
+   20,
+   15
+  ],
+  "os_size": [
+   20,
+   15
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Рабочие",
+    "slug": "rabochie",
+    "skip": false
+   },
+   {
+    "name": "Кожаные",
+    "slug": "kozhanye",
+    "skip": false
+   },
+   {
+    "name": "Тактические",
+    "slug": "takticheskie",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Слот hands; снижает износ и раны."
+ },
+ {
+  "id": "mask_gas",
+  "name": "Противогаз",
+  "cat": "clothing",
+  "plan_size": [
+   25,
+   30
+  ],
+  "os_size": [
+   25,
+   30
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Военный",
+    "slug": "voennyy",
+    "skip": false
+   },
+   {
+    "name": "Респиратор",
+    "slug": "respirator",
+    "skip": false
+   },
+   {
+    "name": "Самодельный",
+    "slug": "samodelnyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "worn"
+  ],
+  "fn": "Слот head; защищает от заражённого воздуха; фильтр расходуется."
+ },
+ {
+  "id": "vest_armor",
+  "name": "Бронежилет",
+  "cat": "clothing",
+  "plan_size": [
+   45,
+   60
+  ],
+  "os_size": [
+   45,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Самодельный",
+    "slug": "samodelnyy",
+    "skip": false
+   },
+   {
+    "name": "Полицейский",
+    "slug": "politseyskiy",
+    "skip": false
+   },
+   {
+    "name": "Военный",
+    "slug": "voennyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "worn"
+  ],
+  "fn": "Слот torso поверх куртки; высокая защита; вес снижает выносливость."
+ },
+ {
+  "id": "signpost_fork",
+  "name": "Указатель развилки",
+  "cat": "door",
+  "plan_size": [
+   80,
+   220
+  ],
+  "os_size": [
+   80,
+   220
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Дорожный знак",
+    "slug": "dorozhnyy_znak",
+    "skip": false
+   },
+   {
+    "name": "Самодельный указатель",
+    "slug": "samodelnyy_ukazatel",
+    "skip": false
+   },
+   {
+    "name": "Ржавый (частично читается)",
+    "slug": "rzhavyy",
+    "skip": false
+   },
+   {
+    "name": "Билборд",
+    "slug": "bilbord",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Физический объект-переход: ведёт к городу / другой трассе / краю карты; показывает название направления."
+ },
+ {
+  "id": "car_abandoned",
+  "name": "Брошенная машина",
+  "cat": "machine",
+  "plan_size": [
+   450,
+   160
+  ],
+  "os_size": [
+   450,
+   160
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Седан",
+    "slug": "sedan",
+    "skip": false
+   },
+   {
+    "name": "Микроавтобус",
+    "slug": "mikroavtobus",
+    "skip": false
+   },
+   {
+    "name": "Грузовик",
+    "slug": "gruzovik",
+    "skip": false
+   },
+   {
+    "name": "Ржавая",
+    "slug": "rzhavaya",
+    "skip": false
+   },
+   {
+    "name": "Перевёрнутая",
+    "slug": "perevernutaya",
+    "skip": true
+   },
+   {
+    "name": "Сгоревшая",
+    "slug": "sgorevshaya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle",
+   "open",
+   "wreck"
+  ],
+  "fn": "Багажник и салон — хранилища; топливо сливается; аккумулятор снимается; можно залезть (enter_vehicle) и спрятаться."
+ },
+ {
+  "id": "car_wreck",
+  "name": "Остов сгоревшей машины",
+  "cat": "decor",
+  "plan_size": [
+   450,
+   150
+  ],
+  "os_size": [
+   450,
+   150
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Сгоревшая",
+    "slug": "sgorevshaya",
+    "skip": true
+   },
+   {
+    "name": "Разобранная",
+    "slug": "razobrannaya",
+    "skip": false
+   },
+   {
+    "name": "Перевёрнутая",
+    "slug": "perevernutaya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Декор с ограниченным лутом (металлолом)."
+ },
+ {
+  "id": "street_lamp",
+  "name": "Уличный фонарь",
+  "cat": "decor",
+  "plan_size": [
+   30,
+   400
+  ],
+  "os_size": [
+   30,
+   400
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Целый",
+    "slug": "tselyy",
+    "skip": false
+   },
+   {
+    "name": "Разбитый",
+    "slug": "razbityy",
+    "skip": true
+   },
+   {
+    "name": "Накренившийся",
+    "slug": "nakrenivshiysya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "off",
+   "on",
+   "broken"
+  ],
+  "fn": "Столб со светом; обычно неисправен; можно разобрать на провод."
+ },
+ {
+  "id": "billboard_road",
+  "name": "Рекламный щит",
+  "cat": "decor",
+  "plan_size": [
+   150,
+   400
+  ],
+  "os_size": [
+   270,
+   394
+  ],
+  "size_mismatch": true,
+  "variants": [
+   {
+    "name": "Целый",
+    "slug": "tselyy",
+    "skip": false
+   },
+   {
+    "name": "Проржавевший",
+    "slug": "prorzhavevshiy",
+    "skip": false
+   },
+   {
+    "name": "Заросший плющом",
+    "slug": "zarosshiy_plyuschom",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "broken"
+  ],
+  "fn": "Декор вдоль дорог; можно разобрать на металлолом."
+ },
+ {
+  "id": "dumpster",
+  "name": "Мусорный бак",
+  "cat": "container",
+  "plan_size": [
+   130,
+   110
+  ],
+  "os_size": [
+   130,
+   110
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Зелёный",
+    "slug": "zelenyy",
+    "skip": false
+   },
+   {
+    "name": "Контейнер",
+    "slug": "konteyner",
+    "skip": false
+   },
+   {
+    "name": "Бочка",
+    "slug": "bochka",
+    "skip": false
+   },
+   {
+    "name": "Опрокинутый",
+    "slug": "oprokinutyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "closed",
+   "open"
+  ],
+  "fn": "Контейнер с мусорным лутом (случайные мелочи); может быть логовом крыс."
+ },
+ {
+  "id": "scrap_pile",
+  "name": "Куча хлама",
+  "cat": "resource",
+  "plan_size": [
+   120,
+   80
+  ],
+  "os_size": [
+   120,
+   80
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Металлолом",
+    "slug": "metallolom",
+    "skip": false
+   },
+   {
+    "name": "Строительный хлам",
+    "slug": "stroitelnyy_hlam",
+    "skip": false
+   },
+   {
+    "name": "Электроника",
+    "slug": "elektronika",
+    "skip": false
+   },
+   {
+    "name": "Бытовой хлам",
+    "slug": "bytovoy_hlam",
+    "skip": false
+   }
+  ],
+  "states": [
+   "full",
+   "half",
+   "empty"
+  ],
+  "fn": "Точка ресурса без восстановления: обыскивается (SEARCH), содержимое конечно."
+ },
+ {
+  "id": "bench_street",
+  "name": "Скамейка",
+  "cat": "decor",
+  "plan_size": [
+   150,
+   80
+  ],
+  "os_size": [
+   150,
+   80
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Деревянная",
+    "slug": "derevyannaya",
+    "skip": false
+   },
+   {
+    "name": "Каменная",
+    "slug": "kamennaya",
+    "skip": false
+   },
+   {
+    "name": "Сломанная",
+    "slug": "slomannaya",
+    "skip": true
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Сесть; укрытие невысокого уровня."
+ },
+ {
+  "id": "survivor_base",
+  "name": "Выживший (шаблон)",
+  "cat": "character",
+  "plan_size": [
+   100,
+   180
+  ],
+  "os_size": [
+   100,
+   180
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Игрок",
+    "slug": "igrok",
+    "skip": false
+   },
+   {
+    "name": "Член группы",
+    "slug": "chlen_gruppy",
+    "skip": false
+   },
+   {
+    "name": "Независимый NPC",
+    "slug": "nezavisimyy_npc",
+    "skip": false
+   },
+   {
+    "name": "Раненый",
+    "slug": "ranenyy",
+    "skip": false
+   },
+   {
+    "name": "Заражённый",
+    "slug": "zarazhennyy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "walk",
+   "run",
+   "sit",
+   "sleep",
+   "eat",
+   "drink",
+   "craft",
+   "hurt",
+   "death"
+  ],
+  "fn": "Потребности (еда, вода, сон, здоровье, стресс), автономия (сам ест, пьёт, спит, лечится), восприятие, перемещение по pathfinding, инвентарь; подключается к персонажу Character Assembler."
+ },
+ {
+  "id": "zombie_walker",
+  "name": "Зомби (ходячий)",
+  "cat": "creature",
+  "plan_size": [
+   100,
+   180
+  ],
+  "os_size": [
+   100,
+   180
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Ходячий",
+    "slug": "hodyachiy",
+    "skip": false
+   },
+   {
+    "name": "Раненый (ползёт)",
+    "slug": "ranenyy",
+    "skip": false
+   },
+   {
+    "name": "Одетый (лут)",
+    "slug": "odetyy",
+    "skip": false
+   },
+   {
+    "name": "Мёртвая толпа (группа)",
+    "slug": "mertvaya_tolpa",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "walk",
+   "attack",
+   "hurt",
+   "death"
+  ],
+  "fn": "Патрулирует, реагирует на звук (радиус слышимости) и вид, преследует, атакует ближнего; гибнет от урона в голову; оставляет тело."
+ },
+ {
+  "id": "zombie_runner",
+  "name": "Зомби (быстрый)",
+  "cat": "creature",
+  "plan_size": [
+   100,
+   180
+  ],
+  "os_size": [
+   100,
+   180
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Бегун",
+    "slug": "begun",
+    "skip": false
+   },
+   {
+    "name": "Прыгун",
+    "slug": "prygun",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "run",
+   "attack",
+   "death"
+  ],
+  "fn": "Быстрый бег, слабее по здоровью; реагирует на шум острее."
+ },
+ {
+  "id": "zombie_brute",
+  "name": "Зомби (тяжёлый)",
+  "cat": "creature",
+  "plan_size": [
+   120,
+   200
+  ],
+  "os_size": [
+   120,
+   200
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Здоровяк",
+    "slug": "zdorovyak",
+    "skip": false
+   },
+   {
+    "name": "Броневой",
+    "slug": "bronevoy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "walk",
+   "attack",
+   "death"
+  ],
+  "fn": "Медленный, очень живучий; ломает препятствия."
+ },
+ {
+  "id": "raider_human",
+  "name": "Рейдер / бандит",
+  "cat": "character",
+  "plan_size": [
+   100,
+   180
+  ],
+  "os_size": [
+   100,
+   180
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Мародёр",
+    "slug": "maroder",
+    "skip": false
+   },
+   {
+    "name": "Бандит с оружием",
+    "slug": "bandit_s_oruzhiem",
+    "skip": false
+   },
+   {
+    "name": "Разведчик",
+    "slug": "razvedchik",
+    "skip": false
+   },
+   {
+    "name": "Лидер банды",
+    "slug": "lider_bandy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "walk",
+   "aim",
+   "fire",
+   "hurt",
+   "death"
+  ],
+  "fn": "Принадлежит фракции; патрулирует; засады; берёт в плен; использует оружие и укрытия."
+ },
+ {
+  "id": "trader_npc",
+  "name": "Торговец",
+  "cat": "character",
+  "plan_size": [
+   100,
+   180
+  ],
+  "os_size": [
+   100,
+   180
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Бродячий",
+    "slug": "brodyachiy",
+    "skip": false
+   },
+   {
+    "name": "Лавочник",
+    "slug": "lavochnik",
+    "skip": false
+   },
+   {
+    "name": "Меняла",
+    "slug": "menyala",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "talk"
+  ],
+  "fn": "Имеет инвентарь товаров и предпочтения; цены зависят от отношений и нужд фракции."
+ },
+ {
+  "id": "dog_feral",
+  "name": "Дикая собака",
+  "cat": "creature",
+  "plan_size": [
+   90,
+   60
+  ],
+  "os_size": [
+   90,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Одиночная",
+    "slug": "odinochnaya",
+    "skip": false
+   },
+   {
+    "name": "Стая",
+    "slug": "staya",
+    "skip": false
+   },
+   {
+    "name": "Больная",
+    "slug": "bolnaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "walk",
+   "run",
+   "attack",
+   "death"
+  ],
+  "fn": "Патрулирует, охотится, чует запах, нападает группой."
+ },
+ {
+  "id": "rabbit_wild",
+  "name": "Кролик",
+  "cat": "creature",
+  "plan_size": [
+   35,
+   25
+  ],
+  "os_size": [
+   35,
+   25
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Кролик",
+    "slug": "krolik",
+    "skip": false
+   },
+   {
+    "name": "Заяц",
+    "slug": "zayats",
+    "skip": false
+   },
+   {
+    "name": "Птица",
+    "slug": "ptitsa",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "walk",
+   "run",
+   "death"
+  ],
+  "fn": "Пугливо убегает; убитый даёт сырое мясо."
+ },
+ {
+  "id": "rat_pest",
+  "name": "Крыса",
+  "cat": "creature",
+  "plan_size": [
+   25,
+   10
+  ],
+  "os_size": [
+   25,
+   10
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Крыса",
+    "slug": "krysa",
+    "skip": false
+   },
+   {
+    "name": "Стая",
+    "slug": "staya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "run"
+  ],
+  "fn": "Грызёт еду в контейнерах; заражает."
+ },
+ {
+  "id": "mutant_crawler",
+  "name": "Мутант-ползун",
+  "cat": "creature",
+  "plan_size": [
+   140,
+   60
+  ],
+  "os_size": [
+   140,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Ползун",
+    "slug": "polzun",
+    "skip": false
+   },
+   {
+    "name": "Плевальщик",
+    "slug": "plevalschik",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "crawl",
+   "attack",
+   "death"
+  ],
+  "fn": "Ползает по стенам и потолкам; атакует из засады."
+ },
+ {
+  "id": "corpse_human",
+  "name": "Останки человека",
+  "cat": "corpse",
+  "plan_size": [
+   180,
+   30
+  ],
+  "os_size": [
+   180,
+   30
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Свежее",
+    "slug": "svezhee",
+    "skip": false
+   },
+   {
+    "name": "Разложившееся",
+    "slug": "razlozhivsheesya",
+    "skip": false
+   },
+   {
+    "name": "Скелет",
+    "slug": "skelet",
+    "skip": false
+   },
+   {
+    "name": "Сожжённое",
+    "slug": "sozhzhennoe",
+    "skip": false
+   },
+   {
+    "name": "Заражённое",
+    "slug": "zarazhennoe",
+    "skip": false
+   }
+  ],
+  "states": [
+   "fresh",
+   "decayed",
+   "skeleton"
+  ],
+  "fn": "Тело с инвентарём и экипировкой; обыскивается, переносится, хоронится, сжигается; разлагается по времени; влияет на отношения и мораль."
+ },
+ {
+  "id": "corpse_zombie",
+  "name": "Останки зомби",
+  "cat": "corpse",
+  "plan_size": [
+   180,
+   30
+  ],
+  "os_size": [
+   180,
+   30
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Свежее",
+    "slug": "svezhee",
+    "skip": false
+   },
+   {
+    "name": "Гнилое",
+    "slug": "gniloe",
+    "skip": true
+   }
+  ],
+  "states": [
+   "fresh",
+   "decayed"
+  ],
+  "fn": "Тело, которое можно обыскать; разлагается; привлекает падальщиков."
+ },
+ {
+  "id": "grave_mound",
+  "name": "Могила",
+  "cat": "decor",
+  "plan_size": [
+   150,
+   60
+  ],
+  "os_size": [
+   150,
+   60
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Холм",
+    "slug": "holm",
+    "skip": false
+   },
+   {
+    "name": "С крестом",
+    "slug": "s_krestom",
+    "skip": false
+   },
+   {
+    "name": "С табличкой",
+    "slug": "s_tablichkoy",
+    "skip": false
+   },
+   {
+    "name": "Общая",
+    "slug": "obschaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Создаётся, когда тело закапывают лопатой; поддерживает память; можно поставить крест."
+ },
+ {
+  "id": "pyre_pile",
+  "name": "Погребальный костёр",
+  "cat": "special",
+  "plan_size": [
+   150,
+   80
+  ],
+  "os_size": [
+   150,
+   80
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Костёр",
+    "slug": "koster",
+    "skip": false
+   },
+   {
+    "name": "Печь для сжигания",
+    "slug": "pech_dlya_szhiganiya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "unlit",
+   "burning",
+   "ash"
+  ],
+  "fn": "Сжигает тело; горит некоторое время; дым заметен."
+ },
+ {
+  "id": "blood_stain",
+  "name": "Пятно крови",
+  "cat": "decor",
+  "plan_size": [
+   100,
+   20
+  ],
+  "os_size": [
+   100,
+   20
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Лужа",
+    "slug": "luzha",
+    "skip": false
+   },
+   {
+    "name": "Брызги",
+    "slug": "bryzgi",
+    "skip": false
+   },
+   {
+    "name": "Следы",
+    "slug": "sledy",
+    "skip": false
+   }
+  ],
+  "states": [
+   "fresh",
+   "dry"
+  ],
+  "fn": "Декор-след; исчезает со временем; NPC реагирует."
+ },
+ {
+  "id": "faction_banner",
+  "name": "Знамя фракции",
+  "cat": "decor",
+  "plan_size": [
+   60,
+   200
+  ],
+  "os_size": [
+   60,
+   200
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Знамя",
+    "slug": "znamya",
+    "skip": false
+   },
+   {
+    "name": "Граффити",
+    "slug": "graffiti",
+    "skip": false
+   },
+   {
+    "name": "Столб с символом",
+    "slug": "stolb_s_simvolom",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle",
+   "damaged"
+  ],
+  "fn": "Маркер фракции; меняется при захвате."
+ },
+ {
+  "id": "trade_stall",
+  "name": "Торговый прилавок",
+  "cat": "furniture",
+  "plan_size": [
+   160,
+   110
+  ],
+  "os_size": [
+   160,
+   110
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Прилавок",
+    "slug": "prilavok",
+    "skip": false
+   },
+   {
+    "name": "Тележка",
+    "slug": "telezhka",
+    "skip": false
+   },
+   {
+    "name": "Стол с товаром",
+    "slug": "stol_s_tovarom",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Интерфейс TALK/торговли с торговцем: товары, цены, обмен."
+ },
+ {
+  "id": "watchtower",
+  "name": "Наблюдательная вышка",
+  "cat": "building",
+  "plan_size": [
+   200,
+   500
+  ],
+  "os_size": [
+   200,
+   500
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Деревянная",
+    "slug": "derevyannaya",
+    "skip": false
+   },
+   {
+    "name": "Металлическая",
+    "slug": "metallicheskaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Увеличивает радиус зрения; место для часового."
+ },
+ {
+  "id": "faction_stockpile",
+  "name": "Склад фракции",
+  "cat": "container",
+  "plan_size": [
+   200,
+   120
+  ],
+  "os_size": [
+   200,
+   120
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Ящики",
+    "slug": "yaschiki",
+    "skip": false
+   },
+   {
+    "name": "Палатка-склад",
+    "slug": "palatka_sklad",
+    "skip": false
+   },
+   {
+    "name": "Контейнер",
+    "slug": "konteyner",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Большое хранилище, из которого фракция берёт ресурсы; уязвимая цель."
+ },
+ {
+  "id": "noticeboard",
+  "name": "Доска объявлений",
+  "cat": "decor",
+  "plan_size": [
+   100,
+   80
+  ],
+  "os_size": [
+   100,
+   80
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Деревянная",
+    "slug": "derevyannaya",
+    "skip": false
+   },
+   {
+    "name": "Пробковая",
+    "slug": "probkovaya",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Показывает доступные задания и слухи."
+ },
+ {
+  "id": "note_diary",
+  "name": "Записка / дневник",
+  "cat": "item",
+  "plan_size": [
+   15,
+   20
+  ],
+  "os_size": [
+   15,
+   20
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Записка",
+    "slug": "zapiska",
+    "skip": false
+   },
+   {
+    "name": "Дневник",
+    "slug": "dnevnik",
+    "skip": false
+   },
+   {
+    "name": "Письмо",
+    "slug": "pismo",
+    "skip": false
+   },
+   {
+    "name": "Обрывок карты",
+    "slug": "obryvok_karty",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Читается (USE); содержит текст; может дать подсказку на локацию или рецепт."
+ },
+ {
+  "id": "map_paper",
+  "name": "Карта",
+  "cat": "item",
+  "plan_size": [
+   30,
+   20
+  ],
+  "os_size": [
+   30,
+   20
+  ],
+  "size_mismatch": false,
+  "variants": [
+   {
+    "name": "Карта района",
+    "slug": "karta_rayona",
+    "skip": false
+   },
+   {
+    "name": "Карта города",
+    "slug": "karta_goroda",
+    "skip": false
+   },
+   {
+    "name": "Схема убежища",
+    "slug": "shema_ubezhischa",
+    "skip": false
+   }
+  ],
+  "states": [
+   "idle"
+  ],
+  "fn": "Показывает найденные объекты; связана с fast travel."
+ }
+]

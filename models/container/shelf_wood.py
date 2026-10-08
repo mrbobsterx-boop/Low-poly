@@ -1,4 +1,4 @@
-"""Полка настенная `shelf_wood`, вариант `derevyannaya_metal_ugolok` (доска на металлических уголках). ОС: 100 × 30 см.
+"""Полка настенная `shelf_wood`, вариант `derevyannaya` (деревянная доска на металлических уголках). ОС: 100 × 30 см.
 Висит на стене: «спина» в плоскости Y = 0, низ уголков — Z = 0. На полке — банки и бутылки (как на референсе).
 Запуск: python3 models/container/shelf_wood.py
 """
@@ -53,5 +53,5 @@ def shelf_idle():
 
 if __name__ == "__main__":
     L.new_scene()
-    L.finish(shelf_idle(), "container", "shelf_wood", "derevyannaya_metal_ugolok", "idle", size_cm=(100, 30))
+    L.make(shelf_idle, "container", "shelf_wood", "derevyannaya", size_cm=(100, 30))  # в ОС не ломается
     L.save_blend("container", "shelf_wood")

@@ -17,7 +17,7 @@
    "depth_m": 2.32
   },
   {
-   "image": "shelf_wood_derevyannaya_metal_ugolok_idle",
+   "image": "shelf_wood_derevyannaya_idle",
    "x_m": 1.45,
    "bottom_m": 1.782,
    "depth_m": 2.76
@@ -47,13 +47,13 @@
    "depth_m": 1.95
   },
   {
-   "image": "crate_wood_sredniy_idle",
+   "image": "crate_wood_malyy_idle",
    "x_m": 2.55,
    "bottom_m": 0.224,
    "depth_m": 1.05
   },
   {
-   "image": "lamp_ceiling_lyuminestsentnaya_idle",
+   "image": "lamp_ceiling_svetodiodnaya_idle",
    "x_m": 2.56,
    "bottom_m": 2.818,
    "depth_m": 0.55

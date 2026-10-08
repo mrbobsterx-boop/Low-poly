@@ -63,5 +63,5 @@ def stove_idle():
 
 if __name__ == "__main__":
     L.new_scene()
-    L.finish(stove_idle(), "machine", "stove_heat", "stalnaya_bochka", "idle", size_cm=(60, 90))
+    L.make(stove_idle, "machine", "stove_heat", "stalnaya_bochka", size_cm=(60, 90), broken="legs")
     L.save_blend("machine", "stove_heat")
