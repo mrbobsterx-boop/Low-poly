@@ -4,6 +4,8 @@
 Сама игра — в соседнем репозитории **[mrbobsterx-boop/godot](https://github.com/mrbobsterx-boop/godot)** (Godot 4.7).
 Данные объектов (что есть в игре, размеры, действия) — в **Object Constructor (ОС)**: [mrbobsterx-boop/object-constructor](https://github.com/mrbobsterx-boop/object-constructor).
 
+**Что делать сейчас и дальше — по шагам: [`STEPS.md`](STEPS.md).**
+
 ## Зачем
 
 Сейчас в игре — плоские PNG-картинки (часть объектов вообще без картинок). Цель — единый стиль **low-poly**
