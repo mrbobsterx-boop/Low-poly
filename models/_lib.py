@@ -18,7 +18,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), 
 sys.path.insert(0, os.path.join(ROOT, "render"))
 import _template as rt  # noqa: E402
 
-TRI_LIMITS = {"small": 300, "furniture": 1500, "human": 3000, "room": 8000}
+TRI_LIMITS = {"small": 600, "furniture": 3000, "human": 3000, "room": 8000}
 _saved = []          # готовые объекты — в общий .blend
 
 
@@ -196,3 +196,41 @@ def save_blend(category, oid):
     for o in _saved:
         o.location.x = 0
     print("  сохранено:", os.path.relpath(path, ROOT))
+
+
+def sheet(nx, ny, size_x, size_y, loc, color, z_fn=None, jitter=0.0, seed=1, thick=0.012, name="sheet"):
+    """Ткань/лист из граней: сетка nx × ny, треугольники (видны грани), с толщиной.
+    z_fn(u, v) → высота (u, v ∈ [0, 1]) — форма (складки, свес); jitter — случайная «мятость» (м).
+    Сетка лежит в плоскости XY, loc — центр."""
+    import random
+    rnd = random.Random(seed)
+    bm = bmesh.new()
+    top, bot = {}, {}
+    for j in range(ny + 1):
+        for i in range(nx + 1):
+            u, v = i / nx, j / ny
+            z = (z_fn(u, v) if z_fn else 0.0) + (rnd.uniform(-jitter, jitter) if 0 < i < nx and 0 < j < ny else 0.0)
+            x, y = (u - 0.5) * size_x, (v - 0.5) * size_y
+            top[i, j] = bm.verts.new((x, y, z))
+            bot[i, j] = bm.verts.new((x, y, z - thick))
+    for j in range(ny):
+        for i in range(nx):
+            a, b, c, d = (i, j), (i + 1, j), (i + 1, j + 1), (i, j + 1)
+            bm.faces.new([top[a], top[b], top[c], top[d]])
+            bm.faces.new([bot[d], bot[c], bot[b], bot[a]])
+    for i in range(nx):                                     # кромки
+        bm.faces.new([top[i, 0], bot[i, 0], bot[i + 1, 0], top[i + 1, 0]])
+        bm.faces.new([top[i + 1, ny], bot[i + 1, ny], bot[i, ny], top[i, ny]])
+    for j in range(ny):
+        bm.faces.new([top[0, j + 1], bot[0, j + 1], bot[0, j], top[0, j]])
+        bm.faces.new([top[nx, j], bot[nx, j], bot[nx, j + 1], top[nx, j + 1]])
+    bmesh.ops.triangulate(bm, faces=bm.faces)
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    return _place(_from_bmesh(bm, name, color), loc, None)
+
+
+def transform(objs, loc=(0, 0, 0), rot=None):
+    """Сдвинуть/повернуть уже созданные куски (rot — градусы x, y, z вокруг начала координат)."""
+    for o in objs:
+        _place(o, loc, rot)
+    return objs

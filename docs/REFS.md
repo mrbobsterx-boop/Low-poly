@@ -77,7 +77,7 @@
 | `fuse_box` | Электрощит | 40 × 50 | [samodelnyy](ref/machine/fuse_box.png) | ✅ | — |
 | `grow_lamp` | Лампа для урожая | 80 × 15 | [fioletovaya_led](ref/machine/grow_lamp.png) | ✅ | lyuminestsentnaya, slabaya |
 | `hydro_rack` | Гидропонная стойка | 100 × 180 | [bolshaya](ref/machine/hydro_rack.png) | 🟡 | derevyannaya_grunt, derevyannaya_rostenie, malaya, plastik_grunt, plastik_rostenie |
-| `lamp_ceiling` | Лампа потолочная | 30 × 25 | [nakalivaniya_plafon_zelenyy_amfora](ref/machine/lamp_ceiling.png) | ✅ | krasnaya_klaksa, lyustra_zelenaya, nakalivaniya_plafon_bahroma |
+| `lamp_ceiling` | Лампа потолочная | 30 × 25 | [nakalivaniya_plafon_zelenyy_amfora](ref/machine/lamp_ceiling.png) | ✅ | **Модель сделана как `lyuminestsentnaya` (с листа автора) — завести вариант в ОС.** krasnaya_klaksa, lyustra_zelenaya, nakalivaniya_plafon_bahroma |
 | `light_switch` | Выключатель | 8 × 12 | [klavishnyy](ref/machine/light_switch.png) | ✅ | rychazhnyy_promyshlennyy, tumbler_na_schitke |
 | `radio_desk` | Радиоприёмник | 35 × 25 | [voennaya_ratsiya](ref/machine/radio_desk.png) | ✅ | fm_boombox, fm_vintage, nastolnyy_lampovyy, nastolnyy_standart, ruchnoy_s_dinamo |
 | `rain_collector` | Дождеуловитель | 110 × 60 | [bolshaya_ploschadka_dlya_bashni](ref/machine/rain_collector.png) | ✅ | kryshnaya_voronka, plenka_i_zhelob |

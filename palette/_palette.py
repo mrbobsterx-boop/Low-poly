@@ -50,7 +50,7 @@ COLORS = [
      ("hair_blond", "#c6a463", "волосы светлые"),
      ("hair_grey", "#a8a49c", "волосы седые"),
      ("plastic_white", "#e4e2db", "белый пластик, фаянс"),
-     None],
+     ("cloth_blue", "#3d4870", "ткань тёмно-синяя — одеяло, роба")],
 ]
 ROWS = len(COLORS)
 
