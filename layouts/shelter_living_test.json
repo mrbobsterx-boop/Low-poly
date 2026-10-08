@@ -1,0 +1,16 @@
+{
+  "room": "shelter_living",
+  "shell": "shelter_living_concrete_normal",
+  "width_m": 6,
+  "comment": "Проба: жилая комната бункера. x_m — середина предмета от левого края комнаты (м). row — back (у стены), mid, front; ceiling — висит под потолком.",
+  "items": [
+    {"id": "bed_single",   "variation": "zheleznaya_koyka",            "state": "idle", "x_m": 1.25, "row": "back"},
+    {"id": "locker_metal", "variation": "armeyskiy",                   "state": "idle", "x_m": 2.75, "row": "back"},
+    {"id": "locker_metal", "variation": "armeyskiy",                   "state": "broken", "x_m": 3.30, "row": "back"},
+    {"id": "stove_heat",   "variation": "stalnaya_bochka",             "state": "idle", "x_m": 5.30, "row": "mid"},
+    {"id": "table_wood",   "variation": "obedennyy",                   "state": "idle", "x_m": 3.90, "row": "front"},
+    {"id": "chair_wood",   "variation": "derevyannyy",                 "state": "idle", "x_m": 3.00, "row": "front"},
+    {"id": "chair_wood",   "variation": "derevyannyy",                 "state": "broken", "x_m": 4.85, "row": "front"},
+    {"id": "lamp_ceiling", "variation": "nakalivaniya_plafon_zelenyy", "state": "idle", "x_m": 3.90, "row": "ceiling"}
+  ]
+}

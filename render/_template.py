@@ -94,24 +94,28 @@ def _mesh_points_world(objs):
     return pts
 
 
-def frame_objects(objs, margin_px=0):
+def frame_objects(objs, margin_px=0, frame_points=None):
     """Ставит камеру и размер картинки по контуру объектов: 200 px на метр,
-    низ картинки = самая нижняя точка, без пустых полей. Возвращает (ширина, высота) в px."""
+    низ картинки = самая нижняя точка, без пустых полей. Возвращает (ширина, высота) в px.
+    frame_points — точки (мир), задающие кадр точно (для бесшовных оболочек: модель чуть больше кадра,
+    чтобы края были сплошные)."""
     scene = bpy.context.scene
     cam = scene.camera
     rot = camera_rotation()
     inv = rot.to_3x3().transposed()
-    pts = [inv @ p for p in _mesh_points_world(objs)]
+    pts_all = [inv @ p for p in _mesh_points_world(objs)]
+    pts = [inv @ Vector(p) for p in frame_points] if frame_points else pts_all
     if not pts:
         raise ValueError("Нечего рендерить: нет мешей")
     xmin = min(p.x for p in pts); xmax = max(p.x for p in pts)
     ymin = min(p.y for p in pts); ymax = max(p.y for p in pts)
-    zmax = max(p.z for p in pts)
+    zmax = max(p.z for p in pts_all)
 
     m = margin_px / PX_PER_M
     k = V_STRETCH
-    w_px = max(1, math.ceil(round((xmax - xmin + 2 * m) * PX_PER_M, 6)))
-    h_px = max(1, math.ceil(round(((ymax - ymin) * k + 2 * m) * PX_PER_M, 6)))
+    # ceil с допуском 0,05 px: 1 м ровно = 200 px, а не 201 из-за погрешности
+    w_px = max(1, math.ceil((xmax - xmin + 2 * m) * PX_PER_M - 0.05))
+    h_px = max(1, math.ceil(((ymax - ymin) * k + 2 * m) * PX_PER_M - 0.05))
     # метров камеры на пиксель: по ширине 1/200, по высоте 1/(200·k)
     w_cam, h_cam = w_px / PX_PER_M, h_px / (PX_PER_M * k)
 
@@ -194,11 +198,11 @@ def normal_material():
     return mat
 
 
-def render_pair(objs, out_base, margin_px=0):
+def render_pair(objs, out_base, margin_px=0, frame_points=None):
     """Рендерит <out_base>.png (цвет) и <out_base>_n.png (нормали), одного размера.
     out_base — путь без .png, от корня репозитория."""
     scene = bpy.context.scene
-    size = frame_objects(objs, margin_px)
+    size = frame_objects(objs, margin_px, frame_points)
     out_base = os.path.join(ROOT, out_base)
     os.makedirs(os.path.dirname(out_base), exist_ok=True)
 

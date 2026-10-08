@@ -98,7 +98,7 @@
      для Godot — `godot_test/test_normals/` (как открыть — `STEPS.md`).
    - ✅ Blender: в облачной сессии ставится сам при старте (`.claude/hooks/session-start.sh`, модуль Python `bpy`).
      Модели и рендеры запускаются `python3 <скрипт>.py` (или `blender -b -P <скрипт>.py` у автора).
-1. Проба: оболочка комнаты бункера `shelter_living_concrete_normal` (`_mid`, `_left`, `_right`) + `slab_bunker`,
+1. ⏳ Проба (сделана, ждёт просмотра автора — `STEPS.md`): оболочка комнаты бункера `shelter_living_concrete_normal` (`_mid`, `_left`, `_right`) + `slab_bunker`,
    `survivor_base` (с `idle` и `walk`), `bed_single`, `table_wood`, `chair_wood`,
    `locker_metal`, `stove_heat`, `lamp_ceiling` + одна расстановка `layouts/shelter_living_test.json`.
 2. Отдать в игру → посмотреть на Steam Deck → решить путь А или Б.
@@ -113,8 +113,10 @@ layouts/             — готовые расстановки комнат (к�
 docs/STYLE.md        — стиль: цвета, свет, настроение (заполняется по ходу)
 docs/REFS.md         — картинки-образцы из ОС: какая у какого объекта, сложность модели
 docs/ref/<категория>/<id>.png — сами картинки-образцы
+STEPS.md             — что делать по шагам (для автора)
 palette/             — общая палитра: palette.png (текстура), palette.md (список), _palette.py (собирает)
-models/<категория>/  — скрипты моделей <id>.py (и .blend, если нужно)
+models/<категория>/  — скрипты моделей <id>.py + <id>.blend (посмотреть в Blender); общие заготовки — models/_lib.py
+render/_preview.py   — лист «рендер / со светом / образец ОС»; render/_mockup.py — комната из картинок по расстановке
 export/              — .glb для игры
 render/              — шаблон рендера (путь А): _template.py собирает _template.blend и проверочный куб
 renders/             — PNG-рендеры (путь А)
