@@ -25,3 +25,10 @@
 | `grow_lamp_slabaya_idle` | 80 × 15 | 44 × 15 | маленькая лампа |
 | `fuel_canister_5_l_idle` / `10_l` | 35 × 45 | 22 × 30 / 27 × 38 | канистры меньше 20-литровой |
 | `fuel_firewood_vyazanka_hvorosta_idle` | 40 × 15 | 39 × 13 | вязанка ниже поленьев |
+| `campfire_dogorayuschiy_idle` | 80 × 50 | 60 × 8 | догорает — без пламени, только угли |
+| `campfire_prostoy/s_kamnyami_idle` | 80 × 50 | 75–78 × 33–39 | пламя ниже котла |
+| `kitchen_counter_s_rakovinoy_idle` | 120 × 90 | 120 × 104 | смеситель над столешницей |
+| `food_canned_rybnye_idle` / `sguschenka` | 8 × 10 | 9 × 3 / 8 × 8 | плоская и низкая банки |
+| `food_bread_lepeshka_idle` | 20 × 10 | 19 × 3 | плоская |
+| `meat_raw_*`, `meat_cooked_*` | 15 × 8 | 13–15 × 5–8 | куски разной формы |
+| `tool_can_opener_*_idle` | 15 × 8 | 14 × 3–5 | лежит плашмя |

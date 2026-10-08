@@ -1927,7 +1927,7 @@
    {
     "name": "Заплесневевший",
     "slug": "zaplesnevevshiy",
-    "skip": false
+    "skip": true
    }
   ],
   "states": [
@@ -2012,7 +2012,7 @@
    {
     "name": "Тухлое",
     "slug": "tuhloe",
-    "skip": false
+    "skip": true
    }
   ],
   "states": [

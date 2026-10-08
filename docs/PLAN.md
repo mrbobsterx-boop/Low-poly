@@ -4,7 +4,7 @@
 
 Правила автора: **только idle**, каждый вариант — отдельно (`<id>_<вариант>_idle`); «сломанные/испорченные» и состояния (открыт, занят, пустой) — пропуск; размер — из ОС (если в плане другой — спросить автора); старые картинки ОС — не образец стиля (образец — `docs/ref/style/`).
 
-Готово: **122 из 554** вариантов.
+Готово: **163 из 552** вариантов.
 
 ## Размер в плане ≠ ОС — **берём из плана** (решение автора 2026-10-08; в ОС поправить)
 
@@ -43,7 +43,7 @@
 | `tank_water` | Резервуар воды | 160 × 190 | ☑ Пластиковый 1000 л → `plastikovyy_1000_l`<br>☑ Бетонный 5000 л → `betonnyy_5000_l`<br>☑ Стальной цилиндр → `stalnoy_tsilindr`<br>☑ Подземный (люк) → `podzemnyy` |  |
 | `battery_bank` | Аккумулятор | 60 × 40 | ☑ Автомобильный 12 В → `avtomobilnyy_12_v`<br>☑ Бункерная батарея (большая) → `bunkernaya_batareya`<br>~~Разряженный / вздувшийся~~ |  |
 | `fuel_canister` | Канистра с топливом | 35 × 45 | ☑ 5 л → `5_l`<br>☑ 10 л → `10_l`<br>☑ 20 л (жерри) → `20_l`<br>~~Пустая~~ |  |
-| `kitchen_counter` | Кухонная тумба | 120 × 90 | ☐ С раковиной → `s_rakovinoy`<br>☐ С ящиками → `s_yaschikami`<br>☐ Угловая → `uglovaya` |  |
+| `kitchen_counter` | Кухонная тумба | 120 × 90 | ☑ С раковиной → `s_rakovinoy`<br>☑ С ящиками → `s_yaschikami`<br>☑ Угловая → `uglovaya` |  |
 | `first_aid_kit` | Аптечка | 25 × 18 | ☐ Домашняя → `domashnyaya`<br>☐ Автомобильная → `avtomobilnaya`<br>☐ Военная (богаче) → `voennaya`<br>~~Пустая~~ |  |
 | `medicine_cabinet` | Аптечный шкафчик | 50 × 60 | ☐ Ванный → `vannyy`<br>☐ Медпункт (стеклянный) → `medpunkt`<br>☐ Металлический → `metallicheskiy` |  |
 | `crate_wood` | Деревянный ящик | 60 × 50 | ☑ Малый → `malyy`<br>☐ Большой → `bolshoy`<br>☑ Военный → `voennyy`<br>~~Открытый / разграбленный~~<br>~~Разбитый~~ |  |
@@ -74,8 +74,8 @@
 | `shelter_panel` | Панель убежища | 60 × 70 | ☑ Простой пульт → `prostoy_pult`<br>~~Экран с графиками (позже)~~ |  |
 | `light_switch` | Выключатель | 8 × 12 | ☑ Клавишный → `klavishnyy`<br>☑ Рычажный (промышленный) → `rychazhnyy`<br>☑ Тумблер на щитке → `tumbler_na_schitke`<br>~~Сломанный~~ |  |
 | `fuse_box` | Электрощит | 40 × 50 | ☑ Бытовой → `bytovoy`<br>☑ Промышленный → `promyshlennyy`<br>☑ Самодельный → `samodelnyy`<br>~~Сгоревший~~ |  |
-| `stove_cook` | Плита | 70 × 90 | ☐ Газовая → `gazovaya`<br>☐ Электрическая → `elektricheskaya`<br>☐ Дровяная → `drovyanaya`<br>~~Сломанная~~ |  |
-| `campfire` | Костёр | 80 × 50 | ☐ Простой → `prostoy`<br>☐ С камнями → `s_kamnyami`<br>☐ Костёр с котлом → `koster_s_kotlom`<br>☐ Догорающий → `dogorayuschiy` |  |
+| `stove_cook` | Плита | 70 × 90 | ☑ Газовая → `gazovaya`<br>☑ Электрическая → `elektricheskaya`<br>☑ Дровяная → `drovyanaya`<br>~~Сломанная~~ |  |
+| `campfire` | Костёр | 80 × 50 | ☑ Простой → `prostoy`<br>☑ С камнями → `s_kamnyami`<br>☑ Костёр с котлом → `koster_s_kotlom`<br>☑ Догорающий → `dogorayuschiy` |  |
 | `hydro_rack` | Гидропонная стойка | 100 × 180 | ☐ Малая → `malaya`<br>☐ Большая → `bolshaya` |  |
 | `car_abandoned` | Брошенная машина | 450 × 160 | ☐ Седан → `sedan`<br>☐ Микроавтобус → `mikroavtobus`<br>☐ Грузовик → `gruzovik`<br>☐ Ржавая → `rzhavaya`<br>~~Перевёрнутая~~<br>~~Сгоревшая~~ |  |
 
@@ -89,14 +89,14 @@
 | `power_cable` | Провод / кабель | 20 × 20 | ☑ Тонкий → `tonkiy`<br>☑ Силовой → `silovoy`<br>☑ Удлинитель → `udlinitel` |  |
 | `battery_cell` | Батарейка | 3 × 6 | ☑ Одноразовая → `odnorazovaya`<br>☑ Перезаряжаемая → `perezaryazhaemaya`<br>~~Разряженная~~<br>~~Вздувшаяся (испорчена)~~ |  |
 | `fuel_firewood` | Дрова | 40 × 15 | ☑ Поленья → `polenya`<br>☑ Вязанка хвороста → `vyazanka_hvorosta`<br>☑ Отсыревшие (горят хуже) → `otsyrevshie` |  |
-| `food_canned` | Консервы | 8 × 10 | ☐ Тушёнка → `tushenka`<br>☐ Фасоль → `fasol`<br>☐ Рыбные → `rybnye`<br>☐ Сгущёнка → `sguschenka`<br>~~Вздувшаяся (опасная)~~ |  |
-| `food_bread` | Хлеб / сухари | 20 × 10 | ☐ Хлеб → `hleb`<br>☐ Сухари (долго) → `suhari`<br>☐ Лепёшка → `lepeshka`<br>☐ Заплесневевший → `zaplesnevevshiy` |  |
-| `food_grain` | Зерно | 15 × 15 | ☐ Пшеница → `pshenitsa`<br>☐ Кукуруза → `kukuruza`<br>☐ Рис → `ris` |  |
-| `meat_raw` | Сырое мясо | 15 × 8 | ☐ Кролик → `krolik`<br>☐ Собака (риск) → `sobaka`<br>☐ Птица → `ptitsa`<br>☐ Тухлое → `tuhloe` |  |
-| `meat_cooked` | Приготовленное мясо | 15 × 8 | ☐ Жареное → `zharenoe`<br>☐ Варёное → `varenoe`<br>☐ Копчёное (долго хранится) → `kopchenoe` |  |
-| `veg_potato` | Овощи (картофель, морковь) | 8 × 8 | ☐ Картофель → `kartofel`<br>☐ Морковь → `morkov`<br>☐ Помидор → `pomidor`<br>☐ Лук → `luk` |  |
-| `meal_soup` | Готовое блюдо (суп, рагу) | 15 × 10 | ☐ Овощной суп → `ovoschnoy_sup`<br>☐ Мясное рагу → `myasnoe_ragu`<br>☐ Каша → `kasha` |  |
-| `ration_dry` | Сухпаёк | 15 × 10 | ☐ Армейский → `armeyskiy`<br>☐ Спасательный набор → `spasatelnyy_nabor`<br>☐ Космический (редкий) → `kosmicheskiy` |  |
+| `food_canned` | Консервы | 8 × 10 | ☑ Тушёнка → `tushenka`<br>☑ Фасоль → `fasol`<br>☑ Рыбные → `rybnye`<br>☑ Сгущёнка → `sguschenka`<br>~~Вздувшаяся (опасная)~~ |  |
+| `food_bread` | Хлеб / сухари | 20 × 10 | ☑ Хлеб → `hleb`<br>☑ Сухари (долго) → `suhari`<br>☑ Лепёшка → `lepeshka`<br>~~Заплесневевший~~ |  |
+| `food_grain` | Зерно | 15 × 15 | ☑ Пшеница → `pshenitsa`<br>☑ Кукуруза → `kukuruza`<br>☑ Рис → `ris` |  |
+| `meat_raw` | Сырое мясо | 15 × 8 | ☑ Кролик → `krolik`<br>☑ Собака (риск) → `sobaka`<br>☑ Птица → `ptitsa`<br>~~Тухлое~~ |  |
+| `meat_cooked` | Приготовленное мясо | 15 × 8 | ☑ Жареное → `zharenoe`<br>☑ Варёное → `varenoe`<br>☑ Копчёное (долго хранится) → `kopchenoe` |  |
+| `veg_potato` | Овощи (картофель, морковь) | 8 × 8 | ☑ Картофель → `kartofel`<br>☑ Морковь → `morkov`<br>☑ Помидор → `pomidor`<br>☑ Лук → `luk` |  |
+| `meal_soup` | Готовое блюдо (суп, рагу) | 15 × 10 | ☑ Овощной суп → `ovoschnoy_sup`<br>☑ Мясное рагу → `myasnoe_ragu`<br>☑ Каша → `kasha` |  |
+| `ration_dry` | Сухпаёк | 15 × 10 | ☑ Армейский → `armeyskiy`<br>☑ Спасательный набор → `spasatelnyy_nabor`<br>☑ Космический (редкий) → `kosmicheskiy` |  |
 | `bandage` | Бинт | 10 × 6 | ☐ Стерильный → `sterilnyy`<br>☐ Самодельный из ткани → `samodelnyy_iz_tkani`<br>☐ Эластичный → `elastichnyy`<br>~~Использованный~~ |  |
 | `antiseptic` | Антисептик | 6 × 14 | ☐ Спирт → `spirt`<br>☐ Перекись → `perekis`<br>☐ Йод → `yod` |  |
 | `painkiller` | Обезболивающее | 6 × 8 | ☐ Таблетки → `tabletki`<br>☐ Ампула → `ampula`<br>☐ Сильное (редкое) → `silnoe` |  |
@@ -174,8 +174,8 @@
 | id | Название | Размер (ОС), см | Варианты → файл | |
 |---|---|---|---|---|
 | `bucket` | Ведро | 30 × 30 | ☑ Металлическое → `metallicheskoe`<br>☑ Пластиковое → `plastikovoe`<br>~~Дырявое (сломано)~~ |  |
-| `cooking_pot` | Кастрюля / котелок | 25 × 20 | ☐ Алюминиевая → `alyuminievaya`<br>☐ Котелок → `kotelok`<br>☐ Чугунный → `chugunnyy` |  |
-| `tool_can_opener` | Консервный нож | 15 × 8 | ☐ Ручной → `ruchnoy`<br>☐ Ключ-открывашка → `klyuch_otkryvashka` |  |
+| `cooking_pot` | Кастрюля / котелок | 25 × 20 | ☑ Алюминиевая → `alyuminievaya`<br>☑ Котелок → `kotelok`<br>☑ Чугунный → `chugunnyy` |  |
+| `tool_can_opener` | Консервный нож | 15 × 8 | ☑ Ручной → `ruchnoy`<br>☑ Ключ-открывашка → `klyuch_otkryvashka` |  |
 | `tool_hammer` | Молоток | 30 × 10 | ☐ Столярный → `stolyarnyy`<br>☐ Кувалдочка → `kuvaldochka`<br>☐ Ржавый (слабее) → `rzhavyy` |  |
 | `tool_wrench` | Гаечный ключ | 30 × 8 | ☐ Разводной → `razvodnoy`<br>☐ Рожковый → `rozhkovyy`<br>☐ Набор ключей → `nabor_klyuchey` |  |
 | `tool_screwdriver` | Отвёртка | 20 × 4 | ☐ Крестовая → `krestovaya`<br>☐ Плоская → `ploskaya`<br>☐ Набор → `nabor` |  |
