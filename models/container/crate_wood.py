@@ -1,5 +1,7 @@
-"""Ящик `crate_wood`. ОС: 60 × 50 см. Два варианта как на референсе автора:
+"""Ящик `crate_wood`. ОС: 60 × 50 см. Варианты (только idle; «открытый/разграбленный», «разбитый» — пропуск):
   malyy — деревянный из досок с рамкой по углам и гвоздями;
+  bolshoy — такой же, но крупнее: 90 × 70 см (глубина 60) — размер выбран сам (в ОС один размер на объект),
+            плюс верёвочные ручки по бокам и трафарет;
   voennyy — военный зелёный с рёбрами, защёлками, ручками и трафаретом.
 Запуск: python3 models/container/crate_wood.py
 """
@@ -35,6 +37,22 @@ def crate_malyy():
     return p
 
 
+def crate_bolshoy():
+    global W, D, H
+    old = W, D, H
+    W, D, H = 0.86, 0.60, 0.70                          # корпус; верёвочные ручки добирают ширину до 90 см
+    try:
+        p = crate_malyy()
+        for sx in (-1, 1):                              # верёвочные ручки на боковых брусках
+            p.append(L.tube((sx * W / 2, -0.10, H * 0.62), (sx * (W / 2 + 0.02), 0.0, H * 0.58), 0.008, "cloth_beige", verts=4))
+            p.append(L.tube((sx * (W / 2 + 0.02), 0.0, H * 0.58), (sx * W / 2, 0.10, H * 0.62), 0.008, "cloth_beige", verts=4))
+        p.append(L.box((0.24, 0.004, 0.05), (0, -D / 2 - 0.004, H * 0.45), "soot", bevel=0))      # трафарет
+        p.append(L.box((0.16, 0.004, 0.012), (0, -D / 2 - 0.004, H * 0.36), "soot", bevel=0))
+        return p
+    finally:
+        W, D, H = old
+
+
 def crate_voennyy():
     p = []
     body = "army_green"
@@ -62,5 +80,6 @@ def crate_voennyy():
 if __name__ == "__main__":
     L.new_scene()
     L.make(crate_malyy, "container", "crate_wood", "malyy", size_cm=(60, 50), broken="lid")
+    L.make(crate_bolshoy, "container", "crate_wood", "bolshoy", size_cm=(90, 70), broken="lid")
     L.make(crate_voennyy, "container", "crate_wood", "voennyy", size_cm=(60, 50), broken="lid")
     L.save_blend("container", "crate_wood")

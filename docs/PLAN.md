@@ -4,7 +4,7 @@
 
 Правила автора: **только idle**, каждый вариант — отдельно (`<id>_<вариант>_idle`); «сломанные/испорченные» и состояния (открыт, занят, пустой) — пропуск; размер — из ОС (если в плане другой — спросить автора); старые картинки ОС — не образец стиля (образец — `docs/ref/style/`).
 
-Готово: **163 из 552** вариантов.
+Готово: **196 из 552** вариантов.
 
 ## Размер в плане ≠ ОС — **берём из плана** (решение автора 2026-10-08; в ОС поправить)
 
@@ -29,7 +29,7 @@
 | `toilet` | Унитаз | 40 × 75 | ☑ Фаянсовый со смывом → `fayansovyy_so_smyvom`<br>☑ Самодельный (ведро с сиденьем) → `samodelnyy`<br>☑ Сухой (компостный) → `suhoy`<br>~~Сломанный / заброшенный~~ |  |
 | `sink_tap` | Раковина с краном | 80 × 90 | ☑ Кухонная → `kuhonnaya`<br>☑ Ванная → `vannaya`<br>☑ Умывальник → `umyvalnik`<br>☑ Уличная колонка → `ulichnaya_kolonka` |  |
 | `bathtub` | Ванна | 170 × 60 | ☑ Чугунная → `chugunnaya`<br>☑ Пластиковая → `plastikovaya`<br>☑ Эмалированная → `emalirovannaya` |  |
-| `cot_medical` | Медицинская койка | 190 × 80 | ☐ Складная → `skladnaya`<br>☐ Больничная → `bolnichnaya`<br>☐ Полевая → `polevaya` |  |
+| `cot_medical` | Медицинская койка | 190 × 80 | ☑ Складная → `skladnaya`<br>☑ Больничная → `bolnichnaya`<br>☑ Полевая → `polevaya` |  |
 | `planter_box` | Грядка | 120 × 40 | ☐ Деревянный ящик → `derevyannyy_yaschik`<br>☐ Кирпичная грядка → `kirpichnaya_gryadka`<br>☐ Гидропонный лоток → `gidroponnyy_lotok`<br>~~Пустая (без грунта)~~ |  |
 | `trade_stall` | Торговый прилавок | 160 × 110 | ☐ Прилавок → `prilavok`<br>☐ Тележка → `telezhka`<br>☐ Стол с товаром → `stol_s_tovarom` |  |
 
@@ -44,9 +44,9 @@
 | `battery_bank` | Аккумулятор | 60 × 40 | ☑ Автомобильный 12 В → `avtomobilnyy_12_v`<br>☑ Бункерная батарея (большая) → `bunkernaya_batareya`<br>~~Разряженный / вздувшийся~~ |  |
 | `fuel_canister` | Канистра с топливом | 35 × 45 | ☑ 5 л → `5_l`<br>☑ 10 л → `10_l`<br>☑ 20 л (жерри) → `20_l`<br>~~Пустая~~ |  |
 | `kitchen_counter` | Кухонная тумба | 120 × 90 | ☑ С раковиной → `s_rakovinoy`<br>☑ С ящиками → `s_yaschikami`<br>☑ Угловая → `uglovaya` |  |
-| `first_aid_kit` | Аптечка | 25 × 18 | ☐ Домашняя → `domashnyaya`<br>☐ Автомобильная → `avtomobilnaya`<br>☐ Военная (богаче) → `voennaya`<br>~~Пустая~~ |  |
-| `medicine_cabinet` | Аптечный шкафчик | 50 × 60 | ☐ Ванный → `vannyy`<br>☐ Медпункт (стеклянный) → `medpunkt`<br>☐ Металлический → `metallicheskiy` |  |
-| `crate_wood` | Деревянный ящик | 60 × 50 | ☑ Малый → `malyy`<br>☐ Большой → `bolshoy`<br>☑ Военный → `voennyy`<br>~~Открытый / разграбленный~~<br>~~Разбитый~~ |  |
+| `first_aid_kit` | Аптечка | 25 × 18 | ☑ Домашняя → `domashnyaya`<br>☑ Автомобильная → `avtomobilnaya`<br>☑ Военная (богаче) → `voennaya`<br>~~Пустая~~ |  |
+| `medicine_cabinet` | Аптечный шкафчик | 50 × 60 | ☑ Ванный → `vannyy`<br>☑ Медпункт (стеклянный) → `medpunkt`<br>☑ Металлический → `metallicheskiy` |  |
+| `crate_wood` | Деревянный ящик | 60 × 50 | ☑ Малый → `malyy`<br>☑ Большой → `bolshoy`<br>☑ Военный → `voennyy`<br>~~Открытый / разграбленный~~<br>~~Разбитый~~ |  |
 | `rack_metal` | Стеллаж металлический | 120 × 200 | ☐ С 3 полками → `s_3_polkami`<br>☐ С 5 полками → `s_5_polkami`<br>☐ Промышленный → `promyshlennyy` |  |
 | `locker_metal` | Шкафчик металлический | 50 × 180 | ☐ Спортивный → `sportivnyy`<br>☑ Армейский → `armeyskiy`<br>☐ Офисный → `ofisnyy`<br>~~Взломанный~~ |  |
 | `safe_metal` | Сейф | 50 × 60 | ☐ Настенный → `nastennyy`<br>☐ Напольный → `napolnyy`<br>☐ Сейф-ячейка → `seyf_yacheyka` |  |
@@ -97,14 +97,14 @@
 | `veg_potato` | Овощи (картофель, морковь) | 8 × 8 | ☑ Картофель → `kartofel`<br>☑ Морковь → `morkov`<br>☑ Помидор → `pomidor`<br>☑ Лук → `luk` |  |
 | `meal_soup` | Готовое блюдо (суп, рагу) | 15 × 10 | ☑ Овощной суп → `ovoschnoy_sup`<br>☑ Мясное рагу → `myasnoe_ragu`<br>☑ Каша → `kasha` |  |
 | `ration_dry` | Сухпаёк | 15 × 10 | ☑ Армейский → `armeyskiy`<br>☑ Спасательный набор → `spasatelnyy_nabor`<br>☑ Космический (редкий) → `kosmicheskiy` |  |
-| `bandage` | Бинт | 10 × 6 | ☐ Стерильный → `sterilnyy`<br>☐ Самодельный из ткани → `samodelnyy_iz_tkani`<br>☐ Эластичный → `elastichnyy`<br>~~Использованный~~ |  |
-| `antiseptic` | Антисептик | 6 × 14 | ☐ Спирт → `spirt`<br>☐ Перекись → `perekis`<br>☐ Йод → `yod` |  |
-| `painkiller` | Обезболивающее | 6 × 8 | ☐ Таблетки → `tabletki`<br>☐ Ампула → `ampula`<br>☐ Сильное (редкое) → `silnoe` |  |
-| `antibiotics` | Антибиотики | 6 × 8 | ☐ Широкого спектра → `shirokogo_spektra`<br>☐ Узкоспециальные → `uzkospetsialnye`<br>~~Просроченные (слабее)~~ |  |
-| `splint` | Шина | 40 × 8 | ☐ Готовая → `gotovaya`<br>☐ Из досок и ткани → `iz_dosok_i_tkani` |  |
-| `medical_kit` | Медицинский набор | 35 × 25 | ☐ Полевой → `polevoy`<br>☐ Хирургический → `hirurgicheskiy`<br>☐ Экстренный → `ekstrennyy` |  |
-| `poison_vial` | Яд | 5 × 10 | ☐ Слабый → `slabyy`<br>☐ Сильный → `silnyy`<br>☐ Медленный → `medlennyy`<br>☐ Антидот (обратное) → `antidot` |  |
-| `soap` | Мыло | 8 × 4 | ☐ Кусок мыла → `kusok_myla`<br>☐ Гель → `gel`<br>☐ Дезинфицирующее → `dezinfitsiruyuschee` |  |
+| `bandage` | Бинт | 10 × 6 | ☑ Стерильный → `sterilnyy`<br>☑ Самодельный из ткани → `samodelnyy_iz_tkani`<br>☑ Эластичный → `elastichnyy`<br>~~Использованный~~ |  |
+| `antiseptic` | Антисептик | 6 × 14 | ☑ Спирт → `spirt`<br>☑ Перекись → `perekis`<br>☑ Йод → `yod` |  |
+| `painkiller` | Обезболивающее | 6 × 8 | ☑ Таблетки → `tabletki`<br>☑ Ампула → `ampula`<br>☑ Сильное (редкое) → `silnoe` |  |
+| `antibiotics` | Антибиотики | 6 × 8 | ☑ Широкого спектра → `shirokogo_spektra`<br>☑ Узкоспециальные → `uzkospetsialnye`<br>~~Просроченные (слабее)~~ |  |
+| `splint` | Шина | 40 × 8 | ☑ Готовая → `gotovaya`<br>☑ Из досок и ткани → `iz_dosok_i_tkani` |  |
+| `medical_kit` | Медицинский набор | 35 × 25 | ☑ Полевой → `polevoy`<br>☑ Хирургический → `hirurgicheskiy`<br>☑ Экстренный → `ekstrennyy` |  |
+| `poison_vial` | Яд | 5 × 10 | ☑ Слабый → `slabyy`<br>☑ Сильный → `silnyy`<br>☑ Медленный → `medlennyy`<br>☑ Антидот (обратное) → `antidot` |  |
+| `soap` | Мыло | 8 × 4 | ☑ Кусок мыла → `kusok_myla`<br>☑ Гель → `gel`<br>☑ Дезинфицирующее → `dezinfitsiruyuschee` |  |
 | `seed_bag` | Семена | 10 × 14 | ☐ Картофель → `kartofel`<br>☐ Пшеница → `pshenitsa`<br>☐ Морковь → `morkov`<br>☐ Универсальная смесь → `universalnaya_smes` |  |
 | `fertilizer_bag` | Удобрение | 25 × 35 | ☐ Компост → `kompost`<br>☐ Минеральное → `mineralnoe` |  |
 | `mat_plank` | Доски | 100 × 10 | ☐ Доска → `doska`<br>☐ Брус → `brus`<br>☐ Фанера → `fanera`<br>☐ Обрезки → `obrezki` |  |
