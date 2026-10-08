@@ -19,3 +19,9 @@
 | `bottle_water_flyaga_idle` | 8 × 25 | 8 × 23 | фляга |
 | `sink_tap_vannaya/umyvalnik/ulichnaya_kolonka_idle` | 80 × 90 | 50–62 × 87–93 | узкие по природе |
 | `water_purifier_*_idle` | 60 × 100 | 48–52 × 97–100 | узкие по природе |
+| `battery_bank_avtomobilnyy_12_v_idle` | 60 × 40 | 32 × 25 | один автомобильный аккумулятор |
+| `fridge_yaschik_so_ldom_idle` | 70 × 180 | 71 × 95 | ящик со льдом — низкий |
+| `fridge_morozilnaya_kamera_idle` | 70 × 180 | 100 × 93 | морозильный ларь — широкий и низкий |
+| `grow_lamp_slabaya_idle` | 80 × 15 | 44 × 15 | маленькая лампа |
+| `fuel_canister_5_l_idle` / `10_l` | 35 × 45 | 22 × 30 / 27 × 38 | канистры меньше 20-литровой |
+| `fuel_firewood_vyazanka_hvorosta_idle` | 40 × 15 | 39 × 13 | вязанка ниже поленьев |

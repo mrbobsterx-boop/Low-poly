@@ -1089,7 +1089,7 @@
    {
     "name": "Разряженный / вздувшийся",
     "slug": "razryazhennyy_vzduvshiysya",
-    "skip": false
+    "skip": true
    }
   ],
   "states": [
@@ -1526,7 +1526,7 @@
    {
     "name": "Разряженная",
     "slug": "razryazhennaya",
-    "skip": false
+    "skip": true
    },
    {
     "name": "Вздувшаяся (испорчена)",
@@ -1883,7 +1883,7 @@
    {
     "name": "Вздувшаяся (опасная)",
     "slug": "vzduvshayasya",
-    "skip": false
+    "skip": true
    }
   ],
   "states": [

@@ -4,7 +4,7 @@
 
 Правила автора: **только idle**, каждый вариант — отдельно (`<id>_<вариант>_idle`); «сломанные/испорченные» и состояния (открыт, занят, пустой) — пропуск; размер — из ОС (если в плане другой — спросить автора); старые картинки ОС — не образец стиля (образец — `docs/ref/style/`).
 
-Готово: **84 из 557** вариантов.
+Готово: **122 из 554** вариантов.
 
 ## Размер в плане ≠ ОС — **берём из плана** (решение автора 2026-10-08; в ОС поправить)
 
@@ -41,8 +41,8 @@
 | `shelf_wood` | Полка | 100 × 30 | ☑ Деревянная → `derevyannaya`<br>☑ Металлическая уголковая → `metallicheskaya_ugolkovaya`<br>☑ Угловая → `uglovaya`<br>☑ Двойная → `dvoynaya` |  |
 | `barrel_water` | Бочка для воды | 60 × 90 | ☑ Пластиковая 200 л → `plastikovaya_200_l`<br>☑ Металлическая 200 л → `metallicheskaya_200_l`<br>☑ Деревянная 100 л → `derevyannaya_100_l`<br>☑ Малая канистра-бочонок 30 л → `malaya_kanistra_bochonok_30_l` |  |
 | `tank_water` | Резервуар воды | 160 × 190 | ☑ Пластиковый 1000 л → `plastikovyy_1000_l`<br>☑ Бетонный 5000 л → `betonnyy_5000_l`<br>☑ Стальной цилиндр → `stalnoy_tsilindr`<br>☑ Подземный (люк) → `podzemnyy` |  |
-| `battery_bank` | Аккумулятор | 60 × 40 | ☐ Автомобильный 12 В → `avtomobilnyy_12_v`<br>☐ Бункерная батарея (большая) → `bunkernaya_batareya`<br>☐ Разряженный / вздувшийся → `razryazhennyy_vzduvshiysya` |  |
-| `fuel_canister` | Канистра с топливом | 35 × 45 | ☐ 5 л → `5_l`<br>☐ 10 л → `10_l`<br>☐ 20 л (жерри) → `20_l`<br>~~Пустая~~ |  |
+| `battery_bank` | Аккумулятор | 60 × 40 | ☑ Автомобильный 12 В → `avtomobilnyy_12_v`<br>☑ Бункерная батарея (большая) → `bunkernaya_batareya`<br>~~Разряженный / вздувшийся~~ |  |
+| `fuel_canister` | Канистра с топливом | 35 × 45 | ☑ 5 л → `5_l`<br>☑ 10 л → `10_l`<br>☑ 20 л (жерри) → `20_l`<br>~~Пустая~~ |  |
 | `kitchen_counter` | Кухонная тумба | 120 × 90 | ☐ С раковиной → `s_rakovinoy`<br>☐ С ящиками → `s_yaschikami`<br>☐ Угловая → `uglovaya` |  |
 | `first_aid_kit` | Аптечка | 25 × 18 | ☐ Домашняя → `domashnyaya`<br>☐ Автомобильная → `avtomobilnaya`<br>☐ Военная (богаче) → `voennaya`<br>~~Пустая~~ |  |
 | `medicine_cabinet` | Аптечный шкафчик | 50 × 60 | ☐ Ванный → `vannyy`<br>☐ Медпункт (стеклянный) → `medpunkt`<br>☐ Металлический → `metallicheskiy` |  |
@@ -64,16 +64,16 @@
 | `rain_collector` | Дождеуловитель | 110 × 60 | ☑ Плёнка и желоб → `plenka_i_zhelob`<br>☑ Крышная воронка → `kryshnaya_voronka`<br>☑ Большая площадка (для башни) → `bolshaya_ploschadka` |  |
 | `water_pump` | Насос | 50 × 60 | ☑ Ручной рычажный → `ruchnoy_rychazhnyy`<br>☑ Электрический → `elektricheskiy`<br>☑ Бензиновый → `benzinovyy` |  |
 | `water_purifier` | Очиститель воды | 60 × 100 | ☑ Керамический фильтр → `keramicheskiy_filtr`<br>☑ Кипячение на печи → `kipyachenie_na_pechi`<br>☑ Угольный фильтр → `ugolnyy_filtr`<br>☑ Химические таблетки (расходник) → `himicheskie_tabletki` |  |
-| `solar_panel` | Солнечная панель | 120 × 80 | ☐ Малая 100 Вт → `malaya_100_vt`<br>☐ Большая 300 Вт → `bolshaya_300_vt`<br>☐ Складная портативная → `skladnaya_portativnaya`<br>~~Разбитая~~ |  |
-| `wind_turbine` | Ветрогенератор | 100 × 300 | ☐ Малый горизонтальный → `malyy_gorizontalnyy`<br>☐ Вертикальный → `vertikalnyy`<br>☐ Самодельный из вентилятора → `samodelnyy_iz_ventilyatora` |  |
-| `bike_generator` | Велогенератор | 120 × 110 | ☐ Стационарный → `statsionarnyy`<br>☐ Складной → `skladnoy` |  |
-| `treadmill_generator` | Беговая дорожка-генератор | 160 × 120 | ☐ Беговая дорожка → `begovaya_dorozhka` |  |
-| `fuel_generator` | Генератор на топливе | 70 × 60 | ☐ Портативный → `portativnyy`<br>☐ Стационарный → `statsionarnyy`<br>☐ Промышленный → `promyshlennyy` |  |
-| `fridge` | Холодильник | 70 × 180 | ☐ Электрический → `elektricheskiy`<br>☐ Ящик со льдом → `yaschik_so_ldom`<br>☐ Морозильная камера → `morozilnaya_kamera` |  |
-| `grow_lamp` | Лампа для урожая | 80 × 15 | ☐ Фиолетовая LED → `fioletovaya_led`<br>☐ Люминесцентная → `lyuminestsentnaya`<br>☐ Слабая → `slabaya` |  |
-| `shelter_panel` | Панель убежища | 60 × 70 | ☐ Простой пульт → `prostoy_pult`<br>~~Экран с графиками (позже)~~ |  |
-| `light_switch` | Выключатель | 8 × 12 | ☐ Клавишный → `klavishnyy`<br>☐ Рычажный (промышленный) → `rychazhnyy`<br>☐ Тумблер на щитке → `tumbler_na_schitke`<br>~~Сломанный~~ |  |
-| `fuse_box` | Электрощит | 40 × 50 | ☐ Бытовой → `bytovoy`<br>☐ Промышленный → `promyshlennyy`<br>☐ Самодельный → `samodelnyy`<br>~~Сгоревший~~ |  |
+| `solar_panel` | Солнечная панель | 120 × 80 | ☑ Малая 100 Вт → `malaya_100_vt`<br>☑ Большая 300 Вт → `bolshaya_300_vt`<br>☑ Складная портативная → `skladnaya_portativnaya`<br>~~Разбитая~~ |  |
+| `wind_turbine` | Ветрогенератор | 100 × 300 | ☑ Малый горизонтальный → `malyy_gorizontalnyy`<br>☑ Вертикальный → `vertikalnyy`<br>☑ Самодельный из вентилятора → `samodelnyy_iz_ventilyatora` |  |
+| `bike_generator` | Велогенератор | 120 × 110 | ☑ Стационарный → `statsionarnyy`<br>☑ Складной → `skladnoy` |  |
+| `treadmill_generator` | Беговая дорожка-генератор | 160 × 120 | ☑ Беговая дорожка → `begovaya_dorozhka` |  |
+| `fuel_generator` | Генератор на топливе | 70 × 60 | ☑ Портативный → `portativnyy`<br>☑ Стационарный → `statsionarnyy`<br>☑ Промышленный → `promyshlennyy` |  |
+| `fridge` | Холодильник | 70 × 180 | ☑ Электрический → `elektricheskiy`<br>☑ Ящик со льдом → `yaschik_so_ldom`<br>☑ Морозильная камера → `morozilnaya_kamera` |  |
+| `grow_lamp` | Лампа для урожая | 80 × 15 | ☑ Фиолетовая LED → `fioletovaya_led`<br>☑ Люминесцентная → `lyuminestsentnaya`<br>☑ Слабая → `slabaya` |  |
+| `shelter_panel` | Панель убежища | 60 × 70 | ☑ Простой пульт → `prostoy_pult`<br>~~Экран с графиками (позже)~~ |  |
+| `light_switch` | Выключатель | 8 × 12 | ☑ Клавишный → `klavishnyy`<br>☑ Рычажный (промышленный) → `rychazhnyy`<br>☑ Тумблер на щитке → `tumbler_na_schitke`<br>~~Сломанный~~ |  |
+| `fuse_box` | Электрощит | 40 × 50 | ☑ Бытовой → `bytovoy`<br>☑ Промышленный → `promyshlennyy`<br>☑ Самодельный → `samodelnyy`<br>~~Сгоревший~~ |  |
 | `stove_cook` | Плита | 70 × 90 | ☐ Газовая → `gazovaya`<br>☐ Электрическая → `elektricheskaya`<br>☐ Дровяная → `drovyanaya`<br>~~Сломанная~~ |  |
 | `campfire` | Костёр | 80 × 50 | ☐ Простой → `prostoy`<br>☐ С камнями → `s_kamnyami`<br>☐ Костёр с котлом → `koster_s_kotlom`<br>☐ Догорающий → `dogorayuschiy` |  |
 | `hydro_rack` | Гидропонная стойка | 100 × 180 | ☐ Малая → `malaya`<br>☐ Большая → `bolshaya` |  |
@@ -86,10 +86,10 @@
 | `lightbulb` | Лампочка | 6 × 12 | ☑ Накаливания → `nakalivaniya`<br>☑ Светодиодная (дольше) → `svetodiodnaya`<br>☑ Люминесцентная трубка → `lyuminestsentnaya_trubka`<br>~~Перегоревшая~~ |  |
 | `water_tablets` | Таблетки для очистки воды | 6 × 10 | ☑ Хлорные → `hlornye`<br>☑ Йодные → `yodnye` |  |
 | `bottle_water` | Бутылка с водой | 8 × 25 | ☑ Пластиковая 0,5 л → `plastikovaya_0_5_l`<br>☑ Пластиковая 1,5 л → `plastikovaya_1_5_l`<br>☑ Стеклянная → `steklyannaya`<br>☑ Фляга → `flyaga`<br>~~Пустая~~ |  |
-| `power_cable` | Провод / кабель | 20 × 20 | ☐ Тонкий → `tonkiy`<br>☐ Силовой → `silovoy`<br>☐ Удлинитель → `udlinitel` |  |
-| `battery_cell` | Батарейка | 3 × 6 | ☐ Одноразовая → `odnorazovaya`<br>☐ Перезаряжаемая → `perezaryazhaemaya`<br>☐ Разряженная → `razryazhennaya`<br>~~Вздувшаяся (испорчена)~~ |  |
-| `fuel_firewood` | Дрова | 40 × 15 | ☐ Поленья → `polenya`<br>☐ Вязанка хвороста → `vyazanka_hvorosta`<br>☐ Отсыревшие (горят хуже) → `otsyrevshie` |  |
-| `food_canned` | Консервы | 8 × 10 | ☐ Тушёнка → `tushenka`<br>☐ Фасоль → `fasol`<br>☐ Рыбные → `rybnye`<br>☐ Сгущёнка → `sguschenka`<br>☐ Вздувшаяся (опасная) → `vzduvshayasya` |  |
+| `power_cable` | Провод / кабель | 20 × 20 | ☑ Тонкий → `tonkiy`<br>☑ Силовой → `silovoy`<br>☑ Удлинитель → `udlinitel` |  |
+| `battery_cell` | Батарейка | 3 × 6 | ☑ Одноразовая → `odnorazovaya`<br>☑ Перезаряжаемая → `perezaryazhaemaya`<br>~~Разряженная~~<br>~~Вздувшаяся (испорчена)~~ |  |
+| `fuel_firewood` | Дрова | 40 × 15 | ☑ Поленья → `polenya`<br>☑ Вязанка хвороста → `vyazanka_hvorosta`<br>☑ Отсыревшие (горят хуже) → `otsyrevshie` |  |
+| `food_canned` | Консервы | 8 × 10 | ☐ Тушёнка → `tushenka`<br>☐ Фасоль → `fasol`<br>☐ Рыбные → `rybnye`<br>☐ Сгущёнка → `sguschenka`<br>~~Вздувшаяся (опасная)~~ |  |
 | `food_bread` | Хлеб / сухари | 20 × 10 | ☐ Хлеб → `hleb`<br>☐ Сухари (долго) → `suhari`<br>☐ Лепёшка → `lepeshka`<br>☐ Заплесневевший → `zaplesnevevshiy` |  |
 | `food_grain` | Зерно | 15 × 15 | ☐ Пшеница → `pshenitsa`<br>☐ Кукуруза → `kukuruza`<br>☐ Рис → `ris` |  |
 | `meat_raw` | Сырое мясо | 15 × 8 | ☐ Кролик → `krolik`<br>☐ Собака (риск) → `sobaka`<br>☐ Птица → `ptitsa`<br>☐ Тухлое → `tuhloe` |  |

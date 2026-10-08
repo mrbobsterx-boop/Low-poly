@@ -54,7 +54,8 @@ COLORS = [
      ("plastic_white", "#e4e2db", "белый пластик, фаянс"),
      ("cloth_blue", "#3d4870", "ткань тёмно-синяя — одеяло, роба")],
     [("concrete_warm", "#5a4e43", "тёплый тёмный бетон — стены бункера"),
-     None, None, None, None, None, None, None],
+     ("glow_grow", "#c070ff", "СВЕТИТСЯ: фитолампа (фиолетовая, emission)"),
+     None, None, None, None, None, None],
 ]
 ROWS = len(COLORS)
 
