@@ -73,11 +73,14 @@ def _place(obj, loc, rot):
 BEVEL = 0.012   # фаска по рёбрам, м: рёбра ловят свет — «рубленые грани»
 
 
-def _bevel(bm, width):
+BEVEL_SEGS = 2  # сегментов фаски: 2 — мягкое ребро, ловит блик
+
+
+def _bevel(bm, width, segs=None):
     if width <= 0:
         return
     bmesh.ops.bevel(bm, geom=list(bm.verts) + list(bm.edges), offset=width, offset_type="OFFSET",
-                    segments=1, profile=0.5, affect="EDGES", clamp_overlap=True)
+                    segments=segs or (BEVEL_SEGS if width >= 0.008 else 1), profile=0.5, affect="EDGES", clamp_overlap=True)
 
 
 def box(size, loc, color, rot=None, name="box", glow=False, bevel=None):
@@ -143,7 +146,7 @@ def dims(obj):
 
 
 def finish(parts, category, oid, variation, state, size_cm=None, limit="furniture", glb=True, margin_px=0,
-           frame_points=None):
+           frame_points=None, lit=True):
     """Склеить, проверить, экспортировать .glb и отрендерить <id>_<вариация>_<состояние>(.png + _n.png).
     size_cm — (ширина, высота) из ОС для проверки (допуск 2 см). Возвращает объект."""
     name = f"{oid}_{variation}_{state}"
@@ -169,6 +172,11 @@ def finish(parts, category, oid, variation, state, size_cm=None, limit="furnitur
                                   export_animations=False)
     size = rt.render_pair([obj], f"renders/{category}/{name}", margin_px=margin_px, frame_points=frame_points)
     print(f"  рендер {size[0]} × {size[1]} px")
+    if lit:   # показательные рендеры со светом — только для просмотра: прямо и с поворотом на 20°
+        rt.render_lit([obj], f"renders/_review/{name}_lit.png")
+        obj.rotation_euler[2] = math.radians(20)
+        rt.render_lit([obj], f"renders/_review/{name}_lit_yaw20.png")
+        obj.rotation_euler[2] = 0
     # убрать из кадра следующих рендеров, но сохранить в .blend
     obj.hide_render = True
     _saved.append(obj)

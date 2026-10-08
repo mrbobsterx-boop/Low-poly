@@ -224,6 +224,58 @@ def render_pair(objs, out_base, margin_px=0, frame_points=None):
     return size
 
 
+def render_lit(objs, out_path, margin_px=24, lamp_xyz=None, glow_strength=2.5, samples=96):
+    """Показательный рендер СО СВЕТОМ (как на референсе): тёплая лампа сверху-спереди, холодная слабая
+    подсветка, мягкие тени. ТОЛЬКО для просмотра — в игру идёт render_pair (без света)."""
+    scene = bpy.context.scene
+    frame_objects(objs, margin_px)
+    pts = _mesh_points_world(objs)
+    top = max(p.z for p in pts)
+    cx = (min(p.x for p in pts) + max(p.x for p in pts)) / 2
+    added = []
+    # тёплая лампа над предметом и чуть спереди — свет сверху вниз, как от потолочной лампы
+    lamp = bpy.data.lights.new("_lamp", "POINT")
+    lamp.energy, lamp.shadow_soft_size, lamp.color = 90.0 + 60.0 * top, 0.15, (1.0, 0.72, 0.42)
+    o = bpy.data.objects.new("_lamp", lamp)
+    o.location = lamp_xyz or (cx - 0.2, -0.9, top + 0.55)
+    scene.collection.objects.link(o)
+    added.append(o)
+    fill = bpy.data.lights.new("_fill", "AREA")
+    fill.energy, fill.size, fill.color = 18.0, 3.0, (0.45, 0.55, 0.9)
+    o = bpy.data.objects.new("_fill", fill)
+    o.location = (-2.0, -3.0, 1.2)
+    o.rotation_euler = (math.radians(80), 0, math.radians(-35))
+    scene.collection.objects.link(o)
+    added.append(o)
+    old_world = tuple(scene.world.color)
+    scene.world.color = (0.012, 0.013, 0.02)
+    c = scene.cycles
+    old = (c.samples, c.max_bounces, c.use_denoising)
+    c.samples, c.max_bounces = samples, 4
+    try:
+        c.use_denoising = True
+        c.denoiser = "OPENIMAGEDENOISE"
+    except Exception:
+        c.use_denoising = False
+    glows = []
+    for mat in bpy.data.materials:
+        if mat.node_tree:
+            for n in mat.node_tree.nodes:
+                if n.type == "EMISSION" and mat.name != NORMAL_MAT_NAME:
+                    glows.append((n, n.inputs["Strength"].default_value))
+                    n.inputs["Strength"].default_value = glow_strength
+    scene.view_settings.view_transform = "AgX"
+    scene.render.filepath = os.path.join(ROOT, out_path)
+    bpy.ops.render.render(write_still=True)
+    for n, s in glows:
+        n.inputs["Strength"].default_value = s
+    scene.view_settings.view_transform = "Standard"
+    c.samples, c.max_bounces, c.use_denoising = old
+    scene.world.color = old_world
+    for o in added:
+        bpy.data.objects.remove(o)
+
+
 def palette_material():
     """Общий материал моделей: текстура palette/palette.png без сглаживания (каждый квадрат — свой цвет)."""
     mat = bpy.data.materials.get("palette")
