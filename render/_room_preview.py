@@ -82,6 +82,9 @@ def main():
     os.makedirs(os.path.join(ROOT, "layouts"), exist_ok=True)
     json.dump(layout, open(os.path.join(ROOT, "layouts", NAME + ".json"), "w"), ensure_ascii=False, indent=1)
 
+    if "--no-render" in sys.argv:
+        print("готово (без рендера): layouts/" + NAME + ".json")
+        return
     # свет: лампа под потолком (тёплая), слабая подсветка, свечение лампы
     scene = bpy.context.scene
     lamp = objs["lamp_ceiling_lyuminestsentnaya_idle"]

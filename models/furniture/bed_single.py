@@ -60,6 +60,13 @@ def bed_idle():
     # загнутый край одеяла (светлая изнанка-простыня) ближе к подушке
     p.append(L.sheet(3, 6, 0.16, md - 0.04, (-0.47, 0.0, top_z + 0.005), "offwhite",
                      z_fn=lambda u, v: 0.03 * math.sin(u * math.pi), jitter=0.008, seed=3))
+    # износ: потёртости рамы (светлое дерево), тёмные пятна, пятно на матрасе и на подушке
+    yr = -(D / 2 - 0.03) - 0.018
+    for i, (x, z, s, c) in enumerate(((-0.55, 0.26, 0.10, "wood_light"), (0.35, 0.24, 0.08, "wood_dark"),
+                                      (0.70, 0.27, 0.06, "wood_light"), (-W / 2 + 0.035, 0.45, 0.04, "wood_light"))):
+        p.append(L.spot((x, yr, z), s, c, seed=90 + i, stretch=(1.6, 0.6)))
+    p.append(L.spot((-0.62, -(md / 2) - 0.002, MAT_Z + 0.06), 0.09, "khaki_light", seed=99, stretch=(1.3, 0.7)))
+    p.append(L.spot((-(mw / 2 - 0.27), -0.05, MAT_Z + MAT_H + 0.125), 0.08, "cloth_beige", facing="top", seed=101))
     return p
 
 

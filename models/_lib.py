@@ -146,11 +146,13 @@ def dims(obj):
 
 
 def finish(parts, category, oid, variation, state, size_cm=None, limit="furniture", glb=True, margin_px=0,
-           frame_points=None, lit=True):
+           frame_points=None, lit=False, rough=None, period=None):
     """Склеить, проверить, экспортировать .glb и отрендерить <id>_<вариация>_<состояние>(.png + _n.png).
     size_cm — (ширина, высота) из ОС для проверки (допуск 2 см). Возвращает объект."""
     name = f"{oid}_{variation}_{state}"
     obj = join(parts, name)
+    if rough is not False:      # крупные неровные грани + разнобой оттенков (rough — параметры для roughen)
+        roughen(obj, period=period, **(rough or {}))
     (w, d, h), (zmin, zmax) = dims(obj)
     t = tris(obj)
     print(f"[{name}] {w * 100:.0f} × {h * 100:.0f} см (глубина {d * 100:.0f}), треугольников {t}"
@@ -234,3 +236,118 @@ def transform(objs, loc=(0, 0, 0), rot=None):
     for o in objs:
         _place(o, loc, rot)
     return objs
+
+
+def _rng(co, seed, period):
+    """Случайность, зависящая от места (с периодом по X — чтобы бесшовные оболочки оставались бесшовными)."""
+    import random
+    x = (co.x % period) if period else co.x
+    if period and abs(x - period) < 1e-3:
+        x = 0.0
+    return random.Random(hash((round(x, 3), round(co.y, 3), round(co.z, 3), seed)))
+
+
+def roughen(obj, seed=1, min_area=0.03, k=0.035, amp_max=0.012, levels=2, shade_p=0.4, period=None):
+    """«Крупные неровные грани» + «лёгкий разнобой оттенков».
+    1) Большие грани (лицом к камере или вверх) разбиваются на треугольники; новая точка сдвигается вбок
+       и ВНУТРЬ (вмятина) — наружу ничего не выпирает, пятна/детали поверх остаются видны.
+    2) Каждой крупной грани случайно — чуть темнее/светлее того же цвета палитры (полосы квадрата)."""
+    sys.path.insert(0, os.path.join(ROOT, "palette"))
+    import _palette
+    glow_idx = {i for i, m in enumerate(obj.data.materials) if m and m.name == "palette_glow"}
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    for _ in range(levels):
+        bm.normal_update()
+        faces = [f for f in bm.faces if f.material_index not in glow_idx and f.calc_area() > min_area
+                 and (f.normal.y < -0.3 or f.normal.z > 0.3 or abs(f.normal.x) > 0.6)]
+        if not faces:
+            break
+        res = bmesh.ops.poke(bm, faces=faces, offset=0.0, center_mode="MEAN_WEIGHTED")
+        bm.normal_update()
+        for v in res["verts"]:
+            area = sum(f.calc_area() for f in v.link_faces)
+            r = _rng(v.co, seed, period)
+            n = v.normal.copy()
+            # сдвиг вбок — к случайному соседу (ломает симметрию «звезды»)
+            nb = [e.other_vert(v).co for e in v.link_edges]
+            if nb:
+                tgt = nb[r.randrange(len(nb))]
+                v.co = v.co.lerp(tgt, r.uniform(0.0, 0.35))
+            v.co -= n * r.uniform(0.25, 1.0) * min(amp_max, k * area ** 0.5)
+    # разнобой оттенков
+    uvl = bm.loops.layers.uv.active
+    if uvl is not None:
+        for f in bm.faces:
+            if f.material_index in glow_idx or f.calc_area() < min_area / 6:
+                continue
+            u, v = f.loops[0][uvl].uv
+            name, sh = _palette.name_at(u, v)
+            if name is None or sh != 0:
+                continue
+            r = _rng(f.calc_center_median(), seed + 7, period)
+            x = r.random()
+            s = -1 if x < shade_p / 2 else (1 if x < shade_p else 0)
+            if s:
+                nu, nv = _palette.uv(name, s)
+                for lp in f.loops:
+                    lp[uvl].uv = (nu, nv)
+    bm.to_mesh(obj.data)
+    bm.free()
+    for p in obj.data.polygons:
+        p.use_smooth = False
+    return obj
+
+
+def spot(center, size, color, facing="front", seed=1, n=7, lift=0.003, stretch=(1.0, 1.0), name="spot"):
+    """Пятно износа (скол, ржавчина, потёртость, грязь): неровная «клякса» из треугольников, чуть над поверхностью.
+    facing: front — на фасаде (лицом к −Y), top — сверху (лицом вверх), left/right — на боку."""
+    import random
+    r = random.Random(seed)
+    bm = bmesh.new()
+    pts = []
+    for i in range(n):
+        a = 2 * math.pi * (i + r.uniform(-0.3, 0.3)) / n
+        rad = size / 2 * r.uniform(0.55, 1.0)
+        pts.append((math.cos(a) * rad * stretch[0], math.sin(a) * rad * stretch[1]))
+    cx, cy, cz = center
+
+    def P(a, b):
+        if facing == "front":
+            return (cx + a, cy - lift, cz + b)
+        if facing == "top":
+            return (cx + a, cy + b, cz + lift)
+        s = -1 if facing == "left" else 1
+        return (cx + s * lift, cy + a, cz + b)
+    c = bm.verts.new(P(0, 0))
+    ring = [bm.verts.new(P(a, b)) for a, b in pts]
+    for i in range(n):
+        f = bm.faces.new([c, ring[i], ring[(i + 1) % n]])
+    bm.normal_update()
+    want = {"front": Vector((0, -1, 0)), "top": Vector((0, 0, 1)), "left": Vector((-1, 0, 0)),
+            "right": Vector((1, 0, 0))}[facing]
+    if list(bm.faces)[0].normal.dot(want) < 0:
+        bmesh.ops.reverse_faces(bm, faces=bm.faces)
+    return _from_bmesh(bm, name, color)
+
+
+def prism(points, axis, a0, a1, color, name="prism", face_colors=None):
+    """Призма: многоугольник points (2D) вытянут вдоль оси axis ('x', 'y' или 'z') от a0 до a1.
+    Для 'z' точки — (x, y); для 'x' — (y, z); для 'y' — (x, z). face_colors — {номер ребра: цвет} — покрасить
+    боковую грань ребра i (между точками i и i+1), например скос."""
+    def P(u, v, w):
+        return {"z": (u, v, w), "x": (w, u, v), "y": (u, w, v)}[axis]
+    bm = bmesh.new()
+    lo = [bm.verts.new(P(u, v, a0)) for u, v in points]
+    hi = [bm.verts.new(P(u, v, a1)) for u, v in points]
+    n = len(points)
+    bm.faces.new(lo[::-1])
+    bm.faces.new(hi)
+    for i in range(n):
+        j = (i + 1) % n
+        bm.faces.new([lo[i], lo[j], hi[j], hi[i]])
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    obj = _from_bmesh(bm, name, color)
+    for i, c in (face_colors or {}).items():
+        rt.paint(obj, c, faces=[2 + i])
+    return obj

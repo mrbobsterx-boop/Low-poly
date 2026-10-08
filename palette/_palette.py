@@ -1,7 +1,9 @@
 """Собирает общую палитру: palette/palette.png (текстура для моделей) и palette/palette_preview.png (для автора).
 Запуск: python3 palette/_palette.py. Цвета меняются только здесь, потом — пересобрать.
-Сетка 8 × 5 квадратов по 32 px. В скриптах моделей цвет берётся ПО ИМЕНИ: uv("rust") — так палитру можно
+Сетка 8 × N квадратов по 32 px. В скриптах моделей цвет берётся ПО ИМЕНИ: uv("rust") — так палитру можно
 расширять и переставлять, а модели после пересборки сами найдут свои цвета.
+Каждый квадрат — три полосы: слева чуть темнее (−8 %), посередине сам цвет, справа чуть светлее (+8 %).
+uv(name, shade=-1/0/+1) — для лёгкого разнобоя оттенков на соседних гранях (только цвета палитры).
 """
 import os
 from PIL import Image, ImageDraw, ImageFont
@@ -51,6 +53,8 @@ COLORS = [
      ("hair_grey", "#a8a49c", "волосы седые"),
      ("plastic_white", "#e4e2db", "белый пластик, фаянс"),
      ("cloth_blue", "#3d4870", "ткань тёмно-синяя — одеяло, роба")],
+    [("concrete_warm", "#5a4e43", "тёплый тёмный бетон — стены бункера"),
+     None, None, None, None, None, None, None],
 ]
 ROWS = len(COLORS)
 
@@ -64,12 +68,28 @@ def _cells():
                 yield r, c, cell
 
 
-def uv(name):
-    """UV-центр квадрата цвета по имени (для скриптов моделей)."""
+SHADE = 0.08                        # ±8 % яркости у боковых полос квадрата
+STRIPS = ((0, 10), (10, 22), (22, 32))   # полосы квадрата (px): темнее, сам цвет, светлее
+
+
+def uv(name, shade=0):
+    """UV центра полосы квадрата цвета по имени; shade: −1 темнее, 0 сам цвет, +1 светлее."""
     for r, c, (n, _, _) in _cells():
         if n == name:
-            return ((c + 0.5) / COLS, 1.0 - (r + 0.5) / ROWS)
+            a, b = STRIPS[shade + 1]
+            return ((c * CELL + (a + b) / 2) / (COLS * CELL), 1.0 - (r + 0.5) / ROWS)
     raise KeyError(f"Нет цвета «{name}» в палитре (palette/palette.md)")
+
+
+def name_at(u, v):
+    """Обратно: (имя цвета, оттенок) по UV."""
+    c, r = int(u * COLS), int((1.0 - v) * ROWS)
+    px = u * COLS * CELL - c * CELL
+    shade = -1 if px < STRIPS[0][1] else (0 if px < STRIPS[1][1] else 1)
+    for rr, cc, (n, _, _) in _cells():
+        if rr == r and cc == c:
+            return n, shade
+    return None, 0
 
 
 def hex2rgb(h):
@@ -81,7 +101,10 @@ def build_texture():
     im = Image.new("RGB", (COLS * CELL, ROWS * CELL), (128, 128, 128))
     d = ImageDraw.Draw(im)
     for r, c, (_, hx, _) in _cells():
-        d.rectangle([c * CELL, r * CELL, (c + 1) * CELL - 1, (r + 1) * CELL - 1], fill=hex2rgb(hx))
+        base = hex2rgb(hx)
+        for k, (a, b) in zip((-1, 0, 1), STRIPS):
+            col = tuple(max(0, min(255, round(ch * (1 + k * SHADE)))) for ch in base)
+            d.rectangle([c * CELL + a, r * CELL, c * CELL + b - 1, (r + 1) * CELL - 1], fill=col)
     im.save(os.path.join(HERE, "palette.png"))
 
 
@@ -92,7 +115,7 @@ def build_preview():
         bold = ImageFont.truetype("DejaVuSans-Bold.ttf", 14)
     except OSError:
         font = bold = ImageFont.load_default()
-    rows_title = ["Бетон и камень", "Металл", "Дерево, хаки, ткань", "Живое и свет", "Разное"]
+    rows_title = ["Бетон и камень", "Металл", "Дерево, хаки, ткань", "Живое и свет", "Разное", "Бетон бункера"]
     im = Image.new("RGB", (COLS * W + PAD, ROWS * (H + 24) + PAD), (235, 232, 226))
     d = ImageDraw.Draw(im)
     for r, row in enumerate(COLORS):
@@ -120,7 +143,7 @@ def build_preview():
 
 def build_md():
     lines = ["# Палитра", "",
-             "Общая палитра всех моделей: `palette.png` — 8 × 5 квадратов по 32 px. Собирается скриптом `_palette.py`",
+             "Общая палитра всех моделей: `palette.png` — 8 × 6 квадратов по 32 px. Собирается скриптом `_palette.py`",
              "(цвета меняются только там). Превью для глаз — `palette_preview.png`.", "",
              "**Статус: утверждена автором 2026-10-08** (строки 1–4; строка 5 добавлена по его списку).", "",
              "- Цвета — «чистые» (правило 10): без света и тени. Темнее/светлее делает Godot своим светом.",
@@ -129,6 +152,7 @@ def build_md():
              "- **В скриптах моделей цвет — только по имени**: `uv(\"rust\")` из `_palette.py` (центр квадрата).",
              "  Палитру можно расширять и переставлять — модели после пересборки найдут свои цвета сами.",
              "- Пустое место (серое) — запас под новый цвет. Имя цвета, который уже есть в моделях, не менять.",
+             "- Каждый квадрат — 3 полосы: темнее (−8 %), сам цвет, светлее (+8 %) — лёгкий разнобой соседних граней.",
              "  Текстура без сглаживания (Closest), поэтому цвета не смешиваются.", "",
              "| № (строка.столбец) | Имя | Цвет | Для чего |", "|---|---|---|---|"]
     for r, c, (name, hx, use) in _cells():

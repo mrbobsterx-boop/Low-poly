@@ -1,0 +1,26 @@
+{
+ "room": "shelter_living",
+ "shell": "shelter_living_concrete_normal",
+ "width_m": 5.12,
+ "comment": "x_m — середина картинки от левого края комнаты; bottom_m — низ картинки над линией пола (м, в игре ×100 px). Порядок — как рисовать: сзади вперёд, стоящее на предмете — после него.",
+ "items": [
+  {
+   "image": "locker_metal_armeyskiy_idle",
+   "x_m": 0.36,
+   "bottom_m": 0.539,
+   "depth_m": 2.47
+  },
+  {
+   "image": "table_wood_pismennyy_idle",
+   "x_m": 1.45,
+   "bottom_m": 0.507,
+   "depth_m": 2.32
+  },
+  {
+   "image": "bed_single_derevyannaya_samodelnaya_idle",
+   "x_m": 3.95,
+   "bottom_m": 0.44,
+   "depth_m": 1.95
+  }
+ ]
+}

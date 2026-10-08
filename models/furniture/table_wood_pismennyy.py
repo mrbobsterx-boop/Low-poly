@@ -46,6 +46,18 @@ def desk_idle():
     p.append(L.box((0.03, D - 0.16, 0.05), (-W / 2 + 0.06, 0, 0.14), "wood_dark", bevel=0.006))
     p.append(L.box((W - PED_W - 0.12, 0.025, 0.09), (-0.20, -(D / 2 - 0.06), zt - 0.09), "wood_dark", bevel=0.007))
     p.append(L.box((0.10, 0.012, 0.018), (-0.20, -(D / 2 - 0.06) - 0.018, zt - 0.055), "steel", bevel=0.004))
+    # износ: потёртости и пятна на столешнице, сколы краски тумбы, ожог от кружки, ржавчина у пола
+    for i, (x, y, s, c) in enumerate(((-0.35, -0.10, 0.16, "wood_light"), (0.10, 0.12, 0.12, "wood_dark"),
+                                      (-0.05, -0.20, 0.07, "wood_dark"), (0.32, 0.05, 0.09, "wood_light"))):
+        p.append(L.spot((x, y, H), s, c, facing="top", seed=50 + i, stretch=(1.6, 0.7)))
+    p.append(L.spot((0.22, -0.15, H + 0.001), 0.06, "soot", facing="top", seed=60, n=9))          # след кружки
+    yp = -(D - 0.06) / 2 - 0.02
+    for i, (x, z, s, c) in enumerate(((cx - 0.17, 0.62, 0.03, "steel"), (cx + 0.18, 0.30, 0.035, "steel"),
+                                      (cx - 0.10, 0.10, 0.08, "rust"), (cx + 0.12, 0.08, 0.05, "rust_dark"),
+                                      (cx + 0.05, 0.45, 0.06, "khaki_light"))):
+        p.append(L.spot((x, yp, z), s, c, seed=70 + i, stretch=(1.0, 0.7)))
+    # скол угла столешницы — светлая древесина на кромке
+    p.append(L.spot((-W / 2 + 0.06, -D / 2, H - 0.025), 0.05, "wood_light", seed=80, stretch=(1.2, 0.5)))
     return p
 
 
