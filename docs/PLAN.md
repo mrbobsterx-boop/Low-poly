@@ -4,11 +4,11 @@
 
 Правила автора: **только idle**, каждый вариант — отдельно (`<id>_<вариант>_idle`); «сломанные/испорченные» и состояния (открыт, занят, пустой) — пропуск; размер — из ОС (если в плане другой — спросить автора); старые картинки ОС — не образец стиля (образец — `docs/ref/style/`).
 
-Готово: **11 из 562** вариантов.
+Готово: **46 из 559** вариантов.
 
-## ⚠ Размер в плане ≠ ОС — ждёт решения автора
+## Размер в плане ≠ ОС — **берём из плана** (решение автора 2026-10-08; в ОС поправить)
 
-| id | План, см | ОС, см |
+| id | План, см (берём) | ОС, см |
 |---|---|---|
 | `workbench_basic` | 160 × 95 | 230 × 137 |
 | `workbench_electronics` | 140 × 95 | 230 × 182 |
@@ -22,11 +22,11 @@
 
 | id | Название | Размер (ОС), см | Варианты → файл | |
 |---|---|---|---|---|
-| `bed_single` | Кровать | 200 × 60 | ☐ Железная койка → `zheleznaya_koyka`<br>☑ Деревянная самодельная → `derevyannaya_samodelnaya`<br>☐ Низкая (матрас на подставке) → `nizkaya`<br>☐ Кровать с тумбой → `krovat_s_tumboy`<br>~~Испорченная / сломанная (для заброшенных комнат)~~ |  |
-| `bunk_bed` | Двухъярусная койка | 200 × 180 | ☐ Металлическая → `metallicheskaya`<br>☐ Деревянная → `derevyannaya`<br>☐ Трёхъярусная (позже) → `trehyarusnaya` |  |
-| `table_wood` | Стол | 120 × 75 | ☑ Обеденный → `obedennyy`<br>☑ Письменный → `pismennyy`<br>☐ Складной → `skladnoy`<br>☐ Металлический (выдерживает больше) → `metallicheskiy`<br>☐ Кухонный стол → `kuhonnyy_stol` |  |
-| `chair_wood` | Стул | 45 × 90 | ☑ Деревянный → `derevyannyy`<br>☐ Мягкий стул → `myagkiy_stul`<br>☐ Кресло → `kreslo`<br>☐ Табурет → `taburet`<br>☐ Барный стул → `barnyy_stul` |  |
-| `toilet` | Унитаз | 40 × 75 | ☐ Фаянсовый со смывом → `fayansovyy_so_smyvom`<br>☐ Самодельный (ведро с сиденьем) → `samodelnyy`<br>☐ Сухой (компостный) → `suhoy`<br>~~Сломанный / заброшенный~~ |  |
+| `bed_single` | Кровать | 200 × 60 | ☑ Железная койка → `zheleznaya_koyka`<br>☑ Деревянная самодельная → `derevyannaya_samodelnaya`<br>☑ Низкая (матрас на подставке) → `nizkaya`<br>☑ Кровать с тумбой → `krovat_s_tumboy`<br>~~Испорченная / сломанная (для заброшенных комнат)~~ |  |
+| `bunk_bed` | Двухъярусная койка | 200 × 180 | ☑ Металлическая → `metallicheskaya`<br>☑ Деревянная → `derevyannaya`<br>~~Трёхъярусная (позже)~~ |  |
+| `table_wood` | Стол | 120 × 75 | ☑ Обеденный → `obedennyy`<br>☑ Письменный → `pismennyy`<br>☑ Складной → `skladnoy`<br>☑ Металлический (выдерживает больше) → `metallicheskiy`<br>☑ Кухонный стол → `kuhonnyy_stol` |  |
+| `chair_wood` | Стул | 45 × 90 | ☑ Деревянный → `derevyannyy`<br>☑ Мягкий стул → `myagkiy_stul`<br>☑ Кресло → `kreslo`<br>☑ Табурет → `taburet`<br>☑ Барный стул → `barnyy_stul` |  |
+| `toilet` | Унитаз | 40 × 75 | ☑ Фаянсовый со смывом → `fayansovyy_so_smyvom`<br>☑ Самодельный (ведро с сиденьем) → `samodelnyy`<br>☑ Сухой (компостный) → `suhoy`<br>~~Сломанный / заброшенный~~ |  |
 | `sink_tap` | Раковина с краном | 80 × 90 | ☐ Кухонная → `kuhonnaya`<br>☐ Ванная → `vannaya`<br>☐ Умывальник → `umyvalnik`<br>☐ Уличная колонка → `ulichnaya_kolonka` |  |
 | `bathtub` | Ванна | 170 × 60 | ☐ Чугунная → `chugunnaya`<br>☐ Пластиковая → `plastikovaya`<br>☐ Эмалированная → `emalirovannaya` |  |
 | `cot_medical` | Медицинская койка | 190 × 80 | ☐ Складная → `skladnaya`<br>☐ Больничная → `bolnichnaya`<br>☐ Полевая → `polevaya` |  |
@@ -37,8 +37,8 @@
 
 | id | Название | Размер (ОС), см | Варианты → файл | |
 |---|---|---|---|---|
-| `wardrobe` | Шкаф | 100 × 200 | ☐ Деревянный двустворчатый → `derevyannyy_dvustvorchatyy`<br>☐ Гардероб с зеркалом → `garderob_s_zerkalom`<br>☐ Металлический шкафчик → `metallicheskiy_shkafchik`<br>~~Открытый / выпотрошенный~~ |  |
-| `shelf_wood` | Полка | 100 × 30 | ☑ Деревянная → `derevyannaya`<br>☐ Металлическая уголковая → `metallicheskaya_ugolkovaya`<br>☐ Угловая → `uglovaya`<br>☐ Двойная → `dvoynaya` |  |
+| `wardrobe` | Шкаф | 100 × 200 | ☑ Деревянный двустворчатый → `derevyannyy_dvustvorchatyy`<br>☑ Гардероб с зеркалом → `garderob_s_zerkalom`<br>☑ Металлический шкафчик → `metallicheskiy_shkafchik`<br>~~Открытый / выпотрошенный~~ |  |
+| `shelf_wood` | Полка | 100 × 30 | ☑ Деревянная → `derevyannaya`<br>☑ Металлическая уголковая → `metallicheskaya_ugolkovaya`<br>☑ Угловая → `uglovaya`<br>☑ Двойная → `dvoynaya` |  |
 | `barrel_water` | Бочка для воды | 60 × 90 | ☐ Пластиковая 200 л → `plastikovaya_200_l`<br>☐ Металлическая 200 л → `metallicheskaya_200_l`<br>☐ Деревянная 100 л → `derevyannaya_100_l`<br>☐ Малая канистра-бочонок 30 л → `malaya_kanistra_bochonok_30_l` |  |
 | `tank_water` | Резервуар воды | 160 × 190 | ☐ Пластиковый 1000 л → `plastikovyy_1000_l`<br>☐ Бетонный 5000 л → `betonnyy_5000_l`<br>☐ Стальной цилиндр → `stalnoy_tsilindr`<br>☐ Подземный (люк) → `podzemnyy` |  |
 | `battery_bank` | Аккумулятор | 60 × 40 | ☐ Автомобильный 12 В → `avtomobilnyy_12_v`<br>☐ Бункерная батарея (большая) → `bunkernaya_batareya`<br>☐ Разряженный / вздувшийся → `razryazhennyy_vzduvshiysya` |  |
@@ -58,9 +58,9 @@
 
 | id | Название | Размер (ОС), см | Варианты → файл | |
 |---|---|---|---|---|
-| `lamp_ceiling` | Лампа потолочная | 30 × 25 | ☐ Лампа накаливания → `lampa_nakalivaniya`<br>☑ Светодиодная → `svetodiodnaya`<br>☐ Аварийная (красная) → `avariynaya`<br>☐ Настольная → `nastolnaya`<br>☐ Подвесная с абажуром → `podvesnaya_s_abazhurom` |  |
-| `radio_desk` | Радиоприёмник | 35 × 25 | ☐ Настольный → `nastolnyy`<br>☐ Ручной (с динамо) → `ruchnoy`<br>☐ Военная рация → `voennaya_ratsiya`<br>~~Сломанный~~ |  |
-| `stove_heat` | Печь-буржуйка | 60 × 90 | ☑ Стальная бочка → `stalnaya_bochka`<br>☐ Кирпичная → `kirpichnaya`<br>☐ Походная → `pohodnaya` |  |
+| `lamp_ceiling` | Лампа потолочная | 30 × 25 | ☑ Лампа накаливания → `lampa_nakalivaniya`<br>☑ Светодиодная → `svetodiodnaya`<br>☑ Аварийная (красная) → `avariynaya`<br>☑ Настольная → `nastolnaya`<br>☑ Подвесная с абажуром → `podvesnaya_s_abazhurom` |  |
+| `radio_desk` | Радиоприёмник | 35 × 25 | ☑ Настольный → `nastolnyy`<br>☑ Ручной (с динамо) → `ruchnoy`<br>☑ Военная рация → `voennaya_ratsiya`<br>~~Сломанный~~ |  |
+| `stove_heat` | Печь-буржуйка | 60 × 90 | ☑ Стальная бочка → `stalnaya_bochka`<br>☑ Кирпичная → `kirpichnaya`<br>☑ Походная → `pohodnaya` |  |
 | `rain_collector` | Дождеуловитель | 110 × 60 | ☐ Плёнка и желоб → `plenka_i_zhelob`<br>☐ Крышная воронка → `kryshnaya_voronka`<br>☐ Большая площадка (для башни) → `bolshaya_ploschadka` |  |
 | `water_pump` | Насос | 50 × 60 | ☐ Ручной рычажный → `ruchnoy_rychazhnyy`<br>☐ Электрический → `elektricheskiy`<br>☐ Бензиновый → `benzinovyy` |  |
 | `water_purifier` | Очиститель воды | 60 × 100 | ☐ Керамический фильтр → `keramicheskiy_filtr`<br>☐ Кипячение на печи → `kipyachenie_na_pechi`<br>☐ Угольный фильтр → `ugolnyy_filtr`<br>☐ Химические таблетки (расходник) → `himicheskie_tabletki` |  |
@@ -71,7 +71,7 @@
 | `fuel_generator` | Генератор на топливе | 70 × 60 | ☐ Портативный → `portativnyy`<br>☐ Стационарный → `statsionarnyy`<br>☐ Промышленный → `promyshlennyy` |  |
 | `fridge` | Холодильник | 70 × 180 | ☐ Электрический → `elektricheskiy`<br>☐ Ящик со льдом → `yaschik_so_ldom`<br>☐ Морозильная камера → `morozilnaya_kamera` |  |
 | `grow_lamp` | Лампа для урожая | 80 × 15 | ☐ Фиолетовая LED → `fioletovaya_led`<br>☐ Люминесцентная → `lyuminestsentnaya`<br>☐ Слабая → `slabaya` |  |
-| `shelter_panel` | Панель убежища | 60 × 70 | ☐ Простой пульт → `prostoy_pult`<br>☐ Экран с графиками (позже) → `ekran_s_grafikami` |  |
+| `shelter_panel` | Панель убежища | 60 × 70 | ☐ Простой пульт → `prostoy_pult`<br>~~Экран с графиками (позже)~~ |  |
 | `light_switch` | Выключатель | 8 × 12 | ☐ Клавишный → `klavishnyy`<br>☐ Рычажный (промышленный) → `rychazhnyy`<br>☐ Тумблер на щитке → `tumbler_na_schitke`<br>~~Сломанный~~ |  |
 | `fuse_box` | Электрощит | 40 × 50 | ☐ Бытовой → `bytovoy`<br>☐ Промышленный → `promyshlennyy`<br>☐ Самодельный → `samodelnyy`<br>~~Сгоревший~~ |  |
 | `stove_cook` | Плита | 70 × 90 | ☐ Газовая → `gazovaya`<br>☐ Электрическая → `elektricheskaya`<br>☐ Дровяная → `drovyanaya`<br>~~Сломанная~~ |  |
@@ -83,7 +83,7 @@
 
 | id | Название | Размер (ОС), см | Варианты → файл | |
 |---|---|---|---|---|
-| `lightbulb` | Лампочка | 6 × 12 | ☐ Накаливания → `nakalivaniya`<br>☐ Светодиодная (дольше) → `svetodiodnaya`<br>☐ Люминесцентная трубка → `lyuminestsentnaya_trubka`<br>☐ Перегоревшая → `peregorevshaya` |  |
+| `lightbulb` | Лампочка | 6 × 12 | ☑ Накаливания → `nakalivaniya`<br>☑ Светодиодная (дольше) → `svetodiodnaya`<br>☑ Люминесцентная трубка → `lyuminestsentnaya_trubka`<br>~~Перегоревшая~~ |  |
 | `water_tablets` | Таблетки для очистки воды | 6 × 10 | ☐ Хлорные → `hlornye`<br>☐ Йодные → `yodnye` |  |
 | `bottle_water` | Бутылка с водой | 8 × 25 | ☐ Пластиковая 0,5 л → `plastikovaya_0_5_l`<br>☐ Пластиковая 1,5 л → `plastikovaya_1_5_l`<br>☐ Стеклянная → `steklyannaya`<br>☐ Фляга → `flyaga`<br>~~Пустая~~ |  |
 | `power_cable` | Провод / кабель | 20 × 20 | ☐ Тонкий → `tonkiy`<br>☐ Силовой → `silovoy`<br>☐ Удлинитель → `udlinitel` |  |
@@ -139,10 +139,10 @@
 
 | id | Название | Размер (ОС), см | Варианты → файл | |
 |---|---|---|---|---|
-| `clock_wall` | Часы настенные | 30 × 30 | ☐ Механические → `mehanicheskie`<br>☐ Электронные (нужна энергия) → `elektronnye`<br>~~Сломанные (остановились)~~ |  |
+| `clock_wall` | Часы настенные | 30 × 30 | ☑ Механические → `mehanicheskie`<br>☑ Электронные (нужна энергия) → `elektronnye`<br>~~Сломанные (остановились)~~ |  |
 | `car_wreck` | Остов сгоревшей машины | 450 × 150 | ~~Сгоревшая~~<br>☐ Разобранная → `razobrannaya`<br>~~Перевёрнутая~~ |  |
 | `street_lamp` | Уличный фонарь | 30 × 400 | ☐ Целый → `tselyy`<br>~~Разбитый~~<br>☐ Накренившийся → `nakrenivshiysya` |  |
-| `billboard_road` | Рекламный щит | 270 × 394 | ☐ Целый → `tselyy`<br>☐ Проржавевший → `prorzhavevshiy`<br>☐ Заросший плющом → `zarosshiy_plyuschom` | ⚠ размер |
+| `billboard_road` | Рекламный щит | 150 × 400 | ☐ Целый → `tselyy`<br>☐ Проржавевший → `prorzhavevshiy`<br>☐ Заросший плющом → `zarosshiy_plyuschom` | размер из плана |
 | `bench_street` | Скамейка | 150 × 80 | ☐ Деревянная → `derevyannaya`<br>☐ Каменная → `kamennaya`<br>~~Сломанная~~ |  |
 | `grave_mound` | Могила | 150 × 60 | ☐ Холм → `holm`<br>☐ С крестом → `s_krestom`<br>☐ С табличкой → `s_tablichkoy`<br>☐ Общая → `obschaya` |  |
 | `blood_stain` | Пятно крови | 100 × 20 | ☐ Лужа → `luzha`<br>☐ Брызги → `bryzgi`<br>☐ Следы → `sledy` |  |
@@ -179,7 +179,7 @@
 | `tool_hammer` | Молоток | 30 × 10 | ☐ Столярный → `stolyarnyy`<br>☐ Кувалдочка → `kuvaldochka`<br>☐ Ржавый (слабее) → `rzhavyy` |  |
 | `tool_wrench` | Гаечный ключ | 30 × 8 | ☐ Разводной → `razvodnoy`<br>☐ Рожковый → `rozhkovyy`<br>☐ Набор ключей → `nabor_klyuchey` |  |
 | `tool_screwdriver` | Отвёртка | 20 × 4 | ☐ Крестовая → `krestovaya`<br>☐ Плоская → `ploskaya`<br>☐ Набор → `nabor` |  |
-| `tool_saw` | Пила | 50 × 23 | ☐ Ножовка → `nozhovka`<br>☐ Двуручная → `dvuruchnaya`<br>☐ Бензопила (редкая, шумная) → `benzopila` | ⚠ размер |
+| `tool_saw` | Пила | 50 × 12 | ☐ Ножовка → `nozhovka`<br>☐ Двуручная → `dvuruchnaya`<br>☐ Бензопила (редкая, шумная) → `benzopila` | размер из плана |
 | `tool_axe` | Топор | 35 × 60 | ☐ Колун → `kolun`<br>☐ Пожарный → `pozharnyy`<br>☐ Каменный самодельный → `kamennyy_samodelnyy` |  |
 | `tool_pickaxe` | Кирка | 35 × 60 | ☐ Стальная → `stalnaya`<br>☐ Самодельная → `samodelnaya`<br>☐ Отбойный молоток (энергия) → `otboynyy_molotok` |  |
 | `tool_shovel` | Лопата | 30 × 110 | ☐ Штыковая → `shtykovaya`<br>☐ Совковая → `sovkovaya`<br>☐ Сапёрная (складная) → `sapernaya` |  |
@@ -206,10 +206,10 @@
 
 | id | Название | Размер (ОС), см | Варианты → файл | |
 |---|---|---|---|---|
-| `workbench_basic` | Верстак | 230 × 137 | ☐ Деревянный базовый → `derevyannyy_bazovyy`<br>☐ Металлический (тяжёлый) → `metallicheskiy`<br>☐ Складной походный → `skladnoy_pohodnyy`<br>☐ Верстак с тисками → `verstak_s_tiskami`<br>~~Сломанный~~ | ⚠ размер |
-| `workbench_electronics` | Электронный верстак | 230 × 182 | ☐ Настольный → `nastolnyy`<br>☐ Мобильная стойка → `mobilnaya_stoyka` | ⚠ размер |
-| `recycler_bench` | Стол разборки | 230 × 127 | ☐ Ручной → `ruchnoy`<br>☐ С тисками и лом → `s_tiskami_i_lom` | ⚠ размер |
-| `sewing_table` | Швейный стол | 140 × 133 | ☐ Ручная машина → `ruchnaya_mashina`<br>☐ Педальная → `pedalnaya` | ⚠ размер |
+| `workbench_basic` | Верстак | 160 × 95 | ☐ Деревянный базовый → `derevyannyy_bazovyy`<br>☐ Металлический (тяжёлый) → `metallicheskiy`<br>☐ Складной походный → `skladnoy_pohodnyy`<br>☐ Верстак с тисками → `verstak_s_tiskami`<br>~~Сломанный~~ | размер из плана |
+| `workbench_electronics` | Электронный верстак | 140 × 95 | ☐ Настольный → `nastolnyy`<br>☐ Мобильная стойка → `mobilnaya_stoyka` | размер из плана |
+| `recycler_bench` | Стол разборки | 130 × 95 | ☐ Ручной → `ruchnoy`<br>☐ С тисками и лом → `s_tiskami_i_lom` | размер из плана |
+| `sewing_table` | Швейный стол | 110 × 85 | ☐ Ручная машина → `ruchnaya_mashina`<br>☐ Педальная → `pedalnaya` | размер из плана |
 
 ## `plant`
 
@@ -242,7 +242,7 @@
 |---|---|---|---|---|
 | `door_wood` | Дверь деревянная | 100 × 200 | ☐ Внутренняя → `vnutrennyaya`<br>☐ Входная → `vhodnaya`<br>☐ Дверь со стеклом → `dver_so_steklom`<br>☐ Выбитая → `vybitaya`<br>☐ Запертая → `zapertaya` |  |
 | `door_metal` | Дверь металлическая | 100 × 200 | ☐ Стальная → `stalnaya`<br>☐ Бронированная → `bronirovannaya`<br>☐ Противопожарная → `protivopozharnaya` |  |
-| `hatch_bunker` | Люк бункера | 220 × 144 | ☐ Люк с колесом → `lyuk_s_kolesom`<br>☐ Ляда → `lyada`<br>☐ Шлюз (двойной) → `shlyuz` | ⚠ размер |
+| `hatch_bunker` | Люк бункера | 100 × 60 | ☐ Люк с колесом → `lyuk_s_kolesom`<br>☐ Ляда → `lyada`<br>☐ Шлюз (двойной) → `shlyuz` | размер из плана |
 | `signpost_fork` | Указатель развилки | 80 × 220 | ☐ Дорожный знак → `dorozhnyy_znak`<br>☐ Самодельный указатель → `samodelnyy_ukazatel`<br>☐ Ржавый (частично читается) → `rzhavyy`<br>☐ Билборд → `bilbord` |  |
 
 ## `weapon`

@@ -1,6 +1,6 @@
 """Стол `table_wood`, вариант `pismennyy` (письменный). ОС: 120 × 75 см.
 Как на референсе автора: толстая столешница из досок, справа тумба с двумя ящиками (крашеный металл), слева ножки.
-Запуск: python3 models/furniture/table_wood_pismennyy.py
+Собирается вместе со всеми столами: python3 models/furniture/table_wood.py
 """
 import os
 import sys
@@ -59,9 +59,3 @@ def desk_idle():
     # скол угла столешницы — светлая древесина на кромке
     p.append(L.spot((-W / 2 + 0.06, -D / 2, H - 0.025), 0.05, "wood_light", seed=80, stretch=(1.2, 0.5)))
     return p
-
-
-if __name__ == "__main__":
-    L.new_scene()
-    L.make(desk_idle, "furniture", "table_wood", "pismennyy", size_cm=(120, 75), broken="legs")
-    L.save_blend("furniture", "table_wood_pismennyy")

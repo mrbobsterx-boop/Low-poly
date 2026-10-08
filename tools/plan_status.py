@@ -22,13 +22,14 @@ L = ["# План моделей (из ОС: tools/object-plan)", "",
      f"Готово: **{ready} из {total}** вариантов.", ""]
 mism = [o for o in plan if o["size_mismatch"]]
 if mism:
-    L += ["## ⚠ Размер в плане ≠ ОС — ждёт решения автора", "", "| id | План, см | ОС, см |", "|---|---|---|"]
+    L += ["## Размер в плане ≠ ОС — **берём из плана** (решение автора 2026-10-08; в ОС поправить)", "",
+          "| id | План, см (берём) | ОС, см |", "|---|---|---|"]
     L += [f"| `{o['id']}` | {o['plan_size'][0]} × {o['plan_size'][1]} | {o['os_size'][0]} × {o['os_size'][1]} |" for o in mism]
     L.append("")
 for cat, objs in cats.items():
     L += [f"## `{cat}`", "", "| id | Название | Размер (ОС), см | Варианты → файл | |", "|---|---|---|---|---|"]
     for o in objs:
-        sz = o["os_size"] or o["plan_size"]
+        sz = o["size"]
         vs = []
         for v in o["variants"]:
             if v["skip"]:
@@ -36,7 +37,7 @@ for cat, objs in cats.items():
             else:
                 mark = "☑" if f"{o['id']}_{v['slug']}_idle" in done else "☐"
                 vs.append(f"{mark} {v['name']} → `{v['slug']}`")
-        warn = "⚠ размер" if o["size_mismatch"] else ""
+        warn = "размер из плана" if o["size_mismatch"] else ""
         L.append(f"| `{o['id']}` | {o['name']} | {sz[0]} × {sz[1]} | {'<br>'.join(vs)} | {warn} |")
     L.append("")
 open(os.path.join(ROOT, "docs", "PLAN.md"), "w").write("\n".join(L))

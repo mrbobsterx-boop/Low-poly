@@ -18,7 +18,7 @@ ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), 
 sys.path.insert(0, os.path.join(ROOT, "render"))
 import _template as rt  # noqa: E402
 
-TRI_LIMITS = {"small": 600, "furniture": 3000, "human": 3000, "room": 8000}
+TRI_LIMITS = {"small": 600, "furniture": 3000, "large": 5000, "human": 3000, "room": 8000}
 _saved = []          # готовые объекты — в общий .blend
 
 
@@ -578,3 +578,48 @@ def make(builder, category, oid, variation, size_cm=None, limit="furniture", bro
         rough.setdefault("amp_max", 0.02)
         rough.setdefault("shade_p", 0.55)
         finish(parts, category, oid, variation, "broken", limit=limit, rough=rough, chips_n=12, **kw)
+
+
+# ───────────────────────── Размер из плана ОС и детали ─────────────────────────
+def size_cm(oid):
+    """(ширина, высота) объекта в см — из docs/plan.json (ОС; при расхождении — план, решение автора)."""
+    import json
+    for o in json.load(open(os.path.join(ROOT, "docs", "plan.json"))):
+        if o["id"] == oid:
+            return tuple(o["size"])
+    raise KeyError(oid)
+
+
+def tube(a, b, r, color, verts=6, name="tube", glow=False):
+    """Труба/пруток от точки a до точки b (мира), радиус r."""
+    a, b = Vector(a), Vector(b)
+    d = b - a
+    o = cyl(r, d.length, (0, 0, 0), color, verts=verts, name=name, glow=glow)
+    q = Vector((0, 0, 1)).rotation_difference(d.normalized())
+    o.data.transform(Matrix.Translation(a) @ q.to_matrix().to_4x4())
+    return o
+
+
+def soft(size, loc, color, rot=None, name="soft"):
+    """Мягкое (подушка, сиденье, матрас): коробка с крупной фаской — «пухлая»."""
+    return box(size, loc, color, rot=rot, name=name, bevel=min(size) * 0.3)
+
+
+def blanket(cx, width, depth, top_z, color, seed=7, hang=(0.10, 0.20), fold_color="offwhite", fold_side=-1):
+    """Мятое одеяло из граней: лежит на матрасе (центр cx, ширина width, глубина depth, верх top_z) и неровно
+    свешивается вперёд; у края fold_side (−1 слева / +1 справа) — отвёрнутый край-простыня. Возвращает список."""
+    import random
+    rnd = random.Random(seed)
+    hng = [rnd.uniform(*hang) for _ in range(13)]
+
+    def z(u, v):
+        f = 0.02 + 0.022 * math.sin(u * 9.0 + v * 2.0 + seed) ** 2 + 0.015 * math.sin(u * 17.0 - v * 5.0) ** 2
+        if v < 0.16:
+            k = (0.16 - v) / 0.16
+            return -hng[round(u * 12)] * k * 1.6 + f * (1 - k)
+        return f
+    out = [sheet(12, 9, width, depth + 0.20, (cx, -0.06, top_z), color, z_fn=z, jitter=0.01, seed=seed)]
+    if fold_color:
+        out.append(sheet(3, 6, 0.16, depth - 0.04, (cx + fold_side * (width / 2 + 0.06), 0.0, top_z + 0.005), fold_color,
+                         z_fn=lambda u, v: 0.03 * math.sin(u * math.pi), jitter=0.008, seed=seed + 1))
+    return out
