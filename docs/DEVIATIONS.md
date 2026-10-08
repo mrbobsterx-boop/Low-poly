@@ -11,3 +11,11 @@
 | `toilet_samodelnyy_idle` | 40 × 75 | 40 × 42 | ведро с сиденьем — без бачка |
 | `clock_wall_elektronnye_idle` | 30 × 30 | 30 × 23 | прямоугольное табло |
 | `lamp_ceiling_nastolnaya_idle` | 30 × 25 | 31 × 24 | настольная (стоит, origin внизу) |
+| `barrel_water_derevyannaya_100_l_idle` | 60 × 90 | 51 × 76 | бочка 100 л меньше 200-литровой |
+| `barrel_water_malaya_kanistra_bochonok_30_l_idle` | 60 × 90 | 34 × 48 | бочонок 30 л |
+| `tank_water_stalnoy_tsilindr_idle` | 160 × 190 | 145 × 190 | цилиндр + лестница |
+| `tank_water_podzemnyy_idle` | 160 × 190 | 160 × 108 | бак под землёй — видна горловина и колонка |
+| `bottle_water_plastikovaya_0_5_l_idle` | 8 × 25 | 8 × 20 | 0,5 л ниже 1,5 л |
+| `bottle_water_flyaga_idle` | 8 × 25 | 8 × 23 | фляга |
+| `sink_tap_vannaya/umyvalnik/ulichnaya_kolonka_idle` | 80 × 90 | 50–62 × 87–93 | узкие по природе |
+| `water_purifier_*_idle` | 60 × 100 | 48–52 × 97–100 | узкие по природе |

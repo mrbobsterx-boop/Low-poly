@@ -669,7 +669,7 @@
    {
     "name": "Разрушенная",
     "slug": "razrushennaya",
-    "skip": false
+    "skip": true
    }
   ],
   "states": [
@@ -715,7 +715,7 @@
    {
     "name": "Пересохший",
     "slug": "peresohshiy",
-    "skip": false
+    "skip": true
    }
   ],
   "states": [
