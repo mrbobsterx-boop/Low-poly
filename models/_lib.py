@@ -194,6 +194,10 @@ def save_blend(category, oid):
         o.hide_render = False
         x += w + 1.0
     path = os.path.join(ROOT, "models", category, oid + ".blend")
+    # палитру встроить в файл — иначе на другом компьютере модель будет розовой (нет пути к palette.png)
+    for img in bpy.data.images:
+        if img.filepath and not img.packed_file:
+            img.pack()
     bpy.ops.wm.save_as_mainfile(filepath=path, compress=True)
     for o in _saved:
         o.location.x = 0
