@@ -101,6 +101,33 @@
 (плоскость среза), проверить стык: лист превью — **5 кусков подряд** со светом (вперемешку варианты). Облегчить до
 ≤ 4 000 треугольников на кусок. Игра растягивает кусок точно по размеру — небольшая неточность не страшна.
 
+**Запрос для Tripo (Text to Model, по-английски — Tripo понимает лучше).** Общее начало — одинаковое для всех кусков
+(чтобы стыковались), меняется только последняя строка:
+
+```
+A single flat wall segment of an underground concrete bunker, front view, 1 meter wide and 3 meters tall,
+30 cm deep, rectangular slab with perfectly straight flat left and right edges and flat back side.
+Weathered grey concrete panels with seams, rust streaks and dirt. Two horizontal rusty pipes run along
+the whole width at the top, and one black cable under them, all cut flush at the left and right edges.
+No floor, no ceiling, no furniture, no objects in front. Low-poly game asset, realistic texture.
+```
+
+Последняя строка — вариант куска:
+- `wall_1` — `Plain wall, nothing else.` (простой);
+- `wall_2` — `Plus one vertical pipe going down from the top pipes with a valve wheel.` (труба с вентилем);
+- `wall_3` — `Plus a square ventilation grille in the middle.` (вентиляция);
+- `wall_4` — `Plus a shallow rectangular niche 20 cm deep with cables inside.` (ниша);
+- `wall_5` — `Plus a bundle of wires and a small junction box on the wall.` (провода и коробка).
+
+Сохранять как `room_bunker_wall_1.glb`, `room_bunker_wall_2.glb`… в `tripo/`. Для домов — то же с началом
+`…wall segment of an abandoned house interior, peeling wallpaper…` → `room_house_wall_N`.
+Если Tripo делает «предмет», а не плоскую стену, — Image to Model: картинка куска стены спереди (можно сгенерировать
+в любом генераторе картинок тем же текстом).
+
+**Что — в стене, что — отдельно:** трубы и кабели вдоль стены, ниши, решётки вентиляции, швы — **в куске стены**
+(игра сама ставит куски рядом). Щиток, полка, лампа, бочка, ящик — **отдельные объекты ОС** (их можно двигать, ломать,
+обыскивать).
+
 **Совет автору по Tripo:** Tripo лучше делает «предметы», чем ровные куски стен. Попробовать: картинка — кусок
 стены 1 × 3 м спереди, без пола и потолка. Не выйдет — второй чат может собрать кусок в Blender из простых форм +
 текстура из Tripo (или из картинки).
