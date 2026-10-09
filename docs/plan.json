@@ -16,6 +16,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Железная койка",
@@ -66,6 +67,7 @@
    180
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Металлическая",
@@ -107,6 +109,7 @@
    200
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Деревянный двустворчатый",
@@ -154,6 +157,7 @@
    75
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Обеденный",
@@ -204,6 +208,7 @@
    90
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Деревянный",
@@ -253,6 +258,7 @@
    30
   ],
   "size_mismatch": false,
+  "mount": "wall",
   "variants": [
    {
     "name": "Деревянная",
@@ -297,6 +303,7 @@
    25
   ],
   "size_mismatch": false,
+  "mount": "ceiling",
   "variants": [
    {
     "name": "Лампа накаливания",
@@ -348,6 +355,7 @@
    12
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Накаливания",
@@ -392,6 +400,7 @@
    30
   ],
   "size_mismatch": false,
+  "mount": "wall",
   "variants": [
    {
     "name": "Механические",
@@ -432,6 +441,7 @@
    25
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Настольный",
@@ -478,6 +488,7 @@
    90
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Стальная бочка",
@@ -518,6 +529,7 @@
    75
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Фаянсовый со смывом",
@@ -564,6 +576,7 @@
    90
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Пластиковая 200 л",
@@ -610,6 +623,7 @@
    190
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Пластиковый 1000 л",
@@ -655,6 +669,7 @@
    1000
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Кирпичная",
@@ -696,6 +711,7 @@
    130
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Ручной колодец с воротом",
@@ -741,6 +757,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Плёнка и желоб",
@@ -781,6 +798,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Ручной рычажный",
@@ -822,6 +840,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Керамический фильтр",
@@ -868,6 +887,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Хлорные",
@@ -902,6 +922,7 @@
    90
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Кухонная",
@@ -947,6 +968,7 @@
    25
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Пластиковая 0,5 л",
@@ -996,6 +1018,7 @@
    30
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Металлическое",
@@ -1035,6 +1058,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Чугунная",
@@ -1075,6 +1099,7 @@
    40
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Автомобильный 12 В",
@@ -1118,6 +1143,7 @@
    80
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Малая 100 Вт",
@@ -1165,6 +1191,7 @@
    300
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Малый горизонтальный",
@@ -1206,6 +1233,7 @@
    110
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Стационарный",
@@ -1241,6 +1269,7 @@
    120
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Беговая дорожка",
@@ -1271,6 +1300,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Портативный",
@@ -1312,6 +1342,7 @@
    20
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Тонкий",
@@ -1351,6 +1382,7 @@
    180
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Электрический",
@@ -1392,6 +1424,7 @@
    15
   ],
   "size_mismatch": false,
+  "mount": "ceiling",
   "variants": [
    {
     "name": "Фиолетовая LED",
@@ -1432,6 +1465,7 @@
    45
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "5 л",
@@ -1477,6 +1511,7 @@
    70
   ],
   "size_mismatch": false,
+  "mount": "wall",
   "variants": [
    {
     "name": "Простой пульт",
@@ -1512,6 +1547,7 @@
    6
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Одноразовая",
@@ -1557,6 +1593,7 @@
    15
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Поленья",
@@ -1596,6 +1633,7 @@
    12
   ],
   "size_mismatch": false,
+  "mount": "wall",
   "variants": [
    {
     "name": "Клавишный",
@@ -1642,6 +1680,7 @@
    50
   ],
   "size_mismatch": false,
+  "mount": "wall",
   "variants": [
    {
     "name": "Бытовой",
@@ -1688,6 +1727,7 @@
    90
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Газовая",
@@ -1734,6 +1774,7 @@
    50
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Простой",
@@ -1780,6 +1821,7 @@
    20
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Алюминиевая",
@@ -1819,6 +1861,7 @@
    90
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "С раковиной",
@@ -1859,6 +1902,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Тушёнка",
@@ -1908,6 +1952,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Хлеб",
@@ -1954,6 +1999,7 @@
    15
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Пшеница",
@@ -1993,6 +2039,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Кролик",
@@ -2038,6 +2085,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Жареное",
@@ -2077,6 +2125,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Картофель",
@@ -2121,6 +2170,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Овощной суп",
@@ -2161,6 +2211,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Армейский",
@@ -2200,6 +2251,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Ручной",
@@ -2234,6 +2286,7 @@
    6
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Стерильный",
@@ -2278,6 +2331,7 @@
    14
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Спирт",
@@ -2317,6 +2371,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Таблетки",
@@ -2356,6 +2411,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Широкого спектра",
@@ -2395,6 +2451,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Готовая",
@@ -2429,6 +2486,7 @@
    18
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Домашняя",
@@ -2475,6 +2533,7 @@
    25
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Полевой",
@@ -2514,6 +2573,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "wall",
   "variants": [
    {
     "name": "Ванный",
@@ -2556,6 +2616,7 @@
    80
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Складная",
@@ -2596,6 +2657,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Слабый",
@@ -2640,6 +2702,7 @@
    4
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Кусок мыла",
@@ -2679,6 +2742,7 @@
    50
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Малый",
@@ -2732,6 +2796,7 @@
    200
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "С 3 полками",
@@ -2772,6 +2837,7 @@
    180
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Спортивный",
@@ -2820,6 +2886,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Настенный",
@@ -2860,6 +2927,7 @@
    25
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Пластиковый",
@@ -2900,6 +2968,7 @@
    45
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Школьный (малый)",
@@ -2945,6 +3014,7 @@
    95
   ],
   "size_mismatch": true,
+  "mount": "floor",
   "variants": [
    {
     "name": "Деревянный базовый",
@@ -2996,6 +3066,7 @@
    95
   ],
   "size_mismatch": true,
+  "mount": "floor",
   "variants": [
    {
     "name": "Настольный",
@@ -3031,6 +3102,7 @@
    95
   ],
   "size_mismatch": true,
+  "mount": "floor",
   "variants": [
    {
     "name": "Ручной",
@@ -3066,6 +3138,7 @@
    85
   ],
   "size_mismatch": true,
+  "mount": "floor",
   "variants": [
    {
     "name": "Ручная машина",
@@ -3101,6 +3174,7 @@
    40
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Деревянный ящик",
@@ -3147,6 +3221,7 @@
    180
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Малая",
@@ -3182,6 +3257,7 @@
    40
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Картофель",
@@ -3230,6 +3306,7 @@
    80
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Пшеница",
@@ -3273,6 +3350,7 @@
    450
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Сосна",
@@ -3325,6 +3403,7 @@
    70
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Малина",
@@ -3370,6 +3449,7 @@
    14
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Картофель",
@@ -3414,6 +3494,7 @@
    35
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Компост",
@@ -3448,6 +3529,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Столярный",
@@ -3487,6 +3569,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Разводной",
@@ -3526,6 +3609,7 @@
    4
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Крестовая",
@@ -3565,6 +3649,7 @@
    12
   ],
   "size_mismatch": true,
+  "mount": "floor",
   "variants": [
    {
     "name": "Ножовка",
@@ -3604,6 +3689,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Колун",
@@ -3644,6 +3730,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Стальная",
@@ -3684,6 +3771,7 @@
    110
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Штыковая",
@@ -3724,6 +3812,7 @@
    90
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Малая",
@@ -3764,6 +3853,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Стальной",
@@ -3803,6 +3893,7 @@
    5
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Набор",
@@ -3837,6 +3928,7 @@
    25
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Ручной",
@@ -3877,6 +3969,7 @@
    5
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Сетевой",
@@ -3911,6 +4004,7 @@
    5
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Кухонный",
@@ -3956,6 +4050,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Доска",
@@ -4000,6 +4095,7 @@
    20
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Полено",
@@ -4039,6 +4135,7 @@
    15
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Лом",
@@ -4078,6 +4175,7 @@
    3
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Тонкий",
@@ -4117,6 +4215,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Стальная",
@@ -4156,6 +4255,7 @@
    4
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Гвозди",
@@ -4195,6 +4295,7 @@
    20
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Медная",
@@ -4234,6 +4335,7 @@
    20
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Лоскут",
@@ -4273,6 +4375,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Пенька",
@@ -4312,6 +4415,7 @@
    40
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Мешок цемента",
@@ -4351,6 +4455,7 @@
    15
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Шестерни",
@@ -4395,6 +4500,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Платы",
@@ -4439,6 +4545,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Военная плата",
@@ -4478,6 +4585,7 @@
    12
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Булыжник",
@@ -4517,6 +4625,7 @@
    12
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Чернозём",
@@ -4556,6 +4665,7 @@
    12
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Руда",
@@ -4590,6 +4700,7 @@
    12
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Каменный",
@@ -4624,6 +4735,7 @@
    15
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Битый кирпич",
@@ -4658,6 +4770,7 @@
    30
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Лист стекла",
@@ -4697,6 +4810,7 @@
    15
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Малый набор",
@@ -4736,6 +4850,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Изолента",
@@ -4775,6 +4890,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Сухая земля",
@@ -4824,6 +4940,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Гранит",
@@ -4863,6 +4980,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Бетон",
@@ -4902,6 +5020,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Красный кирпич",
@@ -4941,6 +5060,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Доски",
@@ -4985,6 +5105,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Лист",
@@ -5024,6 +5145,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Асфальт",
@@ -5063,6 +5185,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Кирпичный завал",
@@ -5102,6 +5225,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Богатая жила",
@@ -5136,6 +5260,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Пласт",
@@ -5170,6 +5295,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Тёмная порода",
@@ -5209,6 +5335,7 @@
    200
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Внутренняя",
@@ -5263,6 +5390,7 @@
    200
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Стальная",
@@ -5307,6 +5435,7 @@
    60
   ],
   "size_mismatch": true,
+  "mount": "floor",
   "variants": [
    {
     "name": "Люк с колесом",
@@ -5349,6 +5478,7 @@
    100
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Целое",
@@ -5395,6 +5525,7 @@
    260
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Деревянная",
@@ -5439,6 +5570,7 @@
    300
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Пристенная",
@@ -5478,6 +5610,7 @@
    200
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Доски на окне",
@@ -5519,6 +5652,7 @@
    150
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Сетка",
@@ -5559,6 +5693,7 @@
    140
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Одноместная",
@@ -5599,6 +5734,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Навесной",
@@ -5644,6 +5780,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Обычный",
@@ -5688,6 +5825,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Деревянная",
@@ -5728,6 +5866,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Стальная труба",
@@ -5768,6 +5907,7 @@
    8
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Мачете",
@@ -5808,6 +5948,7 @@
    14
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "9 мм",
@@ -5850,6 +5991,7 @@
    3
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Обычные",
@@ -5889,6 +6031,7 @@
    15
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Помповый",
@@ -5931,6 +6074,7 @@
    4
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Картечь",
@@ -5965,6 +6109,7 @@
    110
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Охотничий",
@@ -6006,6 +6151,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Капкан",
@@ -6046,6 +6192,7 @@
    70
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Кожаная",
@@ -6091,6 +6238,7 @@
    80
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Джинсы",
@@ -6131,6 +6279,7 @@
    20
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Кроссовки",
@@ -6171,6 +6320,7 @@
    15
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Рабочие",
@@ -6210,6 +6360,7 @@
    30
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Военный",
@@ -6250,6 +6401,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Самодельный",
@@ -6290,6 +6442,7 @@
    220
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Дорожный знак",
@@ -6334,6 +6487,7 @@
    160
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Седан",
@@ -6390,6 +6544,7 @@
    150
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Сгоревшая",
@@ -6429,6 +6584,7 @@
    400
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Целый",
@@ -6470,6 +6626,7 @@
    400
   ],
   "size_mismatch": true,
+  "mount": "floor",
   "variants": [
    {
     "name": "Целый",
@@ -6510,6 +6667,7 @@
    110
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Зелёный",
@@ -6555,6 +6713,7 @@
    80
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Металлолом",
@@ -6601,6 +6760,7 @@
    80
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Деревянная",
@@ -6640,6 +6800,7 @@
    180
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Игрок",
@@ -6698,6 +6859,7 @@
    180
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Ходячий",
@@ -6746,6 +6908,7 @@
    180
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Бегун",
@@ -6783,6 +6946,7 @@
    200
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Здоровяк",
@@ -6820,6 +6984,7 @@
    180
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Мародёр",
@@ -6869,6 +7034,7 @@
    180
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Бродячий",
@@ -6909,6 +7075,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Одиночная",
@@ -6952,6 +7119,7 @@
    25
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Кролик",
@@ -6994,6 +7162,7 @@
    10
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Крыса",
@@ -7029,6 +7198,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Ползун",
@@ -7066,6 +7236,7 @@
    30
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Свежее",
@@ -7117,6 +7288,7 @@
    30
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Свежее",
@@ -7152,6 +7324,7 @@
    60
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Холм",
@@ -7196,6 +7369,7 @@
    80
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Костёр",
@@ -7232,6 +7406,7 @@
    20
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Лужа",
@@ -7272,6 +7447,7 @@
    200
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Знамя",
@@ -7312,6 +7488,7 @@
    110
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Прилавок",
@@ -7351,6 +7528,7 @@
    500
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Деревянная",
@@ -7385,6 +7563,7 @@
    120
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Ящики",
@@ -7424,6 +7603,7 @@
    80
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Деревянная",
@@ -7458,6 +7638,7 @@
    20
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Записка",
@@ -7502,6 +7683,7 @@
    20
   ],
   "size_mismatch": false,
+  "mount": "floor",
   "variants": [
    {
     "name": "Карта района",

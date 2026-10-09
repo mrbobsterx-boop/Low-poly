@@ -15,16 +15,17 @@ const translit = s => (s || '').toLowerCase().split('').map(c => map[c] !== unde
 const SKIP = /слом|испорч|разбит|выпотрош|разграбл|сгорев|перевёрнут|перевернут|гнил|заброш|взлом|^открыт|пуст|использован|просроч|перегор|позже|разруш|пересох|вздув|разряж|плесн|тухл/i;   // «сломанные» и «состояния» — пропуск
 const out = [];
 for (const i of ctx.PLAN_ITEMS) {
-  let os = null;
+  let os = null, mount = 'floor';
   try {
     const d = JSON.parse(fs.readFileSync(path.join(src, 'data/objects', i.id + '.json'), 'utf8'));
     os = [d.behavior.real_width_cm, d.behavior.real_height_cm];
+    mount = (d.custom && d.custom.mount) || 'floor';      // floor | wall | ceiling — как ставить модель
   } catch (e) {}
   const vars = (i.v || []).map(n => ({ name: n, slug: translit(n.replace(/\(.*?\)/g, ' ')), skip: SKIP.test(n) }));
   const mism = !!(os && i.sz && (os[0] !== i.sz[0] || os[1] !== i.sz[1]));
   // решение автора 2026-10-08: при расхождении план/ОС берём размер из ПЛАНА
   out.push({ id: i.id, name: i.n, cat: i.c, plan_size: i.sz || null, os_size: os, size: mism ? i.sz : (os || i.sz),
-             size_mismatch: mism,
+             size_mismatch: mism, mount,
              variants: vars, states: i.vis || [], fn: i.fn || '' });
 }
 fs.writeFileSync(path.join(__dirname, '..', 'docs', 'plan.json'), JSON.stringify(out, null, 1));
