@@ -1,4 +1,4 @@
-"""Чек-лист моделей по плану ОС: docs/plan.json (node tools/sync_plan.js) + что уже отрендерено → docs/PLAN.md.
+"""Чек-лист моделей по плану ОС: docs/plan.json (node tools/sync_plan.js) + что уже готово в export/ → docs/PLAN.md.
 Запуск: python3 tools/plan_status.py
 """
 import json
@@ -6,8 +6,7 @@ import os
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 plan = json.load(open(os.path.join(ROOT, "docs", "plan.json")))
-done = {f[:-4] for r, _, fs in os.walk(os.path.join(ROOT, "renders")) if "/_" not in r + "/"
-        for f in fs if f.endswith("_idle.png")}
+done = {f[:-4] for f in os.listdir(os.path.join(ROOT, "export")) if f.endswith("_idle.glb")}   # модели из Tripo после обработки
 cats = {}
 for o in plan:
     cats.setdefault(o["cat"], []).append(o)
@@ -18,7 +17,7 @@ L = ["# План моделей (из ОС: tools/object-plan)", "",
      "`node tools/sync_plan.js <ОС>` → `docs/plan.json`, этот файл — `python3 tools/plan_status.py`.", "",
      "Правила автора: **только idle**, каждый вариант — отдельно (`<id>_<вариант>_idle`); «сломанные/испорченные» "
      "и состояния (открыт, занят, пустой) — пропуск; размер — из ОС (если в плане другой — спросить автора); "
-     "старые картинки ОС — не образец стиля (образец — `docs/ref/style/`).", "",
+     "модели — из Tripo по картинкам ОС, обработка — `docs/TRIPO.md`; сначала по одному варианту на объект.", "",
      f"Готово: **{ready} из {total}** вариантов.", ""]
 mism = [o for o in plan if o["size_mismatch"]]
 if mism:
