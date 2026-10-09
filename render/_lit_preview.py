@@ -18,10 +18,10 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, ".."))
 
-AMBIENT = (0.010, 0.013, 0.030)     # тёмно-синий общий свет (мир)
+AMBIENT = (0.035, 0.042, 0.075)     # тёмно-синий общий свет (мир)
 LAMP = (1.0, 0.70, 0.42)            # тёплая лампа
-FLOOR = (0.055, 0.050, 0.046)       # тёмный бетон пола
-WALL = (0.085, 0.072, 0.060)        # тёплый тёмный бетон стены (concrete_warm, в линейных)
+FLOOR = (0.030, 0.030, 0.034)       # тёмный серо-синий пол (как фон образцов)
+WALL = (0.022, 0.023, 0.030)        # тёмная серо-синяя стена (как фон образцов docs/ref/style)
 GAME_SCALE = 0.5                    # рендер 200 px/м → игра 100 px/м
 MARGIN_PX = 40
 
@@ -88,11 +88,15 @@ def render_lit(obj, out_path):
     rt.frame_objects([obj], MARGIN_PX)
     scene.render.film_transparent = False
     scene.view_settings.view_transform = "AgX"
+    scene.view_settings.look = "AgX - Punchy"
+    scene.view_settings.exposure = 0.7
     scene.render.filepath = out_path
     bpy.ops.render.render(write_still=True)
     for n, s in glows:
         n.inputs["Strength"].default_value = s
     scene.view_settings.view_transform = "Standard"
+    scene.view_settings.look = "None"
+    scene.view_settings.exposure = 0.0
     scene.render.film_transparent = True
     c.samples, c.max_bounces, c.use_denoising = old
     scene.world.color = old_world
@@ -109,6 +113,7 @@ def run_script(outdir, script, variants):
     import _lib as L
     L.PREVIEW = []
     L.save_blend = lambda *a, **k: None
+    sys.path.insert(0, os.path.dirname(os.path.join(ROOT, script)))
     runpy.run_path(os.path.join(ROOT, script), run_name="__main__")
     os.makedirs(os.path.join(ROOT, outdir), exist_ok=True)
     for obj in L.PREVIEW:

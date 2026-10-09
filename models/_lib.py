@@ -20,6 +20,7 @@ import _template as rt  # noqa: E402
 
 TRI_LIMITS = {"small": 600, "furniture": 3000, "large": 5000, "human": 3000, "room": 8000}
 _saved = []          # готовые объекты — в общий .blend
+_HARD = 1.0          # что пишется в атрибут «hard» новых кусков (box(hard=False), drape, spot → 0)
 QUALITY = False      # режим качества docs/QUALITY.md (включает скрипт модели: L.quality()) — см. ниже
 
 
@@ -59,6 +60,9 @@ def _from_bmesh(bm, name, color, glow=False, keep_smooth=False):
     if not keep_smooth:
         for p in me.polygons:
             p.use_smooth = False
+    if QUALITY:
+        a = me.attributes.new("hard", "FLOAT", "FACE")
+        a.data.foreach_set("value", [_HARD] * len(me.polygons))
     rt.paint(obj, color)
     return obj
 
@@ -101,7 +105,19 @@ def box(size, loc, color, rot=None, name="box", glow=False, bevel=None, hard=Tru
     if smooth:
         for f in bm.faces:
             f.smooth = True
-    return _place(_from_bmesh(bm, name, color, glow, keep_smooth=smooth), loc, rot)
+    return _place(_soft_part(lambda: _from_bmesh(bm, name, color, glow, keep_smooth=smooth), not hard), loc, rot)
+
+
+def _soft_part(fn, soft=True):
+    """Создать кусок с атрибутом hard = 0 (без потёртых кромок), если soft."""
+    global _HARD
+    if not soft:
+        return fn()
+    _HARD = 0.0
+    try:
+        return fn()
+    finally:
+        _HARD = 1.0
 
 
 def cyl(radius, height, loc, color, verts=8, rot=None, name="cyl", radius_top=None, glow=False):
@@ -211,7 +227,11 @@ def finish(parts, category, oid, variation, state, size_cm=None, limit="furnitur
         bpy.ops.export_scene.gltf(filepath=os.path.join(ROOT, "export", name + ".glb"), export_format="GLB",
                                   use_selection=True, export_apply=True, export_yup=True,
                                   export_animations=False)
+    if QUALITY:
+        render_material(obj, True)
     size = rt.render_pair([obj], f"renders/{category}/{name}", margin_px=margin_px, frame_points=frame_points)
+    if QUALITY:
+        render_material(obj, False)
     print(f"  рендер {size[0]} × {size[1]} px")
     if lit:   # показательные рендеры со светом — только для просмотра: прямо и с поворотом на 20°
         rt.render_lit([obj], f"renders/_review/{name}_lit.png")
@@ -371,7 +391,7 @@ def spot(center, size, color, facing="front", seed=1, n=7, lift=0.003, stretch=(
             "right": Vector((1, 0, 0))}[facing]
     if list(bm.faces)[0].normal.dot(want) < 0:
         bmesh.ops.reverse_faces(bm, faces=bm.faces)
-    return _from_bmesh(bm, name, color)
+    return _soft_part(lambda: _from_bmesh(bm, name, color))
 
 
 def prism(points, axis, a0, a1, color, name="prism", face_colors=None):
@@ -660,3 +680,242 @@ def blanket(cx, width, depth, top_z, color, seed=7, hang=(0.10, 0.20), fold_colo
         out.append(sheet(3, 6, 0.16, depth - 0.04, (cx + fold_side * (width / 2 + 0.06), 0.0, top_z + 0.005), fold_color,
                          z_fn=lambda u, v: 0.03 * math.sin(u * math.pi), jitter=0.008, seed=seed + 1))
     return out
+
+
+# ───────────────────────── Режим качества (docs/QUALITY.md) ─────────────────────────
+# Включается в скрипте модели: L.quality(). Готовые модели без этого вызова собираются по-старому.
+
+def quality(on=True):
+    """Режим качества: фаска 1 сегмент, roughen только у органики (organic()), сглаженные цилиндры,
+    при рендере — «запечённые» AO, переход оттенка сверху вниз, грязь у пола, потёртые кромки (render_material)."""
+    global QUALITY
+    QUALITY = on
+    if on:
+        TRI_LIMITS.update({"small": 1500, "furniture": 6000, "large": 12000, "room": 25000})
+
+
+def organic(obj, **kw):
+    """Неровные грани — только для органики (ткань, еда, камень, земля): вызвать на куске ДО склейки."""
+    kw.setdefault("min_area", 0.01)
+    kw.setdefault("amp_max", 0.008)
+    return roughen(obj, **kw)
+
+
+DIRT = (0.16, 0.11, 0.07)
+
+
+def _q_material():
+    """Материал для рендера картинок в режиме качества: цвет палитры × AO × переход сверху вниз × мягкие пятна,
+    + грязь у пола + светлые потёртые кромки. Направленного света нет — его делает Godot."""
+    mat = bpy.data.materials.get("palette_q")
+    if mat:
+        return mat
+    mat = bpy.data.materials.new("palette_q")
+    mat.use_nodes = True
+    nt = mat.node_tree
+    N, Lk = nt.nodes, nt.links.new
+    bsdf = N["Principled BSDF"]
+    bsdf.inputs["Roughness"].default_value = 1.0
+    tex = N.new("ShaderNodeTexImage")
+    tex.interpolation = "Closest"
+    tex.image = bpy.data.images.load(os.path.join(ROOT, "palette", "palette.png"), check_existing=True)
+
+    def mrange(src, a, b, c, d):
+        m = N.new("ShaderNodeMapRange")
+        m.clamp = True
+        m.inputs[1].default_value, m.inputs[2].default_value = a, b
+        m.inputs[3].default_value, m.inputs[4].default_value = c, d
+        Lk(src, m.inputs[0])
+        return m.outputs[0]
+
+    def mix(blend, a, b, fac):
+        m = N.new("ShaderNodeMix")
+        m.data_type, m.blend_type = "RGBA", blend
+        if isinstance(fac, float):
+            m.inputs["Factor"].default_value = fac
+        else:
+            Lk(fac, m.inputs["Factor"])
+        for sock, v in ((m.inputs["A"], a), (m.inputs["B"], b)):
+            if isinstance(v, tuple):
+                sock.default_value = (*v, 1.0)
+            else:
+                Lk(v, sock)
+        return m.outputs["Result"]
+
+    def gray(src):            # число → цвет
+        c = N.new("ShaderNodeCombineColor")
+        for i in range(3):
+            Lk(src, c.inputs[i])
+        return c.outputs[0]
+
+    col = tex.outputs["Color"]
+    # 1) AO: тёмное в щелях и углах (до −45 %)
+    ao = N.new("ShaderNodeAmbientOcclusion")
+    ao.inputs["Distance"].default_value = 0.12
+    ao.samples = 16
+    col = mix("MULTIPLY", col, gray(mrange(ao.outputs["AO"], 0.0, 1.0, 0.55, 1.0)), 1.0)
+    # 2) переход оттенка: верх светлее, низ темнее (по высоте предмета)
+    tc = N.new("ShaderNodeTexCoord")
+    sep = N.new("ShaderNodeSeparateXYZ")
+    Lk(tc.outputs["Generated"], sep.inputs[0])
+    col = mix("MULTIPLY", col, gray(mrange(sep.outputs["Z"], 0.0, 1.0, 0.82, 1.10)), 1.0)
+    # 3) мягкие крупные пятна оттенка (как подкраска кистью), −16…+10 %
+    nz = N.new("ShaderNodeTexNoise")
+    nz.inputs["Scale"].default_value = 3.0
+    nz.inputs["Detail"].default_value = 1.0
+    Lk(tc.outputs["Object"], nz.inputs["Vector"])
+    col = mix("MULTIPLY", col, gray(mrange(nz.outputs["Fac"], 0.38, 0.62, 0.84, 1.10)), 1.0)
+    # 4) грязь у пола (низ буреет до 35 %, на высоте 0–25 см)
+    geo = N.new("ShaderNodeNewGeometry")
+    sepw = N.new("ShaderNodeSeparateXYZ")
+    Lk(geo.outputs["Position"], sepw.inputs[0])
+    col = mix("MIX", col, DIRT, mrange(sepw.outputs["Z"], 0.0, 0.25, 0.35, 0.0))
+    # 5) потёртые кромки: где фаска (нормаль «скруглённая» отличается от настоящей) — светлее
+    bev = N.new("ShaderNodeBevel")
+    bev.inputs["Radius"].default_value = 0.01
+    bev.samples = 8
+    dot = N.new("ShaderNodeVectorMath")
+    dot.operation = "DOT_PRODUCT"
+    Lk(bev.outputs["Normal"], dot.inputs[0])
+    Lk(geo.outputs["Normal"], dot.inputs[1])
+    edge = mrange(dot.outputs["Value"], 0.99, 0.88, 0.0, 0.75)
+    hard = N.new("ShaderNodeAttribute")
+    hard.attribute_name = "hard"
+    em = N.new("ShaderNodeMath")
+    em.operation = "MULTIPLY"
+    Lk(edge, em.inputs[0])
+    Lk(hard.outputs["Fac"], em.inputs[1])
+    edge = em.outputs[0]
+    col = mix("SCREEN", col, (0.55, 0.52, 0.48), edge)
+    Lk(col, bsdf.inputs["Base Color"])
+    return mat
+
+
+def render_material(obj, on=True):
+    """Подменить общий материал палитры на материал качества (для рендера картинок) или вернуть обратно."""
+    src, dst = ("palette", "palette_q") if on else ("palette_q", "palette")
+    new = _q_material() if on else rt.palette_material()
+    me = obj.data
+    for i, m in enumerate(me.materials):
+        if m and m.name == src:
+            me.materials[i] = new
+
+
+# ───────────────────────── Декали (palette/decals.png) ─────────────────────────
+
+def _decal_material():
+    mat = bpy.data.materials.get("decals")
+    if mat:
+        return mat
+    mat = bpy.data.materials.new("decals")
+    mat.use_nodes = True
+    nt = mat.node_tree
+    bsdf = nt.nodes["Principled BSDF"]
+    bsdf.inputs["Roughness"].default_value = 1.0
+    tex = nt.nodes.new("ShaderNodeTexImage")
+    tex.interpolation = "Linear"
+    tex.image = bpy.data.images.load(os.path.join(ROOT, "palette", "decals.png"), check_existing=True)
+    nt.links.new(tex.outputs["Color"], bsdf.inputs["Base Color"])
+    nt.links.new(tex.outputs["Alpha"], bsdf.inputs["Alpha"])
+    return mat
+
+
+def decal(name, center, width, facing="front", rot=0.0, lift=0.0015, height=None):
+    """Наклейка/трафарет/табличка из атласа palette/decals.png (имена — palette/_decals.py, DECALS).
+    center — середина; facing: front (лицом к −Y), top, left, right. Высота — по пропорциям картинки."""
+    sys.path.insert(0, os.path.join(ROOT, "palette"))
+    import _decals
+    (u0, v0, u1, v1), aspect = _decals.rect(name)
+    w = width
+    h = height or width / aspect
+    cx, cy, cz = center
+    ca, sa = math.cos(math.radians(rot)), math.sin(math.radians(rot))
+
+    def P(a, b):
+        a, b = a * ca - b * sa, a * sa + b * ca
+        if facing == "front":
+            return (cx + a, cy - lift, cz + b)
+        if facing == "top":
+            return (cx + a, cy + b, cz + lift)
+        s = -1 if facing == "left" else 1
+        return (cx + s * lift, cy - s * a, cz + b)
+    me = bpy.data.meshes.new("decal_" + name)
+    me.from_pydata([P(-w / 2, -h / 2), P(w / 2, -h / 2), P(w / 2, h / 2), P(-w / 2, h / 2)], [], [(0, 1, 2, 3)])
+    uvl = me.uv_layers.new(name="UVMap")
+    for li, uv in zip(range(4), ((u0, v0), (u1, v0), (u1, v1), (u0, v1))):
+        uvl.data[li].uv = uv
+    me.polygons[0].use_smooth = False
+    me.update()
+    want = {"front": Vector((0, -1, 0)), "top": Vector((0, 0, 1)), "left": Vector((-1, 0, 0)),
+            "right": Vector((1, 0, 0))}[facing]
+    if me.polygons[0].normal.dot(want) < 0:
+        me.flip_normals()
+    me.materials.append(_decal_material())
+    obj = bpy.data.objects.new("decal_" + name, me)
+    bpy.context.scene.collection.objects.link(obj)
+    return obj
+
+
+# ───────────────────────── Ткань симуляцией (docs/QUALITY.md) ─────────────────────────
+
+def drape(size_x, size_y, center, colliders, color, res=0.035, frames=30, thick=0.008, simplify=4.0,
+          name="cloth", floor=True, stiff=None, noise=0.02, seed=1):
+    """Ткань (одеяло, простыня, брезент) — симуляцией Blender: прямоугольник size_x × size_y кладётся сверху
+    в точку center=(x, y, z) и падает на colliders (готовые куски модели: матрас, рама). Потом сетка упрощается
+    (плоские места — крупными гранями), получает толщину и сглаживание. Возвращает объект-кусок."""
+    nx, ny = max(2, round(size_x / res)), max(2, round(size_y / res))
+    bm = bmesh.new()
+    bmesh.ops.create_grid(bm, x_segments=nx, y_segments=ny, size=0.5)
+    bmesh.ops.scale(bm, vec=(size_x, size_y, 1), verts=bm.verts)
+    bmesh.ops.translate(bm, vec=center, verts=bm.verts)
+    import random
+    rnd = random.Random(seed)
+    for v in bm.verts:                                   # лёгкая «мятость» — из неё вырастают складки
+        v.co.z += rnd.uniform(-noise, noise) * 0.15 + noise * math.sin(v.co.x * 6 + seed) * math.cos(v.co.y * 4 + seed)
+    me = bpy.data.meshes.new(name + "_sim")
+    bm.to_mesh(me)
+    bm.free()
+    g = bpy.data.objects.new(name + "_sim", me)
+    sc = bpy.context.scene
+    sc.collection.objects.link(g)
+    temp = []
+    if floor:
+        fm = bpy.data.meshes.new("_floor_c")
+        fm.from_pydata([(-5, -5, 0), (5, -5, 0), (5, 5, 0), (-5, 5, 0)], [], [(0, 1, 2, 3)])
+        fo = bpy.data.objects.new("_floor_c", fm)
+        sc.collection.objects.link(fo)
+        temp.append(fo)
+    mods = []
+    for o in list(colliders) + temp:
+        mods.append((o, o.modifiers.new("_col", "COLLISION")))
+        o.collision.cloth_friction = 40.0
+    cm = g.modifiers.new("_cloth", "CLOTH")
+    if stiff:
+        cm.settings.bending_stiffness = stiff
+    sc.frame_start, sc.frame_end = 1, frames
+    for f in range(1, frames + 1):
+        sc.frame_set(f)
+    dg = bpy.context.evaluated_depsgraph_get()
+    res_me = bpy.data.meshes.new_from_object(g.evaluated_get(dg))
+    for o, md in mods:
+        o.modifiers.remove(md)
+    for o in temp:
+        bpy.data.objects.remove(o)
+    bpy.data.objects.remove(g)
+    sc.frame_set(1)
+    bm = bmesh.new()
+    bm.from_mesh(res_me)
+    if simplify:                                         # плоские места — крупными гранями
+        bmesh.ops.dissolve_limit(bm, angle_limit=math.radians(simplify), verts=bm.verts, edges=bm.edges)
+        bmesh.ops.triangulate(bm, faces=bm.faces)
+    if thick:                                            # толщина ткани (вниз от лицевой стороны)
+        bm.normal_update()
+        top = list(bm.faces)
+        ext = bmesh.ops.extrude_face_region(bm, geom=top)
+        vs = [e for e in ext["geom"] if isinstance(e, bmesh.types.BMVert)]
+        for v in vs:
+            v.co.z -= thick
+        bmesh.ops.reverse_faces(bm, faces=top)
+        bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    _smooth_by_angle(bm, 60)
+    return _soft_part(lambda: _from_bmesh(bm, name, color, keep_smooth=True))

@@ -157,12 +157,24 @@ def _flat_color_materials():
         elif base is not None:
             emi.inputs["Color"].default_value = base.default_value
         nt.links.remove(old_link)
-        nt.links.new(emi.outputs["Emission"], out.inputs["Surface"])
-        undo.append((nt, emi, old_from, out))
+        extra = []
+        alpha = src.inputs.get("Alpha")
+        if alpha is not None and alpha.is_linked:      # декали: прозрачное остаётся прозрачным
+            tr = nt.nodes.new("ShaderNodeBsdfTransparent")
+            mx = nt.nodes.new("ShaderNodeMixShader")
+            nt.links.new(alpha.links[0].from_socket, mx.inputs["Fac"])
+            nt.links.new(tr.outputs[0], mx.inputs[1])
+            nt.links.new(emi.outputs["Emission"], mx.inputs[2])
+            nt.links.new(mx.outputs[0], out.inputs["Surface"])
+            extra = [tr, mx]
+        else:
+            nt.links.new(emi.outputs["Emission"], out.inputs["Surface"])
+        undo.append((nt, [emi] + extra, old_from, out))
 
     def restore():
-        for nt, emi, old_from, out in undo:
-            nt.nodes.remove(emi)
+        for nt, nodes, old_from, out in undo:
+            for n in nodes:
+                nt.nodes.remove(n)
             nt.links.new(old_from, out.inputs["Surface"])
     return restore
 
