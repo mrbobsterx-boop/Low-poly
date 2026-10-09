@@ -20,6 +20,7 @@ import _template as rt  # noqa: E402
 
 TRI_LIMITS = {"small": 600, "furniture": 3000, "large": 5000, "human": 3000, "room": 8000}
 _saved = []          # готовые объекты — в общий .blend
+QUALITY = False      # режим качества docs/QUALITY.md (включает скрипт модели: L.quality()) — см. ниже
 
 
 def new_scene():
@@ -48,15 +49,16 @@ def _material(glow=False):
     return mat
 
 
-def _from_bmesh(bm, name, color, glow=False):
+def _from_bmesh(bm, name, color, glow=False, keep_smooth=False):
     me = bpy.data.meshes.new(name)
     bm.to_mesh(me)
     bm.free()
     obj = bpy.data.objects.new(name, me)
     bpy.context.scene.collection.objects.link(obj)
     me.materials.append(_material(glow))
-    for p in me.polygons:
-        p.use_smooth = False
+    if not keep_smooth:
+        for p in me.polygons:
+            p.use_smooth = False
     rt.paint(obj, color)
     return obj
 
@@ -76,34 +78,57 @@ BEVEL = 0.012   # фаска по рёбрам, м: рёбра ловят све
 BEVEL_SEGS = 2  # сегментов фаски: 2 — мягкое ребро, ловит блик
 
 
-def _bevel(bm, width, segs=None):
+def _bevel(bm, width, segs=None, hard=True):
     if width <= 0:
         return
+    if QUALITY and hard:        # хард-сёрфейс: фаска маленькая, 1 сегмент — ребро чёткое, ловит свет
+        width, segs = max(0.004, min(width, 0.015)), 1
     bmesh.ops.bevel(bm, geom=list(bm.verts) + list(bm.edges), offset=width, offset_type="OFFSET",
                     segments=segs or (BEVEL_SEGS if width >= 0.008 else 1), profile=0.5, affect="EDGES", clamp_overlap=True)
 
 
-def box(size, loc, color, rot=None, name="box", glow=False, bevel=None):
+def box(size, loc, color, rot=None, name="box", glow=False, bevel=None, hard=True):
     """Коробка size=(ширина X, глубина Y, высота Z); loc — центр НИЗА коробки; rot — градусы (x, y, z)
-    вокруг центра низа. bevel — фаска (по умолчанию BEVEL, но не больше трети самой тонкой стороны)."""
+    вокруг центра низа. bevel — фаска (по умолчанию BEVEL, но не больше трети самой тонкой стороны).
+    hard=False — мягкое (подушка): в режиме качества фаска не урезается и сглаживается."""
     sx, sy, sz = size
     bm = bmesh.new()
     bmesh.ops.create_cube(bm, size=1.0)
     bmesh.ops.scale(bm, vec=(sx, sy, sz), verts=bm.verts)
     bmesh.ops.translate(bm, vec=(0, 0, sz / 2), verts=bm.verts)
-    _bevel(bm, min(BEVEL if bevel is None else bevel, min(size) / 3))
-    return _place(_from_bmesh(bm, name, color, glow), loc, rot)
+    _bevel(bm, min(BEVEL if bevel is None else bevel, min(size) / 3), hard=hard)
+    smooth = QUALITY and not hard
+    if smooth:
+        for f in bm.faces:
+            f.smooth = True
+    return _place(_from_bmesh(bm, name, color, glow, keep_smooth=smooth), loc, rot)
 
 
 def cyl(radius, height, loc, color, verts=8, rot=None, name="cyl", radius_top=None, glow=False):
-    """Цилиндр (или конус, если radius_top) вдоль Z; loc — центр низа; verts — граней по кругу (low-poly: 6–10)."""
+    """Цилиндр (или конус, если radius_top) вдоль Z; loc — центр низа; verts — граней по кругу (low-poly: 6–10).
+    В режиме качества: не меньше 8 граней (у толстых — 12), бока сглажены, торцы — чёткие."""
+    if QUALITY:
+        verts = max(verts, 12 if max(radius, radius_top or 0) > 0.05 else 8)
     bm = bmesh.new()
     rt_ = radius if radius_top is None else radius_top
     bmesh.ops.create_cone(bm, cap_ends=True, segments=verts, radius1=radius, radius2=rt_, depth=height)
     bmesh.ops.translate(bm, vec=(0, 0, height / 2), verts=bm.verts)
     # повернуть, чтобы грань (а не ребро) смотрела на камеру
     bmesh.ops.rotate(bm, verts=bm.verts, cent=(0, 0, 0), matrix=Matrix.Rotation(math.pi / verts, 3, "Z"))
-    return _place(_from_bmesh(bm, name, color, glow), loc, rot)
+    if QUALITY:
+        _smooth_by_angle(bm, 40)
+    return _place(_from_bmesh(bm, name, color, glow, keep_smooth=QUALITY), loc, rot)
+
+
+def _smooth_by_angle(bm, deg):
+    """Сглаженные нормали, но рёбра острее deg градусов — чёткие (как Auto Smooth)."""
+    bm.normal_update()
+    lim = math.cos(math.radians(deg))
+    for f in bm.faces:
+        f.smooth = True
+    for e in bm.edges:
+        lf = e.link_faces
+        e.smooth = not (len(lf) == 2 and lf[0].normal.dot(lf[1].normal) < lim)
 
 
 def poly(points_xz, depth, loc, color, rot=None, name="poly", glow=False):
@@ -145,16 +170,28 @@ def dims(obj):
     return (max(xs) - min(xs), max(ys) - min(ys), max(zs) - min(zs)), (min(zs), max(zs))
 
 
+PREVIEW = None      # список — режим render/_lit_preview.py: finish() только собирает модель
+
+
+def assemble(parts, name, rough=None, period=None, chips_n=0):
+    """Склеить куски в один объект + неровные грани (кроме режима качества — там roughen только у органики)."""
+    obj = join(parts, name)
+    if rough is not False and not (QUALITY and rough is None):
+        roughen(obj, period=period, **(rough or {}))
+    if chips_n:                 # сколы цветом палитры (для broken)
+        obj = chips(obj, n=chips_n, seed=len(name))
+    return obj
+
+
 def finish(parts, category, oid, variation, state, size_cm=None, limit="furniture", glb=True, margin_px=0,
            frame_points=None, lit=False, rough=None, period=None, chips_n=0):
     """Склеить, проверить, экспортировать .glb и отрендерить <id>_<вариация>_<состояние>(.png + _n.png).
     size_cm — (ширина, высота) из ОС для проверки (допуск 2 см). Возвращает объект."""
     name = f"{oid}_{variation}_{state}"
-    obj = join(parts, name)
-    if rough is not False:      # крупные неровные грани + разнобой оттенков (rough — параметры для roughen)
-        roughen(obj, period=period, **(rough or {}))
-    if chips_n:                 # сколы цветом палитры (для broken)
-        obj = chips(obj, n=chips_n, seed=len(name))
+    obj = assemble(parts, name, rough=rough, period=period, chips_n=chips_n)
+    if PREVIEW is not None:     # режим просмотра (render/_lit_preview.py): только собрать, без экспорта и рендера
+        PREVIEW.append(obj)
+        return obj
     (w, d, h), (zmin, zmax) = dims(obj)
     t = tris(obj)
     print(f"[{name}] {w * 100:.0f} × {h * 100:.0f} см (глубина {d * 100:.0f}), треугольников {t}"
@@ -602,7 +639,7 @@ def tube(a, b, r, color, verts=6, name="tube", glow=False):
 
 def soft(size, loc, color, rot=None, name="soft"):
     """Мягкое (подушка, сиденье, матрас): коробка с крупной фаской — «пухлая»."""
-    return box(size, loc, color, rot=rot, name=name, bevel=min(size) * 0.3)
+    return box(size, loc, color, rot=rot, name=name, bevel=min(size) * 0.3, hard=False)
 
 
 def blanket(cx, width, depth, top_z, color, seed=7, hang=(0.10, 0.20), fold_color="offwhite", fold_side=-1):
