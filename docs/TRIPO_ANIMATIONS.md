@@ -288,9 +288,13 @@ Character walks forward limping on the right leg, putting little weight on it, o
 Character stands hunched, coughing hard, one hand over the mouth and the other on the stomach, swaying slightly, seamless loop, in place.
 ```
 
-**50. Перевязывает себя** — `anim_bandage.glb` · один раз
+**49. Перевязывает себя** — `anim_bandage.glb` · повтор
 ```
-Character sits on the ground and wraps a bandage around the own forearm with the other hand, then ties it.
+Character stands holding the left forearm out in front of the chest, and the right hand keeps wrapping a bandage around the left forearm in repeated circular motions, looking down at the arm, seamless loop, in place.
+```
+Не вышло — вариант сидя (уже сидит с первого кадра):
+```
+Character already sitting on the ground from the very first frame, left forearm resting on the knee, right hand continuously wraps a bandage around the left forearm in circles, looking at the arm, no standing up, no sitting down, seamless loop.
 ```
 
 **51. Испуган** — `anim_scared.glb` · повтор
