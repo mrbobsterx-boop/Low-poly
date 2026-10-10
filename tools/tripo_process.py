@@ -75,6 +75,7 @@ def resolve(stem, plan):
     return oid, var, warns
 
 
+KEEP_HEIGHT = {"ladder_metal", "stairs_wood", "street_lamp", "plant_wheat"}   # широкие по природе — всё равно по высоте
 CREATURES = {"survivor_base", "raider_human", "trader_npc", "dog_feral", "rabbit_wild", "rat_pest", "mutant_crawler"}
 
 
@@ -215,9 +216,10 @@ def place(obj, o, rot_deg):
     else:                                       # остальное — по высоте
         cur, target = float(hi[2] - lo[2]), o["size"][1] / 100
     k = target / cur if cur > 1e-6 else 1.0
-    creature = o["id"] in CREATURES or o["id"].startswith("zombie_")
+    creature = o["id"] in CREATURES or o["id"].startswith("zombie_") or o["id"] in KEEP_HEIGHT
     if not fit_width(o) and not creature and float(hi[0] - lo[0]) * k > 2 * o["size"][0] / 100:
-        k = o["size"][0] / 100 / float(hi[0] - lo[0])   # по высоте вышло вдвое шире ОС (лежит плашмя, свёрнуто) — по ширине
+        # по высоте вышло вдвое шире ОС — вещь лежит плашмя или свёрнута: самая длинная сторона = большему размеру ОС
+        k = max(o["size"]) / 100 / float(max(hi - lo))
     obj.data.transform(Matrix.Scale(k, 4))
     lo, hi = bbox(obj)
     cx, cy = (lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2
@@ -398,13 +400,13 @@ def render_views(obj, out_base, px=360, res=None, fit=1.35):
     sc.collection.objects.link(fo)
     added.append(fo)
     lamp = bpy.data.lights.new("_lamp", "POINT")
-    lamp.energy, lamp.shadow_soft_size, lamp.color = 280.0 * size * size + 50, 0.2 * size, (1.0, 0.72, 0.45)
+    lamp.energy, lamp.shadow_soft_size, lamp.color = 300.0 * size * size, 0.2 * size, (1.0, 0.72, 0.45)
     lo_ = bpy.data.objects.new("_lamp", lamp)
     lo_.location = c + Vector((-0.7 * size, -1.0 * size, 1.1 * size))
     sc.collection.objects.link(lo_)
     added.append(lo_)
     fill = bpy.data.lights.new("_fill", "AREA")
-    fill.energy, fill.size, fill.color = 40.0 * size * size + 10, 2.0 * size, (0.5, 0.6, 1.0)
+    fill.energy, fill.size, fill.color = 45.0 * size * size, 2.0 * size, (0.5, 0.6, 1.0)
     fl = bpy.data.objects.new("_fill", fill)
     fl.location = c + Vector((1.2 * size, -1.2 * size, 0.6 * size))
     fl.rotation_euler = (math.radians(70), 0, math.radians(45))
@@ -523,8 +525,9 @@ def process(path, plan, out_dir, rot_cfg, color_cfg, prev_dir):
     warns += check_mesh(obj)
     if n_parts > 1:
         warns.append(f"в файле {n_parts} отдельных объектов — склеены в один")
-    if abs(w * 100 - o["size"][0]) < 1 and abs(h * 100 - o["size"][1]) > 0.25 * o["size"][1] and not fit_width(o):
-        warns.append(f"по высоте выходило вдвое шире ОС — подогнано по ширине; высота {h * 100:.0f} см, в ОС {o['size'][1]} см")
+    if abs(max(w, d, h) * 100 - max(o["size"])) < 1 and abs(h * 100 - o["size"][1]) > 0.25 * o["size"][1] and not fit_width(o):
+        warns.append(f"лежит плашмя / свёрнуто — подогнано по длинной стороне ({max(o['size'])} см); "
+                     f"высота {h * 100:.0f} см, в ОС {o['size'][1]} см")
     elif fit_width(o):
         if abs(h * 100 - o["size"][1]) > 0.25 * o["size"][1]:
             warns.append(f"подогнано по ширине; высота {h * 100:.0f} см, в ОС {o['size'][1]} см")
@@ -817,7 +820,7 @@ def grid_sheet(items, title, out, per_row=4, C=220):
         for k, v in enumerate(it["views"]):
             s.paste(Image.open(v).convert("RGB").resize((C, C)), (x + k * (C + PAD), y + CAP))
     os.makedirs(os.path.dirname(out), exist_ok=True)
-    s.save(out, optimize=True)
+    s.save(out, quality=82) if out.endswith(".jpg") else s.save(out, optimize=True)
     return out
 
 
@@ -841,7 +844,7 @@ def collect(plan, out_dir, prev_dir, no_docs):
     day = datetime.date.today().isoformat()
     for cat, its in cats.items():
         title = f"{CAT_TITLES.get(cat, cat)} ({cat}) — {len(its)} шт. · слева — спереди, справа — в 3/4"
-        print("лист:", grid_sheet(its, title, os.path.join(ROOT, "renders", "_review", f"tripo_{day}_{cat}.png")))
+        print("лист:", grid_sheet(its, title, os.path.join(ROOT, "renders", "_review", f"tripo_{day}_{cat}.jpg")))
     if not no_docs:
         entries = {it["name"]: it["entry"] for it in items}
         for name, e in entries.items():
