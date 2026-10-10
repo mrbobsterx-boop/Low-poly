@@ -1,0 +1,251 @@
+{
+ "_comment": "Новый стиль (2026-10-10): имя по плану ОС → id файла на Google Диске (папка автора 1RKMYPTT-MR1V4uO0P8jXAQVaCSRMW6dV, файлы с именами Tripo). Разобрано чатом игры по виду моделей. Скачать: python3 tools/drive_fetch.py → tripo/<имя>.glb",
+ "_alternates": {
+  "radio_desk_nastolnyy": [
+   "1Rj7-xEetqpK7KfWTKppn-wsTxXLDwyBG"
+  ],
+  "first_aid_kit_domashnyaya": [
+   "1_LoOcPW0cq4uZ5LGTWHLs6YgiRcWlpc4",
+   "1rUfOIu62_JCPaRyXiDRpNvgOptUYdRMJ"
+  ],
+  "workbench_basic_derevyannyy_bazovyy": [
+   "1Rwy7gZ8iQJh9jeJh-ACXPp4DnpntM4ix"
+  ],
+  "mat_log_poleno": [
+   "1uCaGRI66U5N5LZIoLObZJtnb8XLgAVRC"
+  ],
+  "mat_plank_doska": [
+   "1J-Rov4Oz2DmRRMjOpCjlch2UYxoESEE0"
+  ],
+  "campfire_prostoy": [
+   "1Ff2ZYBUUJinFpe6IECt6bEy3oGKq4AOD"
+  ],
+  "ration_dry_armeyskiy": [
+   "1HsjSfhbP1a0wPeewzoJDZI1PI59IiUCY"
+  ],
+  "tool_pickaxe_stalnaya": [
+   "1nIgjyGh8gYQaI5gVJwiRhUewVLSAtQNh"
+  ],
+  "water_tablets_hlornye": [
+   "1-2iBDMDfOGSILG08ENxGzCsVqNH-_efq"
+  ],
+  "mat_nails_gvozdi": [
+   "1q9U7vmwsTQF-yuBWF66aYcc7YvRUak36"
+  ],
+  "soil_clump_chernozem": [
+   "1k3bp8zNJGWS8ELYC2Lc46T7H-hq1zqap"
+  ],
+  "fuel_firewood_polenya": [
+   "11HyWm7ZpeeM4uDrA0XajSEaPcEGc-reB"
+  ],
+  "soap_kusok_myla": [
+   "1M6mP4UzIPoHQhrXow4PqpdQIMUK2i3Sk"
+  ],
+  "map_paper_karta_rayona": [
+   "1ck-9VxoWHW9caLwsEAeCTlefulbIgU-E"
+  ],
+  "car_abandoned_sedan": [
+   "189rWhd4EdfpxpFm_6q_qRRTjYIBvWeVr"
+  ],
+  "billboard_road_tselyy": [
+   "1Ewc3hzXw5L-XI26T52YO7BUFGO3Pj1Qx"
+  ],
+  "survivor_base_igrok": [
+   "1VfWak_G74Ksgmnv2YRCGdgh28wJY4bzz",
+   "1Tai1YVEAm_6kIBSukC7VFrAmDCKtC8BP",
+   "1QEMcZMYJX9OqSZhKq7kKG-mGq7MpQcrD",
+   "1L5bI05GQ5V2QsUZYdLafC-M6Czz9xLd6",
+   "155zqlVaxvEDdVInKVsvqHpBisUXoksSg",
+   "1cWu-nPJhSZWDlRG6HH4uFf4s9tQNziiX",
+   "14MdwjXCs5Wbdpxk1q7EKD-NvGdz7cKfZ"
+  ],
+  "raider_human_maroder": [
+   "1vIq4GqD0WIEzI7FwZdkw9npvKVDJiYgd"
+  ],
+  "dog_feral_odinochnaya": [
+   "1NXy1LZs3JSSjnJChl-7JFCiW6VtWl-9U"
+  ],
+  "barrel_water_plastikovaya_200_l": [
+   "11bnwY5uTsnGphW2VrDFNPYoi2Jdw03_H"
+  ],
+  "zombie_walker_hodyachiy": [
+   "1GggUuJc0orHCVlejuvrcFrvyfb8X0Kd1"
+  ],
+  "tool_wrench_razvodnoy": [
+   "1xv78rC6hLhCGXzMCWeZQvD-i7R5fuB_3"
+  ]
+ },
+ "bed_single_zheleznaya_koyka": "1DPoZ_8fPdXCzUcAusp6T5e8eNd2kWfFK",
+ "bunk_bed_metallicheskaya": "1OdTVFvnyVB_shm4HMIVZgyeTdT-WZINc",
+ "wardrobe_derevyannyy_dvustvorchatyy": "1dmKEH4wfcIOhIW8D-UpyvB0rLaCEinaw",
+ "table_wood_obedennyy": "1pb6kVEzwf5YFgZMHZa4vY_E3f4wwJW9Q",
+ "chair_wood_derevyannyy": "1kBK7CWVaCNH_YHIb32k_8nJnn4f5hvGF",
+ "shelf_wood_derevyannaya": "1we0hq-CigfhrbZGRyikXGNHYaOjEIIi0",
+ "lamp_ceiling_lampa_nakalivaniya": "1IP9-7HtqkVpall5SWJ2Ck-Bp3owM0h90",
+ "lightbulb_nakalivaniya": "1fTmGGuxIdQyKhyc8FB7cxMB5gFS96SLq",
+ "clock_wall_mehanicheskie": "1sFRSC4bHwWgdvzmgxDo8nEC36cGewi-S",
+ "radio_desk_nastolnyy": "1C-v-tJekO1bML-H1L4WOyE0Fh1HeWGPd",
+ "stove_heat_stalnaya_bochka": "1t2vl6fb4Als6TgEUjGOLU4lSVYB2YXsg",
+ "toilet_fayansovyy_so_smyvom": "1PWD2gYLtVlVgJBf5FaNIeBbXXj-LCEDA",
+ "barrel_water_plastikovaya_200_l": "1kpSmPPop7S3oiohSNwsZPBYlqvGlg6zH",
+ "tank_water_plastikovyy_1000_l": "1Rke0nNdEOQUxx-Jds6zQQnc2jfrPNFUi",
+ "water_tower_kirpichnaya": "1dXh8dZAuIPLxaXFPl1-NuMYQGcFMLEoa",
+ "well_hand_ruchnoy_kolodets_s_vorotom": "1FKSuYbroQszpBky95gkxjb9ouLmwr0Ub",
+ "water_pump_ruchnoy_rychazhnyy": "1G3nWBdDXEFBJglVQ5VJ-6Vct3ecsmzQr",
+ "water_purifier_keramicheskiy_filtr": "10DimK27XBURjbdpXFrqzWLOJWYokNuHZ",
+ "water_tablets_hlornye": "1y78Pta8dJ29v9kQNgWhfnLiSk1NkuKjt",
+ "sink_tap_kuhonnaya": "18rszThwFJnSrK-CAftHIlAVAoteMax7y",
+ "bottle_water_plastikovaya_0_5_l": "1d4RV5ud6a4fddfkg6CyNS4TqPxR2Tees",
+ "bucket_metallicheskoe": "1cQZrQ8Xp7crx9o4TPeRqpEk_xSqfhmbM",
+ "bathtub_chugunnaya": "1AEuvcSBhLocjzhzQb_94Cw8bmBueSxWF",
+ "battery_bank_avtomobilnyy_12_v": "1jWm4J__6xF7rC3GlEPuI5c715wWtKThm",
+ "solar_panel_malaya_100_vt": "1v-arxAvF2LDecwVdNKXbn9Ap977Sy8sA",
+ "wind_turbine_malyy_gorizontalnyy": "1LVvFLxoMbuiUXWemvbhyLVgJEo5DrAjD",
+ "bike_generator_statsionarnyy": "11BK52_e7bLyn_hWRh5YGBCWACS1_h4Qp",
+ "treadmill_generator_begovaya_dorozhka": "11n7Df1qgjtn5dhpHdwGdyD0KchnGSPIY",
+ "fuel_generator_portativnyy": "174FZFor1pz-5N2O_ZtcFIxUjUOkhkEI5",
+ "power_cable_tonkiy": "19TSGYRyLAv8XHvKHlpRy0ZeaPp1w2Ur_",
+ "fridge_elektricheskiy": "1Pby8nfNey0ajJrNdZ2cJDqG_z8CfCLdU",
+ "grow_lamp_fioletovaya_led": "1-9fgfiQf_04wRXqJ7J_TrDyuWVl1GfT_",
+ "fuel_canister_5_l": "1X8F4so7bQKk0XjFn1DihWeR3RJWnXNcj",
+ "shelter_panel_prostoy_pult": "1PfyHdZ9rJ4t1LqphzqujxARDbtRNkVDj",
+ "battery_cell_odnorazovaya": "1QvGZBHP4nxOg2nyDxEaCepTZ4W_j2O3m",
+ "fuel_firewood_polenya": "1lOCV-7dBKhdcrY8oIR6JYyZs4xFeH0nc",
+ "light_switch_klavishnyy": "1-A7hnxMx2CxRdMhtiUYzuH5k47ryLAMz",
+ "fuse_box_bytovoy": "1fEbkjyKTqllRYfuuerfhvcNyIy-YbqcL",
+ "stove_cook_gazovaya": "1PXZXXkfyt4YSEDw62skBFVCbx2pBfBQR",
+ "campfire_prostoy": "1KpYJjb-NZ5x8RAcipkI1KYuXZ1ng6CzC",
+ "cooking_pot_alyuminievaya": "1fMbEVFfDykjmoj4Z6jxdXS1fQ_IYcD62",
+ "kitchen_counter_s_rakovinoy": "1LlVzHBV254otDDcqiGOLN1S2HKs2EXps",
+ "food_bread_hleb": "1HU8svp1zyBuz1WGX9wfW4ZdXGVIUado6",
+ "food_grain_pshenitsa": "1554x_a6kkO_xDPuiibG0hitHdTeMYUus",
+ "meat_raw_krolik": "1UZZJf7bQDjr7Pp-2KdnbG4MtTlVP2zKS",
+ "meat_cooked_zharenoe": "1IpeLfA7p2oWvr-oDPBq9NBEiwLUluZav",
+ "veg_potato_kartofel": "1-RF3lk8huBzKuKGsZ3PNdCVR7bVawpjJ",
+ "meal_soup_ovoschnoy_sup": "1NgJDj0ZaF1SLWkftDRFxiHy_39qp4iP3",
+ "ration_dry_armeyskiy": "1BCZXcSwt1zaoQSQfWoPaNJlXJc_OudxY",
+ "tool_can_opener_ruchnoy": "182oG36--zPo5WPtZ-WKlnLZgm_GTgfe7",
+ "bandage_sterilnyy": "1VbWKjSOPRzF92YOEUIms2ATmOtCmo5IT",
+ "antiseptic_spirt": "1C21AGabP4vD5j6priXkWSuQfT6eX-uxz",
+ "painkiller_tabletki": "1RuuuBqNISG3y4e-Ue2sdHXkY4VsEIMkL",
+ "antibiotics_shirokogo_spektra": "1iBTBZysYU-_jtGTJCPdIcF_5N_rBOxEy",
+ "first_aid_kit_domashnyaya": "17luLejL3Ohhb8xrlIf3xhzLvYiZK0Arx",
+ "medical_kit_polevoy": "1vT6I_tznYeGxFiEqrLv-OqxszUkiE-Y-",
+ "medicine_cabinet_vannyy": "125YspiqYn7FMyd0xYboVMK2D8O9eBrrk",
+ "cot_medical_skladnaya": "1L6GQ320HEiRbqxij-Jhd7oUg0mmc1I5u",
+ "poison_vial_slabyy": "1WryZgnMhBkgaRlKip0rs7RFsAMS56xoN",
+ "soap_kusok_myla": "1Xt3iObL_45zszlsbSpPMD86ZOZKaqc2M",
+ "crate_wood_malyy": "1xChRBdIflP3YXRCHw_4ZXewZFnaZi2sY",
+ "rack_metal_s_3_polkami": "1LPHuxGYT0YW1yUSXN0FWqWNf3SmgOpqp",
+ "locker_metal_sportivnyy": "1jUPb_gsBAG6nkbsoHX2KNG5Of0ouIFUE",
+ "safe_metal_nastennyy": "1x125WTReUrlK2xyq4UZ460ACd59wKMX8",
+ "toolbox_plastikovyy": "1K96bzzJgYeX-VSFIvhdBgTAOHd5r5IX-",
+ "backpack_shkolnyy": "1xjQTCK6Evqufbw7XzTk1AyCALI2Kz3ss",
+ "workbench_basic_derevyannyy_bazovyy": "1jOFRqn_DDEd5PSABq4o9gFDS-Tr8yVMe",
+ "workbench_electronics_nastolnyy": "1Rwy7gZ8iQJh9jeJh-ACXPp4DnpntM4ix",
+ "recycler_bench_ruchnoy": "17A2-xMhr21RAN2zV6pI1u3Osokh2_3-b",
+ "sewing_table_ruchnaya_mashina": "1WzWspeBo-ZOGyzLTE0BglOfOzduif_N6",
+ "planter_box_derevyannyy_yaschik": "1GfNl22JuJ2Pdoy8UMHrVAL-No6ueG3CH",
+ "hydro_rack_malaya": "1ktOuAilPgLjmhlSTFjw2UbfkhVE8OtyL",
+ "plant_potato_kartofel": "180ascCagXrRoj5m7C9ee8bzKkabbOC17",
+ "plant_wheat_pshenitsa": "1vVTwyHLW-i7aLqo_mrYuSasv_82lqMeu",
+ "plant_tree_sosna": "1tWcQSPQIUqpQ7rHJgILGBnDDb0iwFIsa",
+ "bush_berry_malina": "1G26fdR8xZdaaeTacHO8AwyW3LatF89XF",
+ "seed_bag_kartofel": "1A4mfoS9A3CYI4XohxgjzYkEfiOo4ktqM",
+ "fertilizer_bag_kompost": "1TWz1Dz03Bo9G-oNhLjBjVaO2Qfpv_XbY",
+ "tool_hammer_stolyarnyy": "1YzzaMGgqjF96WadbiAkro7EDr1rwIj8j",
+ "tool_wrench_razvodnoy": "1BFlCFli-aSKKqStOGbnwyaTGo8MycBxN",
+ "tool_screwdriver_krestovaya": "1F1-H9VZY0H4RQRywG70YSunHrdTRbuN_",
+ "tool_saw_nozhovka": "1tRhz80YhAFs4QvYD1mDg1JV3kcVB561H",
+ "tool_axe_kolun": "1KYEi_AzP-jQMtQ-prIgqFQSE2wwgSpL3",
+ "tool_pickaxe_stalnaya": "1ZhJLBUX3E5yhqCwgufSgq5DzFaeNDw0q",
+ "tool_shovel_shtykovaya": "1PGsnT-AmVKJ7Z0_yLY5noxE7ygeCkCR_",
+ "tool_sledge_malaya": "11T1_SjRig1wLVKSv6jZlm9esB_Hry6X3",
+ "tool_crowbar_stalnoy": "1GMlJuNQNKIGnpxFjSwrJlz7mD-bkC8z2",
+ "tool_lockpick_nabor": "1HiI9l_XfQLfASAkpU7uerx9CvZFpZnjl",
+ "tool_flashlight_ruchnoy": "1RdDqijiiEjfjayF-EwifuWDA6DAYNO58",
+ "tool_soldering_setevoy": "1APxo59Vi83hAB6QCYef-yWK-uQ1jVzCB",
+ "tool_knife_kuhonnyy": "19vH_OIvdnXNktpEdvq1G9QGl223vJ_R8",
+ "mat_plank_doska": "1xZ1jhYDFvOkZl8W2WsHG6x7ke441vVnw",
+ "mat_log_poleno": "1tOkfK8Xai8EfIn2ofMqw5RFVSUmtLOT5",
+ "mat_scrap_lom": "1SxNdhZpBCIFDr1DciiNAkVgIkbfzxBLI",
+ "mat_sheet_metal_tonkiy": "1NCVvfF6aTs1EH8Klf7_FloL8UScSUHb6",
+ "mat_pipe_metal_stalnaya": "1WvHfsFD3WBXN_15jxUxDcnosrhM1o7uM",
+ "mat_nails_gvozdi": "1pVD7WNdkap4xf83WLBSnhBCvjJNbG3b7",
+ "mat_wire_mednaya": "1Wk6dQKcwa6dGPZFqNbSg-7oMVDpIZQTS",
+ "mat_cloth_loskut": "17KlL0Em9JqN_qpKKEgnDs5O2gtYR9qSh",
+ "mat_rope_penka": "1vyjkSVxMgvBvJgsuGrBg5ECNxPj9rO1j",
+ "part_electronic_platy": "1rhwEDoruVMFr9Pd4JrY50Y73VQNaNql3",
+ "part_rare_circuit_voennaya_plata": "18G7J63k-oWKvk-6CmCaPzT3O0U_28pqz",
+ "stone_chunk_bulyzhnik": "1VTQ7XRVynMiIIAS_906fZk8mcygHYRme",
+ "soil_clump_chernozem": "1B-SugO2Nei6KZlTB9aEFDcm3VBfRd-mq",
+ "iron_ore_ruda": "1YfDG1wBENgdNXaGJTP5B3aedhzkFWzUH",
+ "coal_chunk_kamennyy": "1aAlCWphik-t9x-FneKTi3s_j52lfahak",
+ "mat_rubble_bityy_kirpich": "14jLK8bEIT4fhtWwdGZxAYJ2NIWxp_bzM",
+ "repair_kit_malyy_nabor": "1k_nrYVtl9N65oVLX2ML3q0QdhsFVNAZz",
+ "duct_tape_izolenta": "1mVmRP-kC8mrqlurfy1NrRUjVKHxLPpNI",
+ "door_wood_vnutrennyaya": "1akuPPhXclZqZZ1QUGrNVJr9fPNV8_e1j",
+ "door_metal_stalnaya": "1voleHaYNZrdJmnnW6v5RMd-XAFcK34Tc",
+ "hatch_bunker_lyuk_s_kolesom": "1UJQ-SNsXXMBzZDy5D33c7d3Q5aBvqK1P",
+ "window_basic_tseloe": "16h4LAUUOW198LhzQ3ybJcVBmqdEGlAgj",
+ "stairs_wood_derevyannaya": "1qiPoSRp-bERehmO-55A-LcNHPrKOoBrr",
+ "ladder_metal_pristennaya": "1_XPLxE80XRq7CFD9YhPDhy4u4H5fpWkI",
+ "barricade_planks_doski_na_okne": "1rf6rCugvz2CgOVtsbUpx4q0v4yyfnGlU",
+ "fence_wire_setka": "1CD9BkDJshf5K6na1yewWNOCLPWf5qouG",
+ "tent_camp_odnomestnaya": "1z_dTRLjQN0Ck6pamZCjFj3-6lXqUM5lu",
+ "lock_padlock_navesnoy": "1jDaUfQMTR-ebPdxivaOMJroukd5U4Svr",
+ "key_generic_obychnyy": "17Y9Zx_XkzOlm90pnY1QbPVrf3V3v0Vlc",
+ "weapon_bat_derevyannaya": "1ucySH2Ygi19wr4OZUYhllDcxAhS93bFW",
+ "weapon_pipe_stalnaya_truba": "1nBfPR1L9jKiPSohDaxnqVIhPgR8PoYkt",
+ "weapon_machete_machete": "1ickzQUocigX4Jc-9SOTS9W2VFgdNiDah",
+ "weapon_pistol_9_mm": "1LxU2lElwRAEeyV-_4pejrve0qY7rO9tY",
+ "ammo_9mm_obychnye": "1zym2ZDM2JxeN9iSJds5ZJPgRlzA4rROa",
+ "weapon_shotgun_pompovyy": "13TnyMtkB6lu0ziiw8bpv2sVNaZzt_uyc",
+ "ammo_shells_kartech": "1bIiYLCnO_SlJELDsdDYkQh508T_H2ICg",
+ "weapon_bow_ohotnichiy": "1hB-nQjopecvtvhPopSLIUI-WboyKJiF6",
+ "trap_bear_kapkan": "1zBnrswfxHBLFpGyjnb-8vD5nWhbcwOTI",
+ "cloth_jacket_kozhanaya": "1zBq2HATtrgBOo6SNGJ6iHZ7XvilQV55h",
+ "cloth_boots_krossovki": "1-Bpkmve4Lw-1RWCKsjvxB_UQgf797Er3",
+ "cloth_gloves_rabochie": "1P9wzuD1n0JSXRVGg0EdkwEMzBQFW-u3D",
+ "mask_gas_voennyy": "1S50P1Njvt5eUtJ5uu01fkjd_HptaQ1ol",
+ "vest_armor_samodelnyy": "1lPWqiio37BqFM2fiFOySIa6b839k1sj5",
+ "signpost_fork_dorozhnyy_znak": "1Ft-hilEh-t9QZfC8924KLiDALKn4orui",
+ "car_abandoned_sedan": "1Tfnp6kiZqtNBCBS9xmXbqV8iyQFAudv2",
+ "car_wreck_razobrannaya": "189rWhd4EdfpxpFm_6q_qRRTjYIBvWeVr",
+ "street_lamp_tselyy": "1Qukr6BF4vF8Y6OWKqTdkcR1P_7-qvo_P",
+ "billboard_road_tselyy": "1K6xMCenGFyyE28aQfxZDLxzGnKVQdIH_",
+ "dumpster_zelenyy": "1T8Xjc0OjJkcym-A2c8Htl99gqwNEG-89",
+ "scrap_pile_metallolom": "1DrS2emWUExQV6-WtldgasuJBYzWHUkyk",
+ "bench_street_derevyannaya": "1Ff2ZYBUUJinFpe6IECt6bEy3oGKq4AOD",
+ "survivor_base_igrok": "1WUBme4E1Wzeyw51R296MSDRsjzAo3vfQ",
+ "zombie_walker_hodyachiy": "1pIe9IPCYaoMwAnckp2A1tbC3tqurCA0F",
+ "zombie_runner_begun": "18YGwMbH7NRbi-s9KUajAbpnD7BioaLGT",
+ "raider_human_maroder": "1s7euxIJVjw8ZH_J98xqNzggFhdLUI7ES",
+ "trader_npc_brodyachiy": "1HpzV017NPN2DIeSa09yayyPIeeHZ6Qm3",
+ "dog_feral_odinochnaya": "1TJKPcOWjZ1pPteb1gjTEuiaU6qY8Ex4B",
+ "rabbit_wild_krolik": "1hjWfcngs7GDuk2H_zM_m4DLI0pQg6Xec",
+ "rat_pest_krysa": "1ZeKhZIN4HKOYWYDl6RDTMN-wAIWFWD4S",
+ "mutant_crawler_polzun": "1dsFWcxgcn-afeFop6XSYcekFRxL0tRqP",
+ "corpse_human_svezhee": "1iTzAPatcLc_dgBvIeK8Q_nSJ9jgC4Wp1",
+ "corpse_zombie_svezhee": "18FCplpLsTEnqRHmfLo9rGGEO3kNVkIEY",
+ "grave_mound_holm": "1KodkdjySGnglFZ9XL8L0IZy8C38kIfKH",
+ "pyre_pile_koster": "1ZSKH5lbg_ynH4CA6VAGL24PCRgmZPLD3",
+ "faction_banner_znamya": "1TQtVJyGsBJat9LE0IpHqdkzW0TcHPywN",
+ "trade_stall_prilavok": "1CIoc5G63_s2yDnqlsDggOlEQFnjSIc-k",
+ "watchtower_derevyannaya": "1oStMY4bqR7MV3jH6ZSo9NA6GBfXfkein",
+ "faction_stockpile_yaschiki": "1qUdpY3kbO49Xb7f1CmHD1lzQFRe6moUA",
+ "noticeboard_derevyannaya": "104t-S32kTyLEjJ7bETCq9fApn0ZwNopb",
+ "note_diary_zapiska": "1ldm_lJkGiGR_B58LDz6S0bnlsB1ZIMe-",
+ "map_paper_karta_rayona": "1WQzTVqERn5KvIwvh0SWZOzTRXfKwotqN",
+ "_unused": {},
+ "_missing": [
+  "rain_collector",
+  "food_canned",
+  "splint",
+  "mat_cement",
+  "part_mech",
+  "mat_glass",
+  "cloth_pants",
+  "zombie_brute"
+ ]
+}
