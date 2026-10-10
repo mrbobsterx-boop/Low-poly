@@ -4,3 +4,6 @@ renders/_review/tripo_views/
 
 # сырые модели с Google Диска (tools/drive_fetch.py) — в git не кладём
 tripo/*.glb
+
+# и в подпапках (проба стиля и др.)
+tripo/**/*.glb
