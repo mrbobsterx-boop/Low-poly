@@ -19,16 +19,17 @@
 ## Шаг 1. Базовое тело (2 шт.: мужчина и женщина)
 
 Образец — **картинка кровати-образца** (как для объектов), ✏️ → запрос → картинка → «Создать».
-Важно: **T-поза** (руки в стороны), вид спереди, лысый, без бороды, простая серая одежда в обтяжку.
+Важно: **T-поза** (руки в стороны), вид спереди, лысый, без бороды, **в нижнем белье и босиком** — вся одежда и обувь
+потом в комплектах.
 
 **`body_base_male.glb`:**
 ```
-Replace the bed with a full body adult man character standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, average athletic build, bald head, no beard, neutral calm face, wearing a simple plain grey tight long-sleeve shirt, plain grey tight trousers and simple dark boots, no accessories. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Single character, no text.
+Replace the bed with a full body adult man character standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, average athletic build, bald head, no beard, neutral calm face, wearing only plain grey boxer briefs, barefoot, no accessories. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Single character, no text.
 ```
 
 **`body_base_female.glb`:**
 ```
-Replace the bed with a full body adult woman character standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, average athletic build, very short hair tied back, neutral calm face, wearing a simple plain grey tight long-sleeve shirt, plain grey tight trousers and simple dark boots, no accessories. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Single character, no text.
+Replace the bed with a full body adult woman character standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, average athletic build, very short hair tied back, neutral calm face, wearing only a plain grey sports top and plain grey shorts underwear, barefoot, no accessories. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Single character, no text.
 ```
 
 ## Шаг 2. Комплекты одежды (с ригом)
