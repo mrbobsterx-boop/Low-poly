@@ -38,3 +38,11 @@
 | `antiseptic_yod/perekis_idle` | 6 × 14 | 3–5 × 10–12 | пузырёк йода меньше бутылки спирта |
 | `soap_gel/dezinfitsiruyuschee_idle` | 8 × 4 | 4–5 × 9–12 | флаконы стоят, брусок лежит |
 | `splint_*_idle` | 40 × 8 | 40 × 3–7 | лежит плашмя |
+
+## Модели из Tripo: ширина отличается от ОС больше чем на 15 %
+
+| Модель | ОС Ш, см | Модель Ш, см |
+|---|---|---|
+| `recycler_bench_ruchnoy_idle` | 130 | 220 |
+| `sewing_table_pedalnaya_idle` | 110 | 89 |
+| `workbench_electronics_mobilnaya_stoyka_idle` | 140 | 189 |

@@ -94,5 +94,227 @@
   "jpeg_q": 85,
   "warnings": [],
   "date": "2026-10-10"
+ },
+ "recycler_bench_ruchnoy_idle": {
+  "src": "recycler_bench_ruchnoy.glb",
+  "tris_before": 90165,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   219.6697235107422,
+   152.88543701171875,
+   94.9999988079071
+  ],
+  "os_cm": [
+   130,
+   95
+  ],
+  "scale": 2.2422011740555337,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_68d484e5-d6cd-442f-9df5-17924dac3397_0: 2048→1024, tripo_image_68d484e5-d6cd-442f-9df5-17924dac3397_1: 2048→1024, tripo_image_68d484e5-d6cd-442f-9df5-17924dac3397_2: 2048→1024",
+  "mb": 0.534432,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 220 см, в ОС 130 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "sewing_table_pedalnaya_idle": {
+  "src": "sewing_table_pedalnaya.glb",
+  "tris_before": 87414,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   88.88764381408691,
+   54.53759431838989,
+   84.99999642372131
+  ],
+  "os_cm": [
+   110,
+   85
+  ],
+  "scale": 0.9060472983962785,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0d320b2c-210b-4c4b-910a-e6ccce961a31_0: 2048→1024, tripo_image_0d320b2c-210b-4c4b-910a-e6ccce961a31_1: 2048→1024, tripo_image_0d320b2c-210b-4c4b-910a-e6ccce961a31_2: 2048→1024",
+  "mb": 0.66166,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 89 см, в ОС 110 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "sewing_table_ruchnaya_mashina_idle": {
+  "src": "sewing_table_ruchnaya_mashina.glb",
+  "tris_before": 88842,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   114.22731876373291,
+   67.70620346069336,
+   85.00000238418579
+  ],
+  "os_cm": [
+   110,
+   85
+  ],
+  "scale": 1.1655354228564254,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_386f1ad7-54cb-4039-bd1e-50b8891901a4_0: 2048→1024, tripo_image_386f1ad7-54cb-4039-bd1e-50b8891901a4_1: 2048→1024, tripo_image_386f1ad7-54cb-4039-bd1e-50b8891901a4_2: 2048→1024",
+  "mb": 0.586368,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "workbench_basic_derevyannyy_bazovyy_idle": {
+  "src": "workbench_basic_derevyannyy_bazovyy.glb",
+  "tris_before": 82519,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   180.94862699508667,
+   85.93735098838806,
+   94.9999988079071
+  ],
+  "os_cm": [
+   160,
+   95
+  ],
+  "scale": 1.846796392975795,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_9b7c1887-3514-419b-aab5-2764fc73d993_0: 2048→1024, tripo_image_9b7c1887-3514-419b-aab5-2764fc73d993_1: 2048→1024, tripo_image_9b7c1887-3514-419b-aab5-2764fc73d993_2: 2048→1024",
+  "mb": 0.67588,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "workbench_basic_metallicheskiy_idle": {
+  "src": "workbench_basic_metallicheskiy.glb",
+  "tris_before": 84229,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   154.75153923034668,
+   100.22307634353638,
+   95.00000476837158
+  ],
+  "os_cm": [
+   160,
+   95
+  ],
+  "scale": 1.5817886178861789,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_55bc97ea-b7b6-4ffd-bf6d-8a03f8ced07b_0: 2048→1024, tripo_image_55bc97ea-b7b6-4ffd-bf6d-8a03f8ced07b_1: 2048→1024, tripo_image_55bc97ea-b7b6-4ffd-bf6d-8a03f8ced07b_2: 2048→1024",
+  "mb": 0.647964,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "workbench_basic_skladnoy_pohodnyy_idle": {
+  "src": "workbench_basic_skladnoy_pohodnyy.glb",
+  "tris_before": 93380,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   152.11278200149536,
+   92.7348256111145,
+   94.9999988079071
+  ],
+  "os_cm": [
+   160,
+   95
+  ],
+  "scale": 1.5528308475083552,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_793e4827-1e9c-4b42-a5d8-debb1b8fbf91_0: 2048→1024, tripo_image_793e4827-1e9c-4b42-a5d8-debb1b8fbf91_1: 2048→1024, tripo_image_793e4827-1e9c-4b42-a5d8-debb1b8fbf91_2: 2048→1024",
+  "mb": 0.623696,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "workbench_basic_verstak_s_tiskami_idle": {
+  "src": "workbench_basic_verstak_s_tiskami.glb",
+  "tris_before": 81380,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   168.5533046722412,
+   114.86039161682129,
+   94.9999988079071
+  ],
+  "os_cm": [
+   160,
+   95
+  ],
+  "scale": 1.721198717239854,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_edc39a4a-66ac-4a45-a37f-ad05a7dc1ce6_0: 2048→1024, tripo_image_edc39a4a-66ac-4a45-a37f-ad05a7dc1ce6_1: 2048→1024, tripo_image_edc39a4a-66ac-4a45-a37f-ad05a7dc1ce6_2: 2048→1024",
+  "mb": 0.599724,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "workbench_electronics_mobilnaya_stoyka_idle": {
+  "src": "workbench_electronics_mobilnaya_stoyka.glb",
+  "tris_before": 82662,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   188.7877106666565,
+   65.69610834121704,
+   94.9999988079071
+  ],
+  "os_cm": [
+   140,
+   95
+  ],
+  "scale": 1.9283652357058787,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_3a08c667-8f44-44be-9bb1-538b92124d9d_0: 2048→1024, tripo_image_3a08c667-8f44-44be-9bb1-538b92124d9d_1: 2048→1024, tripo_image_3a08c667-8f44-44be-9bb1-538b92124d9d_2: 2048→1024",
+  "mb": 0.655468,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 189 см, в ОС 140 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "workbench_electronics_nastolnyy_idle": {
+  "src": "workbench_electronics_nastolnyy.glb",
+  "tris_before": 84157,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   121.87442779541016,
+   64.25390243530273,
+   95.00000476837158
+  ],
+  "os_cm": [
+   140,
+   95
+  ],
+  "scale": 1.2413606093232843,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ef4e9282-9794-400b-991a-2d2f0d5bf195_0: 2048→1024, tripo_image_ef4e9282-9794-400b-991a-2d2f0d5bf195_1: 2048→1024, tripo_image_ef4e9282-9794-400b-991a-2d2f0d5bf195_2: 2048→1024",
+  "mb": 0.666832,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
  }
 }

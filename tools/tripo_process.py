@@ -746,7 +746,10 @@ def main(argv):
     if not rows:
         print("нечего обрабатывать")
         return
-    out = os.path.join(ROOT, "renders", "_review", f"tripo_{datetime.date.today().isoformat()}.png")
+    base = os.path.join(ROOT, "renders", "_review", f"tripo_{datetime.date.today().isoformat()}")
+    out, k = base + ".png", 2
+    while os.path.exists(out):                                      # не затирать лист того же дня
+        out, k = f"{base}_{k}.png", k + 1
     print("лист превью:", sheet(rows, out))
     if not no_docs:
         for name, e in entries.items():
