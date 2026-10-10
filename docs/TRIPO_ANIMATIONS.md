@@ -188,9 +188,124 @@ Character crouches and holds out food in one open hand toward a small animal on 
 
 ---
 
+## Г. Работа
+
+**32. Работает за верстаком** — `anim_workbench.glb` · повтор
+```
+Character stands at a workbench and works with both hands: hammering lightly, then adjusting a part, leaning slightly over the table, seamless loop, in place.
+```
+
+**33. Шьёт** — `anim_sew.glb` · повтор
+```
+Character sits at a table and sews by hand, pulling a needle and thread through fabric with small careful motions, seamless loop.
+```
+
+**34. Копает лопатой** — `anim_dig.glb` · повтор
+```
+Character digs the ground with a shovel: pushes it in with the foot, lifts the soil and throws it to the side, steady rhythm, seamless loop, in place.
+```
+
+**35. Поливает и сажает** — `anim_plant.glb` · повтор
+```
+Character kneels at a garden bed, makes a small hole in the soil with the hand, puts a seed in, covers it, then picks up a watering can and waters it, seamless loop.
+```
+
+**36. Несёт ящик** — `anim_carry_box.glb` · повтор
+```
+Character walks forward carrying a heavy box in front of the chest with both arms, leaning back slightly from the weight, seamless loop, in place.
+```
+
+**37. Поднимает с пола** — `anim_pick_up.glb` · один раз
+```
+Character bends down, picks up a small item from the floor with one hand, straightens up and looks at it.
+```
+
+**38. Лезет по лестнице** — `anim_climb_ladder.glb` · повтор
+```
+Character climbs up a vertical ladder, hands and feet moving alternately on the rungs, seamless loop, in place.
+```
+
+**39. Открывает дверь** — `anim_open_door.glb` · один раз
+```
+Character reaches out, grabs a door handle, turns it and pulls the door open, then steps forward.
+```
+
+**40. Пульт / рация** — `anim_radio.glb` · повтор
+```
+Character stands at a control panel with a radio, presses buttons and turns knobs with one hand, then raises a handset to the mouth and speaks, seamless loop.
+```
+
+---
+
+## Д. Бой
+
+**41. Стреляет из пистолета** — `anim_shoot_pistol.glb` · один раз
+```
+Character holds a pistol in both hands at arm's length, aims forward and fires one shot with a small recoil, then returns to the aiming pose.
+```
+
+**42. Стреляет из ружья** — `anim_shoot_rifle.glb` · один раз
+```
+Character holds a rifle at the shoulder, aims forward and fires one shot with a strong recoil, then returns to the aiming pose.
+```
+
+**43. Перезаряжает** — `anim_reload.glb` · один раз
+```
+Character holding a gun takes out the empty magazine, inserts a new one from the belt and racks the gun, then returns to a ready stance.
+```
+
+**44. Целится** — `anim_aim.glb` · повтор
+```
+Character stands holding a gun raised and aimed forward, steady, small breathing movements, seamless loop, in place.
+```
+
+**45. Получает удар** — `anim_hit.glb` · один раз
+```
+Character gets hit in the chest, staggers back one step, bends slightly in pain, then recovers to a standing stance.
+```
+
+**46. Падает (смерть)** — `anim_death.glb` · один раз
+```
+Character gets a fatal hit, knees give way, falls backward onto the ground and lies still.
+```
+
+**47. Уворачивается** — `anim_dodge.glb` · один раз
+```
+Character quickly dodges to the side with a short step and leans the body away, then returns to a ready stance.
+```
+
+---
+
+## Е. Состояния
+
+**48. Хромает** — `anim_limp.glb` · повтор
+```
+Character walks forward limping on the right leg, putting little weight on it, one hand on the thigh, seamless loop, in place.
+```
+
+**49. Болен** — `anim_sick.glb` · повтор
+```
+Character stands hunched, coughing hard, one hand over the mouth and the other on the stomach, swaying slightly, seamless loop, in place.
+```
+
+**50. Перевязывает себя** — `anim_bandage.glb` · один раз
+```
+Character sits on the ground and wraps a bandage around the own forearm with the other hand, then ties it.
+```
+
+**51. Испуган** — `anim_scared.glb` · повтор
+```
+Character stands frightened, shoulders raised, looking around quickly, stepping back a little and hands half raised in front, seamless loop, in place.
+```
+
+**52. Устал** — `anim_tired.glb` · повтор
+```
+Character stands bent forward with hands on the knees, breathing heavily, head down, seamless loop, in place.
+```
+
+---
+
 ## Потом (по желанию автора)
 
-Работа: за верстаком, шьёт, копает лопатой, поливает и сажает, несёт ящик, поднимает с пола, лезет по лестнице,
-открывает дверь, пульт / рация. Бой: выстрел из пистолета и ружья, перезарядка, прицел, получает удар, падает (смерть),
-уворачивается. Состояния: хромает, болен, перевязывает себя, испуган, устал, радуется, грустит. Общение: говорит,
-машет рукой, торгуется. Зомби и животные — свои (ходьба, бег, атака, удар, смерть).
+Состояния: радуется, грустит. Общение: говорит, машет рукой, торгуется. Зомби и животные — свои
+(ходьба, бег, атака, удар, смерть).
