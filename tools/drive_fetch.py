@@ -4,6 +4,7 @@
 
   python3 tools/drive_fetch.py                    — по списку tripo/drive.json (имя → id файла)
   python3 tools/drive_fetch.py --folder <id> <куда> — вся папка Диска (с подпапками), имена как на Диске
+  python3 tools/drive_fetch.py --list <файл.json>    — по другому списку (например tripo/characters.json)
 
 Уже скачанное пропускает (--force — заново)."""
 import json, os, re, sys, urllib.request
@@ -50,7 +51,7 @@ def main():
         i = a.index("--folder")
         fetch_folder(a[i + 1], os.path.join(ROOT, a[i + 2]))
     else:
-        lst = os.path.join(ROOT, "tripo", "drive.json")
+        lst = os.path.join(ROOT, a[a.index("--list") + 1]) if "--list" in a else os.path.join(ROOT, "tripo", "drive.json")
         if not os.path.exists(lst):
             print(__doc__)
             return
