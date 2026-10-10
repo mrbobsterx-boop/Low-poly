@@ -1,0 +1,412 @@
+{
+ "_comment": "Декор не из плана ОС (папка Диска «10 Декор-объекты», 2026-10-10): имя → название, размер [ширина, высота] см (подобран по виду), крепление. Обработка: tools/tripo_process.py → export/<имя>_idle.glb.",
+ "decor_tile_panel_white": {
+  "name": "Панель белой плитки",
+  "size": [
+   100,
+   100
+  ],
+  "mount": "wall"
+ },
+ "decor_gas_cylinders": {
+  "name": "Газовые баллоны",
+  "size": [
+   50,
+   140
+  ],
+  "mount": "floor"
+ },
+ "decor_garland_lights": {
+  "name": "Гирлянда лампочек",
+  "size": [
+   150,
+   30
+  ],
+  "mount": "wall"
+ },
+ "decor_pallet": {
+  "name": "Деревянный поддон",
+  "size": [
+   120,
+   15
+  ],
+  "mount": "floor"
+ },
+ "decor_chalkboard_easel": {
+  "name": "Доска для мела на подставке",
+  "size": [
+   70,
+   110
+  ],
+  "mount": "floor"
+ },
+ "decor_arch_wood": {
+  "name": "Деревянная арка",
+  "size": [
+   200,
+   200
+  ],
+  "mount": "floor"
+ },
+ "decor_wood_molding": {
+  "name": "Деревянная лепнина (полоса)",
+  "size": [
+   100,
+   12
+  ],
+  "mount": "wall"
+ },
+ "decor_wood_slat_panel": {
+  "name": "Панель из реек",
+  "size": [
+   100,
+   100
+  ],
+  "mount": "wall"
+ },
+ "decor_counter_wood": {
+  "name": "Деревянная стойка",
+  "size": [
+   150,
+   100
+  ],
+  "mount": "floor"
+ },
+ "decor_tool_board": {
+  "name": "Доска с инструментами",
+  "size": [
+   120,
+   80
+  ],
+  "mount": "wall"
+ },
+ "decor_brick_wall_panel": {
+  "name": "Кусок кирпичной стены",
+  "size": [
+   150,
+   150
+  ],
+  "mount": "wall"
+ },
+ "decor_light_red_emergency": {
+  "name": "Красный аварийный фонарь",
+  "size": [
+   25,
+   30
+  ],
+  "mount": "wall"
+ },
+ "decor_armchair": {
+  "name": "Кресло",
+  "size": [
+   90,
+   95
+  ],
+  "mount": "floor"
+ },
+ "decor_cable_channel": {
+  "name": "Кабельный канал (полоса)",
+  "size": [
+   100,
+   10
+  ],
+  "mount": "wall"
+ },
+ "decor_sacks": {
+  "name": "Мешки (мешковина)",
+  "size": [
+   100,
+   60
+  ],
+  "mount": "floor"
+ },
+ "decor_extinguisher_1": {
+  "name": "Огнетушитель на креплении (1)",
+  "size": [
+   25,
+   60
+  ],
+  "mount": "wall"
+ },
+ "decor_extinguisher_2": {
+  "name": "Огнетушитель на креплении (2)",
+  "size": [
+   25,
+   60
+  ],
+  "mount": "wall"
+ },
+ "decor_clothesline": {
+  "name": "Бельевая верёвка с одеждой",
+  "size": [
+   150,
+   80
+  ],
+  "mount": "wall"
+ },
+ "decor_container_panel": {
+  "name": "Панель морского контейнера",
+  "size": [
+   100,
+   200
+  ],
+  "mount": "wall"
+ },
+ "decor_foam_panels": {
+  "name": "Пенопластовые панели",
+  "size": [
+   100,
+   60
+  ],
+  "mount": "wall"
+ },
+ "decor_poster_mountain": {
+  "name": "Плакат с горой",
+  "size": [
+   50,
+   70
+  ],
+  "mount": "wall"
+ },
+ "decor_rug_round": {
+  "name": "Плетёная круглая салфетка/коврик",
+  "size": [
+   100,
+   5
+  ],
+  "mount": "floor"
+ },
+ "decor_sign_warning": {
+  "name": "Знак «Опасность» на подставке",
+  "size": [
+   60,
+   90
+  ],
+  "mount": "floor"
+ },
+ "decor_lamp_wall_industrial": {
+  "name": "Промышленный настенный светильник",
+  "size": [
+   30,
+   25
+  ],
+  "mount": "wall"
+ },
+ "decor_pipe_valves": {
+  "name": "Трубы с вентилями",
+  "size": [
+   80,
+   150
+  ],
+  "mount": "wall"
+ },
+ "decor_electric_cabinet": {
+  "name": "Электрошкаф с кабелями",
+  "size": [
+   60,
+   140
+  ],
+  "mount": "floor"
+ },
+ "decor_door_industrial": {
+  "name": "Промышленная дверь в раме",
+  "size": [
+   120,
+   210
+  ],
+  "mount": "floor"
+ },
+ "decor_light_panel": {
+  "name": "Световая панель (лампа дневного света)",
+  "size": [
+   120,
+   15
+  ],
+  "mount": "ceiling"
+ },
+ "decor_metal_duct": {
+  "name": "Металлический короб (балка)",
+  "size": [
+   150,
+   30
+  ],
+  "mount": "wall"
+ },
+ "decor_hose_hanging": {
+  "name": "Садовый шланг на крюке",
+  "size": [
+   50,
+   60
+  ],
+  "mount": "wall"
+ },
+ "decor_steel_beam": {
+  "name": "Стальная балка",
+  "size": [
+   150,
+   15
+  ],
+  "mount": "wall"
+ },
+ "decor_sticky_notes_wall": {
+  "name": "Стена из стикеров",
+  "size": [
+   100,
+   80
+  ],
+  "mount": "wall"
+ },
+ "decor_pipes_colored_h": {
+  "name": "Цветные трубы (горизонтально)",
+  "size": [
+   150,
+   20
+  ],
+  "mount": "wall"
+ },
+ "decor_street_lamp_post": {
+  "name": "Столб уличного освещения",
+  "size": [
+   40,
+   400
+  ],
+  "mount": "floor"
+ },
+ "decor_books_stack": {
+  "name": "Стопка книг",
+  "size": [
+   30,
+   50
+  ],
+  "mount": "floor"
+ },
+ "decor_sign_exit": {
+  "name": "Указатель выхода",
+  "size": [
+   50,
+   30
+  ],
+  "mount": "wall"
+ },
+ "body_base_female": {
+  "name": "Базовое тело — женщина (персонажи)",
+  "size": [
+   170,
+   170
+  ],
+  "mount": "floor",
+  "cat": "character"
+ },
+ "decor_curtain": {
+  "name": "Штора",
+  "size": [
+   120,
+   200
+  ],
+  "mount": "wall"
+ },
+ "decor_rug": {
+  "name": "Декоративный ковёр",
+  "size": [
+   200,
+   5
+  ],
+  "mount": "floor"
+ },
+ "decor_cart_crate": {
+  "name": "Ящик на тележке",
+  "size": [
+   70,
+   120
+  ],
+  "mount": "floor"
+ },
+ "decor_vault_door_round": {
+  "name": "Круглая гермодверь",
+  "size": [
+   150,
+   150
+  ],
+  "mount": "wall"
+ },
+ "decor_emblem_round": {
+  "name": "Круглая металлическая эмблема (лежит)",
+  "size": [
+   100,
+   10
+  ],
+  "mount": "floor"
+ },
+ "decor_cork_board": {
+  "name": "Пробковая доска с заметками",
+  "size": [
+   90,
+   70
+  ],
+  "mount": "wall"
+ },
+ "decor_metal_wall_panel": {
+  "name": "Металлическая стеновая панель",
+  "size": [
+   100,
+   100
+  ],
+  "mount": "wall"
+ },
+ "decor_vent_rusty": {
+  "name": "Ржавая вентиляционная решётка",
+  "size": [
+   60,
+   60
+  ],
+  "mount": "wall"
+ },
+ "decor_door_frame_rusty": {
+  "name": "Ржавая дверная рама",
+  "size": [
+   100,
+   210
+  ],
+  "mount": "floor"
+ },
+ "decor_column_rusty": {
+  "name": "Ржавая колонна",
+  "size": [
+   40,
+   300
+  ],
+  "mount": "floor"
+ },
+ "decor_junction_box": {
+  "name": "Ржавая распределительная коробка с кабелем",
+  "size": [
+   40,
+   30
+  ],
+  "mount": "floor"
+ },
+ "decor_barrels_rusty": {
+  "name": "Ржавые бочки (две)",
+  "size": [
+   120,
+   90
+  ],
+  "mount": "floor"
+ },
+ "decor_map_old": {
+  "name": "Старая карта (лежит)",
+  "size": [
+   60,
+   5
+  ],
+  "mount": "floor"
+ },
+ "decor_pipes_colored_v": {
+  "name": "Цветные трубы (вертикально)",
+  "size": [
+   30,
+   300
+  ],
+  "mount": "wall"
+ }
+}
