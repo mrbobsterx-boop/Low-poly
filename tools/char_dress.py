@@ -3,7 +3,9 @@
 
   python3 tools/char_dress.py <тело_с_ригом.glb> <выход.glb> <одежда1.glb> [одежда2.glb ...]
 
-Одежда должна быть в той же позе (T-поза), что и тело. Масштаб/место ищутся сами.
+Одежда — в той же T-позе, что тело. Место и размер ищутся сами (по близости к телу), потом одежда
+раздувается до свободы LOOSE (средний зазор до кожи, см при росте 1,8 м: верх 3, низ 2, обувь 0,5),
+точки под кожей выталкиваются наружу. Тип по имени файла: top_ / bottom_ / shoes_.
 """
 import json,struct,sys
 import numpy as np
@@ -21,7 +23,8 @@ def acc(j,bin_,i):
     return np.frombuffer(bin_,ct,a['count']*k,off).reshape(-1,k)
 # fit clothes onto rigged body, transfer skin weights, write merged GLB
 import numpy as np
-GAP=0.007
+GAP=0.004
+LOOSE={'top_':3.0,'bottom_':2.0,'shoes_':0.5}   # median gap cloth-skin, cm at 1.8 m
 from scipy.spatial import cKDTree
 
 def rot_y(v, deg):
@@ -53,11 +56,17 @@ def fit(cv, tree, bv, kind):
         k=np.sum((q-mq)*(v-mv))/np.sum((v-mv)**2)
         k=np.clip(k,0.97,1.03)
         v=(v-mv)*k+mq
+    c=v.mean(0); k=1.0
+    def med(w):
+        d,i=tree.query(w[::3]); return float(np.median(np.einsum('ij,ij->i',w[::3]-bv[i],BN[i])))
+    want=next((g for p,g in LOOSE.items() if kind.startswith(p)),2.0)/180.0
+    while med((v-c)*k+c)<want and k<1.3: k+=0.005
+    v=(v-c)*k+c
     d,i=tree.query(v)
     off=np.einsum('ij,ij->i',v-bv[i],BN[i])
     need=np.clip(GAP-off,0,None)
     v=v+BN[i]*need[:,None]
-    print('pushed',int((need>0).sum()),'of',len(v))
+    print('inflate',round(k,2),'pushed',int((need>0).sum()),'of',len(v),'gap cm median',round(float(np.median(off))*180,1),'p90',round(float(np.percentile(off,90))*180,1))
     d,_=tree.query(v)
     print(kind,'ang',ang,'s',round(s,3),'ty',round(ty,3),'mean dist',round(float(d.mean()),4),'p95',round(float(np.percentile(d,95)),4))
     return v
