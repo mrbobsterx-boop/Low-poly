@@ -75,12 +75,17 @@ def resolve(stem, plan):
     return oid, var, warns
 
 
+CREATURES = {"survivor_base", "raider_human", "trader_npc", "dog_feral", "rabbit_wild", "rat_pest", "mutant_crawler"}
+
+
 def size_class(o):
     w, h = (s / 100 for s in o["size"])
-    if h >= 1.5 or o["cat"] in LARGE_CATS:
+    if o["id"] in CREATURES or o["id"].startswith("zombie_"):    # персонажи и существа — до 15 000 (анимации потом)
         return "large"
     if max(w, h) < 0.55:
         return "small"
+    if h >= 1.5 or (o["cat"] in LARGE_CATS and max(w, h) >= 1.0):
+        return "large"
     return "furniture"
 
 
@@ -721,9 +726,16 @@ def main(argv):
     if "--color-test" in argv:
         color_test(args, plan, src, prev_dir)
         return
+    if "--collect" in argv:
+        collect(plan, out_dir, prev_dir, no_docs)
+        return
     files = sorted(f for f in os.listdir(src) if f.lower().endswith(".glb"))
     if args:
         files = [f for f in files if f[:-4] in args]
+    part = next((a.split("=")[1] for a in argv if a.startswith("--part=")), None)
+    if part:                                                        # параллельно: --part=k/n — каждая n-я модель
+        k_, n_ = (int(x) for x in part.split("/"))
+        files = files[k_::n_]
     rot_cfg, color_cfg = load_json("rotate.json", {}), load_json("color.json", {})
     entries, rows = {}, []
     walls = []
@@ -745,6 +757,8 @@ def main(argv):
         if r:
             entries[r[0]] = r[1]
             rows.append(row)
+            json.dump({"entry": r[1], "cap": row[0], "views": row[1], "cat": plan[oid]["cat"]},
+                      open(os.path.join(prev_dir, r[0] + ".json"), "w"), ensure_ascii=False)
     if walls:                                                       # стыки: куски подряд, вперемешку, 2 круга
         sets = {}
         for n in walls:
@@ -759,6 +773,8 @@ def main(argv):
     if not rows:
         print("нечего обрабатывать")
         return
+    if "--no-sheet" in argv:                                        # лист и отчёт соберёт --collect
+        return
     base = os.path.join(ROOT, "renders", "_review", f"tripo_{datetime.date.today().isoformat()}")
     out, k = base + ".png", 2
     while os.path.exists(out):                                      # не затирать лист того же дня
@@ -770,6 +786,64 @@ def main(argv):
                 add_deviation(name, e["size_cm"][0], e["os_cm"][0])
         write_report(entries)
         print("отчёт: docs/TRIPO_REPORT.md")
+
+
+def grid_sheet(items, title, out, per_row=4, C=220):
+    """Лист раздела: по per_row моделей в строке, у каждой — спереди и в 3/4, подпись."""
+    from PIL import Image, ImageDraw, ImageFont
+    try:
+        big = ImageFont.truetype("DejaVuSans-Bold.ttf", 20)
+        font = ImageFont.truetype("DejaVuSans-Bold.ttf", 13)
+        small = ImageFont.truetype("DejaVuSans.ttf", 12)
+    except OSError:
+        big = font = small = ImageFont.load_default()
+    PAD, CAP, HEAD = 12, 40, 40
+    cw = 2 * C + PAD
+    rows = (len(items) + per_row - 1) // per_row
+    s = Image.new("RGB", (PAD + per_row * (cw + PAD), HEAD + rows * (C + CAP + PAD)), (24, 25, 30))
+    d = ImageDraw.Draw(s)
+    d.text((PAD, 8), title, font=big, fill=(255, 210, 120))
+    for i, it in enumerate(items):
+        x, y = PAD + (i % per_row) * (cw + PAD), HEAD + (i // per_row) * (C + CAP + PAD)
+        name, sub = (it["cap"].split("\n", 1) + [""])[:2]
+        warn = bool(it["entry"]["warnings"])
+        d.text((x, y), name.replace("_idle", ""), font=font, fill=(255, 190, 120) if warn else (240, 240, 240))
+        d.text((x, y + 18), sub.split(" · поворот")[0], font=small, fill=(170, 170, 175))
+        for k, v in enumerate(it["views"]):
+            s.paste(Image.open(v).convert("RGB").resize((C, C)), (x + k * (C + PAD), y + CAP))
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    s.save(out, optimize=True)
+    return out
+
+
+CAT_TITLES = {"furniture": "Мебель", "workbench": "Верстаки", "container": "Контейнеры", "machine": "Техника и машины",
+              "building": "Строительное и двери", "decor": "Декор", "plant": "Растения", "resource": "Точки ресурсов",
+              "item": "Предметы", "tool": "Инструменты", "weapon": "Оружие", "clothing": "Одежда",
+              "character": "Персонажи", "creature": "Существа", "vehicle": "Машины"}
+
+
+def collect(plan, out_dir, prev_dir, no_docs):
+    """После обработки (в т. ч. параллельной): листы превью по разделам + отчёт + DEVIATIONS."""
+    items = []
+    for f in sorted(os.listdir(prev_dir)):
+        if f.endswith(".json") and os.path.exists(os.path.join(out_dir, f[:-5] + ".glb")):
+            it = json.load(open(os.path.join(prev_dir, f)))
+            it["name"] = f[:-5]
+            items.append(it)
+    cats = {}
+    for it in items:
+        cats.setdefault(it["cat"], []).append(it)
+    day = datetime.date.today().isoformat()
+    for cat, its in cats.items():
+        title = f"{CAT_TITLES.get(cat, cat)} ({cat}) — {len(its)} шт. · слева — спереди, справа — в 3/4"
+        print("лист:", grid_sheet(its, title, os.path.join(ROOT, "renders", "_review", f"tripo_{day}_{cat}.png")))
+    if not no_docs:
+        entries = {it["name"]: it["entry"] for it in items}
+        for name, e in entries.items():
+            if any("DEVIATIONS" in w for w in e["warnings"]):
+                add_deviation(name, e["size_cm"][0], e["os_cm"][0])
+        write_report(entries)
+        print("отчёт: docs/TRIPO_REPORT.md,", len(entries), "моделей")
 
 
 if __name__ == "__main__":
