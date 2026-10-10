@@ -55,6 +55,19 @@ def load_plan():
     return {o["id"]: o for o in json.load(open(os.path.join(ROOT, "docs", "plan.json")))}
 
 
+def out_name(oid, var):
+    """Имя экспорта: <id>_<вариант>_idle; декор не из плана (tripo/decor.json) — <имя>_idle."""
+    return f"{oid}_idle" if var is None else f"{oid}_{var}_idle"
+
+
+def add_decor(plan):
+    """Декор не из плана ОС (обстановка комнат): tripo/decor.json — имя → размер [ширина, высота] см, крепление."""
+    for k, d in load_json("decor.json", {}).items():
+        if not k.startswith("_"):
+            plan[k] = {"id": k, "name": d.get("name", k), "cat": d.get("cat", "decor_set"), "size": d["size"],
+                       "mount": d.get("mount", "floor"), "variants": [], "decor": True}
+
+
 def resolve(stem, plan):
     """Имя файла → (id, вариант, предупреждения). Самый длинный id из плана, с которого начинается имя."""
     warns = []
@@ -62,6 +75,8 @@ def resolve(stem, plan):
     if not ids:
         return None, None, [f"id не найден в плане ОС (docs/plan.json) — модель пропущена"]
     oid = ids[0]
+    if plan[oid].get("decor"):
+        return (oid, None, []) if stem == oid else (None, None, [f"декор `{oid}`: имя файла должно быть ровно `{oid}.glb`"])
     vars_ok = [v["slug"] for v in plan[oid]["variants"] if not v["skip"]]
     if stem == oid:
         var = vars_ok[0] if vars_ok else "default"
@@ -516,7 +531,7 @@ def process(path, plan, out_dir, rot_cfg, color_cfg, prev_dir):
         print(f"[{stem}] ⚠ {warns[0]}")
         return None, None
     o = plan[oid]
-    name = f"{oid}_{var}_idle"
+    name = out_name(oid, var)
     cls = size_class(o)
     obj, n_parts = import_joined(path)
     t0 = tris(obj)
@@ -729,6 +744,7 @@ def main(argv):
     global SRC
     SRC = src
     plan = load_plan()
+    add_decor(plan)
     prev_dir = os.path.join(ROOT, "renders", "_review", "tripo_views")
     os.makedirs(prev_dir, exist_ok=True)
     if "--color-test" in argv:
@@ -758,7 +774,7 @@ def main(argv):
             walls.append(n)
             continue
         oid, var, _ = resolve(stem, plan)
-        if oid and not force and os.path.exists(os.path.join(out_dir, f"{oid}_{var}_idle.glb")):
+        if oid and not force and os.path.exists(os.path.join(out_dir, out_name(oid, var) + ".glb")):
             print(f"[{stem}] уже есть в export/ — пропуск (--force — заново)")
             continue
         r, row = process(os.path.join(src, f), plan, out_dir, rot_cfg, color_cfg, prev_dir)
@@ -827,7 +843,8 @@ def grid_sheet(items, title, out, per_row=4, C=220):
 CAT_TITLES = {"furniture": "Мебель", "workbench": "Верстаки", "container": "Контейнеры", "machine": "Техника и машины",
               "building": "Строительное и двери", "decor": "Декор", "plant": "Растения", "resource": "Точки ресурсов",
               "item": "Предметы", "tool": "Инструменты", "weapon": "Оружие", "clothing": "Одежда",
-              "character": "Персонажи", "creature": "Существа", "vehicle": "Машины"}
+              "character": "Персонажи", "creature": "Существа", "vehicle": "Машины",
+              "decor_set": "Декор для обстановки (не из плана ОС)"}
 
 
 def collect(plan, out_dir, prev_dir, no_docs):
