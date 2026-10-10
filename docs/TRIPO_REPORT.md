@@ -19,6 +19,7 @@
 | `bench_street_derevyannaya_idle` | `bench_street_derevyannaya.glb` | 45 972 → 7 840 (8 000) | 150 × 97 × 92 | 150 × 80 | ×1.5 | 270° | floor | 1 шт. 2048→1024 | 0.39 | — |
 | `bike_generator_statsionarnyy_idle` | `bike_generator_statsionarnyy.glb` | 45 800 → 14 700 (15 000) | 120 × 71 × 110 | 120 × 110 | ×1.2 | 270° | floor | 1 шт. 2048→1024 | 0.63 | — |
 | `billboard_road_tselyy_idle` | `billboard_road_tselyy.glb` | 46 144 → 14 700 (15 000) | 231 × 79 × 400 | 150 × 400 | ×4 | 270° | floor | 1 шт. 2048→1024 | 0.55 | ⚠ ширина 231 см  в ОС 150 см (> 15 %) — записано в DEVIATIONS.md |
+| `body_base_female_idle` | `body_base_female.glb` | 47 294 → 14 700 (15 000) | 163 × 34 × 170 | 170 × 170 | ×1.7 | 0° | floor | 1 шт. 2048→1024 | 0.44 | ⚠ в файле 2 отдельных объектов — склеены в один |
 | `bottle_water_plastikovaya_0_5_l_idle` | `bottle_water_plastikovaya_0_5_l.glb` | 48 176 → 2 940 (3 000) | 10 × 10 × 25 | 8 × 25 | ×0.25 | 270° | floor | 1 шт. 2048→512 | 0.14 | ⚠ ширина 10 см  в ОС 8 см (> 15 %) — записано в DEVIATIONS.md |
 | `bucket_metallicheskoe_idle` | `bucket_metallicheskoe.glb` | 47 746 → 2 940 (3 000) | 23 × 20 × 30 | 30 × 30 | ×0.3 | 270° | floor | 1 шт. 2048→512 | 0.15 | ⚠ ширина 23 см  в ОС 30 см (> 15 %) — записано в DEVIATIONS.md |
 | `bunk_bed_metallicheskaya_idle` | `bunk_bed_metallicheskaya.glb` | 41 609 → 14 699 (15 000) | 200 × 125 × 149 | 200 × 180 | ×2 | 270° | floor | 1 шт. 2048→1024 | 0.58 | — |
@@ -38,6 +39,56 @@
 | `corpse_zombie_svezhee_idle` | `corpse_zombie_svezhee.glb` | 49 086 → 7 840 (8 000) | 180 × 100 × 31 | 180 × 30 | ×1.8 | 270° | floor | 1 шт. 2048→1024 | 0.49 | — |
 | `cot_medical_skladnaya_idle` | `cot_medical_skladnaya.glb` | 44 820 → 7 840 (8 000) | 190 × 100 × 77 | 190 × 80 | ×1.9 | 0° | floor | 1 шт. 2048→1024 | 0.36 | — |
 | `crate_wood_malyy_idle` | `crate_wood_malyy.glb` | 40 005 → 7 839 (8 000) | 70 × 58 × 50 | 60 × 50 | ×0.703 | 270° | floor | 1 шт. 2048→1024 | 0.44 | ⚠ ширина 70 см  в ОС 60 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_arch_wood_idle` | `decor_arch_wood.glb` | 38 325 → 14 699 (15 000) | 254 × 169 × 200 | 200 × 200 | ×2.54 | 270° | floor | 1 шт. 2048→1024 | 0.58 | ⚠ ширина 254 см  в ОС 200 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_armchair_idle` | `decor_armchair.glb` | 47 495 → 7 839 (8 000) | 103 × 87 × 95 | 90 × 95 | ×1.03 | 180° | floor | 1 шт. 2048→1024 | 0.27 | — |
+| `decor_barrels_rusty_idle` | `decor_barrels_rusty.glb` | 47 826 → 7 840 (8 000) | 122 × 68 × 90 | 120 × 90 | ×1.22 | 270° | floor | 1 шт. 2048→1024 | 0.31 | ⚠ 1 отдельн. крупн. кус(ка/ков) в стороне от главного — возможно  лишняя вещь с картинки (рюкзак  ящик…) — посмотреть на превью |
+| `decor_books_stack_idle` | `decor_books_stack.glb` | 45 966 → 2 940 (3 000) | 27 × 26 × 50 | 30 × 50 | ×0.5 | 270° | floor | 1 шт. 2048→512 | 0.21 | — |
+| `decor_brick_wall_panel_idle` | `decor_brick_wall_panel.glb` | 40 965 → 14 700 (15 000) | 139 × 29 × 150 | 150 × 150 | ×1.5 | 270° | wall | 1 шт. 2048→1024 | 0.84 | — |
+| `decor_cable_channel_idle` | `decor_cable_channel.glb` | 48 034 → 7 840 (8 000) | 100 × 20 × 8 | 100 × 10 | ×1 | 270° | wall | 1 шт. 2048→1024 | 0.34 | — |
+| `decor_cart_crate_idle` | `decor_cart_crate.glb` | 40 971 → 7 840 (8 000) | 110 × 81 × 120 | 70 × 120 | ×1.2 | 270° | floor | 1 шт. 2048→1024 | 0.50 | ⚠ ширина 110 см  в ОС 70 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_chalkboard_easel_idle` | `decor_chalkboard_easel.glb` | 45 106 → 7 840 (8 000) | 96 × 54 × 110 | 70 × 110 | ×1.1 | 270° | floor | 1 шт. 2048→1024 | 0.40 | ⚠ ширина 96 см  в ОС 70 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_clothesline_idle` | `decor_clothesline.glb` | 49 012 → 7 840 (8 000) | 150 × 19 × 83 | 150 × 80 | ×1.5 | 270° | wall | 1 шт. 2048→1024 | 0.37 | — |
+| `decor_column_rusty_idle` | `decor_column_rusty.glb` | 47 354 → 14 700 (15 000) | 47 × 82 × 300 | 40 × 300 | ×3 | 270° | floor | 1 шт. 2048→1024 | 0.43 | ⚠ ширина 47 см  в ОС 40 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_container_panel_idle` | `decor_container_panel.glb` | 38 046 → 14 700 (15 000) | 190 × 146 × 200 | 100 × 200 | ×2 | 270° | wall | 1 шт. 2048→1024 | 0.56 | ⚠ ширина 190 см  в ОС 100 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_cork_board_idle` | `decor_cork_board.glb` | 41 588 → 7 840 (8 000) | 79 × 5 × 70 | 90 × 70 | ×0.789 | 270° | wall | 1 шт. 2048→1024 | 0.40 | — |
+| `decor_counter_wood_idle` | `decor_counter_wood.glb` | 44 110 → 7 840 (8 000) | 152 × 31 × 100 | 150 × 100 | ×1.52 | 270° | floor | 1 шт. 2048→1024 | 0.27 | — |
+| `decor_curtain_idle` | `decor_curtain.glb` | 45 862 → 14 700 (15 000) | 167 × 31 × 200 | 120 × 200 | ×2 | 270° | wall | 1 шт. 2048→1024 | 0.51 | ⚠ ширина 167 см  в ОС 120 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_door_frame_rusty_idle` | `decor_door_frame_rusty.glb` | 47 834 → 14 700 (15 000) | 98 × 56 × 210 | 100 × 210 | ×2.1 | 270° | floor | 1 шт. 2048→1024 | 0.42 | — |
+| `decor_door_industrial_idle` | `decor_door_industrial.glb` | 43 651 → 14 699 (15 000) | 184 × 143 × 210 | 120 × 210 | ×2.1 | 270° | floor | 1 шт. 2048→1024 | 0.47 | ⚠ ширина 184 см  в ОС 120 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_electric_cabinet_idle` | `decor_electric_cabinet.glb` | 46 210 → 7 838 (8 000) | 66 × 59 × 140 | 60 × 140 | ×1.4 | 270° | floor | 1 шт. 2048→1024 | 0.35 | — |
+| `decor_emblem_round_idle` | `decor_emblem_round.glb` | 47 024 → 7 840 (8 000) | 100 × 100 × 13 | 100 × 10 | ×1 | 0° | floor | 1 шт. 2048→1024 | 0.39 | ⚠ подогнано по ширине; высота 13 см  в ОС 10 см |
+| `decor_extinguisher_1_idle` | `decor_extinguisher_1.glb` | 46 350 → 7 840 (8 000) | 23 × 18 × 60 | 25 × 60 | ×0.6 | 270° | wall | 1 шт. 2048→1024 | 0.31 | — |
+| `decor_extinguisher_2_idle` | `decor_extinguisher_2.glb` | 46 420 → 7 838 (8 000) | 26 × 18 × 60 | 25 × 60 | ×0.6 | 270° | wall | 1 шт. 2048→1024 | 0.33 | — |
+| `decor_foam_panels_idle` | `decor_foam_panels.glb` | 47 984 → 7 838 (8 000) | 100 × 15 × 60 | 100 × 60 | ×1 | 270° | wall | 1 шт. 2048→1024 | 0.41 | — |
+| `decor_garland_lights_idle` | `decor_garland_lights.glb` | 47 971 → 7 839 (8 000) | 150 × 11 × 44 | 150 × 30 | ×1.5 | 270° | wall | 1 шт. 2048→1024 | 0.40 | ⚠ подогнано по ширине; высота 44 см  в ОС 30 см |
+| `decor_gas_cylinders_idle` | `decor_gas_cylinders.glb` | 49 584 → 7 840 (8 000) | 55 × 45 × 140 | 50 × 140 | ×1.4 | 270° | floor | 1 шт. 2048→1024 | 0.37 | — |
+| `decor_hose_hanging_idle` | `decor_hose_hanging.glb` | 48 464 → 7 838 (8 000) | 47 × 17 × 60 | 50 × 60 | ×0.6 | 0° | wall | 1 шт. 2048→1024 | 0.32 | — |
+| `decor_junction_box_idle` | `decor_junction_box.glb` | 46 510 → 2 940 (3 000) | 75 × 56 × 30 | 40 × 30 | ×0.748 | 270° | floor | 1 шт. 2048→512 | 0.14 | ⚠ ширина 75 см  в ОС 40 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_lamp_wall_industrial_idle` | `decor_lamp_wall_industrial.glb` | 47 310 → 2 940 (3 000) | 25 × 34 × 25 | 30 × 25 | ×0.341 | 270° | wall | 1 шт. 2048→512 | 0.20 | ⚠ ширина 25 см  в ОС 30 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_light_panel_idle` | `decor_light_panel.glb` | 44 831 → 7 839 (8 000) | 120 × 12 × 26 | 120 × 15 | ×1.2 | 270° | ceiling | 1 шт. 2048→1024 | 0.33 | ⚠ подогнано по ширине; высота 26 см  в ОС 15 см |
+| `decor_light_red_emergency_idle` | `decor_light_red_emergency.glb` | 47 234 → 2 940 (3 000) | 22 × 21 × 30 | 25 × 30 | ×0.3 | 270° | wall | 1 шт. 2048→512 | 0.16 | — |
+| `decor_map_old_idle` | `decor_map_old.glb` | 47 250 → 7 838 (8 000) | 60 × 60 × 5 | 60 × 5 | ×0.602 | 0° | floor | 1 шт. 2048→1024 | 0.37 | — |
+| `decor_metal_duct_idle` | `decor_metal_duct.glb` | 43 116 → 7 840 (8 000) | 150 × 49 × 44 | 150 × 30 | ×1.5 | 270° | wall | 1 шт. 2048→1024 | 0.32 | ⚠ подогнано по ширине; высота 44 см  в ОС 30 см |
+| `decor_metal_wall_panel_idle` | `decor_metal_wall_panel.glb` | 44 563 → 7 839 (8 000) | 107 × 36 × 100 | 100 × 100 | ×1.07 | 270° | wall | 1 шт. 2048→1024 | 0.39 | — |
+| `decor_pallet_idle` | `decor_pallet.glb` | 35 810 → 7 840 (8 000) | 120 × 120 × 16 | 120 × 15 | ×1.2 | 270° | floor | 1 шт. 2048→1024 | 0.34 | — |
+| `decor_pipe_valves_idle` | `decor_pipe_valves.glb` | 44 034 → 14 700 (15 000) | 90 × 39 × 150 | 80 × 150 | ×1.5 | 270° | wall | 1 шт. 2048→1024 | 0.49 | — |
+| `decor_pipes_colored_h_idle` | `decor_pipes_colored_h.glb` | 43 664 → 7 838 (8 000) | 150 × 22 × 40 | 150 × 20 | ×1.5 | 270° | wall | 1 шт. 2048→1024 | 0.38 | ⚠ подогнано по ширине; высота 40 см  в ОС 20 см |
+| `decor_pipes_colored_v_idle` | `decor_pipes_colored_v.glb` | 49 256 → 14 698 (15 000) | 57 × 60 × 300 | 30 × 300 | ×3 | 270° | wall | 1 шт. 2048→1024 | 0.54 | ⚠ ширина 57 см  в ОС 30 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_poster_mountain_idle` | `decor_poster_mountain.glb` | 46 194 → 7 840 (8 000) | 44 × 12 × 70 | 50 × 70 | ×0.7 | 270° | wall | 1 шт. 2048→1024 | 0.40 | — |
+| `decor_rug_idle` | `decor_rug.glb` | 47 874 → 7 840 (8 000) | 200 × 166 × 9 | 200 × 5 | ×2 | 0° | floor | 1 шт. 2048→1024 | 0.53 | ⚠ подогнано по ширине; высота 9 см  в ОС 5 см |
+| `decor_rug_round_idle` | `decor_rug_round.glb` | 46 952 → 7 840 (8 000) | 100 × 100 × 6 | 100 × 5 | ×1 | 0° | floor | 1 шт. 2048→1024 | 0.37 | — |
+| `decor_sacks_idle` | `decor_sacks.glb` | 48 510 → 7 840 (8 000) | 100 × 87 × 58 | 100 × 60 | ×1 | 270° | floor | 1 шт. 2048→1024 | 0.38 | — |
+| `decor_sign_exit_idle` | `decor_sign_exit.glb` | 47 650 → 2 940 (3 000) | 50 × 4 × 32 | 50 × 30 | ×0.5 | 270° | wall | 1 шт. 2048→512 | 0.15 | — |
+| `decor_sign_warning_idle` | `decor_sign_warning.glb` | 47 680 → 7 840 (8 000) | 56 × 38 × 90 | 60 × 90 | ×0.9 | 270° | floor | 1 шт. 2048→1024 | 0.39 | — |
+| `decor_steel_beam_idle` | `decor_steel_beam.glb` | 45 698 → 7 840 (8 000) | 150 × 36 × 25 | 150 × 15 | ×1.5 | 270° | wall | 1 шт. 2048→1024 | 0.33 | ⚠ подогнано по ширине; высота 25 см  в ОС 15 см |
+| `decor_sticky_notes_wall_idle` | `decor_sticky_notes_wall.glb` | 46 665 → 7 839 (8 000) | 79 × 11 × 80 | 100 × 80 | ×0.8 | 270° | wall | 1 шт. 2048→1024 | 0.47 | ⚠ 50 отдельн. крупн. кус(ка/ков) в стороне от главного — возможно  лишняя вещь с картинки (рюкзак  ящик…) — посмотреть на превью<br>⚠ 48 кус(ка/ков) висит в воздухе<br>⚠ много мелких отдельных кусков (61) — Tripo мог «насорить»<br>⚠ ширина 79 см  в ОС 100 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_street_lamp_post_idle` | `decor_street_lamp_post.glb` | 49 394 → 14 700 (15 000) | 111 × 41 × 400 | 40 × 400 | ×4 | 0° | floor | 1 шт. 2048→1024 | 0.43 | ⚠ ширина 111 см  в ОС 40 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_tile_panel_white_idle` | `decor_tile_panel_white.glb` | 43 436 → 7 840 (8 000) | 120 × 22 × 100 | 100 × 100 | ×1.2 | 270° | wall | 1 шт. 2048→1024 | 0.33 | ⚠ ширина 120 см  в ОС 100 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_tool_board_idle` | `decor_tool_board.glb` | 45 069 → 7 839 (8 000) | 102 × 11 × 80 | 120 × 80 | ×1.02 | 270° | wall | 1 шт. 2048→1024 | 0.58 | ⚠ ширина 102 см  в ОС 120 см (> 15 %) — записано в DEVIATIONS.md |
+| `decor_vault_door_round_idle` | `decor_vault_door_round.glb` | 46 990 → 14 698 (15 000) | 150 × 44 × 150 | 150 × 150 | ×1.5 | 270° | wall | 1 шт. 2048→1024 | 0.62 | — |
+| `decor_vent_rusty_idle` | `decor_vent_rusty.glb` | 43 780 → 7 840 (8 000) | 60 × 10 × 60 | 60 × 60 | ×0.604 | 270° | wall | 1 шт. 2048→1024 | 0.34 | — |
+| `decor_wood_molding_idle` | `decor_wood_molding.glb` | 44 116 → 7 840 (8 000) | 100 × 40 × 17 | 100 × 12 | ×1 | 270° | wall | 1 шт. 2048→1024 | 0.30 | ⚠ подогнано по ширине; высота 17 см  в ОС 12 см |
+| `decor_wood_slat_panel_idle` | `decor_wood_slat_panel.glb` | 41 223 → 7 839 (8 000) | 117 × 58 × 100 | 100 × 100 | ×1.17 | 270° | wall | 1 шт. 2048→1024 | 0.41 | ⚠ ширина 117 см  в ОС 100 см (> 15 %) — записано в DEVIATIONS.md |
 | `dog_feral_odinochnaya_idle` | `dog_feral_odinochnaya.glb` | 49 506 → 14 700 (15 000) | 29 × 89 × 60 | 90 × 60 | ×0.885 | 270° | floor | 1 шт. 2048→1024 | 0.52 | ⚠ ширина 29 см  в ОС 90 см (> 15 %) — записано в DEVIATIONS.md |
 | `door_metal_stalnaya_idle` | `door_metal_stalnaya.glb` | 43 077 → 14 699 (15 000) | 115 × 30 × 200 | 100 × 200 | ×2 | 270° | floor | 1 шт. 2048→1024 | 0.53 | ⚠ ширина 115 см  в ОС 100 см (> 15 %) — записано в DEVIATIONS.md |
 | `door_wood_vnutrennyaya_idle` | `door_wood_vnutrennyaya.glb` | 43 342 → 14 700 (15 000) | 105 × 44 × 200 | 100 × 200 | ×2 | 270° | floor | 1 шт. 2048→1024 | 0.50 | — |

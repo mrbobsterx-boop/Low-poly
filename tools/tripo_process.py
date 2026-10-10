@@ -865,8 +865,8 @@ def collect(plan, out_dir, prev_dir, no_docs):
     if not no_docs:
         entries = {it["name"]: it["entry"] for it in items}
         for name, e in entries.items():
-            if any("DEVIATIONS" in w for w in e["warnings"]):
-                add_deviation(name, e["size_cm"][0], e["os_cm"][0])
+            if any("DEVIATIONS" in w for w in e["warnings"]) and not name.startswith(("decor_", "body_")):
+                add_deviation(name, e["size_cm"][0], e["os_cm"][0])        # декор не из ОС — размер свой, не отклонение
         write_report(entries)
         print("отчёт: docs/TRIPO_REPORT.md,", len(entries), "моделей")
 

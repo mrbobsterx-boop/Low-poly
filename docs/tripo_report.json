@@ -4319,5 +4319,1282 @@
   "jpeg_q": 85,
   "warnings": [],
   "date": "2026-10-10"
+ },
+ "body_base_female_idle": {
+  "src": "body_base_female.glb",
+  "tris_before": 47294,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   163.26611042022705,
+   33.74786376953125,
+   170.00000476837158
+  ],
+  "os_cm": [
+   170,
+   170
+  ],
+  "scale": 1.7000006026016112,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "female_character_3d_model_basecolor: 2048→1024",
+  "mb": 0.440512,
+  "jpeg_q": 85,
+  "warnings": [
+   "в файле 2 отдельных объектов — склеены в один"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_arch_wood_idle": {
+  "src": "decor_arch_wood.glb",
+  "tris_before": 38325,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   253.68120670318604,
+   169.4511115550995,
+   200.0
+  ],
+  "os_cm": [
+   200,
+   200
+  ],
+  "scale": 2.5368119532399165,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_9bd7c225-3648-405d-b269-f9e8ad45ab72_0: 2048→1024",
+  "mb": 0.577504,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 254 см, в ОС 200 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_armchair_idle": {
+  "src": "decor_armchair.glb",
+  "tris_before": 47495,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   102.8805673122406,
+   87.18223571777344,
+   94.9999988079071
+  ],
+  "os_cm": [
+   90,
+   95
+  ],
+  "scale": 1.028805605129222,
+  "rotate": 180,
+  "mount": "floor",
+  "textures": "tripo_image_747ca909-926a-46e8-8c9b-bda3341da6a0_0: 2048→1024",
+  "mb": 0.274216,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_barrels_rusty_idle": {
+  "src": "decor_barrels_rusty.glb",
+  "tris_before": 47826,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   122.41076231002808,
+   67.50373244285583,
+   90.00000357627869
+  ],
+  "os_cm": [
+   120,
+   90
+  ],
+  "scale": 1.2241075875809397,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_8cdba733-baaa-4bcc-b4d6-ff2e3a766f84_0: 2048→1024",
+  "mb": 0.30542,
+  "jpeg_q": 85,
+  "warnings": [
+   "1 отдельн. крупн. кус(ка/ков) в стороне от главного — возможно, лишняя вещь с картинки (рюкзак, ящик…) — посмотреть на превью"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_books_stack_idle": {
+  "src": "decor_books_stack.glb",
+  "tris_before": 45966,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   26.85546875,
+   26.28173828125,
+   50.0
+  ],
+  "os_cm": [
+   30,
+   50
+  ],
+  "scale": 0.5,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_f123c83f-9f48-46e6-b13a-b6a3a70498aa_0: 2048→512",
+  "mb": 0.209812,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_brick_wall_panel_idle": {
+  "src": "decor_brick_wall_panel.glb",
+  "tris_before": 40965,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   139.0869140625,
+   29.463955760002136,
+   150.0
+  ],
+  "os_cm": [
+   150,
+   150
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_b3135846-d876-42e7-99f9-e8cfc52ff2d4_0: 2048→1024",
+  "mb": 0.841572,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_cable_channel_idle": {
+  "src": "decor_cable_channel.glb",
+  "tris_before": 48034,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   19.58465576171875,
+   8.23516845703125
+  ],
+  "os_cm": [
+   100,
+   10
+  ],
+  "scale": 1.0,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_bd97030f-6cb4-4e84-857f-fa3f53a0b1cb_0: 2048→1024",
+  "mb": 0.340788,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_cart_crate_idle": {
+  "src": "decor_cart_crate.glb",
+  "tris_before": 40971,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   109.73145365715027,
+   81.12304508686066,
+   120.00000476837158
+  ],
+  "os_cm": [
+   70,
+   120
+  ],
+  "scale": 1.2,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_8b513764-0d4a-44dc-bbbf-72b4da53470b_0: 2048→1024",
+  "mb": 0.500508,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 110 см, в ОС 70 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_chalkboard_easel_idle": {
+  "src": "decor_chalkboard_easel.glb",
+  "tris_before": 45106,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   96.31042182445526,
+   53.757935762405396,
+   110.00000238418579
+  ],
+  "os_cm": [
+   70,
+   110
+  ],
+  "scale": 1.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2b2be0a7-fa26-4e96-8da5-14a2ea8ecde7_0: 2048→1024",
+  "mb": 0.39802,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 96 см, в ОС 70 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_clothesline_idle": {
+  "src": "decor_clothesline.glb",
+  "tris_before": 49012,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   150.0,
+   18.6435729265213,
+   82.5164794921875
+  ],
+  "os_cm": [
+   150,
+   80
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_a9356a5a-624e-4271-9411-14c646994cc4_0: 2048→1024",
+  "mb": 0.372972,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_column_rusty_idle": {
+  "src": "decor_column_rusty.glb",
+  "tris_before": 47354,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   46.80633544921875,
+   81.793212890625,
+   300.0
+  ],
+  "os_cm": [
+   40,
+   300
+  ],
+  "scale": 3.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4a3aef1f-f832-4ac8-8a1b-7c635802ed8d_0: 2048→1024",
+  "mb": 0.42762,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 47 см, в ОС 40 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_container_panel_idle": {
+  "src": "decor_container_panel.glb",
+  "tris_before": 38046,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   190.478515625,
+   146.3134765625,
+   200.0
+  ],
+  "os_cm": [
+   100,
+   200
+  ],
+  "scale": 2.0,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_4383bd61-01c0-4f2a-a3c5-a1d86deca83f_0: 2048→1024",
+  "mb": 0.560564,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 190 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_cork_board_idle": {
+  "src": "decor_cork_board.glb",
+  "tris_before": 41588,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   78.8938581943512,
+   5.400357022881508,
+   69.9999988079071
+  ],
+  "os_cm": [
+   90,
+   70
+  ],
+  "scale": 0.7889385705441287,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_ff7098c6-0616-4cf5-a0f4-866deac2c955_0: 2048→1024",
+  "mb": 0.399588,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_counter_wood_idle": {
+  "src": "decor_counter_wood.glb",
+  "tris_before": 44110,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   151.73180103302002,
+   30.998803675174713,
+   100.0
+  ],
+  "os_cm": [
+   150,
+   100
+  ],
+  "scale": 1.5173180218558993,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_a4071792-503c-453d-8ef7-2be60f48c9df_0: 2048→1024",
+  "mb": 0.265924,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_curtain_idle": {
+  "src": "decor_curtain.glb",
+  "tris_before": 45862,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   166.845703125,
+   30.709832906723022,
+   200.0
+  ],
+  "os_cm": [
+   120,
+   200
+  ],
+  "scale": 2.0,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_44185cf8-45fb-4749-959e-fef5fcd05cae_0: 2048→1024",
+  "mb": 0.51164,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 167 см, в ОС 120 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_door_frame_rusty_idle": {
+  "src": "decor_door_frame_rusty.glb",
+  "tris_before": 47834,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   98.11705946922302,
+   55.986326932907104,
+   209.99999046325684
+  ],
+  "os_cm": [
+   100,
+   210
+  ],
+  "scale": 2.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2c2aa47d-7021-455f-9304-f0b9b88abb56_0: 2048→1024",
+  "mb": 0.420512,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_door_industrial_idle": {
+  "src": "decor_door_industrial.glb",
+  "tris_before": 43651,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   184.49339866638184,
+   142.54210591316223,
+   209.99999046325684
+  ],
+  "os_cm": [
+   120,
+   210
+  ],
+  "scale": 2.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_168e06aa-9a77-424b-9992-00497c555def_0: 2048→1024",
+  "mb": 0.471268,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 184 см, в ОС 120 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_electric_cabinet_idle": {
+  "src": "decor_electric_cabinet.glb",
+  "tris_before": 46210,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   66.14196598529816,
+   59.03686583042145,
+   139.9999976158142
+  ],
+  "os_cm": [
+   60,
+   140
+  ],
+  "scale": 1.4,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_493e898d-ad70-4d1f-83ce-d63dcac0278e_0: 2048→1024",
+  "mb": 0.350824,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_emblem_round_idle": {
+  "src": "decor_emblem_round.glb",
+  "tris_before": 47024,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   99.951171875,
+   12.67547607421875
+  ],
+  "os_cm": [
+   100,
+   10
+  ],
+  "scale": 1.0,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_6502e6cc-5c9a-4629-9fa8-180f143bf99a_0: 2048→1024",
+  "mb": 0.392976,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 13 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_extinguisher_1_idle": {
+  "src": "decor_extinguisher_1.glb",
+  "tris_before": 46350,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   23.329468071460724,
+   17.94067472219467,
+   60.00000238418579
+  ],
+  "os_cm": [
+   25,
+   60
+  ],
+  "scale": 0.6,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_6b36071a-8278-440c-a7bd-04e71538856e_0: 2048→1024",
+  "mb": 0.309588,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_extinguisher_2_idle": {
+  "src": "decor_extinguisher_2.glb",
+  "tris_before": 46420,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   26.160278916358948,
+   18.464356660842896,
+   60.00000238418579
+  ],
+  "os_cm": [
+   25,
+   60
+  ],
+  "scale": 0.6,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_aee764d5-3698-4b95-906f-47af2ee31532_0: 2048→1024",
+  "mb": 0.330952,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_foam_panels_idle": {
+  "src": "decor_foam_panels.glb",
+  "tris_before": 47984,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   15.098574757575989,
+   59.539794921875
+  ],
+  "os_cm": [
+   100,
+   60
+  ],
+  "scale": 1.0,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_b4444107-0847-4d6b-903e-954dee909a39_0: 2048→1024",
+  "mb": 0.410012,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_garland_lights_idle": {
+  "src": "decor_garland_lights.glb",
+  "tris_before": 47971,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   150.0,
+   10.684206336736679,
+   44.439697265625
+  ],
+  "os_cm": [
+   150,
+   30
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_e56afe5c-dece-4893-a574-4402acaec6c2_0: 2048→1024",
+  "mb": 0.403688,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 44 см, в ОС 30 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_gas_cylinders_idle": {
+  "src": "decor_gas_cylinders.glb",
+  "tris_before": 49584,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   55.089110136032104,
+   45.45898586511612,
+   139.9999976158142
+  ],
+  "os_cm": [
+   50,
+   140
+  ],
+  "scale": 1.4,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_abd81b6a-53c8-4d9d-b6e6-76d1ff6609a9_0: 2048→1024",
+  "mb": 0.369868,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_hose_hanging_idle": {
+  "src": "decor_hose_hanging.glb",
+  "tris_before": 48464,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   46.644288301467896,
+   17.078247666358948,
+   60.00000238418579
+  ],
+  "os_cm": [
+   50,
+   60
+  ],
+  "scale": 0.6,
+  "rotate": 0,
+  "mount": "wall",
+  "textures": "tripo_image_59e015e3-4ab8-4dea-878a-6ec968cb3592_0: 2048→1024",
+  "mb": 0.319368,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_junction_box_idle": {
+  "src": "decor_junction_box.glb",
+  "tris_before": 46510,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   74.78432655334473,
+   56.348419189453125,
+   29.999998211860657
+  ],
+  "os_cm": [
+   40,
+   30
+  ],
+  "scale": 0.7478432864206922,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_eccbb23b-51e1-4444-80c4-6cea6d9ed84e_0: 2048→512",
+  "mb": 0.1428,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 75 см, в ОС 40 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_lamp_wall_industrial_idle": {
+  "src": "decor_lamp_wall_industrial.glb",
+  "tris_before": 47310,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   24.87090826034546,
+   34.113433957099915,
+   25.0
+  ],
+  "os_cm": [
+   30,
+   25
+  ],
+  "scale": 0.34113433830265677,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_ce61ade0-b037-47ca-91ef-a81cf68efa91_0: 2048→512",
+  "mb": 0.201564,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 25 см, в ОС 30 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_light_panel_idle": {
+  "src": "decor_light_panel.glb",
+  "tris_before": 44831,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   120.00000476837158,
+   11.836852133274078,
+   25.541383028030396
+  ],
+  "os_cm": [
+   120,
+   15
+  ],
+  "scale": 1.2,
+  "rotate": 270,
+  "mount": "ceiling",
+  "textures": "tripo_image_13fdf3fd-af36-4d93-a1fb-502d38134181_0: 2048→1024",
+  "mb": 0.328256,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 26 см, в ОС 15 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_light_red_emergency_idle": {
+  "src": "decor_light_red_emergency.glb",
+  "tris_before": 47234,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   21.54235988855362,
+   21.082764863967896,
+   30.000001192092896
+  ],
+  "os_cm": [
+   25,
+   30
+  ],
+  "scale": 0.3,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_11987437-cab9-4dd3-a643-ac8e08f9e13a_0: 2048→512",
+  "mb": 0.158164,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_map_old_idle": {
+  "src": "decor_map_old.glb",
+  "tris_before": 47250,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   59.99999642372131,
+   60.20209193229675,
+   5.23240827023983
+  ],
+  "os_cm": [
+   60,
+   5
+  ],
+  "scale": 0.6020209443321697,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_f759eafd-f6c4-45ba-9fb7-692bf5b2afa0_0: 2048→1024",
+  "mb": 0.367672,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_metal_duct_idle": {
+  "src": "decor_metal_duct.glb",
+  "tris_before": 43116,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   150.0,
+   49.08599853515625,
+   43.8262939453125
+  ],
+  "os_cm": [
+   150,
+   30
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_44f78ee5-a1e0-47a1-8484-2b18f9ef0ed6_0: 2048→1024",
+  "mb": 0.321652,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 44 см, в ОС 30 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_metal_wall_panel_idle": {
+  "src": "decor_metal_wall_panel.glb",
+  "tris_before": 44563,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   107.07097053527832,
+   36.45929396152496,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0707097111488695,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_eb9a05c9-29ca-41a1-adb8-654667cf7e45_0: 2048→1024",
+  "mb": 0.392892,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_pallet_idle": {
+  "src": "decor_pallet.glb",
+  "tris_before": 35810,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   119.99999284744263,
+   119.97070908546448,
+   16.124267876148224
+  ],
+  "os_cm": [
+   120,
+   15
+  ],
+  "scale": 1.2000000715255779,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_673c0832-ad3b-456f-a868-ce15bee5f557_0: 2048→1024",
+  "mb": 0.335212,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_pipe_valves_idle": {
+  "src": "decor_pipe_valves.glb",
+  "tris_before": 44034,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   89.68505859375,
+   38.71306777000427,
+   150.0
+  ],
+  "os_cm": [
+   80,
+   150
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_092dbc8a-c7b1-4e6f-8e45-26e0a5a0589e_0: 2048→1024",
+  "mb": 0.489672,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_pipes_colored_h_idle": {
+  "src": "decor_pipes_colored_h.glb",
+  "tris_before": 43664,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   150.0,
+   22.318267822265625,
+   40.21453857421875
+  ],
+  "os_cm": [
+   150,
+   20
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_a56db471-30ba-48bc-99f5-5790ddb888ff_0: 2048→1024",
+  "mb": 0.382308,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 40 см, в ОС 20 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_pipes_colored_v_idle": {
+  "src": "decor_pipes_colored_v.glb",
+  "tris_before": 49256,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   56.890869140625,
+   59.78851318359375,
+   300.0
+  ],
+  "os_cm": [
+   30,
+   300
+  ],
+  "scale": 3.0,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_acd5f772-53ac-45c8-90c9-e1a9d2ab15ea_0: 2048→1024",
+  "mb": 0.537304,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 57 см, в ОС 30 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_poster_mountain_idle": {
+  "src": "decor_poster_mountain.glb",
+  "tris_before": 46194,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   43.788450956344604,
+   11.669158935546875,
+   69.9999988079071
+  ],
+  "os_cm": [
+   50,
+   70
+  ],
+  "scale": 0.7,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_0f05167a-ee12-4ab0-b19e-9245427a8985_0: 2048→1024",
+  "mb": 0.402508,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_rug_idle": {
+  "src": "decor_rug.glb",
+  "tris_before": 47874,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   200.0,
+   166.0888671875,
+   8.618927001953125
+  ],
+  "os_cm": [
+   200,
+   5
+  ],
+  "scale": 2.0,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_61da9813-f580-4a22-b9cc-4132536e8081_0: 2048→1024",
+  "mb": 0.530556,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 9 см, в ОС 5 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_rug_round_idle": {
+  "src": "decor_rug_round.glb",
+  "tris_before": 46952,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.17119646072388,
+   5.869406089186668
+  ],
+  "os_cm": [
+   100,
+   5
+  ],
+  "scale": 1.0017119100024456,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_b9c11118-5fbf-4147-a990-cf40a67235a3_0: 2048→1024",
+  "mb": 0.37418,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_sacks_idle": {
+  "src": "decor_sacks.glb",
+  "tris_before": 48510,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   99.99999701976776,
+   86.95068359375,
+   57.550048828125
+  ],
+  "os_cm": [
+   100,
+   60
+  ],
+  "scale": 1.0000000298023233,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_39ead20d-2b7b-4a24-9e27-71c530b7b253_0: 2048→1024",
+  "mb": 0.382576,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_sign_exit_idle": {
+  "src": "decor_sign_exit.glb",
+  "tris_before": 47650,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   50.0,
+   3.54766845703125,
+   32.208251953125
+  ],
+  "os_cm": [
+   50,
+   30
+  ],
+  "scale": 0.5,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_c5f48741-fcb5-4305-8d57-f5bdcf96f05f_0: 2048→512",
+  "mb": 0.151388,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_sign_warning_idle": {
+  "src": "decor_sign_warning.glb",
+  "tris_before": 47680,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   55.69518804550171,
+   37.6199334859848,
+   89.99999761581421
+  ],
+  "os_cm": [
+   60,
+   90
+  ],
+  "scale": 0.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0a0d0cac-9386-4a29-bf4a-06ed7fc19ea1_0: 2048→1024",
+  "mb": 0.390944,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_steel_beam_idle": {
+  "src": "decor_steel_beam.glb",
+  "tris_before": 45698,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   150.0,
+   35.6391966342926,
+   24.758148193359375
+  ],
+  "os_cm": [
+   150,
+   15
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_86f8ea78-8ed1-4db5-82aa-d181ae4edc0d_0: 2048→1024",
+  "mb": 0.325604,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 25 см, в ОС 15 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_sticky_notes_wall_idle": {
+  "src": "decor_sticky_notes_wall.glb",
+  "tris_before": 46665,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   79.4677734375,
+   11.022946238517761,
+   80.0000011920929
+  ],
+  "os_cm": [
+   100,
+   80
+  ],
+  "scale": 0.8,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_55ff4441-eabe-4fd1-bc27-fcc82efdb725_0: 2048→1024",
+  "mb": 0.471564,
+  "jpeg_q": 85,
+  "warnings": [
+   "50 отдельн. крупн. кус(ка/ков) в стороне от главного — возможно, лишняя вещь с картинки (рюкзак, ящик…) — посмотреть на превью",
+   "48 кус(ка/ков) висит в воздухе",
+   "много мелких отдельных кусков (61) — Tripo мог «насорить»",
+   "ширина 79 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_street_lamp_post_idle": {
+  "src": "decor_street_lamp_post.glb",
+  "tris_before": 49394,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   111.3525390625,
+   41.033935546875,
+   400.0
+  ],
+  "os_cm": [
+   40,
+   400
+  ],
+  "scale": 4.0,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_4e11e79f-7c3f-44e2-b8d4-f0f9591189eb_0: 2048→1024",
+  "mb": 0.43232,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 111 см, в ОС 40 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_tile_panel_white_idle": {
+  "src": "decor_tile_panel_white.glb",
+  "tris_before": 43436,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   119.51272487640381,
+   22.00014591217041,
+   99.99999403953552
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.1951272886424977,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_fcb6a0f6-e11c-4750-97a7-565d5e59fe47_0: 2048→1024",
+  "mb": 0.326956,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 120 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_tool_board_idle": {
+  "src": "decor_tool_board.glb",
+  "tris_before": 45069,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   101.7481803894043,
+   10.566683113574982,
+   80.0000011920929
+  ],
+  "os_cm": [
+   120,
+   80
+  ],
+  "scale": 1.0174817574910728,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_c75fec84-c8d6-480c-8e70-60b4b68e9d5e_0: 2048→1024",
+  "mb": 0.5764,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 102 см, в ОС 120 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_vault_door_round_idle": {
+  "src": "decor_vault_door_round.glb",
+  "tris_before": 46990,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   150.0274658203125,
+   43.577924370765686,
+   150.0
+  ],
+  "os_cm": [
+   150,
+   150
+  ],
+  "scale": 1.5002747085037544,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_6022ee3a-7654-4981-b8d4-d9f08fc24435_0: 2048→1024",
+  "mb": 0.618032,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_vent_rusty_idle": {
+  "src": "decor_vent_rusty.glb",
+  "tris_before": 43780,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   60.364753007888794,
+   10.01964956521988,
+   60.00000238418579
+  ],
+  "os_cm": [
+   60,
+   60
+  ],
+  "scale": 0.6036475284003684,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_3961e37a-d3e4-43f7-89c9-7d9b65562ea3_0: 2048→1024",
+  "mb": 0.343432,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "decor_wood_molding_idle": {
+  "src": "decor_wood_molding.glb",
+  "tris_before": 44116,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   40.1275634765625,
+   16.68853759765625
+  ],
+  "os_cm": [
+   100,
+   12
+  ],
+  "scale": 1.0,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_6fb418a8-d819-444b-a04d-a004e0341b88_0: 2048→1024",
+  "mb": 0.296676,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 17 см, в ОС 12 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "decor_wood_slat_panel_idle": {
+  "src": "decor_wood_slat_panel.glb",
+  "tris_before": 41223,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   116.82829856872559,
+   58.37136507034302,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.168282943525385,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_76000010-a76e-4f8b-b982-7455ee2b4dca_0: 2048→1024",
+  "mb": 0.41378,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 117 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
  }
 }
