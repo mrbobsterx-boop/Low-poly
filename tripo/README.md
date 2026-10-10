@@ -1,5 +1,5 @@
-# Сюда — модели из Tripo (GLB)
+# Сырые модели из Tripo (в git не попадают)
 
-Автор кладёт сюда скачанные из Tripo модели: **`<id>_<вариант>.glb`** (как в `docs/PLAN.md`), например
-`bed_single_zheleznaya_koyka.glb`. Через сайт GitHub: **Add file → Upload files**, можно пачкой.
-Дальше всё делает чат моделей — правила в `docs/TRIPO.md`.
+Автор кладёт модели на Google Диск (папка «Shelter Tripo»), сюда их скачивает `tools/drive_fetch.py`
+(см. `README.md`). `*.glb` здесь — в `.gitignore`. Настройки обработки: `rotate.json` (поворот модели, °),
+`color.json` (цветовой фильтр), `drive.json` (имя → id файла на Диске).
