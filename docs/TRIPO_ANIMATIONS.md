@@ -52,9 +52,14 @@ Character standing turns around 180 degrees on the spot with small steps and ret
 
 ## Б. Быт
 
-**7. Ест** — `anim_eat.glb` · повтор
+**7. Ест сидя** — `anim_eat.glb` · повтор
 ```
 Character sits and eats from a bowl held in one hand, bringing a spoon to the mouth with the other hand, chewing, seamless loop.
+```
+
+**7б. Ест стоя** — `anim_eat_standing.glb` · повтор
+```
+Character stands and eats, holding a piece of food in one hand, taking bites and chewing, the other hand relaxed at the side, small weight shifts, seamless loop, in place.
 ```
 
 **8. Пьёт из бутылки** — `anim_drink.glb` · один раз
