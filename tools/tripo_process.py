@@ -215,6 +215,9 @@ def place(obj, o, rot_deg):
     else:                                       # остальное — по высоте
         cur, target = float(hi[2] - lo[2]), o["size"][1] / 100
     k = target / cur if cur > 1e-6 else 1.0
+    creature = o["id"] in CREATURES or o["id"].startswith("zombie_")
+    if not fit_width(o) and not creature and float(hi[0] - lo[0]) * k > 2 * o["size"][0] / 100:
+        k = o["size"][0] / 100 / float(hi[0] - lo[0])   # по высоте вышло вдвое шире ОС (лежит плашмя, свёрнуто) — по ширине
     obj.data.transform(Matrix.Scale(k, 4))
     lo, hi = bbox(obj)
     cx, cy = (lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2
@@ -520,7 +523,9 @@ def process(path, plan, out_dir, rot_cfg, color_cfg, prev_dir):
     warns += check_mesh(obj)
     if n_parts > 1:
         warns.append(f"в файле {n_parts} отдельных объектов — склеены в один")
-    if fit_width(o):
+    if abs(w * 100 - o["size"][0]) < 1 and abs(h * 100 - o["size"][1]) > 0.25 * o["size"][1] and not fit_width(o):
+        warns.append(f"по высоте выходило вдвое шире ОС — подогнано по ширине; высота {h * 100:.0f} см, в ОС {o['size'][1]} см")
+    elif fit_width(o):
         if abs(h * 100 - o["size"][1]) > 0.25 * o["size"][1]:
             warns.append(f"подогнано по ширине; высота {h * 100:.0f} см, в ОС {o['size'][1]} см")
     elif abs(w * 100 - o["size"][0]) > WIDTH_TOL * o["size"][0]:
