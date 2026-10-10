@@ -1,0 +1,98 @@
+{
+ "room_bunker_wall_1_idle": {
+  "src": "room_bunker_wall_1.glb",
+  "tris_before": 14509,
+  "tris_after": 3920,
+  "limit": 4000,
+  "class": "wall",
+  "size_cm": [
+   319.50740814208984,
+   30.000001192092896,
+   300.0
+  ],
+  "os_cm": [
+   "—",
+   300
+  ],
+  "scale": 3.3416616963576593,
+  "rotate": 270,
+  "mount": "стена комнаты",
+  "textures": "tripo_image_005fb5b3-d548-49e2-920a-7b3cc7a13171_0: 2048→1024, tripo_image_005fb5b3-d548-49e2-920a-7b3cc7a13171_1: 2048→1024, tripo_image_005fb5b3-d548-49e2-920a-7b3cc7a13171_2: 2048→1024",
+  "mb": 0.406668,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "room_bunker_wall_3_idle": {
+  "src": "room_bunker_wall_3.glb",
+  "tris_before": 46233,
+  "tris_after": 3918,
+  "limit": 4000,
+  "class": "wall",
+  "size_cm": [
+   327.59575843811035,
+   30.000001192092896,
+   300.0000238418579
+  ],
+  "os_cm": [
+   "—",
+   300
+  ],
+  "scale": 3.4297820613054193,
+  "rotate": 270,
+  "mount": "стена комнаты",
+  "textures": "tripo_image_d9ba6461-4d08-448f-a682-a00aa6358f9d_0: 2048→1024, tripo_image_d9ba6461-4d08-448f-a682-a00aa6358f9d_1: 2048→1024, tripo_image_d9ba6461-4d08-448f-a682-a00aa6358f9d_2: 2048→1024",
+  "mb": 0.567536,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "room_bunker_wall_4_idle": {
+  "src": "room_bunker_wall_4.glb",
+  "tris_before": 46094,
+  "tris_after": 3918,
+  "limit": 4000,
+  "class": "wall",
+  "size_cm": [
+   304.4985055923462,
+   30.000001192092896,
+   300.0
+  ],
+  "os_cm": [
+   "—",
+   300
+  ],
+  "scale": 3.167615746884573,
+  "rotate": 270,
+  "mount": "стена комнаты",
+  "textures": "tripo_image_dd29610d-39a6-4f2b-9228-771c0f0735c4_0: 2048→1024, tripo_image_dd29610d-39a6-4f2b-9228-771c0f0735c4_1: 2048→1024, tripo_image_dd29610d-39a6-4f2b-9228-771c0f0735c4_2: 2048→1024",
+  "mb": 0.427416,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "room_bunker_wall_5_idle": {
+  "src": "room_bunker_wall_5.glb",
+  "tris_before": 47250,
+  "tris_after": 3920,
+  "limit": 4000,
+  "class": "wall",
+  "size_cm": [
+   264.6371126174927,
+   30.000001192092896,
+   300.0
+  ],
+  "os_cm": [
+   "—",
+   300
+  ],
+  "scale": 3.0993356726775954,
+  "rotate": 90,
+  "mount": "стена комнаты",
+  "textures": "tripo_image_0860f8cf-7f30-4b2f-a94d-37c8700fd058_0: 2048→1024, tripo_image_0860f8cf-7f30-4b2f-a94d-37c8700fd058_1: 2048→1024, tripo_image_0860f8cf-7f30-4b2f-a94d-37c8700fd058_2: 2048→1024",
+  "mb": 0.4797,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ }
+}

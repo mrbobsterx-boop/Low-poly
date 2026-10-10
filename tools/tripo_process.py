@@ -216,10 +216,22 @@ def place(obj, o, rot_deg):
     return tuple(float(x) for x in (hi - lo)), k, mount
 
 
-def decimate(obj, limit):
+def decimate(obj, limit, planar=False):
     t0 = tris(obj)
     if t0 <= limit:
         return t0
+    if planar:                                  # плоское (стены): сначала убрать лишнее на ровных местах, UV не трогая
+        md = obj.modifiers.new("plan", "DECIMATE")
+        md.decimate_type = "DISSOLVE"
+        md.angle_limit = math.radians(3)
+        md.delimit = {"UV", "SEAM", "MATERIAL"}
+        bpy.context.view_layer.objects.active = obj
+        bpy.ops.object.modifier_apply(modifier=md.name)
+        bm = bmesh.new()
+        bm.from_mesh(obj.data)
+        bmesh.ops.triangulate(bm, faces=bm.faces)
+        bm.to_mesh(obj.data)
+        bm.free()
     for _ in range(4):                          # Collapse иногда недотягивает — пара повторов
         t = tris(obj)
         if t <= limit:
@@ -338,7 +350,7 @@ def export(obj, path):
 
 # ───────────────────────── превью со светом ─────────────────────────
 
-def render_views(obj, out_base, px=360):
+def render_views(obj, out_base, px=360, res=None, fit=1.35):
     """Два кадра со светом: спереди и в три четверти. Тёмный фон, тёмно-синий общий свет, тёплая лампа сверху-сбоку."""
     sc = bpy.context.scene
     sc.render.engine = "CYCLES"
@@ -348,7 +360,7 @@ def render_views(obj, out_base, px=360):
         sc.cycles.use_denoising, sc.cycles.denoiser = True, "OPENIMAGEDENOISE"
     except Exception:
         sc.cycles.use_denoising = False
-    sc.render.resolution_x = sc.render.resolution_y = px
+    sc.render.resolution_x, sc.render.resolution_y = res or (px, px)
     sc.render.film_transparent = False
     sc.view_settings.view_transform = "AgX"
     if sc.world is None:
@@ -360,7 +372,7 @@ def render_views(obj, out_base, px=360):
     added = []
     fm = bpy.data.meshes.new("_floor")
     z0 = float(lo[2])
-    fm.from_pydata([(-50, -50, z0), (50, -50, z0), (50, 50, z0), (-50, 50, z0)], [], [(0, 1, 2, 3)])
+    fm.from_pydata([(-500, -500, z0), (500, -500, z0), (500, 500, z0), (-500, 500, z0)], [], [(0, 1, 2, 3)])
     mat = bpy.data.materials.new("_floor")
     mat.node_tree.nodes["Principled BSDF"].inputs["Base Color"].default_value = (0.035, 0.035, 0.04, 1)
     fm.materials.append(mat)
@@ -391,7 +403,7 @@ def render_views(obj, out_base, px=360):
         d = Matrix.Rotation(math.radians(yaw), 3, "Z") @ Matrix.Rotation(math.radians(-pitch), 3, "X") @ Vector((0, -1, 0))
         cam.location = c + d * (size * 4)          # d — от предмета к камере
         cam.rotation_euler = (-d).to_track_quat("-Z", "Y").to_euler()
-        cam_d.ortho_scale = size * 1.35
+        cam_d.ortho_scale = size * fit
         cam_d.clip_end = size * 20
         sc.render.filepath = f"{out_base}_{tag}.png"
         bpy.ops.render.render(write_still=True)
@@ -442,13 +454,16 @@ def write_report(entries):
          "| Модель (export/) | Файл из tripo/ | Треугольники до → после (лимит) | Размер Ш × Г × В, см | ОС Ш × В, см | "
          "Масштаб | Поворот | Крепление | Текстуры | Файл, МБ | Предупреждения |",
          "|---|---|---|---|---|---|---|---|---|---|---|"]
+    import re
     for k in sorted(data):
         e = data[k]
+        sizes = re.findall(r": (\d+→\d+)", e["textures"])
+        tx = f"{len(sizes)} шт. {sizes[0]}" if sizes else e["textures"]
         w = "<br>".join("⚠ " + x for x in e["warnings"]) or "—"
         L.append(f"| `{k}` | `{e['src']}` | {e['tris_before']:,} → {e['tris_after']:,} ({e['limit']:,}) | "
                  f"{e['size_cm'][0]:.0f} × {e['size_cm'][1]:.0f} × {e['size_cm'][2]:.0f} | "
                  f"{e['os_cm'][0]} × {e['os_cm'][1]} | ×{e['scale']:.3g} | {e['rotate']}° | {e['mount']} | "
-                 f"{e['textures']} | {e['mb']:.2f} | {w} |".replace(",", " "))
+                 f"{tx} | {e['mb']:.2f} | {w} |".replace(",", " "))
     open(os.path.join(ROOT, "docs", "TRIPO_REPORT.md"), "w").write("\n".join(L) + "\n")
 
 
@@ -515,6 +530,139 @@ def process(path, plan, out_dir, rot_cfg, color_cfg, prev_dir):
     return (name, e), (cap, views)
 
 
+# ───────────────────────── куски стен комнат (docs/TRIPO.md, раздел 5) ─────────────────────────
+WALL_H, WALL_D, WALL_TRIS, WALL_CUT = 3.0, 0.30, 4000, 0.012
+
+
+def clear_custom_normals(obj):
+    bpy.ops.object.select_all(action="DESELECT")
+    obj.select_set(True)
+    bpy.context.view_layer.objects.active = obj
+    try:
+        bpy.ops.mesh.customdata_custom_splitnormals_clear()
+    except Exception:
+        pass
+
+
+def wall_rotation(obj):
+    """Плоскость стены — вдоль X, перед (трубы, выступы) — к −Y, ровная спина — к +Y. Возвращает градусы."""
+    lo, hi = bbox(obj)
+    rot = 0
+    if hi[0] - lo[0] < hi[1] - lo[1]:             # стена стоит «вдоль Y» — перед смотрит вбок
+        rot = 90
+        obj.data.transform(Matrix.Rotation(math.radians(90), 4, "Z"))
+    co = np.empty(len(obj.data.vertices) * 3)
+    obj.data.vertices.foreach_get("co", co)
+    y = co.reshape(-1, 3)[:, 1]
+    band = 0.02 * (y.max() - y.min())
+    near_max, near_min = (y > y.max() - band).sum(), (y < y.min() + band).sum()
+    if near_min > near_max:                       # ровная спина (много вершин в одной плоскости) оказалась спереди
+        rot += 180
+        obj.data.transform(Matrix.Rotation(math.radians(180), 4, "Z"))
+    return rot
+
+
+def remove_back(obj):
+    """Убрать заднюю сторону стены (смотрит в +Y, к земле — в игре её не видно): иначе при облегчении перед и спина
+    тонкой стены слипаются и кусок разваливается на «осколки»."""
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    bm.normal_update()
+    bmesh.ops.delete(bm, geom=[f for f in bm.faces if f.normal.y > 0.3], context="FACES")
+    bm.to_mesh(obj.data)
+    bm.free()
+
+
+def cut_flat(obj, inset):
+    """Обрезать края ровно: левый, правый, низ, верх — плоскостью, на inset (доля размера) внутрь."""
+    bm = bmesh.new()
+    bm.from_mesh(obj.data)
+    lo, hi = bbox(obj)
+    d = (hi - lo) * inset
+    for co, no in (((lo[0] + d[0], 0, 0), (-1, 0, 0)), ((hi[0] - d[0], 0, 0), (1, 0, 0)),
+                   ((0, 0, lo[2] + d[2] * 0.5), (0, 0, -1)), ((0, 0, hi[2] - d[2] * 0.5), (0, 0, 1))):
+        geom = list(bm.verts) + list(bm.edges) + list(bm.faces)
+        bmesh.ops.bisect_plane(bm, geom=geom, plane_co=co, plane_no=no, clear_outer=True)
+    bm.to_mesh(obj.data)
+    bm.free()
+
+
+def process_wall(path, out_dir, rot_cfg, prev_dir):
+    stem = os.path.basename(path)[:-4]
+    name = stem + "_idle"
+    warns = []
+    obj, n_parts = import_joined(path)
+    t0 = tris(obj)
+    clear_custom_normals(obj)
+    if stem in rot_cfg:
+        rot = rot_cfg[stem]
+        obj.data.transform(Matrix.Rotation(math.radians(rot), 4, "Z"))
+    else:
+        rot = wall_rotation(obj)
+    remove_back(obj)
+    cut_flat(obj, WALL_CUT)
+    lo, hi = bbox(obj)
+    k = WALL_H / float(hi[2] - lo[2])                   # пропорции ширина : высота — как у модели
+    obj.data.transform(Matrix.Scale(k, 4))
+    lo, hi = bbox(obj)
+    ky = WALL_D / float(hi[1] - lo[1])                  # толщина — ровно 0,3 м (трубы спереди «сплющиваются» вглубь)
+    obj.data.transform(Matrix.Diagonal((1, ky, 1, 1)))
+    lo, hi = bbox(obj)
+    obj.data.transform(Matrix.Translation(Vector((-lo[0], -hi[1], -lo[2]))))   # левый край X = 0, спина Y = 0, низ Z = 0
+    obj.data.update()
+    lo, hi = bbox(obj)
+    w, d, h = (float(x) for x in hi - lo)
+    if n_parts > 1:
+        warns.append(f"в файле {n_parts} отдельных объектов — склеены в один")
+    t1 = decimate(obj, WALL_TRIS)
+    smooth_by_angle(obj)
+    if t1 > WALL_TRIS:
+        warns.append(f"не удалось облегчить до лимита: {t1}")
+    tex = fix_materials(obj, 1024)
+    os.makedirs(out_dir, exist_ok=True)
+    mb, q = export(obj, os.path.join(out_dir, name + ".glb"))
+    if mb > MAX_MB:
+        warns.append(f"файл {mb:.1f} МБ > {MAX_MB} МБ")
+    e = {"src": stem + ".glb", "tris_before": t0, "tris_after": t1, "limit": WALL_TRIS, "class": "wall",
+         "size_cm": [w * 100, d * 100, h * 100], "os_cm": ["—", 300], "scale": k, "rotate": rot, "mount": "стена комнаты",
+         "textures": ", ".join(tex) or "≤ лимита", "mb": mb, "jpeg_q": q, "warnings": warns,
+         "date": datetime.date.today().isoformat()}
+    print(f"[{name}] треугольников {t0} → {t1} (лимит {WALL_TRIS}), {w * 100:.0f}×{d * 100:.0f}×{h * 100:.0f} см, "
+          f"поворот {rot}°, {mb:.2f} МБ" + "".join(f"\n  ⚠ {x}" for x in warns))
+    return name, e
+
+
+def wall_row(names, out_dir, out_png, order=None):
+    """Куски стены подряд (по порядку order) со светом, спереди и в три четверти — проверить стыки."""
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    order = order or names
+    x = 0.0
+    objs = []
+    for n in order:
+        bpy.ops.import_scene.gltf(filepath=os.path.join(out_dir, n + ".glb"))
+        new = [o for o in bpy.context.selected_objects if o.type == "MESH"]
+        for o in new:
+            o.location.x += x
+        lo, hi = None, None
+        bpy.context.view_layer.update()
+        xs = [(o.matrix_world @ Vector(c)).x for o in new for c in o.bound_box]
+        x = max(xs)
+        objs += new
+    bpy.ops.object.select_all(action="DESELECT")
+    for o in objs:
+        o.select_set(True)
+    bpy.context.view_layer.objects.active = objs[0]
+    bpy.ops.object.parent_clear(type="CLEAR_KEEP_TRANSFORM")
+    for o in list(bpy.context.scene.objects):
+        if o.type != "MESH":
+            bpy.data.objects.remove(o)
+    bpy.ops.object.join()
+    obj = bpy.context.view_layer.objects.active
+    bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
+    views = render_views(obj, out_png[:-4], res=(1800, 520), fit=1.04)
+    return views
+
+
 def color_test(names, plan, src, prev_dir):
     """Лист «до / после» цветового фильтра на нескольких моделях — без экспорта."""
     cfg = load_json("color.json", {})
@@ -565,8 +713,17 @@ def main(argv):
         files = [f for f in files if f[:-4] in args]
     rot_cfg, color_cfg = load_json("rotate.json", {}), load_json("color.json", {})
     entries, rows = {}, []
+    walls = []
     for f in files:
         stem = f[:-4]
+        if stem.startswith("room_") and "_wall_" in stem:          # кусок стены комнаты — отдельные правила
+            if not force and os.path.exists(os.path.join(out_dir, stem + "_idle.glb")):
+                print(f"[{stem}] уже есть в export/ — пропуск (--force — заново)")
+                continue
+            n, e = process_wall(os.path.join(src, f), out_dir, rot_cfg, prev_dir)
+            entries[n] = e
+            walls.append(n)
+            continue
         oid, var, _ = resolve(stem, plan)
         if oid and not force and os.path.exists(os.path.join(out_dir, f"{oid}_{var}_idle.glb")):
             print(f"[{stem}] уже есть в export/ — пропуск (--force — заново)")
@@ -575,6 +732,17 @@ def main(argv):
         if r:
             entries[r[0]] = r[1]
             rows.append(row)
+    if walls:                                                       # стыки: куски подряд, вперемешку, 2 круга
+        sets = {}
+        for n in walls:
+            sets.setdefault(n.split("_wall_")[0], []).append(n)
+        for setname, ns in sets.items():
+            order = sorted(ns) * 2 if len(ns) < 4 else sorted(ns) + sorted(ns)[:2]   # вперемешку, 2 круга
+            png = os.path.join(prev_dir, f"{setname}_row.png")
+            v = wall_row(ns, out_dir, png, order)
+            rows.append((f"{setname}: {len(order)} кусков подряд ({', '.join(x.split('_wall_')[1][:-5] for x in order)})\n"
+                         f"сверху — спереди, как в игре; снизу — в три четверти. Смотреть стыки", [v[0]]))
+            rows.append(("", [v[1]]))
     if not rows:
         print("нечего обрабатывать")
         return
