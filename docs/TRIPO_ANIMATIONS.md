@@ -305,7 +305,21 @@ Character stands bent forward with hands on the knees, breathing heavily, head d
 
 ---
 
+## Ж. Общение
+
+**53. Говорит** — `anim_talk.glb` · повтор
+```
+Character stands facing forward and talks, natural hand gestures at chest height, small head nods, weight shifts, seamless loop, in place.
+```
+
+**54. Торгуется** — `anim_trade.glb` · повтор
+```
+Character stands and bargains: holds out an item in one open hand to show it, then points at it and shakes the head, then gestures with both hands as if offering a price, seamless loop, in place.
+```
+
+---
+
 ## Потом (по желанию автора)
 
-Состояния: радуется, грустит. Общение: говорит, машет рукой, торгуется. Зомби и животные — свои
+Состояния: радуется, грустит. Общение: машет рукой. Зомби и животные — свои
 (ходьба, бег, атака, удар, смерть).
