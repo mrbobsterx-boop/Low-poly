@@ -21,32 +21,39 @@ Tripo (автор) ──► Google Диск «Shelter Tripo» (сырые GLB, 
 ## Google Диск
 
 Папка **«Shelter Tripo»** (доступ по ссылке — чтение): https://drive.google.com/drive/folders/1WS4lqCjsxTzgIn6uyvNmC9SVGttSojOb
-- `00 Проба стиля (одна комната)` → `A — Low poly`, `B — Реализм (как сейчас)`, `C — Рисованный (как Fallout Shelter)`
-- `01 Стены — основы`, `02 Стены — линии`, `03 Стены — декор`, `04 Фасады`, `05 Мебель`, `06 Верстаки`,
-  `07 Контейнеры`, `08 Техника и машины`, `09 Строительное и двери`, `10 Декор-объекты`,
-  `11 Растения и точки ресурсов`, `12 Предметы…`, `13 Персонажи и существа`, `14 Прочее`
 
-**Скачать:**
-- проба стиля: `python3 tools/drive_fetch.py --style-test` → `tripo/style_test/a|b|c/<имя>.glb`;
-- любая папка: `python3 tools/drive_fetch.py --folder <id папки> tripo/<куда>` (id — из ссылки на папку);
-- по списку `tripo/drive.json` (имя → id файла): `python3 tools/drive_fetch.py`.
+| Папка | id (для `drive_fetch.py --folder`) |
+|---|---|
+| 01 Стены — основы | `1iEYMW_n_5zYCVbtPREWMaCZrbAVWz28u` |
+| 02 Стены — линии | `19kDUSj6B1q5Yg4bqbQXADsJ7fxwm1Mom` |
+| 03 Стены — декор | `1DKiRF_miDQGDzqc2y-dXbtvOqrP2PeSj` |
+| 04 Фасады | `1Obt5a88iOkl4IM68xALris9bdJbi4hM7` |
+| 05 Мебель | `1MuuDaZ7sjM-a0Jr6IyePuCc7rXgMxflP` |
+| 06 Верстаки | `10vQ2aJ7n9FLUNbe45XaUIZCugvzaM07Y` |
+| 07 Контейнеры | `1NcYRXQWpMeJIg-Te60ZmyJI65OnpXOUL` |
+| 08 Техника и машины | `1v1uE70JXuZ68tQl2eXsixJSotZ-jwAnV` |
+| 09 Строительное и двери | `1PAst1du4N-nGD7gqAV1moz8T9fuyiwyk` |
+| 10 Декор-объекты | `115YhMiHXbrjhTq-J7kTVvsHicp2vsNJm` |
+| 11 Растения и точки ресурсов | `1NnKafHKCQ83qjtgBhqsgKIAUycdG9Yey` |
+| 12 Предметы, инструменты, оружие, одежда | `1bJp7OilAS8mtEoGrc0bie5bJr6qN1F6t` |
+| 13 Персонажи и существа | `1H_PLt4oX7a71q_IhjbdgYwnyu7gVmBeU` |
+| 14 Прочее | `138NID0PQPlSHmOtKwMIgvfMm9X78PWhE` |
+
+**Скачать раздел:** `python3 tools/drive_fetch.py --folder <id> tripo/` (с подпапками, имена как на Диске).
 
 ## Что сейчас
 
-1. ✅ **Проба стиля** — выбран стиль «кровать-образец» (low poly, нарисованный); размеры комнат 3 × 3 м.
-   Было:  — `docs/TRIPO_STYLE_TEST.md`: 18 предметов комнаты × 3 стиля (оболочку — пол, стены, потолок —
-   строит игра). Обработка → `export/style_test/a|b|c/<имя>_idle.glb`. Автор сравнит в игре (Tab — стиль).
-2. ⏳ **Все объекты** — `docs/TRIPO_OBJECTS.md`: 170 объектов, готовые запросы (картинка по образцу → 3D), папки на Диске.
-3. ☐ Стены и фасады из трёх слоёв (основа, линии, декор) — `docs/TRIPO_KIT.md` (запросы — переписать под стиль).
-
-Уже в игре: 9 верстаков (`export/workbench_*`, `recycler_bench_*`, `sewing_table_*`) — стиль B, с картинок ОС.
+1. ⏳ **Все объекты** в стиле «кровать-образец» — `docs/TRIPO_OBJECTS.md`: 170 объектов, готовые запросы, папки на Диске.
+   Автор делает по разделам, этот чат обрабатывает по мере появления, чат игры ставит в игру.
+2. ☐ Стены и фасады из трёх слоёв — `docs/TRIPO_KIT.md` (запросы переписать под стиль образца).
+3. ☐ Персонажи и существа — риг и анимации, отдельное задание.
 
 ## Файлы
 
 ```
 CLAUDE.md                 — правила для чата моделей
 docs/TRIPO.md             — как обрабатывать модели (главное)
-docs/TRIPO_STYLE_TEST.md  — проба стиля: предметы, размеры, готовые запросы
+docs/TRIPO_OBJECTS.md     — все объекты: стиль, готовые запросы, имена файлов, размеры, папки (главное для автора)
 docs/TRIPO_KIT.md         — стены и фасады из трёх слоёв
 docs/PLAN.md, plan.json   — все объекты из ОС, варианты, размеры, что готово
 docs/TRIPO_REPORT.md      — отчёт обработки; docs/DEVIATIONS.md — отличия размеров от ОС
@@ -54,5 +61,5 @@ docs/FOR_GAME.md          — просьбы к игре; docs/LOG.md — жур
 tools/drive_fetch.py      — скачать с Диска; tools/tripo_process.py — обработка; tools/plan_status.py — чек-лист
 tripo/                    — сюда скачиваются сырые модели (в git не попадают); rotate.json, color.json — настройки
 export/                   — готовые модели для игры
-renders/_review/          — листы превью
+renders/_review/          — листы превью (не коммитить большие — по одному на пачку)
 ```

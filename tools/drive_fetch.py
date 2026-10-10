@@ -3,8 +3,6 @@
 Файлы в git не попадают (.gitignore).
 
   python3 tools/drive_fetch.py                    — по списку tripo/drive.json (имя → id файла)
-  python3 tools/drive_fetch.py --style-test       — проба стиля: по tripo/style_test.json (иначе папки A / B / C)
-                                                    → tripo/style_test/a|b|c/<имя>.glb
   python3 tools/drive_fetch.py --folder <id> <куда> — вся папка Диска (с подпапками), имена как на Диске
 
 Уже скачанное пропускает (--force — заново)."""
@@ -13,9 +11,6 @@ import json, os, re, sys, urllib.request
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILE_URL = "https://drive.usercontent.google.com/download?id={}&export=download&confirm=t"
 LIST_URL = "https://drive.google.com/embeddedfolderview?id={}"
-# «Shelter Tripo / 00 Проба стиля (одна комната)»: A — Low poly, B — Реализм, C — Рисованный
-STYLE_FOLDERS = {"a": "1qA4e2Q_mlY-A9r1H0ISvimZEOuM2v_Ax", "b": "1S905P4R8n3u9w3lDNCNRTV4g_11NUMon",
-                 "c": "1rU43buKkYxGWKvVDwYSDVmINl6WT59lJ"}
 FORCE = "--force" in sys.argv
 
 
@@ -51,21 +46,15 @@ def fetch_folder(folder_id, dest):
 
 def main():
     a = sys.argv[1:]
-    if "--style-test" in a:
-        lst = os.path.join(ROOT, "tripo", "style_test.json")
-        if os.path.exists(lst):   # разобранный список: стиль → имя → id файла
-            for st, items in json.load(open(lst, encoding="utf-8")).items():
-                if not st.startswith("_"):
-                    for name, fid in items.items():
-                        fetch(fid, os.path.join(ROOT, "tripo", "style_test", st, name + ".glb"))
-        else:
-            for st, fid in STYLE_FOLDERS.items():
-                fetch_folder(fid, os.path.join(ROOT, "tripo", "style_test", st))
-    elif "--folder" in a:
+    if "--folder" in a:
         i = a.index("--folder")
         fetch_folder(a[i + 1], os.path.join(ROOT, a[i + 2]))
     else:
-        items = json.load(open(os.path.join(ROOT, "tripo", "drive.json"), encoding="utf-8"))
+        lst = os.path.join(ROOT, "tripo", "drive.json")
+        if not os.path.exists(lst):
+            print(__doc__)
+            return
+        items = json.load(open(lst, encoding="utf-8"))
         for name, fid in items.items():
             if not name.startswith("_"):
                 fetch(fid, os.path.join(ROOT, "tripo", name + ".glb"))
