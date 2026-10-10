@@ -61,58 +61,61 @@ Tripo: если есть стиль **Cartoon / Stylized** — включить;
 Комната: ширина 6 м, высота 3 м, глубина 3 м, спереди открыта (разрез, как в игре). Размер — **ширина × высота ×
 глубина**, в запросе его писать не нужно (Tripo держит пропорции из описания, точный размер выставит обработка).
 
-### Оболочка комнаты
+### Оболочка комнаты — делает игра, в Tripo НЕ делать
 
-| № | Файл | Что | Размер, м | Строка предмета |
-|---|---|---|---|---|
-| 1 | `floor.glb` | пол, кусок | 3 × 0,1 × 3 | `A square flat floor slab of a bunker room, made of plain grey concrete, one single material and color, a few cracks and stains, perfectly flat top, straight edges.` |
-| 2 | `wall_back.glb` | задняя стена, пустая | 3 × 3 × 0,3 | `A plain flat wall segment, square, made of plain grey concrete panels with thin seams, one single material and color, perfectly straight edges on all sides, no border, no frame, nothing on the wall.` |
-| 3 | `wall_side_door.glb` | боковая стена с дверным проёмом | 3 × 3 × 0,3 | `A flat side wall segment of a bunker room, made of plain grey concrete, one single material and color, with one simple rectangular doorway opening near one edge, no door, no steps, straight edges, nothing on the wall.` |
-| 4 | `wall_side.glb` | боковая стена без проёма | 3 × 3 × 0,3 | `A plain flat side wall segment of a bunker room, square, made of plain grey concrete panels with thin seams, one single material and color, perfectly straight edges on all sides, no border, no frame, no doorway, nothing on the wall.` |
-| 5 | `ceiling.glb` | потолок, кусок | 3 × 0,15 × 3 | `A square flat ceiling slab of a bunker room, made of plain grey concrete, one single material and color, a few stains, perfectly flat, straight edges.` |
+Пол, задняя стена, боковые стены (одна с дверным проёмом) и потолок **игра строит сама** — ровные плиты точного
+размера (Tripo плохо делает плоские куски: бортики, ступеньки, пятна, кривые края). Вид — по стилю:
+A — ровный серый с лёгкими швами; B — фото-текстура бетона; C — нарисованная текстура.
+
+Текстуры для B и C (по желанию; без них игра возьмёт простые): любой генератор картинок, квадрат 1024 × 1024,
+сохранить как `tex_wall.png` и `tex_floor.png` в папку стиля на Диске.
+- B, стена: `Seamless tileable texture of an old grey concrete bunker wall with panel seams, stains and rust streaks, flat front view, even lighting, no shadows.`
+- B, пол: `Seamless tileable texture of an old grey concrete floor with cracks and dirt, top view, even lighting, no shadows.`
+- C, стена: `Seamless tileable hand-painted stylized texture of a concrete bunker wall with panel seams, soft painted strokes, Fallout Shelter style, flat front view, even lighting.`
+- C, пол: `Seamless tileable hand-painted stylized texture of a concrete floor, soft painted strokes, Fallout Shelter style, top view, even lighting.`
 
 ### Линии (через всю стену)
 
 | № | Файл | Что | Размер, м | Строка предмета |
 |---|---|---|---|---|
-| 6 | `line_pipes.glb` | две трубы | 3 × 0,25 × 0,2 | `A straight horizontal section of two parallel industrial pipes on small metal brackets, both ends cut perfectly flat, no caps, flat back side.` |
-| 7 | `line_cable.glb` | кабели | 3 × 0,08 × 0,06 | `A straight horizontal bundle of three electric cables held by metal clips, both ends cut flat, flat back side.` |
+| 1 | `line_pipes.glb` | две трубы | 3 × 0,25 × 0,2 | `A straight horizontal section of two parallel industrial pipes on small metal brackets, both ends cut perfectly flat, no caps, flat back side.` |
+| 2 | `line_cable.glb` | кабели | 3 × 0,08 × 0,06 | `A straight horizontal bundle of three electric cables held by metal clips, both ends cut flat, flat back side.` |
 
 ### Декор на стенах
 
 | № | Файл | Что | Размер, м | Строка предмета |
 |---|---|---|---|---|
-| 8 | `decor_vent.glb` | решётка вентиляции | 0,5 × 0,5 × 0,05 | `A square metal ventilation grille mounted on a wall, flat back side.` |
-| 9 | `decor_box.glb` | щиток с проводами | 0,35 × 0,5 × 0,12 | `A small electrical junction box mounted on a wall with a short bundle of wires going up, flat back side.` |
-| 10 | `poster_1.glb` | плакат (люди и солнце) | 0,6 × 0,8 × 0,02 | `A slightly torn retro poster on a wall showing a smiling family and a big sun, pictures only, flat.` |
-| 11 | `poster_2.glb` | плакат (схема убежища) | 0,8 × 0,6 × 0,02 | `An old paper poster with a simple drawing of an underground shelter cross-section, pictures only, curled corners, flat.` |
-| 12 | `wall_shelf.glb` | полка на стене с банками | 1 × 0,35 × 0,3 | `A small wall shelf made of wood and metal brackets with a few cans and jars on it, flat back side.` |
+| 3 | `decor_vent.glb` | решётка вентиляции | 0,5 × 0,5 × 0,05 | `A square metal ventilation grille mounted on a wall, flat back side.` |
+| 4 | `decor_box.glb` | щиток с проводами | 0,35 × 0,5 × 0,12 | `A small electrical junction box mounted on a wall with a short bundle of wires going up, flat back side.` |
+| 5 | `poster_1.glb` | плакат (люди и солнце) | 0,6 × 0,8 × 0,02 | `A slightly torn retro poster on a wall showing a smiling family and a big sun, pictures only, flat.` |
+| 6 | `poster_2.glb` | плакат (схема убежища) | 0,8 × 0,6 × 0,02 | `An old paper poster with a simple drawing of an underground shelter cross-section, pictures only, curled corners, flat.` |
+| 7 | `wall_shelf.glb` | полка на стене с банками | 1 × 0,35 × 0,3 | `A small wall shelf made of wood and metal brackets with a few cans and jars on it, flat back side.` |
 
 ### Мебель и вещи
 
 | № | Файл | Что | Размер, м | Строка предмета |
 |---|---|---|---|---|
-| 13 | `bed.glb` | кровать (железная койка) | 2 × 0,8 × 0,9 | `A single metal frame bed with a thin mattress, a pillow and a folded wool blanket.` |
-| 14 | `workbench.glb` | верстак | 1,6 × 0,95 × 0,8 | `A sturdy wooden workbench with a vise and a few tools hanging on a small back board.` |
-| 15 | `locker.glb` | шкафчик | 0,6 × 1,8 × 0,5 | `A tall narrow metal locker with two vent slots and a handle, slightly dented.` |
-| 16 | `stove.glb` | печка-буржуйка (камин) | 0,6 × 1 × 0,6 | `A small cast iron wood-burning stove with a chimney pipe going up, a little door with glowing coals.` |
-| 17 | `table.glb` | стол | 1,2 × 0,75 × 0,7 | `A simple old wooden table with four legs.` |
-| 18 | `chair.glb` | стул | 0,45 × 0,9 × 0,45 | `A simple old wooden chair.` |
-| 19 | `lamp_ceiling.glb` | лампа под потолком | 0,35 × 0,4 × 0,35 | `A hanging industrial ceiling lamp with a metal shade and a wire cage around the bulb.` |
-| 20 | `crate.glb` | ящик | 0,8 × 0,5 × 0,5 | `A wooden supply crate with metal corners and stencil marks without letters.` |
-| 21 | `barrel.glb` | бочка с водой | 0,6 × 0,9 × 0,6 | `A metal water barrel with a tap near the bottom.` |
-| 22 | `radio.glb` | радиоприёмник (на стол) | 0,4 × 0,3 × 0,25 | `An old tube radio receiver with knobs and a dial.` |
+| 8 | `bed.glb` | кровать (железная койка) | 2 × 0,8 × 0,9 | `A single metal frame bed with a thin mattress, a pillow and a folded wool blanket.` |
+| 9 | `workbench.glb` | верстак | 1,6 × 0,95 × 0,8 | `A sturdy wooden workbench with a vise and a few tools hanging on a small back board.` |
+| 10 | `locker.glb` | шкафчик | 0,6 × 1,8 × 0,5 | `A tall narrow metal locker with two vent slots and a handle, slightly dented.` |
+| 11 | `stove.glb` | печка-буржуйка (камин) | 0,6 × 1 × 0,6 | `A small cast iron wood-burning stove with a chimney pipe going up, a little door with glowing coals.` |
+| 12 | `table.glb` | стол | 1,2 × 0,75 × 0,7 | `A simple old wooden table with four legs.` |
+| 13 | `chair.glb` | стул | 0,45 × 0,9 × 0,45 | `A simple old wooden chair.` |
+| 14 | `lamp_ceiling.glb` | лампа под потолком | 0,35 × 0,4 × 0,35 | `A hanging industrial ceiling lamp with a metal shade and a wire cage around the bulb.` |
+| 15 | `crate.glb` | ящик | 0,8 × 0,5 × 0,5 | `A wooden supply crate with metal corners and stencil marks without letters.` |
+| 16 | `barrel.glb` | бочка с водой | 0,6 × 0,9 × 0,6 | `A metal water barrel with a tap near the bottom.` |
+| 17 | `radio.glb` | радиоприёмник (на стол) | 0,4 × 0,3 × 0,25 | `An old tube radio receiver with knobs and a dial.` |
 
 ### Персонаж
 
 | № | Файл | Что | Размер, м | Строка предмета |
 |---|---|---|---|---|
-| 23 | `character.glb` | выживший | 0,5 × 1,8 × 0,3 | `A full body survivor character standing in a T-pose, adult man in a worn jumpsuit with a utility belt and boots, short hair.` |
+| 18 | `character.glb` | выживший | 0,5 × 1,8 × 0,3 | `A full body survivor character standing in a T-pose, adult man in a worn jumpsuit with a utility belt and boots, short hair.` |
 
 Персонаж — только посмотреть стиль (стоит неподвижно). Анимации — потом, после выбора стиля (у Tripo есть авто-риг).
 
-**Итого: 23 модели × 3 стиля.** Можно начать с половины в каждом стиле (2, 6, 8, 10, 13, 14, 15, 16, 19, 23) —
-этого хватит, чтобы сравнить.
+**Итого: 18 моделей × 3 стиля** (+ по желанию 2 текстуры для B и C). Можно начать с 8 в каждом стиле
+(1 трубы, 3 решётка, 5 плакат, 8 кровать, 9 верстак, 10 шкафчик, 11 печка, 18 персонаж) — этого хватит, чтобы сравнить.
 
 ---
 
@@ -121,12 +124,14 @@ Tripo: если есть стиль **Cartoon / Stylized** — включить;
 - Скачать с Диска: папка «00 Проба стиля», три подпапки (ссылки на файлы — в `tripo/style_test.json`, заполняет чат игры).
 - Каждую модель: перед — к −Y, низ — в Z = 0, **размер — из таблицы раздела 2** (не из ОС). Висящее на стене —
   спина в Y = 0; лампа — верх в Z = 0.
-- Облегчить: A — как есть (≤ 5 000), B и C — мебель ≤ 8 000, стены и пол ≤ 4 000, мелочь ≤ 3 000, персонаж ≤ 15 000.
+- Облегчить: A — как есть (≤ 5 000), B и C — мебель ≤ 8 000, мелочь ≤ 3 000, персонаж ≤ 15 000. Текстуры `tex_*.png` —
+  просто скопировать в `export/style_test/<a|b|c>/`.
   Текстуры 1024. Без блеска.
 - Экспорт: `export/style_test/<a|b|c>/<имя>_idle.glb`. Лист превью — три ряда (A, B, C), все модели.
 
 ## 4. Игра (чат игры)
 
-Комната «Проба стиля» (в главном меню или в редакторе сцены): пол, стены, линии, декор, мебель и персонаж стоят
+Комната «Проба стиля» (в главном меню или в редакторе сцены): оболочку (пол, стены, потолок) строит игра в виде стиля
+(текстуры `tex_wall.png` / `tex_floor.png`, если есть); линии, декор, мебель и персонаж стоят
 одинаково, **Tab** — переключить стиль A → B → C; подпись, какой стиль сейчас. Автор смотрит и выбирает.
 После выбора — общий план всех объектов в выбранном стиле (`docs/TRIPO_OBJECTS.md`).
