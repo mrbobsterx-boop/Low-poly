@@ -1,0 +1,12 @@
+{
+  "_comment": "Сырые модели Tripo лежат на Google Диске автора (папка «Shelter Tripo», доступ по ссылке — чтение). Здесь: имя для обработки → id файла на Диске. Скачать: python3 tools/drive_fetch.py (кладёт в tripo/, в git не попадает).",
+  "workbench_basic_derevyannyy_bazovyy": "1v9isBvXsJ4zKCIHy9Y6EOpqcC3DCQ5OZ",
+  "workbench_basic_metallicheskiy": "1vXyKCEi2nGLq54gGOcB4t-_GYhKsV2x7",
+  "workbench_basic_skladnoy_pohodnyy": "18p7S7OsIrBHrDgL2Sregunk-M9S1Web_",
+  "workbench_basic_verstak_s_tiskami": "1XrECxQHDCYRTjs1pJGwy91vBWB91frhv",
+  "workbench_electronics_nastolnyy": "1ljn7Fwj7MknIre87dKdbEwzNEC3mdZZo",
+  "workbench_electronics_mobilnaya_stoyka": "1_dIVPB7ioNk1OKZCmNJLTXUssUC6jdfT",
+  "recycler_bench_ruchnoy": "1yH__SKt2o_XH9MES4gMzYrS5RMrJ45oI",
+  "sewing_table_ruchnaya_mashina": "1U1_OPRjcuHCKsQTw16Rpj-dxHjAmqyYy",
+  "sewing_table_pedalnaya": "1Oh5SPpvK9eo1gqPRw_w6KN0nzxC4YEfL"
+}
