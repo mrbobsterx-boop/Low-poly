@@ -3,7 +3,8 @@
 Файлы в git не попадают (.gitignore).
 
   python3 tools/drive_fetch.py                    — по списку tripo/drive.json (имя → id файла)
-  python3 tools/drive_fetch.py --style-test       — проба стиля: папки A / B / C → tripo/style_test/a|b|c/<имя>.glb
+  python3 tools/drive_fetch.py --style-test       — проба стиля: по tripo/style_test.json (иначе папки A / B / C)
+                                                    → tripo/style_test/a|b|c/<имя>.glb
   python3 tools/drive_fetch.py --folder <id> <куда> — вся папка Диска (с подпапками), имена как на Диске
 
 Уже скачанное пропускает (--force — заново)."""
@@ -51,8 +52,15 @@ def fetch_folder(folder_id, dest):
 def main():
     a = sys.argv[1:]
     if "--style-test" in a:
-        for st, fid in STYLE_FOLDERS.items():
-            fetch_folder(fid, os.path.join(ROOT, "tripo", "style_test", st))
+        lst = os.path.join(ROOT, "tripo", "style_test.json")
+        if os.path.exists(lst):   # разобранный список: стиль → имя → id файла
+            for st, items in json.load(open(lst, encoding="utf-8")).items():
+                if not st.startswith("_"):
+                    for name, fid in items.items():
+                        fetch(fid, os.path.join(ROOT, "tripo", "style_test", st, name + ".glb"))
+        else:
+            for st, fid in STYLE_FOLDERS.items():
+                fetch_folder(fid, os.path.join(ROOT, "tripo", "style_test", st))
     elif "--folder" in a:
         i = a.index("--folder")
         fetch_folder(a[i + 1], os.path.join(ROOT, a[i + 2]))

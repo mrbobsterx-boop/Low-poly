@@ -1,0 +1,72 @@
+{
+  "_comment": "Проба стиля: стиль → имя предмета (TRIPO_STYLE_TEST.md, раздел 2) → id файла на Google Диске. Разобрано чатом игры по виду моделей (автор положил B и C в одну папку). Скачать: python3 tools/drive_fetch.py --style-test → tripo/style_test/<стиль>/<имя>.glb.",
+  "_missing": {
+    "a": [
+      "poster_2 (вышла пустая рамка — переделать)"
+    ],
+    "c": [
+      "stove (печки в рисованном стиле нет)"
+    ]
+  },
+  "_extra": {
+    "a": "второй вариант бочки: 1dd_mlhjMzYdICgnXv6DCl8j-gyr_1RQJ"
+  },
+  "a": {
+    "barrel": "1YKftuSmf-YFBqpBMXN695cdb7grhB0hy",
+    "bed": "178jwYkSfepOvF-T7O6M553BDf9O_EZ44",
+    "chair": "1Qbf3umVJ52DO00yH0-IBbrB816SXb73B",
+    "character": "1k03anGKhq4XiSqFS_Ap-e-dnPFyZ7CKA",
+    "crate": "1q-76DXLn2VATMjbzafb4n1A06MGyYzkg",
+    "decor_box": "1sY9J0J3euwK7eIoXqe4yddqj23H8gr-_",
+    "decor_vent": "1wF3NqzNvcIeWdOn7XxJRam-p9aehtG5J",
+    "lamp_ceiling": "1H0dqJ3PKnanx0NbVGoK6uFl2wBfVJx4T",
+    "line_cable": "1vf5vig_TgCawX57_SmNw2Xdm2dcp3C5r",
+    "line_pipes": "1DjkH08UrVED7Bj61EC5P2b4-lqi-4DIS",
+    "locker": "1l_GZibEXigthD8pP1ylLdjl-30ertdo2",
+    "poster_1": "1Sh-McYkEv-AxZL3tqJ3dMR41rJm4o9N9",
+    "radio": "17e7hczst-yQfFRwG5s5LM51aU3D20_4V",
+    "stove": "1roaRhfk3Yt4RhpRIQGHYtjNot8jDS9-V",
+    "table": "1gJUnw9N1yMm2op9MRj1dpIOREvFu9qIX",
+    "wall_shelf": "1I804wyJpQbr2AVAD0kGX7l-7_9FYlIfd",
+    "workbench": "1-8hrNL55ybIAYyPqcu1h5Rjuf8TVsOWM"
+  },
+  "b": {
+    "barrel": "1kkDNMyvdVimL4siyoNWJPtKg3Qv0s_4Y",
+    "bed": "1v5eR3lfjUlnRldSS-YSODpdWvA0GUiMH",
+    "chair": "1GOXJ1JP2httQmSjMTdX_g2BjW5UOhH9U",
+    "character": "1ycPwIDrsnHsNlMB-rW08NCZfI6GbFrCg",
+    "crate": "1NBvpZOjSjE-N89neAbkhCqw_dh5Ndyhj",
+    "decor_box": "1hVQpuuqskYO6I6geR4zDO417Op9JJuwh",
+    "decor_vent": "1FN6XFMX684a_9I4ZFOayv5VMnXWHbrdY",
+    "lamp_ceiling": "1KdrNY5DQPCJeN3g3VBJpdqx47ycOSDS4",
+    "line_cable": "1VgK3783wGByPOgqX7pLBc8Mf3spo0rsO",
+    "line_pipes": "15CcGHD_JKySD9kbl-LURI0yHWe7KuONq",
+    "locker": "1EMJe-svCcg1q10ROWrTJBNXs8K_1uyfk",
+    "poster_1": "1nDsZ3TGCJlDmobz37339AvZNyuyWMWH9",
+    "poster_2": "1BJ3IxcsDxcOKK9B8D2VVwBZiS7WSjNZF",
+    "radio": "1rZO0nZpFcml4AkkAJp3Y0eDPEAUUHi2X",
+    "stove": "1ZJPow2AujETwhJi9hh70lUIqDsBLS1Qt",
+    "table": "1Ejbr_AfQQx2N5iBuIb7P-RwnMF1530bQ",
+    "wall_shelf": "1ReXt49cD3pwON_jMGcUSXxnPk2rtwGxx",
+    "workbench": "1ULl15JC_yf8CUNlXEcCn5P5pFdbfu6NE"
+  },
+  "c": {
+    "barrel": "10piFNVY0ALypDUFn-MZqcdXgBGNDUmJ3",
+    "bed": "1q8Zh7eCcuQAxPT0s20gGw03wAsktdsC2",
+    "chair": "1HAc7JSYhmROjV-9jEYCppy7n2lUCm177",
+    "character": "174EVlLAkoaKALAJyWDAE6i2KHAMxSTBF",
+    "crate": "1htliYvoebxhyxr_pe9Xe_x94dUU-PJW_",
+    "decor_box": "1MPLKz3pwNn943rV_x9l7UXj7AJNbM6Gw",
+    "decor_vent": "1i_WbUdBt2EQAu_M9H22grjffBWkNJ-dS",
+    "lamp_ceiling": "1ivJRQzZV-82KO-RkI8Ni2Fyx2UHTWwx-",
+    "line_cable": "1kJS3UOKVR2FGwA3A_4LuksE0KoC5yuXK",
+    "line_pipes": "1JWDi1lQnQbYDeEEmgk4_zzPySeD21jqt",
+    "locker": "1WDHAbDEj0hVHMkbMElQSxp9uMIjSs3yL",
+    "poster_1": "1A1OIL3hv6SQ2WnZswOdKnPBFZiV0wdBU",
+    "poster_2": "1SSZ5QOid18BnWMg8svCC5MLqJWOK_4cK",
+    "radio": "1oIhdtJgSKQv0H_o5H7ZrbXaQpXtL4cFl",
+    "table": "1Rx83Pf__FZ3OOHsjJJ_sOVcmPUqZPkgD",
+    "wall_shelf": "1bBvm0n4LSDtJawf6LIS_51LannLp3Ckl",
+    "workbench": "1jIlzK-S67ameYFYgyvoJPAiPaMzbvMCi"
+  }
+}
