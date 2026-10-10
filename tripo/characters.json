@@ -1,0 +1,11 @@
+{
+ "_comment": "Персонажи из частей (docs/TRIPO_CHARACTERS.md): имя → id файла на Google Диске (папка «13 Персонажи и существа»). Тела — с ригом Mixamo (Tripo), одежда — без рига: её прикрепить к скелету тела в Blender (перенос весов с тела). Скачать: python3 tools/drive_fetch.py --list tripo/characters.json",
+ "_status": "body_base_male / body_base_female в первой выгрузке БЕЗ скелета — автор перевыгрузит с ригом (id заменить)",
+ "body_base_male": "16z-ItLT2UbOft82uH44lPNImGNjJZ1FN",
+ "body_base_female": "1ErClw28QyVshNEzb1NzNU7gWz7_RrixW",
+ "top_hoodie_m": "1KsL8g2yJAuM6IaDSnKiPhkD1i7trnYIK",
+ "top_hoodie_f": "1pB1QuwsWjApLBBq_Il4v-vvoRrPJdX7o",
+ "bottom_jeans_m": "1iLqB0WqBlCYVULof0niTxm2dtYk8ntYL",
+ "bottom_jeans_f": "1-tAgg2VwFcT3CHA7z3yJHpgSunPl1Vr0",
+ "shoes_sneakers": "1mr2KAKjZm_IS4RHe13FIr4hvvgvqx1qA"
+}
