@@ -39,6 +39,14 @@ LARGE_CATS = {"machine", "building", "vehicle", "structure"}
 MAX_MB = 3.0
 ROUGH_MIN = 0.7
 WIDTH_TOL = 0.15
+# длинная мебель — по ширине из ОС (TRIPO.md, раздел 2; в игре — view3d.json → fit_width); и всё, где ширина ≥ 1,65 высоты
+FIT_WIDTH_IDS = {"bed_single", "bunk_bed", "workbench_basic", "workbench_electronics", "recycler_bench", "sewing_table",
+                 "bathtub", "cot_medical", "kitchen_counter"}
+
+
+def fit_width(o):
+    w, h = o["size"]
+    return o["id"] in FIT_WIDTH_IDS or w >= 1.65 * h
 
 
 # ───────────────────────── план ОС ─────────────────────────
@@ -193,13 +201,15 @@ def check_mesh(obj):
 
 
 def place(obj, o, rot_deg):
-    """Поворот, масштаб по высоте ОС, точка опоры по креплению. Возвращает (ширина, глубина, высота) м."""
+    """Поворот, масштаб по ОС (длинная мебель — по ширине, остальное — по высоте), точка опоры по креплению. Возвращает (ширина, глубина, высота) м."""
     if rot_deg:
         obj.data.transform(Matrix.Rotation(math.radians(rot_deg), 4, "Z"))
     lo, hi = bbox(obj)
-    h = float(hi[2] - lo[2])
-    target_h = o["size"][1] / 100
-    k = target_h / h if h > 1e-6 else 1.0
+    if fit_width(o):                            # длинная мебель — по ширине, высота — по пропорциям модели
+        cur, target = float(hi[0] - lo[0]), o["size"][0] / 100
+    else:                                       # остальное — по высоте
+        cur, target = float(hi[2] - lo[2]), o["size"][1] / 100
+    k = target / cur if cur > 1e-6 else 1.0
     obj.data.transform(Matrix.Scale(k, 4))
     lo, hi = bbox(obj)
     cx, cy = (lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2
@@ -505,7 +515,10 @@ def process(path, plan, out_dir, rot_cfg, color_cfg, prev_dir):
     warns += check_mesh(obj)
     if n_parts > 1:
         warns.append(f"в файле {n_parts} отдельных объектов — склеены в один")
-    if abs(w * 100 - o["size"][0]) > WIDTH_TOL * o["size"][0]:
+    if fit_width(o):
+        if abs(h * 100 - o["size"][1]) > 0.25 * o["size"][1]:
+            warns.append(f"подогнано по ширине; высота {h * 100:.0f} см, в ОС {o['size'][1]} см")
+    elif abs(w * 100 - o["size"][0]) > WIDTH_TOL * o["size"][0]:
         warns.append(f"ширина {w * 100:.0f} см, в ОС {o['size'][0]} см (> 15 %) — записано в DEVIATIONS.md")
     t1 = decimate(obj, LIMITS[cls])
     smooth_by_angle(obj)
