@@ -1,1 +1,4323 @@
-{}
+{
+ "ammo_9mm_obychnye_idle": {
+  "src": "ammo_9mm_obychnye.glb",
+  "tris_before": 47534,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   6.000000238418579,
+   5.3210485726594925,
+   8.233854919672012
+  ],
+  "os_cm": [
+   6,
+   3
+  ],
+  "scale": 0.08233854758281783,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fa44610a-99b4-4934-b695-dd93c42fd757_0: 2048→512",
+  "mb": 0.158656,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 8 см, в ОС 3 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "ammo_shells_kartech_idle": {
+  "src": "ammo_shells_kartech.glb",
+  "tris_before": 48750,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   7.999999821186066,
+   7.09228478372097,
+   4.802734404802322
+  ],
+  "os_cm": [
+   8,
+   4
+  ],
+  "scale": 0.08,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_dcbcb28f-0e2d-4791-be61-7a84e10783df_0: 2048→512",
+  "mb": 0.1612,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "antibiotics_shirokogo_spektra_idle": {
+  "src": "antibiotics_shirokogo_spektra.glb",
+  "tris_before": 46530,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   7.999999821186066,
+   2.786132786422968,
+   2.0219726487994194
+  ],
+  "os_cm": [
+   6,
+   8
+  ],
+  "scale": 0.08,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_74dae2b4-8e39-4463-bbc8-97b2de53fd9b_0: 2048→512",
+  "mb": 0.130492,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (8 см); высота 2 см, в ОС 8 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "antiseptic_spirt_idle": {
+  "src": "antiseptic_spirt.glb",
+  "tris_before": 46206,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   7.545165717601776,
+   7.459716498851776,
+   14.000000059604645
+  ],
+  "os_cm": [
+   6,
+   14
+  ],
+  "scale": 0.14,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_46163a36-c294-43ed-bdc8-e769475496e9_0: 2048→512",
+  "mb": 0.139992,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 8 см, в ОС 6 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "backpack_shkolnyy_idle": {
+  "src": "backpack_shkolnyy.glb",
+  "tris_before": 47870,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   37.69683837890625,
+   35.98022311925888,
+   44.999998807907104
+  ],
+  "os_cm": [
+   35,
+   45
+  ],
+  "scale": 0.45,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_6b06e0b5-ebb7-4851-922a-f66293b6254a_0: 2048→512",
+  "mb": 0.178732,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "bandage_sterilnyy_idle": {
+  "src": "bandage_sterilnyy.glb",
+  "tris_before": 49664,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   10.000000149011612,
+   11.585348099470139,
+   10.658322274684906
+  ],
+  "os_cm": [
+   10,
+   6
+  ],
+  "scale": 0.11585347806970994,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0eb2a574-3d5c-4e5c-b402-f93811a0aaed_0: 2048→512",
+  "mb": 0.187376,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 11 см, в ОС 6 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "barrel_water_plastikovaya_200_l_idle": {
+  "src": "barrel_water_plastikovaya_200_l.glb",
+  "tris_before": 48658,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   51.372069120407104,
+   62.97363042831421,
+   89.99999761581421
+  ],
+  "os_cm": [
+   60,
+   90
+  ],
+  "scale": 0.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_f53bc923-1417-479d-ab7a-6c7e7c0685aa_0: 2048→1024",
+  "mb": 0.31694,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "barricade_planks_doski_na_okne_idle": {
+  "src": "barricade_planks_doski_na_okne.glb",
+  "tris_before": 47702,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   163.1103515625,
+   68.45702826976776,
+   200.0
+  ],
+  "os_cm": [
+   110,
+   200
+  ],
+  "scale": 2.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_eb621aec-f494-4ccb-b05b-ccf1806d8048_0: 2048→1024",
+  "mb": 0.550036,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 163 см, в ОС 110 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "bathtub_chugunnaya_idle": {
+  "src": "bathtub_chugunnaya.glb",
+  "tris_before": 48116,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   170.00000476837158,
+   123.55712652206421,
+   107.2357177734375
+  ],
+  "os_cm": [
+   170,
+   60
+  ],
+  "scale": 1.7,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_fe09dc2b-846a-49c9-805f-ff7d5740b4ec_0: 2048→1024",
+  "mb": 0.283096,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 107 см, в ОС 60 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "battery_bank_avtomobilnyy_12_v_idle": {
+  "src": "battery_bank_avtomobilnyy_12_v.glb",
+  "tris_before": 43149,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   35.70312410593033,
+   37.62695491313934,
+   40.00000059604645
+  ],
+  "os_cm": [
+   60,
+   40
+  ],
+  "scale": 0.4,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_eacebdfc-4eb9-4b01-bccf-ca9126db8d73_0: 2048→1024",
+  "mb": 0.31072,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 36 см, в ОС 60 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "battery_cell_odnorazovaya_idle": {
+  "src": "battery_cell_odnorazovaya.glb",
+  "tris_before": 48078,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   2.077331580221653,
+   2.086486853659153,
+   5.999999865889549
+  ],
+  "os_cm": [
+   3,
+   6
+  ],
+  "scale": 0.06,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_cf242a76-aa8b-454d-8a5c-fb52c867de0f_0: 2048→512",
+  "mb": 0.119244,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 2 см, в ОС 3 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "bed_single_zheleznaya_koyka_idle": {
+  "src": "bed_single_zheleznaya_koyka.glb",
+  "tris_before": 44886,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   200.0,
+   108.33740234375,
+   79.96826171875
+  ],
+  "os_cm": [
+   200,
+   60
+  ],
+  "scale": 2.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_a2b7d888-a37c-4947-b799-182b46b91505_0: 2048→1024",
+  "mb": 0.371964,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 80 см, в ОС 60 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "bench_street_derevyannaya_idle": {
+  "src": "bench_street_derevyannaya.glb",
+  "tris_before": 45972,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   150.0,
+   96.93604707717896,
+   91.7816162109375
+  ],
+  "os_cm": [
+   150,
+   80
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_54c8310a-8938-4c2a-b1b4-32255c666343_0: 2048→1024",
+  "mb": 0.385348,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "bike_generator_statsionarnyy_idle": {
+  "src": "bike_generator_statsionarnyy.glb",
+  "tris_before": 45800,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   119.82182264328003,
+   71.40748798847198,
+   110.00000238418579
+  ],
+  "os_cm": [
+   120,
+   110
+  ],
+  "scale": 1.19821820357689,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_032e6abe-f2b9-433e-8416-6749e8927e9d_0: 2048→1024",
+  "mb": 0.62672,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "billboard_road_tselyy_idle": {
+  "src": "billboard_road_tselyy.glb",
+  "tris_before": 46144,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   230.859375,
+   78.69871854782104,
+   400.0
+  ],
+  "os_cm": [
+   150,
+   400
+  ],
+  "scale": 4.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_3f0622d5-c850-485f-94f8-81b5786df40d_0: 2048→1024",
+  "mb": 0.545656,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 231 см, в ОС 150 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "bottle_water_plastikovaya_0_5_l_idle": {
+  "src": "bottle_water_plastikovaya_0_5_l.glb",
+  "tris_before": 48176,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   9.639739990234375,
+   9.712982177734375,
+   25.0
+  ],
+  "os_cm": [
+   8,
+   25
+  ],
+  "scale": 0.25,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_bae9e88b-7e01-4cb8-8b8b-521d18385d50_0: 2048→512",
+  "mb": 0.140032,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 10 см, в ОС 8 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "bucket_metallicheskoe_idle": {
+  "src": "bucket_metallicheskoe.glb",
+  "tris_before": 47746,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   23.43383878469467,
+   19.758911430835724,
+   30.000001192092896
+  ],
+  "os_cm": [
+   30,
+   30
+  ],
+  "scale": 0.3,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_278015bb-a359-4004-87d3-efc107669c49_0: 2048→512",
+  "mb": 0.146288,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 23 см, в ОС 30 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "bunk_bed_metallicheskaya_idle": {
+  "src": "bunk_bed_metallicheskaya.glb",
+  "tris_before": 41609,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   199.99999403953552,
+   125.08544325828552,
+   149.462890625
+  ],
+  "os_cm": [
+   200,
+   180
+  ],
+  "scale": 2.0000000596046466,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_533dc25d-d8b6-4d5e-9c56-d00da07113f3_0: 2048→1024",
+  "mb": 0.57726,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "bush_berry_malina_idle": {
+  "src": "bush_berry_malina.glb",
+  "tris_before": 48630,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   56.78954720497131,
+   39.05029296875,
+   69.9999988079071
+  ],
+  "os_cm": [
+   80,
+   70
+  ],
+  "scale": 0.7,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_6bbf92d5-fd7d-4117-8589-9f4080544391_0: 2048→1024",
+  "mb": 0.604556,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 57 см, в ОС 80 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "campfire_prostoy_idle": {
+  "src": "campfire_prostoy.glb",
+  "tris_before": 49521,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   117.91291236877441,
+   117.22201108932495,
+   49.99999701976776
+  ],
+  "os_cm": [
+   80,
+   50
+  ],
+  "scale": 1.17912918315941,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_12640c80-2e5e-495d-97eb-a241ac85c6cf_0: 2048→1024",
+  "mb": 0.322564,
+  "jpeg_q": 85,
+  "warnings": [
+   "5 отдельн. крупн. кус(ка/ков) в стороне от главного — возможно, лишняя вещь с картинки (рюкзак, ящик…) — посмотреть на превью",
+   "ширина 118 см, в ОС 80 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "car_abandoned_sedan_idle": {
+  "src": "car_abandoned_sedan.glb",
+  "tris_before": 46098,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   450.0,
+   183.7738037109375,
+   147.47772216796875
+  ],
+  "os_cm": [
+   450,
+   160
+  ],
+  "scale": 4.5,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_db14f2d0-ed46-42d1-9b81-4164e6c2b928_0: 2048→1024",
+  "mb": 0.68426,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "car_wreck_razobrannaya_idle": {
+  "src": "car_wreck_razobrannaya.glb",
+  "tris_before": 46812,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   450.0,
+   176.12457275390625,
+   126.74102783203125
+  ],
+  "os_cm": [
+   450,
+   150
+  ],
+  "scale": 4.5,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_71e2d7ae-cb1c-41c6-80de-5e856525d6ea_0: 2048→1024",
+  "mb": 0.611984,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "chair_wood_derevyannyy_idle": {
+  "src": "chair_wood_derevyannyy.glb",
+  "tris_before": 42230,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   42.69561767578125,
+   45.466917753219604,
+   89.99999761581421
+  ],
+  "os_cm": [
+   45,
+   90
+  ],
+  "scale": 0.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2b09a536-db14-4f75-9fe2-8534e7f37aba_0: 2048→1024",
+  "mb": 0.376884,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "clock_wall_mehanicheskie_idle": {
+  "src": "clock_wall_mehanicheskie.glb",
+  "tris_before": 48031,
+  "tris_after": 2939,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   30.060547590255737,
+   5.914776027202606,
+   30.000001192092896
+  ],
+  "os_cm": [
+   30,
+   30
+  ],
+  "scale": 0.30060546755550116,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_a890d585-e417-4bd4-9723-ebd7b185e9ed_0: 2048→512",
+  "mb": 0.135792,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "cloth_boots_krossovki_idle": {
+  "src": "cloth_boots_krossovki.glb",
+  "tris_before": 46890,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   30.000001192092896,
+   20.852050185203552,
+   8.643493801355362
+  ],
+  "os_cm": [
+   30,
+   20
+  ],
+  "scale": 0.3,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ff8c98b2-31de-4c1e-a32f-d9112693fb90_0: 2048→512",
+  "mb": 0.202272,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (30 см); высота 9 см, в ОС 20 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "cloth_gloves_rabochie_idle": {
+  "src": "cloth_gloves_rabochie.glb",
+  "tris_before": 47480,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   19.999999552965164,
+   16.989746689796448,
+   5.364990234375
+  ],
+  "os_cm": [
+   20,
+   15
+  ],
+  "scale": 0.20000000596046466,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b230526a-ccae-4719-abd0-a648bd5b1cb9_0: 2048→512",
+  "mb": 0.146188,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (20 см); высота 5 см, в ОС 15 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "cloth_jacket_kozhanaya_idle": {
+  "src": "cloth_jacket_kozhanaya.glb",
+  "tris_before": 48026,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   69.8718249797821,
+   29.409483075141907,
+   69.9999988079071
+  ],
+  "os_cm": [
+   50,
+   70
+  ],
+  "scale": 0.7,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fa4921a5-3b7d-427b-9143-5989fbe6211f_0: 2048→1024",
+  "mb": 0.4097,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 70 см, в ОС 50 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "cloth_pants_dzhinsy_idle": {
+  "src": "cloth_pants_dzhinsy.glb",
+  "tris_before": 47834,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   64.1552746295929,
+   80.0000011920929,
+   18.647460639476776
+  ],
+  "os_cm": [
+   40,
+   80
+  ],
+  "scale": 0.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_be88654f-5706-4182-8a89-2ceeec23bf1c_0: 2048→1024",
+  "mb": 0.383976,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (80 см); высота 19 см, в ОС 80 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "coal_chunk_kamennyy_idle": {
+  "src": "coal_chunk_kamennyy.glb",
+  "tris_before": 47212,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   18.17583367228508,
+   14.634741842746735,
+   11.999999731779099
+  ],
+  "os_cm": [
+   15,
+   12
+  ],
+  "scale": 0.18175834334843302,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_f9c8627a-f8e6-44d4-8be9-867af7d2aaf0_0: 2048→512",
+  "mb": 0.133148,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 18 см, в ОС 15 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "cooking_pot_alyuminievaya_idle": {
+  "src": "cooking_pot_alyuminievaya.glb",
+  "tris_before": 48104,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   39.91230130195618,
+   30.526188015937805,
+   20.000000298023224
+  ],
+  "os_cm": [
+   25,
+   20
+  ],
+  "scale": 0.39912302070645556,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_db910ba9-bee7-4006-9163-5aaf79bc8c43_0: 2048→512",
+  "mb": 0.144348,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 40 см, в ОС 25 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "corpse_human_svezhee_idle": {
+  "src": "corpse_human_svezhee.glb",
+  "tris_before": 47532,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   180.0000011920929,
+   127.24364995956421,
+   43.796998262405396
+  ],
+  "os_cm": [
+   180,
+   30
+  ],
+  "scale": 1.800000053644182,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ee4ef9b8-98bc-4f83-9daa-ebf31b4b5ff1_0: 2048→1024",
+  "mb": 0.511836,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 44 см, в ОС 30 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "corpse_zombie_svezhee_idle": {
+  "src": "corpse_zombie_svezhee.glb",
+  "tris_before": 49086,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   179.99999523162842,
+   100.06347894668579,
+   30.926513671875
+  ],
+  "os_cm": [
+   180,
+   30
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_369afc6e-21bd-45ce-ad73-16a5d66a1a9c_0: 2048→1024",
+  "mb": 0.48808,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "cot_medical_skladnaya_idle": {
+  "src": "cot_medical_skladnaya.glb",
+  "tris_before": 44820,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   189.9999976158142,
+   100.3692626953125,
+   77.44842171669006
+  ],
+  "os_cm": [
+   190,
+   80
+  ],
+  "scale": 1.9,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_df84c927-7ba7-4d82-85cb-018883c76272_0: 2048→1024",
+  "mb": 0.3568,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "crate_wood_malyy_idle": {
+  "src": "crate_wood_malyy.glb",
+  "tris_before": 40005,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   70.32967209815979,
+   57.60646462440491,
+   50.0
+  ],
+  "os_cm": [
+   60,
+   50
+  ],
+  "scale": 0.7032967032967034,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_887d4dd3-2163-4d55-8d56-f5d8bbb29aa4_0: 2048→1024",
+  "mb": 0.444984,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 70 см, в ОС 60 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "dog_feral_odinochnaya_idle": {
+  "src": "dog_feral_odinochnaya.glb",
+  "tris_before": 49506,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   29.148802161216736,
+   88.54621052742004,
+   60.00000238418579
+  ],
+  "os_cm": [
+   90,
+   60
+  ],
+  "scale": 0.8854620789047019,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0fb24836-e3fd-44c9-935b-4a1d0f685544_0: 2048→1024",
+  "mb": 0.519824,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 29 см, в ОС 90 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "door_metal_stalnaya_idle": {
+  "src": "door_metal_stalnaya.glb",
+  "tris_before": 43077,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   115.3076171875,
+   30.123893916606903,
+   200.0
+  ],
+  "os_cm": [
+   100,
+   200
+  ],
+  "scale": 2.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4ae6fae7-924c-4329-a1e4-bbd6ba8b9909_0: 2048→1024",
+  "mb": 0.531036,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 115 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "door_wood_vnutrennyaya_idle": {
+  "src": "door_wood_vnutrennyaya.glb",
+  "tris_before": 43342,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   104.60205078125,
+   44.03991103172302,
+   200.0
+  ],
+  "os_cm": [
+   100,
+   200
+  ],
+  "scale": 2.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_e5f6323c-adbb-4107-914d-a9a2d4e9b4fb_0: 2048→1024",
+  "mb": 0.496724,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "duct_tape_izolenta_idle": {
+  "src": "duct_tape_izolenta.glb",
+  "tris_before": 47938,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   8.838500827550888,
+   10.000000149011612,
+   4.35943603515625
+  ],
+  "os_cm": [
+   10,
+   10
+  ],
+  "scale": 0.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_a9bd7526-6e97-4390-90bc-c831bc677285_0: 2048→512",
+  "mb": 0.179568,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (10 см); высота 4 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "dumpster_zelenyy_idle": {
+  "src": "dumpster_zelenyy.glb",
+  "tris_before": 45849,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   117.75498390197754,
+   78.67821156978607,
+   110.00000238418579
+  ],
+  "os_cm": [
+   130,
+   110
+  ],
+  "scale": 1.1775498203201569,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_8f49e4e4-bae5-44bf-bee6-73ec4d4f6091_0: 2048→1024",
+  "mb": 0.371812,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "faction_banner_znamya_idle": {
+  "src": "faction_banner_znamya.glb",
+  "tris_before": 48316,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   84.417724609375,
+   37.91198432445526,
+   200.0
+  ],
+  "os_cm": [
+   60,
+   200
+  ],
+  "scale": 2.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4461722f-e6fb-4f8d-bc2e-915a3f4425b1_0: 2048→1024",
+  "mb": 0.52024,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 84 см, в ОС 60 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "faction_stockpile_yaschiki_idle": {
+  "src": "faction_stockpile_yaschiki.glb",
+  "tris_before": 44725,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   199.99999403953552,
+   139.2578125,
+   153.94287109375
+  ],
+  "os_cm": [
+   200,
+   120
+  ],
+  "scale": 2.0000000596046466,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_a720c64d-b0ec-4276-9a09-1e7c46b1384b_0: 2048→1024",
+  "mb": 0.47246,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 154 см, в ОС 120 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "fence_wire_setka_idle": {
+  "src": "fence_wire_setka.glb",
+  "tris_before": 45518,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   149.0936279296875,
+   11.08359768986702,
+   150.0
+  ],
+  "os_cm": [
+   200,
+   150
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_982bd143-0b36-4040-ba40-eadfd4ce25c6_0: 2048→1024",
+  "mb": 0.833916,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 149 см, в ОС 200 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "fertilizer_bag_kompost_idle": {
+  "src": "fertilizer_bag_kompost.glb",
+  "tris_before": 47878,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   24.818725883960724,
+   17.856749892234802,
+   34.99999940395355
+  ],
+  "os_cm": [
+   25,
+   35
+  ],
+  "scale": 0.35,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2c345d92-db84-487b-894b-6f52aa8f91a2_0: 2048→512",
+  "mb": 0.226576,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "first_aid_kit_domashnyaya_idle": {
+  "src": "first_aid_kit_domashnyaya.glb",
+  "tris_before": 46774,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   21.8972384929657,
+   11.595486104488373,
+   18.000000715255737
+  ],
+  "os_cm": [
+   25,
+   18
+  ],
+  "scale": 0.21897237897237895,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2face7e9-8d45-47c3-b7d0-d907869542f9_0: 2048→512",
+  "mb": 0.18742,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "food_bread_hleb_idle": {
+  "src": "food_bread_hleb.glb",
+  "tris_before": 47285,
+  "tris_after": 2939,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   20.000000298023224,
+   25.115352869033813,
+   10.089676082134247
+  ],
+  "os_cm": [
+   20,
+   10
+  ],
+  "scale": 0.25115352188242507,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_f76e4f70-f940-4fe0-bc60-01ddfa4934c8_0: 2048→512",
+  "mb": 0.1668,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "food_canned_tushenka_idle": {
+  "src": "food_canned_tushenka.glb",
+  "tris_before": 47314,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   8.616333454847336,
+   8.623047173023224,
+   10.000000149011612
+  ],
+  "os_cm": [
+   8,
+   10
+  ],
+  "scale": 0.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_38a5d848-4e41-4296-af42-24a4cbfdac13_0: 2048→512",
+  "mb": 0.154128,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "food_grain_pshenitsa_idle": {
+  "src": "food_grain_pshenitsa.glb",
+  "tris_before": 49973,
+  "tris_after": 2939,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   18.001757562160492,
+   15.229636430740356,
+   14.999999105930328
+  ],
+  "os_cm": [
+   15,
+   15
+  ],
+  "scale": 0.1800175798417814,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_a29eda6e-f06d-444b-b7a7-f6d953d99ce1_0: 2048→512",
+  "mb": 0.228068,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 18 см, в ОС 15 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "fridge_elektricheskiy_idle": {
+  "src": "fridge_elektricheskiy.glb",
+  "tris_before": 48912,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   110.37963628768921,
+   110.40160655975342,
+   179.99999523162842
+  ],
+  "os_cm": [
+   70,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4f28ce5e-0d73-4f13-99c0-bacecb57a2a8_0: 2048→1024",
+  "mb": 0.439184,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 110 см, в ОС 70 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "fuel_canister_5_l_idle": {
+  "src": "fuel_canister_5_l.glb",
+  "tris_before": 48224,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   33.958739042282104,
+   20.36178484559059,
+   44.999998807907104
+  ],
+  "os_cm": [
+   35,
+   45
+  ],
+  "scale": 0.45,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_42bdf529-afc2-42df-a7a4-8f13f9e48bcb_0: 2048→512",
+  "mb": 0.150592,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "fuel_firewood_polenya_idle": {
+  "src": "fuel_firewood_polenya.glb",
+  "tris_before": 46746,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   40.00000059604645,
+   41.678959131240845,
+   22.09106981754303
+  ],
+  "os_cm": [
+   40,
+   15
+  ],
+  "scale": 0.41678959507624724,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ae55796e-0586-4510-9584-8e5657fa479d_0: 2048→512",
+  "mb": 0.20182,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 22 см, в ОС 15 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "fuel_generator_portativnyy_idle": {
+  "src": "fuel_generator_portativnyy.glb",
+  "tris_before": 41786,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   69.68075335025787,
+   73.66906404495239,
+   60.00000238418579
+  ],
+  "os_cm": [
+   70,
+   60
+  ],
+  "scale": 0.7366906474820144,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_6a04cbe9-8be2-4219-adb7-5f1e1271de55_0: 2048→1024",
+  "mb": 0.47836,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "fuse_box_bytovoy_idle": {
+  "src": "fuse_box_bytovoy.glb",
+  "tris_before": 46052,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   20.172119140625,
+   17.181396484375,
+   50.0
+  ],
+  "os_cm": [
+   40,
+   50
+  ],
+  "scale": 0.5,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_85369773-4b69-4d62-bcd5-ae4a81d3ca1b_0: 2048→512",
+  "mb": 0.143264,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 20 см, в ОС 40 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "grave_mound_holm_idle": {
+  "src": "grave_mound_holm.glb",
+  "tris_before": 47648,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   150.0,
+   195.8871364593506,
+   111.45385503768921
+  ],
+  "os_cm": [
+   150,
+   60
+  ],
+  "scale": 1.9588713534194166,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_9bc8816d-b431-41fe-851f-f12c5592b4b0_0: 2048→1024",
+  "mb": 0.469028,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 111 см, в ОС 60 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "grow_lamp_fioletovaya_led_idle": {
+  "src": "grow_lamp_fioletovaya_led.glb",
+  "tris_before": 44276,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   80.0000011920929,
+   29.94629144668579,
+   60.19531488418579
+  ],
+  "os_cm": [
+   80,
+   15
+  ],
+  "scale": 0.8,
+  "rotate": 270,
+  "mount": "ceiling",
+  "textures": "tripo_image_a17e29dc-c941-4a20-8baa-0f6e549b8447_0: 2048→1024",
+  "mb": 0.441376,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 60 см, в ОС 15 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "hatch_bunker_lyuk_s_kolesom_idle": {
+  "src": "hatch_bunker_lyuk_s_kolesom.glb",
+  "tris_before": 44840,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.006103515625,
+   30.388206243515015
+  ],
+  "os_cm": [
+   100,
+   60
+  ],
+  "scale": 1.0000610388817677,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_810deba5-da01-4819-a83b-41211d7b6654_0: 2048→1024",
+  "mb": 0.423664,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 30 см, в ОС 60 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "hydro_rack_malaya_idle": {
+  "src": "hydro_rack_malaya.glb",
+  "tris_before": 38461,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   154.94017601013184,
+   63.42407763004303,
+   179.99999523162842
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_7182c1a3-8586-4d04-9404-2b251d545110_0: 2048→1024",
+  "mb": 0.943396,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 155 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "iron_ore_ruda_idle": {
+  "src": "iron_ore_ruda.glb",
+  "tris_before": 47796,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   16.252624988555908,
+   15.589980781078339,
+   12.000000476837158
+  ],
+  "os_cm": [
+   15,
+   12
+  ],
+  "scale": 0.16252624617673803,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_bc457d12-0968-4ea0-a294-158bd97b7a4d_0: 2048→512",
+  "mb": 0.146564,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "key_generic_obychnyy_idle": {
+  "src": "key_generic_obychnyy.glb",
+  "tris_before": 49388,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   7.999999821186066,
+   2.8273925185203552,
+   0.9263915941119194
+  ],
+  "os_cm": [
+   3,
+   8
+  ],
+  "scale": 0.08,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_799d4c47-d880-4353-b2f2-1761f8aaf906_0: 2048→512",
+  "mb": 0.135992,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (8 см); высота 1 см, в ОС 8 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "kitchen_counter_s_rakovinoy_idle": {
+  "src": "kitchen_counter_s_rakovinoy.glb",
+  "tris_before": 43758,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   119.99999284744263,
+   76.33738815784454,
+   127.85849571228027
+  ],
+  "os_cm": [
+   120,
+   90
+  ],
+  "scale": 1.2785849807256386,
+  "rotate": 180,
+  "mount": "floor",
+  "textures": "tripo_image_862a3e04-87ce-458f-8a31-9ab6fdf2e00e_0: 2048→1024",
+  "mb": 0.32154,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 128 см, в ОС 90 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "ladder_metal_pristennaya_idle": {
+  "src": "ladder_metal_pristennaya.glb",
+  "tris_before": 48426,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   102.2369384765625,
+   19.882965087890625,
+   300.0
+  ],
+  "os_cm": [
+   50,
+   300
+  ],
+  "scale": 3.0,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_da367c7d-2829-46ea-8457-e67f9c133dcf_0: 2048→1024",
+  "mb": 0.480688,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 102 см, в ОС 50 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "lamp_ceiling_lampa_nakalivaniya_idle": {
+  "src": "lamp_ceiling_lampa_nakalivaniya.glb",
+  "tris_before": 49416,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   20.0103759765625,
+   20.037841796875,
+   25.0
+  ],
+  "os_cm": [
+   30,
+   25
+  ],
+  "scale": 0.25,
+  "rotate": 270,
+  "mount": "ceiling",
+  "textures": "tripo_image_1708fd8d-0b67-40fb-8d3b-95f6b2eb803b_0: 2048→512",
+  "mb": 0.13538,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 20 см, в ОС 30 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "light_switch_klavishnyy_idle": {
+  "src": "light_switch_klavishnyy.glb",
+  "tris_before": 47196,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   7.645751535892487,
+   7.856689393520355,
+   11.999999731779099
+  ],
+  "os_cm": [
+   8,
+   12
+  ],
+  "scale": 0.12,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_b9f86f2f-0348-439a-8a4a-b51d0a7c5a28_0: 2048→512",
+  "mb": 0.154612,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "lightbulb_nakalivaniya_idle": {
+  "src": "lightbulb_nakalivaniya.glb",
+  "tris_before": 49158,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   7.219482213258743,
+   7.385009527206421,
+   11.999999731779099
+  ],
+  "os_cm": [
+   6,
+   12
+  ],
+  "scale": 0.12,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_dce0a374-04c4-47af-a5fd-e2834bfb1dc4_0: 2048→512",
+  "mb": 0.1531,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 7 см, в ОС 6 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "lock_padlock_navesnoy_idle": {
+  "src": "lock_padlock_navesnoy.glb",
+  "tris_before": 48137,
+  "tris_after": 2939,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   6.624145805835724,
+   3.291015699505806,
+   10.000000149011612
+  ],
+  "os_cm": [
+   6,
+   10
+  ],
+  "scale": 0.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_eece9105-e6e5-4407-8627-390ec45c50f9_0: 2048→512",
+  "mb": 0.169068,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "locker_metal_sportivnyy_idle": {
+  "src": "locker_metal_sportivnyy.glb",
+  "tris_before": 44783,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   60.35888493061066,
+   66.69250130653381,
+   179.99999523162842
+  ],
+  "os_cm": [
+   50,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 180,
+  "mount": "floor",
+  "textures": "tripo_image_e439e764-3a69-452d-9019-3cd732e2288a_0: 2048→1024",
+  "mb": 0.435652,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 60 см, в ОС 50 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "map_paper_karta_rayona_idle": {
+  "src": "map_paper_karta_rayona.glb",
+  "tris_before": 49338,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   26.665642857551575,
+   29.999998211860657,
+   4.753417149186134
+  ],
+  "os_cm": [
+   30,
+   20
+  ],
+  "scale": 0.29999996423721736,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_73e232ca-8cc9-4528-8428-e7daa2c77870_0: 2048→512",
+  "mb": 0.137852,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (30 см); высота 5 см, в ОС 20 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "mask_gas_voennyy_idle": {
+  "src": "mask_gas_voennyy.glb",
+  "tris_before": 47630,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   18.44990998506546,
+   32.58768022060394,
+   29.999998211860657
+  ],
+  "os_cm": [
+   25,
+   30
+  ],
+  "scale": 0.32587681495723664,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_76bf6fbb-f5fc-4131-a790-32c9f4c60a81_0: 2048→512",
+  "mb": 0.17138,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 18 см, в ОС 25 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_cement_meshok_tsementa_idle": {
+  "src": "mat_cement_meshok_tsementa.glb",
+  "tris_before": 48826,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   30.656740069389343,
+   21.25488370656967,
+   40.00000059604645
+  ],
+  "os_cm": [
+   30,
+   40
+  ],
+  "scale": 0.4,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fd202236-f6db-4c39-a692-d6a56e12dc67_0: 2048→512",
+  "mb": 0.122744,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "mat_cloth_loskut_idle": {
+  "src": "mat_cloth_loskut.glb",
+  "tris_before": 48636,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   58.59276056289673,
+   50.29236078262329,
+   20.000000298023224
+  ],
+  "os_cm": [
+   30,
+   20
+  ],
+  "scale": 0.5859275815824766,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_502eb0dd-cac2-480e-83c8-49980581558d_0: 2048→512",
+  "mb": 0.167944,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 59 см, в ОС 30 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_glass_list_stekla_idle": {
+  "src": "mat_glass_list_stekla.glb",
+  "tris_before": 38227,
+  "tris_after": 2939,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   30.000001192092896,
+   26.072388887405396,
+   8.852234482765198
+  ],
+  "os_cm": [
+   30,
+   30
+  ],
+  "scale": 0.3,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_89c5c675-41f7-41aa-a5a0-b73b58acdc0a_0: 2048→512",
+  "mb": 0.17086,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (30 см); высота 9 см, в ОС 30 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_log_poleno_idle": {
+  "src": "mat_log_poleno.glb",
+  "tris_before": 47584,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   120.00000476837158,
+   45.21607458591461,
+   41.82495176792145
+  ],
+  "os_cm": [
+   120,
+   20
+  ],
+  "scale": 1.2,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4fa74d52-d87b-426e-8114-bb65dfe1156e_0: 2048→1024",
+  "mb": 0.390444,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 42 см, в ОС 20 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_nails_gvozdi_idle": {
+  "src": "mat_nails_gvozdi.glb",
+  "tris_before": 49298,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   10.248807817697525,
+   8.481038361787796,
+   4.000000283122063
+  ],
+  "os_cm": [
+   6,
+   4
+  ],
+  "scale": 0.10248807569004613,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_83f7bcb3-a6f2-4ede-ad5a-49f6baa190cd_0: 2048→512",
+  "mb": 0.244444,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 10 см, в ОС 6 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_pipe_metal_stalnaya_idle": {
+  "src": "mat_pipe_metal_stalnaya.glb",
+  "tris_before": 46292,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   43.072509765625,
+   43.7225341796875
+  ],
+  "os_cm": [
+   100,
+   8
+  ],
+  "scale": 1.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_9dadc1f0-f057-4b38-8642-455079aee2f9_0: 2048→1024",
+  "mb": 0.327384,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 44 см, в ОС 8 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_plank_doska_idle": {
+  "src": "mat_plank_doska.glb",
+  "tris_before": 43380,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   45.57190537452698,
+   24.49188232421875
+  ],
+  "os_cm": [
+   100,
+   10
+  ],
+  "scale": 1.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fc29ebfe-c799-4ca8-a64b-4f45eb409cac_0: 2048→1024",
+  "mb": 0.426716,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 24 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_rope_penka_idle": {
+  "src": "mat_rope_penka.glb",
+  "tris_before": 48688,
+  "tris_after": 2939,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   29.999998211860657,
+   30.018320679664612,
+   19.13887858390808
+  ],
+  "os_cm": [
+   30,
+   10
+  ],
+  "scale": 0.3001832172957127,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_3909a92a-f2ef-4632-aa83-274ee5a1e6d5_0: 2048→512",
+  "mb": 0.182504,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 19 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_rubble_bityy_kirpich_idle": {
+  "src": "mat_rubble_bityy_kirpich.glb",
+  "tris_before": 48548,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   38.06396722793579,
+   36.156585812568665,
+   15.000000596046448
+  ],
+  "os_cm": [
+   20,
+   15
+  ],
+  "scale": 0.38063966545341904,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_1a62185a-f863-47a9-823d-77120f22c371_0: 2048→512",
+  "mb": 0.181784,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 38 см, в ОС 20 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_scrap_lom_idle": {
+  "src": "mat_scrap_lom.glb",
+  "tris_before": 47242,
+  "tris_after": 2976,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   25.0,
+   20.42083665728569,
+   9.32159423828125
+  ],
+  "os_cm": [
+   25,
+   15
+  ],
+  "scale": 0.25,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_839e7f7f-9447-4bd6-ac00-52661ec34886_0: 2048→512",
+  "mb": 0.284176,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 9 см, в ОС 15 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_sheet_metal_tonkiy_idle": {
+  "src": "mat_sheet_metal_tonkiy.glb",
+  "tris_before": 48778,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   148.1642186641693,
+   20.087267458438873
+  ],
+  "os_cm": [
+   100,
+   3
+  ],
+  "scale": 1.4816422499547839,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_7e52b508-4913-47fa-91eb-c9cf518047f5_0: 2048→1024",
+  "mb": 0.251464,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 20 см, в ОС 3 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "mat_wire_mednaya_idle": {
+  "src": "mat_wire_mednaya.glb",
+  "tris_before": 47889,
+  "tris_after": 2939,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   19.94262784719467,
+   7.667846977710724,
+   20.000000298023224
+  ],
+  "os_cm": [
+   20,
+   20
+  ],
+  "scale": 0.2,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_5174a7fa-ba84-4599-a056-9af2a585d87e_0: 2048→512",
+  "mb": 0.226472,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "meal_soup_ovoschnoy_sup_idle": {
+  "src": "meal_soup_ovoschnoy_sup.glb",
+  "tris_before": 49686,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   19.87384632229805,
+   17.663754522800446,
+   9.999999403953552
+  ],
+  "os_cm": [
+   15,
+   10
+  ],
+  "scale": 0.19873847646773413,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_63ab86d5-b26d-4ee6-8ecb-38ffcdbfa4e8_0: 2048→512",
+  "mb": 0.140928,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 20 см, в ОС 15 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "meat_cooked_zharenoe_idle": {
+  "src": "meat_cooked_zharenoe.glb",
+  "tris_before": 47534,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   15.000000596046448,
+   8.39996375143528,
+   8.70208740234375
+  ],
+  "os_cm": [
+   15,
+   8
+  ],
+  "scale": 0.15,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_a4e962f5-7452-4f3d-945a-470e694f3204_0: 2048→512",
+  "mb": 0.11184,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "meat_raw_krolik_idle": {
+  "src": "meat_raw_krolik.glb",
+  "tris_before": 48278,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   15.000000596046448,
+   8.101502060890198,
+   8.990478515625
+  ],
+  "os_cm": [
+   15,
+   8
+  ],
+  "scale": 0.15,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4372a078-edb7-4907-bcf5-c00d866d02fe_0: 2048→512",
+  "mb": 0.158772,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "medical_kit_polevoy_idle": {
+  "src": "medical_kit_polevoy.glb",
+  "tris_before": 45436,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   48.74449670314789,
+   31.384626030921936,
+   25.0
+  ],
+  "os_cm": [
+   35,
+   25
+  ],
+  "scale": 0.48744496013328575,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_cb41102e-79d9-45a0-a1c2-5648b3febabd_0: 2048→512",
+  "mb": 0.190068,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 49 см, в ОС 35 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "medicine_cabinet_vannyy_idle": {
+  "src": "medicine_cabinet_vannyy.glb",
+  "tris_before": 44954,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   48.18969964981079,
+   30.743414163589478,
+   60.00000238418579
+  ],
+  "os_cm": [
+   50,
+   60
+  ],
+  "scale": 0.6,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_fec59cfd-3611-4fca-80ee-5ee0c2c80492_0: 2048→1024",
+  "mb": 0.32,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "mutant_crawler_polzun_idle": {
+  "src": "mutant_crawler_polzun.glb",
+  "tris_before": 47442,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   139.9999976158142,
+   164.1800880432129,
+   130.65063953399658
+  ],
+  "os_cm": [
+   140,
+   60
+  ],
+  "scale": 1.6418008732374203,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_d8504137-79d6-4773-8f73-9d389ea9f7c5_0: 2048→1024",
+  "mb": 0.546864,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 131 см, в ОС 60 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "note_diary_zapiska_idle": {
+  "src": "note_diary_zapiska.glb",
+  "tris_before": 47392,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   19.999999552965164,
+   15.838623046875,
+   6.639404594898224
+  ],
+  "os_cm": [
+   15,
+   20
+  ],
+  "scale": 0.20000000596046466,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_c32e6c5b-7727-4e05-89d5-ae3362dd563d_0: 2048→512",
+  "mb": 0.185712,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (20 см); высота 7 см, в ОС 20 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "noticeboard_derevyannaya_idle": {
+  "src": "noticeboard_derevyannaya.glb",
+  "tris_before": 45044,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   61.572265625,
+   21.152345091104507,
+   80.0000011920929
+  ],
+  "os_cm": [
+   100,
+   80
+  ],
+  "scale": 0.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_40364b7e-cd77-4f7e-aa92-417a4bd6b013_0: 2048→1024",
+  "mb": 0.473536,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 62 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "painkiller_tabletki_idle": {
+  "src": "painkiller_tabletki.glb",
+  "tris_before": 47490,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   4.769531264901161,
+   4.793456941843033,
+   7.999999821186066
+  ],
+  "os_cm": [
+   6,
+   8
+  ],
+  "scale": 0.08,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_83d55767-fcf8-4d18-84a8-e7a1639513af_0: 2048→512",
+  "mb": 0.185492,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 5 см, в ОС 6 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "part_electronic_platy_idle": {
+  "src": "part_electronic_platy.glb",
+  "tris_before": 44026,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   9.661865234375,
+   9.999999776482582,
+   1.2232971377670765
+  ],
+  "os_cm": [
+   10,
+   10
+  ],
+  "scale": 0.10000000298023233,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_7c6c09df-353c-4c50-9205-0d297c12bf23_0: 2048→512",
+  "mb": 0.29422,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (10 см); высота 1 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "part_mech_shesterni_idle": {
+  "src": "part_mech_shesterni.glb",
+  "tris_before": 48173,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   15.000000596046448,
+   11.596069484949112,
+   6.756134331226349
+  ],
+  "os_cm": [
+   15,
+   15
+  ],
+  "scale": 0.15,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fe337bb3-bc59-4c32-8ddb-2ec754cecb7e_0: 2048→512",
+  "mb": 0.253932,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (15 см); высота 7 см, в ОС 15 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "part_rare_circuit_voennaya_plata_idle": {
+  "src": "part_rare_circuit_voennaya_plata.glb",
+  "tris_before": 44598,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   7.71484449505806,
+   9.999999776482582,
+   1.327362097799778
+  ],
+  "os_cm": [
+   10,
+   10
+  ],
+  "scale": 0.10000000298023233,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_19f1db4f-1ed0-4c14-8eb8-2007563a6137_0: 2048→512",
+  "mb": 0.268464,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (10 см); высота 1 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "plant_potato_kartofel_idle": {
+  "src": "plant_potato_kartofel.glb",
+  "tris_before": 48470,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   36.94336116313934,
+   35.969239473342896,
+   40.00000059604645
+  ],
+  "os_cm": [
+   40,
+   40
+  ],
+  "scale": 0.4,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_9b931fd6-5908-403a-9846-98cf7007a7de_0: 2048→512",
+  "mb": 0.2101,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "plant_tree_sosna_idle": {
+  "src": "plant_tree_sosna.glb",
+  "tris_before": 47110,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   234.283447265625,
+   207.43560791015625,
+   450.0
+  ],
+  "os_cm": [
+   160,
+   450
+  ],
+  "scale": 4.5,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_cd163e05-2579-4156-9f60-c33155292286_0: 2048→1024",
+  "mb": 0.639172,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 234 см, в ОС 160 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "plant_wheat_pshenitsa_idle": {
+  "src": "plant_wheat_pshenitsa.glb",
+  "tris_before": 44918,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   119.51490640640259,
+   97.31010794639587,
+   80.0000011920929
+  ],
+  "os_cm": [
+   50,
+   80
+  ],
+  "scale": 1.1951490836144798,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_c70e98b6-40dd-4bd7-8338-47c6777a7e48_0: 2048→1024",
+  "mb": 0.69978,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 120 см, в ОС 50 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "planter_box_derevyannyy_yaschik_idle": {
+  "src": "planter_box_derevyannyy_yaschik.glb",
+  "tris_before": 44360,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   119.9999988079071,
+   54.93163466453552,
+   38.55835199356079
+  ],
+  "os_cm": [
+   120,
+   40
+  ],
+  "scale": 1.2000000357627878,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_9454b68d-c5d0-45b0-9022-14b19302d63a_0: 2048→1024",
+  "mb": 0.456224,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "poison_vial_slabyy_idle": {
+  "src": "poison_vial_slabyy.glb",
+  "tris_before": 49248,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   4.537048563361168,
+   4.533996805548668,
+   10.000000149011612
+  ],
+  "os_cm": [
+   5,
+   10
+  ],
+  "scale": 0.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_54ab006c-74ea-4c7a-8464-dccdabf1f41f_0: 2048→512",
+  "mb": 0.17914,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "power_cable_tonkiy_idle": {
+  "src": "power_cable_tonkiy.glb",
+  "tris_before": 49106,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   19.64111328125,
+   6.676025688648224,
+   20.000000298023224
+  ],
+  "os_cm": [
+   20,
+   20
+  ],
+  "scale": 0.2,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_35e1893e-204e-4410-b975-bdef5d19c327_0: 2048→512",
+  "mb": 0.242544,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "pyre_pile_koster_idle": {
+  "src": "pyre_pile_koster.glb",
+  "tris_before": 47020,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   150.0,
+   102.62146592140198,
+   56.92749619483948
+  ],
+  "os_cm": [
+   150,
+   80
+  ],
+  "scale": 1.5000000894069725,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_da40dbf2-c9fb-4d58-892a-de7ebe769a9e_0: 2048→1024",
+  "mb": 0.426688,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 57 см, в ОС 80 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "rabbit_wild_krolik_idle": {
+  "src": "rabbit_wild_krolik.glb",
+  "tris_before": 49230,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   12.54577711224556,
+   15.94695970416069,
+   25.0
+  ],
+  "os_cm": [
+   35,
+   25
+  ],
+  "scale": 0.25,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_55ca9480-fd61-438a-9604-8cff35a98776_0: 2048→1024",
+  "mb": 0.543508,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 13 см, в ОС 35 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "rack_metal_s_3_polkami_idle": {
+  "src": "rack_metal_s_3_polkami.glb",
+  "tris_before": 44388,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   115.478515625,
+   52.60009765625,
+   200.0
+  ],
+  "os_cm": [
+   120,
+   200
+  ],
+  "scale": 2.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_72c60416-24dd-4b15-9573-62c589bbd519_0: 2048→1024",
+  "mb": 1.038784,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "radio_desk_nastolnyy_idle": {
+  "src": "radio_desk_nastolnyy.glb",
+  "tris_before": 46666,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   33.784228563308716,
+   18.912900239229202,
+   24.99999850988388
+  ],
+  "os_cm": [
+   35,
+   25
+  ],
+  "scale": 0.33784229627185747,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4dbce83f-c042-414e-90a9-8bd5db42ff03_0: 2048→512",
+  "mb": 0.1665,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "raider_human_maroder_idle": {
+  "src": "raider_human_maroder.glb",
+  "tris_before": 48046,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   177.93456315994263,
+   36.114807426929474,
+   179.99999523162842
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_51ff2f87-f6af-4ebe-a4e5-8a94bebbbcbc_0: 2048→1024",
+  "mb": 0.63528,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 178 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "rain_collector_plenka_i_zhelob_idle": {
+  "src": "rain_collector_plenka_i_zhelob.glb",
+  "tris_before": 45088,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   109.99999642372131,
+   83.184814453125,
+   83.07739496231079
+  ],
+  "os_cm": [
+   110,
+   60
+  ],
+  "scale": 1.1000000327825556,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b1385610-174d-4a11-8275-f3c705b08787_0: 2048→1024",
+  "mb": 0.641112,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 83 см, в ОС 60 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "rat_pest_krysa_idle": {
+  "src": "rat_pest_krysa.glb",
+  "tris_before": 48422,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   25.0,
+   44.00515556335449,
+   31.25268518924713
+  ],
+  "os_cm": [
+   25,
+   10
+  ],
+  "scale": 0.44005156854318866,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_19a10b94-3415-40a5-a64b-cbe9b35aefdd_0: 2048→1024",
+  "mb": 0.914432,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 31 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "ration_dry_armeyskiy_idle": {
+  "src": "ration_dry_armeyskiy.glb",
+  "tris_before": 48294,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   14.999999850988388,
+   7.822265848517418,
+   3.946380689740181
+  ],
+  "os_cm": [
+   15,
+   10
+  ],
+  "scale": 0.15000000447034847,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fea1db9c-202f-4d5e-957a-7fd4eea574cd_0: 2048→512",
+  "mb": 0.11862,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (15 см); высота 4 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "recycler_bench_ruchnoy_idle": {
+  "src": "recycler_bench_ruchnoy.glb",
+  "tris_before": 43646,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   129.99999523162842,
+   75.4656970500946,
+   97.66662120819092
+  ],
+  "os_cm": [
+   130,
+   95
+  ],
+  "scale": 1.3,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_5b5f1374-1182-4301-ada2-3837d70ed591_0: 2048→1024",
+  "mb": 0.557644,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "repair_kit_malyy_nabor_idle": {
+  "src": "repair_kit_malyy_nabor.glb",
+  "tris_before": 45698,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   25.0,
+   18.547528982162476,
+   25.616011023521423
+  ],
+  "os_cm": [
+   25,
+   15
+  ],
+  "scale": 0.2561601000625391,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_97067a13-6aa8-49d0-9222-f68f5ead2233_0: 2048→512",
+  "mb": 0.178744,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 26 см, в ОС 15 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "safe_metal_nastennyy_idle": {
+  "src": "safe_metal_nastennyy.glb",
+  "tris_before": 43477,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   49.56800937652588,
+   70.07699012756348,
+   60.00000238418579
+  ],
+  "os_cm": [
+   50,
+   60
+  ],
+  "scale": 0.7007698887938408,
+  "rotate": 180,
+  "mount": "floor",
+  "textures": "tripo_image_3c320a32-8335-4d0c-8746-a88ba75a122f_0: 2048→1024",
+  "mb": 0.348532,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "scrap_pile_metallolom_idle": {
+  "src": "scrap_pile_metallolom.glb",
+  "tris_before": 49188,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   119.56942081451416,
+   108.23571681976318,
+   80.0000011920929
+  ],
+  "os_cm": [
+   120,
+   80
+  ],
+  "scale": 1.1956942163838715,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_216488b2-e042-46e4-8ce7-b62bef1a0ac5_0: 2048→1024",
+  "mb": 0.54414,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "seed_bag_kartofel_idle": {
+  "src": "seed_bag_kartofel.glb",
+  "tris_before": 48055,
+  "tris_after": 2939,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   8.205688744783401,
+   5.093628540635109,
+   14.000000059604645
+  ],
+  "os_cm": [
+   10,
+   14
+  ],
+  "scale": 0.14,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_928bbfb9-5034-4491-b852-1cd52171bc3b_0: 2048→512",
+  "mb": 0.127408,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 8 см, в ОС 10 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "sewing_table_ruchnaya_mashina_idle": {
+  "src": "sewing_table_ruchnaya_mashina.glb",
+  "tris_before": 43066,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   110.00000238418579,
+   57.05444812774658,
+   109.65759754180908
+  ],
+  "os_cm": [
+   110,
+   85
+  ],
+  "scale": 1.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_44ba7f74-19cc-49c4-b424-aad08742f462_0: 2048→1024",
+  "mb": 0.458652,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 110 см, в ОС 85 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "shelf_wood_derevyannaya_idle": {
+  "src": "shelf_wood_derevyannaya.glb",
+  "tris_before": 46406,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   39.569091796875,
+   87.322998046875
+  ],
+  "os_cm": [
+   100,
+   30
+  ],
+  "scale": 1.0,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_c2a49a0a-211d-4382-aaf8-af0fb690f3a2_0: 2048→1024",
+  "mb": 0.34522,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 87 см, в ОС 30 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "shelter_panel_prostoy_pult_idle": {
+  "src": "shelter_panel_prostoy_pult.glb",
+  "tris_before": 47074,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   84.02051329612732,
+   28.807690739631653,
+   69.9999988079071
+  ],
+  "os_cm": [
+   60,
+   70
+  ],
+  "scale": 0.8402051282051282,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_7f9ff25f-809a-47ea-87e0-3bf9e552ff60_0: 2048→1024",
+  "mb": 0.388788,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 84 см, в ОС 60 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "signpost_fork_dorozhnyy_znak_idle": {
+  "src": "signpost_fork_dorozhnyy_znak.glb",
+  "tris_before": 46770,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   147.96020984649658,
+   26.914215087890625,
+   220.00000476837158
+  ],
+  "os_cm": [
+   80,
+   220
+  ],
+  "scale": 2.2,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_eccb1edd-ce38-4e22-99ab-bbf2ef2590df_0: 2048→1024",
+  "mb": 0.524148,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 148 см, в ОС 80 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "sink_tap_kuhonnaya_idle": {
+  "src": "sink_tap_kuhonnaya.glb",
+  "tris_before": 43728,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   43.640437722206116,
+   49.26818609237671,
+   89.99999761581421
+  ],
+  "os_cm": [
+   80,
+   90
+  ],
+  "scale": 0.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_d83e2766-3451-4667-86b1-7906098919da_0: 2048→1024",
+  "mb": 0.351308,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 44 см, в ОС 80 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "soap_kusok_myla_idle": {
+  "src": "soap_kusok_myla.glb",
+  "tris_before": 49002,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   8.000000193715096,
+   5.7319339364767075,
+   3.229980543255806
+  ],
+  "os_cm": [
+   8,
+   4
+  ],
+  "scale": 0.08000000238418586,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_67503e16-d03d-49ae-8e30-37761e428fb4_0: 2048→512",
+  "mb": 0.118276,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "soil_clump_chernozem_idle": {
+  "src": "soil_clump_chernozem.glb",
+  "tris_before": 47788,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   15.000000596046448,
+   14.043274521827698,
+   5.171356350183487
+  ],
+  "os_cm": [
+   15,
+   12
+  ],
+  "scale": 0.15,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_95ab535d-1d0a-40d2-b723-76a62144f9e8_0: 2048→512",
+  "mb": 0.17056,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (15 см); высота 5 см, в ОС 12 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "solar_panel_malaya_100_vt_idle": {
+  "src": "solar_panel_malaya_100_vt.glb",
+  "tris_before": 46416,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   51.91894769668579,
+   45.81542909145355,
+   80.0000011920929
+  ],
+  "os_cm": [
+   120,
+   80
+  ],
+  "scale": 0.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_14a42e7c-9af0-4e0d-b499-0706950c595f_0: 2048→1024",
+  "mb": 0.51194,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 52 см, в ОС 120 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "splint_gotovaya_idle": {
+  "src": "splint_gotovaya.glb",
+  "tris_before": 47824,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   40.00000059604645,
+   18.431396782398224,
+   13.748779892921448
+  ],
+  "os_cm": [
+   40,
+   8
+  ],
+  "scale": 0.4,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_8b66c0ae-f373-4672-9836-19eae1c3aaef_0: 2048→512",
+  "mb": 0.17838,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 14 см, в ОС 8 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "stairs_wood_derevyannaya_idle": {
+  "src": "stairs_wood_derevyannaya.glb",
+  "tris_before": 40028,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   287.9437565803528,
+   162.4077320098877,
+   260.00001430511475
+  ],
+  "os_cm": [
+   110,
+   260
+  ],
+  "scale": 2.879437609841828,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_25f32728-254a-42ba-b9e8-b3d69543df07_0: 2048→1024",
+  "mb": 0.478356,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 288 см, в ОС 110 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "stone_chunk_bulyzhnik_idle": {
+  "src": "stone_chunk_bulyzhnik.glb",
+  "tris_before": 48506,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   15.000000596046448,
+   9.808960184454918,
+   5.213470757007599
+  ],
+  "os_cm": [
+   15,
+   12
+  ],
+  "scale": 0.15,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fb9b8e05-defa-485e-9a42-689f2c805e13_0: 2048→512",
+  "mb": 0.117516,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (15 см); высота 5 см, в ОС 12 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "stove_cook_gazovaya_idle": {
+  "src": "stove_cook_gazovaya.glb",
+  "tris_before": 44085,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   66.2860095500946,
+   69.24681961536407,
+   89.99999761581421
+  ],
+  "os_cm": [
+   70,
+   90
+  ],
+  "scale": 0.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b27542c7-3de7-4dbd-b95e-e6438930cbdc_0: 2048→1024",
+  "mb": 0.414736,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "stove_heat_stalnaya_bochka_idle": {
+  "src": "stove_heat_stalnaya_bochka.glb",
+  "tris_before": 47802,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   37.23815828561783,
+   71.27929329872131,
+   89.99999761581421
+  ],
+  "os_cm": [
+   60,
+   90
+  ],
+  "scale": 0.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b0cf6db2-463b-4628-b83d-dda17b00cd60_0: 2048→1024",
+  "mb": 0.321944,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 37 см, в ОС 60 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "street_lamp_tselyy_idle": {
+  "src": "street_lamp_tselyy.glb",
+  "tris_before": 46579,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   96.630859375,
+   98.18115234375,
+   400.0
+  ],
+  "os_cm": [
+   30,
+   400
+  ],
+  "scale": 4.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_766fb7b2-80bb-4c18-bb5c-8dbef176522f_0: 2048→1024",
+  "mb": 0.527348,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 97 см, в ОС 30 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "survivor_base_igrok_idle": {
+  "src": "survivor_base_igrok.glb",
+  "tris_before": 47572,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   99.74486827850342,
+   35.59021204710007,
+   179.99999523162842
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_6288f4c2-05ba-4bdc-a47a-d38b8cf87d00_0: 2048→1024",
+  "mb": 0.533892,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "table_wood_obedennyy_idle": {
+  "src": "table_wood_obedennyy.glb",
+  "tris_before": 44742,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   139.0202522277832,
+   84.08756852149963,
+   75.0
+  ],
+  "os_cm": [
+   120,
+   75
+  ],
+  "scale": 1.3902025115963343,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_314b2f89-3e7d-4627-b84c-1b8d4845f2b6_0: 2048→1024",
+  "mb": 0.347912,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 139 см, в ОС 120 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "tank_water_plastikovyy_1000_l_idle": {
+  "src": "tank_water_plastikovyy_1000_l.glb",
+  "tris_before": 41445,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   188.305401802063,
+   198.31559658050537,
+   189.9999976158142
+  ],
+  "os_cm": [
+   160,
+   190
+  ],
+  "scale": 1.983156017073326,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_f6bd6aaa-083a-4161-91d3-598442daf70f_0: 2048→1024",
+  "mb": 0.712356,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 188 см, в ОС 160 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "tent_camp_odnomestnaya_idle": {
+  "src": "tent_camp_odnomestnaya.glb",
+  "tris_before": 45509,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   240.15917778015137,
+   221.5726375579834,
+   140.00000953674316
+  ],
+  "os_cm": [
+   220,
+   140
+  ],
+  "scale": 2.401591456392001,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_47c8d096-67ee-464c-a9da-cb49a1c71b10_0: 2048→1024",
+  "mb": 0.560932,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "toilet_fayansovyy_so_smyvom_idle": {
+  "src": "toilet_fayansovyy_so_smyvom.glb",
+  "tris_before": 45230,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   48.101806640625,
+   72.40906059741974,
+   75.0
+  ],
+  "os_cm": [
+   40,
+   75
+  ],
+  "scale": 0.75,
+  "rotate": 180,
+  "mount": "floor",
+  "textures": "tripo_image_c4a68143-177d-4ee1-ba08-294e1b2f9f19_0: 2048→1024",
+  "mb": 0.321368,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 48 см, в ОС 40 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_axe_kolun_idle": {
+  "src": "tool_axe_kolun.glb",
+  "tris_before": 49454,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   47.318121790885925,
+   50.30273199081421,
+   60.00000238418579
+  ],
+  "os_cm": [
+   35,
+   60
+  ],
+  "scale": 0.6,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_21631c96-5ca6-41c9-9e09-be7d3844c76d_0: 2048→1024",
+  "mb": 0.320588,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 47 см, в ОС 35 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_can_opener_ruchnoy_idle": {
+  "src": "tool_can_opener_ruchnoy.glb",
+  "tris_before": 48968,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   14.999999850988388,
+   41.626015305519104,
+   4.779280722141266
+  ],
+  "os_cm": [
+   15,
+   8
+  ],
+  "scale": 0.416260162601626,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fe046786-1471-45ab-93c6-f4ab9f36d5e1_0: 2048→512",
+  "mb": 0.135832,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 5 см, в ОС 8 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_crowbar_stalnoy_idle": {
+  "src": "tool_crowbar_stalnoy.glb",
+  "tris_before": 48236,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   69.9999988079071,
+   47.129516303539276,
+   8.733978122472763
+  ],
+  "os_cm": [
+   70,
+   8
+  ],
+  "scale": 0.7,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ef8e88c1-40aa-4a6d-afd4-05e5fc059da5_0: 2048→1024",
+  "mb": 0.3322,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "tool_flashlight_ruchnoy_idle": {
+  "src": "tool_flashlight_ruchnoy.glb",
+  "tris_before": 48620,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   25.0,
+   8.79058837890625,
+   8.648681640625
+  ],
+  "os_cm": [
+   10,
+   25
+  ],
+  "scale": 0.25,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_cce44d98-e275-4c5f-93fe-3cf445a5ff5a_0: 2048→512",
+  "mb": 0.154156,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (25 см); высота 9 см, в ОС 25 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_hammer_stolyarnyy_idle": {
+  "src": "tool_hammer_stolyarnyy.glb",
+  "tris_before": 49224,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   30.000001192092896,
+   10.211792215704918,
+   6.424255669116974
+  ],
+  "os_cm": [
+   30,
+   10
+  ],
+  "scale": 0.3,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ebb56039-60d3-49b9-84be-45584eacd7ed_0: 2048→512",
+  "mb": 0.131572,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 6 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_knife_kuhonnyy_idle": {
+  "src": "tool_knife_kuhonnyy.glb",
+  "tris_before": 47206,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   25.0,
+   22.679239511489868,
+   46.540164947509766
+  ],
+  "os_cm": [
+   25,
+   5
+  ],
+  "scale": 0.46540165890239743,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_1c048dc3-2458-40be-9f7b-d940ad331c4e_0: 2048→512",
+  "mb": 0.131768,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 47 см, в ОС 5 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_lockpick_nabor_idle": {
+  "src": "tool_lockpick_nabor.glb",
+  "tris_before": 48290,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   10.000000149011612,
+   6.6009521484375,
+   2.673034742474556
+  ],
+  "os_cm": [
+   10,
+   5
+  ],
+  "scale": 0.1,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_e62bcb0d-758f-46c2-89af-6385c12b5045_0: 2048→512",
+  "mb": 0.16352,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 3 см, в ОС 5 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_pickaxe_stalnaya_idle": {
+  "src": "tool_pickaxe_stalnaya.glb",
+  "tris_before": 48978,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   46.27075344324112,
+   60.00000238418579,
+   27.9876708984375
+  ],
+  "os_cm": [
+   35,
+   60
+  ],
+  "scale": 0.6,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_7373257d-cbd3-462a-828e-a0bf155fe37e_0: 2048→1024",
+  "mb": 0.333544,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (60 см); высота 28 см, в ОС 60 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_saw_nozhovka_idle": {
+  "src": "tool_saw_nozhovka.glb",
+  "tris_before": 49280,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   50.0,
+   4.4742584228515625,
+   18.29833984375
+  ],
+  "os_cm": [
+   50,
+   12
+  ],
+  "scale": 0.5,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0733e3f8-f8b7-4565-b087-a7a591598cc4_0: 2048→512",
+  "mb": 0.156784,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 18 см, в ОС 12 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_screwdriver_krestovaya_idle": {
+  "src": "tool_screwdriver_krestovaya.glb",
+  "tris_before": 49594,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   20.000000298023224,
+   4.065551236271858,
+   4.025573655962944
+  ],
+  "os_cm": [
+   20,
+   4
+  ],
+  "scale": 0.2,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_3771985a-8e08-48e5-a415-c6b3e8e0ccf8_0: 2048→512",
+  "mb": 0.135448,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "tool_shovel_shtykovaya_idle": {
+  "src": "tool_shovel_shtykovaya.glb",
+  "tris_before": 48634,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   43.028707802295685,
+   118.40482950210571,
+   109.99999046325684
+  ],
+  "os_cm": [
+   30,
+   110
+  ],
+  "scale": 1.1840483542474214,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_1b2c92c5-553f-4295-bad5-0fe477525b1a_0: 2048→1024",
+  "mb": 0.334132,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 43 см, в ОС 30 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_sledge_malaya_idle": {
+  "src": "tool_sledge_malaya.glb",
+  "tris_before": 48318,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   42.27538704872131,
+   57.293701171875,
+   89.99999761581421
+  ],
+  "os_cm": [
+   30,
+   90
+  ],
+  "scale": 0.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_1408436e-7c90-4cc4-89dc-fb1cf0660730_0: 2048→1024",
+  "mb": 0.292296,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 42 см, в ОС 30 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_soldering_setevoy_idle": {
+  "src": "tool_soldering_setevoy.glb",
+  "tris_before": 46724,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   24.99999925494194,
+   13.72833177447319,
+   16.9525146484375
+  ],
+  "os_cm": [
+   25,
+   5
+  ],
+  "scale": 0.2500000074505808,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_148a8617-2260-4da9-9dd1-d0efd031a570_0: 2048→512",
+  "mb": 0.174636,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 17 см, в ОС 5 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "tool_wrench_razvodnoy_idle": {
+  "src": "tool_wrench_razvodnoy.glb",
+  "tris_before": 46920,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   30.000001192092896,
+   10.819702595472336,
+   3.2851412892341614
+  ],
+  "os_cm": [
+   30,
+   8
+  ],
+  "scale": 0.3,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_990fca77-111e-412f-9139-dc7c3e5e701b_0: 2048→512",
+  "mb": 0.16064,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 3 см, в ОС 8 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "toolbox_plastikovyy_idle": {
+  "src": "toolbox_plastikovyy.glb",
+  "tris_before": 43974,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   31.350937485694885,
+   23.844239860773087,
+   25.0
+  ],
+  "os_cm": [
+   40,
+   25
+  ],
+  "scale": 0.3135093761959434,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ae29f6c9-7bb4-4029-8fb8-bcc68788a8ac_0: 2048→512",
+  "mb": 0.187288,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 31 см, в ОС 40 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "trade_stall_prilavok_idle": {
+  "src": "trade_stall_prilavok.glb",
+  "tris_before": 46447,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   98.291015625,
+   57.5042724609375,
+   110.00000238418579
+  ],
+  "os_cm": [
+   160,
+   110
+  ],
+  "scale": 1.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_00f16ae5-ead1-4bac-b88e-68afa7d5681e_0: 2048→1024",
+  "mb": 0.44226,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 98 см, в ОС 160 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "trader_npc_brodyachiy_idle": {
+  "src": "trader_npc_brodyachiy.glb",
+  "tris_before": 48654,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   138.80126476287842,
+   98.51440191268921,
+   179.99999523162842
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_1d4df9be-2aa2-4605-b4d2-bbd5bc0c06c3_0: 2048→1024",
+  "mb": 0.786776,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 139 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "trap_bear_kapkan_idle": {
+  "src": "trap_bear_kapkan.glb",
+  "tris_before": 47664,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   39.99999761581421,
+   50.10397434234619,
+   41.030579805374146
+  ],
+  "os_cm": [
+   40,
+   10
+  ],
+  "scale": 0.501039755351682,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_caf74429-6420-41d0-ab7c-5b2075c12917_0: 2048→512",
+  "mb": 0.202536,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 41 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "treadmill_generator_begovaya_dorozhka_idle": {
+  "src": "treadmill_generator_begovaya_dorozhka.glb",
+  "tris_before": 46021,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   218.81802082061768,
+   119.07845735549927,
+   119.99999284744263
+  ],
+  "os_cm": [
+   160,
+   120
+  ],
+  "scale": 2.1881803005008345,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2e3bce8f-92a1-48bf-8d9d-1ca5c234f0e0_0: 2048→1024",
+  "mb": 0.591144,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 219 см, в ОС 160 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "veg_potato_kartofel_idle": {
+  "src": "veg_potato_kartofel.glb",
+  "tris_before": 48550,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   7.999999821186066,
+   6.881347298622131,
+   3.511718660593033
+  ],
+  "os_cm": [
+   8,
+   8
+  ],
+  "scale": 0.08,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_024f620b-737a-4c34-8ccb-ac862215e257_0: 2048→512",
+  "mb": 0.141856,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (8 см); высота 4 см, в ОС 8 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "vest_armor_samodelnyy_idle": {
+  "src": "vest_armor_samodelnyy.glb",
+  "tris_before": 46251,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   45.57495415210724,
+   38.62060606479645,
+   60.00000238418579
+  ],
+  "os_cm": [
+   45,
+   60
+  ],
+  "scale": 0.6,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_bf860a05-992f-4289-9fa1-f5736b0cb36a_0: 2048→1024",
+  "mb": 0.483736,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "wardrobe_derevyannyy_dvustvorchatyy_idle": {
+  "src": "wardrobe_derevyannyy_dvustvorchatyy.glb",
+  "tris_before": 45388,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   112.6220703125,
+   85.15625,
+   200.0
+  ],
+  "os_cm": [
+   100,
+   200
+  ],
+  "scale": 2.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0e7de455-4f24-4ea6-b487-e26ccca2b323_0: 2048→1024",
+  "mb": 0.551576,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "watchtower_derevyannaya_idle": {
+  "src": "watchtower_derevyannaya.glb",
+  "tris_before": 45473,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   193.084716796875,
+   203.59801054000854,
+   500.0
+  ],
+  "os_cm": [
+   200,
+   500
+  ],
+  "scale": 5.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fb5f516e-b002-41b7-8440-8ac8edc44763_0: 2048→1024",
+  "mb": 0.730188,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "water_pump_ruchnoy_rychazhnyy_idle": {
+  "src": "water_pump_ruchnoy_rychazhnyy.glb",
+  "tris_before": 47670,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   36.11938655376434,
+   28.19824367761612,
+   60.00000238418579
+  ],
+  "os_cm": [
+   50,
+   60
+  ],
+  "scale": 0.6,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_8e8f83c4-d668-400c-bf53-24c00392b0cd_0: 2048→1024",
+  "mb": 0.341288,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 36 см, в ОС 50 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "water_purifier_keramicheskiy_filtr_idle": {
+  "src": "water_purifier_keramicheskiy_filtr.glb",
+  "tris_before": 47800,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   43.2342529296875,
+   58.746337890625,
+   100.0
+  ],
+  "os_cm": [
+   60,
+   100
+  ],
+  "scale": 1.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_c8721fcc-9d87-46f2-80eb-8a76088e086c_0: 2048→1024",
+  "mb": 0.506152,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 43 см, в ОС 60 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "water_tablets_hlornye_idle": {
+  "src": "water_tablets_hlornye.glb",
+  "tris_before": 47757,
+  "tris_after": 2939,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   10.000000149011612,
+   3.869018517434597,
+   2.657165564596653
+  ],
+  "os_cm": [
+   6,
+   10
+  ],
+  "scale": 0.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_318f1655-e691-4300-a267-b2fead61b6ef_0: 2048→512",
+  "mb": 0.138092,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (10 см); высота 3 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "water_tower_kirpichnaya_idle": {
+  "src": "water_tower_kirpichnaya.glb",
+  "tris_before": 45868,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   424.1943359375,
+   374.237060546875,
+   1000.0
+  ],
+  "os_cm": [
+   400,
+   1000
+  ],
+  "scale": 10.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_7b65e876-5d2b-4d36-916c-80ae34e1ce0a_0: 2048→1024",
+  "mb": 0.629932,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "weapon_bat_derevyannaya_idle": {
+  "src": "weapon_bat_derevyannaya.glb",
+  "tris_before": 47010,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   89.99999761581421,
+   13.59146237373352,
+   13.82904052734375
+  ],
+  "os_cm": [
+   90,
+   10
+  ],
+  "scale": 0.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_e6deaea6-4ddb-414b-8446-71d9c508e201_0: 2048→1024",
+  "mb": 0.275832,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 14 см, в ОС 10 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "weapon_bow_ohotnichiy_idle": {
+  "src": "weapon_bow_ohotnichiy.glb",
+  "tris_before": 48382,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   110.00000238418579,
+   103.67554426193237,
+   33.398133516311646
+  ],
+  "os_cm": [
+   70,
+   110
+  ],
+  "scale": 1.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_c8666588-8a30-414a-9d20-19113417b490_0: 2048→1024",
+  "mb": 0.394408,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (110 см); высота 33 см, в ОС 110 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "weapon_machete_machete_idle": {
+  "src": "weapon_machete_machete.glb",
+  "tris_before": 48314,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   69.9999988079071,
+   7.272796332836151,
+   33.107298612594604
+  ],
+  "os_cm": [
+   70,
+   8
+  ],
+  "scale": 0.7,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_918d4c75-6c62-48ae-94ef-7d17f1abf05b_0: 2048→1024",
+  "mb": 0.322632,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 33 см, в ОС 8 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "weapon_pipe_stalnaya_truba_idle": {
+  "src": "weapon_pipe_stalnaya_truba.glb",
+  "tris_before": 48364,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   80.0000011920929,
+   16.999511420726776,
+   27.651366591453552
+  ],
+  "os_cm": [
+   80,
+   8
+  ],
+  "scale": 0.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_1e174a77-e17e-46bc-8eaf-61be249ba011_0: 2048→1024",
+  "mb": 0.340508,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 28 см, в ОС 8 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "weapon_pistol_9_mm_idle": {
+  "src": "weapon_pistol_9_mm.glb",
+  "tris_before": 46228,
+  "tris_after": 2940,
+  "limit": 3000,
+  "class": "small",
+  "size_cm": [
+   19.0195694565773,
+   3.631177544593811,
+   14.000000059604645
+  ],
+  "os_cm": [
+   20,
+   14
+  ],
+  "scale": 0.19019568822553898,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0e38b65d-5935-446b-85e9-d316d2fd85b6_0: 2048→512",
+  "mb": 0.199388,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "weapon_shotgun_pompovyy_idle": {
+  "src": "weapon_shotgun_pompovyy.glb",
+  "tris_before": 47442,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   7.26165771484375,
+   20.4864501953125
+  ],
+  "os_cm": [
+   100,
+   15
+  ],
+  "scale": 1.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_8f87b97d-bf5e-4fdd-881d-ed822b037215_0: 2048→1024",
+  "mb": 0.311992,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 20 см, в ОС 15 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "well_hand_ruchnoy_kolodets_s_vorotom_idle": {
+  "src": "well_hand_ruchnoy_kolodets_s_vorotom.glb",
+  "tris_before": 47642,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   106.14074468612671,
+   84.40002202987671,
+   129.99999523162842
+  ],
+  "os_cm": [
+   90,
+   130
+  ],
+  "scale": 1.3,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_5dca4b61-c468-4316-aded-391d3f2fa994_0: 2048→1024",
+  "mb": 0.461652,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 106 см, в ОС 90 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "wind_turbine_malyy_gorizontalnyy_idle": {
+  "src": "wind_turbine_malyy_gorizontalnyy.glb",
+  "tris_before": 48394,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   186.273193359375,
+   145.04698514938354,
+   300.0
+  ],
+  "os_cm": [
+   100,
+   300
+  ],
+  "scale": 3.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_c0fd83ce-2e2e-464e-aeec-8415917bdb0d_0: 2048→1024",
+  "mb": 0.500456,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 186 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "window_basic_tseloe_idle": {
+  "src": "window_basic_tseloe.glb",
+  "tris_before": 44600,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   55.029296875,
+   20.208735764026642,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_cc51b0c7-5f73-4d6e-99b4-060140644a05_0: 2048→1024",
+  "mb": 0.493012,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 55 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "workbench_basic_derevyannyy_bazovyy_idle": {
+  "src": "workbench_basic_derevyannyy_bazovyy.glb",
+  "tris_before": 40080,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   160.0000023841858,
+   82.1972668170929,
+   100.64452886581421
+  ],
+  "os_cm": [
+   160,
+   95
+  ],
+  "scale": 1.6,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_720c9681-7f02-4bd7-8b9b-9c79a40680fa_0: 2048→1024",
+  "mb": 0.438544,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ },
+ "workbench_electronics_nastolnyy_idle": {
+  "src": "workbench_electronics_nastolnyy.glb",
+  "tris_before": 43041,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   139.9999976158142,
+   72.3071277141571,
+   119.74853277206421
+  ],
+  "os_cm": [
+   140,
+   95
+  ],
+  "scale": 1.4,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_bdb7ed40-c3c9-46b7-9889-80eb1144d41e_0: 2048→1024",
+  "mb": 0.636452,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 120 см, в ОС 95 см"
+  ],
+  "date": "2026-10-10"
+ },
+ "zombie_brute_zdorovyak_idle": {
+  "src": "zombie_brute_zdorovyak.glb",
+  "tris_before": 49594,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   212.53080368041992,
+   67.85575151443481,
+   200.0
+  ],
+  "os_cm": [
+   120,
+   200
+  ],
+  "scale": 2.1253080814632246,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_018c4d20-3678-4ed8-9ddd-319f785c55cd_0: 2048→1024",
+  "mb": 0.465408,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 213 см, в ОС 120 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "zombie_runner_begun_idle": {
+  "src": "zombie_runner_begun.glb",
+  "tris_before": 47888,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   71.15294933319092,
+   27.995911240577698,
+   179.99999523162842
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_511b02c8-1c7b-4af8-9336-d5030ab6dd74_0: 2048→1024",
+  "mb": 0.562448,
+  "jpeg_q": 85,
+  "warnings": [
+   "ширина 71 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
+  ],
+  "date": "2026-10-10"
+ },
+ "zombie_walker_hodyachiy_idle": {
+  "src": "zombie_walker_hodyachiy.glb",
+  "tris_before": 47928,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   90.8129870891571,
+   38.7350469827652,
+   179.99999523162842
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4796db81-c8d2-4708-b9a2-e54134982e2a_0: 2048→1024",
+  "mb": 0.55902,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-10"
+ }
+}
