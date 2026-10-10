@@ -12,6 +12,9 @@
 
 ## Как составить запрос
 
+**Проще:** готовые запросы целиком — в разделе 5 в конце файла, ничего склеивать не нужно.
+
+
 Запрос = **начало стиля** (раздел 1, одно на все предметы этого стиля) + **строка предмета** (раздел 2) + **конец**:
 
 ```
@@ -135,3 +138,285 @@ A — ровный серый с лёгкими швами; B — фото-те�
 (текстуры `tex_wall.png` / `tex_floor.png`, если есть); линии, декор, мебель и персонаж стоят
 одинаково, **Tab** — переключить стиль A → B → C; подпись, какой стиль сейчас. Автор смотрит и выбирает.
 После выбора — общий план всех объектов в выбранном стиле (`docs/TRIPO_OBJECTS.md`).
+
+---
+
+## 5. Готовые запросы — копировать целиком
+
+Один серый блок = один запрос в Tripo. Файл назвать как в заголовке и положить в папку своего стиля.
+
+### Стиль A — Low poly
+
+**1. две трубы** → `line_pipes.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A straight horizontal section of two parallel industrial pipes on small metal brackets, both ends cut perfectly flat, no caps, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**2. кабели** → `line_cable.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A straight horizontal bundle of three electric cables held by metal clips, both ends cut flat, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**3. решётка вентиляции** → `decor_vent.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A square metal ventilation grille mounted on a wall, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**4. щиток с проводами** → `decor_box.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A small electrical junction box mounted on a wall with a short bundle of wires going up, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**5. плакат (люди и солнце)** → `poster_1.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A slightly torn retro poster on a wall showing a smiling family and a big sun, pictures only, flat. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**6. плакат (схема убежища)** → `poster_2.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. An old paper poster with a simple drawing of an underground shelter cross-section, pictures only, curled corners, flat. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**7. полка на стене с банками** → `wall_shelf.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A small wall shelf made of wood and metal brackets with a few cans and jars on it, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**8. кровать (железная койка)** → `bed.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A single metal frame bed with a thin mattress, a pillow and a folded wool blanket. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**9. верстак** → `workbench.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A sturdy wooden workbench with a vise and a few tools hanging on a small back board. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**10. шкафчик** → `locker.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A tall narrow metal locker with two vent slots and a handle, slightly dented. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**11. печка-буржуйка (камин)** → `stove.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A small cast iron wood-burning stove with a chimney pipe going up, a little door with glowing coals. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**12. стол** → `table.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A simple old wooden table with four legs. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**13. стул** → `chair.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A simple old wooden chair. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**14. лампа под потолком** → `lamp_ceiling.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A hanging industrial ceiling lamp with a metal shade and a wire cage around the bulb. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**15. ящик** → `crate.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A wooden supply crate with metal corners and stencil marks without letters. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**16. бочка с водой** → `barrel.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A metal water barrel with a tap near the bottom. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**17. радиоприёмник (на стол)** → `radio.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. An old tube radio receiver with knobs and a dial. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**18. выживший** → `character.glb`
+```
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count, natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated, simple clean textures, no small details. A full body survivor character standing in a T-pose, adult man in a worn jumpsuit with a utility belt and boots, short hair. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+### Стиль B — Реализм
+
+**1. две трубы** → `line_pipes.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A straight horizontal section of two parallel industrial pipes on small metal brackets, both ends cut perfectly flat, no caps, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**2. кабели** → `line_cable.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A straight horizontal bundle of three electric cables held by metal clips, both ends cut flat, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**3. решётка вентиляции** → `decor_vent.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A square metal ventilation grille mounted on a wall, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**4. щиток с проводами** → `decor_box.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A small electrical junction box mounted on a wall with a short bundle of wires going up, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**5. плакат (люди и солнце)** → `poster_1.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A slightly torn retro poster on a wall showing a smiling family and a big sun, pictures only, flat. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**6. плакат (схема убежища)** → `poster_2.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. An old paper poster with a simple drawing of an underground shelter cross-section, pictures only, curled corners, flat. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**7. полка на стене с банками** → `wall_shelf.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A small wall shelf made of wood and metal brackets with a few cans and jars on it, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**8. кровать (железная койка)** → `bed.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A single metal frame bed with a thin mattress, a pillow and a folded wool blanket. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**9. верстак** → `workbench.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A sturdy wooden workbench with a vise and a few tools hanging on a small back board. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**10. шкафчик** → `locker.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A tall narrow metal locker with two vent slots and a handle, slightly dented. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**11. печка-буржуйка (камин)** → `stove.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A small cast iron wood-burning stove with a chimney pipe going up, a little door with glowing coals. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**12. стол** → `table.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A simple old wooden table with four legs. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**13. стул** → `chair.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A simple old wooden chair. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**14. лампа под потолком** → `lamp_ceiling.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A hanging industrial ceiling lamp with a metal shade and a wire cage around the bulb. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**15. ящик** → `crate.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A wooden supply crate with metal corners and stencil marks without letters. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**16. бочка с водой** → `barrel.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A metal water barrel with a tap near the bottom. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**17. радиоприёмник (на стол)** → `radio.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. An old tube radio receiver with knobs and a dial. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**18. выживший** → `character.glb`
+```
+Realistic 3D game asset, worn and weathered, from an old underground fallout bunker, realistic PBR texture with rust, dirt, chipped paint and scratches. A full body survivor character standing in a T-pose, adult man in a worn jumpsuit with a utility belt and boots, short hair. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+### Стиль C — Рисованный
+
+**1. две трубы** → `line_pipes.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A straight horizontal section of two parallel industrial pipes on small metal brackets, both ends cut perfectly flat, no caps, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**2. кабели** → `line_cable.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A straight horizontal bundle of three electric cables held by metal clips, both ends cut flat, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**3. решётка вентиляции** → `decor_vent.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A square metal ventilation grille mounted on a wall, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**4. щиток с проводами** → `decor_box.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A small electrical junction box mounted on a wall with a short bundle of wires going up, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**5. плакат (люди и солнце)** → `poster_1.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A slightly torn retro poster on a wall showing a smiling family and a big sun, pictures only, flat. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**6. плакат (схема убежища)** → `poster_2.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. An old paper poster with a simple drawing of an underground shelter cross-section, pictures only, curled corners, flat. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**7. полка на стене с банками** → `wall_shelf.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A small wall shelf made of wood and metal brackets with a few cans and jars on it, flat back side. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**8. кровать (железная койка)** → `bed.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A single metal frame bed with a thin mattress, a pillow and a folded wool blanket. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**9. верстак** → `workbench.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A sturdy wooden workbench with a vise and a few tools hanging on a small back board. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**10. шкафчик** → `locker.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A tall narrow metal locker with two vent slots and a handle, slightly dented. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**11. печка-буржуйка (камин)** → `stove.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A small cast iron wood-burning stove with a chimney pipe going up, a little door with glowing coals. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**12. стол** → `table.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A simple old wooden table with four legs. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**13. стул** → `chair.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A simple old wooden chair. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**14. лампа под потолком** → `lamp_ceiling.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A hanging industrial ceiling lamp with a metal shade and a wire cage around the bulb. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**15. ящик** → `crate.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A wooden supply crate with metal corners and stencil marks without letters. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**16. бочка с водой** → `barrel.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A metal water barrel with a tap near the bottom. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**17. радиоприёмник (на стол)** → `radio.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. An old tube radio receiver with knobs and a dial. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
+
+**18. выживший** → `character.glb`
+```
+Stylized 3D game asset in a hand-painted style similar to Fallout Shelter, chunky slightly exaggerated proportions, soft hand-painted textures, clear readable shapes, retro 1950s underground vault look, a bit worn and dirty. A full body survivor character standing in a T-pose, adult man in a worn jumpsuit with a utility belt and boots, short hair. Single object, front view, isolated, nothing around it, no floor, no background, no text, no letters.
+```
