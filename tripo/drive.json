@@ -65,14 +65,14 @@
   "dog_feral_odinochnaya": [
    "1NXy1LZs3JSSjnJChl-7JFCiW6VtWl-9U"
   ],
-  "barrel_water_plastikovaya_200_l": [
-   "11bnwY5uTsnGphW2VrDFNPYoi2Jdw03_H"
-  ],
   "zombie_walker_hodyachiy": [
    "1GggUuJc0orHCVlejuvrcFrvyfb8X0Kd1"
   ],
   "tool_wrench_razvodnoy": [
    "1xv78rC6hLhCGXzMCWeZQvD-i7R5fuB_3"
+  ],
+  "food_canned_tushenka": [
+   "11bnwY5uTsnGphW2VrDFNPYoi2Jdw03_H"
   ]
  },
  "bed_single_zheleznaya_koyka": "1DPoZ_8fPdXCzUcAusp6T5e8eNd2kWfFK",
@@ -238,14 +238,13 @@
  "note_diary_zapiska": "1ldm_lJkGiGR_B58LDz6S0bnlsB1ZIMe-",
  "map_paper_karta_rayona": "1WQzTVqERn5KvIwvh0SWZOzTRXfKwotqN",
  "_unused": {},
- "_missing": [
-  "rain_collector",
-  "food_canned",
-  "splint",
-  "mat_cement",
-  "part_mech",
-  "mat_glass",
-  "cloth_pants",
-  "zombie_brute"
- ]
+ "_missing": [],
+ "rain_collector_plenka_i_zhelob": "1UqlX8-oxsOGyCmeOR_sc9yxo0LnogCHI",
+ "cloth_pants_dzhinsy": "1V-bxNqgeu87-2ylqS-iXGn2qaLY0yknO",
+ "mat_glass_list_stekla": "1Bj9LtpiwUpDNXRWoifhy5Y_0RCXUw5Pt",
+ "part_mech_shesterni": "1kVPo0QMWIsUB64bK5zkZftWX5C-a1DnG",
+ "zombie_brute_zdorovyak": "1YRE_AYfX2isJPm0p0Ojc-f2GsVH_ci67",
+ "splint_gotovaya": "1xFBgznmjBwAworlBImBr4IOxkZcizjwo",
+ "mat_cement_meshok_tsementa": "1X7ihPCAnrq5IgbZOBCkGjWZfh8cRNTvD",
+ "food_canned_tushenka": "1N_tCZweKUtg5-Ao-toBpiZf2DfujYe1d"
 }
