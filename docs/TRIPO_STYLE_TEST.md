@@ -28,10 +28,12 @@ Single object, front view, isolated, nothing around it, no floor, no background,
 Простые грани, мало деталей, ровные цвета — как в инди-играх (Unturned, Superhot, Firewatch-упрощённо).
 Лёгкие модели, хорошо смотрятся издалека, на Steam Deck быстрее всего.
 ```
-Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, very few polygons,
-clean solid colors, muted post-apocalyptic palette of rust orange, olive green, concrete grey and dark brown,
-no small details.
+Low poly stylized 3D game asset, simple geometric shapes with flat-shaded faces, low polygon count,
+natural colors of the real materials (grey concrete, brown wood, dark metal), slightly faded and desaturated,
+simple clean textures, no small details.
 ```
+**Не перечислять цвета палитры** — Tripo раскрашивает ими предмет пятнами (так вышло в первой пробе).
+Цвет каждого предмета — в его строке (раздел 2).
 Tripo: если есть режим **Low Poly / Smart Low Poly** — включить; полигоны **3 000–5 000**; текстура — вкл, **1K**;
 «Удалить освещение» — вкл; PBR — выкл (если можно).
 
@@ -63,11 +65,11 @@ Tripo: если есть стиль **Cartoon / Stylized** — включить;
 
 | № | Файл | Что | Размер, м | Строка предмета |
 |---|---|---|---|---|
-| 1 | `floor.glb` | пол, кусок | 3 × 0,1 × 3 | `A square floor tile section of a bunker room, old concrete floor with cracks and stains, flat slab, seen from above at an angle.` |
-| 2 | `wall_back.glb` | задняя стена, пустая | 3 × 3 × 0,3 | `A plain flat wall segment, square, concrete panels with seams, perfectly straight edges on all sides, no border, no frame, nothing on the wall.` |
-| 3 | `wall_side_door.glb` | боковая стена с дверным проёмом | 3 × 3 × 0,3 | `A flat side wall segment of a bunker room, concrete, with a rectangular doorway opening 1.1 m wide near one edge, straight edges, nothing on the wall.` |
-| 4 | `wall_side.glb` | боковая стена без проёма | 3 × 3 × 0,3 | `A plain flat side wall segment of a bunker room, square, concrete panels with seams, perfectly straight edges on all sides, no border, no frame, no doorway, nothing on the wall.` |
-| 5 | `ceiling.glb` | потолок, кусок | 3 × 0,15 × 3 | `A flat ceiling slab section of a bunker room, concrete with a few rivets and stains, seen from below at an angle.` |
+| 1 | `floor.glb` | пол, кусок | 3 × 0,1 × 3 | `A square flat floor slab of a bunker room, made of plain grey concrete, one single material and color, a few cracks and stains, perfectly flat top, straight edges.` |
+| 2 | `wall_back.glb` | задняя стена, пустая | 3 × 3 × 0,3 | `A plain flat wall segment, square, made of plain grey concrete panels with thin seams, one single material and color, perfectly straight edges on all sides, no border, no frame, nothing on the wall.` |
+| 3 | `wall_side_door.glb` | боковая стена с дверным проёмом | 3 × 3 × 0,3 | `A flat side wall segment of a bunker room, made of plain grey concrete, one single material and color, with one simple rectangular doorway opening near one edge, no door, no steps, straight edges, nothing on the wall.` |
+| 4 | `wall_side.glb` | боковая стена без проёма | 3 × 3 × 0,3 | `A plain flat side wall segment of a bunker room, square, made of plain grey concrete panels with thin seams, one single material and color, perfectly straight edges on all sides, no border, no frame, no doorway, nothing on the wall.` |
+| 5 | `ceiling.glb` | потолок, кусок | 3 × 0,15 × 3 | `A square flat ceiling slab of a bunker room, made of plain grey concrete, one single material and color, a few stains, perfectly flat, straight edges.` |
 
 ### Линии (через всю стену)
 
