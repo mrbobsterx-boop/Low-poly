@@ -36,6 +36,9 @@ https://drive.google.com/drive/folders/1WS4lqCjsxTzgIn6uyvNmC9SVGttSojOb (пап
 
 ## 2. Обработка (этот чат) — скрипт `tools/tripo_process.py`
 
+> **После обработки — всегда:** `python3 tools/glb_clean.py export/` — убирает мелкие оторванные кусочки вне модели
+> (из-за них модель «висит» в воздухе: так было с ванной). Проверка без правки — `--dry`.
+
 Запуск: `python3 tools/tripo_process.py` — обрабатывает всё новое в `tripo/` (уже готовое в `export/` пропускает,
 `--force` — заново). Для каждой модели:
 
