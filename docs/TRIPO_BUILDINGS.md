@@ -1,277 +1,158 @@
-# Стены, фасады, крыши, витрины, улица, разрушения — запросы для Tripo (2026-10-11)
+# Отделка стен, фасады, крыши, витрины, разрушения — запросы для Tripo (2026-10-11)
 
-**Как делать (с телефона):** прикрепи референс стиля (картинку кровати-образца или девушки) → нажми кнопку копирования
-у нужного запроса → вставь → «Создать». Каждый запрос целый. **Без рига.** Файл назови, как написано, и положи на Диск
-в папку **«03 Стены — декор»** (декор на стену, разрушения) или **«04 Фасады»** (фасады, крыши, витрины, улица).
+**Как делать (с телефона):** прикрепи референс стиля → нажми кнопку копирования у нужного запроса → вставь → «Создать».
+Каждый запрос целый. **Без рига.** Файл назови, как написано, и положи на Диск в папку **«03 Стены — декор»**
+(отделка, разрушения, декор) или **«04 Фасады»** (фасады, крыши, витрины, улица).
 
-У каждой вещи **три вида**: `_ok` — целое, `_damaged` — испорченное (трещины, грязь, ржавчина), `_ruined` — наполовину
-разрушенное (дыры, обвалы, следы огня). Делать можно по очереди: сначала все целые, потом остальное.
+**Три вида** — только у отделки стен, фасадов, крыш и витрин: `_ok` — целое, `_damaged` — испорченное (трещины, грязь,
+ржавчина), `_ruined` — наполовину разрушенное (дыры, обвалы, следы огня). Остальное — по одному разу.
 
-Фасады, крыши и витрины — **кусками по 3 м** (один этаж), края ровные: игра ставит их рядом и друг на друга —
-так собирается дом любой ширины и высоты.
+Фасады, крыши и витрины — кусками по 3 м с ровными краями: игра ставит их рядом и друг на друга — так собирается дом
+любой ширины и высоты. Отделка — квадрат 1 × 1 м, рисунок продолжается на все стороны.
 
 ---
 
-## 1. Декор на стену (внутри)
+## 1. Отделка стен (квадрат 1 × 1 м — игра выкладывает ими всю стену)
 
-### Часы настенные
+### Бетон
 
-**Часы настенные — целое** → `wall_clock_ok.glb`
+**Бетон — целое** → `finish_concrete_ok.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A round wall clock. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Часы настенные — испорченное** → `wall_clock_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A round wall clock. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Bare concrete wall surface with small holes from the formwork. in good condition, clean and intact. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Часы настенные — наполовину разрушенное** → `wall_clock_ruined.glb`
+**Бетон — испорченное** → `finish_concrete_damaged.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A round wall clock. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-### Полка с банками
-
-**Полка с банками — целое** → `wall_shelf_jars_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wooden wall shelf with jars and cans. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Bare concrete wall surface with small holes from the formwork. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Полка с банками — испорченное** → `wall_shelf_jars_damaged.glb`
+**Бетон — наполовину разрушенное** → `finish_concrete_ruined.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wooden wall shelf with jars and cans. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Полка с банками — наполовину разрушенное** → `wall_shelf_jars_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wooden wall shelf with jars and cans. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Bare concrete wall surface with small holes from the formwork. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-### Фото в рамках
+### Крашеная штукатурка
 
-**Фото в рамках — целое** → `wall_photos_ok.glb`
+**Крашеная штукатурка — целое** → `finish_plaster_ok.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Three framed family photos hanging together. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Фото в рамках — испорченное** → `wall_photos_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Three framed family photos hanging together. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Painted plaster wall surface, light color. in good condition, clean and intact. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Фото в рамках — наполовину разрушенное** → `wall_photos_ruined.glb`
+**Крашеная штукатурка — испорченное** → `finish_plaster_damaged.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Three framed family photos hanging together. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-### Зеркало
-
-**Зеркало — целое** → `wall_mirror_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A rectangular bathroom mirror. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Painted plaster wall surface, light color. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Зеркало — испорченное** → `wall_mirror_damaged.glb`
+**Крашеная штукатурка — наполовину разрушенное** → `finish_plaster_ruined.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A rectangular bathroom mirror. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Зеркало — наполовину разрушенное** → `wall_mirror_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A rectangular bathroom mirror. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Painted plaster wall surface, light color. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-### Вешалка с куртками
+### Обои
 
-**Вешалка с куртками — целое** → `wall_hooks_coats_ok.glb`
+**Обои — целое** → `finish_wallpaper_ok.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wall coat rack with two jackets and a scarf hanging. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Вешалка с куртками — испорченное** → `wall_hooks_coats_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wall coat rack with two jackets and a scarf hanging. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Wallpaper with a simple floral pattern. in good condition, clean and intact. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Вешалка с куртками — наполовину разрушенное** → `wall_hooks_coats_ruined.glb`
+**Обои — испорченное** → `finish_wallpaper_damaged.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wall coat rack with two jackets and a scarf hanging. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-### Календарь
-
-**Календарь — целое** → `wall_calendar_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A paper wall calendar with marked days. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Wallpaper with a simple floral pattern. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Календарь — испорченное** → `wall_calendar_damaged.glb`
+**Обои — наполовину разрушенное** → `finish_wallpaper_ruined.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A paper wall calendar with marked days. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Календарь — наполовину разрушенное** → `wall_calendar_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A paper wall calendar with marked days. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Wallpaper with a simple floral pattern. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-### Карта с булавками
+### Деревянные панели
 
-**Карта с булавками — целое** → `wall_map_pins_ok.glb`
+**Деревянные панели — целое** → `finish_wood_panels_ok.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A city map pinned to a board with red pins and strings. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Карта с булавками — испорченное** → `wall_map_pins_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A city map pinned to a board with red pins and strings. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Vertical wooden wall paneling. in good condition, clean and intact. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Карта с булавками — наполовину разрушенное** → `wall_map_pins_ruined.glb`
+**Деревянные панели — испорченное** → `finish_wood_panels_damaged.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A city map pinned to a board with red pins and strings. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-### Телевизор на стене
-
-**Телевизор на стене — целое** → `wall_tv_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A flat TV mounted on a wall bracket. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Vertical wooden wall paneling. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Телевизор на стене — испорченное** → `wall_tv_damaged.glb`
+**Деревянные панели — наполовину разрушенное** → `finish_wood_panels_ruined.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A flat TV mounted on a wall bracket. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Телевизор на стене — наполовину разрушенное** → `wall_tv_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A flat TV mounted on a wall bracket. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Vertical wooden wall paneling. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-### Настенный вентилятор
+### Плитка
 
-**Настенный вентилятор — целое** → `wall_fan_ok.glb`
+**Плитка — целое** → `finish_tiles_ok.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wall-mounted electric fan. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Настенный вентилятор — испорченное** → `wall_fan_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wall-mounted electric fan. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. White square ceramic wall tiles with grout lines. in good condition, clean and intact. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Настенный вентилятор — наполовину разрушенное** → `wall_fan_ruined.glb`
+**Плитка — испорченное** → `finish_tiles_damaged.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wall-mounted electric fan. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-### Аптечка на стене
-
-**Аптечка на стене — целое** → `wall_firstaid_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A white wall first aid cabinet with a red cross. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. White square ceramic wall tiles with grout lines. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Аптечка на стене — испорченное** → `wall_firstaid_damaged.glb`
+**Плитка — наполовину разрушенное** → `finish_tiles_ruined.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A white wall first aid cabinet with a red cross. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Аптечка на стене — наполовину разрушенное** → `wall_firstaid_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A white wall first aid cabinet with a red cross. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. White square ceramic wall tiles with grout lines. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-### Голова оленя
+### Металл
 
-**Голова оленя — целое** → `wall_trophy_ok.glb`
+**Металл — целое** → `finish_metal_ok.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A deer head trophy on a wooden plaque. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Голова оленя — испорченное** → `wall_trophy_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A deer head trophy on a wooden plaque. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Riveted steel wall plates. in good condition, clean and intact. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Голова оленя — наполовину разрушенное** → `wall_trophy_ruined.glb`
+**Металл — испорченное** → `finish_metal_damaged.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A deer head trophy on a wooden plaque. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-### Дартс
-
-**Дартс — целое** → `wall_dartboard_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A dartboard with darts. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Riveted steel wall plates. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Дартс — испорченное** → `wall_dartboard_damaged.glb`
+**Металл — наполовину разрушенное** → `finish_metal_ruined.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A dartboard with darts. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Дартс — наполовину разрушенное** → `wall_dartboard_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A dartboard with darts. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Riveted steel wall plates. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-### Окно изнутри
+### Кирпич
 
-**Окно изнутри — целое** → `wall_window_in_ok.glb`
+**Кирпич — целое** → `finish_brick_ok.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An interior house window with a frame and curtains. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Окно изнутри — испорченное** → `wall_window_in_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An interior house window with a frame and curtains. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Red brick wall surface. in good condition, clean and intact. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Окно изнутри — наполовину разрушенное** → `wall_window_in_ruined.glb`
+**Кирпич — испорченное** → `finish_brick_damaged.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An interior house window with a frame and curtains. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-### Окно заколоченное
-
-**Окно заколоченное — целое** → `wall_window_boarded_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A house window boarded up with wooden planks. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Red brick wall surface. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Окно заколоченное — испорченное** → `wall_window_boarded_damaged.glb`
+**Кирпич — наполовину разрушенное** → `finish_brick_ruined.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A house window boarded up with wooden planks. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Окно заколоченное — наполовину разрушенное** → `wall_window_boarded_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A house window boarded up with wooden planks. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Red brick wall surface. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-### Граффити
+### Бункер
 
-**Граффити — целое** → `wall_graffiti_ok.glb`
+**Бункер — целое** → `finish_bunker_ok.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A graffiti drawing of a skull and arrows painted on a flat panel. in good condition, clean and intact. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
-```
-
-**Граффити — испорченное** → `wall_graffiti_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A graffiti drawing of a skull and arrows painted on a flat panel. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Painted bunker wall: lower half dark green paint, upper half light grey, a thin line between. in good condition, clean and intact. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
-**Граффити — наполовину разрушенное** → `wall_graffiti_ruined.glb`
+**Бункер — испорченное** → `finish_bunker_damaged.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A graffiti drawing of a skull and arrows painted on a flat panel. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Painted bunker wall: lower half dark green paint, upper half light grey, a thin line between. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
+```
+
+**Бункер — наполовину разрушенное** → `finish_bunker_ruined.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Painted bunker wall: lower half dark green paint, upper half light grey, a thin line between. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. A flat square wall cladding panel about 1 meter by 1 meter, front view, straight edges, the pattern continues seamlessly to all four sides so many panels can be placed side by side. No room, no text.
 ```
 
 ---
 
-## 2. Фасады домов (кусок стены 3 м шириной, 3 м высотой — один этаж)
+## 2. Фасады домов (кусок 3 м шириной, 3 м высотой — один этаж)
 
 ### Кирпич с окном
 
@@ -574,17 +455,17 @@ Use the attached reference image ONLY for the art style: stylized low poly 3D, f
 
 **Кафе — целое** → `shop_cafe_ok.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small cafe front about 3 meters wide and 3 meters tall: big window, door, awning, small table outside. in good condition, clean and intact. Front view, straight left and right edges, flat back. Single shop front, no street, no people, no text on signs.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small cafe front about 3 meters wide and 3 meters tall: big window, door, awning. in good condition, clean and intact. Front view, straight left and right edges, flat back. Single shop front, no street, no people, no text on signs.
 ```
 
 **Кафе — испорченное** → `shop_cafe_damaged.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small cafe front about 3 meters wide and 3 meters tall: big window, door, awning, small table outside. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Front view, straight left and right edges, flat back. Single shop front, no street, no people, no text on signs.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small cafe front about 3 meters wide and 3 meters tall: big window, door, awning. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Front view, straight left and right edges, flat back. Single shop front, no street, no people, no text on signs.
 ```
 
 **Кафе — наполовину разрушенное** → `shop_cafe_ruined.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small cafe front about 3 meters wide and 3 meters tall: big window, door, awning, small table outside. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Front view, straight left and right edges, flat back. Single shop front, no street, no people, no text on signs.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small cafe front about 3 meters wide and 3 meters tall: big window, door, awning. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Front view, straight left and right edges, flat back. Single shop front, no street, no people, no text on signs.
 ```
 
 ### Одежда
@@ -623,268 +504,7 @@ Use the attached reference image ONLY for the art style: stylized low poly 3D, f
 
 ---
 
-## 5. Другое для улицы и домов
-
-### Входная дверь
-
-**Входная дверь — целое** → `ext_door_front_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wooden house front door with a frame. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Входная дверь — испорченное** → `ext_door_front_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wooden house front door with a frame. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Входная дверь — наполовину разрушенное** → `ext_door_front_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wooden house front door with a frame. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Окно снаружи
-
-**Окно снаружи — целое** → `ext_window_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A house window seen from outside, with a frame and window sill. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Окно снаружи — испорченное** → `ext_window_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A house window seen from outside, with a frame and window sill. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Окно снаружи — наполовину разрушенное** → `ext_window_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A house window seen from outside, with a frame and window sill. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Балкон
-
-**Балкон — целое** → `ext_balcony_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small apartment balcony with a metal railing. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Балкон — испорченное** → `ext_balcony_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small apartment balcony with a metal railing. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Балкон — наполовину разрушенное** → `ext_balcony_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small apartment balcony with a metal railing. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Пожарная лестница
-
-**Пожарная лестница — целое** → `ext_fire_escape_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An outdoor metal fire escape ladder and platform for one floor. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Пожарная лестница — испорченное** → `ext_fire_escape_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An outdoor metal fire escape ladder and platform for one floor. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Пожарная лестница — наполовину разрушенное** → `ext_fire_escape_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An outdoor metal fire escape ladder and platform for one floor. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Деревянный забор
-
-**Деревянный забор — целое** → `ext_fence_wood_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wooden picket fence section about 3 meters long. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Деревянный забор — испорченное** → `ext_fence_wood_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wooden picket fence section about 3 meters long. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Деревянный забор — наполовину разрушенное** → `ext_fence_wood_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wooden picket fence section about 3 meters long. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Сетка-рабица
-
-**Сетка-рабица — целое** → `ext_fence_chain_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A chain-link fence section about 3 meters long with metal posts. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Сетка-рабица — испорченное** → `ext_fence_chain_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A chain-link fence section about 3 meters long with metal posts. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Сетка-рабица — наполовину разрушенное** → `ext_fence_chain_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A chain-link fence section about 3 meters long with metal posts. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Навес
-
-**Навес — целое** → `ext_awning_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A striped fabric awning above a door. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Навес — испорченное** → `ext_awning_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A striped fabric awning above a door. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Навес — наполовину разрушенное** → `ext_awning_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A striped fabric awning above a door. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Кондиционер
-
-**Кондиционер — целое** → `ext_ac_unit_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An outdoor air conditioner unit on a wall bracket. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Кондиционер — испорченное** → `ext_ac_unit_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An outdoor air conditioner unit on a wall bracket. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Кондиционер — наполовину разрушенное** → `ext_ac_unit_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An outdoor air conditioner unit on a wall bracket. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Почтовый ящик
-
-**Почтовый ящик — целое** → `ext_mailbox_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A mailbox on a post. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Почтовый ящик — испорченное** → `ext_mailbox_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A mailbox on a post. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Почтовый ящик — наполовину разрушенное** → `ext_mailbox_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A mailbox on a post. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Рекламный щит
-
-**Рекламный щит — целое** → `ext_billboard_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A roadside billboard on two posts, blank picture without text. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Рекламный щит — испорченное** → `ext_billboard_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A roadside billboard on two posts, blank picture without text. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Рекламный щит — наполовину разрушенное** → `ext_billboard_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A roadside billboard on two posts, blank picture without text. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Дорожный знак
-
-**Дорожный знак — целое** → `ext_street_sign_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A road sign on a post, simple arrow without text. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Дорожный знак — испорченное** → `ext_street_sign_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A road sign on a post, simple arrow without text. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Дорожный знак — наполовину разрушенное** → `ext_street_sign_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A road sign on a post, simple arrow without text. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Остановка
-
-**Остановка — целое** → `ext_bus_stop_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small bus stop shelter with a bench. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Остановка — испорченное** → `ext_bus_stop_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small bus stop shelter with a bench. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Остановка — наполовину разрушенное** → `ext_bus_stop_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small bus stop shelter with a bench. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Мусорный бак
-
-**Мусорный бак — целое** → `ext_dumpster_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A big green metal dumpster. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Мусорный бак — испорченное** → `ext_dumpster_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A big green metal dumpster. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Мусорный бак — наполовину разрушенное** → `ext_dumpster_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A big green metal dumpster. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Машина
-
-**Машина — целое** → `ext_car_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small sedan car. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Машина — испорченное** → `ext_car_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small sedan car. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Машина — наполовину разрушенное** → `ext_car_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small sedan car. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
-### Баррикада
-
-**Баррикада — целое** → `ext_barricade_ok.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A street barricade made of planks, tires and sandbags. in good condition, clean and intact. Single object, centered, no ground, no text.
-```
-
-**Баррикада — испорченное** → `ext_barricade_damaged.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A street barricade made of planks, tires and sandbags. old and damaged: cracks, dirt, rust stains, peeling paint, a few broken parts. Single object, centered, no ground, no text.
-```
-
-**Баррикада — наполовину разрушенное** → `ext_barricade_ruined.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A street barricade made of planks, tires and sandbags. half destroyed: big broken holes, missing chunks, collapsed parts, burnt black marks, small debris around. Single object, centered, no ground, no text.
-```
-
----
-
-## 6. Разрушенные комнаты — куски (для испорченных и наполовину разрушенных комнат)
-
-Один вид у каждой (они и так разрушенные).
+## 5. Куски для разрушенных комнат
 
 **Стена с дырой** → `ruin_wall_hole.glb`
 ```
@@ -934,4 +554,102 @@ Use the attached reference image ONLY for the art style: stylized low poly 3D, f
 **Свисающие провода** → `ruin_wires.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Torn electric wires and a broken lamp hanging from a ceiling piece. Single piece, centered, no room around it, no text.
+```
+
+---
+
+## 6. Новый декор на стену (такого ещё нет)
+
+**Фото в рамках** → `wall_photos.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. Three framed family photos hanging together. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+```
+
+**Зеркало** → `wall_mirror.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A rectangular bathroom mirror. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+```
+
+**Вешалка с куртками** → `wall_hooks_coats.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wall coat rack with two jackets and a scarf hanging. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+```
+
+**Календарь** → `wall_calendar.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A paper wall calendar with marked days. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+```
+
+**Телевизор на стене** → `wall_tv.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A flat TV mounted on a wall bracket. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+```
+
+**Настенный вентилятор** → `wall_fan.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wall-mounted electric fan. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+```
+
+**Голова оленя** → `wall_trophy.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A deer head trophy on a wooden plaque. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+```
+
+**Дартс** → `wall_dartboard.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A dartboard with darts. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+```
+
+**Окно заколоченное** → `wall_window_boarded.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A house window boarded up with wooden planks. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+```
+
+**Граффити** → `wall_graffiti.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A graffiti drawing of a skull and arrows painted on a flat panel. Flat back side so it can hang on a wall, front view. Single object, no wall behind it, no text.
+```
+
+---
+
+## 7. Новое для улицы (такого ещё нет)
+
+**Балкон** → `ext_balcony.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small apartment balcony with a metal railing. Single object, centered, no ground, no text.
+```
+
+**Пожарная лестница** → `ext_fire_escape.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An outdoor metal fire escape ladder and platform for one floor. Single object, centered, no ground, no text.
+```
+
+**Деревянный забор** → `ext_fence_wood.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A wooden picket fence section about 3 meters long. Single object, centered, no ground, no text.
+```
+
+**Навес** → `ext_awning.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A striped fabric awning above a door. Single object, centered, no ground, no text.
+```
+
+**Кондиционер** → `ext_ac_unit.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. An outdoor air conditioner unit on a wall bracket. Single object, centered, no ground, no text.
+```
+
+**Почтовый ящик** → `ext_mailbox.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A mailbox on a post. Single object, centered, no ground, no text.
+```
+
+**Рекламный щит** → `ext_billboard.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A roadside billboard on two posts, blank picture without text. Single object, centered, no ground, no text.
+```
+
+**Остановка** → `ext_bus_stop.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simple shapes, warm soft lighting, dark background. A small bus stop shelter with a bench. Single object, centered, no ground, no text.
 ```
