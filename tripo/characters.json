@@ -1,12 +1,11 @@
 {
  "_comment": "Персонажи из частей (docs/TRIPO_CHARACTERS.md): имя → id файла на Google Диске (папка «13 Персонажи и существа»). Тела — с ригом Mixamo (Tripo), одежда — без рига: её прикрепить к скелету тела в Blender (перенос весов с тела). Скачать: python3 tools/drive_fetch.py --list tripo/characters.json",
- "_status": "Риг у всех один (Mixamo, 65 костей + neutral_bone у мужчины) — анимации общие. male 93 анимации, female 90, stylized_f 76. У женщин волосы вросли в модель — для причёсок нужна лысая основа.",
- "body_base_male": "1jO6dQ-DGdztb41XKJlaR4Ojd_Fo0UGgX",
- "body_base_female": "1xIIW45djKOhVjA8srY-CRYBxtJFm3F5d",
+ "_status": "Решение автора 2026-10-11: игрок — стилизованная девушка (player_f, 76 анимаций); реалистичные тела убраны. anim_extra_m — мужская модель только как источник анимаций (ходьба, бег, стойка) — скелет тот же. Зомби, собаки, животные — будут переделаны в этом же стиле. Одежда (толстовки, джинсы, кроссовки) делалась под старые тела — для новой модели переделать.",
  "top_hoodie_m": "1KsL8g2yJAuM6IaDSnKiPhkD1i7trnYIK",
  "top_hoodie_f": "1pB1QuwsWjApLBBq_Il4v-vvoRrPJdX7o",
  "bottom_jeans_m": "1iLqB0WqBlCYVULof0niTxm2dtYk8ntYL",
  "bottom_jeans_f": "1-tAgg2VwFcT3CHA7z3yJHpgSunPl1Vr0",
  "shoes_sneakers": "1mr2KAKjZm_IS4RHe13FIr4hvvgvqx1qA",
- "body_stylized_f": "1Wp1CgkzYTvNkKvqVWooJPYgWzkBJJlIU"
+ "player_f": "1Wp1CgkzYTvNkKvqVWooJPYgWzkBJJlIU",
+ "anim_extra_m": "1jO6dQ-DGdztb41XKJlaR4Ojd_Fo0UGgX"
 }
