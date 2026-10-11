@@ -1216,3 +1216,59 @@ Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of loose
 ```
 Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of wet reddish-brown clay, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
 ```
+
+---
+
+## Транспорт
+
+Целиком, не деля (двери и колёса — потом, если будем делать, имена те же). Клади в папку **«08 Техника и машины»**.
+
+**227. Легковая — седан** → `car_sedan.glb`
+```
+Replace the bed with an old four-door sedan car. Abandoned after the apocalypse: dirty, rusty, faded paint, some dents, flat or worn tires. Seen from the side and slightly from the front and above. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the vehicle's own natural colors and materials, not the colors of the bed. Single vehicle, no ground, no people, no text, no license plate letters.
+```
+
+**228. Легковая — хэтчбек** → `car_hatchback.glb`
+```
+Replace the bed with a small compact hatchback car. Abandoned after the apocalypse: dirty, rusty, faded paint, some dents, flat or worn tires. Seen from the side and slightly from the front and above. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the vehicle's own natural colors and materials, not the colors of the bed. Single vehicle, no ground, no people, no text, no license plate letters.
+```
+
+**229. Универсал** → `car_station_wagon.glb`
+```
+Replace the bed with a long station wagon car with a roof rack. Abandoned after the apocalypse: dirty, rusty, faded paint, some dents, flat or worn tires. Seen from the side and slightly from the front and above. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the vehicle's own natural colors and materials, not the colors of the bed. Single vehicle, no ground, no people, no text, no license plate letters.
+```
+
+**230. Полицейская машина** → `car_police.glb`
+```
+Replace the bed with a police sedan car with a light bar on the roof. Abandoned after the apocalypse: dirty, rusty, faded paint, some dents, flat or worn tires. Seen from the side and slightly from the front and above. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the vehicle's own natural colors and materials, not the colors of the bed. Single vehicle, no ground, no people, no text, no license plate letters.
+```
+
+**231. Пикап** → `pickup.glb`
+```
+Replace the bed with a pickup truck with an open cargo bed with some boxes in it. Abandoned after the apocalypse: dirty, rusty, faded paint, some dents, flat or worn tires. Seen from the side and slightly from the front and above. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the vehicle's own natural colors and materials, not the colors of the bed. Single vehicle, no ground, no people, no text, no license plate letters.
+```
+
+**232. Фургон** → `van.glb`
+```
+Replace the bed with a delivery van with sliding side door. Abandoned after the apocalypse: dirty, rusty, faded paint, some dents, flat or worn tires. Seen from the side and slightly from the front and above. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the vehicle's own natural colors and materials, not the colors of the bed. Single vehicle, no ground, no people, no text, no license plate letters.
+```
+
+**233. Школьный автобус** → `bus_school.glb`
+```
+Replace the bed with a yellow school bus. Abandoned after the apocalypse: dirty, rusty, faded paint, some dents, flat or worn tires. Seen from the side and slightly from the front and above. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the vehicle's own natural colors and materials, not the colors of the bed. Single vehicle, no ground, no people, no text, no license plate letters.
+```
+
+**234. Автодом** → `motorhome.glb`
+```
+Replace the bed with a camper motorhome with a door on the side and small windows. Abandoned after the apocalypse: dirty, rusty, faded paint, some dents, flat or worn tires. Seen from the side and slightly from the front and above. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the vehicle's own natural colors and materials, not the colors of the bed. Single vehicle, no ground, no people, no text, no license plate letters.
+```
+
+**235. Мотоцикл** → `motorcycle.glb`
+```
+Replace the bed with a motorcycle standing on its side stand. Abandoned after the apocalypse: dirty, rusty, faded paint, some dents, flat or worn tires. Seen from the side and slightly from the front and above. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the vehicle's own natural colors and materials, not the colors of the bed. Single vehicle, no ground, no people, no text, no license plate letters.
+```
+
+**236. Велосипед** → `bicycle.glb`
+```
+Replace the bed with a bicycle standing on its kickstand, with a small basket on the front. Abandoned after the apocalypse: dirty, rusty, faded paint, some dents, flat or worn tires. Seen from the side and slightly from the front and above. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the vehicle's own natural colors and materials, not the colors of the bed. Single vehicle, no ground, no people, no text, no license plate letters.
+```
