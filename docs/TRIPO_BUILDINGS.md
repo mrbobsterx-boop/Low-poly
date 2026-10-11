@@ -762,3 +762,114 @@ Replace the bed with a big aircraft hangar about 24 meters wide with a curved me
 ```
 Replace the bed with an electronics store about 10 meters wide with a shop window full of TVs and radios, a glass door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
+
+**145. Рыболовный магазин** → `fishing_shop.glb`
+```
+Replace the bed with a small wooden fishing and bait shop about 8 meters wide on short stilts, with fishing nets, rods and a boat paddle on the walls, a door and a window. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
+```
+
+**146. Мотель** → `motel.glb`
+```
+Replace the bed with a one-story roadside motel about 20 meters wide with a row of numbered room doors and windows, a small office at one end and a flat roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
+```
+
+**147. Стройка** → `construction_site.glb`
+```
+Replace the bed with an unfinished building under construction about 14 meters wide: a concrete frame with two floors, bare columns, scaffolding, plastic sheets and stacked materials. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
+```
+
+---
+
+## Для улицы — как на картинке-примере (POLYGON Apocalypse): вывески, палатки, лотки…
+
+Клади в папку **«04 Фасады»**. На вывесках — только указанные слова (Tripo может немного исказить буквы — это не страшно).
+
+**148. Строительный кран** → `crane_tower.glb`
+```
+Replace the bed with a tall construction tower crane with a long horizontal jib, a hook and a counterweight, yellow paint. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**149. Вывеска «MOTEL»** → `sign_motel.glb`
+```
+Replace the bed with a tall roadside motel sign on a post with big letters MOTEL, a small VACANCY plate and an arrow. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. Only the word MOTEL and VACANCY, no other text.
+```
+
+**150. Вывеска «DINER»** → `sign_diner.glb`
+```
+Replace the bed with a roadside diner sign on a pole with big letters DINER and a smaller OPEN 24 HOURS plate. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. Only the words DINER and OPEN 24 HOURS, no other text.
+```
+
+**151. Буквы на крышу «DINER»** → `sign_letters_diner.glb`
+```
+Replace the bed with big separate 3D neon letters DINER for a rooftop, standing in a row. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. Only the word DINER, no other text.
+```
+
+**152. Флажки-гирлянда** → `bunting.glb`
+```
+Replace the bed with a half-round patriotic bunting decoration in red, white and blue for hanging on a wall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**153. Полосатый козырёк** → `awning_striped.glb`
+```
+Replace the bed with a short red and white striped shop awning, flat back for a wall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**154. Торговый лоток** → `market_stall.glb`
+```
+Replace the bed with a market stall: a wooden table with a colored tarp roof on four poles. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**155. Машина под брезентом** → `car_tarp.glb`
+```
+Replace the bed with an old car covered with a blue tarp. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**156. Палатка** → `tent_dome.glb`
+```
+Replace the bed with a small camping dome tent with an open entrance. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**157. Большой шатёр** → `tent_big.glb`
+```
+Replace the bed with a big canvas tent shelter on poles with ropes pegged to the ground, open on one side. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**158. Военная палатка** → `tent_military.glb`
+```
+Replace the bed with a green military tent with sandbags around the base. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**159. Тепличный купол** → `tent_greenhouse.glb`
+```
+Replace the bed with a white geodesic dome tent made of panels. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**160. Будка из контейнера** → `container_shack.glb`
+```
+Replace the bed with a small shipping container turned into a shack with a boarded door and a cut window. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**161. Большой бак** → `storage_tank.glb`
+```
+Replace the bed with a large round storage tank with a ladder on the side and a railing on top. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**162. Радиовышка** → `radio_tower.glb`
+```
+Replace the bed with a metal lattice radio tower with an antenna dish on top. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**163. Деревянные мостки** → `scaffold_platform.glb`
+```
+Replace the bed with a wooden scaffolding platform on posts with a ladder and a railing, one floor high. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**164. Сломанный забор** → `fence_broken.glb`
+```
+Replace the bed with a broken wooden picket fence section with missing and leaning planks. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
+
+**165. Набор дверей** → `doors_set.glb`
+```
+Replace the bed with six different single doors standing in a row: wooden door, glass door, metal door, green door, door boarded with planks, door with a broken window. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
+```
