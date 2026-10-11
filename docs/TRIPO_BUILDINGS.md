@@ -900,3 +900,161 @@ Replace the bed with a straight row of 10 separate big 3D sign characters U V W 
 ```
 Replace the bed with a straight row of 9 separate big 3D sign characters 4 5 6 7 8 9 & ! - for roadside shop signs, in exactly this order from left to right, standing upright side by side with clear gaps between them, not touching each other, all the same height, seen straight from the front: each character is a thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only these characters 4 5 6 7 8 9 & ! -, nothing else, no other letters, no base, no ground.
 ```
+
+---
+
+## Внутри шахты
+
+Клади в папку **«03 Стены — декор»**, подпапку можно назвать «Шахта».
+
+### Лифт и подъём
+
+**170. Клеть лифта** → `mine_elevator_cage.glb`
+```
+Replace the bed with a mine elevator cage made of steel mesh and frame with a sliding grate door, big enough for three people. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**171. Шахта лифта (каркас)** → `mine_elevator_shaft.glb`
+```
+Replace the bed with a tall steel frame of a mine elevator shaft with guide rails, cables and a pulley wheel on top. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**172. Лебёдка** → `mine_winch.glb`
+```
+Replace the bed with a big mine winch with a cable drum, a gear wheel and a motor. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+### Балки и опоры
+
+**173. Деревянная крепь** → `mine_support_wood.glb`
+```
+Replace the bed with a mine tunnel support frame: two thick wooden posts and a wooden beam across the top, like a doorway. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**174. Стальная арка** → `mine_support_steel.glb`
+```
+Replace the bed with a curved steel arch support for a mine tunnel, bolted segments. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**175. Деревянная балка** → `mine_beam_wood.glb`
+```
+Replace the bed with a single long thick wooden support beam, about 3 meters long. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**176. Стальная балка** → `mine_beam_steel.glb`
+```
+Replace the bed with a single long steel I-beam, about 3 meters long, with rivets. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**177. Деревянная стойка** → `mine_post_wood.glb`
+```
+Replace the bed with a single thick wooden support post with a wedge on top, about 2.5 meters tall. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+### Стены (квадрат 1 × 1 м, рисунок продолжается во все стороны)
+
+**178. Скала** → `mine_wall_rock.glb`
+```
+Replace the bed with a square wall panel of rough rock with cracks and small stones, the pattern continues seamlessly to all sides. Old, dusty and dark, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting and dark background as the original image, but show it straight from the front, flat, filling the picture. Use its own natural colors and materials, not the colors of the bed. Perfectly straight flat edges on all four sides, no frame, no border, nothing attached. No text.
+```
+
+**179. Скала с рудой** → `mine_wall_rock_ore.glb`
+```
+Replace the bed with a square wall panel of rough dark rock with veins of orange ore, the pattern continues seamlessly to all sides. Old, dusty and dark, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting and dark background as the original image, but show it straight from the front, flat, filling the picture. Use its own natural colors and materials, not the colors of the bed. Perfectly straight flat edges on all four sides, no frame, no border, nothing attached. No text.
+```
+
+**180. Обшивка досками** → `mine_wall_planks.glb`
+```
+Replace the bed with a square wall panel of rough horizontal wooden planks over rock, the pattern continues seamlessly to all sides. Old, dusty and dark, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting and dark background as the original image, but show it straight from the front, flat, filling the picture. Use its own natural colors and materials, not the colors of the bed. Perfectly straight flat edges on all four sides, no frame, no border, nothing attached. No text.
+```
+
+**181. Сетка на скале** → `mine_wall_mesh.glb`
+```
+Replace the bed with a square wall panel of rock covered with steel mesh held by bolts, the pattern continues seamlessly to all sides. Old, dusty and dark, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting and dark background as the original image, but show it straight from the front, flat, filling the picture. Use its own natural colors and materials, not the colors of the bed. Perfectly straight flat edges on all four sides, no frame, no border, nothing attached. No text.
+```
+
+### Освещение
+
+**182. Шахтная лампа** → `mine_lamp_cage.glb`
+```
+Replace the bed with a mine lamp: a light bulb inside a protective metal cage, hanging from a short cable. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**183. Гирлянда ламп на кабеле** → `mine_lamp_string.glb`
+```
+Replace the bed with a string of three caged mine lamps on a sagging cable, about 3 meters long. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**184. Керосиновый фонарь** → `mine_lantern.glb`
+```
+Replace the bed with an old kerosene lantern with a handle. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**185. Прожектор** → `mine_floodlight.glb`
+```
+Replace the bed with a work floodlight on a short tripod stand. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+### Вагонетки и рельсы
+
+**186. Вагонетка пустая** → `mine_cart_empty.glb`
+```
+Replace the bed with an empty mine cart on four small wheels. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**187. Вагонетка с рудой** → `mine_cart_ore.glb`
+```
+Replace the bed with a mine cart on four small wheels full of rocks and orange ore. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**188. Рельсы прямые** → `mine_rails_straight.glb`
+```
+Replace the bed with a straight piece of narrow mine rails on wooden sleepers, about 2 meters long. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**189. Рельсы поворот** → `mine_rails_curve.glb`
+```
+Replace the bed with a curved piece of narrow mine rails on wooden sleepers, turning 90 degrees. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**190. Тупик рельсов** → `mine_rails_end.glb`
+```
+Replace the bed with the end of narrow mine rails with a wooden buffer stop. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+### Ящики и прочее
+
+**191. Деревянный ящик** → `mine_crate.glb`
+```
+Replace the bed with a sturdy wooden mining supply crate with metal corners. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**192. Ящик динамита** → `mine_crate_dynamite.glb`
+```
+Replace the bed with an open wooden crate with sticks of dynamite and a red warning stripe. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**193. Штабель ящиков** → `mine_crates_stack.glb`
+```
+Replace the bed with a stack of four wooden mining crates of different sizes. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**194. Бочка** → `mine_barrel.glb`
+```
+Replace the bed with a dented metal oil barrel. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**195. Лестница** → `mine_ladder.glb`
+```
+Replace the bed with a wooden ladder leaning, about 3 meters long. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**196. Куча руды** → `mine_ore_pile.glb`
+```
+Replace the bed with a pile of rocks and orange ore chunks. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**197. Стойка с инструментами** → `mine_tool_rack.glb`
+```
+Replace the bed with a wooden wall rack with pickaxes, shovels and a hard hat. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
