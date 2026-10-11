@@ -2,10 +2,10 @@
 
 **Как делать (с телефона):** в Tripo прикрепи фото девушки-референса ([вот оно](ref/character_ref_f.jpg)) → нажми кнопку
 копирования у нужного запроса → вставь → «Создать». Каждый запрос уже целый, ничего дописывать не надо.
-Со «(с ригом)» — после создания: **Риг → Гуманоид, пресет Mixamo** → скачать «GLB с ригом». Остальное — без рига.
+Где написано «с ригом» (только тела, зомби и люди целиком) — после создания: **Риг → Гуманоид, пресет Mixamo** → скачать «GLB с ригом». Остальное — без рига.
 Файл назови, как написано у запроса, и положи на Диск в папку **«13 Персонажи и существа»**.
 
-**С чего начать:** Ж1, Ж2, Ж12 → М1, М2, М12 → Н1, Н14 → Ж18, М17 → З1.
+**С чего начать:** Ж1 (тело) → Ж2, Ж12, Ж20 (куртка, джинсы, кеды как на референсе) → Ж25 (дреды) → М1 → М2, М12, М20 → Н1, Н14 → З1.
 
 Порядок: сначала **женское**, потом **мужское**, потом **общее** (шапки, маски, рюкзаки, вещи в руках, животные).
 
@@ -20,98 +20,174 @@
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A different adult woman, completely bald head, no hair, wearing only a plain grey sports top and plain grey shorts, barefoot, no accessories. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-## Одежда на теле (с ригом, лысые — причёска отдельно)
+## Одежда — по отдельности (без рига: игра сама наденет на тело и даст кости)
 
-**Ж2. Панк — как на референсе** → `outfit_f_punk.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult woman wearing a cropped dark grey jacket over a white crop top, ripped grey jeans, studded belt, red high-top sneakers, blood stains. No hair, no backpack. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
-```
+Каждая вещь — **отдельная модель без тела**: верх, низ, обувь. Игра надевает её на тело и подгоняет сама,
+поэтому вещи сочетаются как угодно (любой верх + любой низ + любая обувь).
 
-**Ж3. Худи** → `outfit_f_hoodie.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult woman wearing an oversized grey hoodie, black leggings, worn sneakers. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
-```
+Уже сделала девушку целиком в одежде (по старому запросу)? Не выбрасывай — положи как `outfit_f_punk.glb`, пригодится как готовый персонаж.
 
-**Ж4. Рабочая** → `outfit_f_work.glb`
+### Верх
+
+**Ж2. Укороченная куртка + топ — как на референсе** → `top_f_crop_jacket.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult woman wearing mechanic overalls tied at the waist, white tank top, heavy work boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a cropped dark grey jacket with short sleeves over a white crop top, with blood stains, sized for an adult woman, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
 ```
 
-**Ж5. Военная** → `outfit_f_military.glb`
+**Ж3. Худи** → `top_f_hoodie.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult woman wearing green military uniform, combat pants, combat boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
-```
-
-**Ж6. Рейдер** → `outfit_f_raider.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult woman raider wearing a studded black leather vest, torn pants, arm wraps, boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: an oversized grey hooded sweatshirt, sized for an adult woman, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
 ```
 
-**Ж7. Зимняя** → `outfit_f_winter.glb`
+**Ж4. Футболка** → `top_f_tshirt.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult woman wearing a puffy winter jacket, warm pants, snow boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
-```
-
-**Ж8. Врач** → `outfit_f_doctor.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult woman wearing a dirty white doctor coat over blue scrubs, sneakers. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a plain worn white t-shirt, sized for an adult woman, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
 ```
 
-**Ж9. Фермер** → `outfit_f_farmer.glb`
+**Ж5. Майка** → `top_f_tanktop.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult woman wearing a denim shirt, overalls, rubber boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
-```
-
-**Ж10. Спорт** → `outfit_f_sport.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult woman wearing a sports jacket, track pants, running shoes. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a dirty white tank top, sized for an adult woman, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
 ```
 
-**Ж11. Платье** → `outfit_f_dress.glb`
+**Ж6. Фланелевая рубашка** → `top_f_flannel.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult woman wearing a simple torn summer dress with a cardigan, flat shoes. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a red plaid flannel shirt with rolled sleeves, sized for an adult woman, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+**Ж7. Кожаная куртка** → `top_f_leather.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a black leather biker jacket with metal studs, sized for an adult woman, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+**Ж8. Военная куртка** → `top_f_military.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a green military field jacket, sized for an adult woman, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+**Ж9. Зимний пуховик** → `top_f_parka.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a puffy winter jacket, sized for an adult woman, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+**Ж10. Халат врача** → `top_f_doctor.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a dirty white doctor coat, sized for an adult woman, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+**Ж11. Свитер** → `top_f_sweater.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a knitted wool sweater, sized for an adult woman, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+### Низ
+
+**Ж12. Рваные джинсы — как на референсе** → `bottom_f_jeans_ripped.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: ripped grey jeans with a studded belt, sized for an adult woman, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**Ж13. Джинсы** → `bottom_f_jeans.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: blue jeans, sized for an adult woman, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**Ж14. Карго** → `bottom_f_cargo.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: khaki cargo pants with side pockets, sized for an adult woman, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**Ж15. Леггинсы** → `bottom_f_leggings.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: black leggings, sized for an adult woman, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**Ж16. Военные штаны** → `bottom_f_military.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: green military combat pants with knee pads, sized for an adult woman, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**Ж17. Шорты** → `bottom_f_shorts.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: denim shorts, sized for an adult woman, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**Ж18. Юбка** → `bottom_f_skirt.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a knee-length torn skirt, sized for an adult woman, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**Ж19. Рабочий комбинезон (низ)** → `bottom_f_overalls.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: work overalls trousers with the top part tied around the waist, sized for an adult woman, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+### Обувь
+
+**Ж20. Красные кеды — как на референсе** → `shoes_f_hightop.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A pair of red high-top sneakers with white soles only, sized for an adult woman, standing side by side a little apart as if worn by an invisible person, front three-quarter view. No feet, no legs, no text.
+```
+
+**Ж21. Кроссовки** → `shoes_f_sneakers.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A pair of worn running sneakers only, sized for an adult woman, standing side by side a little apart as if worn by an invisible person, front three-quarter view. No feet, no legs, no text.
+```
+
+**Ж22. Рабочие ботинки** → `shoes_f_boots.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A pair of heavy brown work boots only, sized for an adult woman, standing side by side a little apart as if worn by an invisible person, front three-quarter view. No feet, no legs, no text.
+```
+
+**Ж23. Армейские ботинки** → `shoes_f_combat.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A pair of black combat boots only, sized for an adult woman, standing side by side a little apart as if worn by an invisible person, front three-quarter view. No feet, no legs, no text.
+```
+
+**Ж24. Резиновые сапоги** → `shoes_f_rubber.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A pair of green rubber boots only, sized for an adult woman, standing side by side a little apart as if worn by an invisible person, front three-quarter view. No feet, no legs, no text.
 ```
 
 ## Причёски (без рига, только волосы)
 
-**Ж12. Дреды — как на референсе** → `hair_dreads.glb`
+**Ж25. Дреды — как на референсе** → `hair_dreads.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Shoulder-length dreadlocks with colorful beads, hair only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
-**Ж13. Хвост** → `hair_ponytail.glb`
+**Ж26. Хвост** → `hair_ponytail.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Long brown hair tied in a ponytail, hair only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
-**Ж14. Пучок** → `hair_bun.glb`
+**Ж27. Пучок** → `hair_bun.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Brown hair tied in a messy bun, hair only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
-**Ж15. Длинные** → `hair_long.glb`
+**Ж28. Длинные** → `hair_long.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Long straight dark hair to the shoulders, hair only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
-**Ж16. Каре** → `hair_bob.glb`
+**Ж29. Каре** → `hair_bob.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Short bob haircut, hair only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
-**Ж17. Кудри** → `hair_curly.glb`
+**Ж30. Кудри** → `hair_curly.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Big curly afro hair, hair only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
 ## Зомби (с ригом)
 
-**Ж18. Зомби — женщина** → `zombie_walker_f.glb`
+**Ж31. Зомби — женщина** → `zombie_walker_f.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A zombie woman with grey-green skin, empty white eyes, messy hair, torn clothes, blood stains. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-**Ж19. Зомби — медсестра** → `zombie_nurse.glb`
+**Ж32. Зомби — медсестра** → `zombie_nurse.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A zombie woman with grey-green skin in a torn bloody nurse uniform. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
@@ -127,128 +203,202 @@ Use the attached reference image ONLY for the art style: stylized low poly 3D, f
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. An adult man (not a woman), completely bald head, no hair, no beard, wearing only plain grey boxer briefs, barefoot, no accessories. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-## Одежда на теле (с ригом, лысые)
+## Одежда — по отдельности (без рига: игра сама наденет на тело и даст кости)
 
-**М2. Фланель — как на мужском референсе** → `outfit_m_flannel.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult man wearing a red plaid flannel shirt over a white t-shirt, dark jeans, red sneakers, blood stains. No hair, no backpack. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
-```
+Каждая вещь — **отдельная модель без тела**: верх, низ, обувь. Игра надевает её на тело и подгоняет сама,
+поэтому вещи сочетаются как угодно (любой верх + любой низ + любая обувь).
 
-**М3. Худи** → `outfit_m_hoodie.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult man wearing a grey hoodie, cargo pants, worn sneakers. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
-```
+### Верх
 
-**М4. Рабочая** → `outfit_m_work.glb`
+**М2. Фланелевая рубашка + футболка — как на референсе** → `top_m_flannel.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult man wearing orange work overalls, knee pads, heavy work boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a red plaid flannel shirt worn open over a white t-shirt, with blood stains, sized for an adult man, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
 ```
 
-**М5. Военная** → `outfit_m_military.glb`
+**М3. Худи** → `top_m_hoodie.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult man wearing green military uniform, combat pants, combat boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
-```
-
-**М6. Рейдер** → `outfit_m_raider.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult man raider wearing a black leather jacket with metal studs, spiked shoulder pad, ripped jeans, boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a grey hooded sweatshirt, sized for an adult man, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
 ```
 
-**М7. Зимняя** → `outfit_m_winter.glb`
+**М4. Футболка** → `top_m_tshirt.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult man wearing a thick winter parka, warm pants, snow boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
-```
-
-**М8. Врач** → `outfit_m_doctor.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult man wearing a dirty white doctor coat over blue scrubs, sneakers. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a plain worn white t-shirt, sized for an adult man, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
 ```
 
-**М9. Торговец** → `outfit_m_trader.glb`
+**М5. Майка** → `top_m_tanktop.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult man wearing a long brown coat with many pockets, scarf, boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
-```
-
-**М10. Полиция** → `outfit_m_police.glb`
-```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult man wearing a dark blue police uniform, utility belt, boots. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a dirty white tank top, sized for an adult man, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
 ```
 
-**М11. Костюм** → `outfit_m_suit.glb`
+**М6. Кожаная куртка с шипами** → `top_m_leather.glb`
 ```
-Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bald adult man wearing a torn office suit with a loose tie, dress shoes. No hair. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a black leather jacket with metal spikes on the shoulders, sized for an adult man, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+**М7. Военная куртка** → `top_m_military.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a green military field jacket, sized for an adult man, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+**М8. Зимняя парка** → `top_m_parka.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a thick winter parka with a hood, sized for an adult man, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+**М9. Халат врача** → `top_m_doctor.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a dirty white doctor coat, sized for an adult man, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+**М10. Длинный плащ торговца** → `top_m_coat.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a long brown coat with many pockets, sized for an adult man, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+**М11. Рубашка с галстуком** → `top_m_shirt_tie.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: a torn white office shirt with a loose tie, sized for an adult man, shaped as if worn on an invisible body standing in a strict T-pose with sleeves straight out to the sides, front view. No body, no head, no hands, no mannequin, no hanger, no text.
+```
+
+### Низ
+
+**М12. Джинсы — как на референсе** → `bottom_m_jeans.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: dark blue jeans with blood stains and bandages on the knees, sized for an adult man, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**М13. Рваные джинсы** → `bottom_m_jeans_ripped.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: ripped grey jeans, sized for an adult man, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**М14. Карго** → `bottom_m_cargo.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: khaki cargo pants with side pockets, sized for an adult man, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**М15. Военные штаны** → `bottom_m_military.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: green military combat pants with knee pads, sized for an adult man, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**М16. Рабочие штаны** → `bottom_m_work.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: orange work trousers with reflective stripes, sized for an adult man, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**М17. Спортивные штаны** → `bottom_m_track.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: grey track pants, sized for an adult man, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**М18. Шорты** → `bottom_m_shorts.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: cargo shorts, sized for an adult man, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+**М19. Брюки от костюма** → `bottom_m_suit.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A single clothing item only: dark office suit trousers, sized for an adult man, shaped as if worn on an invisible body standing straight with legs slightly apart, front view. No body, no legs, no feet, no mannequin, no text.
+```
+
+### Обувь
+
+**М20. Красные кеды — как на референсе** → `shoes_m_hightop.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A pair of red high-top sneakers with white soles only, sized for an adult man, standing side by side a little apart as if worn by an invisible person, front three-quarter view. No feet, no legs, no text.
+```
+
+**М21. Кроссовки** → `shoes_m_sneakers.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A pair of worn running sneakers only, sized for an adult man, standing side by side a little apart as if worn by an invisible person, front three-quarter view. No feet, no legs, no text.
+```
+
+**М22. Рабочие ботинки** → `shoes_m_boots.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A pair of heavy brown work boots only, sized for an adult man, standing side by side a little apart as if worn by an invisible person, front three-quarter view. No feet, no legs, no text.
+```
+
+**М23. Армейские ботинки** → `shoes_m_combat.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A pair of black combat boots only, sized for an adult man, standing side by side a little apart as if worn by an invisible person, front three-quarter view. No feet, no legs, no text.
+```
+
+**М24. Туфли** → `shoes_m_dress.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. A pair of black leather dress shoes only, sized for an adult man, standing side by side a little apart as if worn by an invisible person, front three-quarter view. No feet, no legs, no text.
 ```
 
 ## Причёски и бороды (без рига)
 
-**М12. Короткая** → `hair_short.glb`
+**М25. Короткая** → `hair_short.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Short messy brown men's hair, hair only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
-**М13. Ёжик** → `hair_buzz.glb`
+**М26. Ёжик** → `hair_buzz.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Very short buzz cut hair, hair only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
-**М14. Ирокез** → `hair_mohawk.glb`
+**М27. Ирокез** → `hair_mohawk.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Punk mohawk hair, hair only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
-**М15. Борода** → `beard_full.glb`
+**М28. Борода** → `beard_full.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Full thick brown beard and moustache, beard only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
-**М16. Щетина** → `beard_stubble.glb`
+**М29. Щетина** → `beard_stubble.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, warm soft lighting, dark background. Short stubble beard, beard only, no head, no face. Single object, centered, no character, no body, no text.
 ```
 
 ## Зомби и люди целиком (с ригом)
 
-**М17. Зомби — мужчина** → `zombie_walker_m.glb`
+**М30. Зомби — мужчина** → `zombie_walker_m.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A zombie man with grey-green skin, empty white eyes, torn flannel shirt and jeans, blood stains. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-**М18. Зомби — быстрый** → `zombie_runner.glb`
+**М31. Зомби — быстрый** → `zombie_runner.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A thin fast zombie man with grey-green skin in torn sports clothes. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-**М19. Зомби — громила** → `zombie_brute.glb`
+**М32. Зомби — громила** → `zombie_brute.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A huge muscular zombie man with grey-green skin, swollen arms, torn work clothes. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-**М20. Зомби — полицейский** → `zombie_riot.glb`
+**М33. Зомби — полицейский** → `zombie_riot.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A zombie man in riot police armor and a cracked helmet. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-**М21. Зомби — в защитном костюме** → `zombie_hazmat.glb`
+**М34. Зомби — в защитном костюме** → `zombie_hazmat.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A zombie man in a torn yellow hazmat suit. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-**М22. Зомби — раздутый** → `zombie_bloated.glb`
+**М35. Зомби — раздутый** → `zombie_bloated.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A bloated fat zombie man with a swollen green belly. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-**М23. Главарь рейдеров** → `raider_boss.glb`
+**М36. Главарь рейдеров** → `raider_boss.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A raider leader man with spiked shoulder armor, skull face paint, long leather coat. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-**М24. Торговец** → `trader_npc.glb`
+**М37. Торговец** → `trader_npc.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. An old trader man with a grey beard, long coat, many bags and pouches. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
 
-**М25. Солдат** → `soldier_npc.glb`
+**М38. Солдат** → `soldier_npc.glb`
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. A soldier man in full gear: helmet, armor vest, gas mask on the belt. Full body, standing in a strict T-pose, arms straight to the sides, legs slightly apart, front view, same height and body proportions as the reference. Single character, nothing in the hands, no text.
 ```
