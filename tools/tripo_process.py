@@ -62,10 +62,12 @@ def out_name(oid, var):
 
 def add_decor(plan):
     """Декор не из плана ОС (обстановка комнат): tripo/decor.json — имя → размер [ширина, высота] см, крепление."""
-    for k, d in load_json("decor.json", {}).items():
-        if not k.startswith("_"):
-            plan[k] = {"id": k, "name": d.get("name", k), "cat": d.get("cat", "decor_set"), "size": d["size"],
-                       "mount": d.get("mount", "floor"), "variants": [], "decor": True}
+    for fn in ("decor.json", "extra.json"):        # extra.json — здания, отделка, блоки, транспорт… (TRIPO_BUILDINGS)
+        for k, d in load_json(fn, {}).items():
+            if not k.startswith("_"):
+                plan[k] = {"id": k, "name": d.get("name", k), "cat": d.get("cat", "decor_set"), "size": d["size"],
+                           "mount": d.get("mount", "floor"), "variants": [], "decor": True,
+                           "fit": d.get("fit"), "limit": d.get("limit"), "depth": d.get("depth")}
 
 
 def resolve(stem, plan):
@@ -226,6 +228,23 @@ def place(obj, o, rot_deg):
     if rot_deg:
         obj.data.transform(Matrix.Rotation(math.radians(rot_deg), 4, "Z"))
     lo, hi = bbox(obj)
+    fit = o.get("fit")
+    if fit in ("exact", "cube"):                # ровно по размеру: отделка 1 × 1 м, блоки 1 × 1 × 1 м
+        W, H = o["size"][0] / 100, o["size"][1] / 100
+        ext = hi - lo
+        kx, kz = W / float(ext[0]), H / float(ext[2])
+        ky = (W / float(ext[1])) if fit == "cube" else ((o["depth"] / 100 / float(ext[1])) if o.get("depth")
+                                                        else (kx + kz) / 2)
+        obj.data.transform(Matrix.Diagonal((kx, ky, kz, 1)))
+        k = (kx + kz) / 2
+    elif fit == "width" or (fit is None and fit_width(o)):   # длинная мебель, дома — по ширине, высота — по пропорциям
+        k = o["size"][0] / 100 / float(hi[0] - lo[0])
+    elif fit == "height":
+        k = o["size"][1] / 100 / float(hi[2] - lo[2])
+    if fit:
+        if fit not in ("exact", "cube"):
+            obj.data.transform(Matrix.Scale(k, 4))
+        return _anchor(obj, o) + (k, o.get("mount", "floor"))
     if fit_width(o):                            # длинная мебель — по ширине, высота — по пропорциям модели
         cur, target = float(hi[0] - lo[0]), o["size"][0] / 100
     else:                                       # остальное — по высоте
@@ -236,6 +255,11 @@ def place(obj, o, rot_deg):
         # по высоте вышло вдвое шире ОС — вещь лежит плашмя или свёрнута: самая длинная сторона = большему размеру ОС
         k = max(o["size"]) / 100 / float(max(hi - lo))
     obj.data.transform(Matrix.Scale(k, 4))
+    return _anchor(obj, o) + (k, o.get("mount", "floor"))
+
+
+def _anchor(obj, o):
+    """Точка опоры по креплению; возвращает ((ширина, глубина, высота),)."""
     lo, hi = bbox(obj)
     cx, cy = (lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2
     mount = o.get("mount", "floor")
@@ -248,7 +272,7 @@ def place(obj, o, rot_deg):
     obj.data.transform(Matrix.Translation(Vector(shift)))
     obj.data.update()
     lo, hi = bbox(obj)
-    return tuple(float(x) for x in (hi - lo)), k, mount
+    return (tuple(float(x) for x in (hi - lo)),)
 
 
 def decimate(obj, limit, planar=False):
@@ -390,7 +414,7 @@ def render_views(obj, out_base, px=360, res=None, fit=1.35):
     sc = bpy.context.scene
     sc.render.engine = "CYCLES"
     sc.cycles.device = "CPU"
-    sc.cycles.samples = 48
+    sc.cycles.samples = 12 if os.environ.get("TRIPO_FAST") else 48
     try:
         sc.cycles.use_denoising, sc.cycles.denoiser = True, "OPENIMAGEDENOISE"
     except Exception:
@@ -434,7 +458,8 @@ def render_views(obj, out_base, px=360, res=None, fit=1.35):
     sc.camera = cam
     added.append(cam)
     outs = []
-    for tag, yaw, pitch in (("front", 0.0, 12.0), ("34", -35.0, 22.0)):
+    views = (("front", 0.0, 12.0),) if os.environ.get("TRIPO_FAST") else (("front", 0.0, 12.0), ("34", -35.0, 22.0))
+    for tag, yaw, pitch in views:
         d = Matrix.Rotation(math.radians(yaw), 3, "Z") @ Matrix.Rotation(math.radians(-pitch), 3, "X") @ Vector((0, -1, 0))
         cam.location = c + d * (size * 4)          # d — от предмета к камере
         cam.rotation_euler = (-d).to_track_quat("-Z", "Y").to_euler()
@@ -546,11 +571,12 @@ def process(path, plan, out_dir, rot_cfg, color_cfg, prev_dir):
     elif fit_width(o):
         if abs(h * 100 - o["size"][1]) > 0.25 * o["size"][1]:
             warns.append(f"подогнано по ширине; высота {h * 100:.0f} см, в ОС {o['size'][1]} см")
-    elif abs(w * 100 - o["size"][0]) > WIDTH_TOL * o["size"][0]:
+    elif abs(w * 100 - o["size"][0]) > WIDTH_TOL * o["size"][0] and not o.get("fit"):
         warns.append(f"ширина {w * 100:.0f} см, в ОС {o['size'][0]} см (> 15 %) — записано в DEVIATIONS.md")
-    t1 = decimate(obj, LIMITS[cls])
+    lim = o.get("limit") or LIMITS[cls]
+    t1 = decimate(obj, lim)
     smooth_by_angle(obj)
-    if t1 > LIMITS[cls]:
+    if t1 > lim:
         warns.append(f"не удалось облегчить до лимита: {t1}")
     tex = fix_materials(obj, TEX[cls], color_cfg if color_cfg.get("approved") else None)
     if not obj.data.materials or not any(m and m.node_tree for m in obj.data.materials):
@@ -560,11 +586,11 @@ def process(path, plan, out_dir, rot_cfg, color_cfg, prev_dir):
     if mb > MAX_MB:
         warns.append(f"файл {mb:.1f} МБ > {MAX_MB} МБ")
     views = render_views(obj, os.path.join(prev_dir, name))
-    e = {"src": stem + ".glb", "tris_before": t0, "tris_after": t1, "limit": LIMITS[cls], "class": cls,
+    e = {"src": stem + ".glb", "tris_before": t0, "tris_after": t1, "limit": lim, "class": cls,
          "size_cm": [w * 100, d * 100, h * 100], "os_cm": o["size"], "scale": k, "rotate": rot, "mount": mount,
          "textures": ", ".join(tex) or "≤ лимита", "mb": mb, "jpeg_q": q, "warnings": warns,
          "date": datetime.date.today().isoformat()}
-    print(f"[{name}] треугольников {t0} → {t1} (лимит {LIMITS[cls]}), {w * 100:.0f}×{d * 100:.0f}×{h * 100:.0f} см, "
+    print(f"[{name}] треугольников {t0} → {t1} (лимит {lim}), {w * 100:.0f}×{d * 100:.0f}×{h * 100:.0f} см, "
           f"{mb:.2f} МБ" + "".join(f"\n  ⚠ {x}" for x in warns))
     cap = (f"{name}\n{t0:,} → {t1:,} треуг. · {w * 100:.0f}×{d * 100:.0f}×{h * 100:.0f} см · поворот {rot}° · "
            f"{mb:.2f} МБ" + (" · ⚠ " + str(len(warns)) if warns else "")).replace(",", " ")

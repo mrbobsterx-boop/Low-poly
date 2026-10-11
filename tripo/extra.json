@@ -1,0 +1,1959 @@
+{
+ "_comment": "Модели не из плана ОС (TRIPO_BUILDINGS / TRIPO_CHARACTERS, партия 2026-10-11): имя → название, размер [ширина, высота] см, fit (exact — ровно Ш×В, cube — куб, width — по ширине, height — по высоте), крепление, лимит треугольников. Имена с _b/_c — второй вариант той же вещи; без номера в списке — новые (см. отчёт).",
+ "ext_bus_stop": {
+  "name": "№112 Остановка",
+  "size": [
+   100,
+   260
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "ext_bus_stop_b": {
+  "name": "№112 Остановка",
+  "size": [
+   100,
+   260
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "hangar": {
+  "name": "№143 Ангар",
+  "size": [
+   2400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "nuclear_plant": {
+  "name": "№138 Атомная станция",
+  "size": [
+   2400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "nuclear_plant_b": {
+  "name": "№138 Атомная станция",
+  "size": [
+   2400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "crane_tower": {
+  "name": "№148 Строительный кран",
+  "size": [
+   100,
+   2500
+  ],
+  "fit": "height",
+  "cat": "street",
+  "limit": 15000
+ },
+ "block_concrete": {
+  "name": "№216 Бетон",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "car_tarp_b": {
+  "name": "№155 Машина под брезентом",
+  "size": [
+   450,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "sign_diner": {
+  "name": "№150 Вывеска «DINER»",
+  "size": [
+   100,
+   500
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "tent_dome": {
+  "name": "№156 Палатка",
+  "size": [
+   100,
+   130
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "tent_military": {
+  "name": "№158 Военная палатка",
+  "size": [
+   100,
+   250
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "sign_motel_b": {
+  "name": "№149 Вывеска «MOTEL»",
+  "size": [
+   100,
+   600
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "sign_motel": {
+  "name": "№149 Вывеска «MOTEL»",
+  "size": [
+   100,
+   600
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "letters_a_j": {
+  "name": "№166 Буквы A–J",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "height",
+  "cat": "split"
+ },
+ "block_gravel": {
+  "name": "№225 Гравий",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "mine_ore_pile": {
+  "name": "№196 Куча руды",
+  "size": [
+   100,
+   80
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "farm_barn": {
+  "name": "№131 Ферма",
+  "size": [
+   1600,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "mine_b": {
+  "name": "№137 Шахта",
+  "size": [
+   1400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "market_stall": {
+  "name": "№154 Торговый лоток",
+  "size": [
+   100,
+   230
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "mine_post_wood": {
+  "name": "№177 Деревянная стойка",
+  "size": [
+   100,
+   250
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_crate_dynamite": {
+  "name": "№192 Ящик динамита",
+  "size": [
+   100,
+   60
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_crate": {
+  "name": "№191 Деревянный ящик",
+  "size": [
+   100,
+   60
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_crates_stack": {
+  "name": "№193 Штабель ящиков",
+  "size": [
+   100,
+   150
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_support_wood": {
+  "name": "№173 Деревянная крепь",
+  "size": [
+   100,
+   250
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_cart_empty": {
+  "name": "№186 Вагонетка пустая",
+  "size": [
+   100,
+   120
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_rails_end": {
+  "name": "№190 Тупик рельсов",
+  "size": [
+   150,
+   150
+  ],
+  "fit": "width",
+  "cat": "mine",
+  "limit": 8000
+ },
+ "doors_set_b": {
+  "name": "№165 Набор дверей",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "height",
+  "cat": "split"
+ },
+ "doors_set": {
+  "name": "№165 Набор дверей",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "height",
+  "cat": "split"
+ },
+ "mine_wall_planks_stone_b": {
+  "name": "новое: mine wall planks stone",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "mine_ladder": {
+  "name": "№195 Лестница",
+  "size": [
+   100,
+   300
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_cart_wood": {
+  "name": "новое: mine cart wood",
+  "size": [
+   100,
+   120
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "fishing_shop": {
+  "name": "№145 Рыболовный магазин",
+  "size": [
+   800,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "mine_wall_planks": {
+  "name": "№180 Обшивка досками",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "mine_wall_planks_stone": {
+  "name": "новое: mine wall planks stone",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "mine": {
+  "name": "№137 Шахта",
+  "size": [
+   1400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "mine_rails_straight": {
+  "name": "№188 Рельсы прямые",
+  "size": [
+   300,
+   150
+  ],
+  "fit": "width",
+  "cat": "mine",
+  "limit": 8000
+ },
+ "block_sand": {
+  "name": "№214 Песок",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "apartments": {
+  "name": "№118 Многоквартирный дом",
+  "size": [
+   1200,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "block_dirt": {
+  "name": "№212 Земля",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "motel": {
+  "name": "№146 Мотель",
+  "size": [
+   2000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "mine_c": {
+  "name": "№137 Шахта",
+  "size": [
+   1400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "block_stone": {
+  "name": "№215 Камень",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "block_brick": {
+  "name": "№217 Кирпич",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "finish_brick_damaged": {
+  "name": "№20 Кирпич — испорченное",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "car_tarp": {
+  "name": "№155 Машина под брезентом",
+  "size": [
+   450,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "block_clay": {
+  "name": "№226 Глина",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "prison_wall_cell": {
+  "name": "№205 Стена камеры (квадрат 1 × 1 м)",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "sign_diner_b": {
+  "name": "№150 Вывеска «DINER»",
+  "size": [
+   100,
+   500
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "sign_letters_diner": {
+  "name": "№151 Буквы на крышу «DINER»",
+  "size": [
+   100,
+   120
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "tent_camp_aframe": {
+  "name": "новое: tent camp aframe",
+  "size": [
+   100,
+   140
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "finish_pegboard": {
+  "name": "новое: finish pegboard",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "finish_tiles_damaged": {
+  "name": "№14 Плитка — испорченное",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "car_police": {
+  "name": "№230 Полицейская машина",
+  "size": [
+   480,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "car_police_b": {
+  "name": "№230 Полицейская машина",
+  "size": [
+   480,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "mine_wall_rock_ore": {
+  "name": "№179 Скала с рудой",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "digits_4_9_signs": {
+  "name": "№169 Цифры 4–9 и знаки & ! -",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "height",
+  "cat": "split"
+ },
+ "tent_big": {
+  "name": "№157 Большой шатёр",
+  "size": [
+   100,
+   400
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "prison_guard_booth": {
+  "name": "№204 Будка охраны",
+  "size": [
+   100,
+   300
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "power_plant": {
+  "name": "№134 Электростанция",
+  "size": [
+   2000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "dam": {
+  "name": "№135 Дамба",
+  "size": [
+   2000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "finish_wallpaper_ruined": {
+  "name": "№9 Обои — наполовину разрушенное",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "awning_striped": {
+  "name": "№153 Полосатый козырёк",
+  "size": [
+   100,
+   250
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "market_stall_b": {
+  "name": "№154 Торговый лоток",
+  "size": [
+   100,
+   230
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "letters_partial_l_s": {
+  "name": "новое: letters partial l s",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "height",
+  "cat": "split"
+ },
+ "block_soil_layers": {
+  "name": "новое: block soil layers",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "block_soil_layers_b": {
+  "name": "новое: block soil layers",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "crates_stack": {
+  "name": "новое: crates stack",
+  "size": [
+   100,
+   150
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "finish_metal_ok": {
+  "name": "№16 Металл — целое",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "finish_wood_panels_damaged": {
+  "name": "№11 Деревянные панели — испорченное",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "prison_watchtower": {
+  "name": "№203 Вышка охраны",
+  "size": [
+   100,
+   900
+  ],
+  "fit": "height",
+  "cat": "prison",
+  "limit": 15000
+ },
+ "finish_plaster_damaged": {
+  "name": "№5 Крашеная штукатурка — испорченное",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "block_dirt_cracked": {
+  "name": "новое: block dirt cracked",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "finish_wallpaper_ok": {
+  "name": "№7 Обои — целое",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "block_grass": {
+  "name": "№222 Земля с травой",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "block_concrete_cracked": {
+  "name": "новое: block concrete cracked",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "ruin_pipe_burst": {
+  "name": "№93 Лопнувшая труба",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "prison_wall_mesh": {
+  "name": "новое: prison wall mesh",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "church": {
+  "name": "№128 Церковь",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "church_b": {
+  "name": "№128 Церковь",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_small": {
+  "name": "№113 Маленький дом",
+  "size": [
+   800,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_cottage": {
+  "name": "новое: house cottage",
+  "size": [
+   800,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_garage": {
+  "name": "№115 Дом с гаражом",
+  "size": [
+   1200,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "school": {
+  "name": "№129 Школа",
+  "size": [
+   2000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "auto_repair": {
+  "name": "№124 Автомастерская",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "prison_armory_locker": {
+  "name": "№208 Оружейный шкафчик (закрытый)",
+  "size": [
+   100,
+   190
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "motel_b": {
+  "name": "№146 Мотель",
+  "size": [
+   1600,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "apartments_b": {
+  "name": "№118 Многоквартирный дом",
+  "size": [
+   1400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_townhouse": {
+  "name": "новое: house townhouse",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "police_station": {
+  "name": "№125 Полицейский участок",
+  "size": [
+   1200,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "clinic": {
+  "name": "№126 Клиника",
+  "size": [
+   1200,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "metro": {
+  "name": "№141 Станция метро",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "shop_grocery_bld": {
+  "name": "№119 Продуктовый магазин",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "warehouse": {
+  "name": "№127 Склад",
+  "size": [
+   1400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "supermarket": {
+  "name": "№130 Супермаркет",
+  "size": [
+   2000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "donut_shop": {
+  "name": "№139 Пончики",
+  "size": [
+   800,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "electronics_shop": {
+  "name": "№144 Магазин электроники",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "bus_school": {
+  "name": "№233 Школьный автобус",
+  "size": [
+   1100,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "mine_wall_mesh": {
+  "name": "№181 Сетка на скале",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "shack_brick": {
+  "name": "новое: shack brick",
+  "size": [
+   600,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "shack_wood": {
+  "name": "новое: shack wood",
+  "size": [
+   600,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_farm": {
+  "name": "№116 Фермерский дом",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_wood_b": {
+  "name": "новое: house wood",
+  "size": [
+   100,
+   200
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "house_porch": {
+  "name": "новое: house porch",
+  "size": [
+   900,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_brick2": {
+  "name": "№114 Двухэтажный кирпичный дом",
+  "size": [
+   900,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "shop_general": {
+  "name": "новое: shop general",
+  "size": [
+   800,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "fire_station": {
+  "name": "№136 Пожарная станция",
+  "size": [
+   1400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "letters_u_z_0_3": {
+  "name": "№168 Буквы U–Z и цифры 0–3",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "height",
+  "cat": "split"
+ },
+ "mine_floodlight": {
+  "name": "№185 Прожектор",
+  "size": [
+   100,
+   180
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_lantern": {
+  "name": "№184 Керосиновый фонарь",
+  "size": [
+   100,
+   35
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "house_wood_c": {
+  "name": "новое: house wood",
+  "size": [
+   100,
+   200
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "ext_fence_wood": {
+  "name": "№107 Деревянный забор",
+  "size": [
+   100,
+   150
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "prison_armory_cage": {
+  "name": "№210 Оружейная клетка",
+  "size": [
+   600,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "mine_tool_rack": {
+  "name": "№197 Стойка с инструментами",
+  "size": [
+   100,
+   180
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_crates_stack_b": {
+  "name": "№193 Штабель ящиков",
+  "size": [
+   100,
+   150
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "ext_bus_stop_c": {
+  "name": "№112 Остановка",
+  "size": [
+   100,
+   260
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "gas_station": {
+  "name": "№123 Заправка",
+  "size": [
+   1400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "gas_station_b": {
+  "name": "№123 Заправка",
+  "size": [
+   1200,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "shop_pharmacy_bld": {
+  "name": "№120 Аптека",
+  "size": [
+   800,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "hangar_b": {
+  "name": "№143 Ангар",
+  "size": [
+   2400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_brick2_b": {
+  "name": "№114 Двухэтажный кирпичный дом",
+  "size": [
+   900,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "farm_barn_b": {
+  "name": "№131 Ферма",
+  "size": [
+   1600,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "motorcycle": {
+  "name": "№235 Мотоцикл",
+  "size": [
+   210,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "shop_cafe_bld": {
+  "name": "новое: shop cafe bld",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "bunting": {
+  "name": "№152 Флажки-гирлянда",
+  "size": [
+   100,
+   60
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "bunting_b": {
+  "name": "№152 Флажки-гирлянда",
+  "size": [
+   100,
+   60
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "finish_metal_damaged": {
+  "name": "№17 Металл — испорченное",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "facade_garage_damaged": {
+  "name": "№41 Гараж — испорченное",
+  "size": [
+   100,
+   200
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "motorhome": {
+  "name": "№234 Автодом",
+  "size": [
+   700,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "market_stall_c": {
+  "name": "№154 Торговый лоток",
+  "size": [
+   100,
+   230
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "house_trailer": {
+  "name": "№117 Трейлер",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "ruin_column": {
+  "name": "новое: ruin column",
+  "size": [
+   100,
+   300
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "diner": {
+  "name": "№122 Кафе-закусочная",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "power_plant_b": {
+  "name": "№134 Электростанция",
+  "size": [
+   2000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "construction_site": {
+  "name": "№147 Стройка",
+  "size": [
+   1400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "fire_station_b": {
+  "name": "№136 Пожарная станция",
+  "size": [
+   1400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "building_ruin_1": {
+  "name": "новое: building ruin 1",
+  "size": [
+   1200,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_garage_b": {
+  "name": "№115 Дом с гаражом",
+  "size": [
+   1200,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "building_ruin_2": {
+  "name": "новое: building ruin 2",
+  "size": [
+   1400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "mall": {
+  "name": "№140 Торговый центр",
+  "size": [
+   2400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "police_station_b": {
+  "name": "№125 Полицейский участок",
+  "size": [
+   1200,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "apartments_c": {
+  "name": "№118 Многоквартирный дом",
+  "size": [
+   1200,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "school_b": {
+  "name": "№129 Школа",
+  "size": [
+   2000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_wood_d": {
+  "name": "новое: house wood d",
+  "size": [
+   900,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_two_story": {
+  "name": "новое: house two story",
+  "size": [
+   900,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_small_b": {
+  "name": "№113 Маленький дом",
+  "size": [
+   800,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "clinic_b": {
+  "name": "№126 Клиника",
+  "size": [
+   1200,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_small_c": {
+  "name": "№113 Маленький дом",
+  "size": [
+   800,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_two_story_b": {
+  "name": "новое: house two story",
+  "size": [
+   900,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_brick2_c": {
+  "name": "№114 Двухэтажный кирпичный дом",
+  "size": [
+   900,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "car_sedan": {
+  "name": "№227 Легковая — седан",
+  "size": [
+   450,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "car_hatchback": {
+  "name": "№228 Легковая — хэтчбек",
+  "size": [
+   400,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "radio_tower": {
+  "name": "№162 Радиовышка",
+  "size": [
+   100,
+   1500
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "mine_cart_ore": {
+  "name": "№187 Вагонетка с рудой",
+  "size": [
+   100,
+   120
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "sign_diner_c": {
+  "name": "№150 Вывеска «DINER»",
+  "size": [
+   100,
+   500
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "sign_diner_d": {
+  "name": "новое: sign diner d",
+  "size": [
+   100,
+   200
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "prison_bunk": {
+  "name": "№200 Тюремная койка",
+  "size": [
+   100,
+   180
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "mine_ladder_b": {
+  "name": "№195 Лестница",
+  "size": [
+   100,
+   300
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "prison_watchtower_b": {
+  "name": "№203 Вышка охраны",
+  "size": [
+   100,
+   900
+  ],
+  "fit": "height",
+  "cat": "prison",
+  "limit": 15000
+ },
+ "prison_watchtower_c": {
+  "name": "№203 Вышка охраны",
+  "size": [
+   100,
+   900
+  ],
+  "fit": "height",
+  "cat": "prison",
+  "limit": 15000
+ },
+ "prison_fence_wire": {
+  "name": "№202 Забор с колючей проволокой",
+  "size": [
+   100,
+   300
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "car_old_blue": {
+  "name": "новое: car old blue",
+  "size": [
+   470,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "car_sedan_b": {
+  "name": "№227 Легковая — седан",
+  "size": [
+   450,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "prison_guard_booth_b": {
+  "name": "№204 Будка охраны",
+  "size": [
+   100,
+   300
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "prison_guard_booth_c": {
+  "name": "№204 Будка охраны",
+  "size": [
+   100,
+   300
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "ruin_pipe_wall": {
+  "name": "новое: ruin pipe wall",
+  "size": [
+   100,
+   200
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "prison_cell_bars": {
+  "name": "№199 Решётка камеры с дверью",
+  "size": [
+   100,
+   250
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "van": {
+  "name": "№232 Фургон",
+  "size": [
+   500,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "mine_lamp_string": {
+  "name": "№183 Гирлянда ламп на кабеле",
+  "size": [
+   100,
+   60
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "hangar_c": {
+  "name": "№143 Ангар",
+  "size": [
+   2400,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "block_metal": {
+  "name": "№224 Металл",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "bicycle": {
+  "name": "№236 Велосипед",
+  "size": [
+   180,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "container_shack": {
+  "name": "№160 Будка из контейнера",
+  "size": [
+   600,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "tent_greenhouse": {
+  "name": "№159 Тепличный купол",
+  "size": [
+   600,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "tent_greenhouse_b": {
+  "name": "№159 Тепличный купол",
+  "size": [
+   600,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "prison_locker_row": {
+  "name": "№211 Ряд шкафчиков охраны",
+  "size": [
+   100,
+   190
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "motorcycle_b": {
+  "name": "№235 Мотоцикл",
+  "size": [
+   210,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "pickup": {
+  "name": "№231 Пикап",
+  "size": [
+   520,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "pickup_b": {
+  "name": "№231 Пикап",
+  "size": [
+   520,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "awning_striped_b": {
+  "name": "№153 Полосатый козырёк",
+  "size": [
+   100,
+   250
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "house_trailer_b": {
+  "name": "№117 Трейлер",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_trailer_c": {
+  "name": "№117 Трейлер",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "mine_floodlight_b": {
+  "name": "№185 Прожектор",
+  "size": [
+   100,
+   180
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_floodlight_c": {
+  "name": "№185 Прожектор",
+  "size": [
+   100,
+   180
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "church_c": {
+  "name": "№128 Церковь",
+  "size": [
+   1000,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "fence_broken": {
+  "name": "№164 Сломанный забор",
+  "size": [
+   100,
+   150
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "house_trailer_d": {
+  "name": "новое: house trailer d",
+  "size": [
+   800,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "house_trailer_e": {
+  "name": "новое: house trailer e",
+  "size": [
+   600,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "car_station_wagon": {
+  "name": "№229 Универсал",
+  "size": [
+   480,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "car_station_wagon_b": {
+  "name": "№229 Универсал",
+  "size": [
+   480,
+   150
+  ],
+  "fit": "width",
+  "cat": "vehicle",
+  "limit": 8000
+ },
+ "prison_toilet_sink": {
+  "name": "№201 Унитаз с раковиной",
+  "size": [
+   100,
+   110
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "mine_lantern_b": {
+  "name": "№184 Керосиновый фонарь",
+  "size": [
+   100,
+   35
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "mine_lamp_cage": {
+  "name": "№182 Шахтная лампа",
+  "size": [
+   100,
+   40
+  ],
+  "fit": "height",
+  "cat": "mine"
+ },
+ "prison_armory_locker_b": {
+  "name": "№208 Оружейный шкафчик (закрытый)",
+  "size": [
+   100,
+   190
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "prison_rack_batons": {
+  "name": "№207 Стойка с дубинками",
+  "size": [
+   100,
+   120
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "prison_armory_open": {
+  "name": "№209 Оружейный шкаф (открытый, с оружием)",
+  "size": [
+   100,
+   190
+  ],
+  "fit": "height",
+  "cat": "prison"
+ },
+ "ext_fence_wood_b": {
+  "name": "№107 Деревянный забор",
+  "size": [
+   100,
+   150
+  ],
+  "fit": "height",
+  "cat": "street"
+ },
+ "house_small_d": {
+  "name": "новое: house small d",
+  "size": [
+   800,
+   600
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "mine_wall_rock": {
+  "name": "№178 Скала",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "finish_wallpaper_damaged": {
+  "name": "№8 Обои — испорченное",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "finish_plaster_window": {
+  "name": "новое: finish plaster window",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "block_bedrock": {
+  "name": "№219 Твёрдая порода",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "cube",
+  "cat": "block"
+ },
+ "finish_wallpaper_ok_b": {
+  "name": "№7 Обои — целое",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ }
+}
