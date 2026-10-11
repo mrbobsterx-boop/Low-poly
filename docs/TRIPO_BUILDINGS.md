@@ -598,248 +598,167 @@ Replace the bed with a small bus stop shelter with a bench. Keep exactly the sam
 
 ---
 
-## Целые дома снаружи (вместо кусков фасада — решение автора 2026-10-11)
+## Целые дома снаружи — испорченные (решение автора 2026-10-11: только этот вид)
 
-Дом целиком, как его видно с улицы: стены, окна, дверь к камере, крыша. Внутрь игра заходит через дверь — там наши комнаты.
-Каждый дом — три вида. Кладёшь на Диск в папку **«04 Фасады»**. Уже сделанные куски фасадов не пропадут: пойдут на глухие
-стены, заборы между домами и дома нестандартной ширины.
+Дом целиком, как его видно с улицы: стены, окна, вход к камере, крыша. Заброшенный, побитый — как нужно игре.
+Внутрь игра заходит через дверь — там наши комнаты. Клади на Диск в папку **«04 Фасады»**.
 
-**113. Маленький дом — целый** → `house_small_ok.glb`
+**113. Маленький дом** → `house_small.glb`
 ```
-Replace the bed with a small one-story wooden siding house about 8 meters wide with a porch, two windows and a gable roof. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**114. Маленький дом — испорченный** → `house_small_damaged.glb`
-```
-Replace the bed with a small one-story wooden siding house about 8 meters wide with a porch, two windows and a gable roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a small one-story wooden siding house about 8 meters wide with a porch, two windows and a gable roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**115. Маленький дом — наполовину разрушенный** → `house_small_ruined.glb`
+**114. Двухэтажный кирпичный дом** → `house_brick2.glb`
 ```
-Replace the bed with a small one-story wooden siding house about 8 meters wide with a porch, two windows and a gable roof. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**116. Двухэтажный кирпичный дом — целый** → `house_brick2_ok.glb`
-```
-Replace the bed with a two-story red brick house about 9 meters wide with windows on both floors and a gable roof. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a two-story red brick house about 9 meters wide with windows on both floors and a gable roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**117. Двухэтажный кирпичный дом — испорченный** → `house_brick2_damaged.glb`
+**115. Дом с гаражом** → `house_garage.glb`
 ```
-Replace the bed with a two-story red brick house about 9 meters wide with windows on both floors and a gable roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**118. Двухэтажный кирпичный дом — наполовину разрушенный** → `house_brick2_ruined.glb`
-```
-Replace the bed with a two-story red brick house about 9 meters wide with windows on both floors and a gable roof. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a suburban one-story house about 12 meters wide with an attached garage with a roll-up door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**119. Дом с гаражом — целый** → `house_garage_ok.glb`
+**116. Фермерский дом** → `house_farm.glb`
 ```
-Replace the bed with a suburban one-story house about 12 meters wide with an attached garage with a roll-up door. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**120. Дом с гаражом — испорченный** → `house_garage_damaged.glb`
-```
-Replace the bed with a suburban one-story house about 12 meters wide with an attached garage with a roll-up door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a farmhouse about 10 meters wide with a long front porch, wooden walls and a metal roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**121. Дом с гаражом — наполовину разрушенный** → `house_garage_ruined.glb`
+**117. Трейлер** → `house_trailer.glb`
 ```
-Replace the bed with a suburban one-story house about 12 meters wide with an attached garage with a roll-up door. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**122. Фермерский дом — целый** → `house_farm_ok.glb`
-```
-Replace the bed with a farmhouse about 10 meters wide with a long front porch, wooden walls and a metal roof. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a mobile home trailer about 8 meters long with small windows and steps to the door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**123. Фермерский дом — испорченный** → `house_farm_damaged.glb`
+**118. Многоквартирный дом** → `apartments.glb`
 ```
-Replace the bed with a farmhouse about 10 meters wide with a long front porch, wooden walls and a metal roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**124. Фермерский дом — наполовину разрушенный** → `house_farm_ruined.glb`
-```
-Replace the bed with a farmhouse about 10 meters wide with a long front porch, wooden walls and a metal roof. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a three-story apartment building about 12 meters wide with many windows, small balconies and an entrance door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**125. Трейлер — целый** → `house_trailer_ok.glb`
+**119. Продуктовый магазин** → `shop_grocery_bld.glb`
 ```
-Replace the bed with a mobile home trailer about 8 meters long with small windows and steps to the door. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**126. Трейлер — испорченный** → `house_trailer_damaged.glb`
-```
-Replace the bed with a mobile home trailer about 8 meters long with small windows and steps to the door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a one-story corner grocery store about 10 meters wide with big glass shop windows, a door and a striped awning. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**127. Трейлер — наполовину разрушенный** → `house_trailer_ruined.glb`
+**120. Аптека** → `shop_pharmacy_bld.glb`
 ```
-Replace the bed with a mobile home trailer about 8 meters long with small windows and steps to the door. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**128. Многоквартирный дом — целый** → `apartments_ok.glb`
-```
-Replace the bed with a three-story apartment building about 12 meters wide with many windows, small balconies and an entrance door. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a one-story pharmacy about 8 meters wide with glass shop windows, a door and a green cross sign. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**129. Многоквартирный дом — испорченный** → `apartments_damaged.glb`
+**121. Оружейный магазин** → `shop_guns_bld.glb`
 ```
-Replace the bed with a three-story apartment building about 12 meters wide with many windows, small balconies and an entrance door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**130. Многоквартирный дом — наполовину разрушенный** → `apartments_ruined.glb`
-```
-Replace the bed with a three-story apartment building about 12 meters wide with many windows, small balconies and an entrance door. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a one-story gun shop about 8 meters wide with barred windows and a heavy door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**131. Продуктовый магазин — целый** → `shop_grocery_bld_ok.glb`
+**122. Кафе-закусочная** → `diner.glb`
 ```
-Replace the bed with a one-story corner grocery store about 10 meters wide with big glass shop windows, a door and a striped awning. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**132. Продуктовый магазин — испорченный** → `shop_grocery_bld_damaged.glb`
-```
-Replace the bed with a one-story corner grocery store about 10 meters wide with big glass shop windows, a door and a striped awning. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a one-story roadside diner about 10 meters wide with a long row of windows and a flat roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**133. Продуктовый магазин — наполовину разрушенный** → `shop_grocery_bld_ruined.glb`
+**123. Заправка** → `gas_station.glb`
 ```
-Replace the bed with a one-story corner grocery store about 10 meters wide with big glass shop windows, a door and a striped awning. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**134. Аптека — целый** → `shop_pharmacy_bld_ok.glb`
-```
-Replace the bed with a one-story pharmacy about 8 meters wide with glass shop windows, a door and a green cross sign. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a gas station about 14 meters wide: a small shop building with glass front and a canopy over two fuel pumps. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**135. Аптека — испорченный** → `shop_pharmacy_bld_damaged.glb`
+**124. Автомастерская** → `auto_repair.glb`
 ```
-Replace the bed with a one-story pharmacy about 8 meters wide with glass shop windows, a door and a green cross sign. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**136. Аптека — наполовину разрушенный** → `shop_pharmacy_bld_ruined.glb`
-```
-Replace the bed with a one-story pharmacy about 8 meters wide with glass shop windows, a door and a green cross sign. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with an auto repair workshop about 10 meters wide with two big garage doors and a flat roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**137. Оружейный магазин — целый** → `shop_guns_bld_ok.glb`
+**125. Полицейский участок** → `police_station.glb`
 ```
-Replace the bed with a one-story gun shop about 8 meters wide with barred windows and a heavy door. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**138. Оружейный магазин — испорченный** → `shop_guns_bld_damaged.glb`
-```
-Replace the bed with a one-story gun shop about 8 meters wide with barred windows and a heavy door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a one-story police station about 12 meters wide with a flag pole, windows and a double door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**139. Оружейный магазин — наполовину разрушенный** → `shop_guns_bld_ruined.glb`
+**126. Клиника** → `clinic.glb`
 ```
-Replace the bed with a one-story gun shop about 8 meters wide with barred windows and a heavy door. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**140. Кафе-закусочная — целый** → `diner_ok.glb`
-```
-Replace the bed with a one-story roadside diner about 10 meters wide with a long row of windows and a flat roof. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a small two-story clinic about 12 meters wide with many windows and a red cross sign. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**141. Кафе-закусочная — испорченный** → `diner_damaged.glb`
+**127. Склад** → `warehouse.glb`
 ```
-Replace the bed with a one-story roadside diner about 10 meters wide with a long row of windows and a flat roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**142. Кафе-закусочная — наполовину разрушенный** → `diner_ruined.glb`
-```
-Replace the bed with a one-story roadside diner about 10 meters wide with a long row of windows and a flat roof. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a big warehouse about 14 meters wide with corrugated metal walls, a large sliding door and a curved roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**143. Заправка — целый** → `gas_station_ok.glb`
+**128. Церковь** → `church.glb`
 ```
-Replace the bed with a gas station about 14 meters wide: a small shop building with glass front and a canopy over two fuel pumps. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**144. Заправка — испорченный** → `gas_station_damaged.glb`
-```
-Replace the bed with a gas station about 14 meters wide: a small shop building with glass front and a canopy over two fuel pumps. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a small wooden church about 10 meters wide with a bell tower. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**145. Заправка — наполовину разрушенный** → `gas_station_ruined.glb`
+**129. Школа** → `school.glb`
 ```
-Replace the bed with a gas station about 14 meters wide: a small shop building with glass front and a canopy over two fuel pumps. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**146. Автомастерская — целый** → `auto_repair_ok.glb`
-```
-Replace the bed with an auto repair workshop about 10 meters wide with two big garage doors and a flat roof. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a two-story brick school building about 20 meters wide with rows of big windows, a main entrance with steps and a flag pole. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**147. Автомастерская — испорченный** → `auto_repair_damaged.glb`
+**130. Супермаркет** → `supermarket.glb`
 ```
-Replace the bed with an auto repair workshop about 10 meters wide with two big garage doors and a flat roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**148. Автомастерская — наполовину разрушенный** → `auto_repair_ruined.glb`
-```
-Replace the bed with an auto repair workshop about 10 meters wide with two big garage doors and a flat roof. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a big one-story supermarket about 20 meters wide with a long glass front, automatic doors and shopping carts by the entrance. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**149. Полицейский участок — целый** → `police_station_ok.glb`
+**131. Ферма** → `farm_barn.glb`
 ```
-Replace the bed with a one-story police station about 12 meters wide with a flag pole, windows and a double door. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**150. Полицейский участок — испорченный** → `police_station_damaged.glb`
-```
-Replace the bed with a one-story police station about 12 meters wide with a flag pole, windows and a double door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a farm about 16 meters wide: a big red barn with a hay loft door and a tall grain silo next to it. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**151. Полицейский участок — наполовину разрушенный** → `police_station_ruined.glb`
+**132. Кладбище** → `cemetery.glb`
 ```
-Replace the bed with a one-story police station about 12 meters wide with a flag pole, windows and a double door. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**152. Клиника — целый** → `clinic_ok.glb`
-```
-Replace the bed with a small two-story clinic about 12 meters wide with many windows and a red cross sign. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a small cemetery about 12 meters wide: rows of gravestones and crosses, an iron fence with a gate, a small chapel at the back. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**153. Клиника — испорченный** → `clinic_damaged.glb`
+**133. Бассейн** → `pool.glb`
 ```
-Replace the bed with a small two-story clinic about 12 meters wide with many windows and a red cross sign. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**154. Клиника — наполовину разрушенный** → `clinic_ruined.glb`
-```
-Replace the bed with a small two-story clinic about 12 meters wide with many windows and a red cross sign. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a public swimming pool building about 16 meters wide with big windows, an entrance, and an outdoor pool with a ladder and a diving board on one side. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**155. Склад — целый** → `warehouse_ok.glb`
+**134. Электростанция** → `power_plant.glb`
 ```
-Replace the bed with a big warehouse about 14 meters wide with corrugated metal walls, a large sliding door and a curved roof. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**156. Склад — испорченный** → `warehouse_damaged.glb`
-```
-Replace the bed with a big warehouse about 14 meters wide with corrugated metal walls, a large sliding door and a curved roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a power station about 20 meters wide: a brick turbine hall, two tall chimneys, transformers and power line towers. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**157. Склад — наполовину разрушенный** → `warehouse_ruined.glb`
+**135. Дамба** → `dam.glb`
 ```
-Replace the bed with a big warehouse about 14 meters wide with corrugated metal walls, a large sliding door and a curved roof. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
-```
-
-**158. Церковь — целый** → `church_ok.glb`
-```
-Replace the bed with a small wooden church about 10 meters wide with a bell tower. In good condition, lived-in, clean. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a section of a concrete dam about 20 meters wide with a spillway, a control tower on top and water pipes. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**159. Церковь — испорченный** → `church_damaged.glb`
+**136. Пожарная станция** → `fire_station.glb`
 ```
-Replace the bed with a small wooden church about 10 meters wide with a bell tower. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof tiles. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a two-story fire station about 14 meters wide with two big red garage doors, a small tower and a siren on the roof. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
 
-**160. Церковь — наполовину разрушенный** → `church_ruined.glb`
+**137. Шахта** → `mine.glb`
 ```
-Replace the bed with a small wooden church about 10 meters wide with a bell tower. Half destroyed: one part of the building collapsed, big holes in the walls and roof, burnt black marks, rubble around the base. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, front door facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no fence, no trees, no cars, no people, signs without letters, no text.
+Replace the bed with a mine entrance about 14 meters wide: a wooden headframe tower with a wheel, a tunnel entrance with rails and a mine cart, a small shed. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
+```
+
+**138. Атомная станция** → `nuclear_plant.glb`
+```
+Replace the bed with a nuclear power plant about 24 meters wide: two big cooling towers, a reactor dome and a control building with a radiation sign. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
+```
+
+**139. Пончики** → `donut_shop.glb`
+```
+Replace the bed with a small donut shop about 8 meters wide with a big donut sculpture on the roof, a glass front and a door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
+```
+
+**140. Торговый центр** → `mall.glb`
+```
+Replace the bed with a big three-story shopping mall about 24 meters wide with glass facades, many shop windows, a big main entrance and an escalator visible through the glass. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
+```
+
+**141. Станция метро** → `metro.glb`
+```
+Replace the bed with a metro station entrance about 10 meters wide: a stairway going down under a glass and steel canopy, with a round sign without letters. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
+```
+
+**142. Зоомагазин** → `pet_shop.glb`
+```
+Replace the bed with a small pet shop about 8 meters wide with a shop window showing bird cages and fish tanks, a door and an awning. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
+```
+
+**143. Ангар** → `hangar.glb`
+```
+Replace the bed with a big aircraft hangar about 24 meters wide with a curved metal roof and huge sliding doors. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
+```
+
+**144. Магазин электроники** → `electronics_shop.glb`
+```
+Replace the bed with an electronics store about 10 meters wide with a shop window full of TVs and radios, a glass door. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint, missing roof parts. Seen straight from the street side (front view, slightly from above), the whole building visible including the roof, main entrance facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no cars, no people, signs without letters, no text.
 ```
