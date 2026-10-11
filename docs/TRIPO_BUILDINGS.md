@@ -1114,3 +1114,23 @@ Replace the bed with a metal interrogation table with two metal chairs and a han
 ```
 Replace the bed with a wall rack with police batons, handcuffs and a riot shield, flat back. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
 ```
+
+**208. Оружейный шкафчик (закрытый)** → `prison_armory_locker.glb`
+```
+Replace the bed with a tall steel armory locker with two doors, a combination lock and a small barred window in the door. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**209. Оружейный шкаф (открытый, с оружием)** → `prison_armory_open.glb`
+```
+Replace the bed with an open steel armory cabinet with a rack of shotguns and rifles inside and shelves with ammo boxes. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**210. Оружейная клетка** → `prison_armory_cage.glb`
+```
+Replace the bed with a steel mesh armory cage cabinet with a locked mesh door, pistols hanging inside on hooks and riot helmets on a shelf. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**211. Ряд шкафчиков охраны** → `prison_locker_row.glb`
+```
+Replace the bed with a row of four narrow grey steel guard lockers with vents and padlocks. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
