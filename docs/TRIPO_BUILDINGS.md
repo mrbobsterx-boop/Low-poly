@@ -873,3 +873,205 @@ Replace the bed with a broken wooden picket fence section with missing and leani
 ```
 Replace the bed with six different single doors standing in a row: wooden door, glass door, metal door, green door, door boarded with planks, door with a broken window. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground. No text.
 ```
+
+---
+
+## Буквы и цифры для вывесок (вся латиница + цифры)
+
+Каждая буква — отдельная модель, одного стиля и высоты (~1 м). Игра будет собирать из них любые вывески: MOTEL, DINER,
+названия магазинов. Клади в папку **«04 Фасады»**, подпапку можно назвать «Буквы».
+
+**166. Буква A** → `letter_a.glb`
+```
+Replace the bed with a single big 3D sign letter "A" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "A", nothing else, no other letters, no base, no ground.
+```
+
+**167. Буква B** → `letter_b.glb`
+```
+Replace the bed with a single big 3D sign letter "B" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "B", nothing else, no other letters, no base, no ground.
+```
+
+**168. Буква C** → `letter_c.glb`
+```
+Replace the bed with a single big 3D sign letter "C" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "C", nothing else, no other letters, no base, no ground.
+```
+
+**169. Буква D** → `letter_d.glb`
+```
+Replace the bed with a single big 3D sign letter "D" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "D", nothing else, no other letters, no base, no ground.
+```
+
+**170. Буква E** → `letter_e.glb`
+```
+Replace the bed with a single big 3D sign letter "E" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "E", nothing else, no other letters, no base, no ground.
+```
+
+**171. Буква F** → `letter_f.glb`
+```
+Replace the bed with a single big 3D sign letter "F" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "F", nothing else, no other letters, no base, no ground.
+```
+
+**172. Буква G** → `letter_g.glb`
+```
+Replace the bed with a single big 3D sign letter "G" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "G", nothing else, no other letters, no base, no ground.
+```
+
+**173. Буква H** → `letter_h.glb`
+```
+Replace the bed with a single big 3D sign letter "H" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "H", nothing else, no other letters, no base, no ground.
+```
+
+**174. Буква I** → `letter_i.glb`
+```
+Replace the bed with a single big 3D sign letter "I" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "I", nothing else, no other letters, no base, no ground.
+```
+
+**175. Буква J** → `letter_j.glb`
+```
+Replace the bed with a single big 3D sign letter "J" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "J", nothing else, no other letters, no base, no ground.
+```
+
+**176. Буква K** → `letter_k.glb`
+```
+Replace the bed with a single big 3D sign letter "K" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "K", nothing else, no other letters, no base, no ground.
+```
+
+**177. Буква L** → `letter_l.glb`
+```
+Replace the bed with a single big 3D sign letter "L" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "L", nothing else, no other letters, no base, no ground.
+```
+
+**178. Буква M** → `letter_m.glb`
+```
+Replace the bed with a single big 3D sign letter "M" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "M", nothing else, no other letters, no base, no ground.
+```
+
+**179. Буква N** → `letter_n.glb`
+```
+Replace the bed with a single big 3D sign letter "N" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "N", nothing else, no other letters, no base, no ground.
+```
+
+**180. Буква O** → `letter_o.glb`
+```
+Replace the bed with a single big 3D sign letter "O" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "O", nothing else, no other letters, no base, no ground.
+```
+
+**181. Буква P** → `letter_p.glb`
+```
+Replace the bed with a single big 3D sign letter "P" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "P", nothing else, no other letters, no base, no ground.
+```
+
+**182. Буква Q** → `letter_q.glb`
+```
+Replace the bed with a single big 3D sign letter "Q" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "Q", nothing else, no other letters, no base, no ground.
+```
+
+**183. Буква R** → `letter_r.glb`
+```
+Replace the bed with a single big 3D sign letter "R" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "R", nothing else, no other letters, no base, no ground.
+```
+
+**184. Буква S** → `letter_s.glb`
+```
+Replace the bed with a single big 3D sign letter "S" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "S", nothing else, no other letters, no base, no ground.
+```
+
+**185. Буква T** → `letter_t.glb`
+```
+Replace the bed with a single big 3D sign letter "T" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "T", nothing else, no other letters, no base, no ground.
+```
+
+**186. Буква U** → `letter_u.glb`
+```
+Replace the bed with a single big 3D sign letter "U" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "U", nothing else, no other letters, no base, no ground.
+```
+
+**187. Буква V** → `letter_v.glb`
+```
+Replace the bed with a single big 3D sign letter "V" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "V", nothing else, no other letters, no base, no ground.
+```
+
+**188. Буква W** → `letter_w.glb`
+```
+Replace the bed with a single big 3D sign letter "W" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "W", nothing else, no other letters, no base, no ground.
+```
+
+**189. Буква X** → `letter_x.glb`
+```
+Replace the bed with a single big 3D sign letter "X" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "X", nothing else, no other letters, no base, no ground.
+```
+
+**190. Буква Y** → `letter_y.glb`
+```
+Replace the bed with a single big 3D sign letter "Y" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "Y", nothing else, no other letters, no base, no ground.
+```
+
+**191. Буква Z** → `letter_z.glb`
+```
+Replace the bed with a single big 3D sign letter "Z" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one letter "Z", nothing else, no other letters, no base, no ground.
+```
+
+**192. Цифра 0** → `digit_0.glb`
+```
+Replace the bed with a single big 3D sign digit "0" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one digit "0", nothing else, no other letters, no base, no ground.
+```
+
+**193. Цифра 1** → `digit_1.glb`
+```
+Replace the bed with a single big 3D sign digit "1" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one digit "1", nothing else, no other letters, no base, no ground.
+```
+
+**194. Цифра 2** → `digit_2.glb`
+```
+Replace the bed with a single big 3D sign digit "2" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one digit "2", nothing else, no other letters, no base, no ground.
+```
+
+**195. Цифра 3** → `digit_3.glb`
+```
+Replace the bed with a single big 3D sign digit "3" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one digit "3", nothing else, no other letters, no base, no ground.
+```
+
+**196. Цифра 4** → `digit_4.glb`
+```
+Replace the bed with a single big 3D sign digit "4" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one digit "4", nothing else, no other letters, no base, no ground.
+```
+
+**197. Цифра 5** → `digit_5.glb`
+```
+Replace the bed with a single big 3D sign digit "5" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one digit "5", nothing else, no other letters, no base, no ground.
+```
+
+**198. Цифра 6** → `digit_6.glb`
+```
+Replace the bed with a single big 3D sign digit "6" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one digit "6", nothing else, no other letters, no base, no ground.
+```
+
+**199. Цифра 7** → `digit_7.glb`
+```
+Replace the bed with a single big 3D sign digit "7" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one digit "7", nothing else, no other letters, no base, no ground.
+```
+
+**200. Цифра 8** → `digit_8.glb`
+```
+Replace the bed with a single big 3D sign digit "8" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one digit "8", nothing else, no other letters, no base, no ground.
+```
+
+**201. Цифра 9** → `digit_9.glb`
+```
+Replace the bed with a single big 3D sign digit "9" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one digit "9", nothing else, no other letters, no base, no ground.
+```
+
+**202. Знак «&»** → `sign_amp.glb`
+```
+Replace the bed with a single big 3D sign symbol "&" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one symbol "&", nothing else, no other letters, no base, no ground.
+```
+
+**203. Знак «!»** → `sign_excl.glb`
+```
+Replace the bed with a single big 3D sign symbol "!" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one symbol "!", nothing else, no other letters, no base, no ground.
+```
+
+**204. Дефис «-»** → `sign_dash.glb`
+```
+Replace the bed with a single big 3D sign symbol "-" for a roadside shop sign, standing upright, seen straight from the front: thick block shape with a rusty metal rim, faded orange-red paint and small light bulbs along the front face, flat back, about 1 meter tall. Old, worn and dirty after the apocalypse. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Only the one symbol "-", nothing else, no other letters, no base, no ground.
+```
