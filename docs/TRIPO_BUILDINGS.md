@@ -1058,3 +1058,59 @@ Replace the bed with a pile of rocks and orange ore chunks. Old, worn and dirty,
 ```
 Replace the bed with a wooden wall rack with pickaxes, shovels and a hard hat. Old, worn and dirty, inside an abandoned mine. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
 ```
+
+---
+
+## Тюрьма
+
+Клади: здание, вышку, забор, будку — в **«04 Фасады»**; остальное — в **«03 Стены — декор»** (подпапка «Тюрьма»).
+
+**198. Тюрьма (здание снаружи)** → `prison.glb`
+```
+Replace the bed with a prison building about 20 meters wide: grey concrete walls with small barred windows, a heavy steel main gate and a guard tower on one corner. Abandoned and damaged: broken and boarded windows, cracks, dirt, rust stains, peeling paint. Seen straight from the front, slightly from above, the whole building visible including the roof, main gate facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single building, no ground, no trees, no people, signs without letters, no text.
+```
+
+**199. Решётка камеры с дверью** → `prison_cell_bars.glb`
+```
+Replace the bed with a prison cell front wall made of vertical steel bars about 3 meters wide with a sliding barred door and a lock. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**200. Тюремная койка** → `prison_bunk.glb`
+```
+Replace the bed with a steel prison bunk bed fixed to the wall, two levels, thin mattresses. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**201. Унитаз с раковиной** → `prison_toilet_sink.glb`
+```
+Replace the bed with a stainless steel prison toilet and sink combined unit. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**202. Забор с колючей проволокой** → `prison_fence_wire.glb`
+```
+Replace the bed with a tall chain-link prison fence section about 3 meters long with coils of barbed wire on top. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**203. Вышка охраны** → `prison_watchtower.glb`
+```
+Replace the bed with a prison guard watchtower on four legs with a small cabin and a searchlight on top. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**204. Будка охраны** → `prison_guard_booth.glb`
+```
+Replace the bed with a small guard booth with a window, a door and a barrier arm. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**205. Стена камеры (квадрат 1 × 1 м)** → `prison_wall_cell.glb`
+```
+Replace the bed with a square wall panel of old painted concrete with scratched tally marks counting days, the pattern continues seamlessly to all sides. Old and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting and dark background as the original image, but show it straight from the front, flat, filling the picture. Use its own natural colors and materials, not the colors of the bed. Perfectly straight flat edges on all four sides, no frame, no border, nothing attached. No text.
+```
+
+**206. Стол для допросов** → `prison_table_interrogation.glb`
+```
+Replace the bed with a metal interrogation table with two metal chairs and a hanging lamp above. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
+
+**207. Стойка с дубинками** → `prison_rack_batons.glb`
+```
+Replace the bed with a wall rack with police batons, handcuffs and a riot shield, flat back. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
+```
