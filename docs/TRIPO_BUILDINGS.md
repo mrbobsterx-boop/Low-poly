@@ -1196,3 +1196,23 @@ Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of grey 
 ```
 Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of brown dirt with a layer of short green grass on top, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
 ```
+
+**223. Дерево (доски)** → `block_wood.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of stacked wooden planks, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**224. Металл** → `block_metal.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of riveted rusty steel plates, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**225. Гравий** → `block_gravel.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of loose grey gravel, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**226. Глина** → `block_clay.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of wet reddish-brown clay, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
