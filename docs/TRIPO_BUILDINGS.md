@@ -1134,3 +1134,65 @@ Replace the bed with a steel mesh armory cage cabinet with a locked mesh door, p
 ```
 Replace the bed with a row of four narrow grey steel guard lockers with vents and padlocks. Old, worn and dirty, in an abandoned prison. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no ground, no text.
 ```
+
+---
+
+## Блоки 1 × 1 × 1 м (копать, строить, земля под улицей)
+
+Куб ровно 1 м, рисунок по всем сторонам продолжается — блоки ставятся вплотную без швов. Первые 4 — что просил,
+дальше — блоки, которые уже есть в игре (копание), им тоже нужны модели. Клади в папку **«14 Прочее»**, подпапка «Блоки».
+
+**212. Земля** → `block_dirt.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of packed brown dirt with small stones and roots, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**213. Асфальт** → `block_asphalt.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of dark grey asphalt with small cracks on the top and layers of gravel and dirt on the sides, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**214. Песок** → `block_sand.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of fine yellow sand with tiny pebbles, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**215. Камень** → `block_stone.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of solid grey stone rock with cracks, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**216. Бетон** → `block_concrete.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of grey concrete with small holes and stains, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**217. Кирпич** → `block_brick.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of red brick masonry, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**218. Обломки** → `block_rubble.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of packed rubble: broken concrete, bricks and dust, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**219. Твёрдая порода** → `block_bedrock.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of very hard dark grey bedrock, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**220. Уголь** → `block_coal.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of dark rock with black shiny coal veins, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**221. Железная руда** → `block_ore_iron.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of grey rock with rusty orange iron ore chunks, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
+
+**222. Земля с травой** → `block_grass.glb`
+```
+Replace the bed with a single cube block exactly 1 by 1 by 1 meter made of brown dirt with a layer of short green grass on top, seen from the front and slightly from above so the top and two sides are visible. The texture on all sides continues seamlessly to the edges, so many blocks can be stacked side by side and on top of each other without visible seams. Sharp straight cube edges, no frame, no border, nothing on top. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use its own natural colors and materials, not the colors of the bed. Single block, no ground, no text.
+```
