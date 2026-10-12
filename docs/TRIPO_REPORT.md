@@ -464,3 +464,182 @@
 - тюрьма (198–211): 198 `prison`, 206 `prison_table_interrogation`;
 - блоки (212–226): 213 `block_asphalt`, 218 `block_rubble`, 220 `block_coal`, 221 `block_ore_iron`, 223 `block_wood`;
 - транспорт (227–236): .
+
+---
+
+## Партия 2026-10-12 (папка Диска `1D7CH7QzUHZcksZhnjqzayPpK5oXB5T6v`) — новые 167 моделей
+
+**Что было в папке:** 411 файлов. 257 — **байт в байт старые** (уже обработаны раньше), 24 — повторные копии одного файла,
+**146 новых**. Новые опознаны по виду (4 стороны), имена — по `docs/TRIPO_BATCH_2026-10-12.md` и `docs/TRIPO_CHARACTERS.md`.
+Из 146 файлов получилось **167 моделей**: 132 обычных + 5 со скелетом + 30 кусков из 9 наборов.
+
+**Листы превью:** `renders/_review/tripo_2026-10-12_b3_character.jpg` (74 человека), `…_creature.jpg` (18 животных),
+`…_clothing.jpg` (19 вещей на человека), `…_item.jpg` (12), `…_decor_set.jpg` (9), `…_sets.jpg` (30 кусков наборов),
+`…_rigged.jpg` (5 со скелетом).
+
+**Со скелетом (риг Mixamo, анимации внутри) — `tools/char_process.py`:** `char_f_hoodie` (3 анимации),
+`body_f_rig` (76), `body_m_rig` (93), `body_m_rig_b` (31), `body_m_rig_c` (0). Рост 1,68 / 1,8 м, лицом к −Y.
+⚠ `body_f_rig` 8,5 МБ, `body_m_rig` 10,5 МБ, `body_m_rig_b` 4,5 МБ — больше 3 МБ из-за анимаций (сетка и текстуры лёгкие).
+**Остальные 71 человек — без скелета** (статичные): для анимаций нужен риг в Tripo («Гуманоид», Mixamo).
+Исправлено: `char_process.py` мерил и выгружал вместе с телом служебный шар показа костей — люди выходили вдвое меньше.
+
+**Разрезано (`tools/split_parts.py`, новые режимы `--box` — вещи друг над другом, `--k` — касаются друг друга):**
+3 кролика → `rabbit_hare`, `rabbit_white`, `rabbit_grey`; 6 птиц → `crow`, `pigeon`, `seagull`, `vulture`, `owl`, `duck`;
+`set_gr_1` → `hat_gr_net`, `hat_gr_boonie`, `hat_gr_beret`; № 199 → `wrist_rope`, `wrist_shackles`, `back_yoke_buckets`;
+`set_fm_2` → `hat_fm_wide`, `back_fm_rope`, `belt_fm_lantern`; Rust Dogs → `goggles_rd`, `back_rd_tire`, `back_rd_tank`;
+№ 197 → `back_sack_ore`, `back_basket_coal`, `back_firewood`; № 201 → `tool_sledgehammer`, `tool_broom_push`,
+`item_mop_bucket`; трубы → `joint_pipes_T`, `joint_pipes_X`, `pipes_end_caps`.
+
+**Точка опоры вещей на человека:** шапки, капюшоны, противогаз, маски-шлемы — низ по центру; рюкзаки (`back_…`),
+`goggles_rd`, `mask_ws_cloth` — центр задней стороны (+Y, сторона к телу).
+
+**Отличия от списка `TRIPO_BATCH_2026-10-12.md`:**
+- `dog_feral` занят в плане ОС (`dog_feral_odinochnaya`) — новая тощая собака названа `dog_feral_thin`; ротвейлер — `dog_rottweiler` (в списке нет).
+- Шахтёров (`char_miner_…`) в папке не нашёл. Наборы `set_fm_1`, `set_gr_2`, `set_s9_1`, `set_s9_2` целиком не пришли —
+  поодиночке пришли только `hat_fm_hood`, `mask_gr_gas`, `hat_s9_hood`, `back_s9_air`. Не пришли № 198, 200, 202,
+  `joint_pipes_set_1/2`, `joint_duct_set(_b)`, `joint_misc_set(_b)`, `rat_big`, `rat_mutant`, `char_free_f_nurse`.
+- Уголки труб (`joint_pipes_T/X`, `pipes_end_caps`) и короба (`decor_duct_cross`, `decor_duct_straight`) — **сечение с прямыми
+  кусками не подогнано** (точку опоры и масштаб по `decor_pipes_colored_h` нужно сделать отдельно); набор труб — Т, крест,
+  заглушки (а не L, T, X, как в списке).
+- Люди не из списков (дал понятные имена): `char_f_police(_b)`, `char_m_police`, `char_f_firefighter`, `char_m_firefighter`,
+  `char_m_chef`, `char_f_old`, `char_m_adventurer`, `char_m_tactical`, `char_rd_raider`, `char_m_old_c`, военные
+  `char_f_military(_b)`, `char_m_military(_b)`; тела без рига `body_base_female_b/c`, `body_base_male`; одежда для тела
+  `top_hoodie_f/m`, `bottom_jeans_f/m`, `shoes_sneakers`.
+
+**Проверить:** `hat_fm_hood` — 4 083 треугольника (лимит мелкого 3 000, сетка капюшона не облегчается без дыр);
+`item_radio_vintage` — 7 840 (при 3 000 развалился, поставлен лимит 8 000).
+
+| Имя | Что это | Файл на Диске | Размер, см | Треуг. | Поворот |
+|---|---|---|---|---|---|
+| body_base_female_b | Базовое тело — женщина, вариант (без рига) | 3D-модель женского персонажа | 161×33×168 | 14700 | 270° |
+| body_base_female_c | Базовое тело — женщина, вариант 2 (без рига) | stylized female 3d model | 166×31×168 | 14700 | 0° |
+| body_base_male | Базовое тело — мужчина (без рига) | низкополигональная 3D-модель человека | 180×34×180 | 14700 | 270° |
+| char_f_doctor | №5 Врач | doctor 3d model | 145×32×168 | 14698 | 270° |
+| char_f_firefighter | Пожарная | firefighter 3d model (1) | 171×45×170 | 14700 | 270° |
+| char_f_mechanic | №3 Механик, хвост | 3d character model (2) | 149×38×168 | 14700 | 270° |
+| char_f_military | №4 Военная (комбинезон) | 3D-модель военного комбинезона | 141×30×168 | 14700 | 270° |
+| char_f_military_b | №4 Военная (вариант, капюшон) | 3D-модель военного персонажа | 69×39×168 | 14700 | 270° |
+| char_f_old | Старушка | elderly woman 3d model | 140×43×162 | 14700 | 270° |
+| char_f_police | Полицейская | police officer 3d model (1) | 154×35×170 | 14700 | 270° |
+| char_f_police_b | Полицейская (вариант) | police officer 3d model | 159×34×170 | 14700 | 270° |
+| char_fm_f | №129 Ferrymen — женщина | stylized character 3d model (4) | 146×50×168 | 14700 | 270° |
+| char_fm_f_thin | №133 Ferrymen — худая дозорная | tattered cloak character 3d model | 148×42×166 | 14700 | 270° |
+| char_fm_leader | №131 Ferrymen — Martha «Ledger» | witch 3d model | 152×51×170 | 14700 | 270° |
+| char_fm_m | №130 Ferrymen — мужчина | rugged adventurer 3d model | 155×44×180 | 14700 | 270° |
+| char_fm_m_big | №132 Ferrymen — гребец-здоровяк | strongman 3d model | 175×81×190 | 14700 | 270° |
+| char_fm_m_young | №134 Ferrymen — молодой перевозчик | torn shirt prisoner 3d model | 157×32×176 | 14700 | 270° |
+| char_free_f_denim | №7 Спорт | stylized character 3d model (2) | 146×29×168 | 14700 | 270° |
+| char_free_f_rain | Девушка в жёлтом дождевике | stylized character 3d model (1) | 146×36×165 | 14700 | 270° |
+| char_free_m_hermit | №27 Старик (вариант, длинные волосы) | elderly man 3d model (1) | 170×50×175 | 14700 | 270° |
+| char_free_m_hunter | №21 Лесоруб | stylized outdoorsman 3d model | 188×41×182 | 14700 | 270° |
+| char_free_m_office | Мужчина в рваном костюме | tattered suit character 3d model | 155×33×176 | 14700 | 270° |
+| char_free_m_teacher | №27 Старик | elderly man 3d model | 158×31×175 | 14700 | 270° |
+| char_gr_f | №141 Garrison — женщина | soldier 3d model | 152×31×170 | 14700 | 270° |
+| char_gr_f_short | №145 Garrison — санитарка | military medic 3d model | 164×44×168 | 14700 | 270° |
+| char_gr_leader | №143 Garrison — Major Ian Rowan | military officer 3d model | 171×37×182 | 14700 | 270° |
+| char_gr_m | №142 Garrison — мужчина | military soldier 3d model (2) | 167×40×180 | 14700 | 270° |
+| char_gr_m_big | №144 Garrison — пулемётчик | military soldier 3d model | 171×61×188 | 14700 | 270° |
+| char_gr_m_old | №146 Garrison — связист постарше | military soldier 3d model (1) | 165×35×178 | 14700 | 270° |
+| char_iw_f | №105 Iron Wheel — женщина | folk dancer 3d model | 141×45×168 | 14700 | 270° |
+| char_iw_f_tall | №108 Iron Wheel — высокая с дредами | stylized character 3d model (3) | 150×39×180 | 14700 | 270° |
+| char_iw_leader | №107 Iron Wheel — Silas «Limp» | patchwork coat character 3d model | 161×36×178 | 14698 | 270° |
+| char_iw_m | №106 Iron Wheel — мужчина | poncho character 3d model | 157×53×178 | 14700 | 270° |
+| char_iw_m_old | №109 Iron Wheel — старый торговец | old man 3d model (2) | 188×64×172 | 14700 | 270° |
+| char_iw_m_young | №110 Iron Wheel — молодой погонщик | low-poly character 3d model (1) | 154×41×176 | 14700 | 270° |
+| char_m_adventurer | Путник с большим рюкзаком | 3D-модель искателя приключений с рюкзаком | 163×81×180 | 14700 | 270° |
+| char_m_chef | Повар | chef character 3d model | 187×64×180 | 14699 | 270° |
+| char_m_firefighter | Пожарный | firefighter 3d model | 160×31×180 | 14700 | 270° |
+| char_m_hoodie | №22 Худи (капюшон) | стилизованная 3D-модель персонажа в капюшоне | 166×37×180 | 14700 | 270° |
+| char_m_military | №20 Военный | 3D-модель военного солдата | 90×35×180 | 14700 | 270° |
+| char_m_military_b | №20 Военный (вариант) | 3D-модель военного солдата (1) | 170×33×178 | 14698 | 270° |
+| char_m_old_c | №27 Старик (вариант, куртка) | old man 3d model (1) | 184×49×172 | 14700 | 270° |
+| char_m_police | №25 Полицейский | police officer 3d model (2) | 162×38×180 | 14698 | 270° |
+| char_m_tactical | Мужчина в тактическом костюме с капюшоном | тактический костюм с капюшоном, 3D-модель | 85×35×180 | 14700 | 270° |
+| char_m_worker | №23 Рабочий | muscular worker 3d model | 164×64×185 | 14700 | 270° |
+| char_prisoner_f | Заключённая | prisoner 3d model (2) | 150×39×168 | 14700 | 270° |
+| char_prisoner_m | Заключённый | prisoner 3d model (1) | 175×36×180 | 14700 | 270° |
+| char_prisoner_m_old | Заключённый (полосатая роба) | prisoner 3d model | 166×34×178 | 14700 | 270° |
+| char_rd_f | №117 Rust Dogs — женщина | barbarian warrior 3d model (1) | 156×44×170 | 14700 | 270° |
+| char_rd_f_b | №117 Rust Dogs — женщина (вариант) | stylized female character 3d model | 149×32×170 | 14700 | 270° |
+| char_rd_f_big | №121 Rust Dogs — крепкая рейдерша | tribal warrior 3d model | 184×51×175 | 14700 | 270° |
+| char_rd_leader | №119 Rust Dogs — Gus Brody «Brute» | rusty battle armor 3d model | 167×76×195 | 14699 | 270° |
+| char_rd_m | №118 Rust Dogs — мужчина | post-apocalyptic fighter 3d model | 161×39×180 | 14700 | 270° |
+| char_rd_m_old | №122 Rust Dogs — старый одноглазый | post-apocalyptic character 3d model | 151×57×185 | 14700 | 270° |
+| char_rd_m_thin | №120 Rust Dogs — тощий псих | stylized zombie 3d model | 163×33×176 | 14700 | 270° |
+| char_rd_raider | Rust Dogs — рейдер в маске | фэнтезийный разбойник 3D-модель | 177×45×182 | 14700 | 270° |
+| char_s9_f | №153 Site-9 — женщина | stylized scientist 3d model | 151×38×168 | 14700 | 270° |
+| char_s9_leader | №155 Site-9 — директор | lab coat scientist 3d model | 161×38×178 | 14700 | 270° |
+| char_s9_m | №154 Site-9 — мужчина (жёлтый костюм) | low-poly character 3d model | 164×47×180 | 14700 | 270° |
+| char_s9_m_guard | №156 Site-9 — охранник | stylized armored figure 3d model | 114×41×182 | 14700 | 270° |
+| char_s9_m_subject | №158 Site-9 — подопытный | low poly human 3d model | 160×36×178 | 14700 | 270° |
+| char_slave_f | Девушка в лохмотьях | ragged girl 3d model | 59×38×165 | 14700 | 270° |
+| char_slave_m | Узник в лохмотьях | ragged prisoner 3d model | 171×33×176 | 14700 | 270° |
+| char_slave_m_old | №27 Старик (вариант, свитер) | old man 3d model | 174×41×174 | 14700 | 270° |
+| char_ws_f | №93 Wellspring — женщина | stylized 3d character | 149×40×168 | 14700 | 270° |
+| char_ws_f_round | №97 Wellspring — полная девушка в дождевике | stylized human 3d model (1) | 163×52×162 | 14700 | 270° |
+| char_ws_leader | №95 Wellspring — Anna Weller | stylized character 3d model | 150×31×170 | 14700 | 270° |
+| char_ws_m | №94 Wellspring — мужчина | stylized human 3d model | 164×37×178 | 14700 | 270° |
+| char_ws_m_old | №96 Wellspring — старик-огородник | elderly man 3d model (2) | 169×37×174 | 14700 | 270° |
+| zombie_fat | №39 Зомби — громила | zombie 3d model | 193×79×190 | 14699 | 270° |
+| zombie_firefighter | Зомби-пожарный | zombie firefighter 3d model | 159×35×178 | 14700 | 270° |
+| zombie_hospital | №18 Зомби — женщина | zombie 3d model (1) | 148×34×168 | 14700 | 270° |
+| zombie_office | №38 Зомби — мужчина | 3D-модель персонажа зомби | 144×41×175 | 14700 | 270° |
+| zombie_runner | №18 Зомби — женщина (вариант) | zombie character 3d model | 145×33×168 | 14699 | 270° |
+| back_iw_pack | №115 Огромный рюкзак торговца | adventure backpack 3d model (1) | 65×54×90 | 7840 | 270° |
+| back_s9_air | №163 Баллон с воздухом на спину | lab equipment 3d model | 58×62×60 | 7838 | 270° |
+| back_ws_basket | №103 Плетёная корзина-рюкзак | woven basket 3d model | 49×65×60 | 7839 | 270° |
+| bottom_jeans_f | Джинсы женские (одежда для тела) | 3D-модель женский-джинсов | 40×29×100 | 7840 | 270° |
+| bottom_jeans_m | Джинсы мужские (одежда для тела) | 3D-модель синих мужский джинсов | 46×35×105 | 7838 | 270° |
+| hat_bandana | №44 Бандана | bandana 3d model (1) | 23×15×30 | 2940 | 270° |
+| hat_fm_hood | №136 Капюшон из сети и тряпья | hooded mask 3d model | 40×33×45 | 4083 | 270° |
+| hat_iw_feather | №111 Широкая шляпа с перьями | low-poly hat 3d model | 48×48×30 | 2940 | 270° |
+| hat_s9_hood | №160 Капюшон защитного костюма | hazmat helmet 3d model | 37×36×45 | 2940 | 270° |
+| hat_ws_beanie | №100 Вязаная шапка с помпоном | beanie hat 3d model | 24×24×28 | 2940 | 270° |
+| hat_ws_bucket | №104 Панама | low-poly bucket hat 3d model | 32×32×17 | 2940 | 270° |
+| hat_ws_straw | №99 Соломенная шляпа | straw hat 3d model | 45×45×17 | 2940 | 270° |
+| mask_gr_gas | №152 Армейский противогаз с капюшоном | military gas mask 3d model | 32×35×42 | 2940 | 270° |
+| mask_rd_scrap | №123 Маска из ржавого металла | rusted mask 3d model | 24×27×32 | 2939 | 270° |
+| mask_rd_scrap_b | №123 Маска из ржавого металла (вариант) | stylized mask 3d model | 27×30×32 | 2940 | 270° |
+| mask_ws_cloth | №102 Самодельная маска на лицо | stitch patch mask 3d model | 22×11×15 | 2939 | 270° |
+| shoes_sneakers | Кроссовки (одежда для тела) | 3D-модель кроссовок | 26×19×8 | 2940 | 270° |
+| top_hoodie_f | Худи женское (одежда для тела) | 3D-модель женской толстовки с капюшоном | 150×35×102 | 7840 | 270° |
+| top_hoodie_m | Худи мужское (одежда для тела) | 3D-модель мужской толстовки с капюшоном | 160×39×105 | 7840 | 270° |
+| bear_black | Медведь чёрный | low poly bear 3d model | 69×155×100 | 7838 | 0° |
+| bear_brown | Медведь бурый | low poly bear 3d model (1) | 71×160×110 | 7840 | 0° |
+| bear_mutant | Медведь-мутант | low-poly bear 3d model | 92×180×120 | 7840 | 0° |
+| deer_red | №89 Олень (благородный) | low-poly deer 3d model | 103×185×200 | 7840 | 270° |
+| deer_roe | №89 Олень (самка) | deer 3d model | 37×116×140 | 7840 | 180° |
+| deer_white | №89 Олень (рога) | low poly deer 3d model | 78×149×180 | 7838 | 180° |
+| dog_feral_thin | №80 Дикая собака (тощая) | low-poly dog 3d model | 25×95×60 | 7840 | 0° |
+| dog_husky | №91 Волк (светлый) | low poly wolf 3d model | 27×108×80 | 7840 | 0° |
+| dog_raider | №80 Дикая собака (с ошейником) | low-poly dog 3d model (2) | 26×89×60 | 7838 | 0° |
+| dog_rottweiler | Собака — ротвейлер | dog 3d model | 27×84×70 | 7840 | 0° |
+| dog_shepherd | №81 Овчарка | low-poly dog 3d model (3) | 21×96×65 | 7840 | 0° |
+| dog_terrier | Собака — терьер | low poly dog 3d model | 20×53×45 | 2939 | 0° |
+| dog_zombie | №82 Собака-зомби | low-poly dog 3d model (1) | 26×105×65 | 7840 | 0° |
+| moose_bull | Лось | moose 3d model | 117×222×230 | 7839 | 180° |
+| moose_cow | Лосиха | low poly horse 3d model | 60×212×190 | 7840 | 180° |
+| moose_mutant | Лось-мутант | fantasy creature 3d model | 123×226×240 | 7840 | 180° |
+| rat_grey | №85 Крыса | low-poly rat 3d model | 7×24×8 | 2940 | 180° |
+| wolf | №91 Волк | 3D-модель волка | 29×120×80 | 7840 | 270° |
+| decor_barrel_rusty | Ржавая бочка | ржавая металлическая бочка, 3D-модель | 67×67×90 | 7840 | 270° |
+| decor_dirt_mound | Холм земли | 3D-модель земляного холма | 150×144×49 | 7840 | 270° |
+| decor_duct_cross | Короб вентиляции — крестовина | cross pipe connector 3d model | 150×161×66 | 7840 | 0° |
+| decor_duct_straight | Короб вентиляции — прямой | industrial cuboid prop 3d model | 150×162×80 | 7840 | 0° |
+| decor_sign_weathered | Старая доска объявлений | выветренная вывеска, 3D-модель | 117×37×180 | 14700 | 0° |
+| mat_log_pile | Поленница | 3D-модель деревянных бревен | 110×145×96 | 7839 | 270° |
+| rug_bear_skin | Медвежья шкура | bear rug 3d model (1) | 200×142×48 | 7840 | 0° |
+| rug_persian | Ковёр узорный | persian rug 3d model | 200×138×8 | 7840 | 0° |
+| rug_round_braided | Круглый плетёный коврик | round braided rug 3d model | 120×114×12 | 7838 | 270° |
+| item_brick_wrapped | Свёрток (обёрнутый кирпич) | 3D-модель обернутого кирпича | 30×22×12 | 2940 | 270° |
+| item_food_foil | Еда в фольге | 3D-модель закуски в фольге | 25×13×6 | 2940 | 270° |
+| item_map | №77 Карта | 3D-модель сложенной карты | 40×46×6 | 2940 | 270° |
+| item_medkit | №78 Аптечка | 3D-модель аптечки первой помощи (2) | 16×8×22 | 2939 | 270° |
+| item_medkit_b | №78 Аптечка (вариант) | 3D-модель аптечки первой помощи (3) | 16×8×22 | 2940 | 270° |
+| item_pills | Флакон с таблетками | 3D-модель флакона с таблетками | 16×6×4 | 2940 | 270° |
+| item_radio_vintage | Радиоприёмник старый | 3D-модель винтажного радиоприемника | 45×25×40 | 7840 | 270° |
+| mat_bolts | Ржавые болты (кучка) | ржавые болты 3D-модель | 30×21×12 | 2940 | 270° |
+| mat_log_b | Бревно | 3D-модель деревянного бревна (1) | 100×36×34 | 7839 | 270° |
+| mat_plank_b | Доски связкой | 3D-модель деревянных досок | 150×37×11 | 7839 | 270° |
+| tool_pickaxe_b | Кирка (вариант) | 3D-модель кирки | 90×66×18 | 7840 | 0° |
+| tool_wrench_b | Гаечный ключ (вариант) | 3D-модель гаечного ключа | 9×8×30 | 2940 | 270° |

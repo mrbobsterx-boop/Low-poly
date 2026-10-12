@@ -1981,7 +1981,8 @@
    30
   ],
   "fit": "width",
-  "cat": "item"
+  "cat": "item",
+  "limit": 8000
  },
  "char_f_military": {
   "name": "№4 Военная (комбинезон)",
@@ -2161,16 +2162,6 @@
   "fit": "width",
   "cat": "item"
  },
- "zombie_m": {
-  "name": "№38 Зомби — мужчина",
-  "size": [
-   175,
-   175
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
  "bottom_jeans_m": {
   "name": "Джинсы мужские (одежда для тела)",
   "size": [
@@ -2236,15 +2227,6 @@
   "fit": "height",
   "cat": "clothing"
  },
- "decor_basket_set": {
-  "name": "Корзины с дровами и мешки (набор)",
-  "size": [
-   90,
-   40
-  ],
-  "fit": "width",
-  "cat": "decor_set"
- },
  "hat_ws_beanie": {
   "name": "№100 Вязаная шапка с помпоном",
   "size": [
@@ -2253,15 +2235,6 @@
   ],
   "fit": "width",
   "cat": "clothing"
- },
- "decor_rug_bear": {
-  "name": "Медвежья шкура",
-  "size": [
-   200,
-   30
-  ],
-  "fit": "width",
-  "cat": "decor_set"
  },
  "char_m_chef": {
   "name": "Повар",
@@ -2273,24 +2246,6 @@
   "cat": "character",
   "limit": 15000
  },
- "decor_cleaning_tools": {
-  "name": "Швабры и ведро (набор)",
-  "size": [
-   90,
-   130
-  ],
-  "fit": "height",
-  "cat": "decor_set"
- },
- "decor_pipes_colorful": {
-  "name": "Цветные трубы (набор)",
-  "size": [
-   200,
-   40
-  ],
-  "fit": "width",
-  "cat": "decor_set"
- },
  "decor_duct_cross": {
   "name": "Короб вентиляции — крестовина",
   "size": [
@@ -2299,16 +2254,6 @@
   ],
   "fit": "width",
   "cat": "decor_set"
- },
- "deer": {
-  "name": "№89 Олень (самка)",
-  "size": [
-   130,
-   140
-  ],
-  "fit": "height",
-  "cat": "creature",
-  "limit": 8000
  },
  "char_f_doctor": {
   "name": "№5 Врач",
@@ -2330,31 +2275,11 @@
   "cat": "creature",
   "limit": 8000
  },
- "char_m_old_b": {
-  "name": "№27 Старик (вариант, длинные волосы)",
-  "size": [
-   175,
-   175
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
  "char_ws_m_old": {
   "name": "№96 Wellspring — старик-огородник",
   "size": [
    174,
    174
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_m_old": {
-  "name": "№27 Старик",
-  "size": [
-   175,
-   175
   ],
   "fit": "height",
   "cat": "character",
@@ -2456,36 +2381,6 @@
   "fit": "height",
   "cat": "clothing"
  },
- "bear": {
-  "name": "Медведь бурый",
-  "size": [
-   180,
-   110
-  ],
-  "fit": "height",
-  "cat": "creature",
-  "limit": 8000
- },
- "bear_b": {
-  "name": "Медведь чёрный",
-  "size": [
-   170,
-   100
-  ],
-  "fit": "height",
-  "cat": "creature",
-  "limit": 8000
- },
- "deer_b": {
-  "name": "№89 Олень (рога)",
-  "size": [
-   150,
-   180
-  ],
-  "fit": "height",
-  "cat": "creature",
-  "limit": 8000
- },
  "dog_terrier": {
   "name": "Собака — терьер",
   "size": [
@@ -2496,16 +2391,6 @@
   "cat": "creature",
   "limit": 3000
  },
- "moose_b": {
-  "name": "Лосиха",
-  "size": [
-   230,
-   190
-  ],
-  "fit": "height",
-  "cat": "creature",
-  "limit": 8000
- },
  "char_s9_m_subject": {
   "name": "№158 Site-9 — подопытный",
   "size": [
@@ -2515,16 +2400,6 @@
   "fit": "height",
   "cat": "character",
   "limit": 15000
- },
- "wolf_b": {
-  "name": "№91 Волк (светлый)",
-  "size": [
-   130,
-   80
-  ],
-  "fit": "height",
-  "cat": "creature",
-  "limit": 8000
  },
  "bear_mutant": {
   "name": "Медведь-мутант",
@@ -2565,31 +2440,11 @@
   "cat": "character",
   "limit": 15000
  },
- "deer_c": {
-  "name": "№89 Олень (благородный)",
-  "size": [
-   200,
-   200
-  ],
-  "fit": "height",
-  "cat": "creature",
-  "limit": 8000
- },
  "dog_zombie": {
   "name": "№82 Собака-зомби",
   "size": [
    90,
    65
-  ],
-  "fit": "height",
-  "cat": "creature",
-  "limit": 8000
- },
- "dog_feral_b": {
-  "name": "№80 Дикая собака (с ошейником)",
-  "size": [
-   90,
-   60
   ],
   "fit": "height",
   "cat": "creature",
@@ -2605,16 +2460,6 @@
   "cat": "creature",
   "limit": 8000
  },
- "dog_feral_c": {
-  "name": "№80 Дикая собака (тощая)",
-  "size": [
-   90,
-   60
-  ],
-  "fit": "height",
-  "cat": "creature",
-  "limit": 8000
- },
  "hat_iw_feather": {
   "name": "№111 Широкая шляпа с перьями",
   "size": [
@@ -2623,16 +2468,6 @@
   ],
   "fit": "width",
   "cat": "clothing"
- },
- "rat": {
-  "name": "№85 Крыса",
-  "size": [
-   40,
-   12
-  ],
-  "fit": "width",
-  "cat": "creature",
-  "limit": 3000
  },
  "mask_gr_gas": {
   "name": "№152 Армейский противогаз с капюшоном",
@@ -2693,16 +2528,6 @@
   "cat": "character",
   "limit": 15000
  },
- "moose": {
-  "name": "Лось",
-  "size": [
-   260,
-   230
-  ],
-  "fit": "height",
-  "cat": "creature",
-  "limit": 8000
- },
  "char_m_worker": {
   "name": "№23 Рабочий",
   "size": [
@@ -2733,16 +2558,6 @@
   "cat": "character",
   "limit": 15000
  },
- "char_m_old_d": {
-  "name": "№27 Старик (вариант, свитер)",
-  "size": [
-   174,
-   174
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
  "char_iw_leader": {
   "name": "№107 Iron Wheel — Silas «Limp»",
   "size": [
@@ -2752,15 +2567,6 @@
   "fit": "height",
   "cat": "character",
   "limit": 15000
- },
- "decor_rug_persian": {
-  "name": "Ковёр узорный",
-  "size": [
-   200,
-   4
-  ],
-  "fit": "width",
-  "cat": "decor_set"
  },
  "char_f_police": {
   "name": "Полицейская",
@@ -2821,65 +2627,6 @@
   "fit": "height",
   "cat": "character",
   "limit": 15000
- },
- "char_m_prisoner": {
-  "name": "Заключённый",
-  "size": [
-   180,
-   180
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_f_prisoner": {
-  "name": "Заключённая",
-  "size": [
-   168,
-   168
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_m_prisoner_b": {
-  "name": "Заключённый (полосатая роба)",
-  "size": [
-   178,
-   178
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_f_ragged": {
-  "name": "Девушка в лохмотьях",
-  "size": [
-   165,
-   165
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_m_prisoner_ragged": {
-  "name": "Узник в лохмотьях",
-  "size": [
-   176,
-   176
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "decor_rug_round_b": {
-  "name": "Круглый плетёный коврик",
-  "size": [
-   120,
-   4
-  ],
-  "fit": "width",
-  "cat": "decor_set"
  },
  "char_fm_m": {
   "name": "№130 Ferrymen — мужчина",
@@ -2978,26 +2725,6 @@
   "cat": "character",
   "limit": 15000
  },
- "char_f_raincoat": {
-  "name": "Девушка в жёлтом дождевике",
-  "size": [
-   165,
-   165
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_f_sport": {
-  "name": "№7 Спорт",
-  "size": [
-   168,
-   168
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
  "char_iw_f_tall": {
   "name": "№108 Iron Wheel — высокая с дредами",
   "size": [
@@ -3067,16 +2794,6 @@
   "fit": "height",
   "cat": "clothing"
  },
- "char_m_lumberjack": {
-  "name": "№21 Лесоруб",
-  "size": [
-   182,
-   182
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
  "char_s9_f": {
   "name": "№153 Site-9 — женщина",
   "size": [
@@ -3102,16 +2819,6 @@
   "size": [
    166,
    166
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_m_tattered": {
-  "name": "Мужчина в рваном костюме",
-  "size": [
-   176,
-   176
   ],
   "fit": "height",
   "cat": "character",
@@ -3155,36 +2862,6 @@
   ],
   "fit": "height",
   "cat": "clothing"
- },
- "zombie_f": {
-  "name": "№18 Зомби — женщина",
-  "size": [
-   168,
-   168
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "zombie_m_brute": {
-  "name": "№39 Зомби — громила",
-  "size": [
-   190,
-   190
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "zombie_f_b": {
-  "name": "№18 Зомби — женщина (вариант)",
-  "size": [
-   168,
-   168
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
  },
  "zombie_firefighter": {
   "name": "Зомби-пожарный",
@@ -3262,5 +2939,302 @@
   "fit": "height",
   "cat": "character",
   "limit": 15000
+ },
+ "dog_raider": {
+  "name": "№80 Дикая собака (с ошейником)",
+  "size": [
+   90,
+   60
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 8000
+ },
+ "dog_feral_thin": {
+  "name": "№80 Дикая собака (тощая)",
+  "size": [
+   90,
+   60
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 8000
+ },
+ "dog_husky": {
+  "name": "№91 Волк (светлый)",
+  "size": [
+   130,
+   80
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 8000
+ },
+ "bear_brown": {
+  "name": "Медведь бурый",
+  "size": [
+   180,
+   110
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 8000
+ },
+ "bear_black": {
+  "name": "Медведь чёрный",
+  "size": [
+   170,
+   100
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 8000
+ },
+ "rat_grey": {
+  "name": "№85 Крыса",
+  "size": [
+   7,
+   8
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 3000
+ },
+ "deer_roe": {
+  "name": "№89 Олень (самка)",
+  "size": [
+   130,
+   140
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 8000
+ },
+ "deer_white": {
+  "name": "№89 Олень (рога)",
+  "size": [
+   150,
+   180
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 8000
+ },
+ "deer_red": {
+  "name": "№89 Олень (благородный)",
+  "size": [
+   200,
+   200
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 8000
+ },
+ "moose_bull": {
+  "name": "Лось",
+  "size": [
+   260,
+   230
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 8000
+ },
+ "moose_cow": {
+  "name": "Лосиха",
+  "size": [
+   230,
+   190
+  ],
+  "fit": "height",
+  "cat": "creature",
+  "limit": 8000
+ },
+ "zombie_office": {
+  "name": "№38 Зомби — мужчина",
+  "size": [
+   175,
+   175
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "zombie_hospital": {
+  "name": "№18 Зомби — женщина",
+  "size": [
+   168,
+   168
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "zombie_fat": {
+  "name": "№39 Зомби — громила",
+  "size": [
+   190,
+   190
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "zombie_runner": {
+  "name": "№18 Зомби — женщина (вариант)",
+  "size": [
+   168,
+   168
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_prisoner_m": {
+  "name": "Заключённый",
+  "size": [
+   180,
+   180
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_prisoner_f": {
+  "name": "Заключённая",
+  "size": [
+   168,
+   168
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_prisoner_m_old": {
+  "name": "Заключённый (полосатая роба)",
+  "size": [
+   178,
+   178
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_slave_m": {
+  "name": "Узник в лохмотьях",
+  "size": [
+   176,
+   176
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_slave_f": {
+  "name": "Девушка в лохмотьях",
+  "size": [
+   165,
+   165
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_slave_m_old": {
+  "name": "№27 Старик (вариант, свитер)",
+  "size": [
+   174,
+   174
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_free_f_rain": {
+  "name": "Девушка в жёлтом дождевике",
+  "size": [
+   165,
+   165
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_free_m_hermit": {
+  "name": "№27 Старик (вариант, длинные волосы)",
+  "size": [
+   175,
+   175
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_free_f_denim": {
+  "name": "№7 Спорт",
+  "size": [
+   168,
+   168
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_free_m_office": {
+  "name": "Мужчина в рваном костюме",
+  "size": [
+   176,
+   176
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_free_m_hunter": {
+  "name": "№21 Лесоруб",
+  "size": [
+   182,
+   182
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "char_free_m_teacher": {
+  "name": "№27 Старик",
+  "size": [
+   175,
+   175
+  ],
+  "fit": "height",
+  "cat": "character",
+  "limit": 15000
+ },
+ "rug_persian": {
+  "name": "Ковёр узорный",
+  "size": [
+   200,
+   4
+  ],
+  "fit": "width",
+  "cat": "decor_set"
+ },
+ "rug_round_braided": {
+  "name": "Круглый плетёный коврик",
+  "size": [
+   120,
+   4
+  ],
+  "fit": "width",
+  "cat": "decor_set"
+ },
+ "rug_bear_skin": {
+  "name": "Медвежья шкура",
+  "size": [
+   200,
+   30
+  ],
+  "fit": "width",
+  "cat": "decor_set"
  }
 }
