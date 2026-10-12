@@ -37,6 +37,9 @@ def process(path, out_dir, rot, height, limit=LIMIT):
     bpy.ops.import_scene.gltf(filepath=path)
     sc = bpy.context.scene
     arms = [o for o in sc.objects if o.type == "ARMATURE"]
+    shapes = {pb.custom_shape for a in arms for pb in a.pose.bones if pb.custom_shape}
+    for o in shapes:                              # форма показа костей (Icosphere от импорта glTF) — не часть модели
+        bpy.data.objects.remove(o)
     meshes = [o for o in sc.objects if o.type == "MESH"]
     roots = [o for o in sc.objects if o.parent is None]
     n_anim = len(bpy.data.actions)

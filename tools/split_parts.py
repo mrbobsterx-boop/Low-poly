@@ -5,7 +5,11 @@
   python3 tools/split_parts.py tripo/letters_a_j.glb --names letter_a,letter_b,…,letter_j --height 1.0 --rot 270
   python3 tools/split_parts.py tripo/doors_set.glb --names door_1,…,door_6 --height 2.1 --rot 270
 
-Высота: у букв — у самого высокого знака (все в одном масштабе); у дверей — у каждой своя (--each).
+--box — вещи стоят друг над другом или в два ряда: группы по пересечению коробок в 3D, порядок — ряды сверху вниз,
+в ряду слева направо. --k — вещи касаются друг друга (птицы крыльями): делить точки на N кучек по близости.
+
+Высота: у букв — у самого высокого знака (все в одном масштабе); у дверей — у каждой своя (--each);
+--height 0.08,0.6,0.36 — своя высота каждому куску по порядку имён.
 """
 import math
 import os
@@ -76,19 +80,105 @@ def groups_by_x(obj, want, min_share=0.002):
     return lab, groups
 
 
-def split(path, names, height, rot, each=False, out_dir=None):
+def groups_by_box(obj, want, min_share=0.002, pad=0.01):
+    """Кластеры островов по пересечению коробок в 3D (вещи друг над другом, ряды в два этажа).
+    Порядок — сверху вниз по Z (рядами), в ряду слева направо по X."""
+    lab = vertex_islands(obj)
+    co = np.empty(len(obj.data.vertices) * 3)
+    obj.data.vertices.foreach_get("co", co)
+    co = co.reshape(-1, 3)
+    isl = [(r, co[lab == r].min(0), co[lab == r].max(0), int((lab == r).sum())) for r in np.unique(lab)]
+    big = [i for i in isl if i[3] >= min_share * len(co)]
+    groups = [{"ids": [r], "lo": lo.copy(), "hi": hi.copy()} for r, lo, hi, n in big]
+    merged = True
+    while merged:
+        merged = False
+        for i in range(len(groups)):
+            for j in range(i + 1, len(groups)):
+                a, b = groups[i], groups[j]
+                if np.all(a["lo"] - pad <= b["hi"]) and np.all(b["lo"] - pad <= a["hi"]):
+                    a["ids"] += b["ids"]
+                    a["lo"], a["hi"] = np.minimum(a["lo"], b["lo"]), np.maximum(a["hi"], b["hi"])
+                    del groups[j]
+                    merged = True
+                    break
+            if merged:
+                break
+    while len(groups) > want:                       # лишние — слить с ближайшим по центру
+        c = [(g["lo"] + g["hi"]) / 2 for g in groups]
+        s = min(range(len(groups)), key=lambda k: float(np.prod(groups[k]["hi"] - groups[k]["lo"])))
+        j = min((k for k in range(len(groups)) if k != s), key=lambda k: float(np.linalg.norm(c[k] - c[s])))
+        groups[j]["ids"] += groups[s]["ids"]
+        groups[j]["lo"], groups[j]["hi"] = np.minimum(groups[j]["lo"], groups[s]["lo"]), np.maximum(groups[j]["hi"], groups[s]["hi"])
+        del groups[s]
+    for r, lo, hi, n in isl:
+        if n < min_share * len(co):
+            c = (lo + hi) / 2
+            j = min(range(len(groups)), key=lambda k: float(np.linalg.norm((groups[k]["lo"] + groups[k]["hi"]) / 2 - c)))
+            groups[j]["ids"].append(r)
+    zs = sorted(groups, key=lambda g: -g["hi"][2])
+    rows = []
+    for g in zs:                                    # ряды: перекрываются по Z — один ряд
+        for row in rows:
+            if g["lo"][2] < row[0]["hi"][2] and g["hi"][2] > row[0]["lo"][2]:
+                row.append(g)
+                break
+        else:
+            rows.append([g])
+    return lab, [g for row in rows for g in sorted(row, key=lambda g: g["lo"][0])]
+
+
+def groups_by_k(obj, want, min_share=0.002):
+    """Вещи касаются друг друга (птицы крыльями): точки делятся на want кучек по близости (k-средних),
+    кусок сетки целиком идёт в кучку, где больше его точек. Порядок — ряды сверху вниз, в ряду слева направо."""
+    lab = vertex_islands(obj)
+    co = np.empty(len(obj.data.vertices) * 3)
+    obj.data.vertices.foreach_get("co", co)
+    co = co.reshape(-1, 3)
+    best = None                                     # лучший из 8 случайных стартов
+    for seed in range(8):
+        c = co[np.random.default_rng(seed).choice(len(co), want, replace=False)]
+        for _ in range(30):
+            a = np.argmin(((co[:, None, :] - c[None]) ** 2).sum(-1), 1)
+            c = np.array([co[a == k].mean(0) if (a == k).any() else c[k] for k in range(want)])
+        err = float(((co - c[a]) ** 2).sum())
+        if best is None or err < best[0]:
+            best = (err, a)
+    a = best[1]
+    groups = [{"ids": [], "lo": None, "hi": None} for _ in range(want)]
+    for r in np.unique(lab):
+        m = lab == r
+        k = int(np.bincount(a[m], minlength=want).argmax())
+        groups[k]["ids"].append(r)
+    for g in groups:
+        m = np.isin(lab, g["ids"])
+        g["lo"], g["hi"] = co[m].min(0), co[m].max(0)
+    groups = [g for g in groups if g["ids"]]
+    rows = []
+    for g in sorted(groups, key=lambda g: -g["hi"][2]):
+        for row in rows:
+            if g["lo"][2] < row[0]["hi"][2] and g["hi"][2] > row[0]["lo"][2]:
+                row.append(g)
+                break
+        else:
+            rows.append([g])
+    return lab, [g for row in rows for g in sorted(row, key=lambda g: g["lo"][0])]
+
+
+def split(path, names, height, rot, each=False, out_dir=None, mode="x"):
     out_dir = out_dir or os.path.join(T.ROOT, "export")
     obj, _ = T.import_joined(path)
     T.clear_custom_normals(obj)
     if rot:
         obj.data.transform(Matrix.Rotation(math.radians(rot), 4, "Z"))
-    lab, groups = groups_by_x(obj, len(names))
+    lab, groups = {"box": groups_by_box, "k": groups_by_k}.get(mode, groups_by_x)(obj, len(names))
     if len(groups) != len(names):
         print(f"  ⚠ {os.path.basename(path)}: нашлось {len(groups)} кусков, а имён {len(names)} — проверить по превью")
     lo, hi = T.bbox(obj)
-    k_all = height / float(hi[2] - lo[2])
+    hs = list(height) if isinstance(height, (list, tuple)) else None    # своя высота у каждого куска
+    k_all = (hs[0] if hs else height) / float(hi[2] - lo[2])
     results = []
-    for g, name in zip(groups, names):
+    for i, (g, name) in enumerate(zip(groups, names)):
         bm = bmesh.new()
         bm.from_mesh(obj.data)
         bm.verts.ensure_lookup_table()
@@ -102,7 +192,7 @@ def split(path, names, height, rot, each=False, out_dir=None):
         part = bpy.data.objects.new(name, me)
         bpy.context.scene.collection.objects.link(part)
         plo, phi = T.bbox(part)
-        k = height / float(phi[2] - plo[2]) if each else k_all
+        k = (hs[i] if hs else height) / float(phi[2] - plo[2]) if (each or hs) else k_all
         me.transform(Matrix.Scale(k, 4))
         plo, phi = T.bbox(part)
         me.transform(Matrix.Translation(Vector((-(plo[0] + phi[0]) / 2, -(plo[1] + phi[1]) / 2, -plo[2]))))
@@ -123,9 +213,10 @@ def split(path, names, height, rot, each=False, out_dir=None):
 def main(argv):
     path = argv[0]
     names = argv[argv.index("--names") + 1].split(",")
-    height = float(argv[argv.index("--height") + 1]) if "--height" in argv else 1.0
+    height = [float(x) for x in argv[argv.index("--height") + 1].split(",")] if "--height" in argv else [1.0]
+    height = height[0] if len(height) == 1 else height
     rot = float(argv[argv.index("--rot") + 1]) if "--rot" in argv else 0
-    split(path, names, height, rot, each="--each" in argv)
+    split(path, names, height, rot, each="--each" in argv, mode="box" if "--box" in argv else "k" if "--k" in argv else "x")
 
 
 if __name__ == "__main__":
