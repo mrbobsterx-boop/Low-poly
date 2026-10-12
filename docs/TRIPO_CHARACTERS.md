@@ -493,3 +493,413 @@ Use the attached reference image ONLY for the art style: stylized low poly 3D, f
 ```
 Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, simplified blocky face with small dark eyes and no mouth, warm soft lighting, dark background. Mutant crawler: thin pale creature on all fours, long arms, no legs below the knees, side view. Single creature, no text.
 ```
+
+---
+
+# ФРАКЦИИ (2026-10-12)
+
+У каждой фракции **свой цвет и своя фигура** (силуэт) — так их видно издалека. В каждой: мужчина, женщина, лидер,
+ещё 3 рядовых с другой фигурой и причёской и **6 вещей сверху** (шапки, маски, очки, рюкзаки). Игра собирает из этого
+разных людей: основа + оттенок одежды + случайная вещь + рост. Двадцать одинаковых в банде не будет.
+
+**Как делать:**
+- **Люди (Ж)** — прикладываешь **основу девушки**, **(М)** — **основу парня**. Риг: Гуманоид, пресет Mixamo → «GLB с ригом».
+- **Вещи сверху** — прикладываешь любую картинку персонажа (только ради стиля). **Без рига**, обычный GLB.
+- Для каждой фракции лучше **новый чат в GPT** — внутри одного чата он начинает повторять прошлые картинки.
+- Имя файла — как написано, папка на Диске «13 Персонажи и существа».
+
+## Wellspring — община (мирные)
+
+Цвета и фигура: бирюзовый, кремовый, светлая джинса; мягкие вязаные слои, без ремней.
+
+**93. (Ж) Женщина** → `char_ws_f.glb`
+```
+Replace the clothes and hairstyle of the character with: long hair in a loose side braid, chunky cream knitted cardigan over a faded teal flannel shirt, light blue patched jeans, green rubber boots, a teal cloth armband. Soft rounded layered clothing, no belts, no straps, no buckles, no pouches. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**94. (М) Мужчина** → `char_ws_m.glb`
+```
+Replace the clothes and hairstyle of the character with: short messy brown hair, light stubble, oversized cream wool sweater, teal quilted vest, light blue work jeans, brown rubber-soled boots, a teal cloth armband. Soft rounded layered clothing, no belts, no straps, no buckles, no pouches. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**95. (Ж) Лидер — Anna Weller (строгая)** → `char_ws_leader.glb`
+```
+Replace the clothes and hairstyle of the character with: grey-streaked hair in a tight low bun, stern face, long straight dark teal wool coat buttoned to the neck, cream turtleneck, dark grey trousers, tall black rubber boots, a white cloth armband. Clean, strict and simple. Soft rounded layered clothing, no belts, no straps, no buckles, no pouches. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**96. (М) Старик-огородник** → `char_ws_m_old.glb`
+```
+Replace the clothes and hairstyle of the character with: white hair, grey stubble, cream wool cardigan with patched elbows, long teal knitted scarf, faded light blue denim overalls, green rubber boots, a teal cloth armband. Soft rounded layered clothing, no belts, no straps, no buckles, no pouches. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a thin, slightly stooped elderly man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**97. (Ж) Полная девушка в дождевике** → `char_ws_f_round.glb`
+```
+Replace the clothes and hairstyle of the character with: short curly red-brown hair, freckles, open teal raincoat, cream hoodie, light blue jeans rolled up at the ankles, white canvas sneakers, a teal cloth armband. Soft rounded layered clothing, no belts, no straps, no buckles, no pouches. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a short, round, chubby young woman. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**98. (М) Здоровяк-работяга** → `char_ws_m_big.glb`
+```
+Replace the clothes and hairstyle of the character with: shaved head, thick dark beard, teal chunky knitted sweater with sleeves pushed up, cream canvas apron, light blue denim trousers, brown rubber boots, a teal cloth armband. Soft rounded layered clothing, no belts, no straps, no buckles, no pouches. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a big, tall, heavy-set strong man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**Вещи сверху (без рига):**
+
+**99. Соломенная шляпа** → `hat_ws_straw.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Wide-brimmed woven straw sun hat with a teal cloth band. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**100. Вязаная шапка с помпоном** → `hat_ws_beanie.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Teal knitted beanie hat with a cream pompom. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**101. Платок на голову** → `hat_ws_headscarf.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Cream cotton headscarf tied at the back of the head, headscarf only. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**102. Самодельная маска на лицо** → `mask_ws_cloth.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Hand-sewn teal and cream patchwork cloth face mask covering the mouth and nose, with ear loops. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**103. Плетёная корзина-рюкзак** → `back_ws_basket.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Wicker basket worn as a backpack with two cloth shoulder straps, a few carrots and green leaves inside. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**104. Панама** → `hat_ws_bucket.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Faded teal canvas bucket hat. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+## Iron Wheel — караван (торговцы)
+
+Цвета и фигура: горчичный, оранжевый, узорная ткань; широкие пончо, шарфы, много слоёв.
+
+**105. (Ж) Женщина** → `char_iw_f.glb`
+```
+Replace the clothes and hairstyle of the character with: curly hair tied with a bright orange scarf, wide mustard-yellow woven poncho with a red and white zigzag pattern, long dusty orange skirt over loose sand-colored trousers, soft suede ankle boots, many colorful bead bracelets. Wide flowing silhouette, no leather straps, no buckles. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**106. (М) Мужчина** → `char_iw_m.glb`
+```
+Replace the clothes and hairstyle of the character with: long hair in a low ponytail, short beard, wide mustard-yellow poncho with an orange and blue stripe pattern, long faded orange scarf wrapped around the neck, loose sand-colored trousers tucked into tall suede boots, a small brass compass hanging on a cord. Wide flowing silhouette, no leather straps, no buckles. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**107. (М) Лидер — Silas «Limp» (хитрый торговец)** → `char_iw_leader.glb`
+```
+Replace the clothes and hairstyle of the character with: slicked-back grey hair, thin moustache, long burgundy patchwork coat made of many colorful fabric pieces, golden-yellow silk vest, white shirt with rolled sleeves, striped trousers, polished brown boots, a metal brace on the left knee, several shiny rings. Rich and colorful merchant look. Wide flowing silhouette, no leather straps, no buckles. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**108. (Ж) Высокая с дредами** → `char_iw_f_tall.glb`
+```
+Replace the clothes and hairstyle of the character with: shaved sides with long dreadlocks tied up, long mustard quilted vest covered with colorful sewn patches, wide orange and purple patterned sash around the waist, loose striped trousers, sandals with cloth foot wraps. Wide flowing silhouette, no leather straps, no buckles. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a tall, thin, long-limbed woman. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**109. (М) Старый торговец** → `char_iw_m_old.glb`
+```
+Replace the clothes and hairstyle of the character with: bald head, long white beard, wide orange-brown striped poncho, many small trinkets and charms hanging from it, baggy mustard trousers, old brown boots. Wide flowing silhouette, no leather straps, no buckles. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a short, round, elderly man with a big belly. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**110. (М) Молодой погонщик** → `char_iw_m_young.glb`
+```
+Replace the clothes and hairstyle of the character with: curly black hair, mustard canvas jacket covered with colorful patches, orange scarf, sand-colored cargo trousers, suede boots. Wide flowing silhouette, no leather straps, no buckles. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a lean, athletic young man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**Вещи сверху (без рига):**
+
+**111. Широкая шляпа с перьями** → `hat_iw_feather.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Wide-brimmed mustard felt hat with colorful feathers and a woven orange band. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**112. Узорный тюрбан** → `hat_iw_turban.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Orange and red patterned fabric turban, turban only. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**113. Латунные очки от пыли** → `goggles_iw_brass.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Old brass dust goggles with round amber tinted lenses and a cloth strap. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**114. Узорный шарф на лицо** → `mask_iw_scarf.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Orange patterned scarf wrapped to cover the lower face, scarf only. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**115. Огромный рюкзак торговца** → `back_iw_pack.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Huge trader's backpack piled high with goods, pots, pans and a lantern hanging on the sides. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**116. Свёрнутые ковры на спину** → `back_iw_rugs.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Bundle of three rolled colorful patterned rugs tied together, worn on the back. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+## Rust Dogs — банда (рейдеры)
+
+Цвета и фигура: ржаво-красный, чёрный, металл; голые руки, броня из хлама, асимметрия.
+
+**117. (Ж) Женщина** → `char_rd_f.glb`
+```
+Replace the clothes and hairstyle of the character with: half-shaved head with long bright red hair on one side, black war paint stripes across the eyes, sleeveless black top, one big rusty car-part metal shoulder plate on the left side only, arms bare, torn black trousers with red rag strips tied on the legs, mismatched boots. Aggressive asymmetric silhouette made of scrap. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**118. (М) Мужчина** → `char_rd_m.glb`
+```
+Replace the clothes and hairstyle of the character with: shaved head with a short red mohawk, black war paint across the face, bare muscular arms, chest armor made of a cut rusty road sign and a piece of car tire tied with wire, red bandana on one arm, ragged black shorts over torn leggings, one heavy work boot and one sneaker. Aggressive asymmetric silhouette made of scrap. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**119. (М) Лидер — Gus Brody «Brute» (самый злой)** → `char_rd_leader.glb`
+```
+Replace the clothes and hairstyle of the character with: bald head with a long braided red beard, scars and black war paint, massive bulky build, huge armor made of rusty car hood plates and a radiator grille on the chest, big spiked tire pieces on both shoulders, bare arms with red cloth wraps, heavy black trousers, steel-capped boots. Huge, heavy and threatening silhouette. Aggressive asymmetric silhouette made of scrap. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**120. (М) Тощий псих** → `char_rd_m_thin.glb`
+```
+Replace the clothes and hairstyle of the character with: bleached blond buzz cut, a black spray-painted dog skull on the chest, torn black tank top, a rusty hubcap tied on the left shoulder, rusty bicycle chain wrapped around one forearm, ripped black jeans, mismatched sneakers. Aggressive asymmetric silhouette made of scrap. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a very thin, wiry, bony man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**121. (Ж) Крепкая рейдерша** → `char_rd_f_big.glb`
+```
+Replace the clothes and hairstyle of the character with: thick red braids, black war paint, sleeveless black leather top, armor made of rusty license plates on the stomach, car tire tread arm guards, black cargo trousers with red rag ties, heavy black boots. Aggressive asymmetric silhouette made of scrap. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a big, heavy, muscular woman. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**122. (М) Старый одноглазый** → `char_rd_m_old.glb`
+```
+Replace the clothes and hairstyle of the character with: grey mohawk, burn scars, one eye covered with a rusty metal patch, red oil-stained mechanic coveralls with the sleeves torn off, a rusty circular saw blade as a shoulder plate, black boots. Aggressive asymmetric silhouette made of scrap. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a stocky, broad, older man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**Вещи сверху (без рига):**
+
+**123. Маска из ржавого металла** → `mask_rd_scrap.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Face mask made of a rusty car part with narrow eye slits and bolts, red paint smears. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**124. Красная бандана с зубами** → `mask_rd_teeth.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Red bandana covering the lower face with white dog teeth painted on it, bandana only. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**125. Шлем с шипами** → `hat_rd_spiked.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Old american football helmet painted rust red and black with metal spikes on top. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**126. Очки с разными стёклами** → `goggles_rd.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Welding goggles with one red lens and one black lens, held together with grey tape. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**127. Бензобак на спину** → `back_rd_tank.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Rusty motorcycle fuel tank worn as a backpack with two rope straps, a red spray-painted dog paw on it. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**128. Покрышка на спину** → `back_rd_tire.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Small car tire with metal spikes carried on the back like a backpack with rope straps. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+## Ferrymen — работорговцы
+
+Цвета и фигура: болотно-зелёный, дёготно-чёрный, цвет кости; прорезиненные плащи, забродники, верёвки, счётные метки.
+
+**129. (Ж) Женщина** → `char_fm_f.glb`
+```
+Replace the clothes and hairstyle of the character with: long tangled dark hair with a few small bone beads, pale tired face with charcoal tally marks painted on one cheek, long ragged dark swamp-green oilskin raincoat hanging open and torn at the hem, faded grey wool sweater, black rubber fishing waders up to the chest, a thick coil of old rope worn across the body from shoulder to hip, a rusty iron hook hanging on a cord at the hip. Grim, damp river smuggler look, loose and shabby. Not a uniform, no badges, no buttons in a row, no police or military look. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**130. (М) Мужчина** → `char_fm_m.glb`
+```
+Replace the clothes and hairstyle of the character with: long greasy black hair tied back, thin unkempt beard, charcoal tally marks tattooed along one forearm, sleeveless patched dark swamp-green oilskin coat over a dirty bone-white undershirt, black rubber fishing waders with shoulder suspenders, a heavy coil of rope at the hip, a big rusty boat hook ring on the hip, ragged fishing net draped over one shoulder. Grim, damp river smuggler look, loose and shabby. Not a uniform, no badges, no buttons in a row, no police or military look. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**131. (Ж) Лидер — Martha «Ledger» (ведёт счёт пленным)** → `char_fm_leader.glb`
+```
+Replace the clothes and hairstyle of the character with: thin grey hair in a long loose braid, gaunt cold face, small cracked round glasses, ink-stained fingers, many tiny charcoal tally marks drawn on her neck and forearms, very long heavy dark swamp-green oilskin cloak with a deep hood lying down on the shoulders, layered bone-white and grey rags underneath, black rubber waders, a long necklace of wooden counting beads like an abacus, a thick swollen ledger book tied to the hip with rope, many small numbered wooden tags hanging from the cloak. Creepy, patient and frightening. Grim, damp river smuggler look, loose and shabby. Not a uniform, no badges, no buttons in a row, no police or military look. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**132. (М) Гребец-здоровяк** → `char_fm_m_big.glb`
+```
+Replace the clothes and hairstyle of the character with: bald head, bone-white beard, charcoal tally tattoos on bare arms, long dark swamp-green rubber fishmonger apron, black rubber waders, coils of rope on both shoulders. Grim, damp river smuggler look, loose and shabby. Not a uniform, no badges, no buttons in a row, no police or military look. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a huge, broad-shouldered, heavy man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**133. (Ж) Худая дозорная** → `char_fm_f_thin.glb`
+```
+Replace the clothes and hairstyle of the character with: short cropped grey-black hair, bone-white paint around the eyes, dark swamp-green patched oilskin poncho, grey rags, black rubber waders, a small brass bell hanging on a cord. Grim, damp river smuggler look, loose and shabby. Not a uniform, no badges, no buttons in a row, no police or military look. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a very thin, tall, bony woman. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**134. (М) Молодой перевозчик** → `char_fm_m_young.glb`
+```
+Replace the clothes and hairstyle of the character with: shaggy dark hair, dark swamp-green knitted sweater full of holes, tar-black rubber trousers, rope wrapped many times around the waist, small bone tally tags hanging on cords. Grim, damp river smuggler look, loose and shabby. Not a uniform, no badges, no buttons in a row, no police or military look. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a lanky, skinny young man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**Вещи сверху (без рига):**
+
+**135. Зюйдвестка (рыбацкая шляпа)** → `hat_fm_sou.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Dark swamp-green oilskin sou'wester rain hat with a long back brim. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**136. Капюшон из сети и тряпья** → `hat_fm_hood.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Hood made of old fishing net and grey rags, hood only. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**137. Костяная маска с метками** → `mask_fm_tally.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Plain bone-white mask covering the whole face with eye holes, charcoal tally marks painted on it. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**138. Широкая чёрная шляпа** → `hat_fm_wide.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Wide-brimmed tar-black waxed rain hat, worn and dripping. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**139. Моток верёвки с крюками на спину** → `back_fm_rope.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Big coil of old rope with two rusty iron hooks, worn on the back with rope straps. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**140. Старый фонарь на пояс** → `belt_fm_lantern.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Small old ship lantern with green glass hanging on a short rope loop. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+## Garrison — остатки армии
+
+Цвета и фигура: оливковый камуфляж, хаки; бронежилеты, наколенники, форма.
+
+**141. (Ж) Женщина** → `char_gr_f.glb`
+```
+Replace the clothes and hairstyle of the character with: hair tied back tightly, olive green camouflage combat uniform with sleeves rolled, olive plate carrier vest with a flag patch, knee pads, khaki gloves, black combat boots. Neat military look, all clothing in olive and khaki camouflage. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**142. (М) Мужчина** → `char_gr_m.glb`
+```
+Replace the clothes and hairstyle of the character with: very short military buzz cut, clean-shaven, olive green camouflage combat uniform, bulky olive plate carrier vest with a radio on the shoulder, elbow and knee pads, khaki gloves, black combat boots. Neat military look, all clothing in olive and khaki camouflage. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**143. (М) Лидер — Major Ian Rowan (суровый офицер)** → `char_gr_leader.glb`
+```
+Replace the clothes and hairstyle of the character with: short grey hair, grey moustache, scar across the cheek, dark olive officer's long coat with shoulder boards and rows of medal ribbons, khaki shirt and tie, olive trousers with a red side stripe, tall polished black officer boots, black leather gloves. Strict, proud and dangerous commander. Neat military look, all clothing in olive and khaki camouflage. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**144. (М) Пулемётчик** → `char_gr_m_big.glb`
+```
+Replace the clothes and hairstyle of the character with: shaved head, thick black beard, olive camouflage uniform with sleeves cut off, heavy olive vest with many ammo pouches, khaki gloves, black combat boots. Neat military look, all clothing in olive and khaki camouflage. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a huge, heavy, broad man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**145. (Ж) Санитарка** → `char_gr_f_short.glb`
+```
+Replace the clothes and hairstyle of the character with: ponytail, olive camouflage uniform, khaki vest with a white medic armband on the arm, khaki gloves, black combat boots. Neat military look, all clothing in olive and khaki camouflage. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a short, small, compact woman. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**146. (М) Связист постарше** → `char_gr_m_old.glb`
+```
+Replace the clothes and hairstyle of the character with: grey stubble, olive field jacket with the collar up, khaki trousers, tall black boots, a flat map case hanging at the hip. Neat military look, all clothing in olive and khaki camouflage. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a lean, older man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**Вещи сверху (без рига):**
+
+**147. Каска с маскировочной сеткой** → `hat_gr_net.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Olive military combat helmet covered with a camouflage net and a few leaves. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**148. Панама военная** → `hat_gr_boonie.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Olive camouflage boonie hat. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**149. Берет** → `hat_gr_beret.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Dark olive military beret with a small metal badge. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**150. Тактические очки** → `goggles_gr.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Olive tactical goggles with dark lenses and an elastic strap. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**151. Рация на спину** → `back_gr_radio.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Olive military radio backpack with a long antenna and a handset on a coiled cord. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**152. Армейский противогаз с капюшоном** → `mask_gr_gas.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Olive military gas mask with a side filter and an olive rubber hood. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+## Site-9 — закрытая лаборатория
+
+Цвета и фигура: белый, жёлтый, серый; защитные костюмы, халаты.
+
+**153. (Ж) Женщина** → `char_s9_f.glb`
+```
+Replace the clothes and hairstyle of the character with: hair in a neat ponytail, long white lab coat with a yellow and black hazard stripe on the sleeve and a small ID badge, light grey shirt, grey trousers, white rubber boots, yellow rubber gloves. Clean, sterile and bright. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**154. (М) Мужчина** → `char_s9_m.glb`
+```
+Replace the clothes and hairstyle of the character with: short neat hair, bright yellow full-body hazmat suit with the hood down on the shoulders, black rubber gloves and black rubber boots, grey tape around the wrists and ankles, a small round filter canister on the chest. Bulky smooth protective silhouette. Clean, sterile and bright. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**155. (М) Главный — директор Site-9 (холодный учёный)** → `char_s9_leader.glb`
+```
+Replace the clothes and hairstyle of the character with: thin slicked-back white hair, thin glasses, cold face, long immaculate white lab coat over a black turtleneck, black trousers, white clean shoes, a red security key card on a cord, a yellow hazard symbol patch on the chest. Very clean, cold and frightening. Clean, sterile and bright. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Keep exactly the same body, proportions, height, face, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**156. (М) Охранник** → `char_s9_m_guard.glb`
+```
+Replace the clothes and hairstyle of the character with: short dark hair, light grey armor plates over a white jumpsuit, yellow stripes on the arms and legs, white gloves, grey boots. Clean, sterile and bright. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a tall, broad-shouldered man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**157. (Ж) Техник** → `char_s9_f_tech.glb`
+```
+Replace the clothes and hairstyle of the character with: short bob hair, grey and yellow technician coveralls with reflective stripes, white rubber gloves, grey work boots, a tool roll hanging at the hip. Clean, sterile and bright. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a stocky, short woman. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**158. (М) Подопытный** → `char_s9_m_subject.glb`
+```
+Replace the clothes and hairstyle of the character with: shaved head, plain white hospital gown, white slip-on shoes, the number 09 printed on the chest, a plastic ID bracelet. Clean, sterile and bright. Completely new outfit: do not keep any clothes, belts, straps, buckles, pouches, chains or colors from the original image. Change the body build to: a thin, pale, weak man. Keep the same face style, T-pose, camera angle, art style and dark background. Neutral even lighting so the true colors are clearly visible. No hat, no mask, no backpack, nothing in the hands. Single character, no text.
+```
+
+**Вещи сверху (без рига):**
+
+**159. Респиратор с прозрачным щитком** → `mask_s9_visor.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. White full-face respirator with a large clear visor and two yellow filters. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**160. Капюшон защитного костюма** → `hat_s9_hood.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Yellow hazmat suit hood with a large clear window, hood only. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**161. Белый шлем охраны** → `hat_s9_helmet.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. White security helmet with a dark tinted visor and a small yellow stripe. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**162. Прозрачные защитные очки** → `goggles_s9.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. Clear lab safety goggles with a white strap. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**163. Баллон с воздухом на спину** → `back_s9_air.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. White air tank backpack with a yellow coiled hose. Single object, centered, front view, no character, no head, no body, no text.
+```
+
+**164. Кейс для образцов на спину** → `back_s9_case.glb`
+```
+Use the attached reference image ONLY for the art style: stylized low poly 3D, faceted flat-shaded surfaces, neutral even lighting, dark background. White hard plastic sample case with a yellow hazard symbol, worn on the back with grey straps. Single object, centered, front view, no character, no head, no body, no text.
+```
