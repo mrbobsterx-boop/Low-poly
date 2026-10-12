@@ -2034,7 +2034,7 @@
   "cat": "creature",
   "limit": 8000
  },
- "tool_wrench_b": {
+ "wrench_alt": {
   "name": "Гаечный ключ (вариант)",
   "size": [
    8,
@@ -2043,7 +2043,7 @@
   "fit": "height",
   "cat": "item"
  },
- "mat_log_b": {
+ "log_single": {
   "name": "Бревно",
   "size": [
    100,
@@ -2052,7 +2052,7 @@
   "fit": "width",
   "cat": "item"
  },
- "mat_log_pile": {
+ "log_pile": {
   "name": "Поленница",
   "size": [
    110,
@@ -2061,7 +2061,7 @@
   "fit": "width",
   "cat": "decor_set"
  },
- "mat_plank_b": {
+ "planks_bundle": {
   "name": "Доски связкой",
   "size": [
    150,
@@ -2126,7 +2126,7 @@
   "cat": "character",
   "limit": 15000
  },
- "tool_pickaxe_b": {
+ "pickaxe_alt": {
   "name": "Кирка (вариант)",
   "size": [
    90,
@@ -2950,7 +2950,7 @@
   "cat": "creature",
   "limit": 8000
  },
- "dog_feral_thin": {
+ "dog_thin": {
   "name": "№80 Дикая собака (тощая)",
   "size": [
    90,
