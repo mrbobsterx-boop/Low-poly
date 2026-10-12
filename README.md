@@ -38,6 +38,7 @@ Tripo (автор) ──► Google Диск «Shelter Tripo» (сырые GLB, 
 | 12 Предметы, инструменты, оружие, одежда | `1bJp7OilAS8mtEoGrc0bie5bJr6qN1F6t` |
 | 13 Персонажи и существа | `1H_PLt4oX7a71q_IhjbdgYwnyu7gVmBeU` |
 | 14 Прочее | `138NID0PQPlSHmOtKwMIgvfMm9X78PWhE` |
+| 15 Анимации (Mixamo, FBX) | `1STfM0xIPkg-Knkd2dcMqteNyI7vdmL9d` — что с ними делать: `docs/ANIMATIONS.md` |
 
 **Скачать раздел:** `python3 tools/drive_fetch.py --folder <id> tripo/` (с подпапками, имена как на Диске).
 
