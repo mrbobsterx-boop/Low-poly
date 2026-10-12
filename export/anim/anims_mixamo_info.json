@@ -1,0 +1,638 @@
+{
+ "actions": {
+  "work_counter_b": {
+   "src": "Bartending (1)",
+   "frames": 408,
+   "sec": 13.57
+  },
+  "work_counter": {
+   "src": "Bartending",
+   "frames": 408,
+   "sec": 13.57
+  },
+  "carry_turn": {
+   "src": "Carrying Turn",
+   "frames": 117,
+   "sec": 3.87
+  },
+  "climb_down": {
+   "src": "Climbing Down",
+   "frames": 104,
+   "sec": 3.43
+  },
+  "climb": {
+   "src": "Climbing Ladder",
+   "frames": 24,
+   "sec": 0.77
+  },
+  "climb_wall": {
+   "src": "Climbing",
+   "frames": 116,
+   "sec": 3.83
+  },
+  "crawl": {
+   "src": "Crawling",
+   "frames": 55,
+   "sec": 1.8
+  },
+  "crouch_to_stand": {
+   "src": "Crouch To Stand",
+   "frames": 101,
+   "sec": 3.33
+  },
+  "sneak": {
+   "src": "Crouched Sneaking Left",
+   "frames": 39,
+   "sec": 1.27
+  },
+  "dig": {
+   "src": "Digging",
+   "frames": 146,
+   "sec": 4.83
+  },
+  "stab": {
+   "src": "Double Dagger Stab",
+   "frames": 93,
+   "sec": 3.07
+  },
+  "drink": {
+   "src": "Drinking",
+   "frames": 267,
+   "sec": 8.87
+  },
+  "death": {
+   "src": "Dying",
+   "frames": 133,
+   "sec": 4.4
+  },
+  "entry": {
+   "src": "Entry",
+   "frames": 220,
+   "sec": 7.3
+  },
+  "run": {
+   "src": "Fast Run",
+   "frames": 17,
+   "sec": 0.53
+  },
+  "float": {
+   "src": "Floating",
+   "frames": 109,
+   "sec": 3.6
+  },
+  "hang_climb": {
+   "src": "Freehang Climb",
+   "frames": 117,
+   "sec": 3.87
+  },
+  "gunplay": {
+   "src": "Gunplay",
+   "frames": 96,
+   "sec": 3.17
+  },
+  "hit_head": {
+   "src": "Head Hit",
+   "frames": 44,
+   "sec": 1.43
+  },
+  "idle": {
+   "src": "Idle (1)",
+   "frames": 60,
+   "sec": 1.97
+  },
+  "punch": {
+   "src": "Illegal Elbow Punch",
+   "frames": 69,
+   "sec": 2.27
+  },
+  "injured_run": {
+   "src": "Injured Run",
+   "frames": 20,
+   "sec": 0.63
+  },
+  "injured_walk_b": {
+   "src": "Injured Walk (1)",
+   "frames": 36,
+   "sec": 1.17
+  },
+  "injured_walk": {
+   "src": "Injured Walk",
+   "frames": 50,
+   "sec": 1.63
+  },
+  "injured_walk_c": {
+   "src": "Injured Walking",
+   "frames": 31,
+   "sec": 1.0
+  },
+  "jog": {
+   "src": "Jogging",
+   "frames": 78,
+   "sec": 2.57
+  },
+  "jump": {
+   "src": "Jump",
+   "frames": 66,
+   "sec": 2.17
+  },
+  "jump_down": {
+   "src": "Jumping Down",
+   "frames": 116,
+   "sec": 3.83
+  },
+  "kneel": {
+   "src": "Kneeling Down",
+   "frames": 84,
+   "sec": 2.77
+  },
+  "search_low": {
+   "src": "Looking Through Files Low",
+   "frames": 433,
+   "sec": 14.4
+  },
+  "open_door": {
+   "src": "Open Door Outwards",
+   "frames": 124,
+   "sec": 4.1
+  },
+  "open_box": {
+   "src": "Opening",
+   "frames": 330,
+   "sec": 10.97
+  },
+  "harvest": {
+   "src": "Pick Fruit",
+   "frames": 187,
+   "sec": 6.2
+  },
+  "pick_up": {
+   "src": "Picking Up Object",
+   "frames": 104,
+   "sec": 3.43
+  },
+  "punch_combo": {
+   "src": "Punching Bag",
+   "frames": 98,
+   "sec": 3.23
+  },
+  "push": {
+   "src": "Push",
+   "frames": 52,
+   "sec": 1.7
+  },
+  "hit": {
+   "src": "Rib Hit",
+   "frames": 31,
+   "sec": 1.0
+  },
+  "search": {
+   "src": "Rummaging",
+   "frames": 146,
+   "sec": 4.83
+  },
+  "bow_shoot": {
+   "src": "Shooting Arrow",
+   "frames": 151,
+   "sec": 5.0
+  },
+  "pistol_shoot": {
+   "src": "Shooting Gun",
+   "frames": 160,
+   "sec": 5.3
+  },
+  "sit_injured": {
+   "src": "Sitting Rubbing Arm",
+   "frames": 240,
+   "sec": 7.97
+  },
+  "sit_talk": {
+   "src": "Sitting Talking",
+   "frames": 1323,
+   "sec": 44.07
+  },
+  "sleep": {
+   "src": "Sleeping Idle",
+   "frames": 207,
+   "sec": 6.87
+  },
+  "death_b": {
+   "src": "Standing Death Left 01",
+   "frames": 69,
+   "sec": 2.27
+  },
+  "melee": {
+   "src": "Standing Melee Attack Downward",
+   "frames": 69,
+   "sec": 2.27
+  },
+  "hit_big": {
+   "src": "Standing React Large From Front",
+   "frames": 31,
+   "sec": 1.0
+  },
+  "stand_up": {
+   "src": "Standing Up",
+   "frames": 183,
+   "sec": 6.07
+  },
+  "strafe": {
+   "src": "Strafe",
+   "frames": 36,
+   "sec": 1.17
+  },
+  "swim": {
+   "src": "Swimming",
+   "frames": 137,
+   "sec": 4.53
+  },
+  "talk_b": {
+   "src": "Talking (1)",
+   "frames": 114,
+   "sec": 3.77
+  },
+  "talk": {
+   "src": "Talking",
+   "frames": 156,
+   "sec": 5.17
+  },
+  "taunt": {
+   "src": "Taunt",
+   "frames": 98,
+   "sec": 3.23
+  },
+  "pick_up_floor": {
+   "src": "Unarmed Grab Torch From Floor",
+   "frames": 116,
+   "sec": 3.83
+  },
+  "idle_look": {
+   "src": "Unarmed Idle Looking Ver. 2",
+   "frames": 236,
+   "sec": 7.83
+  },
+  "walk_turn": {
+   "src": "Walk Forward Arc Right",
+   "frames": 45,
+   "sec": 1.47
+  },
+  "rifle_walk": {
+   "src": "Walk With Rifle",
+   "frames": 102,
+   "sec": 3.37
+  },
+  "walk_b": {
+   "src": "Walking (1)",
+   "frames": 87,
+   "sec": 2.87
+  },
+  "walk_c": {
+   "src": "Walking (2)",
+   "frames": 87,
+   "sec": 2.87
+  },
+  "walk": {
+   "src": "Walking",
+   "frames": 32,
+   "sec": 1.03
+  },
+  "work_table": {
+   "src": "Working On Device",
+   "frames": 194,
+   "sec": 6.43
+  },
+  "zombie_neck_bite": {
+   "src": "Zombie Neck Bite",
+   "frames": 126,
+   "sec": 4.17
+  },
+  "from_cover_b": {
+   "src": "Action Adventure Pack/cover to stand (2)",
+   "frames": 35,
+   "sec": 1.13
+  },
+  "from_cover": {
+   "src": "Action Adventure Pack/cover to stand",
+   "frames": 46,
+   "sec": 1.5
+  },
+  "sneak_l": {
+   "src": "Action Adventure Pack/crouched sneaking left",
+   "frames": 39,
+   "sec": 1.27
+  },
+  "sneak_r": {
+   "src": "Action Adventure Pack/crouched sneaking right",
+   "frames": 33,
+   "sec": 1.07
+  },
+  "fall": {
+   "src": "Action Adventure Pack/falling idle",
+   "frames": 22,
+   "sec": 0.7
+  },
+  "fall_roll": {
+   "src": "Action Adventure Pack/falling to roll",
+   "frames": 45,
+   "sec": 1.47
+  },
+  "land_hard": {
+   "src": "Action Adventure Pack/hard landing",
+   "frames": 61,
+   "sec": 2.0
+  },
+  "aa_idle_2": {
+   "src": "Action Adventure Pack/idle (2)",
+   "frames": 298,
+   "sec": 9.9
+  },
+  "aa_idle_3": {
+   "src": "Action Adventure Pack/idle (3)",
+   "frames": 98,
+   "sec": 3.23
+  },
+  "aa_idle_4": {
+   "src": "Action Adventure Pack/idle (4)",
+   "frames": 78,
+   "sec": 2.57
+  },
+  "aa_idle_5": {
+   "src": "Action Adventure Pack/idle (5)",
+   "frames": 69,
+   "sec": 2.27
+  },
+  "aa_idle_1": {
+   "src": "Action Adventure Pack/idle",
+   "frames": 117,
+   "sec": 3.87
+  },
+  "jump_up": {
+   "src": "Action Adventure Pack/jumping up",
+   "frames": 8,
+   "sec": 0.23
+  },
+  "cover_sneak_l": {
+   "src": "Action Adventure Pack/left cover sneak",
+   "frames": 35,
+   "sec": 1.13
+  },
+  "turn_l": {
+   "src": "Action Adventure Pack/left turn",
+   "frames": 32,
+   "sec": 1.03
+  },
+  "cover_sneak_r": {
+   "src": "Action Adventure Pack/right cover sneak",
+   "frames": 35,
+   "sec": 1.13
+  },
+  "turn_r": {
+   "src": "Action Adventure Pack/right turn",
+   "frames": 32,
+   "sec": 1.03
+  },
+  "run_stop": {
+   "src": "Action Adventure Pack/run to stop",
+   "frames": 27,
+   "sec": 0.87
+  },
+  "aa_run": {
+   "src": "Action Adventure Pack/running",
+   "frames": 22,
+   "sec": 0.7
+  },
+  "to_cover_b": {
+   "src": "Action Adventure Pack/stand to cover (2)",
+   "frames": 39,
+   "sec": 1.27
+  },
+  "to_cover": {
+   "src": "Action Adventure Pack/stand to cover",
+   "frames": 35,
+   "sec": 1.13
+  },
+  "aa_walk": {
+   "src": "Action Adventure Pack/walking",
+   "frames": 32,
+   "sec": 1.03
+  },
+  "mutant_turn_l_b": {
+   "src": "Creature NPC Pack/left turn 45",
+   "frames": 41,
+   "sec": 1.33
+  },
+  "mutant_idle_b": {
+   "src": "Creature NPC Pack/mutant breathing idle",
+   "frames": 122,
+   "sec": 4.03
+  },
+  "mutant_death": {
+   "src": "Creature NPC Pack/mutant dying",
+   "frames": 139,
+   "sec": 4.6
+  },
+  "mutant_roar": {
+   "src": "Creature NPC Pack/mutant flexing muscles",
+   "frames": 141,
+   "sec": 4.67
+  },
+  "mutant_idle": {
+   "src": "Creature NPC Pack/mutant idle",
+   "frames": 160,
+   "sec": 5.3
+  },
+  "mutant_jump": {
+   "src": "Creature NPC Pack/mutant jumping",
+   "frames": 96,
+   "sec": 3.17
+  },
+  "mutant_turn_l": {
+   "src": "Creature NPC Pack/mutant left turn 45",
+   "frames": 41,
+   "sec": 1.33
+  },
+  "mutant_turn_r_b": {
+   "src": "Creature NPC Pack/mutant right turn 45 (2)",
+   "frames": 41,
+   "sec": 1.33
+  },
+  "mutant_turn_r": {
+   "src": "Creature NPC Pack/mutant right turn 45",
+   "frames": 60,
+   "sec": 1.97
+  },
+  "mutant_run": {
+   "src": "Creature NPC Pack/mutant run",
+   "frames": 27,
+   "sec": 0.87
+  },
+  "mutant_swipe": {
+   "src": "Creature NPC Pack/mutant swiping",
+   "frames": 81,
+   "sec": 2.67
+  },
+  "mutant_walk": {
+   "src": "Creature NPC Pack/mutant walking",
+   "frames": 44,
+   "sec": 1.43
+  },
+  "zombie_crawl_run": {
+   "src": "Scary Zombie Pack/running crawl",
+   "frames": 20,
+   "sec": 0.63
+  },
+  "zombie_attack": {
+   "src": "Scary Zombie Pack/zombie attack",
+   "frames": 76,
+   "sec": 2.5
+  },
+  "zombie_bite_b": {
+   "src": "Scary Zombie Pack/zombie biting (2)",
+   "frames": 70,
+   "sec": 2.3
+  },
+  "zombie_bite": {
+   "src": "Scary Zombie Pack/zombie biting",
+   "frames": 199,
+   "sec": 6.6
+  },
+  "zombie_crawl": {
+   "src": "Scary Zombie Pack/zombie crawl",
+   "frames": 155,
+   "sec": 5.13
+  },
+  "zombie_death": {
+   "src": "Scary Zombie Pack/zombie death",
+   "frames": 85,
+   "sec": 2.8
+  },
+  "zombie_dying": {
+   "src": "Scary Zombie Pack/zombie dying",
+   "frames": 100,
+   "sec": 3.3
+  },
+  "zombie_idle": {
+   "src": "Scary Zombie Pack/zombie idle",
+   "frames": 129,
+   "sec": 4.27
+  },
+  "zombie_run": {
+   "src": "Scary Zombie Pack/zombie run",
+   "frames": 25,
+   "sec": 0.8
+  },
+  "zombie_scream": {
+   "src": "Scary Zombie Pack/zombie scream",
+   "frames": 85,
+   "sec": 2.8
+  },
+  "zombie_walk": {
+   "src": "Scary Zombie Pack/zombie walk",
+   "frames": 122,
+   "sec": 4.03
+  }
+ },
+ "skipped": {
+  "Idle": "второй idle со скином (больше) — взят «Idle (1)»",
+  "Action Adventure Pack/X Bot": "манекен Mixamo, не анимация",
+  "Scary Zombie Pack/X Bot": "манекен Mixamo, не анимация",
+  "Scary Zombie Pack/zombie neck bite": "уже есть отдельным файлом (Zombie Neck Bite)"
+ },
+ "unknown": [],
+ "fixed": {
+  "crawl": 0.91,
+  "sneak": 1.34,
+  "injured_run": 1.56,
+  "injured_walk_b": 0.92,
+  "injured_walk": 2.09,
+  "injured_walk_c": 1.79,
+  "jog": 5.07,
+  "strafe": 2.09,
+  "swim": 2.19,
+  "walk_turn": 1.14,
+  "rifle_walk": 4.32,
+  "walk_b": 2.8,
+  "walk_c": 2.8,
+  "sneak_l": 1.34,
+  "sneak_r": 1.21,
+  "cover_sneak_l": 1.34,
+  "cover_sneak_r": 1.34,
+  "aa_run": 3.32,
+  "aa_walk": 1.85,
+  "mutant_run": 2.06,
+  "mutant_walk": 1.88,
+  "zombie_crawl_run": 1.45,
+  "zombie_crawl": 2.22,
+  "zombie_run": 2.48,
+  "zombie_walk": 1.38
+ },
+ "bones_differ": {},
+ "bones": [
+  "mixamorig:Head",
+  "mixamorig:HeadTop_End",
+  "mixamorig:Hips",
+  "mixamorig:LeftArm",
+  "mixamorig:LeftFoot",
+  "mixamorig:LeftForeArm",
+  "mixamorig:LeftHand",
+  "mixamorig:LeftHandIndex1",
+  "mixamorig:LeftHandIndex2",
+  "mixamorig:LeftHandIndex3",
+  "mixamorig:LeftHandIndex4",
+  "mixamorig:LeftHandMiddle1",
+  "mixamorig:LeftHandMiddle2",
+  "mixamorig:LeftHandMiddle3",
+  "mixamorig:LeftHandMiddle4",
+  "mixamorig:LeftHandPinky1",
+  "mixamorig:LeftHandPinky2",
+  "mixamorig:LeftHandPinky3",
+  "mixamorig:LeftHandPinky4",
+  "mixamorig:LeftHandRing1",
+  "mixamorig:LeftHandRing2",
+  "mixamorig:LeftHandRing3",
+  "mixamorig:LeftHandRing4",
+  "mixamorig:LeftHandThumb1",
+  "mixamorig:LeftHandThumb2",
+  "mixamorig:LeftHandThumb3",
+  "mixamorig:LeftHandThumb4",
+  "mixamorig:LeftLeg",
+  "mixamorig:LeftShoulder",
+  "mixamorig:LeftToeBase",
+  "mixamorig:LeftToe_End",
+  "mixamorig:LeftUpLeg",
+  "mixamorig:Neck",
+  "mixamorig:RightArm",
+  "mixamorig:RightFoot",
+  "mixamorig:RightForeArm",
+  "mixamorig:RightHand",
+  "mixamorig:RightHandIndex1",
+  "mixamorig:RightHandIndex2",
+  "mixamorig:RightHandIndex3",
+  "mixamorig:RightHandIndex4",
+  "mixamorig:RightHandMiddle1",
+  "mixamorig:RightHandMiddle2",
+  "mixamorig:RightHandMiddle3",
+  "mixamorig:RightHandMiddle4",
+  "mixamorig:RightHandPinky1",
+  "mixamorig:RightHandPinky2",
+  "mixamorig:RightHandPinky3",
+  "mixamorig:RightHandPinky4",
+  "mixamorig:RightHandRing1",
+  "mixamorig:RightHandRing2",
+  "mixamorig:RightHandRing3",
+  "mixamorig:RightHandRing4",
+  "mixamorig:RightHandThumb1",
+  "mixamorig:RightHandThumb2",
+  "mixamorig:RightHandThumb3",
+  "mixamorig:RightHandThumb4",
+  "mixamorig:RightLeg",
+  "mixamorig:RightShoulder",
+  "mixamorig:RightToeBase",
+  "mixamorig:RightToe_End",
+  "mixamorig:RightUpLeg",
+  "mixamorig:Spine",
+  "mixamorig:Spine1",
+  "mixamorig:Spine2"
+ ],
+ "scale_fbx": 0.009999999776482582,
+ "mb": 12.82
+}

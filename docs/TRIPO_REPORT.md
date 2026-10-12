@@ -935,3 +935,151 @@
 `dog_thin`, `log_single`, `log_pile`, `planks_bundle`, `pickaxe_alt`, `wrench_alt` — у себя переименовал и сырые файлы, и
 превью, при пересборке старые имена не вернутся. Исходники коробов `decor_duct_cross/straight` убраны из
 `tripo/extra.json` и `rotate.json` (готовые — `joint_duct_X/T`).
+
+---
+
+## Анимации людей Mixamo (2026-10-12) — `export/anim/anims_mixamo.glb`
+
+Папка Диска «15 Анимации»: 62 FBX + 3 набора (Action Adventure, Scary Zombie, Creature NPC). `Dewier…zip` и `luna pack.zip`
+не скачивал и не трогал. Итог — **106 действий в одном файле** (скелет + действия, без сетки, 30 кадров/с), 12,8 МБ.
+Лист: `renders/_review/anims_2026-10-12.jpg` — 12 поз на `body_m_rig`.
+
+**Как сделано:**
+1. `tools/anims_mixamo.py` — импорт FBX, сетка удаляется, действие получает имя из `docs/ANIMATIONS.md`; сантиметры FBX →
+   метры; все действия на одном скелете Mixamo → `tripo/anims_mixamo_src.glb` (в git не идёт).
+2. `tools/anims_retarget.py` — **перенос на скелет тел Tripo** (`body_m_rig`). Имена костей те же, но в позе покоя кости
+   Mixamo и Tripo смотрят в разные стороны: без переноса тело получалось с задранной рукой и раскоряченными ногами.
+   Каждая кость получает тот же поворот в мире, что у Mixamo (с поправкой на позу покоя), корень двигается в масштабе роста
+   (×0,92). Итог — `export/anim/anims_mixamo.glb` на скелете Tripo: проверено на `body_m_rig` (лист); у остальных тел Tripo
+   (`body_m_rig_b`, `body_f_rig`, `char_f_hoodie`, `body_m_rig_c`) та же поза покоя и кости — анимации Tripo между ними
+   переходили без поправок, так что и эти должны подойти без настройки перенаправления в игре.
+3. В файле крошечный невидимый треугольник на Hips — без привязанной сетки glTF пишет кости обычными узлами, не скелетом.
+
+**Кости:** во всех FBX одинаковые — 65 костей `mixamorig:…`, совпадают с телами Tripo. У `body_m_rig(_b)` есть ещё служебная
+`neutral_bone` (её анимации не двигают); у `body_m_rig_c` нет 11 концевых костей (кончики пальцев `…4`, `HeadTop_End`) —
+не мешает.
+
+**«На месте» — пришлось чинить 25** (корень уезжал вперёд, обнулено движение Hips по горизонтали, высота оставлена):
+`aa_run` (3.32 м), `aa_walk` (1.85 м), `cover_sneak_l` (1.34 м), `cover_sneak_r` (1.34 м), `crawl` (0.91 м), `injured_run` (1.56 м), `injured_walk` (2.09 м), `injured_walk_b` (0.92 м), `injured_walk_c` (1.79 м), `jog` (5.07 м), `mutant_run` (2.06 м), `mutant_walk` (1.88 м), `rifle_walk` (4.32 м), `sneak` (1.34 м), `sneak_l` (1.34 м), `sneak_r` (1.21 м), `strafe` (2.09 м), `swim` (2.19 м), `walk_b` (2.8 м), `walk_c` (2.8 м), `walk_turn` (1.14 м), `zombie_crawl` (2.22 м), `zombie_crawl_run` (1.45 м), `zombie_run` (2.48 м), `zombie_walk` (1.38 м).
+На месте с самого начала: `walk`, `run` (и остальные не из списка ходьбы/бега).
+
+**Что такое `entry`:** пригибается, шагает вперёд, будто пролезает в низкий проём (лаз, люк), и выпрямляется.
+
+**Не по таблице:**
+- Action Adventure Pack: idle-файлов **5**, а не 6 → `aa_idle_1…5` (`aa_idle_6` нет).
+- Вторые копии: `stand to cover (2)` → `to_cover_b`, `cover to stand (2)` → `from_cover_b`; в Creature NPC Pack лишние
+  `left turn 45` → `mutant_turn_l_b`, `mutant right turn 45 (2)` → `mutant_turn_r_b`.
+- Не взяты: `Idle.fbx` (со скином, взят меньший `Idle (1)`), `zombie neck bite` из набора (есть отдельный файл),
+  `X Bot.fbx` ×2 (манекен).
+- Проверить в игре: у `dig` голова наклонена очень сильно (так в Mixamo или от переноса — на листе видно).
+
+**Ещё нет (автор докачает):** `eat`, `mine`, `surrender`, `throw`, `rifle_idle`, `rifle_shoot`, `sit`.
+
+| Имя | Файл | Кадров | Сек |
+|---|---|---|---|
+| `aa_idle_1` | Action Adventure Pack/idle | 117 | 3.87 |
+| `aa_idle_2` | Action Adventure Pack/idle (2) | 298 | 9.9 |
+| `aa_idle_3` | Action Adventure Pack/idle (3) | 98 | 3.23 |
+| `aa_idle_4` | Action Adventure Pack/idle (4) | 78 | 2.57 |
+| `aa_idle_5` | Action Adventure Pack/idle (5) | 69 | 2.27 |
+| `aa_run` | Action Adventure Pack/running | 22 | 0.7 |
+| `aa_walk` | Action Adventure Pack/walking | 32 | 1.03 |
+| `bow_shoot` | Shooting Arrow | 151 | 5.0 |
+| `carry_turn` | Carrying Turn | 117 | 3.87 |
+| `climb` | Climbing Ladder | 24 | 0.77 |
+| `climb_down` | Climbing Down | 104 | 3.43 |
+| `climb_wall` | Climbing | 116 | 3.83 |
+| `cover_sneak_l` | Action Adventure Pack/left cover sneak | 35 | 1.13 |
+| `cover_sneak_r` | Action Adventure Pack/right cover sneak | 35 | 1.13 |
+| `crawl` | Crawling | 55 | 1.8 |
+| `crouch_to_stand` | Crouch To Stand | 101 | 3.33 |
+| `death` | Dying | 133 | 4.4 |
+| `death_b` | Standing Death Left 01 | 69 | 2.27 |
+| `dig` | Digging | 146 | 4.83 |
+| `drink` | Drinking | 267 | 8.87 |
+| `entry` | Entry | 220 | 7.3 |
+| `fall` | Action Adventure Pack/falling idle | 22 | 0.7 |
+| `fall_roll` | Action Adventure Pack/falling to roll | 45 | 1.47 |
+| `float` | Floating | 109 | 3.6 |
+| `from_cover` | Action Adventure Pack/cover to stand | 46 | 1.5 |
+| `from_cover_b` | Action Adventure Pack/cover to stand (2) | 35 | 1.13 |
+| `gunplay` | Gunplay | 96 | 3.17 |
+| `hang_climb` | Freehang Climb | 117 | 3.87 |
+| `harvest` | Pick Fruit | 187 | 6.2 |
+| `hit` | Rib Hit | 31 | 1.0 |
+| `hit_big` | Standing React Large From Front | 31 | 1.0 |
+| `hit_head` | Head Hit | 44 | 1.43 |
+| `idle` | Idle (1) | 60 | 1.97 |
+| `idle_look` | Unarmed Idle Looking Ver. 2 | 236 | 7.83 |
+| `injured_run` | Injured Run | 20 | 0.63 |
+| `injured_walk` | Injured Walk | 50 | 1.63 |
+| `injured_walk_b` | Injured Walk (1) | 36 | 1.17 |
+| `injured_walk_c` | Injured Walking | 31 | 1.0 |
+| `jog` | Jogging | 78 | 2.57 |
+| `jump` | Jump | 66 | 2.17 |
+| `jump_down` | Jumping Down | 116 | 3.83 |
+| `jump_up` | Action Adventure Pack/jumping up | 8 | 0.23 |
+| `kneel` | Kneeling Down | 84 | 2.77 |
+| `land_hard` | Action Adventure Pack/hard landing | 61 | 2.0 |
+| `melee` | Standing Melee Attack Downward | 69 | 2.27 |
+| `mutant_death` | Creature NPC Pack/mutant dying | 139 | 4.6 |
+| `mutant_idle` | Creature NPC Pack/mutant idle | 160 | 5.3 |
+| `mutant_idle_b` | Creature NPC Pack/mutant breathing idle | 122 | 4.03 |
+| `mutant_jump` | Creature NPC Pack/mutant jumping | 96 | 3.17 |
+| `mutant_roar` | Creature NPC Pack/mutant flexing muscles | 141 | 4.67 |
+| `mutant_run` | Creature NPC Pack/mutant run | 27 | 0.87 |
+| `mutant_swipe` | Creature NPC Pack/mutant swiping | 81 | 2.67 |
+| `mutant_turn_l` | Creature NPC Pack/mutant left turn 45 | 41 | 1.33 |
+| `mutant_turn_l_b` | Creature NPC Pack/left turn 45 | 41 | 1.33 |
+| `mutant_turn_r` | Creature NPC Pack/mutant right turn 45 | 60 | 1.97 |
+| `mutant_turn_r_b` | Creature NPC Pack/mutant right turn 45 (2) | 41 | 1.33 |
+| `mutant_walk` | Creature NPC Pack/mutant walking | 44 | 1.43 |
+| `open_box` | Opening | 330 | 10.97 |
+| `open_door` | Open Door Outwards | 124 | 4.1 |
+| `pick_up` | Picking Up Object | 104 | 3.43 |
+| `pick_up_floor` | Unarmed Grab Torch From Floor | 116 | 3.83 |
+| `pistol_shoot` | Shooting Gun | 160 | 5.3 |
+| `punch` | Illegal Elbow Punch | 69 | 2.27 |
+| `punch_combo` | Punching Bag | 98 | 3.23 |
+| `push` | Push | 52 | 1.7 |
+| `rifle_walk` | Walk With Rifle | 102 | 3.37 |
+| `run` | Fast Run | 17 | 0.53 |
+| `run_stop` | Action Adventure Pack/run to stop | 27 | 0.87 |
+| `search` | Rummaging | 146 | 4.83 |
+| `search_low` | Looking Through Files Low | 433 | 14.4 |
+| `sit_injured` | Sitting Rubbing Arm | 240 | 7.97 |
+| `sit_talk` | Sitting Talking | 1323 | 44.07 |
+| `sleep` | Sleeping Idle | 207 | 6.87 |
+| `sneak` | Crouched Sneaking Left | 39 | 1.27 |
+| `sneak_l` | Action Adventure Pack/crouched sneaking left | 39 | 1.27 |
+| `sneak_r` | Action Adventure Pack/crouched sneaking right | 33 | 1.07 |
+| `stab` | Double Dagger Stab | 93 | 3.07 |
+| `stand_up` | Standing Up | 183 | 6.07 |
+| `strafe` | Strafe | 36 | 1.17 |
+| `swim` | Swimming | 137 | 4.53 |
+| `talk` | Talking | 156 | 5.17 |
+| `talk_b` | Talking (1) | 114 | 3.77 |
+| `taunt` | Taunt | 98 | 3.23 |
+| `to_cover` | Action Adventure Pack/stand to cover | 35 | 1.13 |
+| `to_cover_b` | Action Adventure Pack/stand to cover (2) | 39 | 1.27 |
+| `turn_l` | Action Adventure Pack/left turn | 32 | 1.03 |
+| `turn_r` | Action Adventure Pack/right turn | 32 | 1.03 |
+| `walk` | Walking | 32 | 1.03 |
+| `walk_b` | Walking (1) | 87 | 2.87 |
+| `walk_c` | Walking (2) | 87 | 2.87 |
+| `walk_turn` | Walk Forward Arc Right | 45 | 1.47 |
+| `work_counter` | Bartending | 408 | 13.57 |
+| `work_counter_b` | Bartending (1) | 408 | 13.57 |
+| `work_table` | Working On Device | 194 | 6.43 |
+| `zombie_attack` | Scary Zombie Pack/zombie attack | 76 | 2.5 |
+| `zombie_bite` | Scary Zombie Pack/zombie biting | 199 | 6.6 |
+| `zombie_bite_b` | Scary Zombie Pack/zombie biting (2) | 70 | 2.3 |
+| `zombie_crawl` | Scary Zombie Pack/zombie crawl | 155 | 5.13 |
+| `zombie_crawl_run` | Scary Zombie Pack/running crawl | 20 | 0.63 |
+| `zombie_death` | Scary Zombie Pack/zombie death | 85 | 2.8 |
+| `zombie_dying` | Scary Zombie Pack/zombie dying | 100 | 3.3 |
+| `zombie_idle` | Scary Zombie Pack/zombie idle | 129 | 4.27 |
+| `zombie_neck_bite` | Zombie Neck Bite | 126 | 4.17 |
+| `zombie_run` | Scary Zombie Pack/zombie run | 25 | 0.8 |
+| `zombie_scream` | Scary Zombie Pack/zombie scream | 85 | 2.8 |
+| `zombie_walk` | Scary Zombie Pack/zombie walk | 122 | 4.03 |
