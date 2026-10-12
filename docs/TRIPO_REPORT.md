@@ -643,3 +643,295 @@
 | planks_bundle | Доски связкой | 3D-модель деревянных досок | 150×37×11 | 7839 | 270° |
 | pickaxe_alt | Кирка (вариант) | 3D-модель кирки | 90×66×18 | 7840 | 0° |
 | wrench_alt | Гаечный ключ (вариант) | 3D-модель гаечного ключа | 9×8×30 | 2940 | 270° |
+
+---
+
+## Партия 2026-10-12 — доделано (уголки, тела со скелетом, капюшон)
+
+### 1. Уголки и стыки — сечение как у прямых кусков (`tools/fit_joint.py`)
+
+Скрипт меряет толщину пучка/короба по срезам **без хомутов и фланцев** (нижняя четверть толщин по срезам — хомут и
+фланец толще) у прямого куска и у каждой ветки уголка и масштабирует уголок **по каждой оси отдельно**. Центр стыка — в
+начале координат, ветки по X и Y (в игре), задняя сторона — у стены (z = 0, как у прямых кусков, модель — к зрителю).
+Лист проверки: `renders/_review/tripo_2026-10-12_b3_joints.jpg` — каждый уголок с прямыми кусками, состыкованными по осям.
+
+| Уголок | К чему подогнан | Ветки | Итог, см (Ш×Г×В в Blender) |
+|---|---|---|---|
+| `joint_pipes_T` | гориз. ветка = `decor_pipes_colored_h` (пучок 32,3 × глубина 16,9), верт. = ширине `_v` (42,6) | влево, вправо, вниз | 142 × 18 × 111 |
+| `joint_pipes_X` | то же | влево, вправо, вверх, вниз | 152 × 27 × 120 |
+| `pipes_end_caps` | `decor_pipes_colored_h` (длина — в масштабе высоты) | влево и вправо, закрыты | 128 × 25 × 48 |
+| `joint_duct_X` (был `decor_duct_cross`) | `decor_metal_duct`: высота 41,1, глубина 45,9; верт. ветка — тот же короб, повёрнутый | 4 стороны | 123 × 47 × 121 |
+| `joint_duct_T` (был `decor_duct_straight`) | то же | вверх, вниз, влево | 79 × 47 × 94 |
+
+- **Цвета труб** — как надо: в горизонтали сверху вниз жёлтая, синяя, красная; в вертикали слева направо жёлтая, синяя,
+  красная (`joint_pipes_T`, `joint_pipes_X`, `pipes_end_caps`). Не перекрашивал.
+- ⚠ **Сами прямые трубы разной глубины:** `decor_pipes_colored_h` — пучок 16,9 см (3 ряда × 2 трубы в глубину),
+  `decor_pipes_colored_v` — 34,1 см. У уголка одна глубина — подогнана под горизонтальный (16,9). Вертикальный прямой
+  кусок у стыка толще уголка в глубину (на листе в 3/4 видно). Чтобы совпадало и тут — нужен `_v` той же глубины.
+- ⚠ **Число труб в пучке у уголков другое** (у T и креста в ветке 2 × 2 трубы, у прямого 3 × 2) — Tripo нарисовал так;
+  совпадает толщина пучка, отдельные трубы на стыке не продолжаются одна в одну.
+- `decor_duct_straight` оказался **не прямым коробом, а T-стыком** (прямой проход + ветка вбок), лежал на полу и был
+  повёрнут на 9,6° — поставлен в плоскость стены, выровнен по осям и назван `joint_duct_T`. Второго варианта прямого
+  куска нет. Крест (`decor_duct_cross`) тоже лежал — поставлен, выровнен на 3,6°.
+- ⚠ У `joint_duct_T` сверху (теперь — к зрителю) открытая дыра в середине: так сгенерировал Tripo. Фланцы у уголков —
+  свои (в масштабе модели), с фланцами прямого короба по размеру не сверял.
+- Наборы `joint_pipes_set_1/2` (L-уголки), `joint_duct_set(_b)`, `joint_misc_set(_b)` ещё не пришли.
+
+### 2. Тела со скелетом — сетка отдельно, анимации отдельно (`tools/char_process.py`)
+
+- `export/<имя>_idle.glb` — **сетка + скелет в позе покоя (T-поза), без анимаций**: 0,65–0,74 МБ.
+- `export/anim/<имя>_anims.glb` — **скелет + все анимации, без сетки** (внутри крошечный невидимый треугольник на кости
+  Hips: без привязанной сетки glTF пишет кости обычными узлами, а не скелетом — игра не узнала бы скелет).
+- `export/anim/<имя>_info.json` — названия анимаций и костей.
+- Исправлено попутно: убрана форма показа костей (Icosphere) — из-за неё люди были вдвое меньше.
+
+**Кости — одинаковые (Mixamo):** 65 костей `mixamorig:…` у всех; у мужских тел (`body_m_rig`, `body_m_rig_b`) ещё служебная
+`neutral_bone`; у `body_m_rig_c` нет 11 концевых костей (кончики пальцев `…4`, `HeadTop_End` — их анимации не двигают).
+**Проверено:** анимация из файла женского тела надета на мужское (и наоборот, и на `body_m_rig_c`) — двигается правильно.
+→ **Анимации подходят ко всем — это общий набор для всех людей.** Названия — запросы автора в Tripo (обрезаны Tripo до 64
+знаков); по смыслу одинаковые повторяются в разных файлах.
+
+| Файл | Анимаций | `_idle.glb` | `_anims.glb` |
+|---|---|---|---|
+| `body_m_rig` | 93 | 0.65 МБ | 9.89 МБ |
+| `body_f_rig` | 76 | 0.74 МБ | 7.76 МБ |
+| `body_m_rig_b` | 31 | 0.65 МБ | 3.85 МБ |
+| `char_f_hoodie` | 3 | 0.71 МБ | 0.28 МБ |
+| `body_m_rig_c` | 0 | 0.65 МБ | — |
+
+В мужском и женском наборе общих названий: 74; всего разных: 96.
+
+<details><summary><code>body_m_rig</code> — 93 анимаций</summary>
+
+- Character bends down, picks up a small item from the floor with
+- Character bends over an open box on the floor and searches thro
+- Character chops a tree with an axe held in both hands, side swi
+- Character climbs up a vertical ladder, hands and feet moving al
+- Character crawls forward on the floor on hands and knees, slow 
+- Character crouches and holds out food in one open hand toward a
+- Character crouches in front of a door and picks a lock with two
+- Character holding a gun takes out the empty magazine, inserts a
+- Character holds a pistol in both hands at arm's length, aims fo
+- Character holds a rifle at the shoulder, aims forward and fires
+- Character kneels at a garden bed, makes a small hole in the soi
+- Character kneels next to a body lying on the ground and searche
+- Character kneels on the ground and butchers an animal carcass w
+- Character lies on the back sleeping, chest slowly rising and fa
+- Character makes a fast one-handed swing with a short melee weap
+- Character quickly dodges to the side with a short step and lean
+- Character reaches out, grabs a door handle, turns it and pulls 
+- Character runs at a steady medium pace on a treadmill, arms swi
+- Character sits and drives a car, both hands on the steering whe
+- Character sits and eats from a bowl held in one hand, bringing 
+- Character sits at a table and sews by hand, pulling a needle an
+- Character sits down on the edge of a bed, then lies down on the
+- Character sits holding an open book or note with both hands, re
+- Character sits on a bicycle and pedals at a steady pace, hands 
+- Character sits on a chair, back slightly leaning, hands resting
+- Character sits on the ground and wraps a bandage around the own
+- Character sits on the ground and wraps a bandage around the.001
+- Character sits on the ground with legs crossed, leaning forward
+- Character sneaks forward in a low crouch, slow careful steps, a
+- Character standing raises a bottle to the mouth, tilts the head
+- Character standing turns around 180 degrees on the spot with sm
+- Character stands and bargains: holds out an item in one open ha
+- Character stands and eats, holding a piece of food in one hand,
+- Character stands at a control panel with a radio, presses butto
+- Character stands at a stove and stirs food in a pot with a spoo
+- Character stands at a table and repairs a device with a wrench 
+- Character stands at a workbench and works with both hands: hamm
+- Character stands bent forward with hands on the knees, breathin
+- Character stands facing forward and talks, natural hand gesture
+- Character stands holding a gun raised and aimed forward, steady
+- Character stands holding the left forearm out in front of the c
+- Character stands hunched, coughing hard, one hand over the mout
+- Character stands in front of a tall cabinet, opens it and searc
+- Character strikes the ground in front with a pickaxe held in bo
+- Character swings a heavy two-handed weapon from over the should
+- Character takes off a backpack from the shoulders, puts it on t
+- Character walks forward carrying a heavy box in front of the ch
+- Character walks forward limping on the right leg, putting littl
+- Character walks slowly holding a flashlight in one hand at ches
+- agree
+- box_01
+- box_02
+- box_03
+- chop
+- climb
+- defeat_03
+- dig
+- dive
+- fall
+- fire
+- flee_01
+- flee_02
+- front_kick_01
+- front_kick_02
+- frustrated_01
+- frustrated_02
+- hit_to_body_01
+- hit_to_body_02
+- hit_to_head
+- hit_to_side
+- hit_to_stomach
+- jump
+- jump_down
+- laugh_01
+- lift_heavy
+- look_around
+- press-up
+- run
+- run_upstairs
+- scratch
+- shoot
+- shovel
+- sit
+- slash
+- swim
+- wait
+- walk
+- выстрел с пистолета
+- ложиться спать
+- примает таблетки
+- присел на одно колено, и смотрит в 
+- стоит,  достает из кормана еду и сь
+- что то мастерит за столом
+
+</details>
+
+<details><summary><code>body_f_rig</code> — 76 анимаций</summary>
+
+- Character bends down, picks up a small item from the floor with
+- Character bends over an open box on the floor and searches thro
+- Character chops a tree with an axe held in both hands, side swi
+- Character climbs up a vertical ladder, hands and feet moving al
+- Character crawls forward on the floor on hands and knees, slow 
+- Character crouches and holds out food in one open hand toward a
+- Character crouches in front of a door and picks a lock with two
+- Character holding a gun takes out the empty magazine, inserts a
+- Character holds a pistol in both hands at arm's length, aims fo
+- Character holds a rifle at the shoulder, aims forward and fires
+- Character kneels at a garden bed, makes a small hole in the soi
+- Character kneels next to a body lying on the ground and searche
+- Character kneels on the ground and butchers an animal carcass w
+- Character lies on the back sleeping, chest slowly rising and fa
+- Character makes a fast one-handed swing with a short melee weap
+- Character quickly dodges to the side with a short step and lean
+- Character reaches out, grabs a door handle, turns it and pulls 
+- Character runs at a steady medium pace on a treadmill, arms swi
+- Character sits and drives a car, both hands on the steering whe
+- Character sits and eats from a bowl held in one hand, bringing 
+- Character sits at a table and sews by hand, pulling a needle an
+- Character sits down on the edge of a bed, then lies down on the
+- Character sits holding an open book or note with both hands, re
+- Character sits on a bicycle and pedals at a steady pace, hands 
+- Character sits on a chair, back slightly leaning, hands resting
+- Character sits on the ground and wraps a bandage around the own
+- Character sits on the ground and wraps a bandage around the.001
+- Character sits on the ground with legs crossed, leaning forward
+- Character sneaks forward in a low crouch, slow careful steps, a
+- Character standing raises a bottle to the mouth, tilts the head
+- Character standing turns around 180 degrees on the spot with sm
+- Character stands and bargains: holds out an item in one open ha
+- Character stands and eats, holding a piece of food in one hand,
+- Character stands at a control panel with a radio, presses butto
+- Character stands at a stove and stirs food in a pot with a spoo
+- Character stands at a table and repairs a device with a wrench 
+- Character stands at a workbench and works with both hands: hamm
+- Character stands bent forward with hands on the knees, breathin
+- Character stands facing forward and talks, natural hand gesture
+- Character stands holding a gun raised and aimed forward, steady
+- Character stands holding the left forearm out in front of the c
+- Character stands hunched, coughing hard, one hand over the mout
+- Character stands in front of a tall cabinet, opens it and searc
+- Character strikes the ground in front with a pickaxe held in bo
+- Character swings a heavy two-handed weapon from over the should
+- Character takes off a backpack from the shoulders, puts it on t
+- Character walks forward carrying a heavy box in front of the ch
+- Character walks forward limping on the right leg, putting littl
+- Character walks slowly holding a flashlight in one hand at ches
+- box_01
+- box_02
+- box_03
+- chop
+- climb
+- defeat_03
+- flee_01
+- flee_02
+- front_kick_01
+- front_kick_02
+- frustrated_01
+- frustrated_02
+- hit_to_side
+- jump
+- laugh_01
+- lift_heavy
+- press-up
+- scratch
+- swim
+- turn
+- выстрел с пистолета
+- ложиться спать
+- примает таблетки
+- присел на одно колено, и смотрит в 
+- снимает с со спены рюкзак и смотри
+- стоит,  достает из кормана еду и сь
+- что то мастерит за столом
+
+</details>
+
+<details><summary><code>body_m_rig_b</code> — 31 анимаций</summary>
+
+- agree
+- box_01
+- box_02
+- box_03
+- chop
+- climb
+- defeat_03
+- dig
+- dive
+- fall
+- fire
+- front_kick_01
+- front_kick_02
+- hit_to_body_01
+- hit_to_body_02
+- hit_to_head
+- hit_to_side
+- hit_to_stomach
+- jump_down
+- lift_heavy
+- look_around
+- press-up
+- run
+- run_upstairs
+- shoot
+- shovel
+- sit
+- slash
+- wait
+- walk
+- wave_goodbye_01
+
+</details>
+
+<details><summary><code>char_f_hoodie</code> — 3 анимаций</summary>
+
+- climb
+- front_kick_01
+- front_kick_02
+
+</details>
+
+### 3. `hat_fm_hood` — не вышло
+
+Сетка из тонких нитей: упрощение останавливается на ~4 000 треугольников. Пробовал: больше проходов, склейку швов,
+растворение плоских мест, разрезку неправильных рёбер — лучший результат 3 748 без дыр, до 3 000 не опускается без
+разрушения сетки. **Оставлен как был: 4 083 треугольника.**
+
+### 4. Переименования автора
+
+`dog_thin`, `log_single`, `log_pile`, `planks_bundle`, `pickaxe_alt`, `wrench_alt` — у себя переименовал и сырые файлы, и
+превью, при пересборке старые имена не вернутся. Исходники коробов `decor_duct_cross/straight` убраны из
+`tripo/extra.json` и `rotate.json` (готовые — `joint_duct_X/T`).

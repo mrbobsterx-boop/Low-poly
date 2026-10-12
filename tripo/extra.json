@@ -2246,15 +2246,6 @@
   "cat": "character",
   "limit": 15000
  },
- "decor_duct_cross": {
-  "name": "Короб вентиляции — крестовина",
-  "size": [
-   150,
-   60
-  ],
-  "fit": "width",
-  "cat": "decor_set"
- },
  "char_f_doctor": {
   "name": "№5 Врач",
   "size": [
@@ -2352,15 +2343,6 @@
   ],
   "fit": "height",
   "cat": "clothing"
- },
- "decor_duct_straight": {
-  "name": "Короб вентиляции — прямой",
-  "size": [
-   150,
-   60
-  ],
-  "fit": "width",
-  "cat": "decor_set"
  },
  "char_s9_leader": {
   "name": "№155 Site-9 — директор",

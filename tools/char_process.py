@@ -1,11 +1,13 @@
 """Персонажи из Tripo со скелетом (Mixamo) и анимациями → export/<имя>_idle.glb (docs/TRIPO_CHARACTERS.md).
-Скелет и все анимации сохраняются: меняется только корневой объект (поворот, масштаб, положение), сетка облегчается
+Скелет и все анимации сохраняются: <имя>_idle.glb — сетка + скелет без анимаций, anim/<имя>_anims.glb — скелет +
+анимации без сетки (общий набор, если кости одинаковые). Меняется только корневой объект (поворот, масштаб, положение), сетка облегчается
 (≤ 15 000 треугольников на модель), текстуры 1024, без блеска.
 
   python3 tools/char_process.py tripo/char_m_police.glb [ещё…] [--rot 270] [--height 1.8] [--out export]
 
 Поворот — как у остальных моделей Tripo (перед вбок → обычно 270°; поправка — tripo/rotate.json по имени файла).
 """
+import json
 import math
 import os
 import sys
@@ -42,7 +44,6 @@ def process(path, out_dir, rot, height, limit=LIMIT):
         bpy.data.objects.remove(o)
     meshes = [o for o in sc.objects if o.type == "MESH"]
     roots = [o for o in sc.objects if o.parent is None]
-    n_anim = len(bpy.data.actions)
     for a in arms:
         a.data.pose_position = "REST"             # мерить в позе покоя (T-поза), не в кадре анимации
     bpy.context.view_layer.update()
@@ -67,20 +68,50 @@ def process(path, out_dir, rot, height, limit=LIMIT):
         r.matrix_world = shift @ r.matrix_world
     bpy.context.view_layer.update()
     lo, hi = world_bbox(meshes)
-    for a in arms:
-        a.data.pose_position = "POSE"
     os.makedirs(out_dir, exist_ok=True)
+    # 1) <имя>_idle.glb — сетка + скелет в позе покоя, без анимаций (лёгкий)
     out = os.path.join(out_dir, name + "_idle.glb")
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.export_scene.gltf(filepath=out, export_format="GLB", use_selection=True, export_yup=True,
-                              export_animations=True, export_skins=True, export_image_format="JPEG",
+                              export_animations=False, export_skins=True, export_image_format="JPEG",
                               export_jpeg_quality=85)
     mb = os.path.getsize(out) / 1e6
+    # 2) anim/<имя>_anims.glb — только скелет + все анимации (без сетки)
+    actions = sorted(a.name for a in bpy.data.actions)
+    bones = [b.name for b in arms[0].data.bones] if arms else []
+    mb_a = 0.0
+    if arms and actions:
+        for a in arms:
+            a.data.pose_position = "POSE"
+        out_a = os.path.join(out_dir, "anim", name + "_anims.glb")
+        os.makedirs(os.path.dirname(out_a), exist_ok=True)
+        for m in meshes:                                        # сетку — прочь (в _idle она уже есть)
+            bpy.data.objects.remove(m)
+        # крошечный треугольник на кости Hips: без привязанной сетки glTF пишет кости обычными узлами, а не скелетом
+        arm = arms[0]
+        hips = next((b.name for b in arm.data.bones if b.name.endswith("Hips")), arm.data.bones[0].name)
+        hp = arm.matrix_world @ arm.data.bones[hips].head_local
+        me = bpy.data.meshes.new("skin_anchor")
+        me.from_pydata([hp, hp + Vector((0.001, 0, 0)), hp + Vector((0, 0, 0.001))], [], [(0, 1, 2)])
+        dummy = bpy.data.objects.new("skin_anchor", me)
+        sc.collection.objects.link(dummy)
+        dummy.vertex_groups.new(name=hips).add([0, 1, 2], 1.0, "REPLACE")
+        dummy.modifiers.new("Armature", "ARMATURE").object = arm
+        dummy.parent = arm
+        dummy.matrix_parent_inverse = arm.matrix_world.inverted()
+        bpy.ops.object.select_all(action="DESELECT")
+        for a in arms:
+            a.select_set(True)
+        dummy.select_set(True)
+        bpy.ops.export_scene.gltf(filepath=out_a, export_format="GLB", use_selection=True, export_yup=True,
+                                  export_animations=True, export_skins=True)
+        mb_a = os.path.getsize(out_a) / 1e6
     dims = hi - lo
-    print(f"[{name}_idle] скелет: {'да' if arms else 'НЕТ'}, анимаций {n_anim}, треугольников {t0} → {t1}, "
-          f"{dims.x * 100:.0f}×{dims.y * 100:.0f}×{dims.z * 100:.0f} см, поворот {rot}°, {mb:.2f} МБ", flush=True)
-    return {"src": name + ".glb", "rig": bool(arms), "animations": n_anim, "tris_before": t0, "tris_after": t1,
-            "size_cm": [dims.x * 100, dims.y * 100, dims.z * 100], "rotate": rot, "mb": mb}
+    print(f"[{name}_idle] скелет: {'да' if arms else 'НЕТ'} ({len(bones)} костей), треугольников {t0} → {t1}, "
+          f"{dims.x * 100:.0f}×{dims.y * 100:.0f}×{dims.z * 100:.0f} см, поворот {rot}°, {mb:.2f} МБ; "
+          f"анимаций {len(actions)}" + (f" → anim/{name}_anims.glb {mb_a:.2f} МБ" if mb_a else ""), flush=True)
+    return {"src": name + ".glb", "rig": bool(arms), "animations": actions, "bones": bones, "tris_before": t0, "tris_after": t1,
+            "size_cm": [dims.x * 100, dims.y * 100, dims.z * 100], "rotate": rot, "mb": mb, "mb_anims": mb_a}
 
 
 def main(argv):
@@ -95,13 +126,19 @@ def main(argv):
             height, i = float(argv[i + 1]), i + 2
         elif a == "--out":
             out_dir, i = argv[i + 1], i + 2
+        elif a.startswith("--"):
+            i += 1
         else:
             files.append(a)
             i += 1
     for f in files:
         stem = os.path.basename(f)[:-4]
         rot = rot_force if rot_force is not None else rot_cfg.get(stem, 270)
-        process(f, out_dir, rot, height)
+        r = process(f, out_dir, rot, height)
+        if "--json" in argv:                                        # названия анимаций и кости — для отчёта
+            os.makedirs(os.path.join(out_dir, "anim"), exist_ok=True)
+            json.dump(r, open(os.path.join(out_dir, "anim", os.path.basename(f)[:-4] + "_info.json"), "w"),
+                      ensure_ascii=False, indent=1)
 
 
 if __name__ == "__main__":
