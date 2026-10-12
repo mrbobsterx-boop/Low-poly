@@ -5596,5 +5596,4828 @@
    "ширина 117 см, в ОС 100 см (> 15 %) — записано в DEVIATIONS.md"
   ],
   "date": "2026-10-10"
+ },
+ "apartments_b_idle": {
+  "src": "apartments_b.glb",
+  "tris_before": 39753,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1400.0,
+   859.3628406524658,
+   800.7447242736816
+  ],
+  "os_cm": [
+   1400,
+   600
+  ],
+  "scale": 14.000000834465077,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b027e819-ea8c-4424-b9e7-131680573316_0: 2048→1024",
+  "mb": 1.031336,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 801 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "apartments_c_idle": {
+  "src": "apartments_c.glb",
+  "tris_before": 42570,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1200.0,
+   645.7446336746216,
+   1340.75288772583
+  ],
+  "os_cm": [
+   1200,
+   600
+  ],
+  "scale": 13.407528641571195,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_a538f4b9-e372-41f7-84d0-373e2a18db22_0: 2048→1024",
+  "mb": 1.101428,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1341 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "apartments_idle": {
+  "src": "apartments.glb",
+  "tris_before": 42427,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1200.0,
+   621.4993238449097,
+   1476.9230842590332
+  ],
+  "os_cm": [
+   1200,
+   600
+  ],
+  "scale": 14.76923076923077,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_1144a3e7-fc80-4781-9c59-1bc141052936_0: 2048→1024",
+  "mb": 1.069496,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1477 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "auto_repair_idle": {
+  "src": "auto_repair.glb",
+  "tris_before": 38566,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0,
+   901.55029296875,
+   578.55224609375
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 10.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fbe1f235-fcbe-46c2-be5d-d65a882b6b10_0: 2048→1024",
+  "mb": 0.80768,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "awning_striped_b_idle": {
+  "src": "awning_striped_b.glb",
+  "tris_before": 44368,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   279.22829389572144,
+   152.51551270484924,
+   250.0
+  ],
+  "os_cm": [
+   100,
+   250
+  ],
+  "scale": 2.792283045879065,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_3fe7feca-2db4-46f8-b248-5f752aacf7f7_0: 2048→1024",
+  "mb": 0.489576,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "awning_striped_idle": {
+  "src": "awning_striped.glb",
+  "tris_before": 42576,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   280.145001411438,
+   131.14700317382812,
+   250.0
+  ],
+  "os_cm": [
+   100,
+   250
+  ],
+  "scale": 2.8014499692223516,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_db98212a-177c-47b8-bf87-c50bfdce3fc3_0: 2048→1024",
+  "mb": 0.502896,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "bicycle_idle": {
+  "src": "bicycle.glb",
+  "tris_before": 48518,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   179.99999523162842,
+   60.270994901657104,
+   107.43529796600342
+  ],
+  "os_cm": [
+   180,
+   150
+  ],
+  "scale": 1.8,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_470be8fb-b091-4962-9f28-c10880d9c40f_0: 2048→1024",
+  "mb": 0.533324,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (180 см); высота 107 см, в ОС 150 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "block_bedrock_idle": {
+  "src": "block_bedrock.glb",
+  "tris_before": 49636,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0362309353930745,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_bfad3409-8659-4730-a6ab-b5fae1e6502f_0: 2048→1024",
+  "mb": 0.31838,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_brick_idle": {
+  "src": "block_brick.glb",
+  "tris_before": 39451,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   99.99999403953552,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0014691478942215,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_9d525be3-ecfc-402f-a804-63a42e66dab6_0: 2048→1024",
+  "mb": 0.738248,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_clay_idle": {
+  "src": "block_clay.glb",
+  "tris_before": 48676,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   99.99999403953552,
+   99.99999403953552
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0112650564813082,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_856d2c45-1486-4321-a02d-55d92f5eed12_0: 2048→1024",
+  "mb": 0.2739,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_concrete_cracked_idle": {
+  "src": "block_concrete_cracked.glb",
+  "tris_before": 47163,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0105640386413213,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_46688276-d7ff-4e3f-805a-b97b238c5919_0: 2048→1024",
+  "mb": 0.53292,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_concrete_idle": {
+  "src": "block_concrete.glb",
+  "tris_before": 47940,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0022993439205345,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_552c6c20-7ea5-45ca-8e6d-7a89224338c5_0: 2048→1024",
+  "mb": 0.400536,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_dirt_cracked_idle": {
+  "src": "block_dirt_cracked.glb",
+  "tris_before": 48891,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   99.99999701976776,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.1937081886696588,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_50627dd4-80bf-4bcf-bb4d-a7d2bd77c186_0: 2048→1024",
+  "mb": 0.4697,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_dirt_idle": {
+  "src": "block_dirt.glb",
+  "tris_before": 46923,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   99.99999403953552,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0362660382299032,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_71208699-0653-4fe0-9b33-5ccc0b8f84f5_0: 2048→1024",
+  "mb": 0.605436,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_grass_idle": {
+  "src": "block_grass.glb",
+  "tris_before": 44881,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0662150953829141,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_66430862-690a-4b5d-a704-eab0a2064e73_0: 2048→1024",
+  "mb": 0.430272,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_gravel_idle": {
+  "src": "block_gravel.glb",
+  "tris_before": 47145,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   99.99999403953552,
+   100.0,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0053358830423786,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_8ed0c5ed-23d8-476c-8958-eafb1b8c0837_0: 2048→1024",
+  "mb": 0.392108,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_metal_idle": {
+  "src": "block_metal.glb",
+  "tris_before": 48056,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.043236074270557,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_83afa9ff-243e-485a-8ae8-8a20d8747440_0: 2048→1024",
+  "mb": 0.422964,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_sand_idle": {
+  "src": "block_sand.glb",
+  "tris_before": 48129,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0162916745446524,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_7f46e854-570d-46ad-aa45-2c3a3b4c9545_0: 2048→1024",
+  "mb": 0.30386,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_soil_layers_b_idle": {
+  "src": "block_soil_layers_b.glb",
+  "tris_before": 48602,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0006722894511673,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_70c4fe9e-8e2f-4a28-96fb-6351e2403edd_0: 2048→1024",
+  "mb": 0.37644,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_soil_layers_idle": {
+  "src": "block_soil_layers.glb",
+  "tris_before": 48602,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0006722894511673,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_c4c344da-3520-4eb1-8ecc-c56d5283c324_0: 2048→1024",
+  "mb": 0.37644,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "block_stone_idle": {
+  "src": "block_stone.glb",
+  "tris_before": 47772,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0553145336225596,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_e88f5478-4b7c-4d73-8ead-1877c9324cc9_0: 2048→1024",
+  "mb": 0.273464,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "building_ruin_1_idle": {
+  "src": "building_ruin_1.glb",
+  "tris_before": 38296,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1200.0,
+   732.6415538787842,
+   687.890625
+  ],
+  "os_cm": [
+   1200,
+   600
+  ],
+  "scale": 12.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b5c84939-398f-4ccc-9c51-553f429607ab_0: 2048→1024",
+  "mb": 0.951452,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "building_ruin_2_idle": {
+  "src": "building_ruin_2.glb",
+  "tris_before": 42411,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1400.0,
+   777.67333984375,
+   769.29931640625
+  ],
+  "os_cm": [
+   1400,
+   600
+  ],
+  "scale": 14.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_90d1841b-be3d-4549-89b5-da7e92924844_0: 2048→1024",
+  "mb": 0.98308,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 769 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "bunting_b_idle": {
+  "src": "bunting_b.glb",
+  "tris_before": 47762,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   101.13580226898193,
+   12.939818948507309,
+   60.00000238418579
+  ],
+  "os_cm": [
+   100,
+   60
+  ],
+  "scale": 1.011358024691358,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_85181d7b-facd-4cbd-9438-0f551fe6d91f_0: 2048→1024",
+  "mb": 0.370208,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "bunting_idle": {
+  "src": "bunting.glb",
+  "tris_before": 47280,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   91.79568290710449,
+   8.329205960035324,
+   59.99999642372131
+  ],
+  "os_cm": [
+   100,
+   60
+  ],
+  "scale": 0.917956858716967,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_5b1ab531-bd04-4e6a-b3a0-5c1224b42848_0: 2048→1024",
+  "mb": 0.400184,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "bus_school_idle": {
+  "src": "bus_school.glb",
+  "tris_before": 43466,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   1100.0,
+   371.7132568359375,
+   379.534912109375
+  ],
+  "os_cm": [
+   1100,
+   150
+  ],
+  "scale": 11.0,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_a21d9e33-aab7-4e9f-9425-4f1fa6423dc3_0: 2048→1024",
+  "mb": 0.554268,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 380 см, в ОС 150 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "car_hatchback_idle": {
+  "src": "car_hatchback.glb",
+  "tris_before": 46054,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   400.0,
+   212.3291015625,
+   166.41845703125
+  ],
+  "os_cm": [
+   400,
+   150
+  ],
+  "scale": 4.0,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_9c9d0da2-43bc-4248-8d20-e65306b2e81a_0: 2048→1024",
+  "mb": 0.4741,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "car_old_blue_idle": {
+  "src": "car_old_blue.glb",
+  "tris_before": 46367,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   469.9999809265137,
+   210.73119640350342,
+   152.72704362869263
+  ],
+  "os_cm": [
+   470,
+   150
+  ],
+  "scale": 4.7,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_2a6c5c25-cd83-44d8-a18f-88cfa5fcf295_0: 2048→1024",
+  "mb": 0.486972,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "car_police_b_idle": {
+  "src": "car_police_b.glb",
+  "tris_before": 47216,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   480.0000190734863,
+   200.93262195587158,
+   147.49512672424316
+  ],
+  "os_cm": [
+   480,
+   150
+  ],
+  "scale": 4.8,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_700de752-2c33-491b-b500-6e84797100ed_0: 2048→1024",
+  "mb": 0.456008,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "car_police_idle": {
+  "src": "car_police.glb",
+  "tris_before": 47404,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   480.0000190734863,
+   215.31739234924316,
+   165.55664539337158
+  ],
+  "os_cm": [
+   480,
+   150
+  ],
+  "scale": 4.8,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_33951231-c872-460b-9a17-0a66e11d25c5_0: 2048→1024",
+  "mb": 0.455564,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "car_sedan_b_idle": {
+  "src": "car_sedan_b.glb",
+  "tris_before": 46916,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   450.0,
+   189.84375,
+   155.19561767578125
+  ],
+  "os_cm": [
+   450,
+   150
+  ],
+  "scale": 4.5,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_899d0f61-170b-46ec-a2f6-31065e4ce9ad_0: 2048→1024",
+  "mb": 0.481284,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "car_sedan_idle": {
+  "src": "car_sedan.glb",
+  "tris_before": 45928,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   450.0,
+   173.87237548828125,
+   155.93719482421875
+  ],
+  "os_cm": [
+   450,
+   150
+  ],
+  "scale": 4.5,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_2491545f-5bcc-473e-8e92-c4a0e15c9c47_0: 2048→1024",
+  "mb": 0.525468,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "car_station_wagon_b_idle": {
+  "src": "car_station_wagon_b.glb",
+  "tris_before": 44906,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   480.0000190734863,
+   199.52637553215027,
+   166.02540016174316
+  ],
+  "os_cm": [
+   480,
+   150
+  ],
+  "scale": 4.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_87d09e9a-3342-4280-a9b8-b9699239bf94_0: 2048→1024",
+  "mb": 0.479036,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "car_station_wagon_idle": {
+  "src": "car_station_wagon.glb",
+  "tris_before": 44665,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   480.0000190734863,
+   202.55860090255737,
+   171.15235328674316
+  ],
+  "os_cm": [
+   480,
+   150
+  ],
+  "scale": 4.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2ebc9437-35f0-43f3-b182-ad00fa4fe8fd_0: 2048→1024",
+  "mb": 0.462624,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "car_tarp_b_idle": {
+  "src": "car_tarp_b.glb",
+  "tris_before": 47374,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   450.0,
+   196.99859619140625,
+   147.28546142578125
+  ],
+  "os_cm": [
+   450,
+   150
+  ],
+  "scale": 4.5,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_be226719-f2a8-45c1-acab-14a41255a1a8_0: 2048→1024",
+  "mb": 0.414532,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "car_tarp_idle": {
+  "src": "car_tarp.glb",
+  "tris_before": 46872,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   450.0,
+   243.9239501953125,
+   155.03082275390625
+  ],
+  "os_cm": [
+   450,
+   150
+  ],
+  "scale": 4.5,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_12586a1f-99f5-4323-8c92-e6ed9d861ed7_0: 2048→1024",
+  "mb": 0.397264,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "church_b_idle": {
+  "src": "church_b.glb",
+  "tris_before": 43990,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0,
+   831.4208507537842,
+   641.05224609375
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 9.999999701976785,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4dbd1201-65cc-420a-96b9-b1247693d4bf_0: 2048→1024",
+  "mb": 1.011512,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "church_c_idle": {
+  "src": "church_c.glb",
+  "tris_before": 43998,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0,
+   1448.6295700073242,
+   1398.7622261047363
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 14.48629531388152,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_107326a3-60f8-4cdf-a2af-a07d23f60489_0: 2048→1024",
+  "mb": 0.929676,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1399 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "church_idle": {
+  "src": "church.glb",
+  "tris_before": 43990,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0,
+   831.4208507537842,
+   641.05224609375
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 9.999999701976785,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_81ee69e4-abc5-4a30-ba4d-8444a07c8596_0: 2048→1024",
+  "mb": 1.011512,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "clinic_b_idle": {
+  "src": "clinic_b.glb",
+  "tris_before": 41421,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1199.9999523162842,
+   663.5009288787842,
+   1058.203125
+  ],
+  "os_cm": [
+   1200,
+   600
+  ],
+  "scale": 12.00000035762788,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0806aff8-5c62-472a-a941-fb6305712417_0: 2048→1024",
+  "mb": 0.973988,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1058 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "clinic_idle": {
+  "src": "clinic.glb",
+  "tris_before": 39362,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1199.9999523162842,
+   879.78515625,
+   619.3359375
+  ],
+  "os_cm": [
+   1200,
+   600
+  ],
+  "scale": 12.00000035762788,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_3e8d9e37-6ad1-4bfc-b305-edbd08ee05ef_0: 2048→1024",
+  "mb": 0.8403,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "construction_site_idle": {
+  "src": "construction_site.glb",
+  "tris_before": 43165,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1400.0,
+   678.55224609375,
+   825.78125
+  ],
+  "os_cm": [
+   1400,
+   600
+  ],
+  "scale": 14.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4c8cd27b-bac2-44e6-84bd-6be342772e62_0: 2048→1024",
+  "mb": 0.777324,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 826 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "container_shack_idle": {
+  "src": "container_shack.glb",
+  "tris_before": 39867,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   600.0,
+   383.1298828125,
+   398.69384765625
+  ],
+  "os_cm": [
+   600,
+   600
+  ],
+  "scale": 6.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_c9f38bfb-f147-49f5-ae5e-9151de0024ab_0: 2048→1024",
+  "mb": 0.790656,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (600 см); высота 399 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "crane_tower_idle": {
+  "src": "crane_tower.glb",
+  "tris_before": 43010,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   3336.8637084960938,
+   651.4765739440918,
+   2500.0001907348633
+  ],
+  "os_cm": [
+   100,
+   2500
+  ],
+  "scale": 33.36863543788187,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_f8bf86bc-fc8c-41f5-a944-852c3b80a3fc_0: 2048→1024",
+  "mb": 0.790716,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "crates_stack_idle": {
+  "src": "crates_stack.glb",
+  "tris_before": 45231,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   125.4638671875,
+   125.1251220703125,
+   150.0
+  ],
+  "os_cm": [
+   100,
+   150
+  ],
+  "scale": 1.5,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_f43a6ea4-c59c-4680-bfdb-a538515bbbda_0: 2048→1024",
+  "mb": 0.68746,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "dam_idle": {
+  "src": "dam.glb",
+  "tris_before": 43153,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2000.0,
+   815.3076171875,
+   1313.5986328125
+  ],
+  "os_cm": [
+   2000,
+   600
+  ],
+  "scale": 20.0,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_6f5e1b1f-4fc4-478a-bdda-cda93a6b9b6d_0: 2048→1024",
+  "mb": 0.689376,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1314 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "diner_idle": {
+  "src": "diner.glb",
+  "tris_before": 39285,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0000476837158,
+   1138.5684490203857,
+   668.7978267669678
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 11.385684503127171,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_5bd27d54-748c-4d11-b5c0-96d853133deb_0: 2048→1024",
+  "mb": 1.041932,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "donut_shop_idle": {
+  "src": "donut_shop.glb",
+  "tris_before": 46767,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   800.0,
+   752.099609375,
+   424.21875
+  ],
+  "os_cm": [
+   800,
+   600
+  ],
+  "scale": 8.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_9b00649c-63e6-4db4-b5f6-029c1153be3e_0: 2048→1024",
+  "mb": 0.768748,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (800 см); высота 424 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "electronics_shop_idle": {
+  "src": "electronics_shop.glb",
+  "tris_before": 39984,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0,
+   549.49951171875,
+   370.30029296875
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 10.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_63827e25-e402-4db2-a329-5c73c342fc09_0: 2048→1024",
+  "mb": 0.769588,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 370 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "ext_bus_stop_b_idle": {
+  "src": "ext_bus_stop_b.glb",
+  "tris_before": 41942,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   311.0053300857544,
+   155.37928342819214,
+   259.99999046325684
+  ],
+  "os_cm": [
+   100,
+   260
+  ],
+  "scale": 3.1100532963422647,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_0515d6e0-b0dd-434a-a9a6-46fdc1491c31_0: 2048→1024",
+  "mb": 0.62642,
+  "jpeg_q": 85,
+  "warnings": [
+   "открытые края (дыры в сетке): 2231 рёбер"
+  ],
+  "date": "2026-10-11"
+ },
+ "ext_bus_stop_c_idle": {
+  "src": "ext_bus_stop_c.glb",
+  "tris_before": 40710,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   350.6329655647278,
+   193.87110471725464,
+   260.00001430511475
+  ],
+  "os_cm": [
+   100,
+   260
+  ],
+  "scale": 3.5063297390731747,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_521afb8b-f256-47c4-a0d0-626b207b0327_0: 2048→1024",
+  "mb": 0.604368,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "ext_bus_stop_idle": {
+  "src": "ext_bus_stop.glb",
+  "tris_before": 38245,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   412.7352237701416,
+   186.403489112854,
+   260.00001430511475
+  ],
+  "os_cm": [
+   100,
+   260
+  ],
+  "scale": 4.127352000775119,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_aec0639c-f6c6-4087-86ad-1f97e1b0dcb7_0: 2048→1024",
+  "mb": 0.628256,
+  "jpeg_q": 85,
+  "warnings": [
+   "открытые края (дыры в сетке): 2099 рёбер"
+  ],
+  "date": "2026-10-11"
+ },
+ "ext_fence_wood_b_idle": {
+  "src": "ext_fence_wood_b.glb",
+  "tris_before": 46038,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   300.7158041000366,
+   27.710288763046265,
+   150.0
+  ],
+  "os_cm": [
+   100,
+   150
+  ],
+  "scale": 3.0071581523401654,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_c68ef5d3-4edb-4001-ba54-85546bc40726_0: 2048→1024",
+  "mb": 0.598576,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "ext_fence_wood_idle": {
+  "src": "ext_fence_wood.glb",
+  "tris_before": 44504,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   272.7635860443115,
+   24.995160847902298,
+   150.0
+  ],
+  "os_cm": [
+   100,
+   150
+  ],
+  "scale": 2.727635960044395,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_20eca87f-4d80-4b99-ade0-065ae0741056_0: 2048→1024",
+  "mb": 0.572108,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "facade_garage_damaged_idle": {
+  "src": "facade_garage_damaged.glb",
+  "tris_before": 42083,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   294.54381465911865,
+   87.47864961624146,
+   200.0
+  ],
+  "os_cm": [
+   100,
+   200
+  ],
+  "scale": 2.945438202247191,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ff1e7e6a-2989-418a-899b-4a93c2badc2e_0: 2048→1024",
+  "mb": 0.708272,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "farm_barn_b_idle": {
+  "src": "farm_barn_b.glb",
+  "tris_before": 42873,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1599.9999523162842,
+   1194.82421875,
+   1265.52734375
+  ],
+  "os_cm": [
+   1600,
+   600
+  ],
+  "scale": 16.000000476837172,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_40247b57-27c8-486e-add4-598ee204e42b_0: 2048→1024",
+  "mb": 0.8394,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1266 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "farm_barn_idle": {
+  "src": "farm_barn.glb",
+  "tris_before": 40550,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1600.0,
+   938.4765625,
+   1342.67578125
+  ],
+  "os_cm": [
+   1600,
+   600
+  ],
+  "scale": 16.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_16268ccd-02fc-494a-91bd-11756a477ff9_0: 2048→1024",
+  "mb": 0.77456,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1343 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "fence_broken_idle": {
+  "src": "fence_broken.glb",
+  "tris_before": 48320,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   157.40728378295898,
+   11.98040284216404,
+   150.0
+  ],
+  "os_cm": [
+   100,
+   150
+  ],
+  "scale": 1.574072887977967,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_45b11bfb-7fb3-4e2f-819a-3f2baf977537_0: 2048→1024",
+  "mb": 1.088392,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_brick_damaged_idle": {
+  "src": "finish_brick_damaged.glb",
+  "tris_before": 46616,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000149011612,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0308106006609215,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_119a0f9e-47cb-4f68-8980-badba0a30917_0: 2048→1024",
+  "mb": 0.479176,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_metal_damaged_idle": {
+  "src": "finish_metal_damaged.glb",
+  "tris_before": 48144,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   9.999999403953552,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0170737865303288,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_7855f3a5-e104-420f-93cf-e4b8658a9700_0: 2048→1024",
+  "mb": 0.375052,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_metal_ok_idle": {
+  "src": "finish_metal_ok.glb",
+  "tris_before": 44366,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   9.999999403953552,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.06180507475956,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_b6a51935-9a77-4fb1-88fe-2a1952e98336_0: 2048→1024",
+  "mb": 0.263072,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_pegboard_idle": {
+  "src": "finish_pegboard.glb",
+  "tris_before": 45886,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000149011612,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0144436071338858,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_e157649e-c2fe-4115-ba59-8cef3f48171b_0: 2048→1024",
+  "mb": 0.563608,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_plaster_damaged_idle": {
+  "src": "finish_plaster_damaged.glb",
+  "tris_before": 48876,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   9.999999403953552,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0182841958749842,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_d26562c6-a48f-401c-98a5-8c17e1f441aa_0: 2048→1024",
+  "mb": 0.520476,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_plaster_window_idle": {
+  "src": "finish_plaster_window.glb",
+  "tris_before": 47210,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000149011612,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.3417591450883681,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_a973d4d1-69f9-4cee-83f2-f33e7d0f16fc_0: 2048→1024",
+  "mb": 0.38494,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_tiles_damaged_idle": {
+  "src": "finish_tiles_damaged.glb",
+  "tris_before": 40344,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000894069672,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.220112517580872,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_1c06ad96-e37b-4bcf-ac83-889176d6b3a3_0: 2048→1024",
+  "mb": 0.526792,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_wallpaper_damaged_idle": {
+  "src": "finish_wallpaper_damaged.glb",
+  "tris_before": 48484,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000149011612,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.1626223408557794,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_6d38e0d9-7e3f-4ca2-a25d-fc1bec3f5e90_0: 2048→1024",
+  "mb": 0.517928,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_wallpaper_ok_b_idle": {
+  "src": "finish_wallpaper_ok_b.glb",
+  "tris_before": 45564,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   9.999999403953552,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0039370078740157,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_93142a43-a3c4-4025-a5be-b2fef7998b04_0: 2048→1024",
+  "mb": 0.367524,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_wallpaper_ok_idle": {
+  "src": "finish_wallpaper_ok.glb",
+  "tris_before": 48841,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   9.999999403953552,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.009104468336337,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_0dd3d783-51a9-49c3-9aad-76ac35b467bd_0: 2048→1024",
+  "mb": 0.457356,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_wallpaper_ruined_idle": {
+  "src": "finish_wallpaper_ruined.glb",
+  "tris_before": 47584,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000149011612,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0620197585071351,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_485c0853-0526-48d5-9078-24275c3494c1_0: 2048→1024",
+  "mb": 0.377308,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "finish_wood_panels_damaged_idle": {
+  "src": "finish_wood_panels_damaged.glb",
+  "tris_before": 45872,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   9.999999403953552,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0472277889111556,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_8452b6b7-2604-4d0e-a525-a680d59bfd19_0: 2048→1024",
+  "mb": 0.42504,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "fire_station_b_idle": {
+  "src": "fire_station_b.glb",
+  "tris_before": 40719,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1400.0,
+   1042.5658702850342,
+   1317.88330078125
+  ],
+  "os_cm": [
+   1400,
+   600
+  ],
+  "scale": 14.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_629c83f3-54d6-4a71-a96e-ca2ab239af42_0: 2048→1024",
+  "mb": 0.817344,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1318 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "fire_station_idle": {
+  "src": "fire_station.glb",
+  "tris_before": 40705,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1400.0,
+   708.7159156799316,
+   702.734375
+  ],
+  "os_cm": [
+   1400,
+   600
+  ],
+  "scale": 14.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ccebf8e4-b1ab-448c-b34e-8ff1bbcebe64_0: 2048→1024",
+  "mb": 0.683832,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "fishing_shop_idle": {
+  "src": "fishing_shop.glb",
+  "tris_before": 41523,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   799.9999761581421,
+   623.7793207168579,
+   666.455078125
+  ],
+  "os_cm": [
+   800,
+   600
+  ],
+  "scale": 8.000000238418586,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4988a69b-083e-4cd3-a427-67862495de53_0: 2048→1024",
+  "mb": 0.938092,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "gas_station_b_idle": {
+  "src": "gas_station_b.glb",
+  "tris_before": 38100,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1199.9999523162842,
+   948.486328125,
+   831.884765625
+  ],
+  "os_cm": [
+   1200,
+   600
+  ],
+  "scale": 12.00000035762788,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_81f536c8-c98a-44c3-b8b6-b544eadb7084_0: 2048→1024",
+  "mb": 0.763036,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 832 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "gas_station_idle": {
+  "src": "gas_station.glb",
+  "tris_before": 40401,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1400.0,
+   1402.1394729614258,
+   1005.3915023803711
+  ],
+  "os_cm": [
+   1400,
+   600
+  ],
+  "scale": 14.021394950791613,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_a0e1234d-5f32-4bf4-bb31-82c315c24a5e_0: 2048→1024",
+  "mb": 0.67478,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1005 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "hangar_b_idle": {
+  "src": "hangar_b.glb",
+  "tris_before": 41709,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2400.0,
+   1412.9884719848633,
+   1114.453125
+  ],
+  "os_cm": [
+   2400,
+   600
+  ],
+  "scale": 24.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_391cedff-d090-498c-89e7-67efa45c8cd6_0: 2048→1024",
+  "mb": 0.898856,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1114 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "hangar_c_idle": {
+  "src": "hangar_c.glb",
+  "tris_before": 40558,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2400.0,
+   1204.9805641174316,
+   1303.857421875
+  ],
+  "os_cm": [
+   2400,
+   600
+  ],
+  "scale": 24.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_1b17f760-fc61-4a16-b4cc-9f34cedc3eb4_0: 2048→1024",
+  "mb": 0.712392,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1304 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "hangar_idle": {
+  "src": "hangar.glb",
+  "tris_before": 39163,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2400.0,
+   2627.0442962646484,
+   1587.8674507141113
+  ],
+  "os_cm": [
+   2400,
+   600
+  ],
+  "scale": 26.270443613041156,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_641d810d-994a-4d50-9a81-0b286c03aca8_0: 2048→1024",
+  "mb": 0.96526,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1588 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "house_brick2_b_idle": {
+  "src": "house_brick2_b.glb",
+  "tris_before": 42232,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   900.0,
+   474.2889404296875,
+   913.7758255004883
+  ],
+  "os_cm": [
+   900,
+   600
+  ],
+  "scale": 9.137757947573899,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0b9c5ec9-5c54-4036-b87a-b52d17ea635b_0: 2048→1024",
+  "mb": 0.900672,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_brick2_c_idle": {
+  "src": "house_brick2_c.glb",
+  "tris_before": 43224,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   900.0,
+   664.5105838775635,
+   937.8362655639648
+  ],
+  "os_cm": [
+   900,
+   600
+  ],
+  "scale": 9.378362907842014,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_62071756-cb4c-444c-941d-675663b141b6_0: 2048→1024",
+  "mb": 0.938688,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_brick2_idle": {
+  "src": "house_brick2.glb",
+  "tris_before": 43117,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   900.0,
+   469.0502643585205,
+   955.954647064209
+  ],
+  "os_cm": [
+   900,
+   600
+  ],
+  "scale": 9.559546191247975,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_5b5f11c2-6084-46fb-99cf-cd2fd6d11af4_0: 2048→1024",
+  "mb": 0.921764,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_cottage_idle": {
+  "src": "house_cottage.glb",
+  "tris_before": 44150,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   800.0,
+   543.9453125,
+   341.1865234375
+  ],
+  "os_cm": [
+   800,
+   600
+  ],
+  "scale": 8.0,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_ac9483fd-ab39-44c3-989c-932a650a8680_0: 2048→1024",
+  "mb": 0.790096,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (800 см); высота 341 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "house_farm_idle": {
+  "src": "house_farm.glb",
+  "tris_before": 41894,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0,
+   555.3589105606079,
+   673.15673828125
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 10.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_156a4aa4-e157-4920-9da0-1a5a06f6ac81_0: 2048→1024",
+  "mb": 0.783648,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_garage_b_idle": {
+  "src": "house_garage_b.glb",
+  "tris_before": 42502,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1199.9999523162842,
+   668.8477039337158,
+   1033.88671875
+  ],
+  "os_cm": [
+   1200,
+   600
+  ],
+  "scale": 12.00000035762788,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_bce4e66f-ad19-41f2-83ad-996d0d0666a5_0: 2048→1024",
+  "mb": 0.831664,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1034 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "house_garage_idle": {
+  "src": "house_garage.glb",
+  "tris_before": 42101,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1200.0,
+   814.0136241912842,
+   559.716796875
+  ],
+  "os_cm": [
+   1200,
+   600
+  ],
+  "scale": 12.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0e5140ef-4223-4fcb-b1f8-e16a2f4d5132_0: 2048→1024",
+  "mb": 0.817956,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_porch_idle": {
+  "src": "house_porch.glb",
+  "tris_before": 40129,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   899.9999523162842,
+   721.8017816543579,
+   642.205810546875
+  ],
+  "os_cm": [
+   900,
+   600
+  ],
+  "scale": 9.00000026822091,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b3433e4b-f004-4329-9b1e-d4e2898ef2d6_0: 2048→1024",
+  "mb": 0.876112,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_small_b_idle": {
+  "src": "house_small_b.glb",
+  "tris_before": 43727,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   800.0,
+   494.4823980331421,
+   510.009765625
+  ],
+  "os_cm": [
+   800,
+   600
+  ],
+  "scale": 8.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_f1823eef-30c1-48cd-8d42-27c2e6d828c1_0: 2048→1024",
+  "mb": 0.859344,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_small_c_idle": {
+  "src": "house_small_c.glb",
+  "tris_before": 42372,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   799.9999761581421,
+   429.0527582168579,
+   464.0625
+  ],
+  "os_cm": [
+   800,
+   600
+  ],
+  "scale": 8.000000238418586,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_bd2b4e4e-5290-4823-aca6-5c593e7ee5fe_0: 2048→1024",
+  "mb": 0.93506,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_small_d_idle": {
+  "src": "house_small_d.glb",
+  "tris_before": 38215,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   799.9999761581421,
+   592.3828363418579,
+   665.0390625
+  ],
+  "os_cm": [
+   800,
+   600
+  ],
+  "scale": 8.000000238418586,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_18a473da-56b7-4193-a925-6a98e1149247_0: 2048→1024",
+  "mb": 0.768904,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_small_idle": {
+  "src": "house_small.glb",
+  "tris_before": 39364,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   800.0,
+   487.6464605331421,
+   640.0390625
+  ],
+  "os_cm": [
+   800,
+   600
+  ],
+  "scale": 8.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_7f5da6d3-1970-4c24-a91c-d6d60cedc509_0: 2048→1024",
+  "mb": 0.758128,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_townhouse_idle": {
+  "src": "house_townhouse.glb",
+  "tris_before": 41789,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   999.9999523162842,
+   515.6250238418579,
+   979.30908203125
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 10.000000298023233,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_41891205-4091-4cc9-8222-fb7b5dd60525_0: 2048→1024",
+  "mb": 0.9865,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 979 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "house_trailer_b_idle": {
+  "src": "house_trailer_b.glb",
+  "tris_before": 42605,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0,
+   421.9970464706421,
+   377.9296875
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 10.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ca61db71-893b-463b-bf38-35ad4836178e_0: 2048→1024",
+  "mb": 0.825172,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 378 см, в ОС 600 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "house_trailer_c_idle": {
+  "src": "house_trailer_c.glb",
+  "tris_before": 39895,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0,
+   465.4845714569092,
+   405.21240234375
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 10.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_86f5348c-9ee2-4791-bf7f-9349ae1e80a9_0: 2048→1024",
+  "mb": 0.8003,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 405 см, в ОС 600 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "house_trailer_d_idle": {
+  "src": "house_trailer_d.glb",
+  "tris_before": 41132,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   800.0,
+   386.1328125,
+   288.76953125
+  ],
+  "os_cm": [
+   800,
+   600
+  ],
+  "scale": 8.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_968722d0-8621-4c14-9e42-9fb8f42d45f0_0: 2048→1024",
+  "mb": 0.75668,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (800 см); высота 289 см, в ОС 600 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "house_trailer_e_idle": {
+  "src": "house_trailer_e.glb",
+  "tris_before": 41249,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   600.0,
+   271.929931640625,
+   308.02001953125
+  ],
+  "os_cm": [
+   600,
+   600
+  ],
+  "scale": 6.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_28c6536b-b6e8-4358-a95b-056af9f68c52_0: 2048→1024",
+  "mb": 0.630936,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (600 см); высота 308 см, в ОС 600 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "house_trailer_idle": {
+  "src": "house_trailer.glb",
+  "tris_before": 39883,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0,
+   552.30712890625,
+   400.604248046875
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 10.0,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_e9ea7f71-c5bd-4243-8af8-ce4a8dfec000_0: 2048→1024",
+  "mb": 0.806776,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 401 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "house_two_story_b_idle": {
+  "src": "house_two_story_b.glb",
+  "tris_before": 43280,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   900.0,
+   612.7624988555908,
+   629.791259765625
+  ],
+  "os_cm": [
+   900,
+   600
+  ],
+  "scale": 9.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_8aed7358-fab0-4b09-a2b6-c4fddd24dd77_0: 2048→1024",
+  "mb": 0.878772,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "house_two_story_idle": {
+  "src": "house_two_story.glb",
+  "tris_before": 43127,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   900.0,
+   579.74853515625,
+   539.373779296875
+  ],
+  "os_cm": [
+   900,
+   600
+  ],
+  "scale": 9.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_66cc2594-16b1-4327-ae6c-0e1dbc23ece2_0: 2048→1024",
+  "mb": 0.815536,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "house_wood_b_idle": {
+  "src": "house_wood_b.glb",
+  "tris_before": 40907,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   220.20025253295898,
+   218.85626316070557,
+   200.0
+  ],
+  "os_cm": [
+   100,
+   200
+  ],
+  "scale": 2.2020025535918286,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_7303ee13-8a73-4d65-9ecc-49f618348518_0: 2048→1024",
+  "mb": 0.907928,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_wood_c_idle": {
+  "src": "house_wood_c.glb",
+  "tris_before": 42459,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   320.4067587852478,
+   202.38585472106934,
+   200.0
+  ],
+  "os_cm": [
+   100,
+   200
+  ],
+  "scale": 3.204067664026596,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_54ea794f-2c7f-42c2-9aa6-8ced056e8432_0: 2048→1024",
+  "mb": 0.908044,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "house_wood_d_idle": {
+  "src": "house_wood_d.glb",
+  "tris_before": 39438,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   900.0,
+   707.464599609375,
+   696.807861328125
+  ],
+  "os_cm": [
+   900,
+   600
+  ],
+  "scale": 9.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_76a74132-7dcb-4ff9-8333-50b87fe2bded_0: 2048→1024",
+  "mb": 0.909812,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "mall_idle": {
+  "src": "mall.glb",
+  "tris_before": 42768,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2400.0,
+   1215.9667015075684,
+   1269.873046875
+  ],
+  "os_cm": [
+   2400,
+   600
+  ],
+  "scale": 24.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_83756645-c034-4dde-bcf9-8129350fdb12_0: 2048→1024",
+  "mb": 1.043692,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1270 см, в ОС 600 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "market_stall_b_idle": {
+  "src": "market_stall_b.glb",
+  "tris_before": 44394,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   257.2758913040161,
+   129.9884021282196,
+   229.99999523162842
+  ],
+  "os_cm": [
+   100,
+   230
+  ],
+  "scale": 2.5727589267426776,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fdd90319-114a-4598-bb14-9fcf122bc3b2_0: 2048→1024",
+  "mb": 0.6149,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "market_stall_c_idle": {
+  "src": "market_stall_c.glb",
+  "tris_before": 45600,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   192.50426292419434,
+   145.44859528541565,
+   229.99999523162842
+  ],
+  "os_cm": [
+   100,
+   230
+  ],
+  "scale": 2.3,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_f20d0542-e6b5-427d-a811-7ffd9ef07c23_0: 2048→1024",
+  "mb": 0.631096,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "market_stall_idle": {
+  "src": "market_stall.glb",
+  "tris_before": 47244,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   220.35582065582275,
+   122.87536263465881,
+   229.99999523162842
+  ],
+  "os_cm": [
+   100,
+   230
+  ],
+  "scale": 2.3,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_a417cd51-2388-4fd2-a445-cf10a4d978dd_0: 2048→1024",
+  "mb": 0.652872,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "metro_idle": {
+  "src": "metro.glb",
+  "tris_before": 38710,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   999.9999523162842,
+   845.15380859375,
+   707.1532726287842
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 9.999999403953588,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_457bbd93-01f8-441d-a36c-ef917549aebf_0: 2048→1024",
+  "mb": 0.959012,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_b_idle": {
+  "src": "mine_b.glb",
+  "tris_before": 42370,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1400.0,
+   1314.80712890625,
+   1366.24755859375
+  ],
+  "os_cm": [
+   1400,
+   600
+  ],
+  "scale": 14.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_22bfa92e-a1d3-4967-8533-ad98dd4024ff_0: 2048→1024",
+  "mb": 0.886064,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1366 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "mine_c_idle": {
+  "src": "mine_c.glb",
+  "tris_before": 42304,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1400.0,
+   1495.9630012512207,
+   1374.342918395996
+  ],
+  "os_cm": [
+   1400,
+   600
+  ],
+  "scale": 14.959630033555523,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_4c92beb2-4f46-4948-842a-bf760d1a6756_0: 2048→1024",
+  "mb": 0.957288,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1374 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "mine_cart_empty_idle": {
+  "src": "mine_cart_empty.glb",
+  "tris_before": 42514,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   248.2424259185791,
+   131.21212720870972,
+   120.00000476837158
+  ],
+  "os_cm": [
+   100,
+   120
+  ],
+  "scale": 2.4824242424242424,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b7202e7d-70d0-487a-9a80-b96d0db7e815_0: 2048→1024",
+  "mb": 0.49256,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_cart_ore_idle": {
+  "src": "mine_cart_ore.glb",
+  "tris_before": 45936,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   212.27381229400635,
+   120.22026181221008,
+   120.00000476837158
+  ],
+  "os_cm": [
+   100,
+   120
+  ],
+  "scale": 2.1227380695314184,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_7073f220-9713-4955-abd9-543d966ea76b_0: 2048→1024",
+  "mb": 0.396016,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "mine_cart_wood_idle": {
+  "src": "mine_cart_wood.glb",
+  "tris_before": 43072,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   237.04845905303955,
+   140.13985395431519,
+   119.99999284744263
+  ],
+  "os_cm": [
+   100,
+   120
+  ],
+  "scale": 2.370484687726067,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_59b3b1a3-da21-443e-84be-9f44c4ef99a5_0: 2048→1024",
+  "mb": 0.456432,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_crate_dynamite_idle": {
+  "src": "mine_crate_dynamite.glb",
+  "tris_before": 44520,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   55.532872676849365,
+   70.17202973365784,
+   59.99999642372131
+  ],
+  "os_cm": [
+   100,
+   60
+  ],
+  "scale": 0.7017203226497252,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_97b04eca-54e0-439b-9a6d-690c2e8cffc2_0: 2048→1024",
+  "mb": 0.425204,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_crate_idle": {
+  "src": "mine_crate.glb",
+  "tris_before": 44216,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   112.4373733997345,
+   69.70376372337341,
+   60.00000238418579
+  ],
+  "os_cm": [
+   100,
+   60
+  ],
+  "scale": 1.1243737847420794,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_f1d7da13-0fe2-442e-be71-b230b474f544_0: 2048→1024",
+  "mb": 0.394316,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_crates_stack_b_idle": {
+  "src": "mine_crates_stack_b.glb",
+  "tris_before": 43651,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   99.774169921875,
+   110.6048583984375,
+   150.0
+  ],
+  "os_cm": [
+   100,
+   150
+  ],
+  "scale": 1.5,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_f4814c40-07f4-4ae7-a273-4478402a9280_0: 2048→1024",
+  "mb": 0.70418,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_crates_stack_idle": {
+  "src": "mine_crates_stack.glb",
+  "tris_before": 45744,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   117.15087890625,
+   93.88732314109802,
+   150.0
+  ],
+  "os_cm": [
+   100,
+   150
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b8d77e25-3aa5-4eb7-83d6-b9b2a0e303c7_0: 2048→1024",
+  "mb": 0.765364,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_floodlight_b_idle": {
+  "src": "mine_floodlight_b.glb",
+  "tris_before": 47086,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   89.4671618938446,
+   102.04101800918579,
+   179.99999523162842
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_e36360a2-5c61-4f4c-a8c5-7f077684ba86_0: 2048→1024",
+  "mb": 0.519492,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "mine_floodlight_c_idle": {
+  "src": "mine_floodlight_c.glb",
+  "tris_before": 47086,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   89.4671618938446,
+   102.04101800918579,
+   179.99999523162842
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_e2127a81-c713-40c5-b32b-1f02bdc02e5a_0: 2048→1024",
+  "mb": 0.519492,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "mine_floodlight_idle": {
+  "src": "mine_floodlight.glb",
+  "tris_before": 48480,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   87.60497570037842,
+   93.96606087684631,
+   179.99999523162842
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 180,
+  "mount": "floor",
+  "textures": "tripo_image_7ddb84fd-3b80-471d-974d-c0f4dc529e56_0: 2048→1024",
+  "mb": 0.570204,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_idle": {
+  "src": "mine.glb",
+  "tris_before": 46310,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1399.9999523162842,
+   1557.2029113769531,
+   1304.5756340026855
+  ],
+  "os_cm": [
+   1400,
+   600
+  ],
+  "scale": 15.572029354818062,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_c26f39f1-afec-45ef-8cd1-f084d20595a0_0: 2048→1024",
+  "mb": 0.796952,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1305 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "mine_ladder_b_idle": {
+  "src": "mine_ladder_b.glb",
+  "tris_before": 48162,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   173.25187921524048,
+   713.0712509155273,
+   300.0
+  ],
+  "os_cm": [
+   100,
+   300
+  ],
+  "scale": 7.130712316843174,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_189b7401-ef57-4b4e-b1ef-84bd170caf33_0: 2048→1024",
+  "mb": 0.51486,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "mine_ladder_idle": {
+  "src": "mine_ladder.glb",
+  "tris_before": 46892,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   99.005126953125,
+   202.2216796875,
+   300.0
+  ],
+  "os_cm": [
+   100,
+   300
+  ],
+  "scale": 3.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b39c6df3-3c06-4956-8ce4-a5c067c7d262_0: 2048→1024",
+  "mb": 0.5015,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_lamp_cage_idle": {
+  "src": "mine_lamp_cage.glb",
+  "tris_before": 45813,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   17.313233017921448,
+   16.873779892921448,
+   40.00000059604645
+  ],
+  "os_cm": [
+   100,
+   40
+  ],
+  "scale": 0.4,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_f38d1053-4a94-45dd-a1ea-db7ffa9c572e_0: 2048→1024",
+  "mb": 0.39416,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "mine_lamp_string_idle": {
+  "src": "mine_lamp_string.glb",
+  "tris_before": 48180,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   118.49565505981445,
+   14.217091351747513,
+   59.99999642372131
+  ],
+  "os_cm": [
+   100,
+   60
+  ],
+  "scale": 1.184956605593057,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_9833862d-c363-4dc4-931c-43dafc27fdf5_0: 2048→1024",
+  "mb": 0.53532,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "mine_lantern_b_idle": {
+  "src": "mine_lantern_b.glb",
+  "tris_before": 48288,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   16.595305502414703,
+   12.051544338464737,
+   34.99999940395355
+  ],
+  "os_cm": [
+   100,
+   35
+  ],
+  "scale": 0.35,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_fa8650cc-1a13-4902-a714-a03c264bd91e_0: 2048→1024",
+  "mb": 0.440584,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "mine_lantern_idle": {
+  "src": "mine_lantern.glb",
+  "tris_before": 47902,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   15.547485649585724,
+   12.405090034008026,
+   34.99999940395355
+  ],
+  "os_cm": [
+   100,
+   35
+  ],
+  "scale": 0.35,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_370df029-b692-4fea-b937-14191b60e46d_0: 2048→1024",
+  "mb": 0.451608,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_ore_pile_idle": {
+  "src": "mine_ore_pile.glb",
+  "tris_before": 49850,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   162.4691605567932,
+   140.54415225982666,
+   79.99999523162842
+  ],
+  "os_cm": [
+   100,
+   80
+  ],
+  "scale": 1.624691664084289,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2e44202f-b85e-4cd1-82e1-c09acbcb485c_0: 2048→1024",
+  "mb": 0.389848,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_post_wood_idle": {
+  "src": "mine_post_wood.glb",
+  "tris_before": 48516,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   58.483123779296875,
+   64.76593017578125,
+   250.0
+  ],
+  "os_cm": [
+   100,
+   250
+  ],
+  "scale": 2.5,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_bc118c86-38b8-4a3c-958c-14934f4fc470_0: 2048→1024",
+  "mb": 0.474012,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_rails_end_idle": {
+  "src": "mine_rails_end.glb",
+  "tris_before": 44627,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   150.0,
+   75.55847764015198,
+   41.400146484375
+  ],
+  "os_cm": [
+   150,
+   150
+  ],
+  "scale": 1.5,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ec95ce56-c6a0-4f44-bf4a-7405b5cc3132_0: 2048→1024",
+  "mb": 0.529544,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (150 см); высота 41 см, в ОС 150 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "mine_rails_straight_idle": {
+  "src": "mine_rails_straight.glb",
+  "tris_before": 44712,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   300.0,
+   149.322509765625,
+   36.94610595703125
+  ],
+  "os_cm": [
+   300,
+   150
+  ],
+  "scale": 3.0,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_882cd657-abe9-402b-9302-f55d1e278375_0: 2048→1024",
+  "mb": 0.46818,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 37 см, в ОС 150 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "mine_support_wood_idle": {
+  "src": "mine_support_wood.glb",
+  "tris_before": 47110,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   253.18334102630615,
+   136.82162761688232,
+   250.0
+  ],
+  "os_cm": [
+   100,
+   250
+  ],
+  "scale": 2.531833353937446,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_959e8125-9edd-49ab-9941-b3e02b63a110_0: 2048→1024",
+  "mb": 0.577808,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_tool_rack_idle": {
+  "src": "mine_tool_rack.glb",
+  "tris_before": 47236,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   159.14794206619263,
+   67.80762076377869,
+   179.99999523162842
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.8,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2f489d3b-380d-4f1d-b872-518dc14eec7b_0: 2048→1024",
+  "mb": 0.62812,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_wall_mesh_idle": {
+  "src": "mine_wall_mesh.glb",
+  "tris_before": 48232,
+  "tris_after": 16090,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000149011612,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0730274202574148,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_019772a3-082a-4283-b156-56de6235372a_0: 2048→1024",
+  "mb": 1.211724,
+  "jpeg_q": 85,
+  "warnings": [
+   "не удалось облегчить до лимита: 16090"
+  ],
+  "date": "2026-10-11"
+ },
+ "mine_wall_planks_idle": {
+  "src": "mine_wall_planks.glb",
+  "tris_before": 45222,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000149011612,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0581522109422905,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_83584b6f-3a4f-4092-8c50-d258241812bc_0: 2048→1024",
+  "mb": 0.449784,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_wall_planks_stone_b_idle": {
+  "src": "mine_wall_planks_stone_b.glb",
+  "tris_before": 45450,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   9.999999403953552,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.11400089941538,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_a7864568-1536-4b46-a66f-274bd732826f_0: 2048→1024",
+  "mb": 0.487212,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_wall_planks_stone_idle": {
+  "src": "mine_wall_planks_stone.glb",
+  "tris_before": 45659,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000149011612,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.075119348497613,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_161db526-c418-4cea-920b-ef098bb80888_0: 2048→1024",
+  "mb": 0.52284,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "mine_wall_rock_idle": {
+  "src": "mine_wall_rock.glb",
+  "tris_before": 47205,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000149011612,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.1750164798945286,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_ad707a4d-0ea7-4c98-9e02-2e1cf6fad945_0: 2048→1024",
+  "mb": 0.417864,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "mine_wall_rock_ore_idle": {
+  "src": "mine_wall_rock_ore.glb",
+  "tris_before": 49738,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000149011612,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0595628415300546,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_4732f1f6-82b5-4ae1-8eb3-b9e97eb4fb0e_0: 2048→1024",
+  "mb": 0.34546,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "motel_b_idle": {
+  "src": "motel_b.glb",
+  "tris_before": 40305,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1600.0,
+   591.9434070587158,
+   340.087890625
+  ],
+  "os_cm": [
+   1600,
+   600
+  ],
+  "scale": 16.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0aea349e-cffb-4e0b-911b-5d14825a8d46_0: 2048→1024",
+  "mb": 0.56684,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 340 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "motel_idle": {
+  "src": "motel.glb",
+  "tris_before": 39015,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1999.9999046325684,
+   807.3119163513184,
+   527.83203125
+  ],
+  "os_cm": [
+   2000,
+   600
+  ],
+  "scale": 20.000000596046466,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_341fe81d-8caf-43d6-8a0e-61a10c1145c2_0: 2048→1024",
+  "mb": 0.690952,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "motorcycle_b_idle": {
+  "src": "motorcycle_b.glb",
+  "tris_before": 47496,
+  "tris_after": 7838,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   209.99999046325684,
+   82.03765749931335,
+   113.60045671463013
+  ],
+  "os_cm": [
+   210,
+   150
+  ],
+  "scale": 2.1,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_21bfa960-732d-4fdc-b99b-a8c98344ef5e_0: 2048→1024",
+  "mb": 0.5674,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "motorcycle_idle": {
+  "src": "motorcycle.glb",
+  "tris_before": 47407,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   209.99999046325684,
+   83.9923083782196,
+   115.83068370819092
+  ],
+  "os_cm": [
+   210,
+   150
+  ],
+  "scale": 2.1,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_861546c5-3934-46de-9ed5-3c9a439aec28_0: 2048→1024",
+  "mb": 0.540596,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "motorhome_idle": {
+  "src": "motorhome.glb",
+  "tris_before": 40991,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   700.0,
+   290.484619140625,
+   348.4832763671875
+  ],
+  "os_cm": [
+   700,
+   150
+  ],
+  "scale": 7.0,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_cdff9fcd-713a-4a98-8e7e-04acc9b1551b_0: 2048→1024",
+  "mb": 0.564328,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 348 см, в ОС 150 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "nuclear_plant_b_idle": {
+  "src": "nuclear_plant_b.glb",
+  "tris_before": 45288,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2400.0,
+   1013.525390625,
+   1313.671875
+  ],
+  "os_cm": [
+   2400,
+   600
+  ],
+  "scale": 24.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_61f88500-bf42-4637-acae-3f18b603e881_0: 2048→1024",
+  "mb": 0.816344,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1314 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "nuclear_plant_idle": {
+  "src": "nuclear_plant.glb",
+  "tris_before": 45713,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2400.0,
+   1508.056640625,
+   1314.2578125
+  ],
+  "os_cm": [
+   2400,
+   600
+  ],
+  "scale": 24.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_6f2711f5-90f0-4bfb-8319-e1e3eb424e1a_0: 2048→1024",
+  "mb": 0.914412,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1314 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "pickup_b_idle": {
+  "src": "pickup_b.glb",
+  "tris_before": 43458,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   519.9999809265137,
+   233.62547159194946,
+   191.35009050369263
+  ],
+  "os_cm": [
+   520,
+   150
+  ],
+  "scale": 5.2,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_33057337-2720-48ba-ba8e-dd5126167540_0: 2048→1024",
+  "mb": 0.446376,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 191 см, в ОС 150 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "pickup_idle": {
+  "src": "pickup.glb",
+  "tris_before": 43763,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   519.9999809265137,
+   215.51878452301025,
+   177.68676280975342
+  ],
+  "os_cm": [
+   520,
+   150
+  ],
+  "scale": 5.2,
+  "rotate": 0,
+  "mount": "floor",
+  "textures": "tripo_image_348b39e3-d768-47f2-acf4-c5059b530347_0: 2048→1024",
+  "mb": 0.438204,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "police_station_b_idle": {
+  "src": "police_station_b.glb",
+  "tris_before": 40669,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1200.0,
+   584.7656726837158,
+   1003.9306640625
+  ],
+  "os_cm": [
+   1200,
+   600
+  ],
+  "scale": 12.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_db487843-c9f2-4b1c-9d67-95bd208adb35_0: 2048→1024",
+  "mb": 0.944548,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1004 см, в ОС 600 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "police_station_idle": {
+  "src": "police_station.glb",
+  "tris_before": 41836,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1200.0,
+   616.9188976287842,
+   555.35888671875
+  ],
+  "os_cm": [
+   1200,
+   600
+  ],
+  "scale": 12.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_89154830-1c62-4e4b-82ab-1f219a930cfd_0: 2048→1024",
+  "mb": 0.992568,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "power_plant_b_idle": {
+  "src": "power_plant_b.glb",
+  "tris_before": 43270,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2000.0,
+   1227.5390625,
+   1456.1767578125
+  ],
+  "os_cm": [
+   2000,
+   600
+  ],
+  "scale": 20.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_55776ce0-c4dd-4d34-a5d4-e0477519d047_0: 2048→1024",
+  "mb": 0.980912,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1456 см, в ОС 600 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "power_plant_idle": {
+  "src": "power_plant.glb",
+  "tris_before": 45782,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2000.0,
+   1053.955078125,
+   1100.09765625
+  ],
+  "os_cm": [
+   2000,
+   600
+  ],
+  "scale": 20.0,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_bd69c996-dfa2-4ae3-bab1-57d8064ca6c3_0: 2048→1024",
+  "mb": 1.075188,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1100 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "prison_armory_cage_idle": {
+  "src": "prison_armory_cage.glb",
+  "tris_before": 43480,
+  "tris_after": 17660,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   600.0,
+   409.0576171875,
+   414.00146484375
+  ],
+  "os_cm": [
+   600,
+   600
+  ],
+  "scale": 6.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_e825c415-ef1c-4061-b763-d6ffd8b7c586_0: 2048→1024",
+  "mb": 1.565676,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (600 см); высота 414 см, в ОС 600 см",
+   "не удалось облегчить до лимита: 17660"
+  ],
+  "date": "2026-10-11"
+ },
+ "prison_armory_locker_b_idle": {
+  "src": "prison_armory_locker_b.glb",
+  "tris_before": 43339,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   88.6392205953598,
+   58.731380105018616,
+   189.9999976158142
+  ],
+  "os_cm": [
+   100,
+   190
+  ],
+  "scale": 1.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_3492f5c1-95d2-46ad-96e2-55245e08a830_0: 2048→1024",
+  "mb": 0.514796,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_armory_locker_idle": {
+  "src": "prison_armory_locker.glb",
+  "tris_before": 47058,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   97.69042730331421,
+   66.6983038187027,
+   189.9999976158142
+  ],
+  "os_cm": [
+   100,
+   190
+  ],
+  "scale": 1.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ff83663a-53d9-4df0-9367-45965e010dc6_0: 2048→1024",
+  "mb": 0.518364,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "prison_armory_open_idle": {
+  "src": "prison_armory_open.glb",
+  "tris_before": 47222,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   175.78245997428894,
+   89.3176406621933,
+   189.9999976158142
+  ],
+  "os_cm": [
+   100,
+   190
+  ],
+  "scale": 1.9,
+  "rotate": 180,
+  "mount": "floor",
+  "textures": "tripo_image_58c05870-9ad3-4506-9243-6933cf30e349_0: 2048→1024",
+  "mb": 0.574308,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_bunk_idle": {
+  "src": "prison_bunk.glb",
+  "tris_before": 40461,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   197.16004729270935,
+   118.61612796783447,
+   180.00000715255737
+  ],
+  "os_cm": [
+   100,
+   180
+  ],
+  "scale": 1.9716004813477739,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ff4e8388-a223-4c05-99fd-c5875cf35860_0: 2048→1024",
+  "mb": 0.533572,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_cell_bars_idle": {
+  "src": "prison_cell_bars.glb",
+  "tris_before": 44777,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   306.60977363586426,
+   32.814957201480865,
+   250.0
+  ],
+  "os_cm": [
+   100,
+   250
+  ],
+  "scale": 3.0660977618085186,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_9ac749ef-02d3-4582-a9ba-c6e3e2bcc2e5_0: 2048→1024",
+  "mb": 0.603088,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_fence_wire_idle": {
+  "src": "prison_fence_wire.glb",
+  "tris_before": 46340,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   360.72216033935547,
+   53.62725555896759,
+   300.0
+  ],
+  "os_cm": [
+   100,
+   300
+  ],
+  "scale": 3.6072214883311315,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_bd930dcc-fcc4-470f-bb0d-09fded06998f_0: 2048→1024",
+  "mb": 1.219964,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_guard_booth_b_idle": {
+  "src": "prison_guard_booth_b.glb",
+  "tris_before": 43464,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   323.1133222579956,
+   192.16406345367432,
+   300.0
+  ],
+  "os_cm": [
+   100,
+   300
+  ],
+  "scale": 3.231133315803313,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_97b4adc2-567f-47ca-87d6-d68f0996b645_0: 2048→1024",
+  "mb": 0.568384,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_guard_booth_c_idle": {
+  "src": "prison_guard_booth_c.glb",
+  "tris_before": 39088,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   260.595703125,
+   262.8479242324829,
+   300.0
+  ],
+  "os_cm": [
+   100,
+   300
+  ],
+  "scale": 3.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_8f8ed52b-b851-4996-b145-bbdd2fa95927_0: 2048→1024",
+  "mb": 0.574852,
+  "jpeg_q": 85,
+  "warnings": [
+   "открытые края (дыры в сетке): 1540 рёбер"
+  ],
+  "date": "2026-10-12"
+ },
+ "prison_guard_booth_idle": {
+  "src": "prison_guard_booth.glb",
+  "tris_before": 44871,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   158.294677734375,
+   107.51038193702698,
+   300.0
+  ],
+  "os_cm": [
+   100,
+   300
+  ],
+  "scale": 3.0,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_62c0e3e1-e852-4e5d-99eb-d3aed7f2c368_0: 2048→1024",
+  "mb": 0.667968,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "prison_locker_row_idle": {
+  "src": "prison_locker_row.glb",
+  "tris_before": 43181,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   55.35674691200256,
+   56.05254769325256,
+   189.9999976158142
+  ],
+  "os_cm": [
+   100,
+   190
+  ],
+  "scale": 1.9,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_12023c33-b360-4ca4-97f2-64075ac041da_0: 2048→1024",
+  "mb": 0.4848,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_rack_batons_idle": {
+  "src": "prison_rack_batons.glb",
+  "tris_before": 46540,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   127.38629579544067,
+   32.931190729141235,
+   120.00000476837158
+  ],
+  "os_cm": [
+   100,
+   120
+  ],
+  "scale": 1.2738629000907087,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_d7349af4-2c83-47f4-b667-a6539be2c7aa_0: 2048→1024",
+  "mb": 0.410872,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_toilet_sink_idle": {
+  "src": "prison_toilet_sink.glb",
+  "tris_before": 45220,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   55.228278040885925,
+   84.930419921875,
+   110.00000238418579
+  ],
+  "os_cm": [
+   100,
+   110
+  ],
+  "scale": 1.1,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_987d72bd-0feb-4414-826f-2aa4657b8e7d_0: 2048→1024",
+  "mb": 0.34854,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_wall_cell_idle": {
+  "src": "prison_wall_cell.glb",
+  "tris_before": 48397,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   10.000000894069672,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.0000305194408838,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_eb2753c3-b65c-4aea-a09c-2fd0d83e4f3b_0: 2048→1024",
+  "mb": 0.588812,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "prison_wall_mesh_idle": {
+  "src": "prison_wall_mesh.glb",
+  "tris_before": 42554,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   100.0,
+   9.999999403953552,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 1.2249557522123893,
+  "rotate": 270,
+  "mount": "wall",
+  "textures": "tripo_image_0f3b1a68-7e15-4fea-a401-029be5460633_0: 2048→1024",
+  "mb": 0.608496,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "prison_watchtower_b_idle": {
+  "src": "prison_watchtower_b.glb",
+  "tris_before": 44871,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   305.8593988418579,
+   298.1414556503296,
+   900.0
+  ],
+  "os_cm": [
+   100,
+   900
+  ],
+  "scale": 9.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_26fa73d2-186b-4edb-9fec-386080ce61ad_0: 2048→1024",
+  "mb": 0.612388,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_watchtower_c_idle": {
+  "src": "prison_watchtower_c.glb",
+  "tris_before": 43453,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   314.45618867874146,
+   320.6634521484375,
+   900.0
+  ],
+  "os_cm": [
+   100,
+   900
+  ],
+  "scale": 9.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_735038c4-08b2-4e1e-8a13-a8080c501dea_0: 2048→1024",
+  "mb": 0.762816,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "prison_watchtower_idle": {
+  "src": "prison_watchtower.glb",
+  "tris_before": 42426,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   305.7220458984375,
+   228.40574979782104,
+   900.0
+  ],
+  "os_cm": [
+   100,
+   900
+  ],
+  "scale": 9.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_26498b8d-e36e-4298-9e7e-f0dc0a247890_0: 2048→1024",
+  "mb": 0.725116,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "radio_tower_idle": {
+  "src": "radio_tower.glb",
+  "tris_before": 45684,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   410.5224847793579,
+   449.9359369277954,
+   1500.0
+  ],
+  "os_cm": [
+   100,
+   1500
+  ],
+  "scale": 15.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_fe060daa-ac7a-4642-a288-b9b0e44a3791_0: 2048→1024",
+  "mb": 0.751444,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "ruin_column_idle": {
+  "src": "ruin_column.glb",
+  "tris_before": 48272,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   91.88232421875,
+   98.5748291015625,
+   300.0
+  ],
+  "os_cm": [
+   100,
+   300
+  ],
+  "scale": 3.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_5800bc59-09d1-4ec3-8357-3fca58e31298_0: 2048→1024",
+  "mb": 0.526584,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "ruin_pipe_burst_idle": {
+  "src": "ruin_pipe_burst.glb",
+  "tris_before": 47706,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   234.99711751937866,
+   166.68099761009216,
+   100.0
+  ],
+  "os_cm": [
+   100,
+   100
+  ],
+  "scale": 2.3499713138267353,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_84e6fc90-af06-425d-8e72-684d1c75ce38_0: 2048→1024",
+  "mb": 0.423216,
+  "jpeg_q": 85,
+  "warnings": [
+   "2 отдельн. крупн. кус(ка/ков) в стороне от главного — возможно, лишняя вещь с картинки (рюкзак, ящик…) — посмотреть на превью"
+  ],
+  "date": "2026-10-11"
+ },
+ "ruin_pipe_wall_idle": {
+  "src": "ruin_pipe_wall.glb",
+  "tris_before": 45677,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   368.84286403656006,
+   193.08868646621704,
+   200.0
+  ],
+  "os_cm": [
+   100,
+   200
+  ],
+  "scale": 3.6884286357496623,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_0248a1fd-e1ef-4494-aedb-82a38b17812d_0: 2048→1024",
+  "mb": 0.807916,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "school_b_idle": {
+  "src": "school_b.glb",
+  "tris_before": 40637,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2000.0,
+   1161.0107898712158,
+   1254.7607421875
+  ],
+  "os_cm": [
+   2000,
+   600
+  ],
+  "scale": 20.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_f8ad24ea-4919-4b7f-8684-9dd7f46d3407_0: 2048→1024",
+  "mb": 0.945732,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 1255 см, в ОС 600 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "school_idle": {
+  "src": "school.glb",
+  "tris_before": 42646,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1999.9999046325684,
+   1485.5957984924316,
+   797.4853515625
+  ],
+  "os_cm": [
+   2000,
+   600
+  ],
+  "scale": 20.000000596046466,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_c647f676-7f64-46b5-b0aa-4e03e1bec4de_0: 2048→1024",
+  "mb": 1.272432,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 797 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "shack_brick_idle": {
+  "src": "shack_brick.glb",
+  "tris_before": 41464,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   600.0,
+   458.3861827850342,
+   396.1669921875
+  ],
+  "os_cm": [
+   600,
+   600
+  ],
+  "scale": 6.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_9443356b-3d5c-4a68-b6ab-a86eb0ab3a4f_0: 2048→1024",
+  "mb": 0.799736,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (600 см); высота 396 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "shack_wood_idle": {
+  "src": "shack_wood.glb",
+  "tris_before": 43847,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   600.0,
+   352.734375,
+   444.873046875
+  ],
+  "os_cm": [
+   600,
+   600
+  ],
+  "scale": 6.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_49278618-db0c-49d5-a060-ea10d5e03afe_0: 2048→1024",
+  "mb": 0.9903,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (600 см); высота 445 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
+ },
+ "shop_cafe_bld_idle": {
+  "src": "shop_cafe_bld.glb",
+  "tris_before": 46540,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1000.0,
+   986.87744140625,
+   639.16015625
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 10.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_989535c2-5c09-4964-ac07-cb6e4129d76f_0: 2048→1024",
+  "mb": 0.777528,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "shop_general_idle": {
+  "src": "shop_general.glb",
+  "tris_before": 42849,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   800.0,
+   387.9639148712158,
+   525.0
+  ],
+  "os_cm": [
+   800,
+   600
+  ],
+  "scale": 8.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b1421ece-bf31-4049-9ca0-abebd01e9ccd_0: 2048→1024",
+  "mb": 0.83026,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "shop_grocery_bld_idle": {
+  "src": "shop_grocery_bld.glb",
+  "tris_before": 39834,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   999.9999523162842,
+   543.4570074081421,
+   486.75537109375
+  ],
+  "os_cm": [
+   1000,
+   600
+  ],
+  "scale": 10.000000298023233,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_dd37ddcb-dbf3-472e-847b-2746839b6a80_0: 2048→1024",
+  "mb": 0.949684,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "shop_pharmacy_bld_idle": {
+  "src": "shop_pharmacy_bld.glb",
+  "tris_before": 40316,
+  "tris_after": 14698,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   800.0,
+   396.16698026657104,
+   466.650390625
+  ],
+  "os_cm": [
+   800,
+   600
+  ],
+  "scale": 8.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_9a1403da-9aaf-4487-97e8-46cf3c33be23_0: 2048→1024",
+  "mb": 0.826568,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "sign_diner_b_idle": {
+  "src": "sign_diner_b.glb",
+  "tris_before": 46896,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   352.23388671875,
+   74.03563559055328,
+   500.0
+  ],
+  "os_cm": [
+   100,
+   500
+  ],
+  "scale": 5.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_439e22d8-3979-455e-8f03-d9aaa12b6838_0: 2048→1024",
+  "mb": 0.611476,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "sign_diner_c_idle": {
+  "src": "sign_diner_c.glb",
+  "tris_before": 45622,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   250.06103515625,
+   43.75457763671875,
+   500.0
+  ],
+  "os_cm": [
+   100,
+   500
+  ],
+  "scale": 5.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_cac3d934-7fbf-4936-8c49-4ebd6f4e6553_0: 2048→1024",
+  "mb": 0.625044,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "sign_diner_d_idle": {
+  "src": "sign_diner_d.glb",
+  "tris_before": 42562,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   114.09912109375,
+   24.017340689897537,
+   200.0
+  ],
+  "os_cm": [
+   100,
+   200
+  ],
+  "scale": 2.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_000cd81c-f21f-4539-b980-c5a7a98d25ac_0: 2048→1024",
+  "mb": 0.57726,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-12"
+ },
+ "sign_diner_idle": {
+  "src": "sign_diner.glb",
+  "tris_before": 48454,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   324.005126953125,
+   44.85701769590378,
+   500.0
+  ],
+  "os_cm": [
+   100,
+   500
+  ],
+  "scale": 5.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_e9829d5f-197f-41c2-beb1-e39b7925217b_0: 2048→1024",
+  "mb": 0.63824,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "sign_letters_diner_idle": {
+  "src": "sign_letters_diner.glb",
+  "tris_before": 44512,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   460.1170063018799,
+   25.90685486793518,
+   119.99999284744263
+  ],
+  "os_cm": [
+   100,
+   120
+  ],
+  "scale": 4.601170138076293,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_7d7250d7-86a0-4dcb-a644-d42620a68972_0: 2048→1024",
+  "mb": 0.461404,
+  "jpeg_q": 85,
+  "warnings": [
+   "4 отдельн. крупн. кус(ка/ков) в стороне от главного — возможно, лишняя вещь с картинки (рюкзак, ящик…) — посмотреть на превью"
+  ],
+  "date": "2026-10-11"
+ },
+ "sign_motel_b_idle": {
+  "src": "sign_motel_b.glb",
+  "tris_before": 46056,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   245.489501953125,
+   43.16252917051315,
+   600.0
+  ],
+  "os_cm": [
+   100,
+   600
+  ],
+  "scale": 6.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_56bda04d-1c61-466a-ad3c-55bda9f8f18f_0: 2048→1024",
+  "mb": 0.594624,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "sign_motel_idle": {
+  "src": "sign_motel.glb",
+  "tris_before": 45262,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   349.10888671875,
+   70.17516195774078,
+   600.0
+  ],
+  "os_cm": [
+   100,
+   600
+  ],
+  "scale": 6.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2be179e6-1ff5-485e-aa4a-aeadfad0a879_0: 2048→1024",
+  "mb": 0.575272,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "supermarket_idle": {
+  "src": "supermarket.glb",
+  "tris_before": 36812,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   2000.0,
+   863.6474132537842,
+   662.04833984375
+  ],
+  "os_cm": [
+   2000,
+   600
+  ],
+  "scale": 20.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_a4b70078-0cf2-45ac-9ec1-97c86e5abf90_0: 2048→1024",
+  "mb": 0.760376,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "tent_big_idle": {
+  "src": "tent_big.glb",
+  "tris_before": 49345,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   806.3983917236328,
+   691.8665885925293,
+   399.9999761581421
+  ],
+  "os_cm": [
+   100,
+   400
+  ],
+  "scale": 8.063984250030762,
+  "rotate": 90,
+  "mount": "floor",
+  "textures": "tripo_image_fedd203d-c448-4c82-a158-e9672ab219e4_0: 2048→1024",
+  "mb": 0.565352,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "tent_camp_aframe_idle": {
+  "src": "tent_camp_aframe.glb",
+  "tris_before": 45077,
+  "tris_after": 7839,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   245.19081115722656,
+   200.3399133682251,
+   139.9999976158142
+  ],
+  "os_cm": [
+   100,
+   140
+  ],
+  "scale": 2.4519080705505076,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_1ca91afe-ec49-4934-aa4f-d3cb51483372_0: 2048→1024",
+  "mb": 0.393332,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "tent_dome_idle": {
+  "src": "tent_dome.glb",
+  "tris_before": 46136,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "furniture",
+  "size_cm": [
+   239.82882499694824,
+   215.9982204437256,
+   129.99999523162842
+  ],
+  "os_cm": [
+   100,
+   130
+  ],
+  "scale": 2.3982884810269116,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_bf20db5e-7aae-4b04-a682-7a420170e913_0: 2048→1024",
+  "mb": 0.356156,
+  "jpeg_q": 85,
+  "warnings": [],
+  "date": "2026-10-11"
+ },
+ "tent_greenhouse_b_idle": {
+  "src": "tent_greenhouse_b.glb",
+  "tris_before": 46242,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   600.0,
+   599.30419921875,
+   318.85986328125
+  ],
+  "os_cm": [
+   600,
+   600
+  ],
+  "scale": 6.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_43957bd6-3e4e-4d3b-8f22-c52f652f44a9_0: 2048→1024",
+  "mb": 0.613064,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (600 см); высота 319 см, в ОС 600 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "tent_greenhouse_idle": {
+  "src": "tent_greenhouse.glb",
+  "tris_before": 46242,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   600.0,
+   599.30419921875,
+   318.85986328125
+  ],
+  "os_cm": [
+   600,
+   600
+  ],
+  "scale": 6.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_8b877218-3d75-499d-95e5-c14dd8b5b938_0: 2048→1024",
+  "mb": 0.613064,
+  "jpeg_q": 85,
+  "warnings": [
+   "лежит плашмя / свёрнуто — подогнано по длинной стороне (600 см); высота 319 см, в ОС 600 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "tent_military_idle": {
+  "src": "tent_military.glb",
+  "tris_before": 47444,
+  "tris_after": 14699,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   568.6914443969727,
+   399.09753799438477,
+   250.0
+  ],
+  "os_cm": [
+   100,
+   250
+  ],
+  "scale": 5.686914265879903,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_ce6acc28-5368-4081-8cba-c03a614bdae3_0: 2048→1024",
+  "mb": 0.5655,
+  "jpeg_q": 85,
+  "warnings": [
+   "открытые края (дыры в сетке): 3354 рёбер"
+  ],
+  "date": "2026-10-11"
+ },
+ "van_idle": {
+  "src": "van.glb",
+  "tris_before": 44804,
+  "tris_after": 7840,
+  "limit": 8000,
+  "class": "large",
+  "size_cm": [
+   500.0,
+   276.30615234375,
+   260.833740234375
+  ],
+  "os_cm": [
+   500,
+   150
+  ],
+  "scale": 5.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_2ce0511d-2bce-4963-b6b8-f26d60497653_0: 2048→1024",
+  "mb": 0.444184,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 261 см, в ОС 150 см"
+  ],
+  "date": "2026-10-12"
+ },
+ "warehouse_idle": {
+  "src": "warehouse.glb",
+  "tris_before": 40572,
+  "tris_after": 14700,
+  "limit": 15000,
+  "class": "large",
+  "size_cm": [
+   1400.0,
+   834.1552734375,
+   372.900390625
+  ],
+  "os_cm": [
+   1400,
+   600
+  ],
+  "scale": 14.0,
+  "rotate": 270,
+  "mount": "floor",
+  "textures": "tripo_image_b94b88fb-a91a-4a40-a034-16340e646056_0: 2048→1024",
+  "mb": 0.716144,
+  "jpeg_q": 85,
+  "warnings": [
+   "подогнано по ширине; высота 373 см, в ОС 600 см"
+  ],
+  "date": "2026-10-11"
  }
 }

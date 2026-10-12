@@ -870,7 +870,9 @@ CAT_TITLES = {"furniture": "Мебель", "workbench": "Верстаки", "con
               "building": "Строительное и двери", "decor": "Декор", "plant": "Растения", "resource": "Точки ресурсов",
               "item": "Предметы", "tool": "Инструменты", "weapon": "Оружие", "clothing": "Одежда",
               "character": "Персонажи", "creature": "Существа", "vehicle": "Машины",
-              "decor_set": "Декор для обстановки (не из плана ОС)"}
+              "decor_set": "Декор для обстановки (не из плана ОС)", "building": "Дома и здания (TRIPO_BUILDINGS)",
+              "finish": "Отделка и стены 1 × 1 м", "block": "Блоки 1 × 1 × 1 м", "street": "Для улицы",
+              "mine": "Шахта", "prison": "Тюрьма"}
 
 
 def collect(plan, out_dir, prev_dir, no_docs):
