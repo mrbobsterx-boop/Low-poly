@@ -67,3 +67,24 @@
 Если пришла модель с ригом Tripo (собака) — **риг выкинуть** (он кривой), оставить сетку. Размер — настоящий (овчарка
 ≈ 0,65 м в холке, медведь ≈ 1,1–1,5, лось ≈ 2, крыса ≈ 0,25 в длину, кролик ≈ 0,4, ворона ≈ 0,45), стоит на y = 0,
 мордой к −Y. Скелет четвероногого — **отдельным заданием потом**.
+
+## 5. Дозаказ (после партии 2026-10-12 — чего не хватило)
+
+| Файл (картинка) | Слева → направо / что это |
+|---|---|
+| `wear_set_1` | `hat_ws_headscarf`, `hat_iw_turban`, `goggles_iw_brass` |
+| `wear_set_2` | `mask_iw_scarf`, `back_iw_rugs`, `mask_rd_teeth` |
+| `wear_set_3` | `hat_rd_spiked`, `hat_fm_sou`, `mask_fm_tally` |
+| `wear_set_4` | `goggles_gr`, `back_gr_radio`, `mask_s9_visor` |
+| `wear_set_5` | `hat_s9_helmet`, `goggles_s9`, `back_s9_case` |
+| № 198, 200, 202 | как в разделе 1 |
+| `rats_set` | `rat_big`, `rat_mutant` |
+| `joint_pipes_set_1` | `joint_pipes_L_up`, `joint_pipes_L_down`, `joint_pipes_T_up` |
+| `joint_duct_set` | `joint_duct_L`, `joint_duct_T`, `joint_duct_up` |
+| `joint_duct_set_b` | `duct_end_cap`, `duct_end_grille` |
+| `joint_misc_set` | `joint_cablech_L`, `joint_beam_L`, `joint_molding_L` |
+| `joint_misc_set_b` | `mine_rails_curve`, `fence_post_corner` |
+| люди (по одному) | `char_ws_m_big`, `char_s9_f_tech`, `char_free_f_nurse`, `char_miner_m`, `char_miner_m_big`, `char_miner_f`, `char_miner_m_old`, `char_miner_f_young` |
+
+Уже есть из прошлой партии: `joint_pipes_T` (тройник), `joint_pipes_X`, `pipes_end_caps`, `decor_duct_cross` (= `joint_duct_X`),
+`decor_duct_straight`. Новые уголки подгонять **под те же сечения**, что и прямые куски (раздел 2).
