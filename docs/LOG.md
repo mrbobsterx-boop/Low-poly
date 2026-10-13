@@ -115,3 +115,4 @@
 - 2026-10-13: для редактора анимаций в игре — export/anim/anim_actions.json (73 действия × кандидаты из Mixamo и Tripo, поле pinned для ⭐), tools/anim_actions.py; задание чату игры — FOR_GAME.md.
 - 2026-10-13: животные — скелет и анимации (tools/animal_rig.py): 20 зверей, 4 зайца, 6 птиц; анимации idle/walk/run/eat/attack/hit/death (птицы — fly), внутри export/<id>_idle.glb; скорости — export/anim/animals_info.json; лист renders/_review/animals_2026-10-13.jpg; для игры — FOR_GAME.md.
 - 2026-10-13: анимации — закреплённые автором ⭐ (32 действия, из редактора игры «→ Claude») записаны в `export/anim/anim_actions.json` (`pinned` — списки; в игре — `data/config/anim_actions.json`).
+- 2026-10-13: анимации — +24 действия (машина, велосипед, бокс, отжимания, укрытие, фонарик и др.) для анимаций, которые ни к чему не подходили; новые ⭐ автора (70 действий) — `export/anim/anim_actions.json` (как в игре).
