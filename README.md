@@ -37,7 +37,17 @@ Tripo (автор) ──► Google Диск «Shelter Tripo» (сырые GLB, 
 | 11 Растения и точки ресурсов | `1NnKafHKCQ83qjtgBhqsgKIAUycdG9Yey` |
 | 12 Предметы, инструменты, оружие, одежда | `1bJp7OilAS8mtEoGrc0bie5bJr6qN1F6t` |
 | 13 Персонажи и существа | `1H_PLt4oX7a71q_IhjbdgYwnyu7gVmBeU` |
+| 13б Персонажи с ригом (сюда — новые) | `17jm_mUhIXZQ3h0zf3MVMrg-EfxzNBVmz` |
 | 14 Прочее | `138NID0PQPlSHmOtKwMIgvfMm9X78PWhE` |
+| 15 Анимации (Mixamo) | `1STfM0xIPkg-Knkd2dcMqteNyI7vdmL9d` |
+| 16 Здания, улица, вывески | `1P2ej6jXd5n5OVBFHGDIGxoyFGtO0u_AD` |
+| 17 Шахта и тюрьма | `1Xm8tvgSkrTNDLiKTHkmjyaWLmIuu019W` |
+| 18 Отделка стен и блоки | `1b0SwPO8dgR7czF24-HRdT0oNmWYQfQeM` |
+| Дубли (можно удалить) | `11O9KR--EchU8p2mfN5JTMOrGQth7pDv4` |
+
+**2026-10-13:** все модели разложены по папкам и названы как в проекте (`<имя>.glb`); копии — в «Дубли». Список
+имя → id файла — `tripo/drive.json` (`python3 tools/drive_fetch.py` качает всё). Наборы (несколько вещей в одной модели)
+названы `set_…`; их куски — в `export/` (`tools/split_parts.py`).
 | 15 Анимации (Mixamo, FBX) | `1STfM0xIPkg-Knkd2dcMqteNyI7vdmL9d` — что с ними делать: `docs/ANIMATIONS.md` |
 
 **Скачать раздел:** `python3 tools/drive_fetch.py --folder <id> tripo/` (с подпапками, имена как на Диске).
