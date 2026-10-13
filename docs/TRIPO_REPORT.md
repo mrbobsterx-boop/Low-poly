@@ -1101,3 +1101,21 @@
 - Статичные версии этих 52 заменены (тот же файл `export/<имя>_idle.glb`).
 
 **Ещё без скелета (20):** `char_f_mechanic`, `char_f_military`, `char_f_military_b`, `char_fm_m`, `char_fm_m_young`, `char_free_f_denim`, `char_gr_m_big`, `char_iw_m_old`, `char_m_adventurer`, `char_m_hoodie`, `char_m_military`, `char_m_military_b`, `char_m_tactical`, `char_rd_m_thin`, `char_rd_raider`, `char_s9_f`, `char_s9_m_guard`, `char_ws_m_old`, `zombie_office`, `zombie_runner`.
+
+### Дозагрузка с ригом (2026-10-13, вторая)
+
+Ещё **9 персонажей со скелетом**: `char_f_mechanic`, `char_fm_m`, `char_fm_m_young`, `char_free_f_denim`, `char_gr_m_big`,
+`char_iw_m_old`, `char_s9_f`, `char_s9_m_guard`, `char_ws_m_old` — опознаны по сетке, `char_process --rot 0`, поза покоя
+выровнена (`rig_normalize`), ходьба проверена.
+
+⚠ **Риг Tripo сломан у скелетов из 54 костей** — `zombie_runner` и `body_m_rig_c`: Tripo не привязал сетку к костям, вся
+сетка висит на одной кости Hips (руки и ноги не двигаются). Пробовал перенести привязку с `body_m_rig` — у тела искажается
+плечо, у зомби руки гнутся неправильно и тянутся лишние кусочки сетки; не годится. `zombie_runner` оставлен статичным,
+`body_m_rig_c` — как был (анимации на нём не работают). Их нужно **заригать заново** в Tripo (или на mixamo.com).
+`tools/rig_normalize.py`: добавлено выравнивание поворота кости вокруг своей оси (roll) без движения сетки.
+
+**Ещё без скелета (11):** `char_f_military`, `char_f_military_b`, `char_m_adventurer`, `char_m_hoodie`, `char_m_military`,
+`char_m_military_b`, `char_m_tactical`, `char_rd_m_thin`, `char_rd_raider`, `zombie_office`, `zombie_runner` (риг сломан).
+
+**Диск:** файлы с ригом в «13 Персонажи и существа» названы как в проекте (`<имя>.glb`), прежние версии без рига — в
+«Дубли» с пометкой «(без рига)»; `tripo/drive.json` указывает на версии с ригом.

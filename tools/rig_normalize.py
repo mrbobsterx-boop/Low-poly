@@ -5,8 +5,9 @@
 
 Tripo строит каждому персонажу свой скелет Mixamo: кости те же, но в позе покоя руки, ноги и пальцы чуть под другим
 углом. Анимация хранит повороты костей в готовом виде, поэтому на «чужой» позе покоя рука, например, задирается.
-Здесь каждая кость персонажа поворачивается так, чтобы смотреть в мире ровно как у эталона (длина костей — своя),
-сетка деформируется вместе со скелетом, и это становится новой позой покоя. Файл перезаписывается.
+Сначала у каждой кости поворот вокруг своей оси (roll) ставится как у эталона — без движения сетки (у скелетов Tripo из
+54 костей он отличается на 90°). Потом каждая кость поворачивается так, чтобы смотреть в мире ровно как у эталона (длина
+костей — своя), сетка деформируется вместе со скелетом, и это становится новой позой покоя. Файл перезаписывается.
 """
 import os
 import sys
@@ -49,6 +50,14 @@ def normalize(path, ref):
             break
     meshes = [o for o in sc.objects if o.type == "MESH" and o.find_armature() == arm]
     aw_inv = arm.matrix_world.to_quaternion().inverted()
+    # 1) поворот кости вокруг своей оси (roll) — как у эталона, сетку не трогая: у скелетов Tripo из 54 костей кости
+    #    повёрнуты вокруг оси на 90°, и выравнивание позой развернуло бы всю модель боком
+    bpy.context.view_layer.objects.active = arm
+    bpy.ops.object.mode_set(mode="EDIT")
+    for eb in arm.data.edit_bones:
+        if eb.name in ref:
+            eb.align_roll((aw_inv @ ref[eb.name]).to_matrix().col[2])
+    bpy.ops.object.mode_set(mode="OBJECT")
     pose, n = {}, 0
     for b in order(arm):
         rel = b.parent.matrix_local.inverted() @ b.matrix_local if b.parent else b.matrix_local
