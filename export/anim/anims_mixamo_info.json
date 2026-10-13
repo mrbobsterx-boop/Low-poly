@@ -634,5 +634,35 @@
   "mixamorig:Spine2"
  ],
  "scale_fbx": 0.009999999776482582,
- "mb": 12.82
+ "mb": 12.82,
+ "speed_mps": {
+  "aa_run": 4.36,
+  "aa_walk": 1.65,
+  "cover_sneak_l": 1.09,
+  "cover_sneak_r": 1.09,
+  "crawl": 0.47,
+  "injured_run": 2.28,
+  "injured_walk": 1.18,
+  "injured_walk_b": 0.72,
+  "injured_walk_c": 1.65,
+  "jog": 1.81,
+  "mutant_run": 2.18,
+  "mutant_walk": 1.21,
+  "rifle_walk": 1.18,
+  "run": 5.43,
+  "sneak": 0.97,
+  "sneak_l": 0.97,
+  "sneak_r": 1.04,
+  "strafe": 1.64,
+  "swim": 0.44,
+  "walk": 1.77,
+  "walk_b": 0.9,
+  "walk_c": 0.9,
+  "walk_turn": 0.71,
+  "zombie_crawl": 0.4,
+  "zombie_crawl_run": 2.12,
+  "zombie_run": 2.85,
+  "zombie_walk": 0.32
+ },
+ "_speed_comment": "Родная скорость ходьбы/бега (м/с, на теле Tripo 1,8 м): с такой скоростью игра должна двигать персонажа, иначе ноги скользят. Можно менять скорость анимации пропорционально скорости движения."
 }

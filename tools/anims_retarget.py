@@ -116,6 +116,11 @@ def main(src, body, out):
                 rot[b].append((q.w, q.x, q.y, q.z))
                 if b == hips:
                     loc.append(tuple(basis.translation))
+        for b in names:                                    # знак кватерниона — без скачков между кадрами
+            qs = rot[b]                                    # (q и −q — один поворот, но игра между кадрами
+            for i in range(1, len(qs)):                    #  крутила бы кость «длинным путём» — рывок)
+                if sum(x * y for x, y in zip(qs[i], qs[i - 1])) < 0:
+                    qs[i] = tuple(-x for x in qs[i])
         new = bpy.data.actions.new(name)
         new.use_fake_user = True
         tgt.animation_data.action = new
