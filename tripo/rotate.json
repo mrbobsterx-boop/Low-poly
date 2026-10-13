@@ -557,5 +557,21 @@
  "char_free_m_teacher": 270,
  "rug_persian": 0,
  "rug_round_braided": 270,
- "rug_bear_skin": 0
+ "rug_bear_skin": 0,
+ "finish_brick_damaged_b": 90,
+ "finish_concrete_damaged": 90,
+ "finish_brick_ruined": 90,
+ "finish_metal_ruined": 90,
+ "facade_concrete_window_damaged": 90,
+ "facade_plaster_window_damaged": 90,
+ "facade_plaster_window_damaged_b": 90,
+ "facade_wood_window_ruined": 90,
+ "facade_wood_window_damaged": 90,
+ "facade_brick_door_ruined": 90,
+ "roof_gable_metal_ok": 270,
+ "roof_gable_metal_damaged": 270,
+ "roof_gable_metal_ruined": 270,
+ "roof_flat_damaged": 270,
+ "roof_flat_ruined": 270,
+ "mine_winch": 90
 }

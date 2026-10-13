@@ -3218,5 +3218,169 @@
   ],
   "fit": "width",
   "cat": "decor_set"
+ },
+ "finish_brick_damaged_b": {
+  "name": "№20 Кирпич — испорченное (вариант)",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "finish_concrete_damaged": {
+  "name": "№2 Бетон — испорченное",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "finish_brick_ruined": {
+  "name": "№21 Кирпич — наполовину разрушенное",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "finish_metal_ruined": {
+  "name": "№18 Металл — наполовину разрушенное",
+  "size": [
+   100,
+   100
+  ],
+  "fit": "exact",
+  "mount": "wall",
+  "depth": 10,
+  "cat": "finish"
+ },
+ "facade_concrete_window_damaged": {
+  "name": "№38 Бетонная панель с окном — испорченное",
+  "size": [
+   300,
+   300
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "facade_plaster_window_damaged": {
+  "name": "№32 Штукатурка с окном — испорченное",
+  "size": [
+   300,
+   300
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "facade_plaster_window_damaged_b": {
+  "name": "№32 Штукатурка с окном — испорченное (вариант)",
+  "size": [
+   300,
+   300
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "facade_wood_window_ruined": {
+  "name": "№36 Доски с окном — наполовину разрушенное",
+  "size": [
+   300,
+   300
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "facade_wood_window_damaged": {
+  "name": "№35 Доски с окном — испорченное",
+  "size": [
+   300,
+   300
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "facade_brick_door_ruined": {
+  "name": "№30 Кирпич с дверью — наполовину разрушенное",
+  "size": [
+   300,
+   300
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "roof_gable_metal_ok": {
+  "name": "№49 Скат, железо — целое",
+  "size": [
+   300,
+   150
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "roof_gable_metal_damaged": {
+  "name": "№50 Скат, железо — испорченное",
+  "size": [
+   300,
+   150
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "roof_gable_metal_ruined": {
+  "name": "№51 Скат, железо — наполовину разрушенное",
+  "size": [
+   300,
+   150
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "roof_flat_damaged": {
+  "name": "№53 Плоская крыша — испорченное",
+  "size": [
+   300,
+   150
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "roof_flat_ruined": {
+  "name": "№54 Плоская крыша — наполовину разрушенное",
+  "size": [
+   300,
+   150
+  ],
+  "fit": "width",
+  "cat": "building",
+  "limit": 15000
+ },
+ "mine_winch": {
+  "name": "№172 Лебёдка (шахта)",
+  "size": [
+   150,
+   350
+  ],
+  "fit": "height",
+  "cat": "mine",
+  "limit": 15000
  }
 }

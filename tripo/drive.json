@@ -568,5 +568,21 @@
  "zombie_hospital": "1Ixr8xMUq0_QxmEEOmTzG5fB4TudPYI9N",
  "zombie_fat": "196ajr6RVSm5o2p1U9UCdACQEju_ccv1f",
  "zombie_runner": "1YQm6CrqBqyH3wcjXWx8g9SHPBb1VKalo",
- "zombie_firefighter": "1rep3MxqNTWt7hly5piTQFbPQEbjONfdC"
+ "zombie_firefighter": "1rep3MxqNTWt7hly5piTQFbPQEbjONfdC",
+ "finish_brick_damaged_b": "1XfKBHCZeAM_VsfYz2HA2YYcmABWupDcB",
+ "finish_concrete_damaged": "1fPPvbP8GI1E8uc4y9slEN5G1Bs-IzJbX",
+ "finish_brick_ruined": "1MJv9dW9JHm2GD3P3wri_gHQxWZGGe_xP",
+ "finish_metal_ruined": "1vSWI7kKvJ1EMBNDidSs-s7OQCaEVzjqJ",
+ "facade_concrete_window_damaged": "1hOvbtAjVpdMhW5VdgKWMjYvWpkifsSy1",
+ "facade_plaster_window_damaged": "1Y42HwcMwb416OcPCKu3uHi5qT2V1RRi7",
+ "facade_plaster_window_damaged_b": "190SBr0LvUlVzsH3HNKWP9e5Sm84v75az",
+ "facade_wood_window_ruined": "1IqKuPtT7WjpGHyO5ppx_lYXRRfMwcFkk",
+ "facade_wood_window_damaged": "1ZTM8TKZ4pX6eBaWIUM-hpE4Xnp4nAs-7",
+ "facade_brick_door_ruined": "1-73zQdA2kjdkZzjQJzayi9EhdPAxX-BX",
+ "roof_gable_metal_ok": "16ctpBV248PTSv6Cw75EsgOie95SlYqHn",
+ "roof_gable_metal_damaged": "1qpQ3sOVyhkiebHb69Qml45aFGCMX5OxD",
+ "roof_gable_metal_ruined": "1OqQCMXZCiGHsv6u2gokgTupmRW7U0Go7",
+ "roof_flat_damaged": "1HgqFr4WnH5--5y4WFzpPAUyboD9GpXa-",
+ "roof_flat_ruined": "11nfTiQ1RuHhlocQuYtfXS8sfG2qy8hfj",
+ "mine_winch": "1ki3_RZRSxYNDcoqj1BVuXIhiRriiE5IZ"
 }
