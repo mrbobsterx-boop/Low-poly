@@ -1083,3 +1083,21 @@
 | `zombie_run` | Scary Zombie Pack/zombie run | 25 | 0.8 |
 | `zombie_scream` | Scary Zombie Pack/zombie scream | 85 | 2.8 |
 | `zombie_walk` | Scary Zombie Pack/zombie walk | 122 | 4.03 |
+
+---
+
+## Персонажи со скелетом (2026-10-13) — `renders/_review/rigged_chars_2026-10-13.jpg`
+
+Автор загрузил в «13 Персонажи и существа» 53 файла с ригом Tripo (Гуманоид, Mixamo). Опознаны по сетке (то же число
+треугольников и точек, что у уже обработанных), имена — прежние. **52 со скелетом** (65–66 костей `mixamorig:…`),
+`old+man+3d+model (2)` (= `char_iw_m_old`) — **без скелета**, остался статичным.
+
+- `tools/char_process.py --rot 0`: у моделей с ригом Tripo перед уже к камере (поворот 270°, как у статичных, ставил их
+  боком — переделано). Рост — как у статичных версий. `_idle.glb` — сетка + скелет, 0,66–0,82 МБ, анимаций внутри нет.
+- **`tools/rig_normalize.py` — поза покоя выровнена по `body_m_rig`.** Tripo строит каждому свой скелет: кости те же, но в
+  покое руки и пальцы под другим углом, и общая анимация задирала руку (было у 7: `char_f_police_b`, `char_free_m_office`,
+  `char_gr_m`, `char_prisoner_m_old`, `char_s9_m_subject`, `char_iw_f`, `char_free_f_rain`). Теперь у всех 52 поза покоя
+  как у эталона — `export/anim/anims_mixamo.glb` ложится на всех одинаково (лист: все идут, руки внизу).
+- Статичные версии этих 52 заменены (тот же файл `export/<имя>_idle.glb`).
+
+**Ещё без скелета (20):** `char_f_mechanic`, `char_f_military`, `char_f_military_b`, `char_fm_m`, `char_fm_m_young`, `char_free_f_denim`, `char_gr_m_big`, `char_iw_m_old`, `char_m_adventurer`, `char_m_hoodie`, `char_m_military`, `char_m_military_b`, `char_m_tactical`, `char_rd_m_thin`, `char_rd_raider`, `char_s9_f`, `char_s9_m_guard`, `char_ws_m_old`, `zombie_office`, `zombie_runner`.
