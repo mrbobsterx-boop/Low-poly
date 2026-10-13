@@ -7,3 +7,6 @@ tripo/*.glb
 
 # и в подпапках (проба стиля и др.)
 tripo/**/*.glb
+
+# временные кадры превью животных (tools/animal_rig.py)
+renders/_tmp_animals/

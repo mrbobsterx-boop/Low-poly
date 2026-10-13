@@ -1136,3 +1136,21 @@
 - Для игры: родная скорость ходьбы/бега — `anims_mixamo_info.json` → `speed_mps` (`walk` 1,77 м/с, `run` 5,43), иначе
   ноги скользят; анимации уже на скелете тел Tripo — в Godot **не включать** ещё одно перенаправление (retarget/BoneMap)
   поверх, иначе позы исказятся.
+
+## Животные: скелет и анимации (2026-10-13) — `renders/_review/animals_2026-10-13.jpg`
+
+Tripo/Mixamo не делают риг для зверей, поэтому скелет и анимации делает `tools/animal_rig.py` (сам, без ручной работы):
+- по сетке находятся лапы (следы на полу), живот и спина, голова (впереди передних лап), хвост, у птиц — крылья;
+- ставятся кости: звери — 18 (таз, спина, шея, голова, хвост ×2, 4 лапы × 3), птицы — 9 (тело, голова, хвост, крылья ×2, лапы);
+- каждой вершине — веса ближайших костей (лапа не тянет соседнюю лапу), сглажено по сетке;
+- анимации по формулам, внутри того же `export/<id>_idle.glb`.
+
+| Группа | Кто | Анимации |
+|---|---|---|
+| Звери (20) | dog_feral_odinochnaya, dog_husky, dog_raider, dog_rottweiler, dog_shepherd, dog_terrier, dog_thin, dog_zombie, wolf, bear_black/brown/mutant, deer_red/roe/white, moose_bull/cow/mutant, rat_grey, rat_pest_krysa | idle, walk (шаг), run (галоп), eat, attack (бросок), hit, death (на бок) |
+| Зайцы (4) | rabbit_grey, rabbit_hare, rabbit_white, rabbit_wild_krolik | idle, walk и run (прыжками), eat, hit, death |
+| Птицы (6) | crow, pigeon, seagull, vulture, owl, duck | idle и walk (крылья сложены), fly (машет), eat (клюёт), hit, death |
+
+Файлы 0,3–1,5 МБ. Скорость ходьбы/бега на месте и длительности — `export/anim/animals_info.json`.
+Сырые модели без костей — `tripo/static/` (не в git), из них скрипт пересобирает заново.
+Не сделано: `mutant_crawler_polzun` (не зверь — существо с руками, нужен свой риг).

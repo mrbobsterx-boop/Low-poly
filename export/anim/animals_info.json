@@ -1,0 +1,1292 @@
+{
+ "bear_black": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.51,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 24,
+    "seconds": 0.767,
+    "loop": true,
+    "speed_mps": 0.65
+   },
+   "run": {
+    "frames": 14,
+    "seconds": 0.433,
+    "loop": true,
+    "speed_mps": 1.87
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "bear_brown": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.53,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 25,
+    "seconds": 0.8,
+    "loop": true,
+    "speed_mps": 0.69
+   },
+   "run": {
+    "frames": 15,
+    "seconds": 0.467,
+    "loop": true,
+    "speed_mps": 1.93
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "bear_mutant": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.8,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 29,
+    "seconds": 0.933,
+    "loop": true,
+    "speed_mps": 0.81
+   },
+   "run": {
+    "frames": 17,
+    "seconds": 0.533,
+    "loop": true,
+    "speed_mps": 2.29
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "crow": {
+  "kind": "bird",
+  "bones": 9,
+  "mb": 0.29,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 15,
+    "seconds": 0.467,
+    "loop": true,
+    "speed_mps": 0.27
+   },
+   "fly": {
+    "frames": 13,
+    "seconds": 0.4,
+    "loop": true,
+    "note": "крылья машут на месте; полёт (высота, путь) задаёт игра"
+   },
+   "eat": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false
+   }
+  }
+ },
+ "deer_red": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.55,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 33,
+    "seconds": 1.067,
+    "loop": true,
+    "speed_mps": 0.9
+   },
+   "run": {
+    "frames": 19,
+    "seconds": 0.6,
+    "loop": true,
+    "speed_mps": 2.6
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "deer_roe": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.53,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": true,
+    "speed_mps": 0.83
+   },
+   "run": {
+    "frames": 18,
+    "seconds": 0.567,
+    "loop": true,
+    "speed_mps": 2.38
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "deer_white": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.56,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 32,
+    "seconds": 1.033,
+    "loop": true,
+    "speed_mps": 0.87
+   },
+   "run": {
+    "frames": 18,
+    "seconds": 0.567,
+    "loop": true,
+    "speed_mps": 2.59
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "dog_feral_odinochnaya": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.87,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 24,
+    "seconds": 0.767,
+    "loop": true,
+    "speed_mps": 0.65
+   },
+   "run": {
+    "frames": 14,
+    "seconds": 0.433,
+    "loop": true,
+    "speed_mps": 1.86
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "dog_husky": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.51,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 22,
+    "seconds": 0.7,
+    "loop": true,
+    "speed_mps": 0.58
+   },
+   "run": {
+    "frames": 13,
+    "seconds": 0.4,
+    "loop": true,
+    "speed_mps": 1.66
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "dog_raider": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.52,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 20,
+    "seconds": 0.633,
+    "loop": true,
+    "speed_mps": 0.54
+   },
+   "run": {
+    "frames": 12,
+    "seconds": 0.367,
+    "loop": true,
+    "speed_mps": 1.5
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "dog_rottweiler": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.52,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 22,
+    "seconds": 0.7,
+    "loop": true,
+    "speed_mps": 0.57
+   },
+   "run": {
+    "frames": 13,
+    "seconds": 0.4,
+    "loop": true,
+    "speed_mps": 1.62
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "dog_shepherd": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.51,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 19,
+    "seconds": 0.6,
+    "loop": true,
+    "speed_mps": 0.53
+   },
+   "run": {
+    "frames": 11,
+    "seconds": 0.333,
+    "loop": true,
+    "speed_mps": 1.55
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "dog_terrier": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.37,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": true,
+    "speed_mps": 0.45
+   },
+   "run": {
+    "frames": 10,
+    "seconds": 0.3,
+    "loop": true,
+    "speed_mps": 1.21
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "dog_thin": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.52,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 21,
+    "seconds": 0.667,
+    "loop": true,
+    "speed_mps": 0.55
+   },
+   "run": {
+    "frames": 12,
+    "seconds": 0.367,
+    "loop": true,
+    "speed_mps": 1.61
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "dog_zombie": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.59,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 21,
+    "seconds": 0.667,
+    "loop": true,
+    "speed_mps": 0.58
+   },
+   "run": {
+    "frames": 12,
+    "seconds": 0.367,
+    "loop": true,
+    "speed_mps": 1.7
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "duck": {
+  "kind": "bird",
+  "bones": 9,
+  "mb": 0.28,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 13,
+    "seconds": 0.4,
+    "loop": true,
+    "speed_mps": 0.34
+   },
+   "fly": {
+    "frames": 11,
+    "seconds": 0.333,
+    "loop": true,
+    "note": "крылья машут на месте; полёт (высота, путь) задаёт игра"
+   },
+   "eat": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false
+   }
+  }
+ },
+ "moose_bull": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.55,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 38,
+    "seconds": 1.233,
+    "loop": true,
+    "speed_mps": 1.04
+   },
+   "run": {
+    "frames": 22,
+    "seconds": 0.7,
+    "loop": true,
+    "speed_mps": 2.98
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "moose_cow": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.5,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 38,
+    "seconds": 1.233,
+    "loop": true,
+    "speed_mps": 1.04
+   },
+   "run": {
+    "frames": 22,
+    "seconds": 0.7,
+    "loop": true,
+    "speed_mps": 2.98
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "moose_mutant": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.6,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 40,
+    "seconds": 1.3,
+    "loop": true,
+    "speed_mps": 1.1
+   },
+   "run": {
+    "frames": 23,
+    "seconds": 0.733,
+    "loop": true,
+    "speed_mps": 3.18
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "owl": {
+  "kind": "bird",
+  "bones": 9,
+  "mb": 0.28,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 15,
+    "seconds": 0.467,
+    "loop": true,
+    "speed_mps": 0.38
+   },
+   "fly": {
+    "frames": 13,
+    "seconds": 0.4,
+    "loop": true,
+    "note": "крылья машут на месте; полёт (высота, путь) задаёт игра"
+   },
+   "eat": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false
+   }
+  }
+ },
+ "pigeon": {
+  "kind": "bird",
+  "bones": 9,
+  "mb": 0.28,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 14,
+    "seconds": 0.433,
+    "loop": true,
+    "speed_mps": 0.3
+   },
+   "fly": {
+    "frames": 12,
+    "seconds": 0.367,
+    "loop": true,
+    "note": "крылья машут на месте; полёт (высота, путь) задаёт игра"
+   },
+   "eat": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false
+   }
+  }
+ },
+ "rabbit_grey": {
+  "kind": "hop",
+  "bones": 18,
+  "mb": 0.3,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.31
+   },
+   "run": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.56
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "rabbit_hare": {
+  "kind": "hop",
+  "bones": 18,
+  "mb": 0.29,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.36
+   },
+   "run": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.64
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "rabbit_white": {
+  "kind": "hop",
+  "bones": 18,
+  "mb": 0.3,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.31
+   },
+   "run": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.55
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "rabbit_wild_krolik": {
+  "kind": "hop",
+  "bones": 18,
+  "mb": 0.86,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.47
+   },
+   "run": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.83
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "rat_grey": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.3,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": true,
+    "speed_mps": 0.08
+   },
+   "run": {
+    "frames": 10,
+    "seconds": 0.3,
+    "loop": true,
+    "speed_mps": 0.22
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "rat_pest_krysa": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 1.48,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": true,
+    "speed_mps": 0.29
+   },
+   "run": {
+    "frames": 10,
+    "seconds": 0.3,
+    "loop": true,
+    "speed_mps": 0.79
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ },
+ "seagull": {
+  "kind": "bird",
+  "bones": 9,
+  "mb": 0.28,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 15,
+    "seconds": 0.467,
+    "loop": true,
+    "speed_mps": 0.29
+   },
+   "fly": {
+    "frames": 13,
+    "seconds": 0.4,
+    "loop": true,
+    "note": "крылья машут на месте; полёт (высота, путь) задаёт игра"
+   },
+   "eat": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false
+   }
+  }
+ },
+ "vulture": {
+  "kind": "bird",
+  "bones": 9,
+  "mb": 0.29,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 17,
+    "seconds": 0.533,
+    "loop": true,
+    "speed_mps": 0.38
+   },
+   "fly": {
+    "frames": 15,
+    "seconds": 0.467,
+    "loop": true,
+    "note": "крылья машут на месте; полёт (высота, путь) задаёт игра"
+   },
+   "eat": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false
+   }
+  }
+ },
+ "wolf": {
+  "kind": "quad",
+  "bones": 18,
+  "mb": 0.75,
+  "animations": {
+   "idle": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "walk": {
+    "frames": 24,
+    "seconds": 0.767,
+    "loop": true,
+    "speed_mps": 0.66
+   },
+   "run": {
+    "frames": 14,
+    "seconds": 0.433,
+    "loop": true,
+    "speed_mps": 1.9
+   },
+   "eat": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "hit_at_s": 0.42
+   },
+   "hit": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": false
+   },
+   "death": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false
+   }
+  }
+ }
+}
