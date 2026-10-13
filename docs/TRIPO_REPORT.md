@@ -1119,3 +1119,8 @@
 
 **Диск:** файлы с ригом в «13 Персонажи и существа» названы как в проекте (`<имя>.glb`), прежние версии без рига — в
 «Дубли» с пометкой «(без рига)»; `tripo/drive.json` указывает на версии с ригом.
+
+**2026-10-13, решение автора:** 11 персонажей без рабочего рига удалены (не важны): `char_f_military`, `char_f_military_b`,
+`char_m_military`, `char_m_military_b`, `char_m_adventurer`, `char_m_tactical`, `char_rd_m_thin`, `char_rd_raider`,
+`zombie_office`, `zombie_runner`, `body_m_rig_c`. На Диске — в корзине (30 дней можно вернуть). `char_m_hoodie` пока
+оставлен — статичный, без скелета.

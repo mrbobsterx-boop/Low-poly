@@ -1984,46 +1984,6 @@
   "cat": "item",
   "limit": 8000
  },
- "char_f_military": {
-  "name": "№4 Военная (комбинезон)",
-  "size": [
-   168,
-   168
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_f_military_b": {
-  "name": "№4 Военная (вариант, капюшон)",
-  "size": [
-   168,
-   168
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_m_military_b": {
-  "name": "№20 Военный (вариант)",
-  "size": [
-   178,
-   178
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_m_military": {
-  "name": "№20 Военный",
-  "size": [
-   180,
-   180
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
  "wolf": {
   "name": "№91 Волк",
   "size": [
@@ -2115,16 +2075,6 @@
   ],
   "fit": "width",
   "cat": "decor_set"
- },
- "char_m_adventurer": {
-  "name": "Путник с большим рюкзаком",
-  "size": [
-   180,
-   180
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
  },
  "pickaxe_alt": {
   "name": "Кирка (вариант)",
@@ -2786,16 +2736,6 @@
   "cat": "character",
   "limit": 15000
  },
- "char_rd_m_thin": {
-  "name": "№120 Rust Dogs — тощий псих",
-  "size": [
-   176,
-   176
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
  "char_fm_f_thin": {
   "name": "№133 Ferrymen — худая дозорная",
   "size": [
@@ -2891,36 +2831,6 @@
   ],
   "fit": "width",
   "cat": "item"
- },
- "char_m_hoodie": {
-  "name": "№22 Худи (капюшон)",
-  "size": [
-   180,
-   180
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_m_tactical": {
-  "name": "Мужчина в тактическом костюме с капюшоном",
-  "size": [
-   180,
-   180
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "char_rd_raider": {
-  "name": "Rust Dogs — рейдер в маске",
-  "size": [
-   182,
-   182
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
  },
  "dog_raider": {
   "name": "№80 Дикая собака (с ошейником)",
@@ -3032,16 +2942,6 @@
   "cat": "creature",
   "limit": 8000
  },
- "zombie_office": {
-  "name": "№38 Зомби — мужчина",
-  "size": [
-   175,
-   175
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
  "zombie_hospital": {
   "name": "№18 Зомби — женщина",
   "size": [
@@ -3057,16 +2957,6 @@
   "size": [
    190,
    190
-  ],
-  "fit": "height",
-  "cat": "character",
-  "limit": 15000
- },
- "zombie_runner": {
-  "name": "№18 Зомби — женщина (вариант)",
-  "size": [
-   168,
-   168
   ],
   "fit": "height",
   "cat": "character",
@@ -3381,6 +3271,16 @@
   ],
   "fit": "height",
   "cat": "mine",
+  "limit": 15000
+ },
+ "char_m_hoodie": {
+  "name": "№22 Худи (капюшон)",
+  "size": [
+   180,
+   180
+  ],
+  "fit": "height",
+  "cat": "character",
   "limit": 15000
  }
 }
