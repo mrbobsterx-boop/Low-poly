@@ -57,7 +57,12 @@
      "anim": "wait"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "idle_look"
+    }
+   ]
   },
   {
    "id": "walk",
@@ -89,7 +94,12 @@
      "anim": "walk"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "aa_walk"
+    }
+   ]
   },
   {
    "id": "run",
@@ -125,7 +135,12 @@
      "anim": "Character runs at a steady medium pace on a treadmill, arms swi"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "aa_run"
+    }
+   ]
   },
   {
    "id": "sneak",
@@ -161,7 +176,12 @@
      "anim": "Character sneaks forward in a low crouch, slow careful steps, a"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "sneak_r"
+    }
+   ]
   },
   {
    "id": "crawl",
@@ -181,7 +201,12 @@
      "anim": "Character crawls forward on the floor on hands and knees, slow "
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "crawl"
+    }
+   ]
   },
   {
    "id": "turn",
@@ -209,7 +234,12 @@
      "anim": "turn"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "turn_l"
+    }
+   ]
   },
   {
    "id": "climb",
@@ -261,7 +291,12 @@
      "anim": "climb"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "climb"
+    }
+   ]
   },
   {
    "id": "jump",
@@ -301,7 +336,12 @@
      "anim": "jump"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "jump"
+    }
+   ]
   },
   {
    "id": "sit",
@@ -329,7 +369,12 @@
      "anim": "Character sits on a chair, back slightly leaning, hands resting"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "sit_talk"
+    }
+   ]
   },
   {
    "id": "sleep",
@@ -357,7 +402,12 @@
      "anim": "ложиться спать"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "sleep"
+    }
+   ]
   },
   {
    "id": "lie_down",
@@ -381,7 +431,12 @@
      "anim": "ложиться спать"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_m",
+     "anim": "ложиться спать"
+    }
+   ]
   },
   {
    "id": "eat",
@@ -397,7 +452,12 @@
      "anim": "Character sits and eats from a bowl held in one hand, bringing "
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_m",
+     "anim": "примает таблетки"
+    }
+   ]
   },
   {
    "id": "eat_stand",
@@ -441,7 +501,12 @@
      "anim": "Character standing raises a bottle to the mouth, tilts the head"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "drink"
+    }
+   ]
   },
   {
    "id": "cook",
@@ -513,7 +578,12 @@
      "anim": "примает таблетки"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_f",
+     "anim": "примает таблетки"
+    }
+   ]
   },
   {
    "id": "backpack",
@@ -569,7 +639,12 @@
      "anim": "lift_heavy"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "pick_up_floor"
+    }
+   ]
   },
   {
    "id": "carry",
@@ -625,7 +700,12 @@
      "anim": "box_03"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_m",
+     "anim": "Character walks forward carrying a heavy box in front of the ch"
+    }
+   ]
   },
   {
    "id": "open_door",
@@ -645,7 +725,12 @@
      "anim": "Character reaches out, grabs a door handle, turns it and pulls "
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "open_door"
+    }
+   ]
   },
   {
    "id": "open_box",
@@ -669,7 +754,12 @@
      "anim": "Character bends over an open box on the floor and searches thro"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "search_low"
+    }
+   ]
   },
   {
    "id": "search_cabinet",
@@ -689,7 +779,12 @@
      "anim": "Character stands in front of a tall cabinet, opens it and searc"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "open_box"
+    }
+   ]
   },
   {
    "id": "search_body",
@@ -713,7 +808,12 @@
      "anim": "присел на одно колено, и смотрит в "
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_m",
+     "anim": "Character bends over an open box on the floor and searches thro"
+    }
+   ]
   },
   {
    "id": "lockpick",
@@ -729,7 +829,12 @@
      "anim": "Character crouches in front of a door and picks a lock with two"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_m",
+     "anim": "Character crouches in front of a door and picks a lock with two"
+    }
+   ]
   },
   {
    "id": "chop",
@@ -761,7 +866,12 @@
      "anim": "chop"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "melee"
+    }
+   ]
   },
   {
    "id": "mine",
@@ -781,7 +891,12 @@
      "anim": "Character strikes the ground in front with a pickaxe held in bo"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "melee"
+    }
+   ]
   },
   {
    "id": "dig",
@@ -809,7 +924,12 @@
      "anim": "shovel"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "dig"
+    }
+   ]
   },
   {
    "id": "plant",
@@ -829,7 +949,12 @@
      "anim": "Character kneels at a garden bed, makes a small hole in the soi"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "harvest"
+    }
+   ]
   },
   {
    "id": "harvest",
@@ -841,7 +966,12 @@
      "anim": "harvest"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "mixamo",
+     "anim": "harvest"
+    }
+   ]
   },
   {
    "id": "butcher",
@@ -857,7 +987,12 @@
      "anim": "Character kneels on the ground and butchers an animal carcass w"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_m",
+     "anim": "Character bends over an open box on the floor and searches thro"
+    }
+   ]
   },
   {
    "id": "feed_animal",
@@ -873,7 +1008,12 @@
      "anim": "Character crouches and holds out food in one open hand toward a"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_m",
+     "anim": "Character bends over an open box on the floor and searches thro"
+    }
+   ]
   },
   {
    "id": "work_table",
@@ -901,7 +1041,12 @@
      "anim": "что то мастерит за столом"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_f",
+     "anim": "Character stands at a workbench and works with both hands: hamm"
+    }
+   ]
   },
   {
    "id": "repair",
@@ -921,7 +1066,12 @@
      "anim": "Character stands at a table and repairs a device with a wrench "
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_m",
+     "anim": "Character stands at a stove and stirs food in a pot with a spoo"
+    }
+   ]
   },
   {
    "id": "sew",
@@ -937,7 +1087,12 @@
      "anim": "Character sits at a table and sews by hand, pulling a needle an"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_m",
+     "anim": "Character stands at a stove and stirs food in a pot with a spoo"
+    }
+   ]
   },
   {
    "id": "radio",
@@ -953,7 +1108,12 @@
      "anim": "Character stands at a control panel with a radio, presses butto"
     }
    ],
-   "pinned": null
+   "pinned": [
+    {
+     "src": "tripo_m",
+     "anim": "Character crouches and holds out food in one open hand toward a"
+    }
+   ]
   },
   {
    "id": "push",
