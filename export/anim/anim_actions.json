@@ -1,0 +1,1845 @@
+{
+ "_comment": "Действия персонажей → анимации. candidates — подходящие по смыслу (смотреть на персонаже), pinned — закреплённая ⭐ (игра проигрывает её для этого действия; null — ещё не выбрана). Все анимации на скелете тел Tripo — подходят ко всем людям. Пересобрать: tools/anim_actions.py (закреплённые сохраняются).",
+ "sources": {
+  "mixamo": "export/anim/anims_mixamo.glb",
+  "tripo_m": "export/anim/body_m_rig_anims.glb",
+  "tripo_m_b": "export/anim/body_m_rig_b_anims.glb",
+  "tripo_f": "export/anim/body_f_rig_anims.glb"
+ },
+ "actions": [
+  {
+   "id": "idle",
+   "name": "Стоит",
+   "group": "Основа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "aa_idle_1"
+    },
+    {
+     "src": "mixamo",
+     "anim": "aa_idle_2"
+    },
+    {
+     "src": "mixamo",
+     "anim": "aa_idle_3"
+    },
+    {
+     "src": "mixamo",
+     "anim": "aa_idle_4"
+    },
+    {
+     "src": "mixamo",
+     "anim": "aa_idle_5"
+    },
+    {
+     "src": "mixamo",
+     "anim": "idle"
+    },
+    {
+     "src": "mixamo",
+     "anim": "idle_look"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "look_around"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "wait"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "look_around"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "wait"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "walk",
+   "name": "Идёт",
+   "group": "Основа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "aa_walk"
+    },
+    {
+     "src": "mixamo",
+     "anim": "walk"
+    },
+    {
+     "src": "mixamo",
+     "anim": "walk_b"
+    },
+    {
+     "src": "mixamo",
+     "anim": "walk_c"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "walk"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "walk"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "run",
+   "name": "Бежит",
+   "group": "Основа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "aa_run"
+    },
+    {
+     "src": "mixamo",
+     "anim": "jog"
+    },
+    {
+     "src": "mixamo",
+     "anim": "run"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character runs at a steady medium pace on a treadmill, arms swi"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "run"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "run"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character runs at a steady medium pace on a treadmill, arms swi"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "sneak",
+   "name": "Крадётся",
+   "group": "Основа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "cover_sneak_l"
+    },
+    {
+     "src": "mixamo",
+     "anim": "cover_sneak_r"
+    },
+    {
+     "src": "mixamo",
+     "anim": "sneak"
+    },
+    {
+     "src": "mixamo",
+     "anim": "sneak_l"
+    },
+    {
+     "src": "mixamo",
+     "anim": "sneak_r"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character sneaks forward in a low crouch, slow careful steps, a"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character sneaks forward in a low crouch, slow careful steps, a"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "crawl",
+   "name": "Ползёт",
+   "group": "Основа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "crawl"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character crawls forward on the floor on hands and knees, slow "
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character crawls forward on the floor on hands and knees, slow "
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "turn",
+   "name": "Поворачивается",
+   "group": "Основа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "turn_l"
+    },
+    {
+     "src": "mixamo",
+     "anim": "turn_r"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character standing turns around 180 degrees on the spot with sm"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character standing turns around 180 degrees on the spot with sm"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "turn"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "climb",
+   "name": "Лезет по лестнице",
+   "group": "Основа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "climb"
+    },
+    {
+     "src": "mixamo",
+     "anim": "climb_down"
+    },
+    {
+     "src": "mixamo",
+     "anim": "climb_wall"
+    },
+    {
+     "src": "mixamo",
+     "anim": "hang_climb"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character climbs up a vertical ladder, hands and feet moving al"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "climb"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "run_upstairs"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "climb"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "run_upstairs"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character climbs up a vertical ladder, hands and feet moving al"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "climb"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "jump",
+   "name": "Прыгает",
+   "group": "Основа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "jump"
+    },
+    {
+     "src": "mixamo",
+     "anim": "jump_down"
+    },
+    {
+     "src": "mixamo",
+     "anim": "jump_up"
+    },
+    {
+     "src": "mixamo",
+     "anim": "land_hard"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "jump"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "jump_down"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "jump_down"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "jump"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "sit",
+   "name": "Сидит",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "sit_talk"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character sits on a chair, back slightly leaning, hands resting"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "sit"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "sit"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character sits on a chair, back slightly leaning, hands resting"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "sleep",
+   "name": "Спит",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "sleep"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character lies on the back sleeping, chest slowly rising and fa"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "ложиться спать"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character lies on the back sleeping, chest slowly rising and fa"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "ложиться спать"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "lie_down",
+   "name": "Ложится на кровать",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character sits down on the edge of a bed, then lies down on the"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "ложиться спать"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character sits down on the edge of a bed, then lies down on the"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "ложиться спать"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "eat",
+   "name": "Ест сидя",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character sits and eats from a bowl held in one hand, bringing "
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character sits and eats from a bowl held in one hand, bringing "
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "eat_stand",
+   "name": "Ест стоя",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character stands and eats, holding a piece of food in one hand,"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "стоит,  достает из кормана еду и сь"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands and eats, holding a piece of food in one hand,"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "стоит,  достает из кормана еду и сь"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "drink",
+   "name": "Пьёт",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "drink"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character standing raises a bottle to the mouth, tilts the head"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character standing raises a bottle to the mouth, tilts the head"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "cook",
+   "name": "Готовит",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "work_counter"
+    },
+    {
+     "src": "mixamo",
+     "anim": "work_counter_b"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character stands at a stove and stirs food in a pot with a spoo"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands at a stove and stirs food in a pot with a spoo"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "read",
+   "name": "Читает",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character sits holding an open book or note with both hands, re"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character sits holding an open book or note with both hands, re"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "rest_fire",
+   "name": "Греется у костра",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character sits on the ground with legs crossed, leaning forward"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character sits on the ground with legs crossed, leaning forward"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "take_pills",
+   "name": "Принимает таблетки",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "примает таблетки"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "примает таблетки"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "backpack",
+   "name": "Снимает рюкзак, смотрит",
+   "group": "Быт",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character takes off a backpack from the shoulders, puts it on t"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character takes off a backpack from the shoulders, puts it on t"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "снимает с со спены рюкзак и смотри"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "pick_up",
+   "name": "Поднимает с пола",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "pick_up"
+    },
+    {
+     "src": "mixamo",
+     "anim": "pick_up_floor"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character bends down, picks up a small item from the floor with"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "lift_heavy"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "lift_heavy"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character bends down, picks up a small item from the floor with"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "lift_heavy"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "carry",
+   "name": "Несёт ящик",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "carry_turn"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character walks forward carrying a heavy box in front of the ch"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "box_01"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "box_02"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "box_03"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "box_01"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "box_02"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "box_03"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character walks forward carrying a heavy box in front of the ch"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "box_01"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "box_02"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "box_03"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "open_door",
+   "name": "Открывает дверь",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "open_door"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character reaches out, grabs a door handle, turns it and pulls "
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character reaches out, grabs a door handle, turns it and pulls "
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "open_box",
+   "name": "Открывает ящик / сундук",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "open_box"
+    },
+    {
+     "src": "mixamo",
+     "anim": "search"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character bends over an open box on the floor and searches thro"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character bends over an open box on the floor and searches thro"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "search_cabinet",
+   "name": "Обыскивает шкаф",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "search_low"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character stands in front of a tall cabinet, opens it and searc"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands in front of a tall cabinet, opens it and searc"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "search_body",
+   "name": "Обыскивает труп",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character kneels next to a body lying on the ground and searche"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "присел на одно колено, и смотрит в "
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character kneels next to a body lying on the ground and searche"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "присел на одно колено, и смотрит в "
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "lockpick",
+   "name": "Взламывает замок",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character crouches in front of a door and picks a lock with two"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character crouches in front of a door and picks a lock with two"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "chop",
+   "name": "Рубит дерево",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "melee"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character chops a tree with an axe held in both hands, side swi"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "chop"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "chop"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character chops a tree with an axe held in both hands, side swi"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "chop"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "mine",
+   "name": "Долбит киркой",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "melee"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character strikes the ground in front with a pickaxe held in bo"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character strikes the ground in front with a pickaxe held in bo"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "dig",
+   "name": "Копает",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "dig"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "dig"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "shovel"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "dig"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "shovel"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "plant",
+   "name": "Сажает и поливает",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "harvest"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character kneels at a garden bed, makes a small hole in the soi"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character kneels at a garden bed, makes a small hole in the soi"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "harvest",
+   "name": "Собирает урожай",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "harvest"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "butcher",
+   "name": "Разделывает",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character kneels on the ground and butchers an animal carcass w"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character kneels on the ground and butchers an animal carcass w"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "feed_animal",
+   "name": "Кормит животное",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character crouches and holds out food in one open hand toward a"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character crouches and holds out food in one open hand toward a"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "work_table",
+   "name": "Работает за верстаком",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "work_table"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character stands at a workbench and works with both hands: hamm"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "что то мастерит за столом"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands at a workbench and works with both hands: hamm"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "что то мастерит за столом"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "repair",
+   "name": "Ремонтирует",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "work_table"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character stands at a table and repairs a device with a wrench "
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands at a table and repairs a device with a wrench "
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "sew",
+   "name": "Шьёт",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character sits at a table and sews by hand, pulling a needle an"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character sits at a table and sews by hand, pulling a needle an"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "radio",
+   "name": "Рация / пульт",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character stands at a control panel with a radio, presses butto"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands at a control panel with a radio, presses butto"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "push",
+   "name": "Толкает",
+   "group": "Работа",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "push"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "talk",
+   "name": "Говорит",
+   "group": "Общение",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "talk"
+    },
+    {
+     "src": "mixamo",
+     "anim": "talk_b"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character stands facing forward and talks, natural hand gesture"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "agree"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "agree"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands facing forward and talks, natural hand gesture"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "trade",
+   "name": "Торгуется",
+   "group": "Общение",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character stands and bargains: holds out an item in one open ha"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands and bargains: holds out an item in one open ha"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "wave",
+   "name": "Машет рукой",
+   "group": "Общение",
+   "candidates": [
+    {
+     "src": "tripo_m_b",
+     "anim": "wave_goodbye_01"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "laugh",
+   "name": "Смеётся",
+   "group": "Общение",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "laugh_01"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "laugh_01"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "taunt",
+   "name": "Дразнит",
+   "group": "Общение",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "taunt"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "frustrated_01"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "frustrated_02"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "frustrated_01"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "frustrated_02"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "attack_melee",
+   "name": "Бьёт (одной рукой)",
+   "group": "Бой",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "punch"
+    },
+    {
+     "src": "mixamo",
+     "anim": "punch_combo"
+    },
+    {
+     "src": "mixamo",
+     "anim": "stab"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character makes a fast one-handed swing with a short melee weap"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "front_kick_01"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "front_kick_02"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "slash"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "front_kick_01"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "front_kick_02"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "slash"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character makes a fast one-handed swing with a short melee weap"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "front_kick_01"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "front_kick_02"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "attack_2h",
+   "name": "Бьёт двуручным",
+   "group": "Бой",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "melee"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character swings a heavy two-handed weapon from over the should"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character swings a heavy two-handed weapon from over the should"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "shoot_pistol",
+   "name": "Стреляет из пистолета",
+   "group": "Бой",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "pistol_shoot"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character holds a pistol in both hands at arm's length, aims fo"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "fire"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "shoot"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "выстрел с пистолета"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "fire"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "shoot"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character holds a pistol in both hands at arm's length, aims fo"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "выстрел с пистолета"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "shoot_rifle",
+   "name": "Стреляет из винтовки",
+   "group": "Бой",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "gunplay"
+    },
+    {
+     "src": "mixamo",
+     "anim": "rifle_walk"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character holds a rifle at the shoulder, aims forward and fires"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character holds a rifle at the shoulder, aims forward and fires"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "aim",
+   "name": "Целится",
+   "group": "Бой",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character stands holding a gun raised and aimed forward, steady"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands holding a gun raised and aimed forward, steady"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "reload",
+   "name": "Перезаряжает",
+   "group": "Бой",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character holding a gun takes out the empty magazine, inserts a"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character holding a gun takes out the empty magazine, inserts a"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "bow",
+   "name": "Стреляет из лука",
+   "group": "Бой",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "bow_shoot"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "dodge",
+   "name": "Уворачивается",
+   "group": "Бой",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "fall_roll"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character quickly dodges to the side with a short step and lean"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character quickly dodges to the side with a short step and lean"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "hit",
+   "name": "Получает удар",
+   "group": "Бой",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "hit"
+    },
+    {
+     "src": "mixamo",
+     "anim": "hit_big"
+    },
+    {
+     "src": "mixamo",
+     "anim": "hit_head"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "hit_to_body_01"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "hit_to_body_02"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "hit_to_head"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "hit_to_side"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "hit_to_stomach"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "hit_to_body_01"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "hit_to_body_02"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "hit_to_head"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "hit_to_side"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "hit_to_stomach"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "hit_to_side"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "death",
+   "name": "Падает (смерть)",
+   "group": "Бой",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "death"
+    },
+    {
+     "src": "mixamo",
+     "anim": "death_b"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "defeat_03"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "defeat_03"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "defeat_03"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "flee",
+   "name": "Убегает в страхе",
+   "group": "Состояния",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "flee_01"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "flee_02"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "flee_01"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "flee_02"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "limp",
+   "name": "Хромает",
+   "group": "Состояния",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "injured_walk"
+    },
+    {
+     "src": "mixamo",
+     "anim": "injured_walk_b"
+    },
+    {
+     "src": "mixamo",
+     "anim": "injured_walk_c"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character walks forward limping on the right leg, putting littl"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character walks forward limping on the right leg, putting littl"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "injured_run",
+   "name": "Бежит раненый",
+   "group": "Состояния",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "injured_run"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "bandage",
+   "name": "Перевязывается",
+   "group": "Состояния",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character sits on the ground and wraps a bandage around the own"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character sits on the ground and wraps a bandage around the.001"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "Character stands holding the left forearm out in front of the c"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character sits on the ground and wraps a bandage around the own"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character sits on the ground and wraps a bandage around the.001"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands holding the left forearm out in front of the c"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "sick",
+   "name": "Болен",
+   "group": "Состояния",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character stands hunched, coughing hard, one hand over the mout"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands hunched, coughing hard, one hand over the mout"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "tired",
+   "name": "Устал",
+   "group": "Состояния",
+   "candidates": [
+    {
+     "src": "tripo_m",
+     "anim": "Character stands bent forward with hands on the knees, breathin"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "Character stands bent forward with hands on the knees, breathin"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "sit_injured",
+   "name": "Сидит раненый",
+   "group": "Состояния",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "sit_injured"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "kneel",
+   "name": "На коленях (пленник)",
+   "group": "Состояния",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "kneel"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "swim",
+   "name": "Плывёт",
+   "group": "Состояния",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "float"
+    },
+    {
+     "src": "mixamo",
+     "anim": "swim"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "dive"
+    },
+    {
+     "src": "tripo_m",
+     "anim": "swim"
+    },
+    {
+     "src": "tripo_m_b",
+     "anim": "dive"
+    },
+    {
+     "src": "tripo_f",
+     "anim": "swim"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "zombie_idle",
+   "name": "Зомби — стоит",
+   "group": "Зомби",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "zombie_idle"
+    },
+    {
+     "src": "mixamo",
+     "anim": "zombie_scream"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "zombie_walk",
+   "name": "Зомби — идёт",
+   "group": "Зомби",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "zombie_walk"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "zombie_run",
+   "name": "Зомби — бежит",
+   "group": "Зомби",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "zombie_crawl_run"
+    },
+    {
+     "src": "mixamo",
+     "anim": "zombie_run"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "zombie_crawl",
+   "name": "Зомби — ползёт",
+   "group": "Зомби",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "zombie_crawl"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "zombie_attack",
+   "name": "Зомби — атакует",
+   "group": "Зомби",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "zombie_attack"
+    },
+    {
+     "src": "mixamo",
+     "anim": "zombie_bite"
+    },
+    {
+     "src": "mixamo",
+     "anim": "zombie_bite_b"
+    },
+    {
+     "src": "mixamo",
+     "anim": "zombie_neck_bite"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "zombie_death",
+   "name": "Зомби — умирает",
+   "group": "Зомби",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "zombie_death"
+    },
+    {
+     "src": "mixamo",
+     "anim": "zombie_dying"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "mutant_idle",
+   "name": "Мутант — стоит",
+   "group": "Мутант",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "mutant_idle"
+    },
+    {
+     "src": "mixamo",
+     "anim": "mutant_idle_b"
+    },
+    {
+     "src": "mixamo",
+     "anim": "mutant_roar"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "mutant_walk",
+   "name": "Мутант — идёт",
+   "group": "Мутант",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "mutant_walk"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "mutant_run",
+   "name": "Мутант — бежит",
+   "group": "Мутант",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "mutant_run"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "mutant_attack",
+   "name": "Мутант — атакует",
+   "group": "Мутант",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "mutant_jump"
+    },
+    {
+     "src": "mixamo",
+     "anim": "mutant_swipe"
+    }
+   ],
+   "pinned": null
+  },
+  {
+   "id": "mutant_death",
+   "name": "Мутант — умирает",
+   "group": "Мутант",
+   "candidates": [
+    {
+     "src": "mixamo",
+     "anim": "mutant_death"
+    }
+   ],
+   "pinned": null
+  }
+ ],
+ "unsorted": [
+  {
+   "src": "mixamo",
+   "anim": "crouch_to_stand"
+  },
+  {
+   "src": "mixamo",
+   "anim": "entry"
+  },
+  {
+   "src": "mixamo",
+   "anim": "fall"
+  },
+  {
+   "src": "mixamo",
+   "anim": "from_cover"
+  },
+  {
+   "src": "mixamo",
+   "anim": "from_cover_b"
+  },
+  {
+   "src": "mixamo",
+   "anim": "mutant_turn_l"
+  },
+  {
+   "src": "mixamo",
+   "anim": "mutant_turn_l_b"
+  },
+  {
+   "src": "mixamo",
+   "anim": "mutant_turn_r"
+  },
+  {
+   "src": "mixamo",
+   "anim": "mutant_turn_r_b"
+  },
+  {
+   "src": "mixamo",
+   "anim": "run_stop"
+  },
+  {
+   "src": "mixamo",
+   "anim": "stand_up"
+  },
+  {
+   "src": "mixamo",
+   "anim": "strafe"
+  },
+  {
+   "src": "mixamo",
+   "anim": "to_cover"
+  },
+  {
+   "src": "mixamo",
+   "anim": "to_cover_b"
+  },
+  {
+   "src": "mixamo",
+   "anim": "walk_turn"
+  },
+  {
+   "src": "tripo_m",
+   "anim": "Character sits and drives a car, both hands on the steering whe"
+  },
+  {
+   "src": "tripo_m",
+   "anim": "Character sits on a bicycle and pedals at a steady pace, hands "
+  },
+  {
+   "src": "tripo_m",
+   "anim": "Character walks slowly holding a flashlight in one hand at ches"
+  },
+  {
+   "src": "tripo_m",
+   "anim": "fall"
+  },
+  {
+   "src": "tripo_m",
+   "anim": "press-up"
+  },
+  {
+   "src": "tripo_m",
+   "anim": "scratch"
+  },
+  {
+   "src": "tripo_m_b",
+   "anim": "fall"
+  },
+  {
+   "src": "tripo_m_b",
+   "anim": "press-up"
+  },
+  {
+   "src": "tripo_f",
+   "anim": "Character sits and drives a car, both hands on the steering whe"
+  },
+  {
+   "src": "tripo_f",
+   "anim": "Character sits on a bicycle and pedals at a steady pace, hands "
+  },
+  {
+   "src": "tripo_f",
+   "anim": "Character walks slowly holding a flashlight in one hand at ches"
+  },
+  {
+   "src": "tripo_f",
+   "anim": "press-up"
+  },
+  {
+   "src": "tripo_f",
+   "anim": "scratch"
+  }
+ ]
+}
