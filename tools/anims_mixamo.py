@@ -4,8 +4,8 @@
   python3 tools/anims_mixamo.py <папка с FBX> [<папка наборов zip, распакованных>] [--out export/anim/anims_mixamo.glb]
 
 Для каждого FBX: импорт, сетка удаляется, действие получает имя из таблицы NAMES. Ходьба, бег, ползание (LOCO) —
-«на месте»: если корень (Hips) уезжает по горизонтали больше 0,2 м, движение Hips по горизонтали обнуляется (высота
-остаётся). Сантиметры FBX → метры. Все действия — дорожками NLA одного скелета (у всех Mixamo кости одни: mixamorig:…). В файле — крошечный
+«на месте»: если корень (Hips) уезжает по горизонтали больше 0,2 м, убирается только равномерный уезд (покачивание
+бёдер остаётся, высота тоже). Сантиметры FBX → метры. Все действия — дорожками NLA одного скелета (у всех Mixamo кости одни: mixamorig:…). В файле — крошечный
 треугольник на Hips, иначе glTF пишет кости обычными узлами, а не скелетом.
 """
 import json
@@ -97,15 +97,22 @@ def fcurves(act):
 
 
 def in_place(arm, act, hips):
-    """Обнулить движение Hips по горизонтали: каналы location, чья ось кости в мире — не вертикаль."""
+    """«На месте»: убрать у Hips только равномерный уезд по горизонтали (прямая от первого кадра к последнему),
+    покачивание бёдер влево-вправо и вперёд-назад внутри шага остаётся; высота не трогается."""
     rest = (arm.matrix_world @ arm.data.bones[hips].matrix_local).to_3x3()
     vert = max(range(3), key=lambda i: abs(rest.col[i].z))
     for fc in fcurves(act):
         if fc.data_path == f'pose.bones["{hips}"].location' and fc.array_index != vert:
-            v0 = fc.keyframe_points[0].co[1] if len(fc.keyframe_points) else 0.0
-            for kp in fc.keyframe_points:
-                kp.co[1] = v0
-                kp.handle_left[1] = kp.handle_right[1] = v0
+            kps = fc.keyframe_points
+            if len(kps) < 2:
+                continue
+            (t0, v0), (t1, v1) = kps[0].co, kps[-1].co
+            slope = (v1 - v0) / (t1 - t0) if t1 != t0 else 0.0
+            for kp in kps:
+                d = slope * (kp.co[0] - t0)
+                kp.co[1] -= d
+                kp.handle_left[1] -= slope * (kp.handle_left[0] - t0)
+                kp.handle_right[1] -= slope * (kp.handle_right[0] - t0)
             fc.update()
 
 
