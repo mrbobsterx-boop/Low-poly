@@ -1,11 +1,7 @@
 {
  "src": "char_f_hoodie.glb",
  "rig": true,
- "animations": [
-  "climb",
-  "front_kick_01",
-  "front_kick_02"
- ],
+ "animations": [],
  "bones": [
   "mixamorig:Hips",
   "mixamorig:LeftUpLeg",
@@ -76,11 +72,11 @@
  "tris_before": 49270,
  "tris_after": 14406,
  "size_cm": [
-  147.85751104354858,
-  31.547793745994568,
-  167.99999475479126
+  147.85747528076172,
+  31.547778844833374,
+  168.00000667572021
  ],
- "rotate": 270,
- "mb": 0.713172,
- "mb_anims": 0.284468
+ "rotate": 0.0,
+ "mb": 0.712948,
+ "mb_anims": 0.0
 }
