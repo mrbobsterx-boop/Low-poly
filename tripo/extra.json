@@ -3282,5 +3282,285 @@
   "fit": "height",
   "cat": "character",
   "limit": 15000
+ },
+ "bow_modern": {
+  "name": "2026-10-14: Лук современный (без стрел)",
+  "size": [
+   30,
+   100
+  ],
+  "fit": "height",
+  "cat": "decor_set",
+  "limit": 3000
+ },
+ "bow_wood_simple": {
+  "name": "2026-10-14: Лук деревянный (без стрел)",
+  "size": [
+   30,
+   120
+  ],
+  "fit": "height",
+  "cat": "decor_set",
+  "limit": 3000
+ },
+ "tree_birch": {
+  "name": "2026-10-14: Берёза",
+  "size": [
+   250,
+   600
+  ],
+  "fit": "height",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "tree_oak": {
+  "name": "2026-10-14: Дуб",
+  "size": [
+   450,
+   550
+  ],
+  "fit": "height",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "tree_maple": {
+  "name": "2026-10-14: Клён",
+  "size": [
+   350,
+   500
+  ],
+  "fit": "height",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "tree_dead_bare": {
+  "name": "2026-10-14: Сухое дерево",
+  "size": [
+   300,
+   500
+  ],
+  "fit": "height",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "tree_dead_bare_b": {
+  "name": "2026-10-14: Сухое дерево (2)",
+  "size": [
+   300,
+   500
+  ],
+  "fit": "height",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "tree_dead_burnt": {
+  "name": "2026-10-14: Обгоревшее дерево",
+  "size": [
+   200,
+   400
+  ],
+  "fit": "height",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "tree_dead_stump": {
+  "name": "2026-10-14: Сухой ствол-обломок",
+  "size": [
+   120,
+   350
+  ],
+  "fit": "height",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "train_loco_diesel": {
+  "name": "2026-10-14: Тепловоз",
+  "size": [
+   700,
+   300
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 15000
+ },
+ "train_coach": {
+  "name": "2026-10-14: Пассажирский вагон",
+  "size": [
+   800,
+   280
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 15000
+ },
+ "train_coach_b": {
+  "name": "2026-10-14: Пассажирский вагон (зелёный)",
+  "size": [
+   800,
+   280
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 15000
+ },
+ "train_coach_c": {
+  "name": "2026-10-14: Пассажирский вагон (серый, ржавый)",
+  "size": [
+   800,
+   280
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 15000
+ },
+ "train_coach_d": {
+  "name": "2026-10-14: Пассажирский вагон (красный, ржавый)",
+  "size": [
+   800,
+   280
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 15000
+ },
+ "train_coach_e": {
+  "name": "2026-10-14: Старый вагон (заброшенный)",
+  "size": [
+   800,
+   280
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 15000
+ },
+ "train_freight": {
+  "name": "2026-10-14: Грузовой вагон крытый",
+  "size": [
+   700,
+   270
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 15000
+ },
+ "train_freight_b": {
+  "name": "2026-10-14: Грузовой вагон крытый (2)",
+  "size": [
+   700,
+   270
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 15000
+ },
+ "ferry_raft": {
+  "name": "2026-10-14: Паром-плот",
+  "size": [
+   700,
+   200
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "ferry_raft_b": {
+  "name": "2026-10-14: Паром-плот (2)",
+  "size": [
+   700,
+   200
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "isle_dumpster": {
+  "name": "2026-10-14: Островок: мусорный контейнер, мешки",
+  "size": [
+   200,
+   180
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "isle_trash_bins": {
+  "name": "2026-10-14: Островок: урна, мешки, бумажки",
+  "size": [
+   160,
+   120
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "isle_barrels_fire": {
+  "name": "2026-10-14: Островок: бочка с костром, ящик, котелок",
+  "size": [
+   180,
+   120
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "isle_scrap": {
+  "name": "2026-10-14: Островок: куча металлолома",
+  "size": [
+   240,
+   180
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "isle_scrap_b": {
+  "name": "2026-10-14: Островок: металлолом и бочки",
+  "size": [
+   240,
+   180
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "isle_pallets": {
+  "name": "2026-10-14: Островок: ящики под брезентом",
+  "size": [
+   220,
+   150
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "isle_pallets_b": {
+  "name": "2026-10-14: Островок: поддоны, ящики, брезент",
+  "size": [
+   220,
+   220
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "isle_bench_bin": {
+  "name": "2026-10-14: Островок: скамейка, урна, газеты",
+  "size": [
+   220,
+   120
+  ],
+  "fit": "width",
+  "cat": "decor_set",
+  "limit": 8000
+ },
+ "decor_camp_chair": {
+  "name": "2026-10-14: Раскладной походный стул",
+  "size": [
+   60,
+   95
+  ],
+  "fit": "height",
+  "cat": "decor_set",
+  "limit": 3000
  }
 }

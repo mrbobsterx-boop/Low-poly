@@ -1176,3 +1176,21 @@ Tripo/Mixamo не делают риг для зверей, поэтому ске
 поворачивает каждую кость вокруг её же оси (у Tripo расхождение до 180°), сетка остаётся родной. Пересобраны все 61
 (52 — из версии до выравнивания, 9 — заново из файлов с ригом с Диска). Анимации и прочее не трогал; `char_fit.json`
 пересчитан под новую сетку.
+
+## Партия 2026-10-14 («новое», 28 файлов) — `renders/_review/tripo_2026-10-14_new.jpg`
+
+Запросы — `docs/TRIPO_STREET_2026-10-14.md`. Файлы опознаны по виду, названы по списку, обработаны `tripo_process.py`
+(настройки — `tripo/extra.json`, повороты — `rotate.json`), на Диске переименованы и разложены:
+
+| Папка Диска | Модели (export/<имя>_idle.glb) |
+|---|---|
+| 19 Природа (деревья, паром) | `tree_oak`, `tree_birch`, `tree_maple`, `tree_dead_bare`, `tree_dead_bare_b`, `tree_dead_burnt`, `tree_dead_stump`, `ferry_raft`, `ferry_raft_b` |
+| 20 Улица — островки | `isle_dumpster`, `isle_trash_bins`, `isle_barrels_fire`, `isle_scrap`, `isle_scrap_b`, `isle_pallets`, `isle_pallets_b`, `isle_bench_bin` |
+| 21 Поезд | `train_loco_diesel`, `train_coach`, `train_coach_b…e` (4 других вагона), `train_freight`, `train_freight_b` |
+| 12 Предметы… | `bow_modern`, `bow_wood_simple` |
+| 10 Декор-объекты | `decor_camp_chair` (раскладной стул — не из списка) |
+
+- Деревья — 8 000 треуг., вагоны и тепловоз — 15 000 (поставлены боком, длинной стороной вдоль X), островки и паром — 8 000, луки и стул — 3 000. Файлы 0,17–0,83 МБ.
+- Вагонов пришло 7 вместо 3 (пробы): лишние названы `train_coach_b…e`, `train_freight_b`. Паром — 2 варианта.
+- ⚠ `tree_dead_burnt` — сухое дерево светлое, не чёрное обгоревшее; `tree_dead_stump` — высокий обломанный ствол (в списке не было).
+- Не пришли: островки `isle_fence_tires`, `isle_hydrant`, `isle_mailbox`, `isle_bikes`, `isle_roadworks`, `isle_planter`.
