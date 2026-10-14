@@ -536,108 +536,191 @@ def quad_anims(arm, lay, kind, name=""):
     info["flee"] = {"frames": n + 1, "seconds": round(n / FPS, 3), "loop": True,
                     "speed_mps": round(4 * Lleg * math.sin(amp_f) / (n / FPS), 2)}
 
-    # лёг: поза «лёжа на животе» (для sleep и lie_down)
-    drop_lie = max(0.0, belly_h - 0.06 * Lleg)
-    def lying(k, breath=0.0):
-        p = {}
-        if canine or bear or hop:                            # передние лапы вытянуты вперёд
-            fl1, fl2, fl3 = -1.35 * k, 0.15 * k, -0.2 * k
-        else:                                                # копытные: передние подогнуты
-            fl1, fl2, fl3 = -0.9 * k, 2.2 * k, 0.4 * k
+    # ── позы «сидит / лежит / просит»: лапы ставятся в точки на полу (обратная кинематика), суставы гнутся сами ──
+    Bn = arm.data.bones
+    hip0 = Vector(Bn["Hips"].head_local)
+    z0 = float(lay["z0"])
+    upright = name == "rabbit_wild_krolik"                    # модель уже сидит столбиком — позы мягче
+
+    def L_of(b):
+        return (Vector(Bn[b].tail_local) - Vector(Bn[b].head_local)).length
+
+    def xf(pnt, D, T):
+        return hip0 + D @ (Vector(pnt) - hip0) + T
+
+    def swing(b, d):
+        r = Vector(Bn[b].tail_local) - Vector(Bn[b].head_local)
+        return r.normalized().rotation_difference(Vector(d).normalized())
+
+    def ik2(H, Aim, L1, L2, bend):
+        d = Aim - H
+        dist = min(d.length, (L1 + L2) * 0.999)
+        u = d.normalized()
+        a_ = (L1 * L1 - L2 * L2 + dist * dist) / (2 * dist)
+        h = math.sqrt(max(L1 * L1 - a_ * a_, 0.0))
+        v = Vector(bend) - u * Vector(bend).dot(u)
+        v = v.normalized() if v.length > 1e-6 else Vector((0, 0, 1))
+        return H + u * a_ + v * h, H + u * dist
+
+    def leg_to(p, k, Dp, D_body, T, wrist_or_ankle, toe, bend):
+        """Лапа k: сустав 1 из тела, сустав «запястье/скакательный» — в точку, кончик — в toe."""
+        b1, b2, b3 = f"Leg{k}1", f"Leg{k}2", f"Leg{k}3"
+        H = xf(Bn[b1].head_local, D_body, T)
+        K, W = ik2(H, Vector(wrist_or_ankle), L_of(b1), L_of(b2), bend)
+        D1, D2, D3 = swing(b1, K - H), swing(b2, W - K), swing(b3, Vector(toe) - W)
+        p[b1] = A.world_rot(b1, Dp.inverted() @ D1)
+        p[b2] = A.world_rot(b2, D1.inverted() @ D2)
+        p[b3] = A.world_rot(b3, D2.inverted() @ D3)
+
+    def body(p, D, T, neck_up=0.0, tail_dir=(0.35, 1.0, -0.12)):
+        p["Hips"] = (A.world_rot("Hips", D), A.world_loc("Hips", T))
+        p["Neck"] = A.world_rot("Neck", D.inverted() @ Quaternion((1, 0, 0), -neck_up))   # голова ровно (+ чуть вверх)
+        p["Tail1"] = A.world_rot("Tail1", D.inverted() @ swing("Tail1", tail_dir))          # хвост лежит на полу
+        p["Tail2"] = rx(0.0)
+
+    def blend(p, k):
+        """k = 0 — стоит как в покое, 1 — полная поза (для «ложится»)."""
+        out = {}
+        for bname, v in p.items():
+            q, loc = v if isinstance(v, tuple) else (v, None)
+            q = Quaternion().slerp(q, k) if q is not None else None
+            loc = loc * k if loc is not None else None
+            out[bname] = (q, loc) if bname == "Hips" else q
+        return out
+
+    LF = L_of("LegFL1") + L_of("LegFL2")
+    LB = L_of("LegBL1") + L_of("LegBL2")
+    L3F, L3B = L_of("LegFL3"), L_of("LegBL3")
+
+    def hind_folded(p, D, T):
+        """Задние лапы подогнуты: скакательный сустав и стопа лежат на полу, стопа вперёд, колено вперёд-вверх."""
         for s_ in ("L", "R"):
-            p[f"LegF{s_}1"], p[f"LegF{s_}2"], p[f"LegF{s_}3"] = rx(fl1), rx(fl2), rx(fl3)
-            p[f"LegB{s_}1"], p[f"LegB{s_}2"], p[f"LegB{s_}3"] = rx(-1.1 * k), rx(1.9 * k), rx(-0.7 * k)
-        p["Hips"] = (rx(0.02 * breath), A.world_loc("Hips", (0, 0, -drop_lie * k + 0.004 * Lleg * breath)))
-        p["Spine"] = rx(0.03 * breath)
+            k = "B" + s_
+            H = xf(Bn[f"Leg{k}1"].head_local, D, T)
+            ank = Vector((H.x, H.y - 0.15 * LB, z0 + 0.05 * L3B + 0.01))
+            leg_to(p, k, D, D, T, ank, ank + Vector((0, -L3B, -0.04 * L3B)), (0, -1, 0.6))
+
+    def sit_pose():
+        """Сидит: таз на полу, перед поднят на прямых передних лапах. Наклон и опускание подбираются сами."""
+        best = None
+        for i in range(25):
+            a_ = 0.25 + i * 0.04
+            D = Quaternion((1, 0, 0), -a_)
+            Sh = xf(Bn["LegFL1"].head_local, D, Vector())
+            dz = (z0 + 0.97 * (LF + L3F)) - Sh.z               # опустить/поднять, чтобы передние лапы стояли
+            Hp = xf(Bn["LegBL1"].head_local, D, Vector((0, 0, dz)))
+            err = abs(Hp.z - (z0 + 0.32 * LB))                 # таз — низко, у пола
+            if best is None or err < best[0]:
+                best = (err, a_, dz)
+        _, a_, dz = best
+        D, T = Quaternion((1, 0, 0), -a_), Vector((0, 0, dz))
+        p = {}
+        body(p, D, T, neck_up=0.1)
+        for s_ in ("L", "R"):
+            Sh = xf(Bn[f"LegF{s_}1"].head_local, D, T)
+            paw = Vector((Sh.x, Sh.y - 0.06 * LF, z0))
+            leg_to(p, "F" + s_, D, D, T, paw + Vector((0, 0.02 * L3F, L3F)), paw + Vector((0, -0.25 * L3F, 0)), (0, 1, 0))
+        hind_folded(p, D, T)
+        return p, D, T
+
+    def lie_pose(breath=0.0):
+        """Лежит на животе: тело горизонтально, живот на полу, задние подогнуты; передние — вперёд (хищники,
+        зайцы) или подогнуты под грудь (копытные)."""
+        D = Quaternion((1, 0, 0), 0.0)
+        T = Vector((0, 0, -(belly_h - 0.03 * Lleg) + 0.004 * Lleg * breath))
+        p = {}
+        body(p, D, T, neck_up=0.05, tail_dir=(0.5, 1.0, -0.05))
+        p["Spine"] = rx(0.02 * breath)
+        for s_ in ("L", "R"):
+            Sh = xf(Bn[f"LegF{s_}1"].head_local, D, T)
+            if hoofed:
+                W = Vector((Sh.x, Sh.y - 0.3 * LF, z0 + 0.06 * L3F))
+                leg_to(p, "F" + s_, D, D, T, W, W + Vector((0, L3F * 0.95, 0)), (0, 0.6, 1))
+            else:
+                W = Vector((Sh.x, Sh.y - 0.8 * LF, z0 + 0.06 * L3F))
+                leg_to(p, "F" + s_, D, D, T, W, W + Vector((0, -L3F, -0.03 * L3F)), (0, 0.4, 1))
+        hind_folded(p, D, T)
         return p
 
-    upright = name == "rabbit_wild_krolik"                    # модель уже сидит столбиком — позы мягче
     if upright:
-        def lying(k, breath=0.0):
-            return {"Hips": (rx(0.25 * k), A.world_loc("Hips", (0, 0, -0.12 * belly_h * k + 0.004 * Lleg * breath))),
-                    "Spine": rx(0.2 * k + 0.03 * breath)}
+        def lie_pose(breath=0.0):
+            return {"Hips": (rx(0.25), A.world_loc("Hips", (0, 0, -0.12 * belly_h + 0.004 * Lleg * breath))),
+                    "Spine": rx(0.2 + 0.03 * breath)}
 
+        def sit_pose():
+            return {"Hips": (None, A.world_loc("Hips", (0, 0, -0.04 * Lleg))), "Neck": rx(0.0)}, Quaternion(), Vector()
 
     n = 36
+    LIE = lie_pose()
     def lie_down(t):
-        k = ease(t / 0.9)
-        p = lying(k)
-        p["Neck"] = rx(0.25 * k)
-        p["Tail1"] = rz(0.5 * k) @ rx(-0.2 * k)
-        return p
+        return blend(LIE, ease(t / 0.9))
     A.make("lie_down", n, lie_down, loop=False)
     info["lie_down"] = {"frames": n + 1, "seconds": n / FPS, "loop": False, "note": "стоял → лёг; дальше sleep"}
 
     n = 120
     def sleep(t):
-        p = lying(1.0, sn(2 * t))
-        p["Neck"] = rx(0.55 + 0.02 * sn(2 * t)) @ rz(0.35)   # голова на лапах, чуть набок
-        p["Head"] = rx(0.25)
-        p["Tail1"] = rz(0.7) @ rx(-0.2)
-        p["Tail2"] = rz(0.6)
+        p = lie_pose(sn(2 * t))
+        if not upright:
+            D = Quaternion()
+            p["Neck"] = A.world_rot("Neck", Quaternion((1, 0, 0), 0.5 + 0.02 * sn(2 * t)) @ Quaternion((0, 0, 1), 0.3))
+            p["Head"] = rx(0.2)
+            p["Tail1"] = A.world_rot("Tail1", swing("Tail1", (0.9, 0.6, -0.05)))
+            p["Tail2"] = rz(0.4)
         return p
     A.make("sleep", n, sleep)
     info["sleep"] = {"frames": n + 1, "seconds": n / FPS, "loop": True}
 
-    # сидит: таз вниз, перед поднят (у копытных — лёжа с поднятой головой)
-    a_sit = 0.3 if hop else 0.5
-    d_sit = body_len * math.sin(a_sit)
-    def sitting(k):
-        if upright:
-            return {"Hips": (None, A.world_loc("Hips", (0, 0, -0.04 * Lleg * k))), "Neck": rx(0.0)}
-        if hoofed:
-            p = lying(k)
-            p["Neck"] = rx(-0.15 * k)
+    # сидит (у копытных — лежит, голова поднята)
+    SIT, D_sit, T_sit = sit_pose()
+
+    def sitting(k=1.0):
+        if hoofed and not upright:
+            p = lie_pose()
+            p["Neck"] = A.world_rot("Neck", Quaternion((1, 0, 0), -0.15))
             return p
-        p = {}
-        p["Hips"] = (A.world_rot("Hips", Quaternion((1, 0, 0), -a_sit * k)),
-                     A.world_loc("Hips", (0, 0.05 * body_len * k, -min(d_sit, 0.8 * belly_h + 0.2 * Lleg) * k)))
-        for s_ in ("L", "R"):
-            p[f"LegF{s_}1"] = rx(a_sit * k)
-            p[f"LegB{s_}1"] = rx(-(a_sit + 0.9) * k)
-            p[f"LegB{s_}2"] = rx(1.9 * k)
-            p[f"LegB{s_}3"] = rx(-0.9 * k)
-        p["Neck"] = rx(-0.6 * a_sit * k)
-        p["Tail1"] = rx(-0.6 * k)
-        return p
+        return dict(SIT)
 
     n = 75
     def sit(t):
-        p = sitting(1.0)
-        p["Neck"] = p["Neck"] @ rz(0.2 * sn(t))
-        p["Spine"] = rx(0.02 * sn(3 * t))
+        p = sitting()
+        p["Neck"] = p["Neck"] @ rz(0.15 * sn(t))
+        p["Spine"] = rx(0.015 * sn(3 * t))
         return p
     A.make("sit", n, sit)
     info["sit"] = {"frames": n + 1, "seconds": n / FPS, "loop": True}
 
-    # просит еду (ручные: собаки — сидит и тянет лапу, заяц — встаёт столбиком)
+    # просит еду: собаки — сидят и подают лапу; заяц — встаёт столбиком, передние лапки поджаты
     if canine or hop:
         n = 60
+        if hop and not upright:
+            a_b = 1.05
+            D_b = Quaternion((1, 0, 0), -a_b)
+            Hp = xf(Bn["LegBL1"].head_local, D_b, Vector())
+            T_b = Vector((0, 0, (z0 + 0.3 * LB) - Hp.z))
         def beg(t):
             if upright:
                 return {"LegFL1": rx(-0.7 - 0.1 * sn(2 * t)), "LegFR1": rx(-0.7 - 0.1 * sn(2 * t)),
                         "LegFL2": rx(0.8), "LegFR2": rx(0.8), "Neck": rx(-0.2 + 0.06 * sn(2 * t)),
                         "Head": rx(0.1 * sn(4 * t))}
             if hop:
-                k = 1.0
-                p = {"Hips": (A.world_rot("Hips", Quaternion((1, 0, 0), -0.8)),
-                              A.world_loc("Hips", (0, 0.1 * body_len, -0.15 * belly_h - 0.35 * Lleg))),
-                     "Neck": rx(0.55 + 0.08 * sn(2 * t)), "Head": rx(0.1 * sn(4 * t))}
-                for s_ in ("L", "R"):
-                    p[f"LegF{s_}1"] = rx(0.6 + 0.1 * sn(2 * t))
-                    p[f"LegF{s_}2"] = rx(1.2)
-                    p[f"LegB{s_}1"] = rx(-1.6)
-                    p[f"LegB{s_}2"] = rx(2.0)
-                    p[f"LegB{s_}3"] = rx(-0.6)
+                p = {}
+                body(p, D_b, T_b, neck_up=0.05 + 0.05 * sn(2 * t))
+                hind_folded(p, D_b, T_b)
+                for s_ in ("L", "R"):                     # лапки висят перед грудью, согнуты
+                    Sh = xf(Bn[f"LegF{s_}1"].head_local, D_b, T_b)
+                    W = Sh + Vector((0, -0.35 * LF, -0.55 * LF + 0.03 * LF * sn(2 * t)))
+                    leg_to(p, "F" + s_, D_b, D_b, T_b, W, W + Vector((0, 0.15 * L3F, -L3F)), (0, -1, 0))
+                p["Head"] = rx(0.08 * sn(4 * t))
                 return p
-            p = sitting(1.0)
+            p = sitting()
             lift = 0.5 + 0.5 * sn(2 * t)
-            p["LegFR1"] = rx(a_sit - 1.0 - 0.3 * lift)
-            p["LegFR2"] = rx(1.2)
-            p["Neck"] = rx(-0.6 * a_sit) @ rz(0.3 * sn(t))
-            p["Head"] = rz(0.25 * sn(t))
-            p["Tail1"] = rx(-0.6) @ rz(0.5 * sn(4 * t))
-            p["Tail2"] = rz(0.5 * sn(4 * t - 0.2))
+            Sh = xf(Bn["LegFR1"].head_local, D_sit, T_sit)    # правая передняя — подаёт лапу, кисть свисает
+            W = Sh + Vector((0, -(0.55 + 0.1 * lift) * LF, -(0.45 - 0.15 * lift) * LF))
+            leg_to(p, "FR", D_sit, D_sit, T_sit, W, W + Vector((0, -0.25 * L3F, -0.95 * L3F)), (0, 1, -0.3))
+            p["Neck"] = p["Neck"] @ rz(0.25 * sn(t))
+            p["Head"] = rz(0.2 * sn(t))
+            p["Tail1"] = p["Tail1"] @ rz(0.4 * sn(4 * t))
+            p["Tail2"] = rz(0.4 * sn(4 * t - 0.2))
             return p
         A.make("beg", n, beg)
         info["beg"] = {"frames": n + 1, "seconds": n / FPS, "loop": True, "note": "ручное животное просит еду"}
@@ -647,9 +730,9 @@ def quad_anims(arm, lay, kind, name=""):
         n = 90
         def howl(t):
             up = ease(t / 0.2) * (1 - ease((t - 0.8) / 0.2))
-            p = sitting(1.0)
-            p["Neck"] = rx(-0.6 * a_sit - 0.45 * up + 0.03 * up * sn(12 * t))
-            p["Head"] = rx(-0.2 * up)
+            p = sitting()
+            p["Neck"] = p["Neck"] @ rx(-0.55 * up + 0.03 * up * sn(12 * t))
+            p["Head"] = rx(-0.25 * up)
             return p
         A.make("howl", n, howl, loop=False)
         info["howl"] = {"frames": n + 1, "seconds": n / FPS, "loop": False}

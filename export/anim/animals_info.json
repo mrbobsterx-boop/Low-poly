@@ -2,7 +2,7 @@
  "bear_black": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.59,
+  "mb": 0.61,
   "animations": {
    "idle": {
     "frames": 76,
@@ -74,7 +74,7 @@
  "bear_brown": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.61,
+  "mb": 0.63,
   "animations": {
    "idle": {
     "frames": 76,
@@ -146,7 +146,7 @@
  "bear_mutant": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.88,
+  "mb": 0.9,
   "animations": {
    "idle": {
     "frames": 76,
@@ -291,7 +291,7 @@
  "deer_red": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.61,
+  "mb": 0.63,
   "animations": {
    "idle": {
     "frames": 76,
@@ -358,7 +358,7 @@
  "deer_roe": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.59,
+  "mb": 0.62,
   "animations": {
    "idle": {
     "frames": 76,
@@ -425,7 +425,7 @@
  "deer_white": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.62,
+  "mb": 0.64,
   "animations": {
    "idle": {
     "frames": 76,
@@ -492,7 +492,7 @@
  "dog_feral_odinochnaya": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.97,
+  "mb": 0.99,
   "animations": {
    "idle": {
     "frames": 76,
@@ -575,7 +575,7 @@
  "dog_husky": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.61,
+  "mb": 0.64,
   "animations": {
    "idle": {
     "frames": 76,
@@ -658,7 +658,7 @@
  "dog_raider": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.62,
+  "mb": 0.64,
   "animations": {
    "idle": {
     "frames": 76,
@@ -741,7 +741,7 @@
  "dog_rottweiler": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.62,
+  "mb": 0.64,
   "animations": {
    "idle": {
     "frames": 76,
@@ -824,7 +824,7 @@
  "dog_shepherd": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.62,
+  "mb": 0.64,
   "animations": {
    "idle": {
     "frames": 76,
@@ -907,7 +907,7 @@
  "dog_terrier": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.48,
+  "mb": 0.5,
   "animations": {
    "idle": {
     "frames": 76,
@@ -990,7 +990,7 @@
  "dog_thin": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.62,
+  "mb": 0.64,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1073,7 +1073,7 @@
  "dog_zombie": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.7,
+  "mb": 0.72,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1229,7 +1229,7 @@
  "moose_bull": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.62,
+  "mb": 0.64,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1296,7 +1296,7 @@
  "moose_cow": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.57,
+  "mb": 0.59,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1363,7 +1363,7 @@
  "moose_mutant": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.67,
+  "mb": 0.69,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1576,7 +1576,7 @@
  "rabbit_grey": {
   "kind": "hop",
   "bones": 18,
-  "mb": 0.4,
+  "mb": 0.42,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1649,7 +1649,7 @@
  "rabbit_hare": {
   "kind": "hop",
   "bones": 18,
-  "mb": 0.39,
+  "mb": 0.41,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1722,7 +1722,7 @@
  "rabbit_white": {
   "kind": "hop",
   "bones": 18,
-  "mb": 0.39,
+  "mb": 0.42,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1868,7 +1868,7 @@
  "rat_grey": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.36,
+  "mb": 0.38,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1935,7 +1935,7 @@
  "rat_pest_krysa": {
   "kind": "quad",
   "bones": 18,
-  "mb": 1.54,
+  "mb": 1.56,
   "animations": {
    "idle": {
     "frames": 76,
@@ -2148,7 +2148,7 @@
  "wolf": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.86,
+  "mb": 0.88,
   "animations": {
    "idle": {
     "frames": 76,
