@@ -621,6 +621,220 @@ def clock_face(rng):
     return age(im, rng, fade=0.1, dirt=0.25, folds=False, torn=False)
 
 
+# ── партия 3: следы на стенах (мягкие края — прозрачность плавная, вид «stain») ──
+
+def _rgba(col, alpha):
+    im = Image.new("RGBA", alpha.size, col + (255,))
+    im.putalpha(alpha)
+    return im
+
+
+def _shade(im, rng, lo=190):
+    sh = noise(im.width, im.height, rng, 24, lo, 255)
+    r, g, b, a = im.split()
+    return Image.merge("RGBA", [ImageChops.multiply(c, sh) for c in (r, g, b)] + [a])
+
+
+def wall_crack(lang, rng):
+    w, h = 1024, 1024
+    m = Image.new("L", (w, h), 0)
+    d = ImageDraw.Draw(m)
+    chip = Image.new("L", (w, h), 0)
+    dc = ImageDraw.Draw(chip)
+
+    def branch(x, y, ang, L, wd, depth):
+        pts = [(x, y)]
+        for _ in range(int(L / 18)):
+            ang += rng.uniform(-0.45, 0.45)
+            x, y = x + math.cos(ang) * 18, y + math.sin(ang) * 18
+            pts.append((x, y))
+        d.line(pts, fill=255, width=max(1, int(wd)), joint="curve")
+        dc.line(pts, fill=150, width=int(wd * 4 + 6))
+        if depth < 3:
+            for _ in range(rng.randint(1, 3)):
+                k = rng.randint(1, len(pts) - 1)
+                branch(pts[k][0], pts[k][1], ang + rng.choice((-1, 1)) * rng.uniform(0.5, 1.1), L * 0.55, wd * 0.6, depth + 1)
+    for k in range(4):
+        branch(w / 2, h / 2, k * math.pi / 2 + rng.uniform(-0.4, 0.4), 420, 7, 0)
+    dc.ellipse((w / 2 - 50, h / 2 - 40, w / 2 + 50, h / 2 + 40), fill=200)   # выбитый кусок в центре
+    d.ellipse((w / 2 - 22, h / 2 - 16, w / 2 + 22, h / 2 + 16), fill=255)
+    chip = chip.filter(ImageFilter.GaussianBlur(3)).point(lambda v: int(v * 0.5))
+    light = _rgba((200, 195, 185), chip)
+    dark = _rgba((25, 22, 20), m.filter(ImageFilter.GaussianBlur(0.8)))
+    return over(light, dark)
+
+
+def wall_leak(lang, rng):
+    w, h = 1024, 1024
+    a = Image.new("L", (w, h), 0)
+    d = ImageDraw.Draw(a)
+    d.rectangle((0, 0, w, 70), fill=170)   # мокрая полоса сверху
+    for _ in range(22):
+        x = rng.uniform(40, w - 40)
+        L = rng.uniform(0.3, 0.95) * h
+        wd = rng.uniform(10, 45)
+        d.line([(x + math.sin(t / 60) * 6, t) for t in range(0, int(L), 20)], fill=rng.randint(90, 170), width=int(wd))
+        d.ellipse((x - wd * 0.6, L - wd * 0.6, x + wd * 0.6, L + wd * 0.6), fill=150)
+    a = a.filter(ImageFilter.GaussianBlur(14))
+    fade = Image.linear_gradient("L").resize((w, h)).point(lambda v: 255 - int(v * 0.55))
+    a = ImageChops.multiply(a, fade)
+    a = ImageChops.multiply(a, noise(w, h, rng, 12, 150, 255))
+    im = _rgba((70, 62, 40), a)
+    rim = a.filter(ImageFilter.FIND_EDGES).filter(ImageFilter.GaussianBlur(2)).point(lambda v: min(255, v * 3))
+    return over(im, _rgba((45, 38, 25), rim))
+
+
+def wall_mold(lang, rng):
+    w, h = 1024, 1024
+    a = Image.new("L", (w, h), 0)
+    for scale, thr in ((40, 150), (14, 165), (5, 175)):
+        n = noise(w, h, rng, scale, 0, 255).point(lambda v, t=thr: max(0, min(255, (v - t) * 6)))
+        a = ImageChops.lighter(a, n)
+    cx, cy = w / 2, h * 0.6   # гуще к низу-середине, к краям сходит на нет
+    yy = Image.radial_gradient("L").resize((w, h)).point(lambda v: max(0, 255 - int(v * 1.25)))
+    a = ImageChops.multiply(a, yy).filter(ImageFilter.GaussianBlur(1.5))
+    im = _rgba((35, 48, 28), a)
+    spots = noise(w, h, rng, 6, 0, 255).point(lambda v: 255 if v > 205 else 0)
+    spots = ImageChops.multiply(spots, a)
+    return _shade(over(im, _rgba((15, 20, 12), spots)), rng, 160)
+
+
+def wall_soot(lang, rng):
+    w, h = 1024, 1024
+    a = Image.new("L", (w, h), 0)
+    d = ImageDraw.Draw(a)
+    for k in range(30):   # шлейф копоти снизу вверх, расширяется
+        t = k / 30
+        y = h - t * h
+        r = 120 + t * 330
+        d.ellipse((w / 2 - r + rng.uniform(-40, 40), y - r * 0.6, w / 2 + r + rng.uniform(-40, 40), y + r * 0.6), fill=int(230 * (1 - t) + 40))
+    a = a.filter(ImageFilter.GaussianBlur(40))
+    a = ImageChops.multiply(a, noise(w, h, rng, 30, 120, 255))
+    return _rgba((22, 19, 17), a.point(lambda v: int(v * 0.92)))
+
+
+def wall_bullets(lang, rng):
+    w, h = 1024, 768
+    im = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    for _ in range(9):
+        x, y = rng.uniform(100, w - 100), rng.uniform(100, h - 100)
+        r = rng.uniform(14, 24)
+        chip = Image.new("L", (w, h), 0)
+        dc = ImageDraw.Draw(chip)
+        pts = []
+        for k in range(12):
+            a = 2 * math.pi * k / 12
+            rr = r * rng.uniform(2.0, 3.2)
+            pts.append((x + math.cos(a) * rr, y + math.sin(a) * rr))
+        dc.polygon(pts, fill=170)
+        for k in range(rng.randint(3, 6)):
+            a = rng.uniform(0, 2 * math.pi)
+            dc.line((x, y, x + math.cos(a) * r * 5, y + math.sin(a) * r * 5), fill=210, width=2)
+        im = over(im, _rgba((185, 178, 165), chip.filter(ImageFilter.GaussianBlur(1.5))))
+        hole = Image.new("L", (w, h), 0)
+        ImageDraw.Draw(hole).ellipse((x - r, y - r, x + r, y + r), fill=255)
+        im = over(im, _rgba((18, 15, 13), hole.filter(ImageFilter.GaussianBlur(2))))
+        ring = Image.new("L", (w, h), 0)
+        ImageDraw.Draw(ring).ellipse((x - r * 1.3, y - r * 1.3, x + r * 1.3, y + r * 1.3), outline=140, width=4)
+        im = over(im, _rgba((60, 55, 50), ring.filter(ImageFilter.GaussianBlur(2))))
+    return im
+
+
+def _hand(d, x, y, s, ang, fill):
+    def rot(px, py):
+        return (x + (px * math.cos(ang) - py * math.sin(ang)) * s, y + (px * math.sin(ang) + py * math.cos(ang)) * s)
+    d.polygon([rot(*p) for p in ((-40, 0), (40, 0), (45, 70), (-38, 75))], fill=fill)   # ладонь
+    d.ellipse([*rot(-42, 5), *rot(42, 80)], fill=fill)
+    for fx, fl, fa in ((-30, 75, -0.25), (-10, 90, -0.08), (10, 92, 0.05), (30, 80, 0.18)):
+        tip = (fx + math.sin(fa) * fl, -fl)
+        d.line([rot(fx, 0), rot(*tip)], fill=fill, width=int(20 * s))
+        d.ellipse([*rot(tip[0] - 10, tip[1] - 10), *rot(tip[0] + 10, tip[1] + 10)], fill=fill)
+    d.line([rot(-40, 40), rot(-85, -5)], fill=fill, width=int(22 * s))   # большой палец
+
+
+def wall_handprints(lang, rng):
+    w, h = 1024, 1024
+    a = Image.new("L", (w, h), 0)
+    d = ImageDraw.Draw(a)
+    for _ in range(5):
+        x, y = rng.uniform(180, w - 180), rng.uniform(220, h - 260)
+        _hand(d, x, y, rng.uniform(1.0, 1.3), rng.uniform(-0.6, 0.6), rng.randint(170, 240))
+        if rng.random() < 0.5:   # смазанный вниз
+            L = rng.uniform(100, 240)
+            d.polygon([(x - 38, y + 60), (x + 38, y + 60), (x + 14 + rng.uniform(-10, 10), y + 60 + L), (x - 18, y + 60 + L * 0.8)], fill=120)
+    a = a.filter(ImageFilter.GaussianBlur(2))
+    a = ImageChops.multiply(a, noise(w, h, rng, 4, 110, 255))
+    return _rgba((105, 20, 15), a)
+
+
+def wall_blood(lang, rng):
+    w, h = 1024, 1024
+    a = Image.new("L", (w, h), 0)
+    d = ImageDraw.Draw(a)
+    cx, cy = w / 2, h * 0.38
+    d.ellipse((cx - 150, cy - 110, cx + 150, cy + 120), fill=235)
+    for _ in range(70):   # брызги
+        ang = rng.uniform(0, 2 * math.pi)
+        dist = rng.uniform(120, 420)
+        r = rng.uniform(4, 22) * (1.2 - dist / 500)
+        x, y = cx + math.cos(ang) * dist, cy + math.sin(ang) * dist * 0.8
+        d.ellipse((x - r, y - r, x + r, y + r), fill=235)
+    for _ in range(10):   # подтёки вниз
+        x = cx + rng.uniform(-130, 130)
+        L = rng.uniform(150, 520)
+        wd = rng.uniform(8, 20)
+        d.line((x, cy + 40, x, cy + L), fill=230, width=int(wd))
+        d.ellipse((x - wd, cy + L - wd, x + wd, cy + L + wd), fill=230)
+    a = a.filter(ImageFilter.GaussianBlur(1.5))
+    im = _rgba((110, 12, 10), a)
+    dark = ImageChops.multiply(a, noise(w, h, rng, 20, 0, 255).point(lambda v: 255 if v > 150 else 0)).filter(ImageFilter.GaussianBlur(6))
+    return over(im, _rgba((55, 6, 5), dark.point(lambda v: int(v * 0.7))))
+
+
+def wall_peeling(lang, rng):
+    w, h = 1024, 1024
+    im = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    for _ in range(7):
+        x, y = rng.uniform(150, w - 150), rng.uniform(150, h - 150)
+        pts = []
+        R = rng.uniform(70, 170)
+        for k in range(16):
+            a = 2 * math.pi * k / 16
+            rr = R * rng.uniform(0.55, 1.15)
+            pts.append((x + math.cos(a) * rr, y + math.sin(a) * rr * 0.8))
+        hole = Image.new("L", (w, h), 0)
+        ImageDraw.Draw(hole).polygon(pts, fill=255)
+        rim = hole.filter(ImageFilter.MaxFilter(15))
+        im = over(im, _rgba((205, 200, 185), ImageChops.subtract(rim, hole).filter(ImageFilter.GaussianBlur(1))))   # край краски
+        im = over(im, _rgba((120, 110, 95), hole.point(lambda v: int(v * 0.85))))   # под краской — штукатурка
+        sh = hole.filter(ImageFilter.GaussianBlur(5)).point(lambda v: int(v * 0.35))
+        im = over(im, _rgba((40, 35, 30), ImageChops.subtract(sh, hole.filter(ImageFilter.MinFilter(9)))))
+    return _shade(im, rng, 180)
+
+
+def wall_rust_streaks(lang, rng):
+    w, h = 1024, 1024
+    a = Image.new("L", (w, h), 0)
+    d = ImageDraw.Draw(a)
+    bolts = []
+    for k in range(6):
+        x, y = 100 + k * 165 + rng.uniform(-30, 30), rng.uniform(60, 200)
+        bolts.append((x, y))
+        L = rng.uniform(0.35, 0.8) * h
+        for j in range(3):
+            xx = x + rng.uniform(-14, 14)
+            d.line([(xx + math.sin(t / 40) * 4, t) for t in range(int(y), int(y + L * rng.uniform(0.6, 1.0)), 15)], fill=rng.randint(140, 230), width=rng.randint(10, 26))
+    a = a.filter(ImageFilter.GaussianBlur(9))
+    fade = Image.linear_gradient("L").resize((w, h)).point(lambda v: 255 - int(v * 0.8))
+    a = ImageChops.multiply(a, fade)
+    im = _shade(_rgba((118, 52, 20), a.point(lambda v: min(255, int(v * 1.5)))), rng, 170)
+    bm = Image.new("L", (w, h), 0)
+    db = ImageDraw.Draw(bm)
+    for x, y in bolts:
+        db.ellipse((x - 16, y - 16, x + 16, y + 16), fill=255)
+    return over(im, _rgba((70, 45, 30), bm))
+
+
 # имя → (функция, ширина м, высота м, есть текст (два языка), вид: paper / paint / clock)
 DECALS = {
     "poster_water": (poster_water, 0.5, 0.7, True, "paper"),
@@ -649,6 +863,15 @@ DECALS = {
     "notes_nail": (notes_nail, 0.45, 0.45, True, "paper"),
     "calendar_crossed": (calendar_crossed, 0.36, 0.48, True, "paper"),
     "wallclock_stopped": (None, 0.32, 0.32, False, "clock"),
+    "wall_crack": (wall_crack, 1.0, 1.0, False, "stain"),
+    "wall_leak": (wall_leak, 1.2, 1.4, False, "stain"),
+    "wall_mold": (wall_mold, 1.2, 1.2, False, "stain"),
+    "wall_soot": (wall_soot, 1.2, 1.6, False, "stain"),
+    "wall_bullets": (wall_bullets, 1.0, 0.75, False, "stain"),
+    "wall_handprints": (wall_handprints, 0.9, 0.9, False, "stain"),
+    "wall_blood": (wall_blood, 1.0, 1.0, False, "stain"),
+    "wall_peeling": (wall_peeling, 1.2, 1.2, False, "stain"),
+    "wall_rust_streaks": (wall_rust_streaks, 1.2, 1.2, False, "stain"),
 }
 
 
@@ -683,7 +906,10 @@ def build_model(name, img_path, w, h, kind):
     tex = nt.nodes.new("ShaderNodeTexImage")
     tex.image = img
     nt.links.new(tex.outputs["Color"], b.inputs["Base Color"])
-    if kind != "clock":   # вырез по прозрачности (alpha clip): рваные края бумаги, краска без фона
+    if kind == "stain":   # следы на стене: прозрачность плавная (подтёки, копоть сходят на нет)
+        nt.links.new(tex.outputs["Alpha"], b.inputs["Alpha"])
+        m.blend_method = "BLEND"
+    elif kind != "clock":   # вырез по прозрачности (alpha clip): рваные края бумаги, краска без фона
         gt = nt.nodes.new("ShaderNodeMath")
         gt.operation = "GREATER_THAN"
         gt.inputs[1].default_value = 0.5
@@ -692,7 +918,7 @@ def build_model(name, img_path, w, h, kind):
         m.blend_method = "CLIP"
     bm = bmesh.new()
     uv = bm.loops.layers.uv.new()
-    off = 0.003 if kind == "paint" else 0.006
+    off = {"paint": 0.003, "stain": 0.002}.get(kind, 0.006)
     if kind == "clock":
         side_m = bpy.data.materials.new("clock_rim")
         side_m.use_nodes = True
@@ -747,6 +973,12 @@ def main():
     for full, fn, w, h, lang, kind in jobs(only):
         rng = random.Random(full)
         im = clock_face(rng) if kind == "clock" else fn(lang, rng)
+        if kind == "stain":   # к краям картинки след сходит на нет — не видно прямых краёв
+            bw = int(min(im.size) * 0.1)
+            edge = Image.new("L", im.size, 0)
+            ImageDraw.Draw(edge).rectangle((bw, bw, im.width - bw, im.height - bw), fill=255)
+            edge = edge.filter(ImageFilter.GaussianBlur(bw * 0.6))
+            im.putalpha(ImageChops.multiply(im.getchannel("A"), edge))
         px = 1024 if max(im.size) > 600 else 512
         if max(im.size) > px:
             k = px / max(im.size)
@@ -759,17 +991,17 @@ def main():
     if made:   # лист: все картинки на тёмном фоне
         cell, cols = 300, 6
         rows = (len(made) + cols - 1) // cols
-        sh = Image.new("RGB", (cols * cell, rows * (cell + 24)), (40, 42, 48))
+        sh = Image.new("RGB", (cols * cell, rows * (cell + 24)), (225, 222, 215))
         d = ImageDraw.Draw(sh)
         f = ImageFont.truetype("DejaVuSans-Bold.ttf", 13)
         for i, (nm, p) in enumerate(made):
             im = Image.open(p).convert("RGBA")
             im.thumbnail((cell - 16, cell - 16))
             x, y = (i % cols) * cell, (i // cols) * (cell + 24)
-            bg = Image.new("RGBA", (cell, cell), (95, 92, 88, 255))   # «стена»
+            bg = Image.new("RGBA", (cell, cell), (176, 170, 158, 255))   # «стена» — светлая штукатурка
             bg.alpha_composite(im, ((cell - im.width) // 2, (cell - im.height) // 2))
             sh.paste(bg.convert("RGB"), (x, y + 24))
-            d.text((x + 6, y + 5), nm, font=f, fill=(235, 235, 235))
+            d.text((x + 6, y + 5), nm, font=f, fill=(40, 40, 40))
         out = os.path.join(ROOT, "renders", "_review", f"decals_{datetime.date.today().isoformat()}.jpg")
         sh.save(out, quality=88)
         print("лист:", out)
