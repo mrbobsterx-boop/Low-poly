@@ -231,6 +231,8 @@ def render(objs, out, ref):
     except Exception:
         sc.cycles.use_denoising = False
     sc.render.resolution_x = sc.render.resolution_y = 300 if "--zoom" not in sys.argv else 420
+    if "--hq" in sys.argv:
+        sc.render.resolution_x = sc.render.resolution_y = 540
     sc.view_settings.view_transform = "AgX"
     if sc.world is None:
         sc.world = bpy.data.worlds.new("w")
