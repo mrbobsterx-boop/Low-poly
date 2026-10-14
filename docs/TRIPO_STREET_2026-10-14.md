@@ -155,14 +155,14 @@ A fairly modern passenger railway car from the late 20th century: long smooth st
 A closed railway boxcar: a tall rectangular wooden box on wheels with four solid plank walls and a curved metal roof, fully enclosed like a big wooden container, a large sliding door in the middle of the long side, a rusty metal frame, two wheel bogies underneath, a ladder at one end. It is not a flatcar and not an open platform. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
 ```
 
-## 4. Плот (папка «14 Природа»)
+## 4. Паром-плот (папка «14 Природа»)
 
 | № | Файл | Размер |
 |---|---|---|
-| 22 | `raft_logs` | 3 × 2 м (по длине) |
+| 22 | `ferry_raft` | 7 × 3,5 м (по длине; паром — везёт машину, решение автора) |
 
 ```
-A simple survival raft made of logs tied together with ropes, a wooden paddle lying on top and a small crate, seen slightly from above. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no water, no text.
+A large flat river ferry raft big enough to carry a car: a wide deck of thick planks laid on rusty steel barrels and pontoons, low metal railings along both long sides, a hinged loading ramp at each end, a thick rope or cable guide post with a pulley at one corner, a few old tires hanging on the sides as bumpers, empty deck, seen slightly from above. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no water, no text.
 ```
 
 ## 5. Лук (папка «14 Природа» или «Оружие»)
