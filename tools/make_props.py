@@ -186,7 +186,7 @@ def reeds(rng):
 def willow(rng):
     """Ива-куст у воды: несколько тонких стволиков из одной кочки, свисающие узкие комки листвы (серо-зелёные)."""
     g = Mesh("bush_willow")
-    bark, l1, l2 = mat("willow_bark", (0.35, 0.28, 0.2)), mat("willow_leaf", (0.45, 0.55, 0.3)), mat("willow_leaf_b", (0.55, 0.62, 0.4))
+    bark, l1, l2 = mat("willow_bark", (0.35, 0.28, 0.2)), mat("willow_leaf", (0.34, 0.48, 0.2)), mat("willow_leaf_b", (0.42, 0.54, 0.24))
     g.blob((0, 0, 0.04), (0.3, 0.25, 0.1), mat("mud_clump", (0.22, 0.18, 0.12)), rng=rng)
     for i in range(6):
         a = 2 * math.pi * i / 6 + rng.uniform(-0.3, 0.3)
@@ -273,11 +273,11 @@ def arrows_bundle(rng):
 
 # ───────────── партия 1: трава и природные мелочи (автор 2026-10-14) ─────────────
 
-GREENS = [(0.36, 0.5, 0.2), (0.42, 0.56, 0.22), (0.3, 0.44, 0.18), (0.5, 0.58, 0.26)]
-DRY = [(0.72, 0.62, 0.36), (0.64, 0.54, 0.3), (0.78, 0.7, 0.44)]
+GREENS = [(0.4, 0.56, 0.16), (0.48, 0.62, 0.2), (0.3, 0.46, 0.12), (0.55, 0.64, 0.22)]
+DRY = [(0.82, 0.64, 0.3), (0.72, 0.52, 0.24), (0.88, 0.74, 0.4)]
 
 
-def _tuft(g, rng, c, n, lo, hi, cols, spread=0.08, bend=(0.2, 0.7), width=(0.018, 0.03), name="grass"):
+def _tuft(g, rng, c, n, lo, hi, cols, spread=0.08, bend=(0.2, 0.7), width=(0.03, 0.05), name="grass"):
     """Пучок травинок вокруг c."""
     mats = [mat(f"{name}_{i}", col) for i, col in enumerate(cols)]
     for i in range(n):
@@ -298,7 +298,7 @@ def grass_short(rng):
 def grass_tall(rng):
     """Трава высокая: 40–75 см, у части — метёлки семян."""
     g = Mesh("grass_tall")
-    _tuft(g, rng, (0, 0, 0), 40, 0.35, 0.75, GREENS, spread=0.14, bend=(0.15, 0.45), width=(0.02, 0.032))
+    _tuft(g, rng, (0, 0, 0), 40, 0.35, 0.75, GREENS, spread=0.14, bend=(0.15, 0.45), width=(0.032, 0.05))
     seed = mat("grass_seed", (0.62, 0.58, 0.38))
     stem = mat("grass_stem", (0.48, 0.55, 0.28))
     for i in range(7):
@@ -348,7 +348,7 @@ def grass_asphalt(rng):
         g.face([a0 + Vector((0, -0.016, 0.004)), a1 + Vector((0, -0.016, 0.004)), a1 + Vector((0, 0.016, 0.004)), a0 + Vector((0, 0.016, 0.004))], crack)
     for k in range(6):
         p = pts[1 + k]
-        _tuft(g, rng, (p.x, p.y, 0.005), 8, 0.06, 0.22, GREENS, spread=0.02, width=(0.012, 0.02))
+        _tuft(g, rng, (p.x, p.y, 0.005), 8, 0.06, 0.22, GREENS, spread=0.02, width=(0.02, 0.032))
     return g.build()
 
 
@@ -525,7 +525,7 @@ def mushrooms(rng):
 def moss_patch(rng):
     """Мох пятном: низкая бугристая зелёная подушка ~60 × 50 см."""
     g = Mesh("moss_patch")
-    m1, m2 = mat("moss", (0.32, 0.45, 0.16)), mat("moss_b", (0.4, 0.52, 0.2))
+    m1, m2 = mat("moss", (0.3, 0.42, 0.13)), mat("moss_b", (0.4, 0.52, 0.2))
     g.disc((0, 0, 0), 0.3, 0.25, 0.015, m1, n=12, rng=rng)
     for k in range(9):
         c = (rng.uniform(-0.2, 0.2), rng.uniform(-0.16, 0.16), 0.012)
@@ -533,7 +533,7 @@ def moss_patch(rng):
     return g.build()
 
 
-STONES = [(0.4, 0.39, 0.37), (0.47, 0.45, 0.42), (0.33, 0.32, 0.31)]
+STONES = [(0.36, 0.36, 0.37), (0.43, 0.42, 0.41), (0.3, 0.3, 0.32)]
 
 
 def rocks_small(rng):
@@ -552,13 +552,13 @@ def rock_boulder(rng):
     """Валун ~1 м, гранёный, с пятном мха сверху и парой камешков рядом."""
     g = Mesh("rock_boulder")
     g.blob((0, 0, 0.32), (0.5, 0.4, 0.38), mat("stone_0", STONES[0]), subdiv=2, jitter=0.12, rng=rng)
-    g.blob((0.05, -0.04, 0.63), (0.25, 0.2, 0.06), mat("moss", (0.32, 0.45, 0.16)), subdiv=1, jitter=0.2, rng=rng)
+    g.blob((0.05, -0.04, 0.63), (0.25, 0.2, 0.06), mat("moss", (0.3, 0.42, 0.13)), subdiv=1, jitter=0.2, rng=rng)
     g.blob((0.55, -0.15, 0.05), (0.09, 0.08, 0.06), mat("stone_1", STONES[1]), subdiv=1, jitter=0.2, rng=rng)
     g.blob((-0.5, 0.1, 0.04), (0.07, 0.06, 0.05), mat("stone_2", STONES[2]), subdiv=1, jitter=0.2, rng=rng)
     return g.build()
 
 
-BARK, WOOD = (0.36, 0.26, 0.18), (0.78, 0.62, 0.42)
+BARK, WOOD = (0.44, 0.22, 0.12), (0.84, 0.6, 0.38)
 
 
 def stump(rng):
@@ -597,7 +597,7 @@ def log_fallen(rng):
         ring = [p + Vector((0, math.cos(2 * math.pi * k / n) * r, math.sin(2 * math.pi * k / n) * r)) for k in range(n)]
         g.face(ring if sgn > 0 else ring[::-1], wood)
     g.tube([Vector((0.3, -0.05, R * 1.6)), Vector((0.42, -0.1, R * 2.6))], [0.04, 0.02], bark, sides=5)   # сук
-    g.blob((-0.4, 0.02, R * 1.85), (0.25, 0.12, 0.04), mat("moss", (0.32, 0.45, 0.16)), subdiv=1, jitter=0.2, rng=rng)
+    g.blob((-0.4, 0.02, R * 1.85), (0.25, 0.12, 0.04), mat("moss", (0.3, 0.42, 0.13)), subdiv=1, jitter=0.2, rng=rng)
     return g.build()
 
 
@@ -643,6 +643,152 @@ WALL = {"vine_wall"}   # на стену: спина в Y = 0, низ в Z = 0
 
 
 MODELS = {"bush_water_reeds": reeds, "bush_willow": willow, "bush_water_sedge": sedge, "arrow_wood": arrow, "arrows_bundle": arrows_bundle, **BATCH1}
+
+
+# ───────────────────────── «нарисованная» текстура, как у Tripo ─────────────────────────
+# Автор 2026-10-14: «отличается от Tripo и цветом, и видом». У моделей Tripo — рисованная текстура: тёплые насыщенные
+# цвета, пятна краски, волокна у дерева, тёмные щели и низ, светлые края. Здесь то же запекается в одну картинку
+# (Cycles, bake EMIT): цвет материала × пятна × волокна (вдоль длинной стороны) × затенение щелей (AO) × светлые грани ×
+# темнее книзу → одна текстура 512 на модель, один материал.
+
+GRAIN = ("wood", "bark", "branch", "log", "stem", "stalk", "shaft", "twine")
+
+
+def _paint_mat(m, size, long_axis, bake_img):
+    nt = m.node_tree
+    N, L = nt.nodes, nt.links
+    base = tuple(N["Principled BSDF"].inputs["Base Color"].default_value)
+    for n in list(N):
+        N.remove(n)
+    out = N.new("ShaderNodeOutputMaterial")
+    em = N.new("ShaderNodeEmission")
+    L.new(em.outputs[0], out.inputs["Surface"])
+    tc = N.new("ShaderNodeTexCoord")
+
+    def fac_noise(scale, lo, hi, stretch=None, detail=3.0):
+        mp = N.new("ShaderNodeMapping")
+        if stretch is not None:
+            sc = [12.0, 12.0, 12.0]
+            sc[stretch] = 0.6
+            mp.inputs["Scale"].default_value = sc
+        L.new(tc.outputs["Object"], mp.inputs["Vector"])
+        nz = N.new("ShaderNodeTexNoise")
+        nz.inputs["Scale"].default_value = scale
+        nz.inputs["Detail"].default_value = detail
+        L.new(mp.outputs[0], nz.inputs["Vector"])
+        mr = N.new("ShaderNodeMapRange")
+        mr.inputs["From Min"].default_value, mr.inputs["From Max"].default_value = 0.3, 0.7
+        mr.inputs["To Min"].default_value, mr.inputs["To Max"].default_value = lo, hi
+        L.new(nz.outputs["Fac"], mr.inputs["Value"])
+        return mr.outputs[0]
+
+    facs = [fac_noise(2.5 / max(size, 0.3), 0.72, 1.15)]                       # большие пятна краски
+    facs.append(fac_noise(9.0 / max(size, 0.3), 0.85, 1.1, detail=6.0))          # мелкие мазки
+    if any(k in m.name for k in GRAIN):
+        facs.append(fac_noise(1.2, 0.62, 1.15, stretch=long_axis, detail=4.0))   # волокна вдоль длинной стороны
+        mp = N.new("ShaderNodeMapping")                                          # тёмные прожилки (полосы)
+        sc = [1.0, 1.0, 1.0]
+        sc[long_axis] = 0.08
+        mp.inputs["Scale"].default_value = sc
+        L.new(tc.outputs["Object"], mp.inputs["Vector"])
+        wv = N.new("ShaderNodeTexWave")
+        wv.wave_type = "BANDS"
+        wv.bands_direction = "XYZ"[(long_axis + 1) % 3]
+        wv.inputs["Scale"].default_value = 14.0
+        wv.inputs["Distortion"].default_value = 6.0
+        wv.inputs["Detail"].default_value = 3.0
+        L.new(mp.outputs[0], wv.inputs["Vector"])
+        mw = N.new("ShaderNodeMapRange")
+        mw.inputs["From Min"].default_value, mw.inputs["From Max"].default_value = 0.0, 0.18
+        mw.inputs["To Min"].default_value, mw.inputs["To Max"].default_value = 0.55, 1.0
+        L.new(wv.outputs["Fac"], mw.inputs["Value"])
+        facs.append(mw.outputs[0])
+    if "stone" in m.name or "rock" in m.name or "asphalt" in m.name:          # камень: тёмные трещинки по граням ячеек
+        vr = N.new("ShaderNodeTexVoronoi")
+        vr.feature = "DISTANCE_TO_EDGE"
+        vr.inputs["Scale"].default_value = 3.0 / max(size, 0.3)
+        vr.inputs["Randomness"].default_value = 1.0
+        L.new(tc.outputs["Object"], vr.inputs["Vector"])
+        mv = N.new("ShaderNodeMapRange")
+        mv.inputs["From Min"].default_value, mv.inputs["From Max"].default_value = 0.0, 0.05
+        mv.inputs["To Min"].default_value, mv.inputs["To Max"].default_value = 0.82, 1.0
+        L.new(vr.outputs["Distance"], mv.inputs["Value"])
+        facs.append(mv.outputs[0])
+    ao = N.new("ShaderNodeAmbientOcclusion")
+    ao.inputs["Distance"].default_value = 0.08 * max(size, 0.3)
+    ao.samples = 12
+    mra = N.new("ShaderNodeMapRange")
+    mra.inputs["To Min"].default_value, mra.inputs["To Max"].default_value = 0.5, 1.0
+    L.new(ao.outputs["AO"], mra.inputs["Value"])
+    facs.append(mra.outputs[0])
+    geo = N.new("ShaderNodeNewGeometry")                                         # светлые выпуклые грани
+    mre = N.new("ShaderNodeMapRange")
+    mre.inputs["From Min"].default_value, mre.inputs["From Max"].default_value = 0.5, 0.56
+    mre.inputs["To Min"].default_value, mre.inputs["To Max"].default_value = 0.92, 1.3
+    L.new(geo.outputs["Pointiness"], mre.inputs["Value"])
+    facs.append(mre.outputs[0])
+    sep = N.new("ShaderNodeSeparateXYZ")                                          # темнее книзу
+    L.new(tc.outputs["Object"], sep.inputs[0])
+    mrz = N.new("ShaderNodeMapRange")
+    mrz.inputs["From Min"].default_value, mrz.inputs["From Max"].default_value = 0.0, max(size, 0.2) * 0.8
+    mrz.inputs["To Min"].default_value, mrz.inputs["To Max"].default_value = 0.78, 1.05
+    L.new(sep.outputs["Z"], mrz.inputs["Value"])
+    facs.append(mrz.outputs[0])
+    acc = facs[0]
+    for f in facs[1:]:
+        mul = N.new("ShaderNodeMath")
+        mul.operation = "MULTIPLY"
+        L.new(acc, mul.inputs[0])
+        L.new(f, mul.inputs[1])
+        acc = mul.outputs[0]
+    mix = N.new("ShaderNodeMixRGB")
+    mix.blend_type = "MULTIPLY"
+    mix.inputs["Fac"].default_value = 1.0
+    mix.inputs["Color1"].default_value = base
+    comb = N.new("ShaderNodeCombineColor")
+    for ch in ("Red", "Green", "Blue"):
+        L.new(acc, comb.inputs[ch])
+    L.new(comb.outputs[0], mix.inputs["Color2"])
+    L.new(mix.outputs[0], em.inputs["Color"])
+    tex = N.new("ShaderNodeTexImage")
+    tex.image = bake_img
+    N.active = tex
+
+
+def paint(ob, px=512):
+    """Запечь рисованную текстуру в одну картинку и заменить материалы одним (картинка + шероховатость 1)."""
+    sc = bpy.context.scene
+    sc.render.engine = "CYCLES"
+    sc.cycles.device = "CPU"
+    sc.cycles.samples = 16
+    bpy.ops.object.select_all(action="DESELECT")
+    ob.select_set(True)
+    bpy.context.view_layer.objects.active = ob
+    bpy.ops.object.mode_set(mode="EDIT")
+    bpy.ops.mesh.select_all(action="SELECT")
+    bpy.ops.uv.smart_project(angle_limit=math.radians(66), island_margin=0.01)
+    bpy.ops.object.mode_set(mode="OBJECT")
+    dims = ob.dimensions
+    long_axis = max(range(3), key=lambda i: dims[i])
+    size = max(dims)
+    img = bpy.data.images.new(ob.name + "_paint", px, px)
+    for m in ob.data.materials:
+        _paint_mat(m, size, long_axis, img)
+    sc.render.bake.margin = 4
+    bpy.ops.object.bake(type="EMIT")
+    img.pack()
+    nm = bpy.data.materials.new(ob.name + "_mat")
+    nm.use_nodes = True
+    b = nm.node_tree.nodes["Principled BSDF"]
+    b.inputs["Roughness"].default_value = 1.0
+    b.inputs["Metallic"].default_value = 0.0
+    t = nm.node_tree.nodes.new("ShaderNodeTexImage")
+    t.image = img
+    nm.node_tree.links.new(t.outputs["Color"], b.inputs["Base Color"])
+    ob.data.materials.clear()
+    ob.data.materials.append(nm)
+    for poly in ob.data.polygons:
+        poly.material_index = 0
 
 
 # ───────────────────────── экспорт ─────────────────────────
@@ -696,11 +842,14 @@ def main():
         rng = random.Random(nm)
         ob = MODELS[nm](rng)
         size = ground(ob, nm in WALL)
+        if os.environ.get("FLAT") != "1":
+            paint(ob)
         bpy.ops.object.select_all(action="DESELECT")
         ob.select_set(True)
         bpy.context.view_layer.objects.active = ob
         path = os.path.join(ROOT, "export", f"{nm}_idle.glb")
-        bpy.ops.export_scene.gltf(filepath=path, export_format="GLB", use_selection=True, export_apply=True, export_yup=True)
+        bpy.ops.export_scene.gltf(filepath=path, export_format="GLB", use_selection=True, export_apply=True, export_yup=True,
+                                  export_image_format="JPEG")
         tri = sum(len(p.vertices) - 2 for p in ob.data.polygons)
         print(f"{nm}: {size.x:.2f} × {size.z:.2f} м (глубина {size.y:.2f}), треугольников {tri}, {os.path.getsize(path) // 1024} КБ")
         prev = os.path.join(ROOT, "renders", "_review", f"_prev_{nm}")
