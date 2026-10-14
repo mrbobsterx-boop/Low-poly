@@ -1,7 +1,7 @@
 # Партия 2026-10-14 — улица, природа, поезд, плот, лук
 
 Просьба автора (2026-10-14): деревья (3 обычных + 2 сухих — для плохих локаций), «островки» мелочей для улицы,
-поезд на рельсы (тепловоз, 2 пассажирских вагона, грузовой), плот, лук. Кусты у воды и стрелы — **нарисованы
+поезд на рельсы (тепловоз, пассажирский вагон, грузовой), плот, лук. Кусты у воды и стрелы — **нарисованы
 кодом** (`tools/make_props.py`, в Tripo не нужны).
 
 **Как делать (решение автора 2026-10-14):** образец стиля — **ёлка** (`docs/ref/style_tree_sample.webp`), не кровать.
@@ -136,8 +136,7 @@ A rusty metal barrel with a small fire burning inside, two wooden crates used as
 | № | Файл | Что | Размер (длина × высота) |
 |---|---|---|---|
 | 18 | `train_loco_diesel` | тепловоз (± современный, не паровоз — решение автора) | 7 × 3 м |
-| 19 | `train_coach_a` | пассажирский вагон, зелёный | 8 × 2,8 м |
-| 20 | `train_coach_b` | пассажирский вагон, бордовый, потрёпанный | 8 × 2,8 м |
+| 19 | `train_coach` | пассажирский вагон (± современный; один на оба — решение автора) | 8 × 2,8 м |
 | 21 | `train_freight` | грузовой вагон (крытый, дверь-купе) | 7 × 2,7 м |
 
 **18. тепловоз (± современный, не паровоз — решение автора)** — `train_loco_diesel.glb`
@@ -145,15 +144,11 @@ A rusty metal barrel with a small fire burning inside, two wooden crates used as
 A fairly modern diesel locomotive from the late 20th century: boxy steel body with a driver's cab with big front windows at one end, side walkways with yellow handrails, roof vents and exhaust, faded red and grey paint with a yellow stripe, dirty and slightly rusty, compact size for a narrow-gauge railway. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
 ```
 
-**19. пассажирский вагон, зелёный** — `train_coach_a.glb`
+**19. пассажирский вагон (± современный)** — `train_coach.glb`
 ```
-An old narrow-gauge wooden passenger railway car painted green, with a row of windows, doors at both ends and small platforms with railings. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
+A fairly modern passenger railway car from the late 20th century: long smooth steel body with a row of big rectangular windows, sliding doors near both ends, a rounded roof with vents, rubber gangway connectors at both ends, two wheel bogies underneath, dirty and worn, compact size for a narrow-gauge railway. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
 ```
 
-**20. пассажирский вагон, бордовый, потрёпанный** — `train_coach_b.glb`
-```
-An old narrow-gauge passenger railway car painted dark red, faded paint, a few boarded-up windows, doors at both ends. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
-```
 
 **21. грузовой вагон (крытый, дверь-купе)** — `train_freight.glb`
 ```
