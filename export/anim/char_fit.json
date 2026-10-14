@@ -89,7 +89,7 @@
    }
   },
   "char_f_police_b": {
-   "arm_spread_deg": 0.0,
+   "arm_spread_deg": 2.0,
    "hips_height": 0.8997,
    "motion_scale": {
     "mixamo": 0.9375,
@@ -109,7 +109,7 @@
    }
   },
   "char_fm_f": {
-   "arm_spread_deg": 4.0,
+   "arm_spread_deg": 6.0,
    "hips_height": 0.8964,
    "motion_scale": {
     "mixamo": 0.934,
@@ -119,7 +119,7 @@
    }
   },
   "char_fm_f_thin": {
-   "arm_spread_deg": 12.0,
+   "arm_spread_deg": 10.0,
    "hips_height": 0.8722,
    "motion_scale": {
     "mixamo": 0.9088,
@@ -139,7 +139,7 @@
    }
   },
   "char_fm_m_big": {
-   "arm_spread_deg": 16.0,
+   "arm_spread_deg": 6.0,
    "hips_height": 0.835,
    "motion_scale": {
     "mixamo": 0.8701,
@@ -169,7 +169,7 @@
    }
   },
   "char_free_f_denim": {
-   "arm_spread_deg": 2.0,
+   "arm_spread_deg": 0.0,
    "hips_height": 0.9481,
    "motion_scale": {
     "mixamo": 0.9879,
@@ -179,7 +179,7 @@
    }
   },
   "char_free_f_rain": {
-   "arm_spread_deg": 8.0,
+   "arm_spread_deg": 6.0,
    "hips_height": 0.8802,
    "motion_scale": {
     "mixamo": 0.9172,
@@ -189,7 +189,7 @@
    }
   },
   "char_free_m_hermit": {
-   "arm_spread_deg": 10.0,
+   "arm_spread_deg": 8.0,
    "hips_height": 0.9127,
    "motion_scale": {
     "mixamo": 0.951,
@@ -219,7 +219,7 @@
    }
   },
   "char_free_m_teacher": {
-   "arm_spread_deg": 2.0,
+   "arm_spread_deg": 0.0,
    "hips_height": 0.9399,
    "motion_scale": {
     "mixamo": 0.9794,
@@ -259,7 +259,7 @@
    }
   },
   "char_gr_m_big": {
-   "arm_spread_deg": 16.0,
+   "arm_spread_deg": 14.0,
    "hips_height": 0.9877,
    "motion_scale": {
     "mixamo": 1.0292,
@@ -289,7 +289,7 @@
    }
   },
   "char_iw_f": {
-   "arm_spread_deg": 10.0,
+   "arm_spread_deg": 12.0,
    "hips_height": 0.8828,
    "motion_scale": {
     "mixamo": 0.9199,
@@ -299,7 +299,7 @@
    }
   },
   "char_iw_f_tall": {
-   "arm_spread_deg": 8.0,
+   "arm_spread_deg": 6.0,
    "hips_height": 0.9592,
    "motion_scale": {
     "mixamo": 0.9995,
@@ -319,7 +319,7 @@
    }
   },
   "char_iw_m": {
-   "arm_spread_deg": 12.0,
+   "arm_spread_deg": 8.0,
    "hips_height": 0.9352,
    "motion_scale": {
     "mixamo": 0.9745,
@@ -329,7 +329,7 @@
    }
   },
   "char_iw_m_old": {
-   "arm_spread_deg": 16.0,
+   "arm_spread_deg": 14.0,
    "hips_height": 0.7975,
    "motion_scale": {
     "mixamo": 0.831,
@@ -349,7 +349,7 @@
    }
   },
   "char_m_chef": {
-   "arm_spread_deg": 4.0,
+   "arm_spread_deg": 0.0,
    "hips_height": 0.8747,
    "motion_scale": {
     "mixamo": 0.9114,
@@ -379,7 +379,7 @@
    }
   },
   "char_m_police": {
-   "arm_spread_deg": 4.0,
+   "arm_spread_deg": 6.0,
    "hips_height": 0.9877,
    "motion_scale": {
     "mixamo": 1.0292,
@@ -389,7 +389,7 @@
    }
   },
   "char_m_worker": {
-   "arm_spread_deg": 2.0,
+   "arm_spread_deg": 0.0,
    "hips_height": 0.8998,
    "motion_scale": {
     "mixamo": 0.9376,
@@ -449,7 +449,7 @@
    }
   },
   "char_rd_f": {
-   "arm_spread_deg": 10.0,
+   "arm_spread_deg": 8.0,
    "hips_height": 0.9062,
    "motion_scale": {
     "mixamo": 0.9443,
@@ -529,7 +529,7 @@
    }
   },
   "char_s9_m_subject": {
-   "arm_spread_deg": 2.0,
+   "arm_spread_deg": 0.0,
    "hips_height": 0.9282,
    "motion_scale": {
     "mixamo": 0.9672,
@@ -579,7 +579,7 @@
    }
   },
   "char_ws_f_round": {
-   "arm_spread_deg": 10.0,
+   "arm_spread_deg": 8.0,
    "hips_height": 0.7238,
    "motion_scale": {
     "mixamo": 0.7542,
@@ -599,7 +599,7 @@
    }
   },
   "char_ws_m": {
-   "arm_spread_deg": 6.0,
+   "arm_spread_deg": 8.0,
    "hips_height": 0.9629,
    "motion_scale": {
     "mixamo": 1.0033,
@@ -619,7 +619,7 @@
    }
   },
   "zombie_fat": {
-   "arm_spread_deg": 8.0,
+   "arm_spread_deg": 6.0,
    "hips_height": 0.8479,
    "motion_scale": {
     "mixamo": 0.8836,
@@ -629,7 +629,7 @@
    }
   },
   "zombie_firefighter": {
-   "arm_spread_deg": 4.0,
+   "arm_spread_deg": 6.0,
    "hips_height": 0.9627,
    "motion_scale": {
     "mixamo": 1.0031,

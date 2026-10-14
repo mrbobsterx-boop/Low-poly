@@ -230,7 +230,7 @@ def render(objs, out, ref):
         sc.cycles.use_denoising, sc.cycles.denoiser = True, "OPENIMAGEDENOISE"
     except Exception:
         sc.cycles.use_denoising = False
-    sc.render.resolution_x = sc.render.resolution_y = 300
+    sc.render.resolution_x = sc.render.resolution_y = 300 if "--zoom" not in sys.argv else 420
     sc.view_settings.view_transform = "AgX"
     if sc.world is None:
         sc.world = bpy.data.worlds.new("w")
@@ -297,6 +297,8 @@ def main(argv):
         lo, hi = P.min(0), P.max(0)
         h = hi[1] - lo[1]
         ref = (Vector((0, 0, (lo[1] + hi[1]) / 2)), h * 1.25, float(lo[1]), yaw)
+        if "--zoom" in argv:                               # крупно: верх тела (плечи, локти)
+            ref = (Vector((0, 0, lo[1] + 0.68 * h)), h * 0.55, float(lo[1]), yaw)
         for ap in anims:
             g = GLB(ap)
             by = {a["name"]: a for a in g.j["animations"]}
