@@ -178,9 +178,9 @@ A large flat river ferry raft big enough to carry a car: a wide deck of thick pl
 A simple wooden recurve bow standing upright, with a leather grip in the middle and a taut string, without any arrows, no quiver. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no text.
 ```
 
-**23б. Современный лук (блочный)** — `bow_compound.glb` · 1,0 м по высоте
+**23б. Современный лук (простой спортивный)** — `bow_modern.glb` · 1,0 м по высоте
 ```
-A modern compound hunting bow standing upright: dark metal and carbon riser with a rubber grip, short stiff limbs with round cam wheels at both ends, several tight cables and a string, a small sight with pins and an arrow rest, scratched and worn, without any arrows, no quiver. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no text.
+A modern simple sport bow standing upright: a dark grey metal handle in the middle with a black rubber grip, two smooth curved black limbs, a single straight string, clean simple shapes, slightly scratched, without any arrows, no quiver. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no text.
 ```
 
 ---
