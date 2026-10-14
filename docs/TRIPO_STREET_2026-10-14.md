@@ -157,7 +157,7 @@ An old narrow-gauge passenger railway car painted dark red, faded paint, a few b
 
 **21. грузовой вагон (крытый, дверь-купе)** — `train_freight.glb`
 ```
-An old narrow-gauge covered freight railway wagon made of wooden planks with a big sliding door in the middle, rusty metal frame. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
+A closed railway boxcar: a tall rectangular wooden box on wheels with four solid plank walls and a curved metal roof, fully enclosed like a big wooden container, a large sliding door in the middle of the long side, a rusty metal frame, two wheel bogies underneath, a ladder at one end. It is not a flatcar and not an open platform. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
 ```
 
 ## 4. Плот (папка «14 Природа»)
