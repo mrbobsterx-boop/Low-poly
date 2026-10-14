@@ -642,7 +642,128 @@ BATCH1 = {"grass_short": grass_short, "grass_tall": grass_tall, "grass_dry": gra
 WALL = {"vine_wall"}   # на стену: спина в Y = 0, низ в Z = 0
 
 
-MODELS = {"bush_water_reeds": reeds, "bush_willow": willow, "bush_water_sedge": sedge, "arrow_wood": arrow, "arrows_bundle": arrows_bundle, **BATCH1}
+# ───────────── партия 4: деревья для фона (простые, лёгкие — ставить рядами вдалеке) ─────────────
+
+def _box(g, c, size, m, rz=0.0, rx=0.0):
+    """Коробка с центром c, размер size, повороты вокруг Z и X (радианы)."""
+    c = Vector(c)
+    sx, sy, sz = (v / 2 for v in size)
+    rot = Matrix.Rotation(rz, 3, "Z") @ Matrix.Rotation(rx, 3, "X")
+    p = [c + rot @ Vector((x, y, z)) for z in (-sz, sz) for y in (-sy, sy) for x in (-sx, sx)]
+    for f in ((0, 1, 3, 2), (4, 6, 7, 5), (0, 4, 5, 1), (2, 3, 7, 6), (0, 2, 6, 4), (1, 5, 7, 3)):
+        g.face([p[i] for i in f], m)
+
+
+def _cone(g, base, r, h, m, n=7, rng=None, jitter=0.12):
+    """Конус (ярус ёлки): неровный край, низ закрыт."""
+    base = Vector(base)
+    rng = rng or random
+    ring = [base + Vector((math.cos(2 * math.pi * k / n) * r * (1 + rng.uniform(-jitter, jitter)),
+                           math.sin(2 * math.pi * k / n) * r * (1 + rng.uniform(-jitter, jitter)),
+                           rng.uniform(-0.08, 0.04) * h)) for k in range(n)]
+    tip = base + Vector((rng.uniform(-0.05, 0.05) * r, rng.uniform(-0.05, 0.05) * r, h))
+    for k in range(n):
+        g.face([ring[k], ring[(k + 1) % n], tip], m)
+    g.face(ring[::-1], m)
+
+
+def bg_tree_pine(rng):
+    """Ель для фона, ~6 м: ствол и 5 ярусов-конусов."""
+    g = Mesh("bg_tree_pine")
+    g.tube([(0, 0, 0), (0, 0, 1.2)], [0.18, 0.14], mat("bark", BARK), sides=6)
+    nd = [mat("pine_dark", (0.2, 0.34, 0.16)), mat("pine", (0.26, 0.4, 0.18))]
+    for k in range(5):
+        z = 0.9 + k * 0.95
+        r = 1.5 - k * 0.27
+        _cone(g, (0, 0, z), r, 1.6 - k * 0.12, nd[k % 2], rng=rng)
+    return g.build()
+
+
+def bg_tree_leafy(rng):
+    """Лиственное дерево для фона, ~6 м: ствол с развилкой и 6 комков кроны."""
+    g = Mesh("bg_tree_leafy")
+    bark = mat("bark", BARK)
+    g.tube([(0, 0, 0), (0.05, 0, 1.6), (0.1, 0, 2.6)], [0.24, 0.18, 0.12], bark, sides=6)
+    for sgn in (1, -1):
+        g.tube([(0.05, 0, 1.6), (0.7 * sgn, 0.1, 3.0)], [0.12, 0.07], bark, sides=5)
+    lv = [mat("leaf_tree", (0.3, 0.45, 0.15)), mat("leaf_tree_b", (0.37, 0.5, 0.17)), mat("leaf_tree_c", (0.26, 0.4, 0.14))]
+    for k, (x, y, z, r) in enumerate(((0, 0, 4.2, 1.5), (-1.1, 0.2, 3.6, 1.1), (1.1, -0.1, 3.7, 1.1), (0.3, 0.5, 4.9, 1.0),
+                                       (-0.5, -0.5, 4.6, 1.0), (0.6, -0.4, 3.2, 0.9))):
+        g.blob((x, y, z), (r, r * 0.9, r * 0.8), lv[k % 3], subdiv=1, jitter=0.15, rng=rng)
+    return g.build()
+
+
+def bg_tree_birch(rng):
+    """Берёза для фона, ~7 м: тонкий белый ствол с чёрными пятнами, лёгкая светлая крона."""
+    g = Mesh("bg_tree_birch")
+    white, black = mat("birch_bark", (0.88, 0.86, 0.8)), mat("birch_mark", (0.12, 0.1, 0.1))
+    path = [(0, 0, 0), (0.08, 0, 2.5), (0.0, 0.05, 5.0), (0.1, 0, 6.2)]
+    g.tube(path, [0.13, 0.1, 0.07, 0.04], white, sides=6)
+    for k in range(9):   # чёрные пятна — короткие тёмные кольца чуть толще ствола
+        z = 0.3 + k * 0.6 + rng.uniform(-0.1, 0.1)
+        t = z / 6.2
+        r = 0.13 - 0.09 * t + 0.008
+        p = Vector((0.08 * math.sin(t * 3), 0, z))
+        g.tube([p, p + Vector((0, 0, 0.06))], [r, r], black, sides=6)
+    lv = [mat("birch_leaf", (0.45, 0.56, 0.2)), mat("birch_leaf_b", (0.52, 0.6, 0.25))]
+    for k in range(10):
+        g.blob((rng.uniform(-1.3, 1.3), rng.uniform(-0.6, 0.6), rng.uniform(3.4, 6.3)), (0.75, 0.6, 0.8), lv[k % 2], subdiv=1, jitter=0.2, rng=rng)
+    return g.build()
+
+
+def bg_tree_dry(rng):
+    """Сохнущее дерево для фона, ~5 м: ветки почти голые, редкие жёлто-бурые клочки листвы."""
+    g = Mesh("bg_tree_dry")
+    bark = mat("bark_grey", (0.4, 0.33, 0.27))
+    g.tube([(0, 0, 0), (0.1, 0, 1.8), (-0.05, 0, 3.0)], [0.22, 0.15, 0.09], bark, sides=6)
+    tips = []
+    for k in range(6):
+        a = 2 * math.pi * k / 6 + rng.uniform(-0.3, 0.3)
+        out = Vector((math.cos(a), math.sin(a) * 0.6, 0))
+        s = Vector((0, 0, rng.uniform(1.6, 2.8)))
+        e = s + out * rng.uniform(1.0, 1.6) + Vector((0, 0, rng.uniform(0.8, 1.8)))
+        g.tube([s, s.lerp(e, 0.5) + Vector((0, 0, 0.15)), e], [0.08, 0.05, 0.02], bark, sides=5)
+        tips.append(e)
+    lv = [mat("leaf_dry", (0.62, 0.5, 0.22)), mat("leaf_dry_b", (0.5, 0.42, 0.2))]
+    for k, t in enumerate(tips[:4]):
+        g.blob(t, (0.4, 0.35, 0.3), lv[k % 2], subdiv=1, jitter=0.3, rng=rng)
+    return g.build()
+
+
+def bg_tree_dead(rng):
+    """Мёртвое дерево для фона, ~4,5 м: кривой серый ствол, сломанная верхушка, голые сучья."""
+    g = Mesh("bg_tree_dead")
+    bark = mat("bark_dead", (0.36, 0.33, 0.3))
+    path = [(0, 0, 0), (0.2, 0, 1.2), (-0.15, 0.1, 2.5), (0.25, 0, 3.6), (0.3, 0, 4.3)]
+    g.tube(path, [0.25, 0.18, 0.13, 0.09, 0.07], bark, sides=6)
+    for k in range(7):
+        t = rng.uniform(0.25, 0.9)
+        i = int(t * 4)
+        s = Vector(path[i]).lerp(Vector(path[min(i + 1, 4)]), t * 4 - i)
+        a = rng.uniform(0, 2 * math.pi)
+        e = s + Vector((math.cos(a) * rng.uniform(0.6, 1.3), math.sin(a) * 0.5, rng.uniform(-0.1, 0.9)))
+        mid = s.lerp(e, 0.5) + Vector((0, 0, rng.uniform(-0.2, 0.3)))
+        g.tube([s, mid, e], [0.06, 0.035, 0.012], bark, sides=4)
+    return g.build()
+
+
+def bg_bushes_row(rng):
+    """Ряд кустов для фона ~2,5 м: 6 комков разного размера и оттенка."""
+    g = Mesh("bg_bushes_row")
+    lv = [mat("bush_g", (0.26, 0.4, 0.14)), mat("bush_g2", (0.32, 0.45, 0.15)), mat("bush_g3", (0.38, 0.44, 0.18))]
+    x = -1.1
+    for k in range(6):
+        r = rng.uniform(0.3, 0.5)
+        g.blob((x, rng.uniform(-0.1, 0.1), r * 0.7), (r, r * 0.8, r * 0.75), lv[k % 3], subdiv=1, jitter=0.2, rng=rng)
+        x += rng.uniform(0.35, 0.5)
+    return g.build()
+
+
+BATCH4 = {"bg_tree_pine": bg_tree_pine, "bg_tree_leafy": bg_tree_leafy, "bg_tree_birch": bg_tree_birch, "bg_tree_dry": bg_tree_dry,
+          "bg_tree_dead": bg_tree_dead, "bg_bushes_row": bg_bushes_row}
+
+
+MODELS = {"bush_water_reeds": reeds, "bush_willow": willow, "bush_water_sedge": sedge, "arrow_wood": arrow, "arrows_bundle": arrows_bundle, **BATCH1, **BATCH4}
 
 
 # ───────────────────────── «нарисованная» текстура, как у Tripo ─────────────────────────
