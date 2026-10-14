@@ -4,8 +4,9 @@
 поезд на рельсы (паровоз на угле, 2 пассажирских вагона, грузовой), плот, лук. Кусты у воды и стрелы — **нарисованы
 кодом** (`tools/make_props.py`, в Tripo не нужны).
 
-**Как делать (как все объекты, `TRIPO_OBJECTS.md`):** загрузить картинку кровати-образца → вставить запрос → картинка
-→ 3D. Готовый GLB — в папку Диска из таблицы, имя файла — из таблицы (`<имя>.glb`).
+**Как делать (решение автора 2026-10-14):** образец стиля — **ёлка** (`docs/ref/style_tree_sample.webp`), не кровать.
+Загрузить картинку ёлки → вставить запрос → картинка → 3D. В запросах нет «Replace / замени» (с ним Tripo переделывал
+образец), а есть «exactly the same art style» — каждый запрос **целиком**, копировать один блок. Готовый GLB — в папку Диска из таблицы, имя файла — из таблицы (`<имя>.glb`).
 
 **Обработка (второй чат):** `tools/tripo_process.py`, имена — без `_вариант` (декор, не объекты ОС). Размер — по
 таблице: деревья и вагоны — длинные/высокие, см. колонку «по чему мерить». Перед — к −Y (у вагонов и плота — **длинной
@@ -25,27 +26,27 @@
 
 **1. Дуб** — `tree_oak.glb`
 ```
-Replace the bed with a big old oak tree with a thick trunk, wide round crown of dark green leaves and visible roots. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no text.
+A big old oak tree with a thick trunk, wide round crown of dark green leaves and visible roots. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no text.
 ```
 
 **2. Берёза** — `tree_birch.glb`
 ```
-Replace the bed with a tall slim birch tree with a white trunk with black marks and a light green airy crown. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no text.
+A tall slim birch tree with a white trunk with black marks and a light green airy crown. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no text.
 ```
 
 **3. Клён** — `tree_maple.glb`
 ```
-Replace the bed with a maple tree with a straight brown trunk and a full rounded crown of green and slightly orange leaves. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no text.
+A maple tree with a straight brown trunk and a full rounded crown of green and slightly orange leaves. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no text.
 ```
 
 **4. Сухое дерево** — `tree_dead_bare.glb`
 ```
-Replace the bed with a dead dry tree without leaves, grey cracked bark, twisted bare branches, a few broken branches. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no text.
+A dead dry tree without leaves, grey cracked bark, twisted bare branches, a few broken branches. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no text.
 ```
 
 **5. Обгоревшее дерево** — `tree_dead_burnt.glb`
 ```
-Replace the bed with a burnt dead tree: black charred trunk broken at the top, a few short burnt branches, no leaves, ash at the roots. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no text.
+A burnt dead tree: black charred trunk broken at the top, a few short burnt branches, no leaves, ash at the roots. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no text.
 ```
 
 ## 2. Островки мелочей для улицы (папка «15 Улица — островки»)
@@ -67,23 +68,65 @@ Replace the bed with a burnt dead tree: black charred trunk broken at the top, a
 | 16 | `isle_planter` | бетонная клумба с сухими цветами, урна | 1,8 м |
 | 17 | `isle_barrels_fire` | бочка с костром, ящики-сиденья, кастрюля | 1,8 м |
 
-Общий хвост запроса (вставлять после описания):
+**6. 2 маленьких урны, мешки, бумажки** — `isle_trash_bins.glb`
 ```
-Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the objects' own natural colors and materials, not the colors of the bed; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+Two small metal street trash bins standing side by side, a few black garbage bags and crumpled papers on the ground around them. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
 ```
 
-- **6.** `Replace the bed with two small metal street trash bins standing side by side, a few black garbage bags and crumpled papers on the ground around them.`
-- **7.** `Replace the bed with a green metal dumpster with a half-open lid, black garbage bags and flattened cardboard boxes piled next to it.`
-- **8.** `Replace the bed with a short broken wooden fence section, a stack of three old car tires in front of it and tall weeds growing around.`
-- **9.** `Replace the bed with an old wooden park bench, a small metal trash bin next to it and a few old newspapers on the ground.`
-- **10.** `Replace the bed with a red fire hydrant, an orange traffic cone lying beside it and a small bent street sign on a pole.`
-- **11.** `Replace the bed with a blue street mailbox, a rusty newspaper vending box and a soggy cardboard box next to them.`
-- **12.** `Replace the bed with a metal bicycle rack with two old rusty bicycles leaning in it, one with a flat tire.`
-- **13.** `Replace the bed with two stacked wooden pallets, a few wooden crates and a torn blue tarp half covering them.`
-- **14.** `Replace the bed with road works: two striped road barriers, three traffic cones, a small pile of sand with a shovel stuck in it.`
-- **15.** `Replace the bed with a pile of scrap metal: bent pipes, sheets of metal, an old car door and a rusty barrel.`
-- **16.** `Replace the bed with a square concrete street planter with dry dead flowers and a small trash bin next to it.`
-- **17.** `Replace the bed with a rusty metal barrel with a small fire burning inside, two wooden crates used as seats and an old cooking pot.`
+**7. мусорный контейнер, мешки, коробки** — `isle_dumpster.glb`
+```
+A green metal dumpster with a half-open lid, black garbage bags and flattened cardboard boxes piled next to it. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
+
+**8. кусок забора, покрышки, сорняки** — `isle_fence_tires.glb`
+```
+A short broken wooden fence section, a stack of three old car tires in front of it and tall weeds growing around. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
+
+**9. скамейка, урна, газеты** — `isle_bench_bin.glb`
+```
+An old wooden park bench, a small metal trash bin next to it and a few old newspapers on the ground. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
+
+**10. гидрант, конус, знак** — `isle_hydrant.glb`
+```
+A red fire hydrant, an orange traffic cone lying beside it and a small bent street sign on a pole. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
+
+**11. почтовый ящик, газетный автомат, коробка** — `isle_mailbox.glb`
+```
+A blue street mailbox, a rusty newspaper vending box and a soggy cardboard box next to them. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
+
+**12. стойка с 2 старыми велосипедами** — `isle_bikes.glb`
+```
+A metal bicycle rack with two old rusty bicycles leaning in it, one with a flat tire. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
+
+**13. поддоны, ящики, брезент** — `isle_pallets.glb`
+```
+Two stacked wooden pallets, a few wooden crates and a torn blue tarp half covering them. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
+
+**14. ограждения, конусы, куча песка, лопата** — `isle_roadworks.glb`
+```
+Road works: two striped road barriers, three traffic cones, a small pile of sand with a shovel stuck in it. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
+
+**15. куча металлолома, дверь машины, бочка** — `isle_scrap.glb`
+```
+A pile of scrap metal: bent pipes, sheets of metal, an old car door and a rusty barrel. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
+
+**16. бетонная клумба с сухими цветами, урна** — `isle_planter.glb`
+```
+A square concrete street planter with dry dead flowers and a small trash bin next to it. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
+
+**17. бочка с костром, ящики-сиденья, кастрюля** — `isle_barrels_fire.glb`
+```
+A rusty metal barrel with a small fire burning inside, two wooden crates used as seats and an old cooking pot. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the objects' own natural colors; add rust, dirt and wear where it makes sense. A small group of objects standing close together on the ground, no ground plate, no text.
+```
 
 ## 3. Поезд (папка «16 Поезд»)
 
@@ -97,15 +140,25 @@ Keep exactly the same art style, level of detail, lighting, camera angle and dar
 | 20 | `train_coach_b` | пассажирский вагон, бордовый, потрёпанный | 8 × 2,8 м |
 | 21 | `train_freight` | грузовой вагон (крытый, дверь-купе) | 7 × 2,7 м |
 
-Хвост запроса:
+**18. паровоз на угле (с тендером)** — `train_loco_steam.glb`
 ```
-Side view, long side facing the camera. Keep exactly the same art style, level of detail, lighting and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear where it makes sense. Single object, no rails, no ground, no text.
+A small old narrow-gauge steam locomotive that runs on coal: black boiler, tall chimney, driver's cab and a small coal tender attached behind, red wheels. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
 ```
 
-- **18.** `Replace the bed with a small old narrow-gauge steam locomotive that runs on coal: black boiler, tall chimney, driver's cab and a small coal tender attached behind, red wheels.`
-- **19.** `Replace the bed with an old narrow-gauge wooden passenger railway car painted green, with a row of windows, doors at both ends and small platforms with railings.`
-- **20.** `Replace the bed with an old narrow-gauge passenger railway car painted dark red, faded paint, a few boarded-up windows, doors at both ends.`
-- **21.** `Replace the bed with an old narrow-gauge covered freight railway wagon made of wooden planks with a big sliding door in the middle, rusty metal frame.`
+**19. пассажирский вагон, зелёный** — `train_coach_a.glb`
+```
+An old narrow-gauge wooden passenger railway car painted green, with a row of windows, doors at both ends and small platforms with railings. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
+```
+
+**20. пассажирский вагон, бордовый, потрёпанный** — `train_coach_b.glb`
+```
+An old narrow-gauge passenger railway car painted dark red, faded paint, a few boarded-up windows, doors at both ends. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
+```
+
+**21. грузовой вагон (крытый, дверь-купе)** — `train_freight.glb`
+```
+An old narrow-gauge covered freight railway wagon made of wooden planks with a big sliding door in the middle, rusty metal frame. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Use the object's own natural colors; add rust and wear where it makes sense. Side view, long side facing the camera. Single object, no rails, no ground, no text.
+```
 
 ## 4. Плот (папка «14 Природа»)
 
@@ -114,7 +167,7 @@ Side view, long side facing the camera. Keep exactly the same art style, level o
 | 22 | `raft_logs` | 3 × 2 м (по длине) |
 
 ```
-Replace the bed with a simple survival raft made of logs tied together with ropes, a wooden paddle lying on top and a small crate. Seen slightly from above. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no water, no text.
+A simple survival raft made of logs tied together with ropes, a wooden paddle lying on top and a small crate, seen slightly from above. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no water, no text.
 ```
 
 ## 5. Лук (папка «14 Природа» или «Оружие»)
@@ -127,7 +180,7 @@ Replace the bed with a simple survival raft made of logs tied together with rope
 | 23 | `bow_wood_simple` | 1,2 м (по высоте, лук стоит вертикально) |
 
 ```
-Replace the bed with a simple wooden recurve bow standing upright, with a leather grip in the middle and a taut string, without any arrows, no quiver. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed. Single object, no text.
+A simple wooden recurve bow standing upright, with a leather grip in the middle and a taut string, without any arrows, no quiver. Exactly the same art style as the reference image: stylized low poly with hand-painted textures, chunky soft shapes, the same level of detail, the same warm lighting, the same camera angle and the same plain dark background. Use the reference image only for the style. Single object, no text.
 ```
 
 ---
