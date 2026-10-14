@@ -43,6 +43,9 @@ Tripo (автор) ──► Google Диск «Shelter Tripo» (сырые GLB, 
 | 16 Здания, улица, вывески | `1P2ej6jXd5n5OVBFHGDIGxoyFGtO0u_AD` |
 | 17 Шахта и тюрьма | `1Xm8tvgSkrTNDLiKTHkmjyaWLmIuu019W` |
 | 18 Отделка стен и блоки | `1b0SwPO8dgR7czF24-HRdT0oNmWYQfQeM` |
+| 19 Природа (деревья, паром) | `1ZdbYY67I_2OMTrzeM0F-3sIPObOWvwPJ` |
+| 20 Улица — островки | `1nz_GYE7biz_vnb8FWBB87fsI7XUQrUZI` |
+| 21 Поезд | `1mOkyrucQBj1u_dQzRVgWWCu8uaRNSuaB` |
 | Дубли (можно удалить) | `11O9KR--EchU8p2mfN5JTMOrGQth7pDv4` |
 
 **2026-10-13:** все модели разложены по папкам и названы как в проекте (`<имя>.glb`); копии — в «Дубли». Список
