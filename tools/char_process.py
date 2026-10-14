@@ -105,6 +105,11 @@ def process(path, out_dir, rot, height, limit=LIMIT):
         dummy.select_set(True)
         bpy.ops.export_scene.gltf(filepath=out_a, export_format="GLB", use_selection=True, export_yup=True,
                                   export_animations=True, export_skins=True)
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import glb_quat_fix
+        import glb_strip_tracks                             # только повороты (+ таз) — место костей у каждого своё
+        glb_quat_fix.fix(out_a)
+        glb_strip_tracks.strip(out_a)
         mb_a = os.path.getsize(out_a) / 1e6
     dims = hi - lo
     print(f"[{name}_idle] скелет: {'да' if arms else 'НЕТ'} ({len(bones)} костей), треугольников {t0} → {t1}, "

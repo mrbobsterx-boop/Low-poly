@@ -38,6 +38,23 @@ def order(arm):
     return out
 
 
+PREFER = ("Spine", "Neck", "Head", "Arm", "ForeArm", "Hand", "HandMiddle1", "Leg", "Foot", "ToeBase")
+
+
+def main_child(bone, srcarm):
+    """Следующий сустав по цепочке (у развилок — по позвоночнику / среднему пальцу); есть и у источника."""
+    kids = [c for c in bone.children if c.name in srcarm.data.bones]
+    if not kids:
+        return None
+    if len(kids) == 1:
+        return kids[0].name
+    for p in PREFER:
+        for c in kids:
+            if c.name.split(":")[-1].startswith(p) and "Shoulder" not in c.name:
+                return c.name
+    return kids[0].name
+
+
 def key_all(act, arm, data_path, n_idx, frames, values):
     """values: [[v_idx0, v_idx1, …] по кадрам] → кривые действия."""
     for i in range(n_idx):
@@ -72,10 +89,18 @@ def main(src, body, out):
     Sw, Tw = srcarm.matrix_world, tgt.matrix_world
     Tw_inv = Tw.inverted()
     # поправка поз покоя (в мире, только поворот)
+    # + поворот кости тела так, чтобы в покое она смотрела на следующий сустав ровно как у Mixamo: у скелетов Tripo
+    #   в покое локти, колени, спина чуть согнуты, и без этого сгиб прибавлялся к каждой анимации (локоть «пережат»)
     off = {}
     for b in names:
         s_rest = (Sw @ srcarm.data.bones[b].matrix_local).to_quaternion()
         t_rest = (Tw @ tgt.data.bones[b].matrix_local).to_quaternion()
+        c = main_child(tgt.data.bones[b], srcarm)
+        if c and b != hips:
+            s_dir = (Sw @ srcarm.data.bones[c].head_local) - (Sw @ srcarm.data.bones[b].head_local)
+            t_dir = (Tw @ tgt.data.bones[c].head_local) - (Tw @ tgt.data.bones[b].head_local)
+            if s_dir.length > 1e-5 and t_dir.length > 1e-5:
+                t_rest = t_dir.normalized().rotation_difference(s_dir.normalized()) @ t_rest
         off[b] = s_rest.inverted() @ t_rest
     s_h0 = (Sw @ srcarm.data.bones[hips].head_local)
     t_h0 = (Tw @ tgt.data.bones[hips].head_local)
@@ -157,6 +182,11 @@ def main(src, body, out):
     os.makedirs(os.path.dirname(os.path.abspath(out)), exist_ok=True)
     bpy.ops.export_scene.gltf(filepath=out, export_format="GLB", use_selection=True, export_yup=True,
                               export_animations=True, export_animation_mode="NLA_TRACKS", export_skins=True)
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import glb_quat_fix
+    import glb_strip_tracks                                 # только повороты (+ таз) — место костей у каждого своё
+    glb_quat_fix.fix(out)
+    glb_strip_tracks.strip(out)
     print(f"→ {out}: {len(made)} действий, {os.path.getsize(out) / 1e6:.2f} МБ (рост ×{k_h:.3f})", flush=True)
 
 

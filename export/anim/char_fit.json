@@ -1,0 +1,652 @@
+{
+ "_comment": "Подгонка общих анимаций под фигуру. arm_spread_deg — после анимации повернуть кости mixamorig:LeftArm и mixamorig:RightArm наружу (вокруг оси «вперёд» скелета: Left — +угол, Right — −угол), чтобы руки не проходили сквозь одежду и живот. motion_scale — Skeleton3D.motion_scale по набору анимаций (таз на своей высоте).",
+ "ref_body": "body_m_rig",
+ "sources_hips_height": {
+  "mixamo": 0.9597,
+  "tripo_m": 0.9597,
+  "tripo_m_b": 0.9597,
+  "tripo_f": 0.968
+ },
+ "characters": {
+  "body_f_rig": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.968,
+   "motion_scale": {
+    "mixamo": 1.0087,
+    "tripo_m": 1.0087,
+    "tripo_m_b": 1.0087,
+    "tripo_f": 1.0
+   }
+  },
+  "body_m_rig_b": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.9597,
+   "motion_scale": {
+    "mixamo": 1.0,
+    "tripo_m": 1.0,
+    "tripo_m_b": 1.0,
+    "tripo_f": 0.9914
+   }
+  },
+  "body_m_rig": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.9597,
+   "motion_scale": {
+    "mixamo": 1.0,
+    "tripo_m": 1.0,
+    "tripo_m_b": 1.0,
+    "tripo_f": 0.9914
+   }
+  },
+  "char_f_doctor": {
+   "arm_spread_deg": 6.0,
+   "hips_height": 0.8563,
+   "motion_scale": {
+    "mixamo": 0.8923,
+    "tripo_m": 0.8923,
+    "tripo_m_b": 0.8923,
+    "tripo_f": 0.8846
+   }
+  },
+  "char_f_firefighter": {
+   "arm_spread_deg": 8.0,
+   "hips_height": 0.8265,
+   "motion_scale": {
+    "mixamo": 0.8612,
+    "tripo_m": 0.8612,
+    "tripo_m_b": 0.8612,
+    "tripo_f": 0.8538
+   }
+  },
+  "char_f_hoodie": {
+   "arm_spread_deg": 10.0,
+   "hips_height": 0.9483,
+   "motion_scale": {
+    "mixamo": 0.9881,
+    "tripo_m": 0.9881,
+    "tripo_m_b": 0.9881,
+    "tripo_f": 0.9796
+   }
+  },
+  "char_f_mechanic": {
+   "arm_spread_deg": 8.0,
+   "hips_height": 0.9614,
+   "motion_scale": {
+    "mixamo": 1.0018,
+    "tripo_m": 1.0018,
+    "tripo_m_b": 1.0018,
+    "tripo_f": 0.9931
+   }
+  },
+  "char_f_old": {
+   "arm_spread_deg": 8.0,
+   "hips_height": 0.8763,
+   "motion_scale": {
+    "mixamo": 0.9131,
+    "tripo_m": 0.9131,
+    "tripo_m_b": 0.9131,
+    "tripo_f": 0.9052
+   }
+  },
+  "char_f_police_b": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.8997,
+   "motion_scale": {
+    "mixamo": 0.9375,
+    "tripo_m": 0.9375,
+    "tripo_m_b": 0.9375,
+    "tripo_f": 0.9294
+   }
+  },
+  "char_f_police": {
+   "arm_spread_deg": 6.0,
+   "hips_height": 0.933,
+   "motion_scale": {
+    "mixamo": 0.9722,
+    "tripo_m": 0.9722,
+    "tripo_m_b": 0.9722,
+    "tripo_f": 0.9638
+   }
+  },
+  "char_fm_f": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.8964,
+   "motion_scale": {
+    "mixamo": 0.934,
+    "tripo_m": 0.934,
+    "tripo_m_b": 0.934,
+    "tripo_f": 0.9259
+   }
+  },
+  "char_fm_f_thin": {
+   "arm_spread_deg": 12.0,
+   "hips_height": 0.8722,
+   "motion_scale": {
+    "mixamo": 0.9088,
+    "tripo_m": 0.9088,
+    "tripo_m_b": 0.9088,
+    "tripo_f": 0.9009
+   }
+  },
+  "char_fm_leader": {
+   "arm_spread_deg": 14.0,
+   "hips_height": 0.973,
+   "motion_scale": {
+    "mixamo": 1.0138,
+    "tripo_m": 1.0138,
+    "tripo_m_b": 1.0138,
+    "tripo_f": 1.0051
+   }
+  },
+  "char_fm_m_big": {
+   "arm_spread_deg": 16.0,
+   "hips_height": 0.835,
+   "motion_scale": {
+    "mixamo": 0.8701,
+    "tripo_m": 0.8701,
+    "tripo_m_b": 0.8701,
+    "tripo_f": 0.8626
+   }
+  },
+  "char_fm_m": {
+   "arm_spread_deg": 12.0,
+   "hips_height": 0.96,
+   "motion_scale": {
+    "mixamo": 1.0003,
+    "tripo_m": 1.0003,
+    "tripo_m_b": 1.0003,
+    "tripo_f": 0.9917
+   }
+  },
+  "char_fm_m_young": {
+   "arm_spread_deg": 2.0,
+   "hips_height": 0.9729,
+   "motion_scale": {
+    "mixamo": 1.0137,
+    "tripo_m": 1.0137,
+    "tripo_m_b": 1.0137,
+    "tripo_f": 1.005
+   }
+  },
+  "char_free_f_denim": {
+   "arm_spread_deg": 2.0,
+   "hips_height": 0.9481,
+   "motion_scale": {
+    "mixamo": 0.9879,
+    "tripo_m": 0.9879,
+    "tripo_m_b": 0.9879,
+    "tripo_f": 0.9794
+   }
+  },
+  "char_free_f_rain": {
+   "arm_spread_deg": 8.0,
+   "hips_height": 0.8802,
+   "motion_scale": {
+    "mixamo": 0.9172,
+    "tripo_m": 0.9172,
+    "tripo_m_b": 0.9172,
+    "tripo_f": 0.9092
+   }
+  },
+  "char_free_m_hermit": {
+   "arm_spread_deg": 10.0,
+   "hips_height": 0.9127,
+   "motion_scale": {
+    "mixamo": 0.951,
+    "tripo_m": 0.951,
+    "tripo_m_b": 0.951,
+    "tripo_f": 0.9428
+   }
+  },
+  "char_free_m_hunter": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.9428,
+   "motion_scale": {
+    "mixamo": 0.9824,
+    "tripo_m": 0.9824,
+    "tripo_m_b": 0.9824,
+    "tripo_f": 0.9739
+   }
+  },
+  "char_free_m_office": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.9517,
+   "motion_scale": {
+    "mixamo": 0.9917,
+    "tripo_m": 0.9917,
+    "tripo_m_b": 0.9917,
+    "tripo_f": 0.9831
+   }
+  },
+  "char_free_m_teacher": {
+   "arm_spread_deg": 2.0,
+   "hips_height": 0.9399,
+   "motion_scale": {
+    "mixamo": 0.9794,
+    "tripo_m": 0.9794,
+    "tripo_m_b": 0.9794,
+    "tripo_f": 0.971
+   }
+  },
+  "char_gr_f": {
+   "arm_spread_deg": 2.0,
+   "hips_height": 0.9992,
+   "motion_scale": {
+    "mixamo": 1.0412,
+    "tripo_m": 1.0412,
+    "tripo_m_b": 1.0412,
+    "tripo_f": 1.0322
+   }
+  },
+  "char_gr_f_short": {
+   "arm_spread_deg": 8.0,
+   "hips_height": 0.8827,
+   "motion_scale": {
+    "mixamo": 0.9197,
+    "tripo_m": 0.9197,
+    "tripo_m_b": 0.9197,
+    "tripo_f": 0.9118
+   }
+  },
+  "char_gr_leader": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.9703,
+   "motion_scale": {
+    "mixamo": 1.0111,
+    "tripo_m": 1.0111,
+    "tripo_m_b": 1.0111,
+    "tripo_f": 1.0023
+   }
+  },
+  "char_gr_m_big": {
+   "arm_spread_deg": 16.0,
+   "hips_height": 0.9877,
+   "motion_scale": {
+    "mixamo": 1.0292,
+    "tripo_m": 1.0292,
+    "tripo_m_b": 1.0292,
+    "tripo_f": 1.0203
+   }
+  },
+  "char_gr_m": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.9878,
+   "motion_scale": {
+    "mixamo": 1.0293,
+    "tripo_m": 1.0293,
+    "tripo_m_b": 1.0293,
+    "tripo_f": 1.0204
+   }
+  },
+  "char_gr_m_old": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.9629,
+   "motion_scale": {
+    "mixamo": 1.0034,
+    "tripo_m": 1.0034,
+    "tripo_m_b": 1.0034,
+    "tripo_f": 0.9947
+   }
+  },
+  "char_iw_f": {
+   "arm_spread_deg": 10.0,
+   "hips_height": 0.8828,
+   "motion_scale": {
+    "mixamo": 0.9199,
+    "tripo_m": 0.9199,
+    "tripo_m_b": 0.9199,
+    "tripo_f": 0.912
+   }
+  },
+  "char_iw_f_tall": {
+   "arm_spread_deg": 8.0,
+   "hips_height": 0.9592,
+   "motion_scale": {
+    "mixamo": 0.9995,
+    "tripo_m": 0.9995,
+    "tripo_m_b": 0.9995,
+    "tripo_f": 0.9908
+   }
+  },
+  "char_iw_leader": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.984,
+   "motion_scale": {
+    "mixamo": 1.0253,
+    "tripo_m": 1.0253,
+    "tripo_m_b": 1.0253,
+    "tripo_f": 1.0165
+   }
+  },
+  "char_iw_m": {
+   "arm_spread_deg": 12.0,
+   "hips_height": 0.9352,
+   "motion_scale": {
+    "mixamo": 0.9745,
+    "tripo_m": 0.9745,
+    "tripo_m_b": 0.9745,
+    "tripo_f": 0.966
+   }
+  },
+  "char_iw_m_old": {
+   "arm_spread_deg": 16.0,
+   "hips_height": 0.7975,
+   "motion_scale": {
+    "mixamo": 0.831,
+    "tripo_m": 0.831,
+    "tripo_m_b": 0.831,
+    "tripo_f": 0.8239
+   }
+  },
+  "char_iw_m_young": {
+   "arm_spread_deg": 8.0,
+   "hips_height": 0.9244,
+   "motion_scale": {
+    "mixamo": 0.9633,
+    "tripo_m": 0.9633,
+    "tripo_m_b": 0.9633,
+    "tripo_f": 0.9549
+   }
+  },
+  "char_m_chef": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.8747,
+   "motion_scale": {
+    "mixamo": 0.9114,
+    "tripo_m": 0.9114,
+    "tripo_m_b": 0.9114,
+    "tripo_f": 0.9036
+   }
+  },
+  "char_m_firefighter": {
+   "arm_spread_deg": 6.0,
+   "hips_height": 1.0371,
+   "motion_scale": {
+    "mixamo": 1.0807,
+    "tripo_m": 1.0807,
+    "tripo_m_b": 1.0807,
+    "tripo_f": 1.0713
+   }
+  },
+  "char_m_old_c": {
+   "arm_spread_deg": 8.0,
+   "hips_height": 0.8492,
+   "motion_scale": {
+    "mixamo": 0.8849,
+    "tripo_m": 0.8849,
+    "tripo_m_b": 0.8849,
+    "tripo_f": 0.8772
+   }
+  },
+  "char_m_police": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.9877,
+   "motion_scale": {
+    "mixamo": 1.0292,
+    "tripo_m": 1.0292,
+    "tripo_m_b": 1.0292,
+    "tripo_f": 1.0204
+   }
+  },
+  "char_m_worker": {
+   "arm_spread_deg": 2.0,
+   "hips_height": 0.8998,
+   "motion_scale": {
+    "mixamo": 0.9376,
+    "tripo_m": 0.9376,
+    "tripo_m_b": 0.9376,
+    "tripo_f": 0.9295
+   }
+  },
+  "char_prisoner_f": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.909,
+   "motion_scale": {
+    "mixamo": 0.9472,
+    "tripo_m": 0.9472,
+    "tripo_m_b": 0.9472,
+    "tripo_f": 0.939
+   }
+  },
+  "char_prisoner_m": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.9877,
+   "motion_scale": {
+    "mixamo": 1.0292,
+    "tripo_m": 1.0292,
+    "tripo_m_b": 1.0292,
+    "tripo_f": 1.0203
+   }
+  },
+  "char_prisoner_m_old": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.977,
+   "motion_scale": {
+    "mixamo": 1.018,
+    "tripo_m": 1.018,
+    "tripo_m_b": 1.018,
+    "tripo_f": 1.0092
+   }
+  },
+  "char_rd_f_b": {
+   "arm_spread_deg": 2.0,
+   "hips_height": 0.9859,
+   "motion_scale": {
+    "mixamo": 1.0273,
+    "tripo_m": 1.0273,
+    "tripo_m_b": 1.0273,
+    "tripo_f": 1.0185
+   }
+  },
+  "char_rd_f_big": {
+   "arm_spread_deg": 8.0,
+   "hips_height": 0.8783,
+   "motion_scale": {
+    "mixamo": 0.9152,
+    "tripo_m": 0.9152,
+    "tripo_m_b": 0.9152,
+    "tripo_f": 0.9073
+   }
+  },
+  "char_rd_f": {
+   "arm_spread_deg": 10.0,
+   "hips_height": 0.9062,
+   "motion_scale": {
+    "mixamo": 0.9443,
+    "tripo_m": 0.9443,
+    "tripo_m_b": 0.9443,
+    "tripo_f": 0.9361
+   }
+  },
+  "char_rd_leader": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 1.0169,
+   "motion_scale": {
+    "mixamo": 1.0596,
+    "tripo_m": 1.0596,
+    "tripo_m_b": 1.0596,
+    "tripo_f": 1.0505
+   }
+  },
+  "char_rd_m": {
+   "arm_spread_deg": 16.0,
+   "hips_height": 1.0157,
+   "motion_scale": {
+    "mixamo": 1.0584,
+    "tripo_m": 1.0584,
+    "tripo_m_b": 1.0584,
+    "tripo_f": 1.0492
+   }
+  },
+  "char_rd_m_old": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.8996,
+   "motion_scale": {
+    "mixamo": 0.9374,
+    "tripo_m": 0.9374,
+    "tripo_m_b": 0.9374,
+    "tripo_f": 0.9293
+   }
+  },
+  "char_s9_f": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.9612,
+   "motion_scale": {
+    "mixamo": 1.0016,
+    "tripo_m": 1.0016,
+    "tripo_m_b": 1.0016,
+    "tripo_f": 0.9929
+   }
+  },
+  "char_s9_leader": {
+   "arm_spread_deg": 6.0,
+   "hips_height": 0.963,
+   "motion_scale": {
+    "mixamo": 1.0035,
+    "tripo_m": 1.0035,
+    "tripo_m_b": 1.0035,
+    "tripo_f": 0.9948
+   }
+  },
+  "char_s9_m_guard": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.9988,
+   "motion_scale": {
+    "mixamo": 1.0408,
+    "tripo_m": 1.0408,
+    "tripo_m_b": 1.0408,
+    "tripo_f": 1.0318
+   }
+  },
+  "char_s9_m": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 1.0159,
+   "motion_scale": {
+    "mixamo": 1.0586,
+    "tripo_m": 1.0586,
+    "tripo_m_b": 1.0586,
+    "tripo_f": 1.0495
+   }
+  },
+  "char_s9_m_subject": {
+   "arm_spread_deg": 2.0,
+   "hips_height": 0.9282,
+   "motion_scale": {
+    "mixamo": 0.9672,
+    "tripo_m": 0.9672,
+    "tripo_m_b": 0.9672,
+    "tripo_f": 0.9588
+   }
+  },
+  "char_slave_f": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.9121,
+   "motion_scale": {
+    "mixamo": 0.9505,
+    "tripo_m": 0.9505,
+    "tripo_m_b": 0.9505,
+    "tripo_f": 0.9423
+   }
+  },
+  "char_slave_m": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.973,
+   "motion_scale": {
+    "mixamo": 1.0138,
+    "tripo_m": 1.0138,
+    "tripo_m_b": 1.0138,
+    "tripo_f": 1.0051
+   }
+  },
+  "char_slave_m_old": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.9413,
+   "motion_scale": {
+    "mixamo": 0.9808,
+    "tripo_m": 0.9808,
+    "tripo_m_b": 0.9808,
+    "tripo_f": 0.9724
+   }
+  },
+  "char_ws_f": {
+   "arm_spread_deg": 10.0,
+   "hips_height": 0.9221,
+   "motion_scale": {
+    "mixamo": 0.9609,
+    "tripo_m": 0.9609,
+    "tripo_m_b": 0.9609,
+    "tripo_f": 0.9526
+   }
+  },
+  "char_ws_f_round": {
+   "arm_spread_deg": 10.0,
+   "hips_height": 0.7238,
+   "motion_scale": {
+    "mixamo": 0.7542,
+    "tripo_m": 0.7542,
+    "tripo_m_b": 0.7542,
+    "tripo_f": 0.7477
+   }
+  },
+  "char_ws_leader": {
+   "arm_spread_deg": 2.0,
+   "hips_height": 0.9395,
+   "motion_scale": {
+    "mixamo": 0.979,
+    "tripo_m": 0.979,
+    "tripo_m_b": 0.979,
+    "tripo_f": 0.9705
+   }
+  },
+  "char_ws_m": {
+   "arm_spread_deg": 6.0,
+   "hips_height": 0.9629,
+   "motion_scale": {
+    "mixamo": 1.0033,
+    "tripo_m": 1.0033,
+    "tripo_m_b": 1.0033,
+    "tripo_f": 0.9946
+   }
+  },
+  "char_ws_m_old": {
+   "arm_spread_deg": 0.0,
+   "hips_height": 0.9277,
+   "motion_scale": {
+    "mixamo": 0.9667,
+    "tripo_m": 0.9667,
+    "tripo_m_b": 0.9667,
+    "tripo_f": 0.9583
+   }
+  },
+  "zombie_fat": {
+   "arm_spread_deg": 8.0,
+   "hips_height": 0.8479,
+   "motion_scale": {
+    "mixamo": 0.8836,
+    "tripo_m": 0.8836,
+    "tripo_m_b": 0.8836,
+    "tripo_f": 0.8759
+   }
+  },
+  "zombie_firefighter": {
+   "arm_spread_deg": 4.0,
+   "hips_height": 0.9627,
+   "motion_scale": {
+    "mixamo": 1.0031,
+    "tripo_m": 1.0031,
+    "tripo_m_b": 1.0031,
+    "tripo_f": 0.9945
+   }
+  },
+  "zombie_hospital": {
+   "arm_spread_deg": 2.0,
+   "hips_height": 0.9288,
+   "motion_scale": {
+    "mixamo": 0.9678,
+    "tripo_m": 0.9678,
+    "tripo_m_b": 0.9678,
+    "tripo_f": 0.9595
+   }
+  }
+ }
+}

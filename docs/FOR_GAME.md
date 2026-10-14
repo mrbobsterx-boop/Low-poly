@@ -73,3 +73,35 @@
 - Скелет у каждого свой (кости `Hips`, `Spine`, `Neck`, `Head`, `Tail1/2`, `LegFL1..3` … у птиц `Body`, `WingL1/2`…) —
   анимации людей к животным **не подходят**, играть только свои анимации из файла.
 - Переходы — плавно (смешивание 0,2 с).
+
+## 2026-10-14 — анимации людей на одетых персонажах (ВАЖНО — переимпортировать)
+
+Автор: «на одетых анимации хуже, в локте пережимает». Причины и что сделано:
+1. **В анимациях было записано место каждой кости голого тела** (body_m_rig). Godot ставил кости одетого персонажа на эти
+   места → плечи сужались, руки уходили в грудь и живот, полные персонажи вытягивались до роста голого тела. Теперь
+   в `export/anim/*.glb` **только повороты костей + положение таза** — длины костей у каждого свои. Файлы перезаписаны
+   (anims_mixamo 12,8 → 10 МБ, тела Tripo тоже).
+2. **Локоть пережимало:** у скелетов Tripo в покое локти, колени и спина чуть согнуты, и при переносе этот изгиб
+   прибавлялся к каждой анимации (+18° в локте). Исправлено — сгибы теперь ровно как в оригинале Mixamo.
+3. **Нужно в игре** — `export/anim/char_fit.json`, по каждому персонажу:
+   - `motion_scale` → `Skeleton3D.motion_scale` = значение для набора, из которого играет анимация
+     (`mixamo`, `tripo_m`, `tripo_m_b`, `tripo_f`). Иначе таз — на высоте голого тела (ноги в полу / в воздухе).
+   - `arm_spread_deg` (0–16°) → после анимации отвести плечи наружу, чтобы руки не проходили сквозь одежду и живот
+     (анимации Mixamo — для худого голого тела). Пример (Godot 4.3+, дочерний узел `Skeleton3D`):
+     ```gdscript
+     extends SkeletonModifier3D
+     @export var spread_deg := 0.0   # из char_fit.json → characters[id].arm_spread_deg
+     func _process_modification() -> void:
+         var sk := get_skeleton()
+         for i in sk.get_bone_count():
+             var n := sk.get_bone_name(i)
+             var s := 1.0 if n.ends_with("LeftArm") else (-1.0 if n.ends_with("RightArm") else 0.0)
+             if s == 0.0:
+                 continue
+             var gp := sk.get_bone_global_pose(i)
+             gp.basis = Basis(Vector3(0, 0, 1), deg_to_rad(spread_deg * s)) * gp.basis   # ось «вперёд» модели (+Z)
+             sk.set_bone_global_pose(i, gp)
+     ```
+   - Не включать в импорте Retarget / BoneMap / Rest Fixer (как и раньше).
+- Сравнение «было / стало»: `renders/_review/anims_clothed_fix_2026-10-14.jpg`. Проверка кадров «как в Godot» —
+  `tools/anim_check.py`.
