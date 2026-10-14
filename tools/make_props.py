@@ -763,7 +763,225 @@ BATCH4 = {"bg_tree_pine": bg_tree_pine, "bg_tree_leafy": bg_tree_leafy, "bg_tree
           "bg_tree_dead": bg_tree_dead, "bg_bushes_row": bg_bushes_row}
 
 
-MODELS = {"bush_water_reeds": reeds, "bush_willow": willow, "bush_water_sedge": sedge, "arrow_wood": arrow, "arrows_bundle": arrows_bundle, **BATCH1, **BATCH4}
+# ───────────── партия 5: мусор и мелочи (пол, столы, улица) ─────────────
+
+METAL, TIN = (0.5, 0.5, 0.52), (0.62, 0.6, 0.56)
+
+
+def _can(g, c, d, r, L, body, top, sides=10):
+    """Банка-цилиндр от c вдоль d: бок одним материалом, крышки — другим."""
+    c, d = Vector(c), Vector(d).normalized()
+    g.tube([c, c + d * L], [r, r], body, sides=sides, cap=False)
+    a = d.orthogonal().normalized()
+    b = d.cross(a)
+    for p, sgn in ((c, -1), (c + d * L, 1)):
+        ring = [p + (a * math.cos(2 * math.pi * k / sides) + b * math.sin(2 * math.pi * k / sides)) * r for k in range(sides)]
+        g.face(ring if sgn > 0 else ring[::-1], top)
+
+
+def puddle(rng):
+    """Лужа ~1 м: тонкая тёмная водная плёнка с более светлым краем грязи."""
+    g = Mesh("puddle")
+    g.disc((0, 0, 0), 0.62, 0.42, 0.006, mat("mud", (0.33, 0.27, 0.19)), n=14, jitter=0.2, rng=rng)
+    g.disc((0, 0, 0.002), 0.52, 0.33, 0.008, mat("water", (0.27, 0.33, 0.38)), n=14, jitter=0.22, rng=rng)
+    return g.build()
+
+
+def mud_patch(rng):
+    """Грязь ~1,2 м: бугристое пятно, следы-комья."""
+    g = Mesh("mud_patch")
+    m1, m2 = mat("mud", (0.33, 0.27, 0.19)), mat("mud_wet", (0.25, 0.2, 0.14))
+    g.disc((0, 0, 0), 0.65, 0.45, 0.012, m1, n=14, jitter=0.25, rng=rng)
+    for k in range(10):
+        g.blob((rng.uniform(-0.45, 0.45), rng.uniform(-0.3, 0.3), 0.012), (rng.uniform(0.06, 0.14),) * 2 + (0.025,), m2 if k % 2 else m1, subdiv=1, jitter=0.3, rng=rng)
+    return g.build()
+
+
+def trash_papers(rng):
+    """Бумажки: скомканные шарики и плоские листы вразброс, ~0,8 м."""
+    g = Mesh("trash_papers")
+    pm = [mat("paper", (0.88, 0.85, 0.76)), mat("paper_old", (0.78, 0.72, 0.58)), mat("paper_print", (0.7, 0.7, 0.68))]
+    for k in range(6):
+        g.blob((rng.uniform(-0.35, 0.35), rng.uniform(-0.25, 0.25), 0.035), (0.045, 0.04, 0.035), pm[k % 3], subdiv=1, jitter=0.35, rng=rng)
+    for k in range(5):
+        c = Vector((rng.uniform(-0.35, 0.35), rng.uniform(-0.25, 0.25), 0.004 + 0.002 * k))
+        a = rng.uniform(0, math.pi)
+        dx, dy = Vector((math.cos(a), math.sin(a), 0)) * 0.11, Vector((-math.sin(a), math.cos(a), 0)) * 0.15
+        g.face([c - dx - dy, c + dx - dy, c + dx + dy + Vector((0, 0, 0.02)), c - dx + dy], pm[k % 3])
+    return g.build()
+
+
+def trash_cans(rng):
+    """Пустые банки: 4 мятые жестянки валяются, одна стоит."""
+    g = Mesh("trash_cans")
+    cols = [mat("can_red", (0.62, 0.2, 0.15)), mat("can_green", (0.3, 0.45, 0.25)), mat("can_tin", TIN)]
+    top = mat("tin_top", (0.7, 0.68, 0.64))
+    for k in range(4):
+        a = rng.uniform(0, 2 * math.pi)
+        c = Vector((rng.uniform(-0.3, 0.3), rng.uniform(-0.2, 0.2), 0.033))
+        _can(g, c, (math.cos(a), math.sin(a), rng.uniform(-0.05, 0.05)), 0.033 * rng.uniform(0.85, 1.0), 0.11, cols[k % 3], top, sides=8)
+    _can(g, (0.15, 0.12, 0), (0, 0, 1), 0.035, 0.11, cols[0], top, sides=8)
+    return g.build()
+
+
+def _bottle(g, base, d, col, cap):
+    base, d = Vector(base), Vector(d).normalized()
+    g.tube([base, base + d * 0.17, base + d * 0.22, base + d * 0.27], [0.034, 0.034, 0.014, 0.012], col, sides=8)
+    g.tube([base + d * 0.265, base + d * 0.285], [0.014, 0.014], cap, sides=8)
+
+
+def trash_bottles(rng):
+    """Бутылки: зелёные и коричневые, две лежат, одна стоит, одна разбита (осколки)."""
+    g = Mesh("trash_bottles")
+    gl = [mat("glass_green", (0.22, 0.42, 0.25)), mat("glass_brown", (0.42, 0.24, 0.1))]
+    cap = mat("bottle_cap", (0.6, 0.55, 0.45))
+    _bottle(g, (0, 0.05, 0), (0, 0, 1), gl[0], cap)
+    _bottle(g, (-0.32, -0.05, 0.034), (1, 0.3, 0), gl[1], cap)
+    _bottle(g, (0.12, -0.18, 0.034), (0.8, -0.6, 0), gl[0], cap)
+    for k in range(7):   # осколки
+        c = Vector((rng.uniform(0.18, 0.4), rng.uniform(0.0, 0.2), 0.003))
+        a = rng.uniform(0, 2 * math.pi)
+        s = rng.uniform(0.015, 0.035)
+        g.face([c, c + Vector((math.cos(a), math.sin(a), 0)) * s, c + Vector((math.cos(a + 2), math.sin(a + 2), 0.2)) * s], gl[1])
+    return g.build()
+
+
+def shell_casings(rng):
+    """Гильзы: 16 латунных гильз вразброс."""
+    g = Mesh("shell_casings")
+    brass, primer = mat("brass", (0.78, 0.6, 0.28)), mat("brass_dark", (0.5, 0.38, 0.18))
+    for k in range(16):
+        a = rng.uniform(0, 2 * math.pi)
+        r = 0.25 * math.sqrt(rng.random())
+        c = Vector((math.cos(a) * r, math.sin(a) * r * 0.8, 0.005))
+        b = rng.uniform(0, 2 * math.pi)
+        _can(g, c, (math.cos(b), math.sin(b), 0), 0.0048, 0.019, brass, primer, sides=6)
+    return g.build()
+
+
+def _mug(g, c, r, h, body, inner, handle):
+    c = Vector(c)
+    g.tube([c, c + Vector((0, 0, h))], [r, r * 1.05], body, sides=12, cap=False)
+    ring = [c + Vector((math.cos(2 * math.pi * k / 12) * r, math.sin(2 * math.pi * k / 12) * r, 0.004)) for k in range(12)]
+    g.face(ring, inner)
+    g.face(ring[::-1], body)
+    pts = [c + Vector((r + 0.025 * math.sin(t * math.pi), 0, h * (0.25 + 0.5 * t))) for t in (0, 0.25, 0.5, 0.75, 1)]
+    pts = [c + Vector((r * 0.95, 0, h * 0.25))] + pts[1:-1] + [c + Vector((r * 0.95, 0, h * 0.75))]
+    g.tube(pts, [0.006] * len(pts), handle, sides=5, cap=False)
+
+
+def mugs(rng):
+    """Кружки: эмалированная белая со сколами и жестяная."""
+    g = Mesh("mugs")
+    _mug(g, (-0.06, 0, 0), 0.042, 0.09, mat("enamel", (0.86, 0.84, 0.78)), mat("enamel_in", (0.6, 0.58, 0.52)), mat("enamel_rim", (0.2, 0.3, 0.45)))
+    _mug(g, (0.07, 0.02, 0), 0.038, 0.08, mat("tin_mug", TIN), mat("tin_in", (0.4, 0.4, 0.4)), mat("tin_mug", TIN))
+    return g.build()
+
+
+def cans_food(rng):
+    """Консервы: 5 банок — пирамидка и одна рядом, цветные этикетки."""
+    g = Mesh("cans_food")
+    labels = [mat("label_red", (0.68, 0.22, 0.16)), mat("label_yellow", (0.82, 0.62, 0.2)), mat("label_green", (0.32, 0.48, 0.28)), mat("label_blue", (0.28, 0.38, 0.55))]
+    top = mat("tin_top", (0.7, 0.68, 0.64))
+    r, h = 0.04, 0.1
+    pos = [(-0.042, 0, 0), (0.042, 0, 0), (0, 0, h + 0.002), (0.16, 0.04, 0)]
+    for k, p in enumerate(pos):
+        _can(g, p, (0, 0, 1), r, h, labels[k % 4], top, sides=12)
+    _can(g, (-0.14, -0.06, r), (1, 0.4, 0), r, h, labels[3], top, sides=12)
+    return g.build()
+
+
+def candles(rng):
+    """Свечи: три разной высоты на блюдце, натёкший воск, огоньки."""
+    g = Mesh("candles")
+    wax, flame, plate = mat("wax", (0.9, 0.86, 0.72)), mat("flame", (1.0, 0.75, 0.3)), mat("plate_tin", (0.55, 0.53, 0.5))
+    g.disc((0, 0, 0), 0.13, 0.12, 0.012, plate, n=14, jitter=0.02, rng=rng)
+    for k, (x, y, h) in enumerate(((-0.05, 0, 0.16), (0.04, 0.03, 0.11), (0.03, -0.05, 0.07))):
+        base = Vector((x, y, 0.012))
+        g.tube([base, base + Vector((0, 0, h))], [0.018, 0.016], wax, sides=8)
+        g.blob(base + Vector((0, 0, 0.004)), (0.03, 0.03, 0.008), wax, subdiv=1, jitter=0.2, rng=rng)
+        g.blob(base + Vector((0, 0, h + 0.018)), (0.007, 0.007, 0.016), flame, subdiv=1, jitter=0.05, rng=rng)
+    return g.build()
+
+
+def books_stack(rng):
+    """Книги стопкой: 5 книг разного цвета и размера, верхняя чуть повёрнута."""
+    g = Mesh("books_stack")
+    covers = [mat("book_red", (0.55, 0.18, 0.14)), mat("book_green", (0.24, 0.38, 0.26)), mat("book_blue", (0.22, 0.3, 0.45)),
+              mat("book_brown", (0.45, 0.3, 0.18)), mat("book_grey", (0.42, 0.42, 0.4))]
+    pages = mat("pages", (0.86, 0.82, 0.7))
+    z = 0
+    for k in range(5):
+        w, d, h = rng.uniform(0.17, 0.24), rng.uniform(0.12, 0.17), rng.uniform(0.025, 0.045)
+        rz = rng.uniform(-0.25, 0.25)
+        _box(g, (rng.uniform(-0.01, 0.01), rng.uniform(-0.01, 0.01), z + h / 2), (w, d, h), covers[k], rz=rz)
+        _box(g, (0.004, 0, z + h / 2), (w - 0.012, d - 0.01, h * 0.8), pages, rz=rz)
+        z += h
+    return g.build()
+
+
+def newspapers(rng):
+    """Газеты: перевязанная стопка и один раскрытый лист рядом."""
+    g = Mesh("newspapers")
+    p1, p2, tw = mat("newsprint", (0.8, 0.78, 0.7)), mat("newsprint_old", (0.72, 0.68, 0.56)), mat("twine", (0.7, 0.6, 0.4))
+    z = 0
+    for k in range(8):
+        _box(g, (rng.uniform(-0.01, 0.01), rng.uniform(-0.01, 0.01), z + 0.008), (0.3, 0.22, 0.016), p1 if k % 2 else p2, rz=rng.uniform(-0.06, 0.06))
+        z += 0.016
+    _box(g, (0, 0, z / 2), (0.31, 0.01, z + 0.004), tw)
+    _box(g, (0, 0, z / 2), (0.01, 0.23, z + 0.004), tw)
+    c = Vector((0.35, 0.05, 0.003))
+    g.face([c + Vector((-0.2, -0.15, 0)), c + Vector((0.2, -0.15, 0)), c + Vector((0.21, 0.15, 0.015)), c + Vector((-0.19, 0.15, 0))], p2)
+    return g.build()
+
+
+def tools_table(rng):
+    """Инструменты: гаечный ключ, молоток и отвёртка лежат рядом (на стол или верстак)."""
+    g = Mesh("tools_table")
+    steel, handle_w, handle_r = mat("steel", METAL), mat("handle_wood", (0.6, 0.4, 0.22)), mat("handle_red", (0.65, 0.18, 0.12))
+    _box(g, (-0.12, 0, 0.006), (0.22, 0.022, 0.012), steel, rz=0.2)             # ключ: ручка
+    for sx in (-0.23, -0.01):
+        g.disc((sx, -0.022 + (0.044 if sx > -0.1 else 0), 0), 0.022, 0.022, 0.012, steel, n=8, jitter=0.0)
+    g.tube([(0.02, 0.1, 0.014), (0.26, 0.15, 0.014)], [0.014, 0.012], handle_w, sides=6)   # молоток
+    _box(g, (0.27, 0.15, 0.02), (0.03, 0.11, 0.04), steel, rz=0.2)
+    g.tube([(-0.05, -0.12, 0.012), (0.06, -0.14, 0.012)], [0.014, 0.014], handle_r, sides=6)   # отвёртка
+    g.tube([(0.06, -0.14, 0.012), (0.17, -0.16, 0.012)], [0.004, 0.003], steel, sides=5)
+    return g.build()
+
+
+def rags(rng):
+    """Тряпки: скомканная ткань — два мятых куска разного цвета."""
+    g = Mesh("rags")
+    for k, col in enumerate(((0.55, 0.5, 0.42), (0.38, 0.42, 0.5))):
+        m = mat(f"cloth_{k}", col)
+        c = (k * 0.18 - 0.08, k * 0.05, 0)
+        g.disc(c, 0.16, 0.12, 0.012, m, n=10, jitter=0.35, rng=rng)
+        for j in range(5):
+            g.blob((c[0] + rng.uniform(-0.09, 0.09), c[1] + rng.uniform(-0.07, 0.07), 0.02), (0.06, 0.04, 0.025), m, subdiv=1, jitter=0.35, rng=rng)
+    return g.build()
+
+
+def ammo_boxes(rng):
+    """Коробки от патронов: три зелёных армейских ящичка с жёлтой полосой и ручкой, один открыт."""
+    g = Mesh("ammo_boxes")
+    olive, stripe, metal = mat("ammo_olive", (0.36, 0.4, 0.24)), mat("ammo_stripe", (0.85, 0.7, 0.2)), mat("ammo_metal", (0.3, 0.3, 0.28))
+    for k, (x, y, z, rz) in enumerate(((-0.14, 0, 0, 0.05), (0.14, 0.02, 0, -0.08), (0.0, 0.01, 0.16, 0.12))):
+        c = (x, y, z + 0.08)
+        _box(g, c, (0.26, 0.12, 0.16), olive, rz=rz)
+        _box(g, (x, y, z + 0.11), (0.262, 0.122, 0.022), stripe, rz=rz)
+        _box(g, (x, y, z + 0.168), (0.08, 0.016, 0.014), metal, rz=rz)
+    brass = mat("brass", (0.78, 0.6, 0.28))
+    for j in range(5):   # из открытой торчат патроны
+        g.tube([(0.07 + j * 0.03, 0.02, 0.18), (0.07 + j * 0.03, 0.02, 0.22)], [0.008, 0.006], brass, sides=6)
+    return g.build()
+
+
+BATCH5 = {"puddle": puddle, "mud_patch": mud_patch, "trash_papers": trash_papers, "trash_cans": trash_cans, "trash_bottles": trash_bottles,
+          "shell_casings": shell_casings, "mugs": mugs, "cans_food": cans_food, "candles": candles, "books_stack": books_stack,
+          "newspapers": newspapers, "tools_table": tools_table, "rags": rags, "ammo_boxes": ammo_boxes}
+
+
+MODELS = {"bush_water_reeds": reeds, "bush_willow": willow, "bush_water_sedge": sedge, "arrow_wood": arrow, "arrows_bundle": arrows_bundle, **BATCH1, **BATCH4, **BATCH5}
 
 
 # ───────────────────────── «нарисованная» текстура, как у Tripo ─────────────────────────
