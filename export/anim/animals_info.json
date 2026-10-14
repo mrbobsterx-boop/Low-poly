@@ -2,7 +2,7 @@
  "bear_black": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.51,
+  "mb": 0.59,
   "animations": {
    "idle": {
     "frames": 76,
@@ -37,6 +37,33 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 12,
+    "seconds": 0.367,
+    "loop": true,
+    "speed_mps": 2.52
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -47,7 +74,7 @@
  "bear_brown": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.53,
+  "mb": 0.61,
   "animations": {
    "idle": {
     "frames": 76,
@@ -82,6 +109,33 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 13,
+    "seconds": 0.4,
+    "loop": true,
+    "speed_mps": 2.57
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -92,7 +146,7 @@
  "bear_mutant": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.8,
+  "mb": 0.88,
   "animations": {
    "idle": {
     "frames": 76,
@@ -127,6 +181,33 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 15,
+    "seconds": 0.467,
+    "loop": true,
+    "speed_mps": 2.99
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -137,7 +218,7 @@
  "crow": {
   "kind": "bird",
   "bones": 9,
-  "mb": 0.29,
+  "mb": 0.35,
   "animations": {
    "idle": {
     "frames": 76,
@@ -161,6 +242,40 @@
     "seconds": 1.5,
     "loop": true
    },
+   "takeoff": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "rise_m": 0.19,
+    "note": "дальше — fly / glide; подъём на rise_m уже внутри анимации"
+   },
+   "glide": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 25,
+    "seconds": 0.8,
+    "loop": false,
+    "hit_at_s": 0.34
+   },
+   "flee": {
+    "frames": 10,
+    "seconds": 0.3,
+    "loop": true,
+    "speed_mps": 1.15
+   },
    "hit": {
     "frames": 16,
     "seconds": 0.5,
@@ -176,7 +291,7 @@
  "deer_red": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.55,
+  "mb": 0.61,
   "animations": {
    "idle": {
     "frames": 76,
@@ -211,6 +326,28 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": true,
+    "speed_mps": 3.56
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -221,7 +358,7 @@
  "deer_roe": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.53,
+  "mb": 0.59,
   "animations": {
    "idle": {
     "frames": 76,
@@ -256,6 +393,28 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 15,
+    "seconds": 0.467,
+    "loop": true,
+    "speed_mps": 3.31
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -266,7 +425,7 @@
  "deer_white": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.56,
+  "mb": 0.62,
   "animations": {
    "idle": {
     "frames": 76,
@@ -301,6 +460,28 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 16,
+    "seconds": 0.5,
+    "loop": true,
+    "speed_mps": 3.35
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -311,7 +492,7 @@
  "dog_feral_odinochnaya": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.87,
+  "mb": 0.97,
   "animations": {
    "idle": {
     "frames": 76,
@@ -346,6 +527,44 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 12,
+    "seconds": 0.367,
+    "loop": true,
+    "speed_mps": 2.52
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
+   },
+   "howl": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": false
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -356,7 +575,7 @@
  "dog_husky": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.51,
+  "mb": 0.61,
   "animations": {
    "idle": {
     "frames": 76,
@@ -391,6 +610,44 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 11,
+    "seconds": 0.333,
+    "loop": true,
+    "speed_mps": 2.28
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
+   },
+   "howl": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": false
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -401,7 +658,7 @@
  "dog_raider": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.52,
+  "mb": 0.62,
   "animations": {
    "idle": {
     "frames": 76,
@@ -436,6 +693,44 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 10,
+    "seconds": 0.3,
+    "loop": true,
+    "speed_mps": 2.1
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
+   },
+   "howl": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": false
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -446,7 +741,7 @@
  "dog_rottweiler": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.52,
+  "mb": 0.62,
   "animations": {
    "idle": {
     "frames": 76,
@@ -481,6 +776,44 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 11,
+    "seconds": 0.333,
+    "loop": true,
+    "speed_mps": 2.22
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
+   },
+   "howl": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": false
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -491,7 +824,7 @@
  "dog_shepherd": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.51,
+  "mb": 0.62,
   "animations": {
    "idle": {
     "frames": 76,
@@ -526,6 +859,44 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 10,
+    "seconds": 0.3,
+    "loop": true,
+    "speed_mps": 1.97
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
+   },
+   "howl": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": false
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -536,7 +907,7 @@
  "dog_terrier": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.37,
+  "mb": 0.48,
   "animations": {
    "idle": {
     "frames": 76,
@@ -571,6 +942,44 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 1.56
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
+   },
+   "howl": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": false
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -581,7 +990,7 @@
  "dog_thin": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.52,
+  "mb": 0.62,
   "animations": {
    "idle": {
     "frames": 76,
@@ -616,6 +1025,44 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 10,
+    "seconds": 0.3,
+    "loop": true,
+    "speed_mps": 2.25
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
+   },
+   "howl": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": false
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -626,7 +1073,7 @@
  "dog_zombie": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.59,
+  "mb": 0.7,
   "animations": {
    "idle": {
     "frames": 76,
@@ -661,6 +1108,44 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 11,
+    "seconds": 0.333,
+    "loop": true,
+    "speed_mps": 2.13
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
+   },
+   "howl": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": false
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -671,7 +1156,7 @@
  "duck": {
   "kind": "bird",
   "bones": 9,
-  "mb": 0.28,
+  "mb": 0.34,
   "animations": {
    "idle": {
     "frames": 76,
@@ -695,6 +1180,40 @@
     "seconds": 1.5,
     "loop": true
    },
+   "takeoff": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "rise_m": 0.21,
+    "note": "дальше — fly / glide; подъём на rise_m уже внутри анимации"
+   },
+   "glide": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 25,
+    "seconds": 0.8,
+    "loop": false,
+    "hit_at_s": 0.34
+   },
+   "flee": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 1.43
+   },
    "hit": {
     "frames": 16,
     "seconds": 0.5,
@@ -710,7 +1229,7 @@
  "moose_bull": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.55,
+  "mb": 0.62,
   "animations": {
    "idle": {
     "frames": 76,
@@ -744,6 +1263,28 @@
     "frames": 16,
     "seconds": 0.5,
     "loop": false
+   },
+   "flee": {
+    "frames": 19,
+    "seconds": 0.6,
+    "loop": true,
+    "speed_mps": 3.98
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
    },
    "death": {
     "frames": 37,
@@ -755,7 +1296,7 @@
  "moose_cow": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.5,
+  "mb": 0.57,
   "animations": {
    "idle": {
     "frames": 76,
@@ -790,6 +1331,28 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 19,
+    "seconds": 0.6,
+    "loop": true,
+    "speed_mps": 3.97
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -800,7 +1363,7 @@
  "moose_mutant": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.6,
+  "mb": 0.67,
   "animations": {
    "idle": {
     "frames": 76,
@@ -835,6 +1398,28 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 20,
+    "seconds": 0.633,
+    "loop": true,
+    "speed_mps": 4.2
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -845,7 +1430,7 @@
  "owl": {
   "kind": "bird",
   "bones": 9,
-  "mb": 0.28,
+  "mb": 0.34,
   "animations": {
    "idle": {
     "frames": 76,
@@ -869,6 +1454,40 @@
     "seconds": 1.5,
     "loop": true
    },
+   "takeoff": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "rise_m": 0.28,
+    "note": "дальше — fly / glide; подъём на rise_m уже внутри анимации"
+   },
+   "glide": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 25,
+    "seconds": 0.8,
+    "loop": false,
+    "hit_at_s": 0.34
+   },
+   "flee": {
+    "frames": 10,
+    "seconds": 0.3,
+    "loop": true,
+    "speed_mps": 1.65
+   },
    "hit": {
     "frames": 16,
     "seconds": 0.5,
@@ -884,7 +1503,7 @@
  "pigeon": {
   "kind": "bird",
   "bones": 9,
-  "mb": 0.28,
+  "mb": 0.34,
   "animations": {
    "idle": {
     "frames": 76,
@@ -908,6 +1527,40 @@
     "seconds": 1.5,
     "loop": true
    },
+   "takeoff": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "rise_m": 0.2,
+    "note": "дальше — fly / glide; подъём на rise_m уже внутри анимации"
+   },
+   "glide": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 25,
+    "seconds": 0.8,
+    "loop": false,
+    "hit_at_s": 0.34
+   },
+   "flee": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 1.36
+   },
    "hit": {
     "frames": 16,
     "seconds": 0.5,
@@ -923,7 +1576,7 @@
  "rabbit_grey": {
   "kind": "hop",
   "bones": 18,
-  "mb": 0.3,
+  "mb": 0.4,
   "animations": {
    "idle": {
     "frames": 76,
@@ -947,10 +1600,44 @@
     "seconds": 2.0,
     "loop": true
    },
+   "attack": {
+    "frames": 21,
+    "seconds": 0.6666666666666666,
+    "loop": false,
+    "hit_at_s": 0.28
+   },
    "hit": {
     "frames": 16,
     "seconds": 0.5,
     "loop": false
+   },
+   "flee": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.6
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
    },
    "death": {
     "frames": 37,
@@ -962,7 +1649,7 @@
  "rabbit_hare": {
   "kind": "hop",
   "bones": 18,
-  "mb": 0.29,
+  "mb": 0.39,
   "animations": {
    "idle": {
     "frames": 76,
@@ -986,10 +1673,44 @@
     "seconds": 2.0,
     "loop": true
    },
+   "attack": {
+    "frames": 21,
+    "seconds": 0.6666666666666666,
+    "loop": false,
+    "hit_at_s": 0.28
+   },
    "hit": {
     "frames": 16,
     "seconds": 0.5,
     "loop": false
+   },
+   "flee": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.69
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
    },
    "death": {
     "frames": 37,
@@ -1001,7 +1722,7 @@
  "rabbit_white": {
   "kind": "hop",
   "bones": 18,
-  "mb": 0.3,
+  "mb": 0.39,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1025,10 +1746,44 @@
     "seconds": 2.0,
     "loop": true
    },
+   "attack": {
+    "frames": 21,
+    "seconds": 0.6666666666666666,
+    "loop": false,
+    "hit_at_s": 0.28
+   },
    "hit": {
     "frames": 16,
     "seconds": 0.5,
     "loop": false
+   },
+   "flee": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.59
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
    },
    "death": {
     "frames": 37,
@@ -1040,7 +1795,7 @@
  "rabbit_wild_krolik": {
   "kind": "hop",
   "bones": 18,
-  "mb": 0.86,
+  "mb": 0.94,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1064,10 +1819,44 @@
     "seconds": 2.0,
     "loop": true
    },
+   "attack": {
+    "frames": 21,
+    "seconds": 0.6666666666666666,
+    "loop": false,
+    "hit_at_s": 0.28
+   },
    "hit": {
     "frames": 16,
     "seconds": 0.5,
     "loop": false
+   },
+   "flee": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.9
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
    },
    "death": {
     "frames": 37,
@@ -1079,7 +1868,7 @@
  "rat_grey": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.3,
+  "mb": 0.36,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1114,6 +1903,28 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 0.28
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -1124,7 +1935,7 @@
  "rat_pest_krysa": {
   "kind": "quad",
   "bones": 18,
-  "mb": 1.48,
+  "mb": 1.54,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1159,6 +1970,28 @@
     "seconds": 0.5,
     "loop": false
    },
+   "flee": {
+    "frames": 9,
+    "seconds": 0.267,
+    "loop": true,
+    "speed_mps": 1.01
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
    "death": {
     "frames": 37,
     "seconds": 1.2,
@@ -1169,7 +2002,7 @@
  "seagull": {
   "kind": "bird",
   "bones": 9,
-  "mb": 0.28,
+  "mb": 0.33,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1193,6 +2026,40 @@
     "seconds": 1.5,
     "loop": true
    },
+   "takeoff": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "rise_m": 0.21,
+    "note": "дальше — fly / glide; подъём на rise_m уже внутри анимации"
+   },
+   "glide": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 25,
+    "seconds": 0.8,
+    "loop": false,
+    "hit_at_s": 0.34
+   },
+   "flee": {
+    "frames": 10,
+    "seconds": 0.3,
+    "loop": true,
+    "speed_mps": 1.26
+   },
    "hit": {
     "frames": 16,
     "seconds": 0.5,
@@ -1208,7 +2075,7 @@
  "vulture": {
   "kind": "bird",
   "bones": 9,
-  "mb": 0.29,
+  "mb": 0.35,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1232,6 +2099,40 @@
     "seconds": 1.5,
     "loop": true
    },
+   "takeoff": {
+    "frames": 31,
+    "seconds": 1.0,
+    "loop": false,
+    "rise_m": 0.32,
+    "note": "дальше — fly / glide; подъём на rise_m уже внутри анимации"
+   },
+   "glide": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "attack": {
+    "frames": 25,
+    "seconds": 0.8,
+    "loop": false,
+    "hit_at_s": 0.34
+   },
+   "flee": {
+    "frames": 11,
+    "seconds": 0.333,
+    "loop": true,
+    "speed_mps": 1.7
+   },
    "hit": {
     "frames": 16,
     "seconds": 0.5,
@@ -1247,7 +2148,7 @@
  "wolf": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.75,
+  "mb": 0.86,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1281,6 +2182,44 @@
     "frames": 16,
     "seconds": 0.5,
     "loop": false
+   },
+   "flee": {
+    "frames": 12,
+    "seconds": 0.367,
+    "loop": true,
+    "speed_mps": 2.57
+   },
+   "lie_down": {
+    "frames": 37,
+    "seconds": 1.2,
+    "loop": false,
+    "note": "стоял → лёг; дальше sleep"
+   },
+   "sleep": {
+    "frames": 121,
+    "seconds": 4.0,
+    "loop": true
+   },
+   "sit": {
+    "frames": 76,
+    "seconds": 2.5,
+    "loop": true
+   },
+   "beg": {
+    "frames": 61,
+    "seconds": 2.0,
+    "loop": true,
+    "note": "ручное животное просит еду"
+   },
+   "howl": {
+    "frames": 91,
+    "seconds": 3.0,
+    "loop": false
+   },
+   "growl": {
+    "frames": 46,
+    "seconds": 1.5,
+    "loop": true
    },
    "death": {
     "frames": 37,

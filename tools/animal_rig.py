@@ -391,7 +391,7 @@ def ease(x):
     return x * x * (3 - 2 * x)
 
 
-def quad_anims(arm, lay, kind):
+def quad_anims(arm, lay, kind, name=""):
     A = Anim(arm)
     legs = [k for k in ("FL", "FR", "BL", "BR")]
     Lleg = float(lay["jz"] - lay["z0"])
@@ -469,10 +469,10 @@ def quad_anims(arm, lay, kind):
     A.make("eat", n, eat)
     info["eat"] = {"frames": n + 1, "seconds": n / FPS, "loop": True}
 
-    # атака: присел назад → бросок вперёд → назад
-    if kind != "hop":
-        n = 30
-        reach = 0.25 * float(lay["L"])
+    # атака: присел назад → бросок вперёд → назад (у зайца — короткий выпад)
+    if True:
+        n = 30 if not hop else 20
+        reach = 0.25 * float(lay["L"]) * (0.6 if hop else 1.0)
         def attack(t):
             back_ = ease(t / 0.3) * (1 - ease((t - 0.3) / 0.15))
             fwd = ease((t - 0.3) / 0.15) * (1 - ease((t - 0.6) / 0.4))
@@ -502,6 +502,174 @@ def quad_anims(arm, lay, kind):
                 "Tail1": rx(-0.4 * k)}
     A.make("hit", n, hit, loop=False)
     info["hit"] = {"frames": n + 1, "seconds": n / FPS, "loop": False}
+
+
+    canine = name.startswith(("dog_", "wolf"))
+    bear = name.startswith("bear_")
+    hoofed = name.startswith(("deer_", "moose_"))
+    body_len = float(lay["yB"] - lay["yF"])
+    belly_h = float(lay["belly"] - lay["z0"])
+
+    # убегает: быстрый галоп, голова и хвост прижаты (быстрее бега)
+    if hop:
+        T_f = 0.34 * math.sqrt(size)
+        ph_f = {"BL": 0.0, "BR": 0.03, "FL": 0.5, "FR": 0.53}
+        amp_f, bend_f, bob_f, flex_f = 0.6, 0.95, 0.3, 0.2
+    else:
+        T_f = min(max(0.36 * math.sqrt(size), 0.26), 0.7)
+        ph_f = {"BL": 0.0, "BR": 0.1, "FL": 0.45, "FR": 0.55}
+        amp_f, bend_f, bob_f, flex_f = 0.58, 1.0, 0.06, 0.13
+    n = max(8, int(round(T_f * FPS)))
+    def flee(t):
+        p = {}
+        for k in legs:
+            leg_pose(p, k, t, amp_f, bend_f, ph_f[k])
+        up = (max(0.0, sn(t + 0.05)) * bob_f if hop else bob_f * cs(2 * t)) * Lleg
+        p["Hips"] = (rx(-flex_f * sn(t + 0.1)), A.world_loc("Hips", (0, 0, up)))
+        p["Spine"] = rx(flex_f * 1.4 * sn(t + 0.1))
+        p["Neck"] = rx(0.2 - flex_f * 0.5 * sn(t))
+        p["Head"] = rx(0.1)
+        p["Tail1"] = rx(-0.45)
+        p["Tail2"] = rx(-0.2)
+        return p
+    A.make("flee", n, flee)
+    info["flee"] = {"frames": n + 1, "seconds": round(n / FPS, 3), "loop": True,
+                    "speed_mps": round(4 * Lleg * math.sin(amp_f) / (n / FPS), 2)}
+
+    # лёг: поза «лёжа на животе» (для sleep и lie_down)
+    drop_lie = max(0.0, belly_h - 0.06 * Lleg)
+    def lying(k, breath=0.0):
+        p = {}
+        if canine or bear or hop:                            # передние лапы вытянуты вперёд
+            fl1, fl2, fl3 = -1.35 * k, 0.15 * k, -0.2 * k
+        else:                                                # копытные: передние подогнуты
+            fl1, fl2, fl3 = -0.9 * k, 2.2 * k, 0.4 * k
+        for s_ in ("L", "R"):
+            p[f"LegF{s_}1"], p[f"LegF{s_}2"], p[f"LegF{s_}3"] = rx(fl1), rx(fl2), rx(fl3)
+            p[f"LegB{s_}1"], p[f"LegB{s_}2"], p[f"LegB{s_}3"] = rx(-1.1 * k), rx(1.9 * k), rx(-0.7 * k)
+        p["Hips"] = (rx(0.02 * breath), A.world_loc("Hips", (0, 0, -drop_lie * k + 0.004 * Lleg * breath)))
+        p["Spine"] = rx(0.03 * breath)
+        return p
+
+    upright = name == "rabbit_wild_krolik"                    # модель уже сидит столбиком — позы мягче
+    if upright:
+        def lying(k, breath=0.0):
+            return {"Hips": (rx(0.25 * k), A.world_loc("Hips", (0, 0, -0.12 * belly_h * k + 0.004 * Lleg * breath))),
+                    "Spine": rx(0.2 * k + 0.03 * breath)}
+
+
+    n = 36
+    def lie_down(t):
+        k = ease(t / 0.9)
+        p = lying(k)
+        p["Neck"] = rx(0.25 * k)
+        p["Tail1"] = rz(0.5 * k) @ rx(-0.2 * k)
+        return p
+    A.make("lie_down", n, lie_down, loop=False)
+    info["lie_down"] = {"frames": n + 1, "seconds": n / FPS, "loop": False, "note": "стоял → лёг; дальше sleep"}
+
+    n = 120
+    def sleep(t):
+        p = lying(1.0, sn(2 * t))
+        p["Neck"] = rx(0.55 + 0.02 * sn(2 * t)) @ rz(0.35)   # голова на лапах, чуть набок
+        p["Head"] = rx(0.25)
+        p["Tail1"] = rz(0.7) @ rx(-0.2)
+        p["Tail2"] = rz(0.6)
+        return p
+    A.make("sleep", n, sleep)
+    info["sleep"] = {"frames": n + 1, "seconds": n / FPS, "loop": True}
+
+    # сидит: таз вниз, перед поднят (у копытных — лёжа с поднятой головой)
+    a_sit = 0.3 if hop else 0.5
+    d_sit = body_len * math.sin(a_sit)
+    def sitting(k):
+        if upright:
+            return {"Hips": (None, A.world_loc("Hips", (0, 0, -0.04 * Lleg * k))), "Neck": rx(0.0)}
+        if hoofed:
+            p = lying(k)
+            p["Neck"] = rx(-0.15 * k)
+            return p
+        p = {}
+        p["Hips"] = (A.world_rot("Hips", Quaternion((1, 0, 0), -a_sit * k)),
+                     A.world_loc("Hips", (0, 0.05 * body_len * k, -min(d_sit, 0.8 * belly_h + 0.2 * Lleg) * k)))
+        for s_ in ("L", "R"):
+            p[f"LegF{s_}1"] = rx(a_sit * k)
+            p[f"LegB{s_}1"] = rx(-(a_sit + 0.9) * k)
+            p[f"LegB{s_}2"] = rx(1.9 * k)
+            p[f"LegB{s_}3"] = rx(-0.9 * k)
+        p["Neck"] = rx(-0.6 * a_sit * k)
+        p["Tail1"] = rx(-0.6 * k)
+        return p
+
+    n = 75
+    def sit(t):
+        p = sitting(1.0)
+        p["Neck"] = p["Neck"] @ rz(0.2 * sn(t))
+        p["Spine"] = rx(0.02 * sn(3 * t))
+        return p
+    A.make("sit", n, sit)
+    info["sit"] = {"frames": n + 1, "seconds": n / FPS, "loop": True}
+
+    # просит еду (ручные: собаки — сидит и тянет лапу, заяц — встаёт столбиком)
+    if canine or hop:
+        n = 60
+        def beg(t):
+            if upright:
+                return {"LegFL1": rx(-0.7 - 0.1 * sn(2 * t)), "LegFR1": rx(-0.7 - 0.1 * sn(2 * t)),
+                        "LegFL2": rx(0.8), "LegFR2": rx(0.8), "Neck": rx(-0.2 + 0.06 * sn(2 * t)),
+                        "Head": rx(0.1 * sn(4 * t))}
+            if hop:
+                k = 1.0
+                p = {"Hips": (A.world_rot("Hips", Quaternion((1, 0, 0), -0.8)),
+                              A.world_loc("Hips", (0, 0.1 * body_len, -0.15 * belly_h - 0.35 * Lleg))),
+                     "Neck": rx(0.55 + 0.08 * sn(2 * t)), "Head": rx(0.1 * sn(4 * t))}
+                for s_ in ("L", "R"):
+                    p[f"LegF{s_}1"] = rx(0.6 + 0.1 * sn(2 * t))
+                    p[f"LegF{s_}2"] = rx(1.2)
+                    p[f"LegB{s_}1"] = rx(-1.6)
+                    p[f"LegB{s_}2"] = rx(2.0)
+                    p[f"LegB{s_}3"] = rx(-0.6)
+                return p
+            p = sitting(1.0)
+            lift = 0.5 + 0.5 * sn(2 * t)
+            p["LegFR1"] = rx(a_sit - 1.0 - 0.3 * lift)
+            p["LegFR2"] = rx(1.2)
+            p["Neck"] = rx(-0.6 * a_sit) @ rz(0.3 * sn(t))
+            p["Head"] = rz(0.25 * sn(t))
+            p["Tail1"] = rx(-0.6) @ rz(0.5 * sn(4 * t))
+            p["Tail2"] = rz(0.5 * sn(4 * t - 0.2))
+            return p
+        A.make("beg", n, beg)
+        info["beg"] = {"frames": n + 1, "seconds": n / FPS, "loop": True, "note": "ручное животное просит еду"}
+
+    # воет (собаки, волк): садится, морда вверх
+    if canine:
+        n = 90
+        def howl(t):
+            up = ease(t / 0.2) * (1 - ease((t - 0.8) / 0.2))
+            p = sitting(1.0)
+            p["Neck"] = rx(-0.6 * a_sit - 0.45 * up + 0.03 * up * sn(12 * t))
+            p["Head"] = rx(-0.2 * up)
+            return p
+        A.make("howl", n, howl, loop=False)
+        info["howl"] = {"frames": n + 1, "seconds": n / FPS, "loop": False}
+
+    # рычит (собаки, волк, медведи): пригнулся, голова низко, дрожь
+    if canine or bear:
+        n = 45
+        def growl(t):
+            tr = 0.012 * sn(9 * t)
+            p = {"Hips": (rx(-0.1), A.world_loc("Hips", (0, 0.05 * Lleg, -0.15 * Lleg))),
+                 "Spine": rx(0.12 + tr), "Neck": rx(0.35 + tr), "Head": rx(-0.3 + tr),
+                 "Tail1": rx(-0.35 if canine else 0.0)}
+            for s_ in ("L", "R"):
+                p[f"LegF{s_}1"] = rx(-0.35)
+                p[f"LegF{s_}2"] = rx(0.6)
+                p[f"LegB{s_}1"] = rx(-0.3)
+                p[f"LegB{s_}2"] = rx(0.6)
+            return p
+        A.make("growl", n, growl)
+        info["growl"] = {"frames": n + 1, "seconds": n / FPS, "loop": True}
 
     # смерть: заваливается на бок
     n = 36
@@ -595,6 +763,90 @@ def bird_anims(arm, lay):
     A.make("eat", n, eat)
     info["eat"] = {"frames": n + 1, "seconds": n / FPS, "loop": True}
 
+
+    # взлетает: присел → прыжок вверх с сильными взмахами (подъём — 1,5 высоты птицы; дальше игра ведёт полёт)
+    n = 30
+    def takeoff(t):
+        crouch = ease(t / 0.2) * (1 - ease((t - 0.2) / 0.1))
+        rise = ease((t - 0.25) / 0.75)
+        open_ = ease((t - 0.1) / 0.2)
+        p = fold({}, 1 - open_) if open_ < 1 else {}
+        if open_ > 0:
+            a = 0.85 * sn(3 * t)
+            for sd in ("L", "R"):
+                q1 = A.world_rot(f"Wing{sd}1", wing(sd, F[0] * (1 - open_), F[1] * (1 - open_) - a * open_))
+                q2 = A.world_rot(f"Wing{sd}2", wing(sd, F[2] * (1 - open_), -0.4 * sn(3 * t - 0.12) * open_))
+                p[f"Wing{sd}1"], p[f"Wing{sd}2"] = q1, q2
+        p["Body"] = (rx(0.2 * crouch - 0.25 * rise), A.world_loc("Body", (0, 0, -0.25 * H * crouch + 1.5 * H * rise)))
+        p["LegL"] = p["LegR"] = rx(0.9 * rise)
+        p["Head"] = rx(-0.2 * crouch + 0.15 * rise)
+        return p
+    A.make("takeoff", n, takeoff, loop=False)
+    info["takeoff"] = {"frames": n + 1, "seconds": n / FPS, "loop": False, "rise_m": round(1.5 * H, 2),
+                       "note": "дальше — fly / glide; подъём на rise_m уже внутри анимации"}
+
+    # парит: крылья раскрыты, лёгкое покачивание
+    n = 90
+    def glide(t):
+        p = flap({"LegL": rx(0.9), "LegR": rx(0.9)}, 0.12 + 0.05 * sn(t), 0.05 * sn(t - 0.1))
+        p["Body"] = (Quaternion((0, 1, 0), 0.08 * sn(t)) @ rx(-0.05), A.world_loc("Body", (0, 0, 0.04 * span * sn(t))))
+        p["Tail1"] = rz(0.1 * sn(t))
+        p["Head"] = rz(0.15 * sn(t + 0.25))
+        return p
+    A.make("glide", n, glide)
+    info["glide"] = {"frames": n + 1, "seconds": n / FPS, "loop": True}
+
+    # сидит (нахохлился) и спит (голова под крыло)
+    n = 75
+    def sit(t):
+        p = fold({})
+        p["Body"] = (rx(-0.05), A.world_loc("Body", (0, 0, -0.35 * H + 0.01 * H * sn(3 * t))))
+        p["LegL"] = p["LegR"] = rx(-0.6)
+        p["Head"] = rz(0.4 * sn(t)) @ rx(0.1)
+        return p
+    A.make("sit", n, sit)
+    info["sit"] = {"frames": n + 1, "seconds": n / FPS, "loop": True}
+
+    n = 120
+    def sleep(t):
+        p = fold({})
+        p["Body"] = (rx(0.02 * sn(2 * t)), A.world_loc("Body", (0, 0, -0.38 * H + 0.012 * H * sn(2 * t))))
+        p["LegL"] = p["LegR"] = rx(-0.6)
+        p["Head"] = rz(2.3) @ rx(0.5)                       # голова повёрнута назад, к крылу
+        return p
+    A.make("sleep", n, sleep)
+    info["sleep"] = {"frames": n + 1, "seconds": n / FPS, "loop": True}
+
+    # атакует: крылья вверх, бросок вперёд и клевок
+    n = 24
+    reach = 0.4 * float(lay["L"])
+    def attack(t):
+        up = ease(t / 0.3) * (1 - ease((t - 0.7) / 0.3))
+        fwd = ease((t - 0.3) / 0.15) * (1 - ease((t - 0.55) / 0.3))
+        p = flap({}, 0.6 * up + 0.3 * up * sn(4 * t), 0.3 * up)
+        if up < 0.05:
+            p = fold({})
+        p["Body"] = (rx(0.35 * fwd), A.world_loc("Body", (0, -reach * fwd, 0.2 * H * up)))
+        p["Head"] = rx(0.6 * fwd - 0.2 * up)
+        p["Tail1"] = rx(0.3 * up)
+        return p
+    A.make("attack", n, attack, loop=False)
+    info["attack"] = {"frames": n + 1, "seconds": n / FPS, "loop": False, "hit_at_s": round(0.42 * n / FPS, 2)}
+
+    # убегает по земле: быстрые прыжки с полураскрытыми, машущими крыльями
+    n = max(8, int(round(0.28 * math.sqrt(size) * FPS)))
+    def flee(t):
+        p = flap({}, 0.35 + 0.45 * sn(2 * t), 0.25 * sn(2 * t - 0.12))
+        up = max(0.0, sn(2 * t)) * 0.25 * H
+        p["Body"] = (rx(0.15), A.world_loc("Body", (0, 0, up)))
+        p["LegL"] = rx(-0.5 * sn(t))
+        p["LegR"] = rx(0.5 * sn(t))
+        p["Head"] = rx(-0.1)
+        return p
+    A.make("flee", n, flee)
+    info["flee"] = {"frames": n + 1, "seconds": round(n / FPS, 3), "loop": True,
+                    "speed_mps": round(2 * 2 * 0.7 * H * math.sin(0.5) * 2 / (n / FPS), 2)}
+
     n = 15
     def hit(t):
         k = math.sin(math.pi * min(1, t / 0.9)) * (1 - t) ** 0.5
@@ -645,7 +897,7 @@ def rig(name):
         arm = build_armature(obj, quad_bones(lay), quad_allow(lay))
         kind = "hop" if name in HOP else "quad"
     arm.animation_data_create()
-    info = bird_anims(arm, lay) if kind == "bird" else quad_anims(arm, lay, kind)
+    info = bird_anims(arm, lay) if kind == "bird" else quad_anims(arm, lay, kind, name)
     out = os.path.join(ROOT, "export", f"{name}_idle.glb")
     mb = export(obj, arm, out)
     tris = sum(len(p.vertices) - 2 for p in obj.data.polygons)
@@ -653,12 +905,12 @@ def rig(name):
     return {"kind": kind, "bones": len(arm.data.bones), "mb": round(mb, 2), "animations": info}, obj, arm
 
 
-PREVIEW = {"quad": [("rest", None, 0), ("walk", "walk", 0.25), ("run", "run", 0.3), ("attack", "attack", 0.45),
-                    ("eat", "eat", 0.25), ("death", "death", 1.0)],
-           "hop": [("rest", None, 0), ("walk", "walk", 0.3), ("run", "run", 0.35), ("eat", "eat", 0.25),
-                   ("hit", "hit", 0.4), ("death", "death", 1.0)],
-           "bird": [("rest", None, 0), ("idle", "idle", 0.1), ("fly", "fly", 0.25), ("fly", "fly", 0.75),
-                    ("eat", "eat", 0.1), ("death", "death", 1.0)]}
+PREVIEW = {"quad": [("rest", None, 0), ("sit", "sit", 0.25), ("lie_down", "lie_down", 1.0), ("sleep", "sleep", 0.3),
+                    ("flee", "flee", 0.3), ("attack", "attack", 0.45), ("growl", "growl", 0.3), ("howl", "howl", 0.5),
+                    ("beg", "beg", 0.3)],
+           "bird": [("rest", None, 0), ("takeoff", "takeoff", 0.5), ("glide", "glide", 0.25), ("sit", "sit", 0.2),
+                    ("sleep", "sleep", 0.3), ("attack", "attack", 0.45), ("flee", "flee", 0.25)]}
+PREVIEW["hop"] = PREVIEW["quad"]
 
 
 def preview(name, kind, obj, arm, tmp):
@@ -667,6 +919,8 @@ def preview(name, kind, obj, arm, tmp):
     sc = bpy.context.scene
     outs = []
     for tag, act, t in PREVIEW[kind]:
+        if act and act not in bpy.data.actions:
+            continue
         for tr in arm.animation_data.nla_tracks:
             tr.mute = True
         if act:
@@ -794,7 +1048,7 @@ def main(argv):
             _render.ref = (Vector(((lo + hi) / 2).tolist()), size, float(lo[2]))
             ims = preview(n, rec["kind"], obj, arm, tmp)
             _render.ref = None
-            tags = " · ".join(t for t, _, _ in PREVIEW[rec["kind"]])
+            tags = " · ".join(t for t, a, _ in PREVIEW[rec["kind"]] if a is None or a in bpy.data.actions)
             rows.append((f"{n}\n{rec['kind']}, костей {rec['bones']}, {rec['mb']} МБ · {tags}", ims))
     json.dump(dict(sorted(allinfo.items())), open(info_path, "w"), ensure_ascii=False, indent=1)
     if do_prev and rows:
