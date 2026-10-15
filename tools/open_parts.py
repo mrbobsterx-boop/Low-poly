@@ -312,6 +312,37 @@ def preview(name, body, parts, tmp):
     return rows
 
 
+def to_godot(v):
+    """Blender (x, y, z), Z вверх → Godot (x, z, −y), Y вверх."""
+    return [round(float(v[0]), 4), round(float(v[2]), 4), round(-float(v[1]), 4)]
+
+
+def game_info(parts):
+    """Для игры: имя узла, точка петли и как открыть — в координатах Godot (как в .glb)."""
+    out = []
+    for _, p in parts:
+        op, d = p["open"], {"node": p["name"], "pivot": to_godot(p["pivot"])}
+        if "rot" in op:
+            ax, deg = op["rot"]
+            axv = {"x": (1, 0, 0), "y": (0, 1, 0), "z": (0, 0, 1)}[ax] if isinstance(ax, str) else ax
+            d["rotate_axis"], d["rotate_deg"] = to_godot(axv), deg
+        if "move" in op:
+            d["move"] = to_godot(op["move"])
+        out.append(d)
+    return out
+
+
+def save_game_info(name, parts):
+    path = os.path.join(OUT, "open_parts.json")
+    info = json.load(open(path)) if os.path.exists(path) else {}
+    info["_comment"] = ("Открывающиеся модели export/parts/<имя>.glb: узел body — корпус, остальные узлы — подвижные части. "
+                        "Точка узла (origin) уже стоит на петле (pivot). Открыть: повернуть узел вокруг rotate_axis на rotate_deg "
+                        "градусов (локально, от закрытого положения) и/или сдвинуть на move (метры). Координаты Godot.")
+    info[name] = game_info(parts)
+    json.dump(info, open(path + ".tmp", "w"), ensure_ascii=False, indent=1)
+    os.replace(path + ".tmp", path)
+
+
 def main(argv):
     cfg = json.load(open(CFG))
     sheet_name = argv[argv.index("--sheet") + 1] if "--sheet" in argv else ""
@@ -325,6 +356,7 @@ def main(argv):
         objs = [o for o in [body] + [o for o, _ in parts] if o is not None]
         mb = export(objs, os.path.join(OUT, f"{n}.glb"))
         tri = {o.name: T.tris(o) for o in objs}
+        save_game_info(n, parts)
         print(f"[{n}] {mb:.2f} МБ, треугольники: {tri}", flush=True)
         if "--preview" in argv:
             ims = preview(n, body, parts, tmp)
