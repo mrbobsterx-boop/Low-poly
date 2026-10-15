@@ -259,18 +259,20 @@ def markers(obj, cfg):
     co = np.array([v.co[:] for v in obj.data.vertices])
     pts = []
 
-    def end(sign, name, out):
-        x = co[:, 0].max() if sign > 0 else co[:, 0].min()
-        near = co[(np.abs(co[:, 0] - x) < 0.06) & (np.abs(co[:, 1]) < 0.35)]
+    def end(sign, name, out, zr=(0.0, 9.0)):
+        band = co[(co[:, 2] > zr[0]) & (co[:, 2] < zr[1])]
+        x = band[:, 0].max() if sign > 0 else band[:, 0].min()
+        near = band[(np.abs(band[:, 0] - x) < 0.06) & (np.abs(band[:, 1]) < 0.35)]
         if not len(near):
-            near = co[np.abs(co[:, 0] - x) < 0.06]
+            near = band[np.abs(band[:, 0] - x) < 0.06]
         z = float(np.clip(np.median(near[:, 2]), 0.3, 1.3))
         pts.append((name, [round(float(x) + sign * out, 3), 0.0, round(z, 3)]))
     if cfg.get("hitch"):
         end(-cfg["front"], "hitch", 0.06)
     if cfg.get("couplers"):
-        end(1, "coupler_front" if cfg.get("front", 1) > 0 else "coupler_back", 0.0)
-        end(-1, "coupler_back" if cfg.get("front", 1) > 0 else "coupler_front", 0.0)
+        zr = tuple(cfg.get("coupler_z", (0.15, 1.15)))   # сцепка/буфер — ниже гармошки между вагонами
+        end(1, "coupler_front" if cfg.get("front", 1) > 0 else "coupler_back", 0.0, zr)
+        end(-1, "coupler_back" if cfg.get("front", 1) > 0 else "coupler_front", 0.0, zr)
     for n, at in cfg.get("points", {}).items():         # точки, заданные вручную
         pts.append((n, at))
     out = []

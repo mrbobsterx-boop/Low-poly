@@ -2303,7 +2303,11 @@
    }
   ],
   "wheels": {},
-  "couplers": true
+  "couplers": true,
+  "coupler_z": [
+   0.2,
+   0.9
+  ]
  },
  "train_coach_b": {
   "pattern": "plain",
@@ -2442,7 +2446,11 @@
    }
   ],
   "wheels": {},
-  "couplers": true
+  "couplers": true,
+  "coupler_z": [
+   0.2,
+   0.9
+  ]
  },
  "train_coach_d": {
   "pattern": "plain",
@@ -2553,7 +2561,11 @@
    }
   ],
   "wheels": {},
-  "couplers": true
+  "couplers": true,
+  "coupler_z": [
+   0.2,
+   0.9
+  ]
  },
  "train_coach_e": {
   "pattern": "wood",
@@ -2666,7 +2678,11 @@
    ],
    "r": 0.35
   },
-  "couplers": true
+  "couplers": true,
+  "coupler_z": [
+   0.2,
+   0.9
+  ]
  },
  "train_freight_b": {
   "pattern": "wood",
@@ -7125,7 +7141,11 @@
   "cavity": [],
   "parts": [],
   "wheels": {},
-  "couplers": true
+  "couplers": true,
+  "coupler_z": [
+   0.2,
+   0.9
+  ]
  },
  "train_loco_diesel": {
   "pattern": "metal",
