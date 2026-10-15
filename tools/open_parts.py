@@ -4,7 +4,8 @@
 
 Берёт export/<имя>_idle.glb и настройки из tripo/open_parts.json → export/parts/<имя>.glb:
 - body — корпус; там, где была дверца, — проём, за ним пустота внутри (тёмные стенки, пол, потолок);
-- door_l / door_r / lid / door_front … — отдельные куски; торцы и обратная сторона — цвета дерева/металла модели;
+- door_l / door_r / lid / door_front … — отдельные куски; торцы, изнанка и стенки внутри — нарисованные доски
+  цвета модели (своя маленькая картинка 256×256, повторяется);
 - точка каждого куска (origin) — на петле: в игре дверцу достаточно повернуть вокруг своей точки
   (или сдвинуть — у раздвижной двери вагона). Куда и на сколько — в tripo/open_parts.json и docs/FOR_GAME.md.
 Резка — логическими операциями Blender (Boolean, Exact) по коробкам из настроек.
@@ -43,14 +44,67 @@ def avg_color(obj):
     return np.array([0.3, 0.22, 0.15])
 
 
-def flat_mat(name, rgb):
+def wood_image(name, rgb, seed, px=256):
+    """Нарисованные доски цвета модели: 4 доски на картинку, швы, волокна, пара сучков (повторяется плиткой)."""
+    rng = np.random.default_rng(seed)
+    base = np.clip(np.asarray(rgb, float), 0, 1) ** (1 / 2.2)           # линейный → sRGB
+    y, x = np.mgrid[0:px, 0:px] / px
+    rows = 4
+    k = np.floor(y * rows).astype(int)
+    shade = 1 + rng.uniform(-0.09, 0.09, rows)[k]                         # каждая доска чуть своего тона
+    grain = np.zeros((px, px))
+    for f, a in ((7, 0.05), (19, 0.035), (47, 0.02)):                    # волокна вдоль доски
+        ph = rng.uniform(0, 2 * np.pi, 3)
+        grain += a * np.sin(2 * np.pi * (f * y + 0.6 * np.sin(2 * np.pi * (x + ph[0])) + ph[1]))
+    v = shade + grain
+    fy = (y * rows) % 1
+    v *= 1 - 0.45 * np.exp(-((np.minimum(fy, 1 - fy) * px / rows) / 1.6) ** 2)   # швы между досками
+    for r in range(0, rows, 2):                                           # торцевой стык через доску
+        jx = rng.uniform(0.1, 0.9)
+        m = (k == r) & (np.abs(x - jx) * px < 1.5)
+        v[m] *= 0.75
+    for _ in range(2):                                                    # сучки
+        cx, cy = rng.uniform(0.1, 0.9, 2)
+        d = ((x - cx) * 2.5) ** 2 + ((y - cy) * 7) ** 2
+        v *= 1 - 0.35 * np.exp(-d * 400)
+    img = np.clip(base[None, None, :] * v[..., None], 0, 1)
+    im = bpy.data.images.new(name, px, px)
+    im.pixels.foreach_set(np.concatenate([img[::-1], np.ones((px, px, 1))], 2).astype(np.float32).ravel())
+    im.pack()
+    return im
+
+
+def wood_mat(name, rgb, seed):
     m = bpy.data.materials.new(name)
     m.use_nodes = True
-    b = m.node_tree.nodes["Principled BSDF"]
-    b.inputs["Base Color"].default_value = (*[float(c) for c in rgb], 1.0)
+    nt = m.node_tree
+    b = nt.nodes["Principled BSDF"]
+    t = nt.nodes.new("ShaderNodeTexImage")
+    t.image = wood_image(name, rgb, seed)
+    nt.links.new(t.outputs["Color"], b.inputs["Base Color"])
     b.inputs["Roughness"].default_value = 1.0
     b.inputs["Metallic"].default_value = 0.0
     return m
+
+
+TILE = 0.5          # метров на одну картинку досок (доска ≈ 12 см)
+
+
+def project_uv(obj, mats):
+    """Грани из вырезов (торцы, изнанка, стенки внутри) — развёртка «коробкой»: доски лежат вдоль самой длинной
+    стороны грани по горизонтали."""
+    idx = {i for i, s in enumerate(obj.material_slots) if s.material in mats}
+    me = obj.data
+    uv = me.uv_layers.active
+    for f in me.polygons:
+        if f.material_index not in idx:
+            continue
+        n = f.normal
+        ax = max(range(3), key=lambda i: abs(n[i]))
+        u_ax, v_ax = {0: (1, 2), 1: (0, 2), 2: (0, 1)}[ax]
+        for li in f.loop_indices:
+            co = me.vertices[me.loops[li].vertex_index].co
+            uv.data[li].uv = (co[u_ax] / TILE, co[v_ax] / TILE)
 
 
 def box_obj(b, mat):
@@ -90,8 +144,8 @@ def build(name, cfg):
     obj, _ = T.import_joined(os.path.join(ROOT, "export", f"{name}_idle.glb"))
     T.clear_custom_normals(obj)
     c = avg_color(obj)
-    m_cut = flat_mat(f"{name}_cut", c * 0.8)          # торцы и обратная сторона дверцы
-    m_in = flat_mat(f"{name}_inside", c * 0.4)        # пустота внутри
+    m_cut = wood_mat(f"{name}_cut", c * 0.8, 1)       # торцы и обратная сторона дверцы
+    m_in = wood_mat(f"{name}_inside", c * 0.45, 2)    # пустота внутри
     obj.data.materials.append(m_cut)
     obj.data.materials.append(m_in)
     parts = []
@@ -111,6 +165,7 @@ def build(name, cfg):
     obj.name = obj.data.name = "body"
     for o in [obj] + [o for o, _ in parts]:
         T.smooth_by_angle(o)
+        project_uv(o, (m_cut, m_in))
     for o, p in parts:
         set_origin(o, p["pivot"])
     return obj, parts
