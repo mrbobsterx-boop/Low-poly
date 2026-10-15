@@ -74,7 +74,7 @@
  "bear_brown": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.62,
+  "mb": 0.63,
   "animations": {
    "idle": {
     "frames": 76,
@@ -146,7 +146,7 @@
  "bear_mutant": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.89,
+  "mb": 0.9,
   "animations": {
    "idle": {
     "frames": 76,
@@ -549,12 +549,6 @@
     "seconds": 2.5,
     "loop": true
    },
-   "beg": {
-    "frames": 61,
-    "seconds": 2.0,
-    "loop": true,
-    "note": "ручное животное просит еду"
-   },
    "howl": {
     "frames": 91,
     "seconds": 3.0,
@@ -575,7 +569,7 @@
  "dog_husky": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.63,
+  "mb": 0.62,
   "animations": {
    "idle": {
     "frames": 76,
@@ -632,12 +626,6 @@
     "seconds": 2.5,
     "loop": true
    },
-   "beg": {
-    "frames": 61,
-    "seconds": 2.0,
-    "loop": true,
-    "note": "ручное животное просит еду"
-   },
    "howl": {
     "frames": 91,
     "seconds": 3.0,
@@ -658,7 +646,7 @@
  "dog_raider": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.64,
+  "mb": 0.63,
   "animations": {
    "idle": {
     "frames": 76,
@@ -715,12 +703,6 @@
     "seconds": 2.5,
     "loop": true
    },
-   "beg": {
-    "frames": 61,
-    "seconds": 2.0,
-    "loop": true,
-    "note": "ручное животное просит еду"
-   },
    "howl": {
     "frames": 91,
     "seconds": 3.0,
@@ -741,7 +723,7 @@
  "dog_rottweiler": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.64,
+  "mb": 0.63,
   "animations": {
    "idle": {
     "frames": 76,
@@ -797,12 +779,6 @@
     "frames": 76,
     "seconds": 2.5,
     "loop": true
-   },
-   "beg": {
-    "frames": 61,
-    "seconds": 2.0,
-    "loop": true,
-    "note": "ручное животное просит еду"
    },
    "howl": {
     "frames": 91,
@@ -881,12 +857,6 @@
     "seconds": 2.5,
     "loop": true
    },
-   "beg": {
-    "frames": 61,
-    "seconds": 2.0,
-    "loop": true,
-    "note": "ручное животное просит еду"
-   },
    "howl": {
     "frames": 91,
     "seconds": 3.0,
@@ -964,12 +934,6 @@
     "seconds": 2.5,
     "loop": true
    },
-   "beg": {
-    "frames": 61,
-    "seconds": 2.0,
-    "loop": true,
-    "note": "ручное животное просит еду"
-   },
    "howl": {
     "frames": 91,
     "seconds": 3.0,
@@ -990,7 +954,7 @@
  "dog_thin": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.64,
+  "mb": 0.63,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1047,12 +1011,6 @@
     "seconds": 2.5,
     "loop": true
    },
-   "beg": {
-    "frames": 61,
-    "seconds": 2.0,
-    "loop": true,
-    "note": "ручное животное просит еду"
-   },
    "howl": {
     "frames": 91,
     "seconds": 3.0,
@@ -1073,7 +1031,7 @@
  "dog_zombie": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.72,
+  "mb": 0.71,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1129,12 +1087,6 @@
     "frames": 76,
     "seconds": 2.5,
     "loop": true
-   },
-   "beg": {
-    "frames": 61,
-    "seconds": 2.0,
-    "loop": true,
-    "note": "ручное животное просит еду"
    },
    "howl": {
     "frames": 91,
@@ -1229,7 +1181,7 @@
  "moose_bull": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.63,
+  "mb": 0.64,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1363,7 +1315,7 @@
  "moose_mutant": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.68,
+  "mb": 0.69,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1576,7 +1528,7 @@
  "rabbit_grey": {
   "kind": "hop",
   "bones": 18,
-  "mb": 0.41,
+  "mb": 0.42,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1649,7 +1601,7 @@
  "rabbit_hare": {
   "kind": "hop",
   "bones": 18,
-  "mb": 0.4,
+  "mb": 0.41,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1722,7 +1674,7 @@
  "rabbit_white": {
   "kind": "hop",
   "bones": 18,
-  "mb": 0.41,
+  "mb": 0.42,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1868,7 +1820,7 @@
  "rat_grey": {
   "kind": "quad",
   "bones": 18,
-  "mb": 0.37,
+  "mb": 0.38,
   "animations": {
    "idle": {
     "frames": 76,
@@ -1935,7 +1887,7 @@
  "rat_pest_krysa": {
   "kind": "quad",
   "bones": 18,
-  "mb": 1.55,
+  "mb": 1.56,
   "animations": {
    "idle": {
     "frames": 76,
@@ -2002,7 +1954,7 @@
  "seagull": {
   "kind": "bird",
   "bones": 9,
-  "mb": 0.34,
+  "mb": 0.33,
   "animations": {
    "idle": {
     "frames": 76,
@@ -2204,12 +2156,6 @@
     "frames": 76,
     "seconds": 2.5,
     "loop": true
-   },
-   "beg": {
-    "frames": 61,
-    "seconds": 2.0,
-    "loop": true,
-    "note": "ручное животное просит еду"
    },
    "howl": {
     "frames": 91,
