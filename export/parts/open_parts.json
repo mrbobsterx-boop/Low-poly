@@ -1404,5 +1404,796 @@
    ],
    "rotate_deg": 20
   }
+ ],
+ "wardrobe_derevyannyy_dvustvorchatyy": [
+  {
+   "node": "door_l",
+   "pivot": [
+    -0.486,
+    0.0,
+    0.349
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -100
+  },
+  {
+   "node": "door_r",
+   "pivot": [
+    0.494,
+    0.0,
+    0.349
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "crate_wood_malyy": [
+  {
+   "node": "lid",
+   "pivot": [
+    0.0,
+    0.394,
+    -0.265
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -105
+  }
+ ],
+ "train_freight": [
+  {
+   "node": "door_front",
+   "pivot": [
+    -0.74,
+    1.05,
+    1.1
+   ],
+   "move": [
+    -1.4,
+    0.0,
+    -0.0
+   ]
+  },
+  {
+   "node": "door_back",
+   "pivot": [
+    -0.74,
+    1.05,
+    -1.1
+   ],
+   "move": [
+    -1.4,
+    0.0,
+    -0.0
+   ]
+  }
+ ],
+ "locker_metal_sportivnyy": [
+  {
+   "node": "door",
+   "pivot": [
+    0.24,
+    0.0,
+    0.253
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "prison_armory_locker": [
+  {
+   "node": "door_l",
+   "pivot": [
+    -0.425,
+    0.0,
+    0.255
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -100
+  },
+  {
+   "node": "door_r",
+   "pivot": [
+    0.425,
+    0.0,
+    0.255
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "prison_armory_locker_b": [
+  {
+   "node": "door_l",
+   "pivot": [
+    -0.395,
+    0.0,
+    0.232
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -100
+  },
+  {
+   "node": "door_r",
+   "pivot": [
+    0.395,
+    0.0,
+    0.232
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "prison_locker_row": [
+  {
+   "node": "door",
+   "pivot": [
+    0.22,
+    0.0,
+    0.199
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "medicine_cabinet_vannyy": [
+  {
+   "node": "door",
+   "pivot": [
+    0.215,
+    0.0,
+    0.248
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "kitchen_counter_s_rakovinoy": [
+  {
+   "node": "door_l",
+   "pivot": [
+    -0.475,
+    0.0,
+    0.302
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -100
+  },
+  {
+   "node": "door_r",
+   "pivot": [
+    0.475,
+    0.0,
+    0.302
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "fridge_elektricheskiy": [
+  {
+   "node": "door",
+   "pivot": [
+    0.5,
+    0.0,
+    0.19
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "stove_cook_gazovaya": [
+  {
+   "node": "oven_door",
+   "pivot": [
+    0.0,
+    0.215,
+    0.28
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": 85
+  }
+ ],
+ "stove_heat_stalnaya_bochka": [
+  {
+   "node": "door",
+   "pivot": [
+    0.115,
+    0.0,
+    0.27
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "safe_metal_nastennyy": [
+  {
+   "node": "door",
+   "pivot": [
+    0.195,
+    0.0,
+    0.24
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "decor_electric_cabinet": [
+  {
+   "node": "door",
+   "pivot": [
+    0.285,
+    0.0,
+    0.237
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "fuse_box_bytovoy": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.077,
+    0.0,
+    0.133
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -100
+  }
+ ],
+ "decor_junction_box": [
+  {
+   "node": "lid",
+   "pivot": [
+    0.145,
+    0.242,
+    -0.155
+   ],
+   "rotate_axis": [
+    0.991,
+    0.0,
+    -0.134
+   ],
+   "rotate_deg": -105
+  }
+ ],
+ "mine_crate": [
+  {
+   "node": "lid",
+   "pivot": [
+    0.0,
+    0.53,
+    -0.306
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -105
+  }
+ ],
+ "decor_cart_crate": [
+  {
+   "node": "lid",
+   "pivot": [
+    0.0,
+    0.665,
+    -0.234
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -105
+  }
+ ],
+ "toolbox_plastikovyy": [
+  {
+   "node": "lid",
+   "pivot": [
+    0.0,
+    0.135,
+    -0.08
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -105
+  }
+ ],
+ "first_aid_kit_domashnyaya": [
+  {
+   "node": "lid",
+   "pivot": [
+    0.0,
+    0.098,
+    -0.05
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -105
+  }
+ ],
+ "ammo_boxes": [
+  {
+   "node": "lid",
+   "pivot": [
+    0.0,
+    0.255,
+    -0.06
+   ],
+   "rotate_axis": [
+    0.994,
+    0.0,
+    -0.113
+   ],
+   "rotate_deg": -105
+  }
+ ],
+ "medical_kit_polevoy": [
+  {
+   "node": "flap",
+   "pivot": [
+    0.0,
+    0.2,
+    -0.12
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -110
+  }
+ ],
+ "dumpster_zelenyy": [
+  {
+   "node": "lid_front",
+   "pivot": [
+    0.0,
+    1.07,
+    -0.05
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -125
+  }
+ ],
+ "isle_trash_bins": [
+  {
+   "node": "lid_l",
+   "pivot": [
+    -0.45,
+    1.0,
+    -0.27
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -20,
+   "move": [
+    0.0,
+    0.3,
+    -0.1
+   ]
+  },
+  {
+   "node": "lid_r",
+   "pivot": [
+    0.47,
+    1.0,
+    -0.27
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -20,
+   "move": [
+    0.0,
+    0.3,
+    -0.1
+   ]
+  }
+ ],
+ "barrel_water_plastikovaya_200_l": [
+  {
+   "node": "cap",
+   "pivot": [
+    0.0,
+    0.835,
+    -0.05
+   ],
+   "move": [
+    0.0,
+    0.15,
+    -0.0
+   ]
+  }
+ ],
+ "tank_water_plastikovyy_1000_l": [
+  {
+   "node": "cap",
+   "pivot": [
+    -0.155,
+    1.56,
+    -0.4
+   ],
+   "move": [
+    0.0,
+    0.2,
+    -0.0
+   ]
+  }
+ ],
+ "toilet_fayansovyy_so_smyvom": [
+  {
+   "node": "lid",
+   "pivot": [
+    0.0,
+    0.41,
+    -0.07
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -85
+  },
+  {
+   "node": "tank_lid",
+   "pivot": [
+    0.0,
+    0.7,
+    -0.23
+   ],
+   "move": [
+    0.0,
+    0.12,
+    -0.0
+   ]
+  }
+ ],
+ "hatch_bunker_lyuk_s_kolesom": [
+  {
+   "node": "lid",
+   "pivot": [
+    0.0,
+    0.21,
+    0.43
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": 110
+  }
+ ],
+ "decor_vault_door_round": [
+  {
+   "node": "door",
+   "pivot": [
+    0.6,
+    0.0,
+    0.2
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 100
+  }
+ ],
+ "door_1": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.4566,
+    0.0,
+    0.0425
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_2": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.4663,
+    0.0,
+    0.0418
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_3": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.4566,
+    0.0,
+    0.0475
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_4": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.4561,
+    0.0,
+    0.0418
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_5": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.4574,
+    0.0,
+    0.0376
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_6": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.4263,
+    0.0,
+    0.0251
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_7": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.5431,
+    0.0,
+    -0.0612
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_8": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.5205,
+    0.0,
+    -0.0063
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_9": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.5185,
+    0.0,
+    -0.0169
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_10": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.5145,
+    0.0,
+    -0.0053
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_11": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.5426,
+    0.0,
+    0.0108
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_metal_stalnaya": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.5765,
+    0.0,
+    -0.052
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "door_wood_vnutrennyaya": [
+  {
+   "node": "door",
+   "pivot": [
+    -0.523,
+    0.0,
+    -0.1538
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "decor_door_industrial": [
+  {
+   "node": "door_l",
+   "pivot": [
+    -0.85,
+    0.0,
+    -0.096
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -100
+  }
  ]
 }
