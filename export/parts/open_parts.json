@@ -1,0 +1,379 @@
+{
+ "_comment": "Открывающиеся модели export/parts/<имя>.glb: узел body — корпус, остальные узлы — подвижные части. Точка узла (origin) уже стоит на петле (pivot). Открыть: повернуть узел вокруг rotate_axis на rotate_deg градусов (локально, от закрытого положения) и/или сдвинуть на move (метры). Координаты Godot.",
+ "train_freight_b": [
+  {
+   "node": "door_front",
+   "pivot": [
+    -0.66,
+    1.02,
+    0.95
+   ],
+   "move": [
+    -1.4,
+    0.0,
+    -0.0
+   ]
+  },
+  {
+   "node": "door_back",
+   "pivot": [
+    -0.66,
+    1.02,
+    -0.95
+   ],
+   "move": [
+    -1.4,
+    0.0,
+    -0.0
+   ]
+  }
+ ],
+ "train_coach": [
+  {
+   "node": "door_front_l",
+   "pivot": [
+    -3.13,
+    0.0,
+    1.139
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  },
+  {
+   "node": "door_back_l",
+   "pivot": [
+    -3.13,
+    0.0,
+    -1.144
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 90
+  },
+  {
+   "node": "door_front_r",
+   "pivot": [
+    3.16,
+    0.0,
+    1.139
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 90
+  },
+  {
+   "node": "door_back_r",
+   "pivot": [
+    3.16,
+    0.0,
+    -1.144
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "train_coach_b": [
+  {
+   "node": "door_front_l",
+   "pivot": [
+    -3.62,
+    0.0,
+    0.98
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  },
+  {
+   "node": "door_back_l",
+   "pivot": [
+    -3.62,
+    0.0,
+    -0.983
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 90
+  },
+  {
+   "node": "door_front_r",
+   "pivot": [
+    3.6,
+    0.0,
+    0.98
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 90
+  },
+  {
+   "node": "door_back_r",
+   "pivot": [
+    3.6,
+    0.0,
+    -0.983
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  }
+ ],
+ "train_coach_d": [
+  {
+   "node": "door_end_r",
+   "pivot": [
+    3.692,
+    0.0,
+    0.5
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  },
+  {
+   "node": "door_end_l",
+   "pivot": [
+    -3.692,
+    0.0,
+    0.5
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 90
+  }
+ ],
+ "train_coach_e": [
+  {
+   "node": "door_end_r",
+   "pivot": [
+    3.793,
+    0.0,
+    0.45
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -90
+  },
+  {
+   "node": "door_end_l",
+   "pivot": [
+    -3.793,
+    0.0,
+    0.45
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 90
+  }
+ ],
+ "car_sedan": [
+  {
+   "node": "door_front_1",
+   "pivot": [
+    -0.14,
+    0.0,
+    0.833
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 70
+  },
+  {
+   "node": "door_back_1",
+   "pivot": [
+    -0.14,
+    0.0,
+    -0.833
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -70
+  },
+  {
+   "node": "door_front_2",
+   "pivot": [
+    0.85,
+    0.0,
+    0.833
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 70
+  },
+  {
+   "node": "door_back_2",
+   "pivot": [
+    0.85,
+    0.0,
+    -0.833
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -70
+  },
+  {
+   "node": "hood",
+   "pivot": [
+    0.95,
+    1.0,
+    -0.0
+   ],
+   "rotate_axis": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "rotate_deg": -60
+  },
+  {
+   "node": "trunk",
+   "pivot": [
+    -1.38,
+    1.0,
+    -0.0
+   ],
+   "rotate_axis": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "rotate_deg": 60
+  }
+ ],
+ "car_sedan_b": [
+  {
+   "node": "door_front_1",
+   "pivot": [
+    -0.79,
+    0.0,
+    0.918
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -70
+  },
+  {
+   "node": "door_back_1",
+   "pivot": [
+    -0.79,
+    0.0,
+    -0.918
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 70
+  },
+  {
+   "node": "door_front_2",
+   "pivot": [
+    0.155,
+    0.0,
+    0.918
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": -70
+  },
+  {
+   "node": "door_back_2",
+   "pivot": [
+    0.155,
+    0.0,
+    -0.918
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 70
+  },
+  {
+   "node": "hood",
+   "pivot": [
+    -0.88,
+    1.0,
+    -0.0
+   ],
+   "rotate_axis": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "rotate_deg": 60
+  },
+  {
+   "node": "trunk",
+   "pivot": [
+    1.37,
+    1.02,
+    -0.0
+   ],
+   "rotate_axis": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "rotate_deg": -60
+  }
+ ]
+}
