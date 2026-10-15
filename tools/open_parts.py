@@ -28,7 +28,9 @@ from mathutils import Matrix, Vector
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
+import open_decor  # noqa: E402
 import tripo_process as T  # noqa: E402
+import wheels as W  # noqa: E402
 
 CFG = os.path.join(ROOT, "tripo", "open_parts.json")
 OUT = os.path.join(ROOT, "export", "parts")
@@ -198,6 +200,59 @@ def set_origin(obj, p):
     obj.location = p
 
 
+def find_wheels(obj, wcfg):
+    """Колёса: найти автоматически (tools/wheels.py), потом поправить настройкой:
+    only_x — оставить оси только рядом с этими X; r — свой радиус (число или {"x": r}); z — центр по высоте;
+    list — задать колёса вручную [{"c": [x, y, z], "r": r, "y": [y0, y1]}]."""
+    if "list" in wcfg:
+        return wcfg["list"]
+    co = np.array([v.co[:] for v in obj.data.vertices])
+    ws = W.detect(co, center_band=wcfg.get("center_band", 0.12), rmax=wcfg.get("rmax", 0.75),
+                  contact=wcfg.get("contact", 0.03))
+    if "only_x" in wcfg:
+        ws = [w for w in ws if min(abs(w["c"][0] - x) for x in wcfg["only_x"]) < wcfg.get("tol", 0.25)]
+        for w in ws:                                    # X оси — как задано
+            w["c"][0] = min(wcfg["only_x"], key=lambda x: abs(w["c"][0] - x))
+    if "only_y" in wcfg:
+        ws = [w for w in ws if (w["c"][1] > 0.12) - (w["c"][1] < -0.12) in wcfg["only_y"]]
+    for w in ws:
+        r = wcfg.get("r")
+        if isinstance(r, dict):
+            r = min(r.items(), key=lambda kv: abs(float(kv[0]) - w["c"][0]))[1]
+        if r:
+            w["r"] = r
+            w["c"][2] = round(co[:, 2].min() + r, 3)
+        if "z" in wcfg:
+            w["c"][2] = wcfg["z"]
+        if "y" in wcfg:                                 # ширина колеса вручную: |y| от и до
+            a, b = wcfg["y"]
+            w["y"] = [-b, -a] if w["c"][1] < 0 else ([a, b] if w["c"][1] > 0 else w["y"])
+            w["c"][1] = (w["y"][0] + w["y"][1]) / 2
+    return ws
+
+
+def cut_wheels(obj, name, cfg):
+    """Каждое колесо — отдельный узел wheel_N, точка — на оси; крутится вокруг оси Y Blender."""
+    rub = wood_mat(f"{name}_rubber", np.array([0.05, 0.05, 0.055]), 3, "plain")
+    obj.data.materials.append(rub)
+    ws = sorted(find_wheels(obj, cfg["wheels"]), key=lambda w: (w["c"][0], w["c"][1]))
+    out = []
+    for i, w in enumerate(ws):
+        sh = {"cyl": [w["c"][0], 0, w["c"][2]], "r": w["r"] * cfg["wheels"].get("k", 1.04), "axis": "y",
+              "h": [w["y"][0] - 0.015, w["y"][1] + 0.015]}
+        o = obj.copy()
+        o.data = obj.data.copy()
+        bpy.context.scene.collection.objects.link(o)
+        cut = box_obj(sh, rub)
+        boolean(o, cut, "INTERSECT")
+        boolean(obj, cut, "DIFFERENCE")
+        bpy.data.objects.remove(cut)
+        o.name = o.data.name = f"wheel_{i + 1}"
+        out.append((o, {"name": o.name, "pivot": [w["c"][0], (w["y"][0] + w["y"][1]) / 2, w["c"][2]],
+                        "wheel": True, "radius": w["r"], "open": {"spin": True}}))
+    return out
+
+
 def build(name, cfg):
     obj, _ = T.import_joined(os.path.join(ROOT, "export", f"{name}_idle.glb"))
     T.clear_custom_normals(obj)
@@ -208,7 +263,7 @@ def build(name, cfg):
     m_in = wood_mat(f"{name}_inside", c_in, 2, pat)                             # пустота внутри
     obj.data.materials.append(m_cut)
     obj.data.materials.append(m_in)
-    parts = []
+    parts = cut_wheels(obj, name, cfg) if "wheels" in cfg else []
     for p in cfg["parts"]:
         pieces = []
         for b in part_boxes(p):                         # кусок из нескольких коробок (не пересекаются) — склеить
@@ -251,6 +306,13 @@ def build(name, cfg):
         obj.select_set(True)
         bpy.context.view_layer.objects.active = obj
         bpy.ops.object.join()
+    for i, d in enumerate(cfg.get("decor", [])):      # начинка: одежда, еда, груз… (tools/open_decor.py)
+        a = open_decor.build(name, d, seed=i + 1)
+        bpy.ops.object.select_all(action="DESELECT")
+        a.select_set(True)
+        obj.select_set(True)
+        bpy.context.view_layer.objects.active = obj
+        bpy.ops.object.join()
     obj.name = obj.data.name = "body"
     for o in [obj] + [o for o, _ in parts]:
         T.smooth_by_angle(o)
@@ -282,7 +344,13 @@ def pose(parts, t):
     """t = 0 — закрыто, 1 — открыто."""
     for o, p in parts:
         op = p["open"]
-        o.rotation_mode = "XYZ"                     # после импорта glTF — кватернионы
+        o.rotation_mode = "XYZ"
+        if op.get("spin"):                              # колесо: в «открытом» кадре — отодвинуто наружу (видно, что отдельное)
+            y = p["pivot"][1]
+            out = (1 if y > 0.12 else -1) * (0.35 if abs(y) > 0.12 else 0.5)
+            o.location = Vector(p["pivot"]) + Vector((0, out * t, 0))
+            o.rotation_euler = (0, math.radians(30 * t), 0)
+            continue                     # после импорта glTF — кватернионы
         o.rotation_euler = (0, 0, 0)
         o.location = Vector(p["pivot"])
         if "rot" in op:
@@ -322,6 +390,10 @@ def game_info(parts):
     out = []
     for _, p in parts:
         op, d = p["open"], {"node": p["name"], "pivot": to_godot(p["pivot"])}
+        if p.get("wheel"):
+            d.update({"wheel": True, "radius": p["radius"], "spin_axis": to_godot((0, 1, 0))})
+            out.append(d)
+            continue
         if "rot" in op:
             ax, deg = op["rot"]
             axv = {"x": (1, 0, 0), "y": (0, 1, 0), "z": (0, 0, 1)}[ax] if isinstance(ax, str) else ax
@@ -333,7 +405,10 @@ def game_info(parts):
 
 
 def save_game_info(name, parts):
+    import fcntl
     path = os.path.join(OUT, "open_parts.json")
+    lock = open(path + ".lock", "w")
+    fcntl.flock(lock, fcntl.LOCK_EX)                    # несколько запусков параллельно — по очереди
     info = json.load(open(path)) if os.path.exists(path) else {}
     info["_comment"] = ("Открывающиеся модели export/parts/<имя>.glb: узел body — корпус, остальные узлы — подвижные части. "
                         "Точка узла (origin) уже стоит на петле (pivot). Открыть: повернуть узел вокруг rotate_axis на rotate_deg "
@@ -341,6 +416,7 @@ def save_game_info(name, parts):
     info[name] = game_info(parts)
     json.dump(info, open(path + ".tmp", "w"), ensure_ascii=False, indent=1)
     os.replace(path + ".tmp", path)
+    fcntl.flock(lock, fcntl.LOCK_UN)
 
 
 def main(argv):

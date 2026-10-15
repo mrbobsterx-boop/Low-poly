@@ -11,3 +11,4 @@ tripo/**/*.glb
 # временные кадры превью животных (tools/animal_rig.py)
 renders/_tmp_animals/
 renders/_review/_decals/
+export/parts/*.lock
