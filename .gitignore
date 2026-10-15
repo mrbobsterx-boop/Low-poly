@@ -12,3 +12,4 @@ tripo/**/*.glb
 renders/_tmp_animals/
 renders/_review/_decals/
 export/parts/*.lock
+renders/_tmp_check/
