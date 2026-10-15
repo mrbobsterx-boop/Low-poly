@@ -174,6 +174,15 @@
     -1.0
    ],
    "rotate_deg": 60
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    -2.459,
+    0.447,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "train_freight": [
@@ -322,6 +331,24 @@
     0.0,
     -0.0
    ]
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    3.501,
+    0.816,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -3.5,
+    0.809,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "crate_wood_malyy": [
@@ -456,6 +483,15 @@
     -1.0
    ],
    "rotate_deg": -90
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    -2.656,
+    0.45,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "decor_cart_crate": [
@@ -666,6 +702,15 @@
     -1.0
    ],
    "rotate_deg": -90
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    -2.657,
+    0.488,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "train_coach": [
@@ -844,6 +889,24 @@
     -0.0
    ],
    "rotate_deg": -90
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    4.0,
+    1.3,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -4.0,
+    1.3,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "prison_armory_locker": [
@@ -1018,6 +1081,15 @@
     -0.0
    ],
    "rotate_deg": -90
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    -2.557,
+    0.703,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "prison_armory_locker_b": [
@@ -1226,6 +1298,24 @@
     -0.0
    ],
    "rotate_deg": -90
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    3.999,
+    1.3,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -4.001,
+    1.3,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "motorhome": [
@@ -1330,6 +1420,15 @@
     -0.0
    ],
    "rotate_deg": 90
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    -3.558,
+    0.542,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "prison_locker_row": [
@@ -1496,6 +1595,24 @@
     -0.0
    ],
    "rotate_deg": 90
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    3.999,
+    0.575,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -4.0,
+    0.535,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "bus_school": [
@@ -1586,6 +1703,15 @@
     -0.0
    ],
    "rotate_deg": 90
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    5.56,
+    0.962,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "medicine_cabinet_vannyy": [
@@ -1724,6 +1850,24 @@
     0.0,
     -1.0
    ]
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    4.0,
+    1.3,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -4.0,
+    1.3,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "train_coach_e": [
@@ -1874,6 +2018,24 @@
     -0.0
    ],
    "rotate_deg": 90
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    3.999,
+    0.681,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -4.0,
+    0.681,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "kitchen_counter_s_rakovinoy": [
@@ -2026,6 +2188,24 @@
     0.0,
     -1.0
    ]
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    3.501,
+    0.628,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -3.5,
+    0.635,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "fridge_elektricheskiy": [
@@ -2190,6 +2370,24 @@
     0.0,
     -0.0
    ]
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    3.5,
+    0.791,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -3.501,
+    0.757,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "mine_cart_empty": [
@@ -2252,6 +2450,24 @@
     0.0,
     -1.0
    ]
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    1.242,
+    0.3,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -1.242,
+    0.3,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "stove_cook_gazovaya": [
@@ -2414,6 +2630,15 @@
     -1.0
    ],
    "rotate_deg": 60
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    -2.308,
+    0.582,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "mine_cart_ore": [
@@ -2476,6 +2701,24 @@
     0.0,
     -1.0
    ]
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    1.061,
+    0.338,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -1.061,
+    0.322,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "stove_heat_stalnaya_bochka": [
@@ -2638,6 +2881,15 @@
     -1.0
    ],
    "rotate_deg": -60
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    2.308,
+    0.563,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "mine_cart_wood": [
@@ -2700,6 +2952,24 @@
     0.0,
     -1.0
    ]
+  },
+  {
+   "node": "coupler_front",
+   "pivot": [
+    1.185,
+    0.391,
+    -0.0
+   ],
+   "point": "coupler_front"
+  },
+  {
+   "node": "coupler_back",
+   "pivot": [
+    -1.185,
+    0.407,
+    -0.0
+   ],
+   "point": "coupler_back"
   }
  ],
  "safe_metal_nastennyy": [
@@ -2834,6 +3104,15 @@
     -1.0
    ],
    "rotate_deg": 80
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    -2.058,
+    0.559,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "motorcycle": [
@@ -3028,6 +3307,15 @@
     -1.0
    ],
    "rotate_deg": -80
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    2.46,
+    0.531,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "motorcycle_b": [
@@ -3238,6 +3526,15 @@
     -1.0
    ],
    "rotate_deg": -80
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    2.458,
+    0.62,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "bicycle": [
@@ -3448,6 +3745,15 @@
     -1.0
    ],
    "rotate_deg": 60
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    -2.461,
+    0.619,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "toolbox_plastikovyy": [
@@ -3598,6 +3904,15 @@
     -0.0
    ],
    "rotate_deg": -70
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    -2.408,
+    0.477,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "first_aid_kit_domashnyaya": [
@@ -3776,6 +4091,15 @@
     -1.0
    ],
    "rotate_deg": 60
+  },
+  {
+   "node": "hitch",
+   "pivot": [
+    -2.31,
+    0.467,
+    -0.0
+   ],
+   "point": "hitch"
   }
  ],
  "door_2": [
