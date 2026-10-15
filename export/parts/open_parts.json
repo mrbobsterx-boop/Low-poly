@@ -1299,5 +1299,110 @@
    ],
    "rotate_deg": 90
   }
+ ],
+ "prison_cell_bars": [
+  {
+   "node": "door",
+   "pivot": [
+    1.34,
+    0.0,
+    -0.0
+   ],
+   "rotate_axis": [
+    0.0,
+    1.0,
+    -0.0
+   ],
+   "rotate_deg": 90
+  }
+ ],
+ "house_garage": [
+  {
+   "node": "garage_door",
+   "pivot": [
+    2.82,
+    1.99,
+    2.19
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": -85
+  }
+ ],
+ "house_garage_b": [
+  {
+   "node": "door_l",
+   "pivot": [
+    -4.8,
+    0.04,
+    2.554
+   ],
+   "move": [
+    0.0,
+    2.5,
+    -0.35
+   ]
+  },
+  {
+   "node": "door_m",
+   "pivot": [
+    -1.28,
+    0.04,
+    2.554
+   ],
+   "move": [
+    0.0,
+    2.5,
+    -0.35
+   ]
+  },
+  {
+   "node": "door_r",
+   "pivot": [
+    2.26,
+    0.04,
+    2.554
+   ],
+   "move": [
+    0.0,
+    2.5,
+    -0.35
+   ]
+  }
+ ],
+ "well_hand_ruchnoy_kolodets_s_vorotom": [
+  {
+   "node": "windlass",
+   "pivot": [
+    0.0,
+    0.715,
+    -0.0
+   ],
+   "rotate_axis": [
+    1.0,
+    0.0,
+    -0.0
+   ],
+   "rotate_deg": 180
+  }
+ ],
+ "water_pump_ruchnoy_rychazhnyy": [
+  {
+   "node": "lever",
+   "pivot": [
+    -0.018,
+    0.536,
+    -0.0
+   ],
+   "rotate_axis": [
+    0.0,
+    0.0,
+    -1.0
+   ],
+   "rotate_deg": 20
+  }
  ]
 }
