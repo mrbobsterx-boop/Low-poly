@@ -311,6 +311,38 @@ def build_armature(obj, bones, allow):
 
 # ───────────────────────── анимации ─────────────────────────
 
+_DOM = {}
+
+
+def pose_mesh(obj, arm, p):
+    """Поставить скелет в позу p (как в Anim.make) и вернуть (точки сетки, главная кость каждой точки)."""
+    for pb in arm.pose.bones:
+        pb.rotation_mode = "QUATERNION"
+        pb.rotation_quaternion = (1, 0, 0, 0)
+        pb.location = (0, 0, 0)
+    for b, val in p.items():
+        q, loc = val if isinstance(val, tuple) else (val, None)
+        if q is not None:
+            arm.pose.bones[b].rotation_quaternion = q
+        if loc is not None:
+            arm.pose.bones[b].location = loc
+    bpy.context.view_layer.update()
+    dg = bpy.context.evaluated_depsgraph_get()
+    ev = obj.evaluated_get(dg)
+    me = ev.to_mesh()
+    a = np.empty(len(me.vertices) * 3)
+    me.vertices.foreach_get("co", a)
+    ev.to_mesh_clear()
+    if obj.name not in _DOM:
+        names = [g.name for g in obj.vertex_groups]
+        W = np.zeros((len(obj.data.vertices), len(names)))
+        for v in obj.data.vertices:
+            for ge in v.groups:
+                W[v.index, ge.group] = ge.weight
+        _DOM[obj.name] = np.array(names)[W.argmax(1)]
+    return a.reshape(-1, 3), _DOM[obj.name]
+
+
 def rx(a):
     return Quaternion((1, 0, 0), a)
 
@@ -391,7 +423,7 @@ def ease(x):
     return x * x * (3 - 2 * x)
 
 
-def quad_anims(arm, lay, kind, name=""):
+def quad_anims(arm, lay, kind, name="", obj=None):
     A = Anim(arm)
     legs = [k for k in ("FL", "FR", "BL", "BR")]
     Lleg = float(lay["jz"] - lay["z0"])
@@ -592,27 +624,26 @@ def quad_anims(arm, lay, kind, name=""):
     LB = L_of("LegBL1") + L_of("LegBL2")
     L3F, L3B = L_of("LegFL3"), L_of("LegBL3")
 
-    def hind_folded(p, D, T):
-        """Задние лапы подогнуты: скакательный сустав и стопа лежат на полу, стопа вперёд, колено вперёд-вверх."""
+    def hind_folded(p, D, T, up_deg=40.0):
+        """Задние лапы подогнуты, как у сидящей собаки: бедро от таза вперёд-вверх (колено выше таза), голень —
+        вниз-назад до пола, скакательный сустав и стопа лежат на полу, стопа вперёд."""
         for s_ in ("L", "R"):
             k = "B" + s_
-            H = xf(Bn[f"Leg{k}1"].head_local, D, T)
-            ank = Vector((H.x, H.y - 0.15 * LB, z0 + 0.05 * L3B + 0.01))
-            leg_to(p, k, D, D, T, ank, ank + Vector((0, -L3B, -0.04 * L3B)), (0, -1, 0.6))
+            b1, b2, b3 = f"Leg{k}1", f"Leg{k}2", f"Leg{k}3"
+            H = xf(Bn[b1].head_local, D, T)
+            u = math.radians(up_deg)
+            K = H + Vector((0, -math.cos(u), math.sin(u))) * L_of(b1)
+            dz = max(K.z - (z0 + 0.04 * LB), 0.0)
+            L2 = L_of(b2)
+            dy = math.sqrt(max(L2 * L2 - dz * dz, 0.0))
+            Ank = Vector((K.x, K.y + dy, K.z - min(dz, L2)))
+            toe = Ank + Vector((0, -L_of(b3), 0))
+            D1, D2, D3 = swing(b1, K - H), swing(b2, Ank - K), swing(b3, toe - Ank)
+            p[b1] = A.world_rot(b1, D.inverted() @ D1)
+            p[b2] = A.world_rot(b2, D1.inverted() @ D2)
+            p[b3] = A.world_rot(b3, D2.inverted() @ D3)
 
-    def sit_pose():
-        """Сидит: таз на полу, перед поднят на прямых передних лапах. Наклон и опускание подбираются сами."""
-        best = None
-        for i in range(25):
-            a_ = 0.25 + i * 0.04
-            D = Quaternion((1, 0, 0), -a_)
-            Sh = xf(Bn["LegFL1"].head_local, D, Vector())
-            dz = (z0 + 0.97 * (LF + L3F)) - Sh.z               # опустить/поднять, чтобы передние лапы стояли
-            Hp = xf(Bn["LegBL1"].head_local, D, Vector((0, 0, dz)))
-            err = abs(Hp.z - (z0 + 0.32 * LB))                 # таз — низко, у пола
-            if best is None or err < best[0]:
-                best = (err, a_, dz)
-        _, a_, dz = best
+    def build_sit(a_, dz, up):
         D, T = Quaternion((1, 0, 0), -a_), Vector((0, 0, dz))
         p = {}
         body(p, D, T, neck_up=0.1)
@@ -620,14 +651,47 @@ def quad_anims(arm, lay, kind, name=""):
             Sh = xf(Bn[f"LegF{s_}1"].head_local, D, T)
             paw = Vector((Sh.x, Sh.y - 0.06 * LF, z0))
             leg_to(p, "F" + s_, D, D, T, paw + Vector((0, 0.02 * L3F, L3F)), paw + Vector((0, -0.25 * L3F, 0)), (0, 1, 0))
-        hind_folded(p, D, T)
+        hind_folded(p, D, T, up_deg=up)
         return p, D, T
 
-    def lie_pose(breath=0.0):
-        """Лежит на животе: тело горизонтально, живот на полу, задние подогнуты; передние — вперёд (хищники,
-        зайцы) или подогнуты под грудь (копытные)."""
+    def low_of(P, B, keys):
+        m = np.isin(B, keys)
+        return float(P[m, 2].min()) if m.any() else z0
+
+    REAR = ("Hips", "LegBL1", "LegBR1", "Tail1")
+    FPAW = ("LegFL3", "LegFR3", "LegFL2", "LegFR2")
+    HPAW = ("LegBL3", "LegBR3", "LegBL2", "LegBR2")
+    BELLY = ("Spine", "Hips")
+    floor = float(verts(obj).min(0)[2]) if obj is not None else z0
+
+    def sit_pose():
+        """Сидит: наклон тела 30–55°; таз опускается ровно до касания пола задом/бедром (по сетке, не ниже);
+        выбирается наклон, при котором передние лапы стоят на полу; сгиб колена — чтобы задние лапы были на полу."""
+        best = None
+        for a_ in np.linspace(0.5, 0.95, 10):
+            D = Quaternion((1, 0, 0), -a_)
+            Hp = xf(Bn["LegBL1"].head_local, D, Vector())
+            for up in (0.0, 15.0, 30.0, 45.0):
+                dz = (z0 + 0.25 * LB) - Hp.z
+                for _ in range(3):                                  # зад/бедро ровно на пол
+                    p, _, _ = build_sit(a_, dz, up)
+                    P, B = pose_mesh(obj, arm, p)
+                    dz += floor - float(P[:, 2].min())
+                p, _, _ = build_sit(a_, dz, up)
+                P, B = pose_mesh(obj, arm, p)
+                gap_f = low_of(P, B, FPAW) - floor                 # передние лапы: > 0 — висят
+                gap_r = low_of(P, B, REAR) - floor
+                gap_h = low_of(P, B, HPAW) - floor
+                sc_ = abs(gap_f) + 0.7 * abs(gap_r) + 1.0 * abs(gap_h)
+                if best is None or sc_ < best[0]:
+                    best = (sc_, a_, dz, up)
+        _, a_, dz, up = best
+        print(f"  сидит: наклон {math.degrees(a_):.0f}°, таз {dz * 100:+.0f} см, колено {up:.0f}°", flush=True)
+        return build_sit(a_, dz, up)
+
+    def build_lie(dz, up, breath=0.0):
         D = Quaternion((1, 0, 0), 0.0)
-        T = Vector((0, 0, -(belly_h - 0.03 * Lleg) + 0.004 * Lleg * breath))
+        T = Vector((0, 0, dz + 0.004 * Lleg * breath))
         p = {}
         body(p, D, T, neck_up=0.05, tail_dir=(0.5, 1.0, -0.05))
         p["Spine"] = rx(0.02 * breath)
@@ -639,8 +703,25 @@ def quad_anims(arm, lay, kind, name=""):
             else:
                 W = Vector((Sh.x, Sh.y - 0.8 * LF, z0 + 0.06 * L3F))
                 leg_to(p, "F" + s_, D, D, T, W, W + Vector((0, -L3F, -0.03 * L3F)), (0, 0.4, 1))
-        hind_folded(p, D, T)
+        hind_folded(p, D, T, up_deg=up)
         return p
+
+    _lie = {}
+
+    def lie_pose(breath=0.0):
+        """Лежит на животе: перебор высоты тела и сгиба задних лап по сетке — живот на полу, ничего не под полом."""
+        if not _lie:
+            best = None
+            for dz in np.linspace(-1.0, -0.4, 10) * belly_h:
+                for up in (0.0, 15.0, 30.0):
+                    P, B = pose_mesh(obj, arm, build_lie(dz, up))
+                    pen = max(0.0, floor - float(P[:, 2].min()))
+                    sc_ = 4 * pen + abs(low_of(P, B, BELLY) - floor) + 0.3 * abs(low_of(P, B, HPAW) - floor)
+                    if best is None or sc_ < best[0]:
+                        best = (sc_, dz, up)
+            _lie["dz"], _lie["up"] = best[1], best[2]
+            print(f"  лежит: тело {best[1] * 100:+.0f} см, колено {best[2]:.0f}°", flush=True)
+        return build_lie(_lie["dz"], _lie["up"], breath)
 
     if upright:
         def lie_pose(breath=0.0):
@@ -696,7 +777,18 @@ def quad_anims(arm, lay, kind, name=""):
             a_b = 1.05
             D_b = Quaternion((1, 0, 0), -a_b)
             Hp = xf(Bn["LegBL1"].head_local, D_b, Vector())
-            T_b = Vector((0, 0, (z0 + 0.3 * LB) - Hp.z))
+            best = None
+            for hz in np.linspace(0.0, 0.6, 13) * LB:
+                T_try = Vector((0, 0, (z0 + hz) - Hp.z))
+                pp = {}
+                body(pp, D_b, T_try)
+                hind_folded(pp, D_b, T_try)
+                P, B = pose_mesh(obj, arm, pp)
+                pen = max(0.0, floor - float(P[:, 2].min()))
+                sc_ = 4 * pen + abs(low_of(P, B, REAR) - floor) + abs(low_of(P, B, HPAW) - floor)
+                if best is None or sc_ < best[0]:
+                    best = (sc_, T_try)
+            T_b = best[1]
         def beg(t):
             if upright:
                 return {"LegFL1": rx(-0.7 - 0.1 * sn(2 * t)), "LegFR1": rx(-0.7 - 0.1 * sn(2 * t)),
@@ -714,9 +806,15 @@ def quad_anims(arm, lay, kind, name=""):
                 return p
             p = sitting()
             lift = 0.5 + 0.5 * sn(2 * t)
-            Sh = xf(Bn["LegFR1"].head_local, D_sit, T_sit)    # правая передняя — подаёт лапу, кисть свисает
-            W = Sh + Vector((0, -(0.55 + 0.1 * lift) * LF, -(0.45 - 0.15 * lift) * LF))
-            leg_to(p, "FR", D_sit, D_sit, T_sit, W, W + Vector((0, -0.25 * L3F, -0.95 * L3F)), (0, 1, -0.3))
+            # правая передняя — подаёт лапу: плечо вперёд-вниз, предплечье вперёд (чуть вверх), кисть свисает вниз
+            u = math.radians(10 + 12 * lift)                       # насколько поднята лапа
+            d1 = Vector((0, -math.sin(u + 0.35), -math.cos(u + 0.35)))
+            d2 = Vector((0, -0.8, 0.35 + 0.2 * lift))
+            d3 = Vector((0, -0.3, -1.0))
+            D1, D2, D3 = swing("LegFR1", d1), swing("LegFR2", d2), swing("LegFR3", d3)
+            p["LegFR1"] = A.world_rot("LegFR1", D_sit.inverted() @ D1)
+            p["LegFR2"] = A.world_rot("LegFR2", D1.inverted() @ D2)
+            p["LegFR3"] = A.world_rot("LegFR3", D2.inverted() @ D3)
             p["Neck"] = p["Neck"] @ rz(0.25 * sn(t))
             p["Head"] = rz(0.2 * sn(t))
             p["Tail1"] = p["Tail1"] @ rz(0.4 * sn(4 * t))
@@ -957,6 +1055,76 @@ def bird_anims(arm, lay):
 
 # ───────────────────────── выгрузка и превью ─────────────────────────
 
+def _fcurves(act):
+    """Кривые действия (и в старом Blender, и в новом — со слоями)."""
+    try:
+        return list(act.fcurves)
+    except AttributeError:
+        out = []
+        for layer in act.layers:
+            for strip in layer.strips:
+                for slot in act.slots:
+                    cb = strip.channelbag(slot)
+                    if cb:
+                        out += list(cb.fcurves)
+        return out
+
+
+def ground_fix(obj, arm, root):
+    """Ничего не уходит под пол: в каждом кадре каждой анимации самая нижняя точка сетки — не ниже пола (пол — низ
+    модели в покое). Если ниже — корень (Hips / Body) поднимается ровно на столько. Опускать не опускает (прыжки, полёт)."""
+    sc = bpy.context.scene
+    dg = bpy.context.evaluated_depsgraph_get()
+
+    def low():
+        dg.update()
+        ev = obj.evaluated_get(dg)
+        me = ev.to_mesh()
+        a = np.empty(len(me.vertices) * 3)
+        me.vertices.foreach_get("co", a)
+        ev.to_mesh_clear()
+        return float((a.reshape(-1, 3) @ np.asarray(obj.matrix_world.to_3x3()).T)[:, 2].min() + obj.matrix_world.translation.z)
+
+    for tr in arm.animation_data.nla_tracks:
+        tr.mute = True
+    arm.animation_data.action = None
+    for pb in arm.pose.bones:
+        pb.rotation_quaternion = (1, 0, 0, 0)
+        pb.location = (0, 0, 0)
+    sc.frame_set(0)
+    floor = low()
+    R = arm.data.bones[root].matrix_local.to_3x3().inverted()
+    report = {}
+    for tr in arm.animation_data.nla_tracks:
+        act = tr.strips[0].action
+        arm.animation_data.action = act
+        try:
+            arm.animation_data.action_slot = act.slots[0]
+        except (AttributeError, IndexError):
+            pass
+        fcs = {fc.array_index: fc for fc in _fcurves(act) if fc.data_path == f'pose.bones["{root}"].location'}
+        f0, f1 = (int(round(x)) for x in act.frame_range)
+        worst = 0.0
+        for f in range(f0, f1 + 1):
+            sc.frame_set(f)
+            pen = floor - low()
+            if pen > 1e-4:
+                worst = max(worst, pen)
+                d = R @ Vector((0, 0, pen + 0.002))
+                for i in range(3):
+                    if i in fcs:
+                        for kp in fcs[i].keyframe_points:
+                            if abs(kp.co[0] - f) < 0.01:
+                                kp.co[1] += d[i]
+                                kp.handle_left[1] += d[i]
+                                kp.handle_right[1] += d[i]
+        for fc in fcs.values():
+            fc.update()
+        report[act.name] = round(worst * 100, 1)
+        arm.animation_data.action = None
+    return report
+
+
 def export(obj, arm, path):
     bpy.ops.object.select_all(action="DESELECT")
     obj.select_set(True)
@@ -980,7 +1148,9 @@ def rig(name):
         arm = build_armature(obj, quad_bones(lay), quad_allow(lay))
         kind = "hop" if name in HOP else "quad"
     arm.animation_data_create()
-    info = bird_anims(arm, lay) if kind == "bird" else quad_anims(arm, lay, kind, name)
+    info = bird_anims(arm, lay) if kind == "bird" else quad_anims(arm, lay, kind, name, obj)
+    fixed = ground_fix(obj, arm, "Body" if kind == "bird" else "Hips")
+    print(f"[{name}] под пол уходило (см, теперь поднято): " + ", ".join(f"{k} {v}" for k, v in fixed.items() if v > 0.5), flush=True)
     out = os.path.join(ROOT, "export", f"{name}_idle.glb")
     mb = export(obj, arm, out)
     tris = sum(len(p.vertices) - 2 for p in obj.data.polygons)
