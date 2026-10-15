@@ -929,3 +929,30 @@ Replace the bed with human remains: a skeleton in torn clothes lying on the grou
 ```
 Replace the bed with zombie remains lying on the ground, torn clothes, grey skin. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
 ```
+
+## 11. Прицепы (к машинам)
+
+Папка на Диске: **22 Прицепы**
+
+После обработки у прицепа будут отдельно: колёса, задний борт / трапы / крышка, точка сцепки на конце дышла
+(`coupler`) — цепляется к фаркопу машины (`hitch`). Поэтому в запросе — колёса и борт хорошо видны, дышло спереди.
+
+**1. Прицеп с бортами** — `trailer_cargo.glb` · 320 × 110 см (длина с дышлом × высота)
+```
+Replace the bed with a small single-axle car trailer: open wooden cargo bed with low plank side walls, a hinged rear tailgate, two wheels with fenders, a steel A-frame drawbar with a tow hitch coupler at the front and a small jockey wheel. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**2. Прицеп под тентом** — `trailer_covered.glb` · 320 × 190 см
+```
+Replace the bed with a small single-axle car trailer covered with a faded green canvas tarp on metal hoops, wooden plank sides below the tarp, a rear tarp flap and a hinged tailgate, two wheels with fenders, a steel A-frame drawbar with a tow hitch coupler at the front. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**3. Платформа** — `trailer_flatbed.glb` · 480 × 100 см
+```
+Replace the bed with a long flatbed car trailer with two axles and four wheels, a wooden plank deck with short metal stake posts on the edges, a front metal guard panel, two loading ramps folded up at the back and a steel drawbar with a tow hitch coupler at the front. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**4. Прицеп-цистерна** — `trailer_water.glb` · 300 × 180 см
+```
+Replace the bed with a small single-axle water tank trailer: a horizontal cylindrical tank with a round filler cap on top and a tap at the back, metal straps holding the tank to the frame, two wheels with fenders, a steel A-frame drawbar with a tow hitch coupler at the front. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
