@@ -201,7 +201,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "couplers": true
  },
  "locker_metal_sportivnyy": {
   "pattern": "metal",
@@ -2301,7 +2302,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "couplers": true
  },
  "train_coach_b": {
   "pattern": "plain",
@@ -2439,7 +2441,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "couplers": true
  },
  "train_coach_d": {
   "pattern": "plain",
@@ -2549,7 +2552,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "couplers": true
  },
  "train_coach_e": {
   "pattern": "wood",
@@ -2661,7 +2665,8 @@
     0.53
    ],
    "r": 0.35
-  }
+  },
+  "couplers": true
  },
  "train_freight_b": {
   "pattern": "wood",
@@ -2744,7 +2749,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "couplers": true
  },
  "car_sedan": {
   "pattern": "plain",
@@ -3035,7 +3041,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "hitch": true
  },
  "car_sedan_b": {
   "pattern": "plain",
@@ -3328,7 +3335,8 @@
   ],
   "wheels": {
    "r": 0.3
-  }
+  },
+  "hitch": true
  },
  "car_hatchback": {
   "pattern": "plain",
@@ -3555,7 +3563,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "hitch": true
  },
  "car_station_wagon": {
   "pattern": "plain",
@@ -3846,7 +3855,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "hitch": true
  },
  "car_station_wagon_b": {
   "pattern": "plain",
@@ -4137,7 +4147,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "hitch": true
  },
  "car_police": {
   "pattern": "plain",
@@ -4428,7 +4439,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "hitch": true
  },
  "car_old_blue": {
   "pattern": "plain",
@@ -4659,7 +4671,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "hitch": true
  },
  "car_abandoned_sedan": {
   "pattern": "plain",
@@ -4952,7 +4965,8 @@
   ],
   "wheels": {
    "r": 0.27
-  }
+  },
+  "hitch": true
  },
  "car_police_b": {
   "pattern": "plain",
@@ -5243,7 +5257,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "hitch": true
  },
  "prison_guard_booth_b": {
   "pattern": "wood",
@@ -5724,7 +5739,8 @@
     0.74,
     1.02
    ]
-  }
+  },
+  "hitch": true
  },
  "pickup_b": {
   "pattern": "plain",
@@ -5930,7 +5946,8 @@
   ],
   "wheels": {
    "r": 0.36
-  }
+  },
+  "hitch": true
  },
  "van": {
   "pattern": "plain",
@@ -6218,7 +6235,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "hitch": true
  },
  "motorhome": {
   "pattern": "plain",
@@ -6420,7 +6438,8 @@
     ]
    }
   ],
-  "wheels": {}
+  "wheels": {},
+  "hitch": true
  },
  "bus_school": {
   "pattern": "plain",
@@ -6834,7 +6853,9 @@
      ]
     }
    ]
-  }
+  },
+  "front": -1,
+  "hitch": true
  },
  "house_garage": {
   "pattern": "wood",
@@ -7103,31 +7124,36 @@
   "pattern": "metal",
   "cavity": [],
   "parts": [],
-  "wheels": {}
+  "wheels": {},
+  "couplers": true
  },
  "train_loco_diesel": {
   "pattern": "metal",
   "cavity": [],
   "parts": [],
-  "wheels": {}
+  "wheels": {},
+  "couplers": true
  },
  "mine_cart_empty": {
   "pattern": "metal",
   "cavity": [],
   "parts": [],
-  "wheels": {}
+  "wheels": {},
+  "couplers": true
  },
  "mine_cart_ore": {
   "pattern": "metal",
   "cavity": [],
   "parts": [],
-  "wheels": {}
+  "wheels": {},
+  "couplers": true
  },
  "mine_cart_wood": {
   "pattern": "metal",
   "cavity": [],
   "parts": [],
-  "wheels": {}
+  "wheels": {},
+  "couplers": true
  },
  "motorcycle": {
   "pattern": "metal",

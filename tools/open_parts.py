@@ -253,6 +253,36 @@ def cut_wheels(obj, name, cfg):
     return out
 
 
+def markers(obj, cfg):
+    """Невидимые точки для сцепки (пустые узлы glTF): hitch — фаркоп сзади машины, coupler_front / coupler_back —
+    сцепки вагонов, coupler — дышло прицепа. Высота — по самым крайним вершинам (бампер, буфер)."""
+    co = np.array([v.co[:] for v in obj.data.vertices])
+    pts = []
+
+    def end(sign, name, out):
+        x = co[:, 0].max() if sign > 0 else co[:, 0].min()
+        near = co[(np.abs(co[:, 0] - x) < 0.06) & (np.abs(co[:, 1]) < 0.35)]
+        if not len(near):
+            near = co[np.abs(co[:, 0] - x) < 0.06]
+        z = float(np.clip(np.median(near[:, 2]), 0.3, 1.3))
+        pts.append((name, [round(float(x) + sign * out, 3), 0.0, round(z, 3)]))
+    if cfg.get("hitch"):
+        end(-cfg["front"], "hitch", 0.06)
+    if cfg.get("couplers"):
+        end(1, "coupler_front" if cfg.get("front", 1) > 0 else "coupler_back", 0.0)
+        end(-1, "coupler_back" if cfg.get("front", 1) > 0 else "coupler_front", 0.0)
+    for n, at in cfg.get("points", {}).items():         # точки, заданные вручную
+        pts.append((n, at))
+    out = []
+    for n, at in pts:
+        e = bpy.data.objects.new(n, None)
+        e.empty_display_size = 0.1
+        bpy.context.scene.collection.objects.link(e)
+        e.location = Vector(at)
+        out.append((e, {"name": n, "pivot": at, "marker": True, "open": {}}))
+    return out
+
+
 def build(name, cfg):
     obj, _ = T.import_joined(os.path.join(ROOT, "export", f"{name}_idle.glb"))
     T.clear_custom_normals(obj)
@@ -324,6 +354,7 @@ def build(name, cfg):
             edge = co[np.abs(co[:, 0] - x) < 0.04]
             p["pivot"] = [float(x), float(np.median(edge[:, 1])), 0.0]
         set_origin(o, p["pivot"])
+    parts += markers(obj, cfg)
     if not len(obj.data.polygons):                      # отдельное полотно двери — корпуса нет
         bpy.data.objects.remove(obj)
         obj = None
@@ -344,6 +375,8 @@ def pose(parts, t):
     """t = 0 — закрыто, 1 — открыто."""
     for o, p in parts:
         op = p["open"]
+        if p.get("marker"):
+            continue
         o.rotation_mode = "XYZ"
         if op.get("spin"):                              # колесо: в «открытом» кадре — отодвинуто наружу (видно, что отдельное)
             y = p["pivot"][1]
@@ -364,7 +397,7 @@ def pose(parts, t):
 
 
 def preview(name, body, parts, tmp):
-    objs = [o for o in [body] + [o for o, _ in parts] if o is not None]
+    objs = [o for o in [body] + [o for o, _ in parts] if o is not None and o.type == "MESH"]
     co = np.array([o.matrix_world @ v.co for o in objs for v in o.data.vertices])
     me = bpy.data.meshes.new("_frame")                  # невидимая «рамка» в мировых координатах — по ней камера
     me.from_pydata([tuple(co.min(0)), tuple(co.max(0))], [], [])
@@ -390,6 +423,10 @@ def game_info(parts):
     out = []
     for _, p in parts:
         op, d = p["open"], {"node": p["name"], "pivot": to_godot(p["pivot"])}
+        if p.get("marker"):
+            d["point"] = p["name"]
+            out.append(d)
+            continue
         if p.get("wheel"):
             d.update({"wheel": True, "radius": p["radius"], "spin_axis": to_godot((0, 1, 0))})
             out.append(d)
@@ -431,7 +468,7 @@ def main(argv):
         body, parts = build(n, cfg[n])
         objs = [o for o in [body] + [o for o, _ in parts] if o is not None]
         mb = export(objs, os.path.join(OUT, f"{n}.glb"))
-        tri = {o.name: T.tris(o) for o in objs}
+        tri = {o.name: T.tris(o) for o in objs if o.type == "MESH"}
         save_game_info(n, parts)
         print(f"[{n}] {mb:.2f} МБ, треугольники: {tri}", flush=True)
         if "--preview" in argv:
