@@ -28,6 +28,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import open_decor as D  # noqa: E402
+import paint_code as P  # noqa: E402
 import tripo_process as T  # noqa: E402
 
 OUT = os.path.join(ROOT, "export", "backdrop")
@@ -97,7 +98,7 @@ ITEMS = {
         I("dead", "tree_dead_bare", 4.5, tint=(0.8, 0.85, 0.75), dens=0.15, near=1.8),
         I("dead", "tree_dead_bare_b", 5.0, tint=(0.8, 0.85, 0.75), dens=0.12, near=1.8),
         I("dead", "tree_dead_burnt", 4.0, dens=0.1, near=1.8),
-        I("hummock", "code:hummock", None, dens=0.4, sway="top"),
+        I("hummock", "code:hummock", None, dens=0.4, sway="green"),
         I("boardwalk", "code:boardwalk", None, dens=0.03, rot=False, near=2.0),
     ],
     "snow": [
@@ -148,151 +149,282 @@ ITEMS = {
 BIRDS = {"crow": "crow", "seagull": "seagull", "pigeon": "pigeon"}
 
 
-# ───────────────────────── вещи кодом (нет в Tripo) ─────────────────────────
+# ───────────────────────── вещи кодом (нет в Tripo): нарисованы под стиль Tripo ─────────────────────────
+# Формы неровные (точение по профилю, трубки, рёбра, дрожание вершин), раскраска «кистью» — tools/paint_code.py.
 
 def _seg(d, n):
     return max(4, [n, max(5, n * 2 // 3), max(4, n // 2)][d])
 
 
+def _ring_pts(n, a, b):
+    return [a + (b - a) * k / (n - 1) for k in range(n)]
+
+
 def haystack(b, d):
-    s = _seg(d, 12)
-    b.cyl((0, 0, 0.75), 1.25, 1.5, "straw", seg=s)
-    b.cyl((0, 0, 1.75), 1.05, 0.5, "straw", seg=s)
-    b.cyl((0, 0, 2.15), 0.65, 0.35, (0.72, 0.6, 0.32), seg=s)
-    b.cyl((0, 0, 2.45), 0.25, 0.3, (0.7, 0.58, 0.3), seg=max(4, s // 2))
-    if d < 2:
-        b.box((-0.03, -0.03, 0), (0.03, 0.03, 2.9), "wood")
+    s = [16, 12, 8][d]
+    prof = [(1.25, 0.0), (1.36, 0.25), (1.38, 0.7), (1.3, 1.2), (1.12, 1.65), (0.86, 2.05), (0.52, 2.38), (0.2, 2.58), (0, 2.64)]
+    if d == 2:
+        prof = [prof[i] for i in (0, 2, 4, 6, 8)]
+    b.lathe(prof, "straw", seg=s, jit=0.05, lean=(0.02, 0.0))
+    b.tube([(0.05, 0, 2.2), (0.06, 0, 2.95)], [0.05, 0.04], "wood_grey", seg=5 if d < 2 else 4)
+    if d == 0:                       # соломинки, торчащие у низа и на макушке
+        for k in range(36):
+            a = k * 2 * math.pi / 36 + b.rng.uniform(-0.08, 0.08)
+            z0 = b.rng.uniform(0.0, 0.5)
+            r0 = 1.3
+            ln = b.rng.uniform(0.25, 0.5)
+            b.blade((math.cos(a) * r0, math.sin(a) * r0, z0),
+                    (math.cos(a) * (r0 + ln * 0.7), math.sin(a) * (r0 + ln * 0.7), z0 + ln * b.rng.uniform(-0.1, 0.5)),
+                    0.07, "straw")
+        for k in range(12):
+            a = b.rng.uniform(0, 6.28)
+            b.blade((math.cos(a) * 0.3, math.sin(a) * 0.3, 2.5),
+                    (math.cos(a) * 0.7, math.sin(a) * 0.7, 2.5 + b.rng.uniform(0.05, 0.25)), 0.06, "straw")
 
 
-def _cactus(b, d, arms, h):
-    s = _seg(d, 8)
-    col = (0.32, 0.5, 0.26)
-    b.cyl((0, 0, h / 2), 0.22, h, col, seg=s)
-    b.ball((0, 0, h), 0.22, col, 0.7)
+def _saguaro(b, d, h, arms, style="cactus", flowers=0):
+    s = [16, 12, 8][d]
+    ribs = s // 2 if d < 2 else 0
+    r = 0.2 * (h / 2.4) ** 0.35
+    n = [9, 6, 4][d]
+    prof = [(r * 0.95, 0.0)] + [(r * (1.0 - 0.07 * t), 0.08 + (h - 0.4) * t) for t in _ring_pts(n, 0.0, 1.0)]
+    prof += [(r * 0.78, h - 0.16), (r * 0.42, h - 0.04), (0, h)] if d < 2 else [(r * 0.55, h - 0.08), (0, h)]
+    b.lathe(prof, style, seg=s, ribs=ribs, rib_amp=0.22, jit=0.025, lean=(b.rng.uniform(-0.03, 0.03), 0.0))
+    tops = [(0, 0, h)]
     for side, z, ln in arms:
-        b.cyl((side * 0.32, 0, z), 0.13, 0.22, col, axis="x", seg=s)
-        b.cyl((side * 0.43, 0, z + ln / 2), 0.14, ln, col, seg=s)
-        b.ball((side * 0.43, 0, z + ln), 0.14, col, 0.7)
+        a = (0 if side > 0 else math.pi) + b.rng.uniform(-0.35, 0.35)
+        dx, dy = math.cos(a), math.sin(a)
+        ra = r * 0.66
+        out = [0.3, r + 0.16, r + 0.3, r + 0.36, r + 0.37]
+        up = [0.0, 0.03, 0.16, 0.36, 0.36 + ln]
+        if d == 2:
+            out, up = [out[0], out[2], out[4]], [up[0], up[2], up[4]]
+        path = [(dx * o, dy * o, z + u) for o, u in zip(out, up)]
+        if d == 0:
+            path.insert(-1, (dx * (r + 0.37), dy * (r + 0.37), z + 0.36 + ln * 0.6))
+        b.tube(path, [ra * 0.95] + [ra] * (len(path) - 2) + [ra * 0.9], style, seg=[12, 8, 6][d],
+               ribs=([12, 8, 6][d] // 2 if d < 2 else 0), rib_amp=0.22, jit=0.02)
+        tops.append(path[-1])
     if d == 0:
-        for k in range(10):
-            a = k * 2.4
-            b.box((math.cos(a) * 0.22 - 0.005, math.sin(a) * 0.22 - 0.005, 0.3 + (k * 0.37) % (h - 0.4)),
-                  (math.cos(a) * 0.22 + 0.005, math.sin(a) * 0.22 + 0.005, 0.32 + (k * 0.37) % (h - 0.4)), "cream")
+        for t in tops[:flowers]:
+            for k in range(3):
+                a = k * 2.1 + b.rng.uniform(0, 0.5)
+                b.ball((t[0] + math.cos(a) * 0.07, t[1] + math.sin(a) * 0.07, t[2] + 0.05), 0.055, "flower", sub=1)
 
 
 def cactus1(b, d):
-    _cactus(b, d, [(1, 1.0, 0.7), (-1, 1.4, 0.5)], 2.6)
+    _saguaro(b, d, 2.6, [(1, 1.0, 0.7), (-1, 1.4, 0.5)], flowers=3)
 
 
 def cactus2(b, d):
-    _cactus(b, d, [(1, 0.8, 0.5)], 1.8)
+    """Опунция: плоские лепёшки одна на другой, жёлтые цветы по краю."""
+    pads = [((0, 0, 0.32), (0.3, 0.08, 0.36), 0.0), ((0.28, 0.02, 0.82), (0.24, 0.07, 0.3), -0.45),
+            ((-0.22, -0.02, 0.8), (0.22, 0.07, 0.28), 0.5), ((0.42, 0.03, 1.22), (0.17, 0.06, 0.22), -0.2),
+            ((-0.36, 0.0, 1.16), (0.16, 0.06, 0.2), 0.7), ((0.05, 0.02, 1.25), (0.18, 0.06, 0.22), 0.1)]
+    if d == 2:
+        pads = pads[:4]
+    for c, rr, rot in pads:
+        b.ellipsoid(c, rr, rot, "cactus_d", sub=(2 if d < 2 else 1), jit=0.06)
+    if d == 0:
+        for c, rr, rot in pads[3:]:
+            top = (c[0] - math.sin(rot) * rr[2], c[1], c[2] + math.cos(rot) * rr[2])
+            b.ball(top, 0.06, "flower_y", sub=1)
 
 
 def cactus3(b, d):
-    _cactus(b, d, [], 1.2)
-    b.ball((0.35, 0.1, 0.25), 0.25, (0.36, 0.52, 0.28), 0.8)
+    """Кактус-бочка (два) с венцом цветов."""
+    s = [16, 12, 8][d]
+    ribs = s // 2 if d < 2 else 0
+    for (x, y, k) in ((0.0, 0.0, 1.0), (0.62, -0.18, 0.55)):
+        prof = [(0.32 * k, 0.0), (0.44 * k, 0.16 * k), (0.48 * k, 0.42 * k), (0.44 * k, 0.68 * k), (0.32 * k, 0.86 * k),
+                (0.14 * k, 0.95 * k), (0, 0.93 * k)]
+        if d == 2:
+            prof = [prof[i] for i in (0, 2, 4, 6)]
+        b.lathe(prof, "cactus", seg=s, c=(x, y, 0), ribs=ribs, rib_amp=0.25, jit=0.02)
+        if d == 0:
+            for j in range(6):
+                a = j * math.pi / 3
+                b.ball((x + math.cos(a) * 0.17 * k, y + math.sin(a) * 0.17 * k, 0.93 * k), 0.06 * k + 0.02, "flower_y", sub=1)
+    if d < 2:
+        for k in range(4):
+            a = b.rng.uniform(0, 6.28)
+            b.ball((math.cos(a) * 0.75, math.sin(a) * 0.6, 0.02), b.rng.uniform(0.06, 0.12), (0.62, 0.52, 0.4), sz=0.6, sub=1, jit=0.2)
 
 
 def cactus4(b, d):
-    _cactus(b, d, [(1, 1.3, 0.9), (-1, 1.1, 0.8), (1, 2.0, 0.4)], 3.3)
+    _saguaro(b, d, 3.3, [(1, 1.3, 0.9), (-1, 1.1, 0.8), (1, 2.0, 0.4)], style="cactus_d", flowers=2)
 
 
 def hummock(b, d):
-    b.ball((0, 0, 0.1), 0.55, (0.32, 0.36, 0.2), 0.45)
-    if d < 2:
-        for k in range(7 if d == 0 else 4):
-            a = k * 0.9
-            b.cyl((math.cos(a) * 0.25, math.sin(a) * 0.25, 0.4), 0.03, 0.5, (0.5, 0.52, 0.28), seg=4,
-                  rot=Matrix.Rotation(0.3 * math.cos(a), 4, "Y") @ Matrix.Rotation(0.3 * math.sin(a), 4, "X"))
+    s = [10, 8, 6][d]
+    prof = [(0.6, 0.0), (0.64, 0.08), (0.55, 0.2), (0.34, 0.31), (0, 0.35)]
+    b.lathe(prof, "mud", seg=s, jit=0.12)
+    n = [40, 18, 8][d]
+    for k in range(n):
+        a = b.rng.uniform(0, 6.28)
+        rr = b.rng.uniform(0.0, 0.45)
+        z0 = 0.33 - rr * 0.5
+        ln = b.rng.uniform(0.35, 0.8)
+        lean = b.rng.uniform(0.1, 0.45) + rr * 0.5
+        b.blade((math.cos(a) * rr, math.sin(a) * rr, z0),
+                (math.cos(a) * (rr + lean * ln), math.sin(a) * (rr + lean * ln), z0 + ln), 0.06 if d < 2 else 0.12,
+                "grass_d" if k % 3 == 0 else "grass")
 
 
 def boardwalk(b, d):
     if d == 2:
-        b.box((-2.5, -0.5, 0.26), (2.5, 0.5, 0.32), "wood_d")
+        b.box((-2.5, -0.5, 0.26), (2.5, 0.5, 0.32), "wood_y", jit=0.03)
         for x in (-2.3, 2.3):
             for y in (-0.45, 0.45):
-                b.box((x - 0.05, y - 0.05, 0), (x + 0.05, y + 0.05, 0.28), "wood_d")
+                b.box((x - 0.06, y - 0.06, 0), (x + 0.06, y + 0.06, 0.28), "wood_wet")
         return
-    for i, x in enumerate(np.arange(-2.4, 2.41, 0.3 if d == 0 else 0.6)):
-        b.box((x - 0.13, -0.5, 0.28 + (0.02 * ((i * 7) % 3))), (x + 0.13, 0.5, 0.32), "wood_d", rz=0.04 * ((i * 5) % 3 - 1))
+    x = -2.5
+    k = 0
+    while x < 2.45:
+        w = b.rng.uniform(0.18, 0.26) if d == 0 else 0.5
+        k += 1
+        miss = d == 0 and k % 9 == 5
+        if not miss:
+            y0 = -0.5 + b.rng.uniform(-0.05, 0.05)
+            y1 = 0.5 + b.rng.uniform(-0.05, 0.05)
+            if d == 0 and k % 7 == 3:          # обломанная доска
+                y1 = b.rng.uniform(-0.1, 0.2)
+            z = 0.32 + b.rng.uniform(-0.025, 0.02)
+            b.box((x, y0, z - 0.05), (x + w - 0.035, y1, z), "wood_y", rz=b.rng.uniform(-0.04, 0.04),
+                  rx=b.rng.uniform(-0.04, 0.04), jit=0.008)
+        x += w
+    for y in (-0.4, 0.4):
+        b.box((-2.5, y - 0.05, 0.18), (2.5, y + 0.05, 0.27), "wood_wet", ry=b.rng.uniform(-0.02, 0.02), jit=0.01)
     for x in (-2.3, -0.8, 0.8, 2.3):
-        for y in (-0.45, 0.45):
-            b.cyl((x, y, 0.15), 0.06, 0.35 if d < 2 else 0.3, "wood_d", seg=_seg(d, 6))
-    b.box((-2.5, -0.45, 0.22), (2.5, -0.38, 0.28), "wood")
-    b.box((-2.5, 0.38, 0.22), (2.5, 0.45, 0.28), "wood")
+        for y in (-0.42, 0.42):
+            b.lathe([(0.075, -0.05), (0.07, 0.2), (0.06, 0.33)], "wood_wet", seg=_seg(d, 6), c=(x, y, 0), jit=0.1, tip=False)
+
+
+def _insulator(b, x, y, z, style="ceramic", d=0):
+    b.lathe([(0.03, 0), (0.07, 0.04), (0.04, 0.08), (0.065, 0.11), (0, 0.16)], style, seg=6 if d == 0 else 4, c=(x, y, z))
 
 
 def pole_wires(b, d):
-    s = _seg(d, 8)
-    b.cyl((0, 0, 3.75), 0.13, 7.5, "wood_d", seg=s)
-    b.box((-0.9, -0.06, 7.0), (0.9, 0.06, 7.12), "wood_d")
-    for x in (-0.75, 0, 0.75):
-        b.cyl((x, 0, 7.17), 0.035, 0.1, "white", seg=4)
-        if d < 2:   # провода уходят к соседним столбам (провисают)
-            for k in range(8):
-                y0, y1 = -5 + k * 1.25, -5 + (k + 1) * 1.25
-                sag = lambda t: 7.2 - 0.6 * (1 - ((t / 5.0) ** 2))
-                b.box((x - 0.008, y0, sag(y0) - 0.008), (x + 0.008, y1, sag(y0) + 0.008), "black")
+    s = [8, 6, 5][d]
+    b.lathe([(0.15, 0), (0.14, 2.5), (0.125, 5.5), (0.11, 7.45), (0.0, 7.55)], "wood_z", seg=s, jit=0.06)
+    b.box((-0.95, -0.07, 6.92), (0.95, 0.07, 7.06), "wood_grey", jit=0.01)
+    if d < 2:
+        for sx in (-1, 1):
+            b.beam((sx * 0.55, 0, 6.94), (0, 0, 6.35), 0.05, "metal_iron")
+    for x in (-0.8, 0.0, 0.8) if d < 2 else (-0.8, 0.8):
+        _insulator(b, x, 0, 7.06, "glass_g" if x else "ceramic", d)
+        if d < 2:
+            pts = [(x, -5 + k * 1.25, 7.2 - 0.6 * (1 - ((-5 + k * 1.25) / 5.0) ** 2)) for k in range(9)]
+            for p0, p1 in zip(pts, pts[1:]):
+                b.beam(p0, p1, 0.022, "wire")
 
 
 def pole_bare(b, d):
-    b.cyl((0, 0, 3.5), 0.13, 7.0, (0.36, 0.3, 0.25), seg=_seg(d, 8), rot=Matrix.Rotation(0.06, 4, "Y"))
-    b.box((-0.8, -0.06, 6.4), (0.8, 0.06, 6.52), (0.36, 0.3, 0.25), rz=0.0, ry=0.1)
+    s = [8, 6, 5][d]
+    b.lathe([(0.16, 0), (0.15, 2.5), (0.13, 5.5), (0.12, 6.6), (0.0, 7.0)], "wood_grey", seg=s, jit=0.12,
+            lean=(0.07, 0.015))
+    b.box((-0.9, -0.07, 6.2), (0.45, 0.07, 6.33), "wood_grey", ry=0.22, jit=0.02)
+    if d < 2:
+        _insulator(b, -0.7, 0, 6.38, "ceramic", d)
+        b.beam((-0.72, 0, 6.3), (-0.55, 0.12, 5.1), 0.02, "wire")
+        b.beam((-0.55, 0.12, 5.1), (-0.6, 0.05, 4.4), 0.02, "wire")
+        b.beam((0.35, 0, 6.42), (0.0, 0, 5.9), 0.05, "metal_iron")
 
 
 def chimney(b, d):
-    s = _seg(d, 12)
-    b.cyl((0, 0, 9), 1.1, 18, (0.48, 0.3, 0.22), seg=s)
-    for z in ((4, 9, 14) if d < 2 else ()):
-        b.cyl((0, 0, z), 1.13, 0.4, (0.4, 0.25, 0.18), seg=s)
-    b.cyl((0, 0, 18.2), 1.2, 0.5, (0.25, 0.22, 0.2), seg=s)
-    for z in (17.0, 17.3):
-        b.cyl((0, 0, z), 1.12, 0.25, "white" if z == 17.0 else "red", seg=s)
-    b.box((-1.8, -1.8, 0), (1.8, 1.8, 1.2), (0.42, 0.4, 0.38))
+    s = [16, 12, 8][d]
+    b.box((-1.8, -1.8, 0), (1.8, 1.8, 1.2), "concrete", jit=0.03)
+    b.box((-0.45, -1.84, 0.0), (0.45, -1.78, 0.95), (0.3, 0.22, 0.18))
+    r = lambda z: 1.3 - 0.35 * (z - 1.2) / 16.0
+    zs = [1.2, 6.0, 11.0, 15.0, 17.0] if d < 2 else [1.2, 9.0, 17.0]
+    b.lathe([(r(z), z) for z in zs], "brick", seg=s, tip=False, jit=0.0)
+    if d < 2:
+        for z in (6.0, 11.0):
+            b.lathe([(r(z) + 0.06, z - 0.18), (r(z) + 0.06, z + 0.18)], "brick_band", seg=s, tip=False)
+        b.lathe([(r(15.0) + 0.03, 15.0), (r(16.6) + 0.03, 16.6)], "paint_w", seg=s, tip=False)
+    b.lathe([(r(17.0) + 0.1, 17.0), (r(17.0) + 0.16, 17.5), (r(17.0) + 0.12, 18.1), (r(17.0) - 0.15, 18.1),
+             (r(17.0) - 0.25, 17.7)], "soot", seg=s, tip=False)
+    if d == 0:                               # лестница скобами
+        a = math.radians(-125)
+        u, v = Vector((math.cos(a), math.sin(a), 0)), Vector((-math.sin(a), math.cos(a), 0))
+        for sv in (-0.22, 0.22):
+            b.beam(u * (r(1.2) + 0.15) + v * sv + Vector((0, 0, 1.2)), u * (r(17.0) + 0.15) + v * sv + Vector((0, 0, 17.0)),
+                   0.04, "metal_iron")
+        for k in range(32):
+            z = 1.6 + k * 0.48
+            c = u * (r(z) + 0.15) + Vector((0, 0, z))
+            b.beam(c - v * 0.22, c + v * 0.22, 0.03, "metal_iron")
 
 
 def tanks(b, d):
-    s = _seg(d, 16)
-    for x, r, h in ((-3.2, 2.2, 6.0), (2.0, 2.6, 7.5), (6.6, 1.6, 4.5)):
-        b.cyl((x, 0, h / 2), r, h, (0.72, 0.72, 0.68), seg=s)
-        if d < 2:
-            b.cyl((x, 0, h + 0.25), r * 0.95, 0.5, (0.62, 0.62, 0.6), seg=s)
-        if d < 2:
-            b.cyl((x, 0, h * 0.5), r + 0.02, 0.15, "rust", seg=s)
-            b.box((x + r - 0.05, -0.2, 0), (x + r + 0.05, 0.2, h), "metal_d")
-    if d < 2:
-        b.cyl((-0.5, 0, 4.5), 0.25, 3.5, "metal", axis="x", seg=_seg(d, 8))
+    s = [16, 12, 8][d]
+    for i, (x, r, h) in enumerate(((-3.2, 2.2, 6.0), (2.0, 2.6, 7.5), (6.6, 1.6, 4.5))):
+        st = "tank_g" if i == 1 else "tank"
+        b.lathe([(r + 0.35, 0.0), (r + 0.35, 0.25)], "concrete", seg=s, c=(x, 0, 0), tip=False)
+        prof = [(r, 0.25), (r, h), (r * 0.9, h + 0.32), (r * 0.55, h + 0.62), (0, h + 0.72)]
+        if d == 2:
+            prof = [prof[0], prof[1], prof[3], prof[4]]
+        b.lathe(prof, st, seg=s, c=(x, 0, 0))
+        if d == 0:                                   # перила на крыше
+            n = 10
+            ring = [(x + math.cos(k * 2 * math.pi / n) * r * 0.92, math.sin(k * 2 * math.pi / n) * r * 0.92, h + 0.35 + 0.8)
+                    for k in range(n + 1)]
+            for p0, p1 in zip(ring, ring[1:]):
+                b.beam(p0, p1, 0.05, "pipe_y")
+            for p in ring[:-1:2]:
+                b.beam((p[0], p[1], p[2] - 0.8), p, 0.05, "pipe_y")
+        if d == 0:                                   # лестница спереди-сбоку
+            a = math.radians(-120 + 20 * i)
+            u, v = Vector((math.cos(a), math.sin(a), 0)), Vector((-math.sin(a), math.cos(a), 0))
+            c0 = Vector((x, 0, 0)) + u * (r + 0.12)
+            for sv in (-0.2, 0.2):
+                b.beam(c0 + v * sv + Vector((0, 0, 0.25)), c0 + v * sv + Vector((0, 0, h + 0.4)), 0.04, "metal_iron")
+            for k in range(int(h / 0.45)):
+                z = 0.6 + k * 0.45
+                b.beam(c0 - v * 0.2 + Vector((0, 0, z)), c0 + v * 0.2 + Vector((0, 0, z)), 0.03, "metal_iron")
+    if d < 2:                                        # трубы между баками
+        b.tube([(-1.0, -0.6, 1.0), (-0.6, -0.6, 1.0), (-0.6, -0.6, 0.4)], [0.18, 0.18, 0.18], "pipe_y", seg=_seg(d, 8), dome=False)
+        b.tube([(-1.0, -0.6, 1.0), (-0.6, -0.6, 1.0)], [0.18, 0.18], "pipe_y", seg=_seg(d, 8), dome=False)
+        b.tube([(4.6, -0.5, 1.4), (5.0, -0.5, 1.4)], [0.15, 0.15], "pipe_y", seg=_seg(d, 8), dome=False)
+        b.tube([(-0.6, -1.4, 1.6), (0.0, -1.4, 1.6), (0.8, -1.6, 1.6)], [0.12, 0.12, 0.12], "rust", seg=_seg(d, 6), dome=False)
 
 
 def pylon(b, d):
-    """ЛЭП-вышка: решётчатая, сужается кверху, траверсы с гирляндами."""
+    """ЛЭП-вышка: решётчатая, сужается кверху, раскосы, траверсы с гирляндами изоляторов."""
     H, W0, W1 = 24.0, 3.2, 0.8
-    legs = [(sx, sy) for sx in (-1, 1) for sy in (-1, 1)]
-    col = (0.5, 0.52, 0.52)
-    import math as m
-    for sx, sy in legs:
-        p0 = Vector((sx * W0 / 2, sy * W0 / 2, 0))
-        p1 = Vector((sx * W1 / 2, sy * W1 / 2, H * 0.82))
-        v = p1 - p0
-        ln = v.length
-        q = Vector((0, 0, 1)).rotation_difference(v.normalized()).to_matrix().to_4x4()
-        b.box((-0.08, -0.08, 0), (0.08, 0.08, ln), col)
-        b.bm.verts.ensure_lookup_table()
-        geom = b.bm.verts[-8:]
-        bmesh.ops.transform(b.bm, matrix=Matrix.Translation(p0) @ q, verts=list(geom))
+    col = "steel"
+    top = H * 0.82
+    w_at = lambda z: (W0 + (W1 - W0) * z / top) / 2
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            b.beam((sx * W0 / 2, sy * W0 / 2, 0), (sx * W1 / 2, sy * W1 / 2, top), 0.16, col)
     lv = 6 if d == 0 else (4 if d == 1 else 1)
-    for k in range(1, lv + 1):
-        z = H * 0.82 * k / (lv + 1)
-        w = (W0 + (W1 - W0) * k / (lv + 1)) / 2
+    zs = [top * k / (lv + 1) for k in range(lv + 2)]
+    for k, z in enumerate(zs[1:-1], 1):
+        w = w_at(z)
         for sx in (-1, 1):
             b.box((-w, sx * w - 0.04, z - 0.04), (w, sx * w + 0.04, z + 0.04), col)
             b.box((sx * w - 0.04, -w, z - 0.04), (sx * w + 0.04, w, z + 0.04), col)
-    b.box((-0.4, -0.4, H * 0.82), (0.4, 0.4, H), col)
-    for z, half in ((H * 0.82, 4.0), (H * 0.92, 3.0))[:(2 if d < 2 else 1)]:
-        b.box((-half, -0.12, z), (half, 0.12, z + 0.25), col)
+    if d < 2:                                         # раскосы: крест-накрест на 4 гранях (вдали — зигзаг спереди и сзади)
+        for k, (z0, z1) in enumerate(zip(zs, zs[1:])):
+            w0, w1 = w_at(z0), w_at(z1)
+            for sx in (-1, 1):
+                if d == 0 or k % 2 == 0:
+                    b.beam((-w0, sx * w0, z0), (w1, sx * w1, z1), 0.06, col)
+                if d == 0 or k % 2 == 1:
+                    b.beam((w0, sx * w0, z0), (-w1, sx * w1, z1), 0.06, col)
+                if d == 0:
+                    b.beam((sx * w0, -w0, z0), (sx * w1, w1, z1), 0.06, col)
+                    b.beam((sx * w0, w0, z0), (sx * w1, -w1, z1), 0.06, col)
+    b.box((-0.4, -0.4, top), (0.4, 0.4, H), col)
+    for z, half in ((top, 4.0), (H * 0.92, 3.0))[:(2 if d < 2 else 1)]:
+        b.box((-half, -0.14, z), (half, 0.14, z + 0.3), col)
         if d < 2:
+            b.beam((-half, 0, z), (-0.4, 0, z - 1.0), 0.08, col)
+            b.beam((half, 0, z), (0.4, 0, z - 1.0), 0.08, col)
             for x in (-half + 0.3, half - 0.3):
-                b.cyl((x, 0, z - 0.6), 0.08, 1.2, "white", seg=6)
+                for k in range(4 if d == 0 else 2):
+                    _insulator(b, x, 0, z - 0.25 - (k + 1) * 0.3, "glass_g", d)
 
 
 CODE = {f.__name__: f for f in (haystack, cactus1, cactus2, cactus3, cactus4, hummock, boardwalk, pole_wires,
@@ -322,11 +454,12 @@ def load_source(it, d):
     reset()
     src = it["src"]
     if src.startswith("code:"):
-        b = D.Builder("body", seed=3)
+        b = P.PBuilder("body", seed=3)
         CODE[src[5:]](b, d)
         obj = b.obj()
         normalize(obj, None, it["sx"], it.get("w"))
-        return obj, False
+        P.paint(obj, (LOD_TEX[d] or 128))              # нарисовать «кистью», как текстуры Tripo
+        return obj, True
     obj, _ = T.import_joined(os.path.join(ROOT, "export", f"{src}_idle.glb"))
     T.clear_custom_normals(obj)
     normalize(obj, it["h"], it["sx"], it.get("w"))
@@ -1075,6 +1208,9 @@ def build_lod(it, d, base_id):
     cols = face_colors(obj)
     nwin = assign_windows(obj, cols) if it["win"] else 0
     smk = smoke_points(obj) if it["smoke"] else []
+    if it["src"] == "code:chimney":                     # дым — из середины жерла трубы
+        zt = max(v.co.z for v in obj.data.vertices)
+        smk = [[0.0, 0.0, round(zt, 3)]]
     if d == 2 or not textured:
         to_vertex_colors(obj, pal=(d == 2 and textured))
     obj.name = obj.data.name = "body"
