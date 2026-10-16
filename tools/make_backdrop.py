@@ -120,28 +120,28 @@ ITEMS = {
         I("pole", "code:pole_bare", None, dens=0.05, near=1.8, rot=False),
     ],
     "city": [
-        I("building", "apartments_b", 16.0, win=True, dens=0.05, near=10.8, big=True, rot=False),
-        I("building", "apartments", 14.0, win=True, dens=0.05, near=10.8, big=True, rot=False),
-        I("building", "house_brick2", 9.0, win=True, dens=0.05, near=10.8, big=True, rot=False),
-        I("building", "mall", 12.0, win=True, dens=0.04, near=10.8, big=True, rot=False),
-        I("building", "construction_site", 10.0, dens=0.03, near=10.8, big=True, rot=False),
-        I("ruin", "building_ruin_1", 10.0, dens=0.05, near=7.8, big=True, rot=False),
-        I("ruin", "building_ruin_2", 9.0, dens=0.05, near=7.8, big=True, rot=False),
-        I("crane", "crane_tower", 22.0, dens=0.01, near=12.0, big=True, rot=False),
+        I("building", "apartments_b", 13.0, w=10, win=True, dens=0.05, near=10.8, big=True, rot=False),
+        I("building", "apartments", 12.0, w=9, win=True, dens=0.05, near=10.8, big=True, rot=False),
+        I("building", "house_brick2", 8.0, w=8, win=True, dens=0.05, near=10.8, big=True, rot=False),
+        I("building", "mall", 9.0, w=10, win=True, dens=0.04, near=10.8, big=True, rot=False),
+        I("building", "construction_site", 9.0, w=9, dens=0.03, near=10.8, big=True, rot=False),
+        I("ruin", "building_ruin_1", 6.0, w=9, dens=0.05, near=7.8, big=True, rot=False),
+        I("ruin", "building_ruin_2", 5.5, w=9, dens=0.05, near=7.8, big=True, rot=False),
+        I("crane", "crane_tower", 18.0, w=12, dens=0.01, near=12.0, big=True, rot=False),
         I("pole", "street_lamp_tselyy", None, dens=0.1, near=1.8, rot=False),
         I("billboard", "billboard_road_tselyy", 6.0, dens=0.03, near=4.0, rot=False),
-        I("water_tower", "water_tower_kirpichnaya", 14.0, dens=0.01, near=12.0, big=True),
+        I("water_tower", "water_tower_kirpichnaya", 11.0, w=5, dens=0.01, near=12.0, big=True),
     ],
     "industrial": [
-        I("factory", "warehouse", 8.0, win=True, dens=0.05, near=10.8, big=True, rot=False),
-        I("factory", "power_plant", 18.0, win=True, smoke=True, dens=0.03, near=10.8, big=True, rot=False),
-        I("factory", "power_plant_b", 16.0, win=True, smoke=True, dens=0.03, near=10.8, big=True, rot=False),
-        I("cooling", "nuclear_plant", 18.0, win=True, smoke=True, dens=0.015, near=14.0, big=True, rot=False),
-        I("hangar", "hangar", 9.0, win=True, dens=0.03, near=10.8, big=True, rot=False),
-        I("crane", "crane_tower", 22.0, dens=0.015, near=12.0, big=True, rot=False),
+        I("factory", "warehouse", 7.0, w=11, win=True, dens=0.05, near=10.8, big=True, rot=False),
+        I("factory", "power_plant", 10.0, w=12, win=True, smoke=True, dens=0.03, near=10.8, big=True, rot=False),
+        I("factory", "power_plant_b", 10.0, w=12, win=True, smoke=True, dens=0.03, near=10.8, big=True, rot=False),
+        I("cooling", "nuclear_plant", 10.0, w=14, win=True, smoke=True, dens=0.015, near=14.0, big=True, rot=False),
+        I("hangar", "hangar", 7.0, w=10, win=True, dens=0.03, near=10.8, big=True, rot=False),
+        I("crane", "crane_tower", 18.0, w=12, dens=0.015, near=12.0, big=True, rot=False),
         I("chimney", "code:chimney", None, smoke=True, dens=0.03, near=10.8, big=True),
-        I("tanks", "code:tanks", None, dens=0.04, near=8.0, big=True),
-        I("pylon", "code:pylon", None, dens=0.03, near=6.0, big=True, rot=False),
+        I("tanks", "code:tanks", None, w=9, dens=0.04, near=8.0, big=True),
+        I("pylon", "code:pylon", None, w=6, dens=0.03, near=6.0, big=True, rot=False),
         I("pole", "pole_power", None, dens=0.08, near=1.8, rot=False),
     ],
 }
@@ -305,11 +305,13 @@ def reset():
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
 
-def normalize(obj, h, sx):
-    """Низ на Z = 0, центр по X/Y, высота h (м), ширина ×sx."""
+def normalize(obj, h, sx, w=None):
+    """Низ на Z = 0, центр по X/Y, высота h (м), ширина ×sx; w — ширина не больше w (м), как в игре."""
     co = np.array([v.co[:] for v in obj.data.vertices])
     lo, hi = co.min(0), co.max(0)
     k = (h / (hi[2] - lo[2])) if h else 1.0
+    if w and (hi[0] - lo[0]) * k * sx > w:
+        k = w / ((hi[0] - lo[0]) * sx)
     M = Matrix.Diagonal((k * sx, k * sx, k, 1.0)) @ Matrix.Translation((-(lo[0] + hi[0]) / 2, -(lo[1] + hi[1]) / 2, -lo[2]))
     obj.data.transform(M)
     obj.data.update()
@@ -323,11 +325,11 @@ def load_source(it, d):
         b = D.Builder("body", seed=3)
         CODE[src[5:]](b, d)
         obj = b.obj()
-        normalize(obj, None, it["sx"])
+        normalize(obj, None, it["sx"], it.get("w"))
         return obj, False
     obj, _ = T.import_joined(os.path.join(ROOT, "export", f"{src}_idle.glb"))
     T.clear_custom_normals(obj)
-    normalize(obj, it["h"], it["sx"])
+    normalize(obj, it["h"], it["sx"], it.get("w"))
     return obj, True
 
 
@@ -897,13 +899,21 @@ def prism_lod(obj, it, d):
         nt.links.new(tn.outputs["Color"], nt.nodes["Principled BSDF"].inputs["Base Color"])
         nt.nodes["Principled BSDF"].inputs["Roughness"].default_value = 1.0
         me.materials.append(m)
-    else:   # вдали — без картинки: цвет каждой грани — средний по атласу под ней
+    else:   # вдали — без картинки: цвет грани — средний по её стороне (перед / бок / верх), без пятен
         me.materials.append(bpy.data.materials.new("tmp"))
+        h2 = A // 2
+        regions = {"front": atlas[h2:, :], "side": atlas[:h2, :h2], "top": atlas[:h2, h2:]}
+        mean = {}
+        for k, r in regions.items():
+            px = r.reshape(-1, r.shape[-1])
+            if px.shape[1] > 3 and (px[:, 3] > 0.5).any():
+                px = px[px[:, 3] > 0.5]
+            mean[k] = px[:, :3].mean(0)
         cols = []
         uv = me.uv_layers.active.data
         for f in me.polygons:
             us = np.array([uv[li].uv[:] for li in f.loop_indices]).mean(0)
-            cols.append(atlas[min(A - 1, int(us[1] * A)), min(A - 1, int(us[0] * A)), :3])
+            cols.append(mean["front"] if us[1] >= 0.5 else (mean["side"] if us[0] < 0.5 else mean["top"]))
         set_face_colors(body, np.array(cols))
         to_vertex_colors(body)
     # окна: тёмные пятна на картинке спереди → плашки перед фасадом (window_lit)
@@ -1197,7 +1207,7 @@ def ridge(biome, n):
         x = -RIDGE_W / 2 + 0.5
         while x < RIDGE_W / 2 - 3:
             w = rng.uniform(3, 7)
-            h = rng.choice([rng.uniform(8, 18), rng.uniform(15, 35)])
+            h = rng.choice([rng.uniform(5, 10), rng.uniform(9, 16)])
             y = rng.uniform(5, 25)
             col = rng.choice([(0.42, 0.42, 0.44), (0.5, 0.45, 0.4), (0.36, 0.38, 0.42), (0.47, 0.36, 0.3)])
             b.box((x, y, 0), (x + w, y + rng.uniform(4, 8), h), col)
@@ -1210,14 +1220,14 @@ def ridge(biome, n):
         for _ in range(6):
             x = rng.uniform(-17, 15)
             y = rng.uniform(8, 25)
-            w, h = rng.uniform(5, 10), rng.uniform(5, 10)
+            w, h = rng.uniform(5, 10), rng.uniform(4, 8)
             b.box((x, y, 0), (x + w, y + 6, h), (0.42, 0.4, 0.38))
         for _ in range(4):
             x, y = rng.uniform(-18, 18), rng.uniform(10, 28)
-            b.cyl((x, y, 12), 0.8, 24, (0.45, 0.32, 0.26), seg=6)
+            b.cyl((x, y, 8), 0.7, 16, (0.45, 0.32, 0.26), seg=6)
         x, y = rng.uniform(-10, 10), rng.uniform(15, 28)
-        g = bmesh.ops.create_cone(bm, cap_ends=True, segments=10, radius1=6, radius2=4, depth=16)
-        b._add(g["verts"], (0.62, 0.62, 0.6), Matrix.Translation((x, y, 8)))
+        g = bmesh.ops.create_cone(bm, cap_ends=True, segments=10, radius1=4.5, radius2=3, depth=11)
+        b._add(g["verts"], (0.62, 0.62, 0.6), Matrix.Translation((x, y, 5.5)))
     obj = b.obj()
     to_vertex_colors(obj)
     obj.name = obj.data.name = "ridge"

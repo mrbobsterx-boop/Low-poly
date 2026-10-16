@@ -1,0 +1,2236 @@
+{
+ "_comment": "Фон за улицей по биомам. items: id, kind (вид), size [ш, в, г] м, lods [близко до −12 м, −12…−20, дальше −20], per_10m2 (густота), min_depth (м вглубь от начала фона — ближе не ставить), rotate (можно крутить вокруг вертикали), sway (узел sway качать ветром), smoke (точки выхода дыма, координаты Godot от точки опоры), window_lit (материал window_lit — ночью светится). ridges — ленты дальнего плана: width 40 м, края совпадают (ставить подряд), depth — вглубь (−Z Godot), передний край — у точки опоры. birds — птицы с анимацией bird_flap.",
+ "forest": {
+  "items": [
+   {
+    "id": "bg_forest_pine_1",
+    "kind": "pine",
+    "source": "plant_tree_sosna",
+    "size": [
+     3.13,
+     6.01,
+     2.73
+    ],
+    "lods": [
+     "bg_forest_pine_1_lod0.glb",
+     "bg_forest_pine_1_lod1.glb",
+     "bg_forest_pine_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     129
+    ],
+    "per_10m2": 0.45,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_pine_2",
+    "kind": "pine",
+    "source": "plant_tree_sosna",
+    "size": [
+     3.5,
+     8.01,
+     3.12
+    ],
+    "lods": [
+     "bg_forest_pine_2_lod0.glb",
+     "bg_forest_pine_2_lod1.glb",
+     "bg_forest_pine_2_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     119
+    ],
+    "per_10m2": 0.35,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_pine_3",
+    "kind": "pine",
+    "source": "plant_tree_sosna",
+    "size": [
+     2.65,
+     4.51,
+     2.39
+    ],
+    "lods": [
+     "bg_forest_pine_3_lod0.glb",
+     "bg_forest_pine_3_lod1.glb",
+     "bg_forest_pine_3_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     138
+    ],
+    "per_10m2": 0.3,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_pine_4",
+    "kind": "pine",
+    "source": "plant_tree_sosna",
+    "size": [
+     3.65,
+     7.01,
+     3.19
+    ],
+    "lods": [
+     "bg_forest_pine_4_lod0.glb",
+     "bg_forest_pine_4_lod1.glb",
+     "bg_forest_pine_4_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     129
+    ],
+    "per_10m2": 0.3,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_leaf_1",
+    "kind": "leaf",
+    "source": "tree_oak",
+    "size": [
+     5.83,
+     6.43,
+     4.95
+    ],
+    "lods": [
+     "bg_forest_leaf_1_lod0.glb",
+     "bg_forest_leaf_1_lod1.glb",
+     "bg_forest_leaf_1_lod2.glb"
+    ],
+    "tris": [
+     1469,
+     487,
+     132
+    ],
+    "per_10m2": 0.25,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_leaf_2",
+    "kind": "leaf",
+    "source": "tree_maple",
+    "size": [
+     5.84,
+     5.61,
+     4.54
+    ],
+    "lods": [
+     "bg_forest_leaf_2_lod0.glb",
+     "bg_forest_leaf_2_lod1.glb",
+     "bg_forest_leaf_2_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     120
+    ],
+    "per_10m2": 0.25,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_leaf_3",
+    "kind": "leaf",
+    "source": "tree_oak",
+    "size": [
+     5.33,
+     4.92,
+     4.59
+    ],
+    "lods": [
+     "bg_forest_leaf_3_lod0.glb",
+     "bg_forest_leaf_3_lod1.glb",
+     "bg_forest_leaf_3_lod2.glb"
+    ],
+    "tris": [
+     1469,
+     487,
+     146
+    ],
+    "per_10m2": 0.2,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_leaf_4",
+    "kind": "leaf",
+    "source": "tree_maple",
+    "size": [
+     6.69,
+     7.2,
+     5.24
+    ],
+    "lods": [
+     "bg_forest_leaf_4_lod0.glb",
+     "bg_forest_leaf_4_lod1.glb",
+     "bg_forest_leaf_4_lod2.glb"
+    ],
+    "tris": [
+     1633,
+     489,
+     121
+    ],
+    "per_10m2": 0.2,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_birch_1",
+    "kind": "birch",
+    "source": "tree_birch",
+    "size": [
+     3.16,
+     6.93,
+     2.95
+    ],
+    "lods": [
+     "bg_forest_birch_1_lod0.glb",
+     "bg_forest_birch_1_lod1.glb",
+     "bg_forest_birch_1_lod2.glb"
+    ],
+    "tris": [
+     1469,
+     145,
+     145
+    ],
+    "per_10m2": 0.25,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_birch_2",
+    "kind": "birch",
+    "source": "tree_birch",
+    "size": [
+     2.24,
+     5.45,
+     2.08
+    ],
+    "lods": [
+     "bg_forest_birch_2_lod0.glb",
+     "bg_forest_birch_2_lod1.glb",
+     "bg_forest_birch_2_lod2.glb"
+    ],
+    "tris": [
+     1469,
+     122,
+     122
+    ],
+    "per_10m2": 0.2,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_bush_1",
+    "kind": "bush",
+    "source": "bush_berry_malina",
+    "size": [
+     1.24,
+     1.27,
+     0.82
+    ],
+    "lods": [
+     "bg_forest_bush_1_lod0.glb",
+     "bg_forest_bush_1_lod1.glb",
+     "bg_forest_bush_1_lod2.glb"
+    ],
+    "tris": [
+     1466,
+     331,
+     128
+    ],
+    "per_10m2": 0.5,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_bush_2",
+    "kind": "bush",
+    "source": "bush_willow",
+    "size": [
+     1.4,
+     1.6,
+     0.98
+    ],
+    "lods": [
+     "bg_forest_bush_2_lod0.glb",
+     "bg_forest_bush_2_lod1.glb",
+     "bg_forest_bush_2_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     151,
+     112
+    ],
+    "per_10m2": 0.4,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_fern_1",
+    "kind": "fern",
+    "source": "fern",
+    "size": [
+     2.49,
+     0.8,
+     2.97
+    ],
+    "lods": [
+     "bg_forest_fern_1_lod0.glb",
+     "bg_forest_fern_1_lod1.glb",
+     "bg_forest_fern_1_lod2.glb"
+    ],
+    "tris": [
+     608,
+     490,
+     132
+    ],
+    "per_10m2": 0.5,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_log_1",
+    "kind": "log",
+    "source": "log_fallen",
+    "size": [
+     2.02,
+     0.46,
+     0.39
+    ],
+    "lods": [
+     "bg_forest_log_1_lod0.glb",
+     "bg_forest_log_1_lod1.glb",
+     "bg_forest_log_1_lod2.glb"
+    ],
+    "tris": [
+     112,
+     112,
+     112
+    ],
+    "per_10m2": 0.15,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_stump_1",
+    "kind": "stump",
+    "source": "tree_dead_stump",
+    "size": [
+     0.75,
+     1.4,
+     0.7
+    ],
+    "lods": [
+     "bg_forest_stump_1_lod0.glb",
+     "bg_forest_stump_1_lod1.glb",
+     "bg_forest_stump_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     84,
+     84
+    ],
+    "per_10m2": 0.15,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_forest_rock_1",
+    "kind": "rock",
+    "source": "rock_boulder",
+    "size": [
+     1.93,
+     1.1,
+     1.31
+    ],
+    "lods": [
+     "bg_forest_rock_1_lod0.glb",
+     "bg_forest_rock_1_lod1.glb",
+     "bg_forest_rock_1_lod2.glb"
+    ],
+    "tris": [
+     140,
+     140,
+     140
+    ],
+    "per_10m2": 0.2,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   }
+  ],
+  "ridges": [
+   {
+    "id": "bg_forest_ridge_1",
+    "file": "bg_forest_ridge_1_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 1250,
+    "height": 11.82
+   },
+   {
+    "id": "bg_forest_ridge_2",
+    "file": "bg_forest_ridge_2_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 1250,
+    "height": 12.97
+   }
+  ]
+ },
+ "field": {
+  "items": [
+   {
+    "id": "bg_field_leaf_1",
+    "kind": "leaf",
+    "source": "tree_oak",
+    "size": [
+     6.28,
+     6.92,
+     5.33
+    ],
+    "lods": [
+     "bg_field_leaf_1_lod0.glb",
+     "bg_field_leaf_1_lod1.glb",
+     "bg_field_leaf_1_lod2.glb"
+    ],
+    "tris": [
+     1469,
+     487,
+     132
+    ],
+    "per_10m2": 0.08,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_field_leaf_2",
+    "kind": "leaf",
+    "source": "tree_maple",
+    "size": [
+     6.33,
+     6.08,
+     4.92
+    ],
+    "lods": [
+     "bg_field_leaf_2_lod0.glb",
+     "bg_field_leaf_2_lod1.glb",
+     "bg_field_leaf_2_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     120
+    ],
+    "per_10m2": 0.06,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_field_bush_1",
+    "kind": "bush",
+    "source": "bush_berry_malina",
+    "size": [
+     1.34,
+     1.26,
+     0.88
+    ],
+    "lods": [
+     "bg_field_bush_1_lod0.glb",
+     "bg_field_bush_1_lod1.glb",
+     "bg_field_bush_1_lod2.glb"
+    ],
+    "tris": [
+     1472,
+     322,
+     130
+    ],
+    "per_10m2": 0.3,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_field_bush_2",
+    "kind": "bush",
+    "source": "bush_willow",
+    "size": [
+     1.31,
+     1.5,
+     0.92
+    ],
+    "lods": [
+     "bg_field_bush_2_lod0.glb",
+     "bg_field_bush_2_lod1.glb",
+     "bg_field_bush_2_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     151,
+     112
+    ],
+    "per_10m2": 0.25,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_field_haystack_1",
+    "kind": "haystack",
+    "source": "code:haystack",
+    "size": [
+     2.5,
+     2.9,
+     2.5
+    ],
+    "lods": [
+     "bg_field_haystack_1_lod0.glb",
+     "bg_field_haystack_1_lod1.glb",
+     "bg_field_haystack_1_lod2.glb"
+    ],
+    "tris": [
+     164,
+     108,
+     72
+    ],
+    "per_10m2": 0.08,
+    "min_depth": 3.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_field_fence_1",
+    "kind": "fence",
+    "source": "ext_fence_wood",
+    "size": [
+     2.36,
+     1.3,
+     0.22
+    ],
+    "lods": [
+     "bg_field_fence_1_lod0.glb",
+     "bg_field_fence_1_lod1.glb",
+     "bg_field_fence_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     146
+    ],
+    "per_10m2": 0.1,
+    "min_depth": 1.0,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_field_pole_1",
+    "kind": "pole",
+    "source": "code:pole_wires",
+    "size": [
+     1.8,
+     7.5,
+     10.0
+    ],
+    "lods": [
+     "bg_field_pole_1_lod0.glb",
+     "bg_field_pole_1_lod1.glb",
+     "bg_field_pole_1_lod2.glb"
+    ],
+    "tris": [
+     364,
+     352,
+     60
+    ],
+    "per_10m2": 0.06,
+    "min_depth": 1.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_field_barn_1",
+    "kind": "barn",
+    "source": "farm_barn",
+    "size": [
+     8.94,
+     7.5,
+     5.25
+    ],
+    "lods": [
+     "bg_field_barn_1_lod0.glb",
+     "bg_field_barn_1_lod1.glb",
+     "bg_field_barn_1_lod2.glb"
+    ],
+    "tris": [
+     220,
+     96,
+     52
+    ],
+    "per_10m2": 0.02,
+    "min_depth": 10.8,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   }
+  ],
+  "ridges": [
+   {
+    "id": "bg_field_ridge_1",
+    "file": "bg_field_ridge_1_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 1300,
+    "height": 5.85
+   },
+   {
+    "id": "bg_field_ridge_2",
+    "file": "bg_field_ridge_2_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 1300,
+    "height": 6.1
+   }
+  ]
+ },
+ "desert": {
+  "items": [
+   {
+    "id": "bg_desert_cactus_1",
+    "kind": "cactus",
+    "source": "code:cactus1",
+    "size": [
+     1.14,
+     2.75,
+     0.44
+    ],
+    "lods": [
+     "bg_desert_cactus_1_lod0.glb",
+     "bg_desert_cactus_1_lod1.glb",
+     "bg_desert_cactus_1_lod2.glb"
+    ],
+    "tris": [
+     320,
+     140,
+     120
+    ],
+    "per_10m2": 0.1,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_desert_cactus_2",
+    "kind": "cactus",
+    "source": "code:cactus2",
+    "size": [
+     0.79,
+     1.95,
+     0.44
+    ],
+    "lods": [
+     "bg_desert_cactus_2_lod0.glb",
+     "bg_desert_cactus_2_lod1.glb",
+     "bg_desert_cactus_2_lod2.glb"
+    ],
+    "tris": [
+     244,
+     88,
+     76
+    ],
+    "per_10m2": 0.08,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_desert_cactus_3",
+    "kind": "cactus",
+    "source": "code:cactus3",
+    "size": [
+     0.8,
+     1.35,
+     0.54
+    ],
+    "lods": [
+     "bg_desert_cactus_3_lod0.glb",
+     "bg_desert_cactus_3_lod1.glb",
+     "bg_desert_cactus_3_lod2.glb"
+    ],
+    "tris": [
+     188,
+     56,
+     52
+    ],
+    "per_10m2": 0.08,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_desert_cactus_4",
+    "kind": "cactus",
+    "source": "code:cactus4",
+    "size": [
+     1.14,
+     3.45,
+     0.44
+    ],
+    "lods": [
+     "bg_desert_cactus_4_lod0.glb",
+     "bg_desert_cactus_4_lod1.glb",
+     "bg_desert_cactus_4_lod2.glb"
+    ],
+    "tris": [
+     396,
+     192,
+     164
+    ],
+    "per_10m2": 0.06,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_desert_rock_1",
+    "kind": "rock",
+    "source": "rock_boulder",
+    "size": [
+     3.08,
+     1.4,
+     2.08
+    ],
+    "lods": [
+     "bg_desert_rock_1_lod0.glb",
+     "bg_desert_rock_1_lod1.glb",
+     "bg_desert_rock_1_lod2.glb"
+    ],
+    "tris": [
+     140,
+     140,
+     140
+    ],
+    "per_10m2": 0.15,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_desert_rock_2",
+    "kind": "rock",
+    "source": "rock_boulder",
+    "size": [
+     7.91,
+     3.0,
+     5.34
+    ],
+    "lods": [
+     "bg_desert_rock_2_lod0.glb",
+     "bg_desert_rock_2_lod1.glb",
+     "bg_desert_rock_2_lod2.glb"
+    ],
+    "tris": [
+     140,
+     140,
+     140
+    ],
+    "per_10m2": 0.06,
+    "min_depth": 6.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_desert_bush_dry_1",
+    "kind": "bush_dry",
+    "source": "tree_dead_bare",
+    "size": [
+     2.22,
+     1.6,
+     1.68
+    ],
+    "lods": [
+     "bg_desert_bush_dry_1_lod0.glb",
+     "bg_desert_bush_dry_1_lod1.glb",
+     "bg_desert_bush_dry_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     488,
+     119
+    ],
+    "per_10m2": 0.15,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_desert_bones_1",
+    "kind": "bones",
+    "source": "bones_pile",
+    "size": [
+     0.67,
+     0.17,
+     0.5
+    ],
+    "lods": [
+     "bg_desert_bones_1_lod0.glb",
+     "bg_desert_bones_1_lod1.glb",
+     "bg_desert_bones_1_lod2.glb"
+    ],
+    "tris": [
+     460,
+     460,
+     144
+    ],
+    "per_10m2": 0.05,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_desert_sign_1",
+    "kind": "sign",
+    "source": "decor_sign_weathered",
+    "size": [
+     1.95,
+     3.0,
+     0.61
+    ],
+    "lods": [
+     "bg_desert_sign_1_lod0.glb",
+     "bg_desert_sign_1_lod1.glb",
+     "bg_desert_sign_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     146
+    ],
+    "per_10m2": 0.02,
+    "min_depth": 4.0,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   }
+  ],
+  "ridges": [
+   {
+    "id": "bg_desert_ridge_1",
+    "file": "bg_desert_ridge_1_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 800,
+    "height": 9.0
+   },
+   {
+    "id": "bg_desert_ridge_2",
+    "file": "bg_desert_ridge_2_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 800,
+    "height": 9.0
+   }
+  ]
+ },
+ "swamp": {
+  "items": [
+   {
+    "id": "bg_swamp_reeds_1",
+    "kind": "reeds",
+    "source": "bush_water_reeds",
+    "size": [
+     1.66,
+     1.5,
+     1.48
+    ],
+    "lods": [
+     "bg_swamp_reeds_1_lod0.glb",
+     "bg_swamp_reeds_1_lod1.glb",
+     "bg_swamp_reeds_1_lod2.glb"
+    ],
+    "tris": [
+     770,
+     490,
+     150
+    ],
+    "per_10m2": 0.6,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_swamp_reeds_2",
+    "kind": "reeds",
+    "source": "bush_water_sedge",
+    "size": [
+     1.99,
+     1.0,
+     2.36
+    ],
+    "lods": [
+     "bg_swamp_reeds_2_lod0.glb",
+     "bg_swamp_reeds_2_lod1.glb",
+     "bg_swamp_reeds_2_lod2.glb"
+    ],
+    "tris": [
+     210,
+     210,
+     137
+    ],
+    "per_10m2": 0.5,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_swamp_dead_1",
+    "kind": "dead",
+    "source": "tree_dead_bare",
+    "size": [
+     3.91,
+     4.5,
+     2.94
+    ],
+    "lods": [
+     "bg_swamp_dead_1_lod0.glb",
+     "bg_swamp_dead_1_lod1.glb",
+     "bg_swamp_dead_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     488,
+     129
+    ],
+    "per_10m2": 0.15,
+    "min_depth": 1.8,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_swamp_dead_2",
+    "kind": "dead",
+    "source": "tree_dead_bare_b",
+    "size": [
+     4.4,
+     5.01,
+     2.63
+    ],
+    "lods": [
+     "bg_swamp_dead_2_lod0.glb",
+     "bg_swamp_dead_2_lod1.glb",
+     "bg_swamp_dead_2_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     488,
+     141
+    ],
+    "per_10m2": 0.12,
+    "min_depth": 1.8,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_swamp_dead_3",
+    "kind": "dead",
+    "source": "tree_dead_burnt",
+    "size": [
+     2.08,
+     4.0,
+     1.69
+    ],
+    "lods": [
+     "bg_swamp_dead_3_lod0.glb",
+     "bg_swamp_dead_3_lod1.glb",
+     "bg_swamp_dead_3_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     149
+    ],
+    "per_10m2": 0.1,
+    "min_depth": 1.8,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_swamp_hummock_1",
+    "kind": "hummock",
+    "source": "code:hummock",
+    "size": [
+     0.98,
+     0.8,
+     0.94
+    ],
+    "lods": [
+     "bg_swamp_hummock_1_lod0.glb",
+     "bg_swamp_hummock_1_lod1.glb",
+     "bg_swamp_hummock_1_lod2.glb"
+    ],
+    "tris": [
+     104,
+     68,
+     20
+    ],
+    "per_10m2": 0.4,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_swamp_boardwalk_1",
+    "kind": "boardwalk",
+    "source": "code:boardwalk",
+    "size": [
+     5.1,
+     0.35,
+     1.02
+    ],
+    "lods": [
+     "bg_swamp_boardwalk_1_lod0.glb",
+     "bg_swamp_boardwalk_1_lod1.glb",
+     "bg_swamp_boardwalk_1_lod2.glb"
+    ],
+    "tris": [
+     388,
+     260,
+     60
+    ],
+    "per_10m2": 0.03,
+    "min_depth": 2.0,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   }
+  ],
+  "ridges": [
+   {
+    "id": "bg_swamp_ridge_1",
+    "file": "bg_swamp_ridge_1_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 2240,
+    "height": 5.9
+   },
+   {
+    "id": "bg_swamp_ridge_2",
+    "file": "bg_swamp_ridge_2_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 2240,
+    "height": 5.69
+   }
+  ]
+ },
+ "snow": {
+  "items": [
+   {
+    "id": "bg_snow_pine_1",
+    "kind": "pine",
+    "source": "plant_tree_sosna",
+    "size": [
+     3.13,
+     6.01,
+     2.73
+    ],
+    "lods": [
+     "bg_snow_pine_1_lod0.glb",
+     "bg_snow_pine_1_lod1.glb",
+     "bg_snow_pine_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     129
+    ],
+    "per_10m2": 0.4,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_snow_pine_2",
+    "kind": "pine",
+    "source": "plant_tree_sosna",
+    "size": [
+     3.5,
+     8.01,
+     3.12
+    ],
+    "lods": [
+     "bg_snow_pine_2_lod0.glb",
+     "bg_snow_pine_2_lod1.glb",
+     "bg_snow_pine_2_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     119
+    ],
+    "per_10m2": 0.3,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_snow_pine_3",
+    "kind": "pine",
+    "source": "plant_tree_sosna",
+    "size": [
+     2.65,
+     4.51,
+     2.39
+    ],
+    "lods": [
+     "bg_snow_pine_3_lod0.glb",
+     "bg_snow_pine_3_lod1.glb",
+     "bg_snow_pine_3_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     138
+    ],
+    "per_10m2": 0.3,
+    "min_depth": 2.3,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_snow_drift_1",
+    "kind": "drift",
+    "source": "snow_pile",
+    "size": [
+     2.5,
+     0.49,
+     1.49
+    ],
+    "lods": [
+     "bg_snow_drift_1_lod0.glb",
+     "bg_snow_drift_1_lod1.glb",
+     "bg_snow_drift_1_lod2.glb"
+    ],
+    "tris": [
+     160,
+     160,
+     146
+    ],
+    "per_10m2": 0.3,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_snow_rock_1",
+    "kind": "rock",
+    "source": "rock_boulder",
+    "size": [
+     2.29,
+     1.2,
+     1.54
+    ],
+    "lods": [
+     "bg_snow_rock_1_lod0.glb",
+     "bg_snow_rock_1_lod1.glb",
+     "bg_snow_rock_1_lod2.glb"
+    ],
+    "tris": [
+     140,
+     140,
+     140
+    ],
+    "per_10m2": 0.2,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_snow_bush_1",
+    "kind": "bush",
+    "source": "bush_berry_malina",
+    "size": [
+     1.15,
+     1.17,
+     0.75
+    ],
+    "lods": [
+     "bg_snow_bush_1_lod0.glb",
+     "bg_snow_bush_1_lod1.glb",
+     "bg_snow_bush_1_lod2.glb"
+    ],
+    "tris": [
+     1466,
+     331,
+     128
+    ],
+    "per_10m2": 0.2,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": true,
+    "smoke": [],
+    "window_lit": false
+   }
+  ],
+  "ridges": [
+   {
+    "id": "bg_snow_ridge_1",
+    "file": "bg_snow_ridge_1_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 1010,
+    "height": 16.34
+   },
+   {
+    "id": "bg_snow_ridge_2",
+    "file": "bg_snow_ridge_2_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 1000,
+    "height": 17.88
+   }
+  ]
+ },
+ "wasteland": {
+  "items": [
+   {
+    "id": "bg_wasteland_dead_1",
+    "kind": "dead",
+    "source": "tree_dead_bare",
+    "size": [
+     3.48,
+     4.0,
+     2.61
+    ],
+    "lods": [
+     "bg_wasteland_dead_1_lod0.glb",
+     "bg_wasteland_dead_1_lod1.glb",
+     "bg_wasteland_dead_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     488,
+     129
+    ],
+    "per_10m2": 0.12,
+    "min_depth": 1.8,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_wasteland_dead_2",
+    "kind": "dead",
+    "source": "tree_dead_burnt",
+    "size": [
+     1.82,
+     3.5,
+     1.48
+    ],
+    "lods": [
+     "bg_wasteland_dead_2_lod0.glb",
+     "bg_wasteland_dead_2_lod1.glb",
+     "bg_wasteland_dead_2_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     149
+    ],
+    "per_10m2": 0.1,
+    "min_depth": 1.8,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_wasteland_rock_1",
+    "kind": "rock",
+    "source": "rock_boulder",
+    "size": [
+     2.46,
+     1.2,
+     1.66
+    ],
+    "lods": [
+     "bg_wasteland_rock_1_lod0.glb",
+     "bg_wasteland_rock_1_lod1.glb",
+     "bg_wasteland_rock_1_lod2.glb"
+    ],
+    "tris": [
+     140,
+     140,
+     140
+    ],
+    "per_10m2": 0.2,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_wasteland_ruin_1",
+    "kind": "ruin",
+    "source": "building_ruin_2",
+    "size": [
+     10.92,
+     6.0,
+     6.05
+    ],
+    "lods": [
+     "bg_wasteland_ruin_1_lod0.glb",
+     "bg_wasteland_ruin_1_lod1.glb",
+     "bg_wasteland_ruin_1_lod2.glb"
+    ],
+    "tris": [
+     224,
+     76,
+     44
+    ],
+    "per_10m2": 0.04,
+    "min_depth": 7.8,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_wasteland_ruin_2",
+    "kind": "ruin",
+    "source": "ruin_column",
+    "size": [
+     0.92,
+     3.0,
+     0.98
+    ],
+    "lods": [
+     "bg_wasteland_ruin_2_lod0.glb",
+     "bg_wasteland_ruin_2_lod1.glb",
+     "bg_wasteland_ruin_2_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     146
+    ],
+    "per_10m2": 0.05,
+    "min_depth": 4.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_wasteland_wreck_1",
+    "kind": "wreck",
+    "source": "car_wreck_razobrannaya",
+    "size": [
+     4.5,
+     1.25,
+     1.76
+    ],
+    "lods": [
+     "bg_wasteland_wreck_1_lod0.glb",
+     "bg_wasteland_wreck_1_lod1.glb",
+     "bg_wasteland_wreck_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     489,
+     146
+    ],
+    "per_10m2": 0.03,
+    "min_depth": 3.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_wasteland_barrels_1",
+    "kind": "barrels",
+    "source": "decor_barrels_rusty",
+    "size": [
+     1.22,
+     0.9,
+     0.67
+    ],
+    "lods": [
+     "bg_wasteland_barrels_1_lod0.glb",
+     "bg_wasteland_barrels_1_lod1.glb",
+     "bg_wasteland_barrels_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     146
+    ],
+    "per_10m2": 0.06,
+    "min_depth": 1.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_wasteland_fence_1",
+    "kind": "fence",
+    "source": "fence_wire_setka",
+    "size": [
+     1.4,
+     1.37,
+     0.08
+    ],
+    "lods": [
+     "bg_wasteland_fence_1_lod0.glb",
+     "bg_wasteland_fence_1_lod1.glb",
+     "bg_wasteland_fence_1_lod2.glb"
+    ],
+    "tris": [
+     1416,
+     475,
+     203
+    ],
+    "per_10m2": 0.06,
+    "min_depth": 1.0,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_wasteland_pole_1",
+    "kind": "pole",
+    "source": "code:pole_bare",
+    "size": [
+     1.6,
+     7.0,
+     0.26
+    ],
+    "lods": [
+     "bg_wasteland_pole_1_lod0.glb",
+     "bg_wasteland_pole_1_lod1.glb",
+     "bg_wasteland_pole_1_lod2.glb"
+    ],
+    "tris": [
+     40,
+     28,
+     24
+    ],
+    "per_10m2": 0.05,
+    "min_depth": 1.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   }
+  ],
+  "ridges": [
+   {
+    "id": "bg_wasteland_ridge_1",
+    "file": "bg_wasteland_ridge_1_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 920,
+    "height": 8.86
+   },
+   {
+    "id": "bg_wasteland_ridge_2",
+    "file": "bg_wasteland_ridge_2_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 920,
+    "height": 8.41
+   }
+  ]
+ },
+ "city": {
+  "items": [
+   {
+    "id": "bg_city_building_1",
+    "kind": "building",
+    "source": "apartments_b",
+    "size": [
+     10.0,
+     5.71,
+     6.14
+    ],
+    "lods": [
+     "bg_city_building_1_lod0.glb",
+     "bg_city_building_1_lod1.glb",
+     "bg_city_building_1_lod2.glb"
+    ],
+    "tris": [
+     256,
+     96,
+     48
+    ],
+    "per_10m2": 0.05,
+    "min_depth": 10.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_city_building_2",
+    "kind": "building",
+    "source": "apartments",
+    "size": [
+     9.0,
+     11.08,
+     4.72
+    ],
+    "lods": [
+     "bg_city_building_2_lod0.glb",
+     "bg_city_building_2_lod1.glb",
+     "bg_city_building_2_lod2.glb"
+    ],
+    "tris": [
+     408,
+     204,
+     52
+    ],
+    "per_10m2": 0.05,
+    "min_depth": 10.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": true
+   },
+   {
+    "id": "bg_city_building_3",
+    "kind": "building",
+    "source": "house_brick2",
+    "size": [
+     7.53,
+     8.0,
+     3.99
+    ],
+    "lods": [
+     "bg_city_building_3_lod0.glb",
+     "bg_city_building_3_lod1.glb",
+     "bg_city_building_3_lod2.glb"
+    ],
+    "tris": [
+     220,
+     236,
+     112
+    ],
+    "per_10m2": 0.05,
+    "min_depth": 10.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": true
+   },
+   {
+    "id": "bg_city_building_4",
+    "kind": "building",
+    "source": "mall",
+    "size": [
+     10.0,
+     5.29,
+     5.12
+    ],
+    "lods": [
+     "bg_city_building_4_lod0.glb",
+     "bg_city_building_4_lod1.glb",
+     "bg_city_building_4_lod2.glb"
+    ],
+    "tris": [
+     320,
+     88,
+     52
+    ],
+    "per_10m2": 0.04,
+    "min_depth": 10.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": true
+   },
+   {
+    "id": "bg_city_building_5",
+    "kind": "building",
+    "source": "construction_site",
+    "size": [
+     9.0,
+     5.26,
+     4.36
+    ],
+    "lods": [
+     "bg_city_building_5_lod0.glb",
+     "bg_city_building_5_lod1.glb",
+     "bg_city_building_5_lod2.glb"
+    ],
+    "tris": [
+     260,
+     100,
+     52
+    ],
+    "per_10m2": 0.03,
+    "min_depth": 10.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_city_ruin_1",
+    "kind": "ruin",
+    "source": "building_ruin_1",
+    "size": [
+     9.0,
+     5.16,
+     5.06
+    ],
+    "lods": [
+     "bg_city_ruin_1_lod0.glb",
+     "bg_city_ruin_1_lod1.glb",
+     "bg_city_ruin_1_lod2.glb"
+    ],
+    "tris": [
+     256,
+     96,
+     52
+    ],
+    "per_10m2": 0.05,
+    "min_depth": 7.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_city_ruin_2",
+    "kind": "ruin",
+    "source": "building_ruin_2",
+    "size": [
+     9.0,
+     4.95,
+     4.99
+    ],
+    "lods": [
+     "bg_city_ruin_2_lod0.glb",
+     "bg_city_ruin_2_lod1.glb",
+     "bg_city_ruin_2_lod2.glb"
+    ],
+    "tris": [
+     224,
+     76,
+     44
+    ],
+    "per_10m2": 0.05,
+    "min_depth": 7.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_city_crane_1",
+    "kind": "crane",
+    "source": "crane_tower",
+    "size": [
+     11.99,
+     8.99,
+     2.34
+    ],
+    "lods": [
+     "bg_city_crane_1_lod0.glb",
+     "bg_city_crane_1_lod1.glb",
+     "bg_city_crane_1_lod2.glb"
+    ],
+    "tris": [
+     2940,
+     75,
+     75
+    ],
+    "per_10m2": 0.01,
+    "min_depth": 12.0,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_city_pole_1",
+    "kind": "pole",
+    "source": "street_lamp_tselyy",
+    "size": [
+     0.97,
+     4.0,
+     0.98
+    ],
+    "lods": [
+     "bg_city_pole_1_lod0.glb",
+     "bg_city_pole_1_lod1.glb",
+     "bg_city_pole_1_lod2.glb"
+    ],
+    "tris": [
+     1469,
+     489,
+     147
+    ],
+    "per_10m2": 0.1,
+    "min_depth": 1.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_city_billboard_1",
+    "kind": "billboard",
+    "source": "billboard_road_tselyy",
+    "size": [
+     3.46,
+     5.99,
+     1.18
+    ],
+    "lods": [
+     "bg_city_billboard_1_lod0.glb",
+     "bg_city_billboard_1_lod1.glb",
+     "bg_city_billboard_1_lod2.glb"
+    ],
+    "tris": [
+     1470,
+     490,
+     146
+    ],
+    "per_10m2": 0.03,
+    "min_depth": 4.0,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_city_water_tower_1",
+    "kind": "water_tower",
+    "source": "water_tower_kirpichnaya",
+    "size": [
+     4.67,
+     11.0,
+     4.11
+    ],
+    "lods": [
+     "bg_city_water_tower_1_lod0.glb",
+     "bg_city_water_tower_1_lod1.glb",
+     "bg_city_water_tower_1_lod2.glb"
+    ],
+    "tris": [
+     80,
+     80,
+     52
+    ],
+    "per_10m2": 0.01,
+    "min_depth": 12.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   }
+  ],
+  "ridges": [
+   {
+    "id": "bg_city_ridge_1",
+    "file": "bg_city_ridge_1_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 920,
+    "height": 11.1
+   },
+   {
+    "id": "bg_city_ridge_2",
+    "file": "bg_city_ridge_2_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 908,
+    "height": 15.94
+   }
+  ]
+ },
+ "industrial": {
+  "items": [
+   {
+    "id": "bg_industrial_factory_1",
+    "kind": "factory",
+    "source": "warehouse",
+    "size": [
+     11.0,
+     2.93,
+     6.55
+    ],
+    "lods": [
+     "bg_industrial_factory_1_lod0.glb",
+     "bg_industrial_factory_1_lod1.glb",
+     "bg_industrial_factory_1_lod2.glb"
+    ],
+    "tris": [
+     124,
+     92,
+     44
+    ],
+    "per_10m2": 0.05,
+    "min_depth": 10.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_industrial_factory_2",
+    "kind": "factory",
+    "source": "power_plant",
+    "size": [
+     12.0,
+     6.69,
+     6.41
+    ],
+    "lods": [
+     "bg_industrial_factory_2_lod0.glb",
+     "bg_industrial_factory_2_lod1.glb",
+     "bg_industrial_factory_2_lod2.glb"
+    ],
+    "tris": [
+     236,
+     88,
+     44
+    ],
+    "per_10m2": 0.03,
+    "min_depth": 10.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [
+     [
+      -3.017,
+      6.691,
+      -1.292
+     ],
+     [
+      2.854,
+      6.689,
+      -1.575
+     ],
+     [
+      4.754,
+      4.649,
+      2.258
+     ]
+    ],
+    "window_lit": false
+   },
+   {
+    "id": "bg_industrial_factory_3",
+    "kind": "factory",
+    "source": "power_plant_b",
+    "size": [
+     12.0,
+     8.74,
+     7.44
+    ],
+    "lods": [
+     "bg_industrial_factory_3_lod0.glb",
+     "bg_industrial_factory_3_lod1.glb",
+     "bg_industrial_factory_3_lod2.glb"
+    ],
+    "tris": [
+     404,
+     104,
+     52
+    ],
+    "per_10m2": 0.03,
+    "min_depth": 10.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [
+     [
+      2.661,
+      8.744,
+      -0.195
+     ],
+     [
+      -2.433,
+      8.742,
+      -0.154
+     ],
+     [
+      -5.072,
+      7.139,
+      -0.439
+     ]
+    ],
+    "window_lit": true
+   },
+   {
+    "id": "bg_industrial_cooling_1",
+    "kind": "cooling",
+    "source": "nuclear_plant",
+    "size": [
+     14.0,
+     7.66,
+     8.85
+    ],
+    "lods": [
+     "bg_industrial_cooling_1_lod0.glb",
+     "bg_industrial_cooling_1_lod1.glb",
+     "bg_industrial_cooling_1_lod2.glb"
+    ],
+    "tris": [
+     384,
+     140,
+     48
+    ],
+    "per_10m2": 0.015,
+    "min_depth": 14.0,
+    "rotate": false,
+    "sway": false,
+    "smoke": [
+     [
+      -2.866,
+      7.658,
+      -0.552
+     ],
+     [
+      5.309,
+      7.655,
+      -1.665
+     ],
+     [
+      5.317,
+      7.606,
+      0.613
+     ]
+    ],
+    "window_lit": true
+   },
+   {
+    "id": "bg_industrial_hangar_1",
+    "kind": "hangar",
+    "source": "hangar",
+    "size": [
+     10.0,
+     6.62,
+     11.0
+    ],
+    "lods": [
+     "bg_industrial_hangar_1_lod0.glb",
+     "bg_industrial_hangar_1_lod1.glb",
+     "bg_industrial_hangar_1_lod2.glb"
+    ],
+    "tris": [
+     260,
+     76,
+     44
+    ],
+    "per_10m2": 0.03,
+    "min_depth": 10.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": true
+   },
+   {
+    "id": "bg_industrial_crane_1",
+    "kind": "crane",
+    "source": "crane_tower",
+    "size": [
+     11.99,
+     8.99,
+     2.34
+    ],
+    "lods": [
+     "bg_industrial_crane_1_lod0.glb",
+     "bg_industrial_crane_1_lod1.glb",
+     "bg_industrial_crane_1_lod2.glb"
+    ],
+    "tris": [
+     2940,
+     75,
+     75
+    ],
+    "per_10m2": 0.015,
+    "min_depth": 12.0,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_industrial_chimney_1",
+    "kind": "chimney",
+    "source": "code:chimney",
+    "size": [
+     3.6,
+     18.45,
+     3.6
+    ],
+    "lods": [
+     "bg_industrial_chimney_1_lod0.glb",
+     "bg_industrial_chimney_1_lod1.glb",
+     "bg_industrial_chimney_1_lod2.glb"
+    ],
+    "tris": [
+     320,
+     208,
+     92
+    ],
+    "per_10m2": 0.03,
+    "min_depth": 10.8,
+    "rotate": true,
+    "sway": false,
+    "smoke": [
+     [
+      0.0,
+      18.45,
+      -1.2
+     ],
+     [
+      1.2,
+      18.45,
+      -0.0
+     ],
+     [
+      0.0,
+      18.45,
+      1.2
+     ]
+    ],
+    "window_lit": false
+   },
+   {
+    "id": "bg_industrial_tanks_1",
+    "kind": "tanks",
+    "source": "code:tanks",
+    "size": [
+     9.0,
+     5.27,
+     3.45
+    ],
+    "lods": [
+     "bg_industrial_tanks_1_lod0.glb",
+     "bg_industrial_tanks_1_lod1.glb",
+     "bg_industrial_tanks_1_lod2.glb"
+    ],
+    "tris": [
+     604,
+     376,
+     84
+    ],
+    "per_10m2": 0.04,
+    "min_depth": 8.0,
+    "rotate": true,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_industrial_pylon_1",
+    "kind": "pylon",
+    "source": "code:pylon",
+    "size": [
+     6.0,
+     18.01,
+     2.52
+    ],
+    "lods": [
+     "bg_industrial_pylon_1_lod0.glb",
+     "bg_industrial_pylon_1_lod1.glb",
+     "bg_industrial_pylon_1_lod2.glb"
+    ],
+    "tris": [
+     452,
+     356,
+     120
+    ],
+    "per_10m2": 0.03,
+    "min_depth": 6.0,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   },
+   {
+    "id": "bg_industrial_pole_1",
+    "kind": "pole",
+    "source": "pole_power",
+    "size": [
+     1.91,
+     8.09,
+     0.28
+    ],
+    "lods": [
+     "bg_industrial_pole_1_lod0.glb",
+     "bg_industrial_pole_1_lod1.glb",
+     "bg_industrial_pole_1_lod2.glb"
+    ],
+    "tris": [
+     160,
+     160,
+     146
+    ],
+    "per_10m2": 0.08,
+    "min_depth": 1.8,
+    "rotate": false,
+    "sway": false,
+    "smoke": [],
+    "window_lit": false
+   }
+  ],
+  "ridges": [
+   {
+    "id": "bg_industrial_ridge_1",
+    "file": "bg_industrial_ridge_1_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 988,
+    "height": 16.0
+   },
+   {
+    "id": "bg_industrial_ridge_2",
+    "file": "bg_industrial_ridge_2_idle.glb",
+    "width": 40.0,
+    "depth": 30.0,
+    "tris": 988,
+    "height": 16.0
+   }
+  ]
+ },
+ "birds": [
+  {
+   "id": "bg_bird_crow",
+   "file": "bg_bird_crow_idle.glb",
+   "animation": "bird_flap"
+  },
+  {
+   "id": "bg_bird_seagull",
+   "file": "bg_bird_seagull_idle.glb",
+   "animation": "bird_flap"
+  },
+  {
+   "id": "bg_bird_pigeon",
+   "file": "bg_bird_pigeon_idle.glb",
+   "animation": "bird_flap"
+  }
+ ]
+}
