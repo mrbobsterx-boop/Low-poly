@@ -47,6 +47,7 @@ Tripo (автор) ──► Google Диск «Shelter Tripo» (сырые GLB, 
 | 20 Улица — островки | `1nz_GYE7biz_vnb8FWBB87fsI7XUQrUZI` |
 | 21 Поезд | `1mOkyrucQBj1u_dQzRVgWWCu8uaRNSuaB` |
 | 22 Прицепы | `1MrRyh44TNoGsQOP9_JcDjtxpPd8HjVCs` |
+| 23 Фон | `1IQc_MaXHovNwLMGD0FeSlgBKPwjsSNo-` |
 | Дубли (можно удалить) | `11O9KR--EchU8p2mfN5JTMOrGQth7pDv4` |
 
 **2026-10-13:** все модели разложены по папкам и названы как в проекте (`<имя>.glb`); копии — в «Дубли». Список

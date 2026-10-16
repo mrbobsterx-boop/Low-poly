@@ -956,3 +956,70 @@ Replace the bed with a long flatbed car trailer with two axles and four wheels, 
 ```
 Replace the bed with a small single-axle water tank trailer: a horizontal cylindrical tank with a round filler cap on top and a tap at the back, metal straps holding the tank to the frame, two wheels with fenders, a steel A-frame drawbar with a tow hitch coupler at the front. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
 ```
+
+
+## 12. Фон за улицей — вещи, которые пока сделаны кодом (заменить моделями)
+
+Папка на Диске: **23 Фон**
+
+Остальной фон собран из готовых моделей Tripo (`tools/make_backdrop.py`). Эти вещи пока нарисованы кодом — модели Tripo в стиле образца заменят их: положить с этим именем, обработка сделает три уровня подробности сама.
+
+**1. Кактус с двумя ветвями** — `bg_desert_cactus_1.glb` · высота 260 × 260 см
+```
+Replace the bed with a tall saguaro cactus with two curved arms. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**2. Кактус с одной ветвью** — `bg_desert_cactus_2.glb` · высота 180 см
+```
+Replace the bed with a medium saguaro cactus with one arm. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**3. Кактус круглый** — `bg_desert_cactus_3.glb` · высота 120 см
+```
+Replace the bed with a short round barrel cactus with a small side bud. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**4. Кактус большой** — `bg_desert_cactus_4.glb` · высота 330 см
+```
+Replace the bed with a big old saguaro cactus with three arms. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**5. Стог сена** — `bg_field_haystack_1.glb` · высота 290 см
+```
+Replace the bed with a rounded haystack on a wooden pole, old dry yellow hay. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**6. Кочка** — `bg_swamp_hummock_1.glb` · высота 80 см
+```
+Replace the bed with a swamp tussock: a mossy hummock of earth with tufts of tall sedge grass. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**7. Гнилые мостки** — `bg_swamp_boardwalk_1.glb` · высота 35 (длина 510) см
+```
+Replace the bed with a short rotten wooden boardwalk over a swamp, broken planks on small posts. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**8. Деревянный столб с проводами** — `bg_field_pole_1.glb` · высота 750 см
+```
+Replace the bed with a wooden utility pole with a crossbar, three glass insulators and wires. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**9. Столб без проводов** — `bg_wasteland_pole_1.glb` · высота 700 см
+```
+Replace the bed with a leaning old wooden utility pole with a broken crossbar and no wires. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**10. Заводская труба** — `bg_industrial_chimney_1.glb` · высота 1850 см
+```
+Replace the bed with a tall brick factory chimney with red and white bands near the top on a concrete base. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**11. Цистерны** — `bg_industrial_tanks_1.glb` · высота 750 см
+```
+Replace the bed with a group of three large cylindrical industrial storage tanks with ladders and rust stains. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
+
+**12. ЛЭП-вышка** — `bg_industrial_pylon_1.glb` · высота 2400 см
+```
+Replace the bed with a steel lattice power transmission tower with two crossarms and insulators. Keep exactly the same art style, level of detail, lighting, camera angle and dark background as the original image. Use the object's own natural colors and materials, not the colors of the bed; add rust and wear only where it makes sense for this object. Single object, no text.
+```
