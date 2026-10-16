@@ -46,7 +46,7 @@ def I(kind, src, h=None, **kw):
     d = {"kind": kind, "src": src, "h": h, "sx": 1.0, "tint": None, "snow": False, "sway": False, "smoke": False,
          "win": False, "dens": 0.3, "near": 1.0, "rot": True, "big": False}
     d.update(kw)
-    d.setdefault("card", kind in ("dead", "bush_dry", "crane", "pine", "leaf", "birch", "bush", "reeds", "fern"))
+    d.setdefault("card", kind in ("dead", "bush_dry", "crane", "pine", "leaf", "birch", "bush", "reeds", "fern", "stump"))
     return d
 
 
@@ -243,7 +243,7 @@ def pole_bare(b, d):
 def chimney(b, d):
     s = _seg(d, 12)
     b.cyl((0, 0, 9), 1.1, 18, (0.48, 0.3, 0.22), seg=s)
-    for z in (4, 9, 14):
+    for z in ((4, 9, 14) if d < 2 else ()):
         b.cyl((0, 0, z), 1.13, 0.4, (0.4, 0.25, 0.18), seg=s)
     b.cyl((0, 0, 18.2), 1.2, 0.5, (0.25, 0.22, 0.2), seg=s)
     for z in (17.0, 17.3):
@@ -255,7 +255,8 @@ def tanks(b, d):
     s = _seg(d, 16)
     for x, r, h in ((-3.2, 2.2, 6.0), (2.0, 2.6, 7.5), (6.6, 1.6, 4.5)):
         b.cyl((x, 0, h / 2), r, h, (0.72, 0.72, 0.68), seg=s)
-        b.cyl((x, 0, h + 0.25), r * 0.95, 0.5, (0.62, 0.62, 0.6), seg=s)
+        if d < 2:
+            b.cyl((x, 0, h + 0.25), r * 0.95, 0.5, (0.62, 0.62, 0.6), seg=s)
         if d < 2:
             b.cyl((x, 0, h * 0.5), r + 0.02, 0.15, "rust", seg=s)
             b.box((x + r - 0.05, -0.2, 0), (x + r + 0.05, 0.2, h), "metal_d")
@@ -279,7 +280,7 @@ def pylon(b, d):
         b.bm.verts.ensure_lookup_table()
         geom = b.bm.verts[-8:]
         bmesh.ops.transform(b.bm, matrix=Matrix.Translation(p0) @ q, verts=list(geom))
-    lv = 6 if d == 0 else (4 if d == 1 else 2)
+    lv = 6 if d == 0 else (4 if d == 1 else 1)
     for k in range(1, lv + 1):
         z = H * 0.82 * k / (lv + 1)
         w = (W0 + (W1 - W0) * k / (lv + 1)) / 2
@@ -287,7 +288,7 @@ def pylon(b, d):
             b.box((-w, sx * w - 0.04, z - 0.04), (w, sx * w + 0.04, z + 0.04), col)
             b.box((sx * w - 0.04, -w, z - 0.04), (sx * w + 0.04, w, z + 0.04), col)
     b.box((-0.4, -0.4, H * 0.82), (0.4, 0.4, H), col)
-    for z, half in ((H * 0.82, 4.0), (H * 0.92, 3.0)):
+    for z, half in ((H * 0.82, 4.0), (H * 0.92, 3.0))[:(2 if d < 2 else 1)]:
         b.box((-half, -0.12, z), (half, 0.12, z + 0.25), col)
         if d < 2:
             for x in (-half + 0.3, half - 0.3):
@@ -1010,16 +1011,17 @@ def card_lod(obj, budget=150):
     return o
 
 
+LOD1_CARD = {"birch", "bush", "crane", "stump"}   # средний уровень — тоже силуэтом (облегчение ломает крону)
 PRISM_KINDS = {"building", "factory", "cooling", "hangar", "barn", "water_tower"}
 
 
 def build_lod(it, d, base_id):
     obj, textured = load_source(it, d)
     limit = (LOD_TRIS_BIG if it["big"] else LOD_TRIS)[d]
-    if textured and d == 2 and it.get("card"):
+    if textured and ((d == 2 and it.get("card")) or (d == 1 and it["kind"] in LOD1_CARD)):
         tint_obj(obj, it["tint"])
         T.fix_materials(obj, 512)
-        c = card_lod(obj)
+        c = card_lod(obj, 150 if d == 2 else 480)
         bpy.data.objects.remove(obj)
         objs = [c]
         if it["sway"]:
