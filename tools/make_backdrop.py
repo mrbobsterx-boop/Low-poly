@@ -739,7 +739,7 @@ def _flat_render(src, view, px, lo, hi):
     rx = px if w >= h else max(8, int(px * w / h))
     ry = px if h >= w else max(8, int(px * h / w))
     sc.render.resolution_x, sc.render.resolution_y = rx, ry
-    path = os.path.join(OUT, f"_tmp_{view}.png")
+    path = os.path.join(OUT, f"_tmp_{view}_{os.getpid()}.png")
     sc.render.filepath = path
     bpy.ops.render.render(write_still=True)
     from PIL import Image
@@ -1030,7 +1030,7 @@ def build_lod(it, d, base_id):
         co = np.array([v.co[:] for o in objs for v in o.data.vertices])
         return {"file": os.path.basename(path), "tris": sum(T.tris(o) for o in objs), "mb": round(mb, 3),
                 "size": (co.max(0) - co.min(0)).tolist(), "smoke": [], "windows": 0, "sway": len(objs) > 1 or objs[0].name == "sway"}
-    if textured and it["kind"] in PRISM_KINDS:
+    if textured and (it["kind"] in PRISM_KINDS or (it["kind"] == "ruin" and it["big"])):
         T.fix_materials(obj, 1024)
         tint_obj(obj, it["tint"])
         smk = smoke_points(obj) if it["smoke"] else []
@@ -1280,7 +1280,7 @@ def preview(biome):
             fr = bpy.data.objects.new("f", me)
             bpy.context.scene.collection.objects.link(fr)
             os.environ["TRIPO_FAST"] = "1"
-            ims = T.render_views(fr, os.path.join(OUT, f"_pv_{d}"), px=220, fit=1.25)
+            ims = T.render_views(fr, os.path.join(OUT, f"_pv_{d}_{os.getpid()}"), px=220, fit=1.25)
             os.environ.pop("TRIPO_FAST")
             im = Image.open(ims[0]).convert("RGB")
             ImageDraw.Draw(im).text((4, 4), f"lod{d}: {r['tris'][d]}", font=font, fill=(255, 230, 120))
@@ -1378,8 +1378,12 @@ def scene(biome):
     cam.data.angle_y = math.radians(40)
     cam.data.sensor_fit = "VERTICAL"
     cam.data.clip_end = 400
-    cam.location = (0, -15, 1.5 + 15 * 0.176)
-    cam.rotation_euler = (math.radians(90 - 10), 0, 0)
+    # как в игре (view3d.gd): камера в 20 м от плоскости хода, выше центра кадра на 20·tan 10°, смотрит прямо,
+    # объектив сдвинут так, что центр кадра — на высоте 1,5 м у плоскости хода
+    dist, up = 20.0, 20.0 * math.tan(math.radians(10))
+    cam.location = (0, -dist, 1.5 + up)
+    cam.rotation_euler = (math.radians(90), 0, 0)
+    cam.data.shift_y = -up / (2 * dist * math.tan(math.radians(20)))
     sc.collection.objects.link(cam)
     sc.camera = cam
     sc.render.engine = "CYCLES"
